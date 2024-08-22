@@ -1,0 +1,1 @@
+[{"domain": ".sky.com", "expiry": 1757964676, "httpOnly": false, "name": "uuid", "path": "/", "sameSite": "Lax", "secure": false, "value": "1e02127050b67dba113b05afad232d43"}, {"domain": "news.sky.com", "expiry": 1731294075, "httpOnly": false, "name": "testGroup", "path": "/", "sameSite": "Lax", "secure": false, "value": "B"}]

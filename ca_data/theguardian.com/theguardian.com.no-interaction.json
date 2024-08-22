@@ -1,0 +1,1 @@
+[{"domain": "www.theguardian.com", "httpOnly": false, "name": "GU_geo_country", "path": "/", "sameSite": "Lax", "secure": true, "value": "CA"}, {"domain": ".theguardian.com", "expiry": 1731180129, "httpOnly": false, "name": "GU_mvt_id", "path": "/", "sameSite": "Lax", "secure": true, "value": "990688"}]

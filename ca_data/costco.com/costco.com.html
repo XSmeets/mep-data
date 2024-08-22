@@ -1,0 +1,22 @@
+<html><head>
+    <script src="/XVJrg1UUMZQv5OeH66VCMZuyEXQ/QJ9hXrh1OGm5/bjt-Fl8sBQ/SXV0R/UpOcyU?v=cf7a8df3-2372-e075-0695-eb2c0df317d8&amp;t=349448942"></script>
+    <script>
+      (function() {
+        var proxied = window.XMLHttpRequest.prototype.send;
+        window.XMLHttpRequest.prototype.send = function() {
+          var pointer = this
+          var intervalId = window.setInterval(function(){
+            if (pointer.readyState != 4){
+              return;
+            }
+            location.reload(true)
+            clearInterval(intervalId);
+          }, 1);
+        return proxied.apply(this, [].slice.call(arguments));
+        };
+      })();
+    </script>
+  </head>
+  <body>
+  
+</body></html>

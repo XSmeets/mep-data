@@ -1,0 +1,230 @@
+<html lang="en-GB" class="no-js core o-typography--loading-sans o-typography--loading-sans-bold o-typography--loading-display o-typography--loading-display-bold" data-o-component="o-typography" style="overflow-x:hidden;background-color:#fff1e5;color:#33302e"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Financial Times</title><meta name="description" content="News, analysis and opinion from the Financial Times on the latest in markets, economics and politics"><meta name="robots" content="index,follow,max-snippet:200,max-image-preview:large"><meta name="google-site-verification" content="4-t8sFaPvpO5FH_Gnw1dkM28CQepjzo8UjjAkdDflTw"><script src="https://bloomreach.ft.com/js/exponea.min.js"></script><script type="application/ld+json">{"@context":"http://schema.org","@type":"WebSite","name":"Financial Times","alternateName":"FT.com","url":"http://www.ft.com"}</script><meta property="fb:pages" content="8860325749"><meta property="twitter:site" content="@FinancialTimes"><meta name="apple-itunes-app" content="app-id=1200842933"><link rel="icon" type="image/svg+xml" href="https://www.ft.com/__origami/service/image/v2/images/raw/ftlogo-v1%3Abrand-ft-logo-square-coloured?source=update-logos&amp;format=svg"><link rel="alternate icon" type="image/png" href="https://www.ft.com/__origami/service/image/v2/images/raw/ftlogo-v1%3Abrand-ft-logo-square-coloured?source=update-logos&amp;format=png&amp;width=32&amp;height=32" sizes="32x32"><link rel="alternate icon" type="image/png" href="https://www.ft.com/__origami/service/image/v2/images/raw/ftlogo-v1%3Abrand-ft-logo-square-coloured?source=update-logos&amp;format=png&amp;width=194&amp;height=194" sizes="194x194"><link rel="apple-touch-icon" href="https://www.ft.com/__origami/service/image/v2/images/raw/ftlogo-v1%3Abrand-ft-logo-square-coloured?source=update-logos&amp;format=png&amp;width=180&amp;height=180" sizes="180x180"><link rel="manifest" href="https://www.ft.com/__assets/creatives/manifest/manifest-v6.json"><link rel="alternate" type="application/rss+xml" href="https://www.ft.com/rss/home"><link rel="alternate" type="application/rss+xml" href="https://www.ft.com/rss/home/international"><link rel="preload" as="script" href="https://static.chartbeat.com/js/chartbeat_mab.js" type="application/javascript"><link rel="preload" as="script" href="https://static.chartbeat.com/js/chartbeat.js" type="application/javascript"><script async="" src="https://static.chartbeat.com/js/chartbeat_mab.js"></script><script id="chartbeat-script">
+(function() { // Chartbeat script snippet
+
+	function loadScript(src) {
+		const script = document.createElement('script');
+		script.async = true;
+		script.src = src;
+		script.onerror = function(error) { console.warn(error) };
+		const last = document.scripts[document.scripts.length - 1];
+		last.parentNode.insertBefore(script, last);
+	}
+
+	try {
+
+		const testing = new URL(location).searchParams.has('chartbeatTest') || false;
+
+		window._sf_async_config = {
+			uid: 14181,
+			domain: testing ? 'testing.ft.com' : 'ft.com',
+			title: 'FT.com home page international edition',
+			useCanonical: false,
+			useCanonicalDomain: false,
+			path: 'www.ft.com/?edition=international',
+			topStorageDomain: 'ft.com',
+			loadLibrary: () => loadScript('https://static.chartbeat.com/js/chartbeat.js')
+		};
+
+		loadScript('https://static.chartbeat.com/js/chartbeat_mab.js')
+
+	} catch(error) {
+		// clean up
+		delete window._sf_async_config
+		console.error(error)
+	}
+})();
+</script><link href="https://securepubads.g.doubleclick.net/tag/js/gpt.js" rel="preload" as="script" type="application/javascript"><link href="https://consent-notice.ft.com/cmp.js" rel="preload" as="script" type="application/javascript"><script id="third-party-bootstrap-config" type="application/json">[{"src":"https://securepubads.g.doubleclick.net/tag/js/gpt.js","async":true,"defer":false,"always":true,"enhanced":false,"core":false},{"src":"https://consent-notice.ft.com/cmp.js","async":true,"defer":false,"always":true,"enhanced":false,"core":false}]</script><script async="" src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script><script async="" src="https://consent-notice.ft.com/cmp.js"></script><script>;(function () {
+	const isEnhanced = 'IntersectionObserver' in window && 'Promise' in window
+	const scripts = getScriptsConfig()
+	const status = {}
+	let scriptsWaiting = 0
+
+	if (!scripts || !scripts.length) {
+		return
+	}
+
+	scripts
+		.filter(function (script) {
+			return script.always || (isEnhanced && script.enhanced) || (!isEnhanced && script.core)
+		})
+		.forEach(loadScript)
+
+	function loadScript(config) {
+		try {
+			const script = document.createElement('script')
+			script.onerror = onerror(config.src)
+			script.onload = onload(config.src)
+			script.async = config.async
+			script.defer = config.defer
+			if (config.referrerPolicy) {
+				script.referrerPolicy = config.referrerPolicy
+			}
+			document.currentScript.parentNode.insertBefore(script, document.currentScript)
+			script.src = config.src
+			status[config.src] = null
+			scriptsWaiting++
+		} catch (error) {
+			console.error('Error creating script element for ' + config.src) // eslint-disable-line no-console
+		}
+	}
+
+	function onload(script) {
+		return function (event) {
+			status[script] = true
+			scriptsWaiting--
+			//
+			if (!scriptsWaiting) {
+				done()
+			}
+		}
+	}
+
+	function onerror(script) {
+		return function (error) {
+			status[script] = false
+			scriptsWaiting--
+			console.error('The thirdparty script ' + script + ' failed to load') // eslint-disable-line no-console
+			if (!scriptsWaiting) {
+				done()
+			}
+		}
+	}
+
+	const timer = setTimeout(done, 10000)
+
+	function done() {
+		clearTimeout(timer)
+		try {
+			const errors = []
+			for (const key in status) {
+				if (status.hasOwnProperty(key)) {
+					if (!status[key]) {
+						errors.push(key)
+					}
+				}
+			}
+			if (errors.length) {
+				const img = new Image()
+				const data = JSON.stringify({
+					category: 'javascript',
+					action: 'load-error',
+					system: {
+						source: 'home-page',
+					},
+					context: {
+						scripts: errors,
+					},
+				})
+
+				img.src = 'https://spoor-api.ft.com/px.gif?data=' + encodeURIComponent(data)
+			}
+		} catch (e) {
+			console.error('Problem sending error report')
+		}
+	}
+
+	function getScriptsConfig() {
+		try {
+			return JSON.parse(document.getElementById('third-party-bootstrap-config').textContent) || []
+		} catch (error) {
+			console.error('Error rehydrating third-party-bootstrap-config', error) // eslint-disable-line no-console
+		}
+		return []
+	}
+})();</script><script>
+!function(e,n,t,i,o,r){function c(e){if("number"!=typeof e)return e;var n=new Date;return new Date(n.getTime()+1e3*e)}var a=4e3,s="xnpe_async_hide";function p(e){return e.reduce((function(e,n){return e[n]=function(){e._.push([n.toString(),arguments])},e}),{_:[]})}function m(e,n,t){var i=t.createElement(n);i.src=e;var o=t.getElementsByTagName(n)[0];return o.parentNode.insertBefore(i,o),i}function u(e){return"[object Date]"===Object.prototype.toString.call(e)}r.target=r.target,r.file_path=r.file_path||r.target+"/js/exponea.min.js",o[n]=p(["anonymize","initialize","identify","update","track","trackLink","trackEnhancedEcommerce","getHtml","showHtml","showBanner","showWebLayer","ping","getAbTest","loadDependency","getRecommendation","reloadWebLayers"]),o[n].notifications=p(["isAvailable","isSubscribed","subscribe","unsubscribe"]),o[n]["snippetVersion"]="v2.3.0",function(e,n,t){e[n]["_"+t]={},e[n]["_"+t].nowFn=Date.now,e[n]["_"+t].snippetStartTime=e[n]["_"+t].nowFn()}(o,n,"performance"),function(e,n,t,i,o,r){e[o]={sdk:e[i],sdkObjectName:i,skipExperiments:!!t.new_experiments,sign:t.token+"/"+(r.exec(n.cookie)||["","new"])[1],path:t.target}}(o,e,r,n,i,RegExp("__exponea_etc__"+"=([\w-]+)")),function(e,n,t){m(e.file_path,n,t)}(r,t,e),function(e,n,t,i,o,r,p){if(e.new_experiments){!0===e.new_experiments&&(e.new_experiments={});var f,l=e.new_experiments.hide_class||s,_=e.new_experiments.timeout||a,d=encodeURIComponent(r.location.href.split("#")[0]);e.cookies&&e.cookies.expires&&("number"==typeof e.cookies.expires||u(e.cookies.expires)?f=c(e.cookies.expires):e.cookies.expires.tracking&&("number"==typeof e.cookies.expires.tracking||u(e.cookies.expires.tracking))&&(f=c(e.cookies.expires.tracking))),f&&f<new Date&&(f=void 0);var x=e.target+"/webxp/"+n+"/"+r[t].sign+"/modifications.min.js?http-referer="+d+"&timeout="+_+"ms"+(f?"&cookie-expires="+Math.floor(f.getTime()/1e3):"");"sync"===e.new_experiments.mode&&r.localStorage.getItem("__exponea__sync_modifications__")?function(e,n,t,i,o){t[o][n]="<"+n+' src="'+e+'"></'+n+">",i.writeln(t[o][n]),i.writeln("<"+n+">!"+o+".init && document.writeln("+o+"."+n+'.replace("/'+n+'/", "/'+n+'-async/").replace("><", " async><"))</'+n+">")}(x,n,r,p,t):function(e,n,t,i,o,r,c,a){r.documentElement.classList.add(e);var s=m(t,i,r);function p(){o[a].init||m(t.replace("/"+i+"/","/"+i+"-async/"),i,r)}function u(){r.documentElement.classList.remove(e)}s.onload=p,s.onerror=p,o.setTimeout(u,n),o[c]._revealPage=u}(l,_,x,n,r,p,o,t)}}(r,t,i,0,n,o,e),function(e,n,t){e[n].start=function(i){i&&Object.keys(i).forEach((function(e){return t[e]=i[e]})),e[n].initialize(t)}}(o,n,r)}(document,"exponea","script","webxpClient",window,{
+	target: 'https://bloomreach.ft.com',
+	token: 'd6e5bd4c-9228-11eb-a414-9a67e462410e',
+});
+</script><link rel="preconnect" href="https://spoor-api.ft.com"><link rel="preconnect" href="https://session-next.ft.com" crossorigin="use-credentials"><link rel="preconnect" href="https://ads-api.ft.com"><link rel="preconnect" href="https://securepubads.g.doubleclick.net"><link rel="preload" as="script" href="https://www.ft.com/__assets/hashed/page-kit/webpack-runtime.e95fdf411b11.bundle.js" type="application/javascript"><link rel="preload" as="script" href="https://www.ft.com/__assets/hashed/page-kit/page-kit-components.4c59aee50f4a.bundle.js" type="application/javascript"><link rel="preload" as="script" href="https://www.ft.com/__assets/hashed/page-kit/financial-times-o-tracking.07957b144fb4.bundle.js" type="application/javascript"><link rel="preload" as="script" href="https://www.ft.com/__assets/hashed/page-kit/financial-times-n-syndication.ea6b21a5f84d.bundle.js" type="application/javascript"><link rel="preload" as="script" href="https://www.ft.com/__assets/hashed/page-kit/financial-times-o-header.5fc70d491e29.bundle.js" type="application/javascript"><link rel="preload" as="script" href="https://www.ft.com/__assets/hashed/page-kit/financial-times-o-viewport.2f3b3befc0ad.bundle.js" type="application/javascript"><link rel="preload" as="script" href="https://www.ft.com/__assets/hashed/page-kit/financial-times-n-feedback.314502826c55.bundle.js" type="application/javascript"><link rel="preload" as="script" href="https://www.ft.com/__assets/hashed/page-kit/financial-times-o-grid.f74f171098cc.bundle.js" type="application/javascript"><link rel="preload" as="script" href="https://www.ft.com/__assets/hashed/page-kit/financial-times-o-utils.98fc7b2c5c0b.bundle.js" type="application/javascript"><link rel="preload" as="script" href="https://www.ft.com/__assets/hashed/page-kit/privacy-components.5b6be93f102b.bundle.js" type="application/javascript"><link rel="preload" as="script" href="https://www.ft.com/__assets/hashed/page-kit/financial-times-o-expander.1284835aad36.bundle.js" type="application/javascript"><link rel="preload" as="script" href="https://www.ft.com/__assets/hashed/page-kit/financial-times-o-footer.80a1922ff25b.bundle.js" type="application/javascript"><link rel="preload" as="script" href="https://www.ft.com/__assets/hashed/page-kit/financial-times-o-message.840239b5f471.bundle.js" type="application/javascript"><link rel="preload" as="script" href="https://www.ft.com/__assets/hashed/page-kit/financial-times-o-overlay.a48e824093e9.bundle.js" type="application/javascript"><link rel="preload" as="script" href="https://www.ft.com/__assets/hashed/page-kit/financial-times-o-toggle.02e52d783748.bundle.js" type="application/javascript"><link rel="preload" as="script" href="https://www.ft.com/__assets/hashed/page-kit/financial-times-o-tooltip.39a3ac0f7b82.bundle.js" type="application/javascript"><link rel="preload" as="script" href="https://www.ft.com/__assets/hashed/page-kit/financial-times-n-tracking.e71d8e7157d9.bundle.js" type="application/javascript"><link rel="preload" as="script" href="https://www.ft.com/__assets/hashed/page-kit/financial-times-o-banner.1f40bdc13c18.bundle.js" type="application/javascript"><link rel="preload" as="script" href="https://www.ft.com/__assets/hashed/page-kit/financial-times-o-cookie-message.61b2497a161a.bundle.js" type="application/javascript"><link rel="preload" as="script" href="https://www.ft.com/__assets/hashed/page-kit/financial-times-o-date.abcc02d7a200.bundle.js" type="application/javascript"><link rel="preload" as="script" href="https://www.ft.com/__assets/hashed/page-kit/ftdomdelegate.3fc5e966542b.bundle.js" type="application/javascript"><link rel="preload" as="script" href="https://www.ft.com/__assets/hashed/page-kit/financial-times-o-typography.175c5da7e8ac.bundle.js" type="application/javascript"><link rel="preload" as="script" href="https://www.ft.com/__assets/hashed/page-kit/react.86664e97e11e.bundle.js" type="application/javascript"><link rel="preload" as="script" href="https://www.ft.com/__assets/hashed/page-kit/superstore.efa85c8c265d.bundle.js" type="application/javascript"><link rel="preload" as="script" href="https://www.ft.com/__assets/hashed/page-kit/financial-times-n-exponea.cb6b079b5838.bundle.js" type="application/javascript"><link rel="preload" as="script" href="https://www.ft.com/__assets/hashed/page-kit/financial-times-x-engine.ab24e1752fd8.bundle.js" type="application/javascript"><link rel="preload" as="script" href="https://www.ft.com/__assets/hashed/page-kit/preact.1e5ad5be00e3.bundle.js" type="application/javascript"><link rel="preload" as="script" href="https://www.ft.com/__assets/hashed/page-kit/shared.stable.ac7526e39523.bundle.js" type="application/javascript"><link rel="preload" as="script" href="https://www.ft.com/__assets/hashed/page-kit/scripts.f74b9006e6e1.bundle.js" type="application/javascript"><link rel="preload" as="font" href="https://www.ft.com/__origami/service/build/v3/font?font_format=woff2&amp;font_name=MetricWeb-Regular&amp;system_code=origami&amp;version=1.12" type="font/woff2" crossorigin="anonymous"><link rel="preload" as="font" href="https://www.ft.com/__origami/service/build/v3/font?font_format=woff2&amp;font_name=MetricWeb-Semibold&amp;system_code=origami&amp;version=1.12" type="font/woff2" crossorigin="anonymous"><link rel="preload" as="font" href="https://www.ft.com/__origami/service/build/v3/font?font_format=woff2&amp;font_name=FinancierDisplayWeb-Regular&amp;system_code=origami&amp;version=1.12" type="font/woff2" crossorigin="anonymous"><link rel="preload" as="font" href="https://www.ft.com/__origami/service/build/v3/font?font_format=woff2&amp;font_name=FinancierDisplayWeb-Bold&amp;system_code=origami&amp;version=1.12" type="font/woff2" crossorigin="anonymous"><script id="initial-props" type="application/json"></script><link rel="stylesheet" href="https://www.ft.com/__assets/hashed/page-kit/vendors~page-kit-layout-styles.9f7a7d161a61.css"><link rel="stylesheet" href="https://www.ft.com/__assets/hashed/page-kit/styles.90c748ade551.css"><script type="application/json" id="page-kit-bootstrap-config">{"trackErrors":true,"core":[],"enhanced":["https://www.ft.com/__assets/hashed/page-kit/webpack-runtime.e95fdf411b11.bundle.js","https://www.ft.com/__assets/hashed/page-kit/page-kit-components.4c59aee50f4a.bundle.js","https://www.ft.com/__assets/hashed/page-kit/financial-times-o-tracking.07957b144fb4.bundle.js","https://www.ft.com/__assets/hashed/page-kit/financial-times-n-syndication.ea6b21a5f84d.bundle.js","https://www.ft.com/__assets/hashed/page-kit/financial-times-o-header.5fc70d491e29.bundle.js","https://www.ft.com/__assets/hashed/page-kit/financial-times-o-viewport.2f3b3befc0ad.bundle.js","https://www.ft.com/__assets/hashed/page-kit/financial-times-n-feedback.314502826c55.bundle.js","https://www.ft.com/__assets/hashed/page-kit/financial-times-o-grid.f74f171098cc.bundle.js","https://www.ft.com/__assets/hashed/page-kit/financial-times-o-utils.98fc7b2c5c0b.bundle.js","https://www.ft.com/__assets/hashed/page-kit/privacy-components.5b6be93f102b.bundle.js","https://www.ft.com/__assets/hashed/page-kit/financial-times-o-expander.1284835aad36.bundle.js","https://www.ft.com/__assets/hashed/page-kit/financial-times-o-footer.80a1922ff25b.bundle.js","https://www.ft.com/__assets/hashed/page-kit/financial-times-o-message.840239b5f471.bundle.js","https://www.ft.com/__assets/hashed/page-kit/financial-times-o-overlay.a48e824093e9.bundle.js","https://www.ft.com/__assets/hashed/page-kit/financial-times-o-toggle.02e52d783748.bundle.js","https://www.ft.com/__assets/hashed/page-kit/financial-times-o-tooltip.39a3ac0f7b82.bundle.js","https://www.ft.com/__assets/hashed/page-kit/financial-times-n-tracking.e71d8e7157d9.bundle.js","https://www.ft.com/__assets/hashed/page-kit/financial-times-o-banner.1f40bdc13c18.bundle.js","https://www.ft.com/__assets/hashed/page-kit/financial-times-o-cookie-message.61b2497a161a.bundle.js","https://www.ft.com/__assets/hashed/page-kit/financial-times-o-date.abcc02d7a200.bundle.js","https://www.ft.com/__assets/hashed/page-kit/ftdomdelegate.3fc5e966542b.bundle.js","https://www.ft.com/__assets/hashed/page-kit/financial-times-o-typography.175c5da7e8ac.bundle.js","https://www.ft.com/__assets/hashed/page-kit/react.86664e97e11e.bundle.js","https://www.ft.com/__assets/hashed/page-kit/superstore.efa85c8c265d.bundle.js","https://www.ft.com/__assets/hashed/page-kit/financial-times-n-exponea.cb6b079b5838.bundle.js","https://www.ft.com/__assets/hashed/page-kit/financial-times-x-engine.ab24e1752fd8.bundle.js","https://www.ft.com/__assets/hashed/page-kit/preact.1e5ad5be00e3.bundle.js","https://www.ft.com/__assets/hashed/page-kit/shared.stable.ac7526e39523.bundle.js","https://www.ft.com/__assets/hashed/page-kit/scripts.f74b9006e6e1.bundle.js"]}</script><script>;(function () {
+  var doc = document.documentElement
+  var isEnhanced = isEnhancedBrowser()
+  var scriptsConfig = getScriptsConfig()
+  var scriptsToLoad = []
+  var currentScript = document.scripts[document.scripts.length - 1]
+
+  doc.className = doc.className.replace('no-js', 'js')
+
+  if (isEnhanced) {
+    doc.className = doc.className.replace('core', 'enhanced')
+    Array.prototype.push.apply(scriptsToLoad, scriptsConfig.enhanced)
+  } else {
+    Array.prototype.push.apply(scriptsToLoad, scriptsConfig.core)
+  }
+
+  for (var i = 0, len = scriptsToLoad.length; i < len; i++) {
+    loadScript(scriptsToLoad[i])
+  }
+
+  function scriptLoadError(error) {
+    var script = error.target ? error.target.src : null
+
+    if (script) {
+      console.error('The script ' + script + ' failed to load') // eslint-disable-line no-console
+    }
+
+    if (/enhanced/.test(doc.className)) {
+      console.warn('Script loading failed, reverting to core experience') // eslint-disable-line no-console
+      doc.className = doc.className.replace('enhanced', 'core')
+    }
+
+    if (scriptsConfig.trackErrors) {
+      addErrorTrackingPixel(script)
+    }
+  }
+
+  function loadScript(src) {
+    var script = document.createElement('script')
+    script.onerror = scriptLoadError
+    script.async = false
+    script.src = src
+    currentScript.parentNode.insertBefore(script, currentScript)
+  }
+
+  // "Cut the mustard" test
+  // by Maggie Allen and Matt Hinchliffe November 2018
+  function isEnhancedBrowser() {
+    var script = document.createElement('script')
+    var input = document.createElement('input')
+
+    return (
+      'visibilityState' in document && // not supported by old Android (4.0-4.4) without a prefix
+      'indeterminate' in input && // not supported by BB 10
+      'flex' in doc.style && // not supported by old Safari (< 9) or IE 6-10
+      'async' in script // not supported by old Opera (Presto engine < 15)
+    )
+  }
+
+  function getScriptsConfig() {
+    var scriptsConfigEl = document.getElementById('page-kit-bootstrap-config')
+    var scriptsConfig = { core: [], enhanced: [], trackErrors: false }
+
+    if (scriptsConfigEl) {
+      try {
+        scriptsConfig = JSON.parse(scriptsConfigEl.innerHTML)
+      } catch (error) {
+        console.error('Bootstrap configuration error', error) // eslint-disable-line no-console
+      }
+    }
+
+    return scriptsConfig
+  }
+
+  function addErrorTrackingPixel(script) {
+    var img = new Image()
+
+    var data = JSON.stringify({
+      category: 'javascript',
+      action: 'load-error',
+      system: {
+        source: 'page-kit'
+      },
+      context: {
+        script: script
+      }
+    })
+
+    img.src = 'https://spoor-api.ft.com/px.gif?data=' + encodeURIComponent(data)
+  }
+})()
+</script></head></html>

@@ -1,0 +1,1 @@
+[{"domain": "verwaltung.bund.de", "expiry": 1723874057, "httpOnly": false, "name": "isTrackingConsentGiven", "path": "/", "sameSite": "Lax", "secure": false, "value": "true"}, {"domain": "verwaltung.bund.de", "httpOnly": true, "name": "sscn-ac44c67534e0d3ac", "path": "/", "sameSite": "None", "secure": true, "value": "314b3b45c8f0fbaa18de5b170613bb31"}]

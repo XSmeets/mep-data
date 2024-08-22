@@ -1,0 +1,1 @@
+[{"domain": ".111.nhs.uk", "httpOnly": true, "name": "akavpau_maintenance", "path": "/", "sameSite": "None", "secure": true, "value": "1723488621~id=fb47347875e8890854bcbeb61c222dbe"}, {"domain": "111.nhs.uk", "expiry": 1723531216, "httpOnly": true, "name": "nhs111-session-id", "path": "/", "sameSite": "Strict", "secure": true, "value": "7157e85e-da72-4735-a33d-d3fab32f3823"}]

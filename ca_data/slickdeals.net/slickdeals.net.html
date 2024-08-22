@@ -1,0 +1,142 @@
+<html lang="en"><head>
+        <script>var googletag = googletag || {};
+      googletag.cmd = googletag.cmd || [];
+    </script>
+                <link rel="preload" href="/frontpage/promoted-content/json?isReturningUser=0&amp;hasPrefs=0" as="fetch" crossorigin="anonymous">
+  <link rel="preload" href="/frontpage/recommendation-carousel/recommendations" as="fetch" crossorigin="anonymous">
+<script>
+(function(w){'use strict';const requestedUrls=[];const keyData={};function fetch(key,url,callback){if(url[0]!=='/'){throw new Error('URL is malformed')}if(requestedUrls.indexOf(url)>-1){throw new Error('Provided url has already been requested');}if(key in keyData){throw new Error('Specified key already exists');}processUrl(key,url,callback)}function processUrl(key,url,callback){keyData[key]={'loaded':false,'url':url,'callbacks':[],'error':null,};requestedUrls.push(url);if(typeof callback==='function'||callback&&typeof callback.fulfill==='function'){keyData[key].callbacks.push(callback)}if(typeof window.fetch!=='undefined'){window.fetch(url).then(response=>handleFetchResponse(key,response)).catch(err=>handleFetchError(key,err))}}function handleFetchResponse(key,response){if(response.ok){return response.text().then(text=>handleFetchText(key,text))}else{throw new Error('Url failed to fetch - bad request');}}function handleFetchText(key,text){keyData[key].data=text;keyData[key].loaded=true;if('callbacks'in keyData[key]&&keyData[key].callbacks.length){for(let i=0;i<keyData[key].callbacks.length;i++){let callback=keyData[key].callbacks[i];if(typeof callback==='function'){callback(text)}else if(typeof callback.fulfill==='function'){callback.fulfill(text)}delete keyData[key].callbacks[i]}}}function handleFetchError(key,error){keyData[key].error=error;if('callbacks'in keyData[key]&&keyData[key].callbacks.length){for(let i=0;i<keyData[key].callbacks.length;i++){let callback=keyData[key].callbacks[i];if(typeof callback.reject==='function'){callback.reject(error)}delete keyData[key].callbacks[i]}}}function getData(key,callback){if(key in keyData){if(keyData[key].loaded===true){if(typeof callback==='function'){return callback(keyData[key].data)}else if(callback&&typeof callback.fulfill==='function'){return callback.fulfill(keyData[key].data)}else{return keyData[key].data}}else{if(keyData[key].error){if(callback&&typeof callback.reject==='function'){callback.reject(keyData[key].error)}else{}}else if(typeof callback==='function'||callback&&typeof callback.fulfill==='function'){keyData[key].callbacks.push(callback)}}}else{throw new Error('Either no key was provided, or no key-url pair exists');}}function addCallback(key,callback){if(!callback||typeof callback!=='function'&&typeof callback.fulfill!=='function'){throw new Error('Expected a valid callback or { fulfill, reject } callback pair');}if(!hasKey(key)){throw new Error(key+' Key does not exist');}getData(key,callback);}function hasKey(key){return key in keyData;}function isKeyLoaded(key){if(key in keyData){return keyData[key].loaded;}throw new Error('Either no key was provided, or no key-url pair exists');}function dumpLoadTable(){console.info(keyData,requestedUrls);}if(!w.hasOwnProperty('immediateFetch')){w.immediateFetch={'fetch':fetch,'isKeyLoaded':isKeyLoaded,'getData':getData,'addCallback':addCallback,'dumpLoadTable':dumpLoadTable,'hasKey':hasKey,}}}(window));
+</script>
+<script>
+            window.immediateFetch.fetch('frontpagePromotedContentMFE', '\/frontpage\/promoted\u002Dcontent\/json\u003FisReturningUser\u003D0\u0026hasPrefs\u003D0');
+            window.immediateFetch.fetch('jfyCarousel', '\/frontpage\/recommendation\u002Dcarousel\/recommendations');
+    </script>
+        <link rel="preload" href="/ajax/bSubNavPlacement.php?section=slickdealsindex&amp;url=%2F" as="fetch" crossorigin="anonymous">
+  <script>
+    window.immediateFetch.fetch('banner', '/ajax/bSubNavPlacement.php?section=slickdealsindex&url=%2F');
+  </script>
+          <script>
+Array.from||(Array.from=function(){var r=Object.prototype.toString,n=function(n){return"function"==typeof n||"[object Function]"===r.call(n)},t=function(r){var n=Number(r);return isNaN(n)?0:0!==n&&isFinite(n)?(n>0?1:-1)*Math.floor(Math.abs(n)):n},e=Math.pow(2,53)-1,o=function(r){var n=t(r);return Math.min(Math.max(n,0),e)};return function(r){var t=this,e=Object(r);if(null==r)throw new TypeError("Array.from requires an array-like object - not null or undefined");var a,i=arguments.length>1?arguments[1]:void 0;if(void 0!==i){if(!n(i))throw new TypeError("Array.from: when provided, the second argument must be a function");arguments.length>2&&(a=arguments[2])}for(var u,f=o(e.length),c=n(t)?Object(new t(f)):new Array(f),h=0;h<f;)u=e[h],c[h]=i?void 0===a?i(u,h):i.call(a,u,h):u,h+=1;return c.length=f,c}}());
+[Element.prototype,CharacterData.prototype,DocumentType.prototype].forEach(function(e){e.hasOwnProperty("remove")||Object.defineProperty(e,"remove",{configurable:!0,enumerable:!0,writable:!0,value:function(){this.parentNode.removeChild(this)}})});
+Array.prototype.includes||Object.defineProperty(Array.prototype,"includes",{value:function(r,e){function t(r,e){return r===e||"number"==typeof r&&"number"==typeof e&&isNaN(r)&&isNaN(e)}if(null==this)throw new TypeError('"this" is null or not defined');var n=Object(this),i=n.length>>>0;if(0===i)return!1;for(var o=0|e,u=Math.max(o>=0?o:i-Math.abs(o),0);i>u;){if(t(n[u],r))return!0;u++}return!1}});
+"function"!=typeof Object.assign&&Object.defineProperty(Object,"assign",{value:function(e,t){"use strict";if(null==e)throw new TypeError("Cannot convert undefined or null to object");for(var n=Object(e),r=1;r<arguments.length;r++){var o=arguments[r];if(null!=o)for(var c in o)Object.prototype.hasOwnProperty.call(o,c)&&(n[c]=o[c])}return n},writable:!0,configurable:!0});
+!function(){if("function"==typeof window.CustomEvent)return!1;function t(t,e){e=e||{bubbles:!1,cancelable:!1,detail:void 0};var n=document.createEvent("CustomEvent");return n.initCustomEvent(t,e.bubbles,e.cancelable,e.detail),n}t.prototype=window.Event.prototype,window.CustomEvent=t}();
+!function(){var r=Function.call.bind(Function.call),o=String.prototype.match,i=Function.toString;!!Object.defineProperty&&!function(n){try{return n(),!1}catch(n){return!0}}(function(){Object.defineProperty({},"x",{get:function(){}})})&&"foo"!==function(){}.name&&Object.defineProperty(Function.prototype,"name",{configurable:!0,enumerable:!1,get:function(){var n=r(i,this),t=r(o,n,/\s*function\s+([^(\s]*)\s*/),e=t&&t[1];return Object.defineProperty(this,"name",{configurable:!0,enumerable:!1,writable:!1,value:e}),e}})}();
+!function(t,n,e){n[t]=n[t]||e(),"undefined"!=typeof module&&module.exports?module.exports=n[t]:"function"==typeof define&&define.amd&&define(function(){return n[t]})}("Promise","undefined"!=typeof global?global:this,function(){"use strict";var n,c,e,t=Object.prototype.toString,o="undefined"!=typeof setImmediate?function(t){return setImmediate(t)}:setTimeout;try{Object.defineProperty({},"x",{}),n=function(t,n,e,o){return Object.defineProperty(t,n,{value:e,writable:!0,configurable:!1!==o})}}catch(t){n=function(t,n,e){return t[n]=e,t}}function i(t,n){e.add(t,n),c||(c=o(e.drain))}function f(t){var n,e=typeof t;return null==t||"object"!=e&&"function"!=e||(n=t.then),"function"==typeof n&&n}function u(){for(var t=0;t<this.chain.length;t++)r(this,1===this.state?this.chain[t].success:this.chain[t].failure,this.chain[t]);this.chain.length=0}function r(t,n,e){var o,r;try{!1===n?e.reject(t.msg):(o=!0===n?t.msg:n.call(void 0,t.msg))===e.promise?e.reject(TypeError("Promise-chain cycle")):(r=f(o))?r.call(o,e.resolve,e.reject):e.resolve(o)}catch(t){e.reject(t)}}function a(t){var n=this;n.triggered||(n.triggered=!0,n.def&&(n=n.def),n.msg=t,n.state=2,0<n.chain.length&&i(u,n))}function s(t,e,o,r){for(var n=0;n<e.length;n++)!function(n){t.resolve(e[n]).then(function(t){o(n,t)},r)}(n)}function h(t){this.def=t,this.triggered=!1}function l(t){this.promise=t,this.state=0,this.triggered=!1,this.chain=[],this.msg=void 0}function p(t){if("function"!=typeof t)throw TypeError("Not a function");if(0!==this.__NPO__)throw TypeError("Not a promise");this.__NPO__=1;var o=new l(this);this.then=function(t,n){var e={success:"function"!=typeof t||t,failure:"function"==typeof n&&n};return e.promise=new this.constructor(function(t,n){if("function"!=typeof t||"function"!=typeof n)throw TypeError("Not a function");e.resolve=t,e.reject=n}),o.chain.push(e),0!==o.state&&i(u,o),e.promise},this.catch=function(t){return this.then(void 0,t)};try{t.call(void 0,function(t){(function t(e){var o,r=this;if(!r.triggered){r.triggered=!0,r.def&&(r=r.def);try{(o=f(e))?i(function(){var n=new h(r);try{o.call(e,function(){t.apply(n,arguments)},function(){a.apply(n,arguments)})}catch(t){a.call(n,t)}}):(r.msg=e,r.state=1,0<r.chain.length&&i(u,r))}catch(t){a.call(new h(r),t)}}}).call(o,t)},function(t){a.call(o,t)})}catch(t){a.call(o,t)}}e=function(){var e,o,r;function i(t,n){this.fn=t,this.self=n,this.next=void 0}return{add:function(t,n){r=new i(t,n),o?o.next=r:e=r,o=r,r=void 0},drain:function(){var t=e;for(e=o=c=void 0;t;)t.fn.call(t.self),t=t.next}}}();var y=n({},"constructor",p,!1);return n(p.prototype=y,"__NPO__",0,!1),n(p,"resolve",function(e){return e&&"object"==typeof e&&1===e.__NPO__?e:new this(function(t,n){if("function"!=typeof t||"function"!=typeof n)throw TypeError("Not a function");t(e)})}),n(p,"reject",function(e){return new this(function(t,n){if("function"!=typeof t||"function"!=typeof n)throw TypeError("Not a function");n(e)})}),n(p,"all",function(n){var c=this;return"[object Array]"!=t.call(n)?c.reject(TypeError("Not an array")):0===n.length?c.resolve([]):new c(function(e,t){if("function"!=typeof e||"function"!=typeof t)throw TypeError("Not a function");var o=n.length,r=Array(o),i=0;s(c,n,function(t,n){r[t]=n,++i===o&&e(r)},t)})}),n(p,"race",function(n){var o=this;return"[object Array]"!=t.call(n)?o.reject(TypeError("Not an array")):new o(function(e,t){if("function"!=typeof e||"function"!=typeof t)throw TypeError("Not a function");s(o,n,function(t,n){e(n)},t)})}),p});
+window.Element&&!Element.prototype.closest&&(Element.prototype.closest=function(e){var t,o=(this.document||this.ownerDocument).querySelectorAll(e),n=this;do{for(t=o.length;--t>=0&&o.item(t)!==n;);}while(t<0&&(n=n.parentElement));return n});
+if(!String.prototype.padStart){String.prototype.padStart=function padStart(targetLength,padString){targetLength=targetLength>>0;padString=String(typeof padString!=='undefined'?padString:' ');if(this.length>=targetLength){return String(this)}else{targetLength=targetLength-this.length;if(targetLength>padString.length){padString+=padString.repeat(targetLength/padString.length)}return padString.slice(0,targetLength)+String(this)}}}
+</script>
+  <script>
+window.addLoadEvent=function(n){if("function"===typeof window.addEventListener)window.addEventListener("load",n);else if("function"===typeof window.onload){var o=window.onload;window.onload=function(d){o(d),n(d)}}else window.onload=n};window.addLoadEvent(function(n){window.addLoadEvent=function(o){o(n)}});
+</script>
+  <script>
+window.sdLoadQueue=window.sdLoadQueue||[],window.SD=window.SD||{},window.SD.EventQueue={priorityLabels:["thirdPartyPixels","nonCriticalUi","revenueGenerating","analytics","criticalPath"],queueIntervalId:0,queuedFunctions:{},initLoadQueue:function(){for(var e=0;e<window.sdLoadQueue.length;e++)SD.EventQueue._queueFunction(window.sdLoadQueue[e][0],window.sdLoadQueue[e][1]);window.sdLoadQueue.push=function(e){SD.EventQueue._queueFunction(e[0],e[1]),SD.EventQueue._requestQueueParse()},SD.EventQueue._requestQueueParse()},_queueFunction:function(e,u){var n=this.priorityLabels.indexOf(u);if(-1===n)throw new Error('SD.EventQueue: Invalid priority "'+u+'"');this.queuedFunctions[n]?this.queuedFunctions[n].push(e):this.queuedFunctions[n]=[e]},_requestQueueParse:function(){this.queueIntervalId||this._initQueueParse()},_parseQueue:function(){var e=Object.keys(this.queuedFunctions);if(e.length){var u=e.sort(function(e,u){return e-u}).pop(),n=this.queuedFunctions[u].shift();0==this.queuedFunctions[u].length&&delete this.queuedFunctions[u],"function"==typeof n&&n()}else window.clearInterval(this.queueIntervalId),this.queueIntervalId=0},_initQueueParse:function(){this.queueIntervalId=window.setInterval(this._parseQueue.bind(this),4)}},window.addLoadEvent(window.SD.EventQueue.initLoadQueue);
+</script>
+<script>
+  window.SD=window.SD||{},window.SD.ABTest={extendedData:{},_rSeed:0,execute:function(e,t,n){var i=SD.ABTest._getGroup(e);null!=i&&void 0!==n[i]&&(n[i](),window.SD.ABTest.initDevTools&&window.SD.ABTest.initDevTools(e))},isTest:function(e){return SD.ABTest.data.hasOwnProperty(SD.ABTest._getDataGroupName(e))},_getGroup:function(e){var t,n={link:new RegExp("linked:([0-9]+)","gi"),position:new RegExp("position:([0-9]+)","gi"),split:new RegExp("split:([0-9,]+)","gi")},i={};if(SD.ABTest.isTest(e)){if(-1<e.indexOf("linked:")){for(t in n)if(n.hasOwnProperty(t)){if(i[t]=n[t].exec(e),n[t].lastIndex=0,null===i[t]||0===i[t].length)return null;i[t]=i[t][1]}for(t in window.SD.ABTest.data)if(window.SD.ABTest.data.hasOwnProperty(t)&&-1<t.indexOf(i.link)&&t!=="Test: "+e){if(i.secondPosition=n.position.exec(t),n.position.lastIndex=0,null!==i.secondPosition&&0===i.secondPosition.length)return null;i.secondPosition=i.secondPosition[1]}return SD.ABTest._getExtendedGroup(!1,!1,i)}return SD.ABTest.data[SD.ABTest._getDataGroupName(e)]}return null},_getDataGroupName:function(e){return"Test: "+e.trim()},extendedExecute:function(e,t,n){SD.ABTest.extendedData.hasOwnProperty(e)&&n[SD.ABTest._getExtendedGroup(!1,!1,SD.ABTest.extendedData[e])]()},setupExtendedTest:function(e,t,n,i,o){null!==e&&null!==o&&0<o.length&&0<n&&n<32&&n!=i&&0<i&&i<32&&(SD.ABTest.extendedData[e]={link:t,position:n,secondPosition:i,split:o})},_getExtendedGroup:function(e,t,n,i){var o,s,d,r,u,l,a,p=new RegExp("abt_uuid=([0-9a-f]+)","g"),D=0,S=[];if(n&&(e=n.position,t=n.secondPosition),e--,t--,o=(o=(o=p.exec(document.cookie))[1]).slice(0,12)+o.slice(13,32),i&&console.log({A:e,B:t,UUID:o,Hex:o[e]+o[t]}),s=parseInt(o[e]+o[t],16),!n)return s;for(d=(d=(d=n.split.split(",")).map(function(e){return e=parseInt(e,10),D+=e,e})).map(function(e){return e/D*255<<0}),(r=new Array(255)).fill(0),l=u=0,a=d.length;u<a;u++)r.fill(u,l,l+d[u]),l+=d[u];for(SD.ABTest._rSeed=n.link;S.length<256;)u=SD.ABTest._seededRandom(256,0)<<0,-1===S.indexOf(u)&&S.push(u);return r[S[s]]},_seededRandom:function(e,t){return e=e||1,t=t||0,SD.ABTest._rSeed=(9301*SD.ABTest._rSeed+49297)%233280,t+SD.ABTest._rSeed/233280*(e-t)}};
+  window.SD.ABTest.data = {"logged_in":false,"deviceType":"desktop","scriptIdent":"slickdealsindex","Test: Sticky right rail - 30578":"0","Test: Mobile web fp v3 - 29127":"0","Test: Deal Details v7 - 27993":"0","Test: Add In Line Top Coupons Module on FP - 27589":"1","Test: Post a Deal":"1","Test: Category Redesign":"1","Test: Display % off on the Frontpage":"3","Test: SEM LP Redesign Test":"1","Test: Mobile 3 AB Test":"2","Test: Store Page Test":"1","Test: Redesign of FP and Deal Details":"1","Test: Rolling 24 Hour Time Frame for Deals in Top Section on FP":"1","Test: Search Results Layout and Store Logos Test":"1","view":"redesign","storeTest":null,"mobile":false,"forumid":null};
+  </script>
+  <script>
+    var dataLayer = {"visitor":{"ipAddress":"149.88.98.70","isMachineIp":false,"isForeignIp":true,"isCaliforniaIP":false,"sectionLayout":"Frontpage_Redesign","pbSectionLayout":"Frontpage_Redesign","asEnabled":false,"confiant":1,"noads":0,"isRegistrationConversion":false,"registrationConversion":null,"immediateSource":"direct||","layout":"Redesign","uncookiedUser":true,"sessionCount":1,"classicExperienceSegment":null,"userId":0,"username":"Unregistered","isLoggedIn":"No","isStaff":"No","status":"Anonymous","verified":"No","daysRegistered":null,"joinDate":null,"timeSpent":null,"registrationActionSource":null,"emailHashes":null,"loyalty":"no","abTestInfo":[{"testKey":"web-1212-hog-q2-2024.yaml","variantName":"Control","testName":"Hold Out Group - 2024 - Q2"}],"dealAlertConversion":false,"appReferrer":null},"reporting":{"clientID":"f981ef965a4411efb4941a5de5c8a3b2","sessionID":"f981ee605a4411efb4941a5de5c8a3b2","auuid":"f305edb286954257a9f3dc4f7c4eea25"},"traffic":{"trueReferrer":null,"subSection1":"P1","subSection2":null,"subSection3":null,"subSection4":null,"corporateDomain":"slickdeals.net","deviceSegment":"desktop","clientHeaders":[],"cookieDomain":".slickdeals.net"},"page":{"rml":null,"pageName":"Frontpage:P1","section":"Frontpage","type":"Frontpage Deals","analyticsTitle":null,"template":null,"publishedDate":null,"pageGroup":"Frontpage","layout":"Redesign","nps":null},"btt":{"AbTestingSegment":null},"microSite":"Slickdeals","frontpage":{"layout":"grid"},"build":"20240813-154453-PDT-a3d27007115","abTestEventData":null,"gdpr":{"isEu":false,"showPrompt":false},"cdp":{"blueshift_id":"13779bc333ac34fac08a37c930c61e97"}};
+
+    // Copy the tests from dataLayer.visitor.ABTestInfo to SD.ABTest.data
+    if (typeof dataLayer.visitor !== 'undefined'
+        && typeof dataLayer.visitor.abTestInfo !== 'undefined'
+        && typeof SD !== 'undefined'
+        && typeof SD.ABTest !== 'undefined'
+        && typeof SD.ABTest.data !== 'undefined'
+    )
+    {
+        for (prop in dataLayer.visitor.abTestInfo)
+        {
+            var abTestDetails = dataLayer.visitor.abTestInfo[prop];
+
+            if (abTestDetails.hasOwnProperty('testName') && abTestDetails.hasOwnProperty('variantName'))
+            {
+                var abTestDataKey = 'SD_Test: ' + dataLayer.visitor.abTestInfo[prop].testName;
+
+                SD.ABTest.data[abTestDataKey] = dataLayer.visitor.abTestInfo[prop].variantName;
+            }
+        }
+    }
+
+    dataLayer.processadb = function ()
+    {
+        var f = document.getElementById('check2');
+        var fs;
+        if (window.getComputedStyle)
+        {
+            fs = window.getComputedStyle(f);
+        }
+
+        var a = function (v,d,c)
+        {
+            c = c || 0;
+            var e = document.getElementById(d);
+            if (fs && fs.display != 'none')
+            {
+                var es = window.getComputedStyle(e);
+                dataLayer.visitor[v] = es.display == 'none' ? 'Yes' : 'No';
+            }
+            else if (window.getComputedStyle && c < 100) {
+                dataLayer.visitor[v] = 'Unknown';
+                window.setTimeout(function () { fs = window.getComputedStyle(f); a(v, d, c + 1); }, 10);
+            }
+            else
+            {
+                dataLayer.visitor[v] = e == null || f.offsetParent == null ? 'Unknown' : e.offsetParent == null ? 'Yes' : 'No';
+                if (f.offsetParent == null && c < 100)
+                {
+                    window.setTimeout(function () { a(v, d, c + 1); }, 10);
+                }
+            }
+        };
+
+        a('ab', 'Ad-Container');
+    };
+
+    (function(){
+    'use strict';
+
+    if (typeof localStorage !== 'object')
+    {
+        return;
+    }
+
+    const params = location.search
+        .slice(1)
+        .split('&')
+        .map(p => p.split('='))
+        .reduce((obj, [key, value]) => ({ ...obj, [key]: value }), {});
+
+    const storageKey = 'utmSource';
+
+    if (typeof params['utm_source'] !== 'undefined')
+    {
+        localStorage.setItem(storageKey, JSON.stringify({
+            sessionID: dataLayer.reporting.sessionID,
+            value:  params['utm_source']
+        }));
+    }
+
+    const utmSourceJson = localStorage.getItem('utmSource');
+
+    if (utmSourceJson === null)
+    {
+        return;
+    }
+
+    const utmSourceData = JSON.parse(utmSourceJson);
+
+    if (utmSourceData.sessionID === dataLayer.reporting.sessionID)
+    {
+        dataLayer.visitor.utmSource = utmSourceData.value;
+    }
+    else
+    {
+        localStorage.removeItem(storageKey);
+    }
+})();
+
+
+    // Pass dataLayer to Google Tag Mana</script></head></html>

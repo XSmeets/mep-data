@@ -1,0 +1,1 @@
+[{"domain": "www.bayern.de", "httpOnly": true, "name": "LB_STK_BAYERN_DE", "path": "/", "sameSite": "Lax", "secure": false, "value": "962439946.20480.0000"}, {"domain": "www.bayern.de", "httpOnly": true, "name": "PHPSESSID", "path": "/", "sameSite": "Lax", "secure": true, "value": "v169adpn1vtun3j8ml59ac0h0s"}]

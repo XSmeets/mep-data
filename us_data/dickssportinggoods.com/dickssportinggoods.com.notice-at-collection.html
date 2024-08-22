@@ -1,0 +1,22 @@
+<html><head>
+    <script src="/.well-known/sbsd?v=87db8316-9e86-84c4-8725-e0d1333917ce&amp;t=240664711"></script>
+    <script>
+      (function() {
+        var proxied = window.XMLHttpRequest.prototype.send;
+        window.XMLHttpRequest.prototype.send = function() {
+          var pointer = this
+          var intervalId = window.setInterval(function(){
+            if (pointer.readyState != 4){
+              return;
+            }
+            location.reload(true)
+            clearInterval(intervalId);
+          }, 1);
+        return proxied.apply(this, [].slice.call(arguments));
+        };
+      })();
+    </script>
+  </head>
+  <body>
+  
+</body></html>

@@ -1,0 +1,97 @@
+<html xmlns:wicket="http://www.w3.org/1999/xhtml" style="--col-count:4;" data-content-login=""><head>
+<script>        (function () {
+            var syncEnabled = true;
+
+            if (checkIfCookiesAreWritable()) {
+                redirectToInterceptionPage();
+            } else {
+                // Privacy by Default
+                return;
+            }
+
+            // Help functions
+            function getCookie (cname) {
+                var name = cname + '=';
+                var ca = document.cookie.split(';');
+
+                for (var i = 0; i < ca.length; i++) {
+                    var c = ca[i];
+
+                    while (c.charAt(0) === ' ') {
+                        c = c.substring(1);
+                    }
+                    if (c.indexOf(name) === 0) {
+                        return c.substring(name.length, c.length);
+                    }
+                }
+                return '';
+            }
+
+            function checkIfCookiesAreWritable () {
+                try {
+                    // Create cookie
+                    document.cookie = 'cookietest=1';
+                    var ret = document.cookie.indexOf('cookietest=') !== -1;
+
+                    // Delete cookie
+                    document.cookie = 'cookietest=1; expires=Thu, 01-Jan-1970 00:00:01 GMT';
+                    return ret;
+                } catch (e) {
+                    return false;
+                }
+            }
+
+            function redirectToInterceptionPage () {
+                var sync = '';
+
+                if (syncEnabled === true && (window.location.host.endsWith('gmx.at') || window.location.host.endsWith('gmx.ch'))) {
+                    var syncCookies = ['uiconsent', 'euconsent-v2', 'idcc', 'consentLevel', 'stl', 'ua_id', 'tp_id'];
+                    syncCookies.forEach(function (cookie) {
+                        var cookieVal = getCookie(cookie)
+                        if (typeof cookieVal !== 'undefined' && cookieVal.length > 0) {
+                            sync += cookie + '=' + getCookie(cookie) + ';';
+                        }
+                    })
+                }
+
+                createFormForRedirect(sync)
+            }
+
+            function getTcfLandingpageUrl() {
+                var consentURL = window.location.protocol + '//' + window.location.host + '/consent-management/';
+                if (syncEnabled !== true) {
+                    return consentURL;
+                }
+                return  consentURL.replace(/\.at|\.ch/g, '.net');
+            }
+
+            function createFormForRedirect (sync) {
+
+                const form = document.createElement('form');
+                form.setAttribute('method', 'post');
+                form.setAttribute('action', getTcfLandingpageUrl());
+
+                const inputSync = document.createElement('input');
+                inputSync.setAttribute('type', 'hidden');
+                inputSync.setAttribute('name', 'sync');
+                inputSync.setAttribute('value', sync);
+
+                const inputReferrer = document.createElement('input');
+                inputReferrer.setAttribute('type', 'hidden');
+                inputReferrer.setAttribute('name', 'referrer');
+                inputReferrer.setAttribute('value', document.referrer);
+
+                const inputOriginURL = document.createElement('input');
+                inputOriginURL.setAttribute('type', 'hidden');
+                inputOriginURL.setAttribute('name', 'origin');
+                inputOriginURL.setAttribute('value', window.location.protocol + '//' + window.location.host + window.location.pathname + window.location.search);
+
+                form.appendChild(inputSync);
+                form.appendChild(inputReferrer);
+                form.appendChild(inputOriginURL);
+
+                document.body = document.createElement("body");
+                document.body.appendChild(form).submit();
+            }
+        })();
+</script></head><body><form method="post" action="https://www.gmx.net/consent-management/"><input type="hidden" name="sync" value=""><input type="hidden" name="referrer" value=""><input type="hidden" name="origin" value="https://www.gmx.at/"></form></body></html>

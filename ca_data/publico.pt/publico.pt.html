@@ -1,0 +1,67 @@
+<html lang="pt"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PÚBLICO – Abrir portas onde se erguem muros</title>
+    <meta name="description" content="Notícias, opinião plural, investigação, edição impressa, newsletters, jogos. Pense bem, pense PÚBLICO">
+
+    <link rel="manifest" href="/manifest.json?v2021">
+    <link rel="canonical" href="https://www.publico.pt">
+
+    <link rel="preload" href="https://www.publico.pt/site-2022/assets/fonts/publico-bold.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="preload" href="https://www.publico.pt/site-2022/assets/fonts/publico-medium.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="preload" href="https://www.publico.pt/site-2022/assets/fonts/publico-mediumitalic.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="preload" href="https://www.publico.pt/site-2022/assets/fonts/publico-light.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="preload" href="https://www.publico.pt/site-2022/assets/fonts/publico-roman.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="preload" href="https://www.publico.pt/site-2022/assets/fonts/publico-romanitalic.woff2" as="font" type="font/woff2" crossorigin="">
+
+    <link rel="stylesheet" href="https://www.publico.pt/site-2022/assets/css/header--main.css?v=0808202415">
+    <link rel="stylesheet" href="https://www.publico.pt/site-2022/assets/css/main.css?v=0808202415">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="https://static.publico.pt/files/site/assets/img/ico/apple-touch-icon.png?v=Km29lWbk4K">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://static.publico.pt/files/site/assets/img/ico/favicon-32x32.png?v=Km29lWbk4K">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://static.publico.pt/files/site/assets/img/ico/favicon-16x16.png?v=Km29lWbk4K">
+    <link rel="manifest" href="https://static.publico.pt/files/site/assets/img/ico/manifest.js?v=Km29lWbk4K">
+    <link rel="mask-icon" href="https://static.publico.pt/files/site/assets/img/ico/safari-pinned-tab.svg" color="#d71921">
+    <link rel="shortcut icon" href="https://static.publico.pt/files/site/assets/img/ico/favicon.ico?v=Km29lWbk4K">
+    <meta name="apple-mobile-web-app-title" content="publico.pt">
+    <meta name="application-name" content="PÚBLICO">
+    <meta name="msapplication-config" content="https://static.publico.pt/files/site/assets/img/ico/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="PÚBLICO">
+    <meta property="og:image" content="https://static.publicocdn.com/files/site/assets/img/social/default-preview.png">
+    <meta property="og:url" content="https://www.publico.pt">
+    <meta property="og:site_name" content="PÚBLICO">
+    <meta property="og:description" content="As últimas notícias, opinião, fotos e vídeos de Lisboa, Porto, Portugal, Europa e do Mundo. A melhor fonte de informação de economia, política, cultura, ciência, tecnologia, life&amp;style e viagens.">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@publico">
+    <meta name="twitter:site:id" content="2561091">
+    <meta name="twitter:url" content="https://www.publico.pt">
+    <meta name="twitter:title" content="PÚBLICO">
+    <meta name="twitter:description" content="As últimas notícias, opinião, fotos e vídeos de Lisboa, Porto, Portugal, Europa e do Mundo. A melhor fonte de informação de economia, política, cultura, ciência, tecnologia, life&amp;style e viagens.">
+    <meta name="twitter:image" content="https://static.publicocdn.com/files/site/assets/img/social/default-preview.png">
+
+    <meta property="fb:app_id" content="263434066253">
+    <meta name="apple-itunes-app" content="app-id=953049142">
+
+    <script type="application/ld+json">
+        { "@context": "http://schema.org","@type": "Organization","name": "Público","url": "https://www.publico.pt","logo": "https://static.publicocdn.com/files/site/assets/img/p-logo-original.png","foundingDate": "1990","address": {"@type": "PostalAddress","streetAddress": "Edifício Diogo Cão, Doca de Alcântara Norte","addressLocality": "Lisboa","postalCode": "1350-352","addressCountry": "Portugal"},"contactPoint":{"@type": "ContactPoint","contactType": "customer support","telephone": "[+351-21011111000]","email": "call.center@publico.pt"},"sameAs":["https://www.facebook.com/publico","https://twitter.com/publico","https://www.instagram.com/publico.pt/","https://www.linkedin.com/company/31792","https://www.youtube.com/user/jornalpublicovideos"]}
+    </script>
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/sw.js?cname=202010711802&path=' + document.location.pathname + document.location.search, { scope: '/' });
+            navigator.serviceWorker.addEventListener('message', function (event) {
+                if (event.data.type == "user_message_ticker") {
+                    var cusEvent = new CustomEvent(event.data.type, { detail: event.data.detail });
+                    document.dispatchEvent(cusEvent);
+                }
+                //console.log(event);
+                //console.log(`The service worker sent me a message again: ${event.data}`);
+            });
+            navigator.serviceWorker.ready;
+        }
+    </script></head></html>

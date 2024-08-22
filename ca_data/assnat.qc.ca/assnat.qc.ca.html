@@ -1,0 +1,1326 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
+     <title>
+		     Accueil - Assemblée nationale du Québec
+		</title>
+    
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+<meta http-equiv="content-language" content="fr">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<link type="text/css" href="/styles/ResetCSS.min.css" rel="stylesheet" media="screen">
+<link type="text/css" href="/styles/AssNat.min.css" rel="stylesheet" media="screen">
+<link type="text/css" href="/styles/Reguliere.css" title="Reguliere" rel="alternate stylesheet" media="screen">
+<link type="text/css" href="/styles/Moyenne.css" title="Moyenne" rel="alternate stylesheet" media="screen">
+<link type="text/css" href="/styles/Grande.css" title="Grande" rel="alternate stylesheet" media="screen">
+<link type="text/css" href="/styles/infoBulle.min.css" rel="stylesheet" media="screen">
+<link type="text/css" href="/styles/jScrollPane.min.css" rel="stylesheet" media="screen">
+<link type="text/css" href="/styles/jquery.treeview.min.css" rel="stylesheet" media="screen">
+<link type="text/css" href="/styles/jquery.skinned-select.min.css" rel="stylesheet" media="screen">
+<link type="text/css" href="/styles/jquery.datePicker.min.css" rel="stylesheet" media="screen">
+<link type="text/css" href="/styles/Calendrier.min.css" rel="stylesheet" media="screen">
+<link href="/Images/favicon.ico" rel="shortcut icon">
+
+<!-- Didomi -->
+<link rel="preconnect" as="script" href="https://sdk.privacy-center.org/"><link rel="dns-prefetch" as="script" href="https://sdk.privacy-center.org/"><link rel="preload" as="script" href="https://sdk.privacy-center.org/196da249-e5c8-4975-84d3-4b76bf16efd6/loader.js?target_type=notice&amp;target=UgnH3adf"><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-5X47H2N"></script><script id="spcloader" type="text/javascript" async="" charset="utf-8" src="https://sdk.privacy-center.org/196da249-e5c8-4975-84d3-4b76bf16efd6/loader.js?target_type=notice&amp;target=UgnH3adf"></script><script type="text/javascript">window.gdprAppliesGlobally = false; (function () { (function (e, r) { var t = document.createElement("link"); t.rel = "preconnect"; t.as = "script"; var n = document.createElement("link"); n.rel = "dns-prefetch"; n.as = "script"; var i = document.createElement("link"); i.rel = "preload"; i.as = "script"; var o = document.createElement("script"); o.id = "spcloader"; o.type = "text/javascript"; o["async"] = true; o.charset = "utf-8"; var a = "https://sdk.privacy-center.org/" + e + "/loader.js?target_type=notice&target=" + r; if (window.didomiConfig && window.didomiConfig.user) { var c = window.didomiConfig.user; var s = c.country; var d = c.region; if (s) { a = a + "&country=" + s; if (d) { a = a + "&region=" + d } } } t.href = "https://sdk.privacy-center.org/"; n.href = "https://sdk.privacy-center.org/"; i.href = a; o.src = a; var p = document.getElementsByTagName("script")[0]; p.parentNode.insertBefore(t, p); p.parentNode.insertBefore(n, p); p.parentNode.insertBefore(i, p); p.parentNode.insertBefore(o, p) })("196da249-e5c8-4975-84d3-4b76bf16efd6", "UgnH3adf") })();</script>
+
+
+<!-- Feuilles de styles specifiques IE -->
+
+<!--[if lte IE 6]>
+    <link type="text/css" href="/styles/CorrectionsIE6.min.css" rel="stylesheet" media="screen"  />
+<![endif]-->
+
+<!--[if IE 7]>
+    <link type="text/css" href="/styles/CorrectionsIE7.min.css" rel="stylesheet" media="screen"  />
+<![endif]-->
+
+<!--[if IE 8]>
+    <link type="text/css" href="/styles/CorrectionsIE8.min.css" rel="stylesheet" media="screen"  />
+<![endif]-->
+<link type="text/css" href="/styles/Impression.min.css" rel="stylesheet" media="print">
+
+<link type="text/css" href="/styles/Tableau.min.css" rel="stylesheet" media="screen">
+
+<script type="text/javascript" src="/scripts/jquery.js?version=1.2.6"></script>
+
+<script type="text/javascript" src="/scripts/jquery-ui.js?version=1.5.2"></script>
+
+<!-- Google Tag Manager -->
+<script>(function (w, d, s, l, i) {
+        w[l] = w[l] || []; w[l].push({
+            'gtm.start':
+                new Date().getTime(), event: 'gtm.js'
+        }); var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+})(window, document, 'script', 'dataLayer', 'GTM-5X47H2N');</script> 
+<!-- End Google Tag Manager -->
+
+
+<script type="text/javascript">
+//<![CDATA[
+// Libellé du calendrier
+$.dpText = {
+	TEXT_PREV_YEAR		:	'Année précédente',
+	TEXT_PREV_MONTH		:	'Mois précédent',
+	TEXT_NEXT_YEAR		:	'Année suivante',
+	TEXT_NEXT_MONTH		:	'Mois suivant',
+	TEXT_CLOSE			:	'[x] Fermer',
+	TEXT_CHOOSE_DATE	:	'Choisir une date'
+}
+
+var _contenuLoading = '<img style="width: 16px;height: 16px;" src="/Images/lightbox/loading.gif" />&nbsp; Chargement en cours...';
+
+var _nbAnneeArchiveActivite = '3';
+// Voir Calendrier.js pour _dtSetStartDate
+var _dtSetEndDate = '2024-12-06';
+var intNombreAnneeArchiveActivite = 3;
+var langueCourante = 'fr';
+
+_initCalendrierTypeActiviteJSON = eval([{"NomTypeActivite":"Autres activités","Categorie":"D","Name":null,"Description":null},{"NomTypeActivite":"Conférences et points de presse","Categorie":"C","Name":null,"Description":null},{"NomTypeActivite":"Séances de l'Assemblée","Categorie":"A","Name":null,"Description":null},{"NomTypeActivite":"Séances des commissions","Categorie":"B","Name":null,"Description":null}]);name 
+_urlGetCalendrierDataJSON = '/WebMethod/Calendrier.aspx/GetCalendrier?langue=fr';
+_documentURL = "https://www.assnat.qc.ca/Media/Process.aspx?process=Thumbnail&token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz&MediaId=";
+_imageThumbnailURL = "https://www.assnat.qc.ca/Media/Process.aspx?process=AlbumThumbnail&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz&amp;asset=";
+_imageOriginaleURL = "https://www.assnat.qc.ca/Media/Process.aspx?process=Original&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz&amp;asset=";
+_imageThumbnailDrapeauURL = "https://www.assnat.qc.ca/Media/Process.aspx?process=ThumbnailDrapeau&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz&amp;asset=";
+_lienContenuURL = "/fr/deputes/index";
+_extensionPagesDuSite = "html";
+_lienPatronUrlCommuniquePresse = '/fr/actualites-salle-presse/communiques/';
+_lienPatronUrlTranscription = '/fr/actualites-salle-presse/conferences-points-presse/';
+_lienPatronUrlEnDirect = '/fr/video-audio/index';
+_lienJournalDebat ='/fr/travaux-parlementaires/{0}.html';
+_lienJournalDebatCom ='/fr/travaux-parlementaires/commissions/{0}/journal-debats/index';
+_lienJournalDebatChmbr ='/fr/travaux-parlementaires/{0}';
+_listeObjetMetierPatronUrl = "DocumentGenerique:/fr/document/{0}.html|Commission:/fr/travaux-parlementaires/commissions/{0}/index.html|Mandat:/fr/travaux-parlementaires/mandats/{0}/index.html|Lien:/fr/lien/{0}.html|CommuniquePresse:/fr/actualites-salle-presse/communiques/{0}.html|Actualite:/fr/actualites-salle-presse/nouvelle/{0}.html|ConferencePointPresse:/fr/actualites-salle-presse/conferences-points-presse/{0}.html|Consultation:/fr/travaux-parlementaires/consultations/{0}.html|SeanceAssemblee:/fr/travaux-parlementaires/assemblee-nationale/{0}/index.html|ProjetLoi:/fr/travaux-parlementaires/projets-loi/projet-loi-{0}.html|VideoAudio:/fr/video-audio/{0}.html|Journal:/fr/travaux-parlementaires/{0}.html|SyndicationRSS:/fr/rss/{0}.html|Petition:/fr/exprimez-votre-opinion/petition/{0}/index.html|TermeEncyclopedique:/fr/patrimoine/lexique/{0}.html|SectionDelegation:/fr/diplomatie/{0}/{1}/index.html|Vote:/fr/travaux-parlementaires/registre-des-votes/{0}/index.html|Depute:/fr/deputes/{0}/index.html|Texte:/fr/{0}.html|Individu:/fr/patrimoine/anciens-parlementaires/{0}.html|";
+_lienAideSoutienTechnique = '/fr/aide/aide-recherche.html#javascript';
+
+var _urlGetCalendrierObtenirActiviteEnOndes = '/WebMethod/Calendrier.aspx/ObtenirActiviteEnOndes';
+var intervalleRafraichissementWebDiffusion = '60';
+var urlPageVideoAudio = '/fr/video-audio/index.html?activite={0}';
+var libelleDateDebutDu = 'Du';
+var libelleDateDebutVers = 'Vers';
+var libelleDateFinJusqua = 'jusqu\'à';
+var libelleDateFinAu = 'au';
+var libelleHeureFinA = 'à'
+var libelleDebutApresPeriodeCourante = 'début : après la période des affaires courantes de l\'Assemblée';
+var bulleAidePeriodeAffaireCourante = '<span class="btnInfoBulle sansControle"><a href="javascript:void(0)" class="sanssouligne"><img src="http://www.assnat.qc.ca/Images/btnInfoBulle.gif" title="Afficher l\'aide" alt="Afficher l\'aide"></a><span title="Début : après la période des affaires courantes de l\'Assemblée"></span></span>';
+var bulleAideApresAvisTravauxCommissions = '<span class="btnInfoBulle sansControle"><a href="javascript:void(0)" class="sanssouligne"> <img src="http://www.assnat.qc.ca/Images/btnInfoBulle.gif" title="Afficher l\'aide" alt="Afficher l\'aide"></a><span title="Début : après les avis touchant les travaux des commissions"></span></span>'
+var libelleActiviteReporteeDateUlterieure = 'Activité reportée à une date ultérieure';
+
+var libelleCalAPartirDe = 'À partir de';
+var libelleCalEnCours = 'En cours';
+var libelleCalDebut = 'Début';
+
+var libelleDuree = 'Durée :';
+
+    var libelleAucunVideo = "La recherche n’a donné aucun résultat.";
+    var libelleAucuneAutreActiviteEnDirect = "Aucune autre activité en direct."
+
+var libelleNombreResultat = 'Nombre de résultats&nbsp;';
+var libelleMotsCles = 'Mots clés';
+var libelleCategorie = 'Catégorie';
+var libelleSession = 'Session';
+var libelleDateOuPeriode = 'Date ou période&nbsp;: ';
+var libelleAPartirDu = 'À partir du';
+var libelleJusquAu = "Jusqu'au";
+
+
+
+var arrCalendrierLblGeneral = {
+                                "lblCalOuvrir": "Ouvrir",
+                                "lblCalFermerEntete": "Fermer"       
+                            };
+var arrCalLblJoursSemaine = ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'lblFormDeputesSortants'];
+var arrCalLblMoisAnnee = ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'];
+var arrCalLblMoisAnneeAbr = ['JA', 'FE', 'MR', 'AR', 'MA', 'JN', 'JL', 'AU', 'SE', 'OC', 'NO', 'DE'];
+var lblCalAucuneActivite = "Aucune activité au calendrier aujourd'hui.";
+var lblCalAucuneActiviteType = "Aucune activité de cette catégorie n'est prévue aujourd'hui."
+var lblCalDifficulteTechnique = "Le calendrier n'est pas accessible en ce moment. Veuillez réessayer dans quelques minutes.";
+var lblCalActPrivee = "Activité privée"; 
+var lblCalActSurInvitation = "Sur invitation";
+var lblCalActAnnulee = "Activité annulée"; 
+var lblCalEnDirect = "En direct";
+var lblCalTranscription = "Transcription";
+var lblCalCommunique = "Communiqué";
+var lblCalToutesActivites = "Toutes les activités";
+var lblCalVideo = "Vidéo";
+var lblCalAudio = "Audio";
+
+// Libellés du date picker
+
+    Date.dayNames = ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'lblFormDeputesSortants'];
+    Date.abbrDayNames = ['DIM', 'LUN', 'MAR', 'MER', 'JEU', 'VEN', 'SAM'];
+    Date.monthNames = ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'];
+    Date.abbrMonthNames = ['JA', 'FE', 'MR', 'AR', 'MA', 'JN', 'JL', 'AU', 'SE', 'OC', 'NO', 'DE'];
+	Date.firstDayOfWeek = 7;
+
+
+// Libellés pour treeview - overrider dans les pages au besoin
+var lblOuvrirTout = 'Afficher tout le contenu';
+var lblFermerTout = 'Masquer tout le contenu';
+
+// Libelles pour paginateur
+var _lblPaginationPage = 'Page';
+var _lblPaginationDe = 'de';
+
+// URL drapeau generique 
+var _urlDrapeauGenerique = '/Images/Temp/icoDrapeaux.gif'
+
+// Pour visionneuse: libelle 'Image' utilise dans slimbox2.js
+var lblVisionneuseTermeImage = "Image {x} de {y}"; 
+
+// Libelle pour le bouton Fermer de la visionneuse
+var libelleCloseLink = "Fermer";
+
+// Libellés pour fermer les bulles d'aide
+var lblBulleAideFermer = "[x] Fermer";
+
+var urlBoutonCalendrier = '/Images/btnCalendrier.gif';
+
+
+var urlObtenirVisionneusePhotos = '/Gabarits/InfrastructuresAvecVisionneuse.aspx/ObtenirVisionneusePhotos';
+var lblAlbumPhotos = 'Album de photos';
+var lblAgrandir = 'Agrandir';
+
+// Le script d'effet ne fonctionne pas sous Internet Explorer, ce script distingue ie des autres fureteurs 
+ if ($.browser.msie) {
+    }
+    else {
+        document.write("<script type='text\/javascript' src='\/scripts/jquery.easing.min.js?version=1.3'><\/script>")
+    }
+//]]>
+ 
+    var valEtatDeputeAncienDeputes = "AncienDeputes";
+
+    var urlObtenirTypeTravauxParSessionLegislature = '/Gabarits/RechercheAvancee.aspx/ObtenirTypeTravauxParSessionLegislature';
+    var urlObtenirTypeTravauxParPeriode = '/Gabarits/RechercheAvancee.aspx/ObtenirTypeTravauxParPeriode';
+    var urlObtenirTypeDocumentParTypeTravaux = '/Gabarits/RechercheAvancee.aspx/ObtenirTypeDocumentParTypeTravaux';
+    var urlObtenirSousCategorieVideoParCategorieVideo = '/Gabarits/RechercheAvancee.aspx/ObtenirSousCategorieVideoParCategorieVideo';
+    
+    var idsSectionRechercheTravauxParlementaires = ['9',
+                                                        '27',
+                                                        '29',
+                                                        '31',
+                                                        '33'];
+
+    var idCategorieDocumentJournauxDebats = '13'
+
+    var msgFormatDateInvalide = "Veuillez saisir une date valide selon le format aaaa-mm-jj.";
+    var msgPeriodeInvalide = "La date de début doit précéder la date de fin.";
+    var msgPeriodeDebutFutur = "La date doit être antérieure ou égale à la date du jour.";
+
+    $(document).ready(function(){
+        $("a").each(function(i, e) {
+            var href = $(e).attr('href');
+            if(href && href.search(/^http:/) == 0){
+                $(e).attr('href', "https:" + href.substring(5));
+            }
+        })
+
+        $("img").each(function (i, e) {
+            var src = $(e).attr('src');
+            if (src && src.search(/^http:/) == 0) {
+                $(e).attr('src', "https:" + src.substring(5));
+            }
+            if (src && src.search(/^https+:/) == 0) {
+                $(e).attr('src', "https:" + src.substring(src.indexOf(":") + 1));
+            }
+        })
+    });
+</script><script type="text/javascript" src="/scripts/jquery.easing.min.js?version=1.3"></script><script type="text/javascript" async="" src="https://sdk.privacy-center.org/sdk/6263d6e29dbe2d824b8f5e9ac318e770589d2f0a/modern/sdk.6263d6e29dbe2d824b8f5e9ac318e770589d2f0a.js" charset="utf-8"></script>
+
+<!-- Gestion des cookies. Documentation : http://stilbuero.de/jquery/cookie/ -->
+<script type="text/javascript" src="/scripts/jquery.cookie.min.js"></script>
+
+<!-- Corrige les problème de z-index d'Internet Explorer. Doc: http://brandonaaron.net/jquery/plugins/bgiframe/docs/ -->
+<script type="text/javascript" src="/scripts/jquery.bgiframe.min.js"></script>
+
+<!-- Permet la gestion de l'objet date. -->
+<script type="text/javascript" src="/scripts/date.min.js"></script>
+
+<!-- Génère des paneaux (Tabs) à partir d'une liste (ul li). info et doc: http://docs.jquery.com/UI/Tabs-->
+<script type="text/javascript" src="/scripts/ui.tabs.js"></script>
+
+<!-- Génère l'affichage dynamique d'un liste (ul li). info et doc: http://bassistance.de/jquery-plugins/jquery-plugin-treeview/ -->
+<script type="text/javascript" src="/scripts/jquery.treeview.pack.min.js"></script>
+
+<!-- Permet de modifier la feuille de style. info et doc:http://kelvinluck.com/article/switch-stylesheets-with-jquery -->
+<script type="text/javascript" src="/scripts/StyleSwitcher.min.js"></script>
+
+<!-- Permet de modifier l'apparence des selects. info et doc:http://www.lotsofcode.com/javascript-and-ajax/jquery-select-box-skin.htm -->
+<script type="text/javascript" src="/scripts/jquery.skinned-select.min.js"></script>
+
+<!-- Permet de créer des masques sur les formulaires info et doc:http://digitalbush.com/projects/masked-input-plugin/ -->
+<script type="text/javascript" src="/scripts/jquery.maskedinput-1.2.2.min.js"></script>
+
+<!-- Permet de générer un calendrier. docs et info : http://kelvinluck.com/assets/jquery/datePicker/v2/demo/datePickerLocalised.html -->
+<script type="text/javascript" src="/scripts/jquery.datePicker.js"></script>
+
+<!-- Permet de gérer les bulles d'aide en popup -->
+<script type="text/javascript" src="/scripts/BulleAide.min.js"></script>
+
+<!-- Permet de modifier l'apparence des scrollbars. info et doc: http://www.kelvinluck.com/assets/jquery/jScrollPane/jScrollPane.html -->
+<script type="text/javascript" src="/scripts/jScrollPane.min.js"></script>
+
+<!-- Permet d'utiliser des PNG transparent dans IE 6 et 5.5. info et doc: http://jquery.andreaseberhard.de/pngFix/ -->
+<script type="text/javascript" src="/scripts/jquery.pngFix.min.js"></script>
+
+<!-- Permet de trier et de paginer des tableaux. docs et info : http://tablesorter.com -->
+<script type="text/javascript" src="/scripts/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="/scripts/jquery.tablesorter.pager.min.js"></script>
+
+<script type="text/javascript" src="/scripts/jquery.uilock.min.js"></script>
+
+<!-- script general -->
+<script type="text/javascript" src="/scripts/AssNat.min.js"></script>
+
+<script type="text/javascript" src="/Scripts/moment.min.js"></script>
+
+<!-- evenements et gestion du calendrier -->
+<script type="text/javascript" src="/scripts/Calendrier.min.js?v=20240708"></script>
+
+<!-- sert uniquement pour débugger les objets JSON. -->
+<script type="text/javascript" src="/scripts/json.min.js"></script>
+
+
+
+
+
+    
+    <meta name="google-site-verification" content="OTIEMt5ZYp_tvD-nQXdjKTOQ4hc3lAJ2d85RSbA9mhE">	   	
+	<script type="text/javascript" src="/scripts/carrousel.min.js"></script>   		
+	<script type="text/javascript">		
+		var _initCalendrierDataJSON = eval({"DateDonnees":new Date(1722657600000),"CodeErreur":0,"ActivitesDuJour":[{"Id":56447,"IdTypeActivite":27,"Titre":"Yoga extérieur","TitreCourt":"Yoga extérieur","Description":null,"Nature":1,"SousTitre":null,"SousTitreCourt":null,"Privee":false,"Annulee":false,"Reportee":false,"LienDiffusionVideoDirectActivite":"","LienDiffusionAudioDirectActivite":"","InfoDateReport":null,"StatutDiffusion":true,"DirectVideo":false,"DirectAudio":false,"IndTranscription":false,"LienTranscription":"","IndCommuniquePresse":false,"LienCommuniquePresse":null,"DateDebut":new Date(1722691800000),"DateFin":new Date(1722696300000),"Lieu":"Jardins de l’Assemblée nationale (en cas de pluie, l’activité aura lieu à l’Agora)","SousActivites":[],"Documents":[],"Images":[],"VideoAudio":null,"Categorie":"D","UrlClient":"13031","TypeObjetMetier":"ANQ.Vigie.Bll.Lien","IndPeriodeAffairesCouranteAssemblee":false,"IndApresAvisTouchantTravauxCommissions":false,"EstSeanceAssembleeExtraordinaire":false}],"Expositions":[{"Titre":"« Artistes d'ici », par l'artiste Helena Vallée-Dallaire","TitreCourt":"« Artistes d'ici », par l'artiste Helena Vallée-Dallaire","DateDebut":new Date(1720445400000),"DateFin":new Date(1724531400000),"Lieu":"Pavillon d'accueil","Lien":"13031","TypeObjectMetier":"ANQ.Vigie.Bll.Lien"},{"Titre":"De l’étiquette à la fourchette, l’art de recevoir au parlement","TitreCourt":"De l’étiquette à la fourchette, l’art de recevoir au parlement","DateDebut":new Date(1706535000000),"DateFin":new Date(1734125400000),"Lieu":"Pavillon d'accueil","Lien":"13031","TypeObjectMetier":"ANQ.Vigie.Bll.Lien"}],"Drapeaux":[],"LangueAffichage":"fr"});
+
+        //Initialiser le carrousel.
+        $(document).ready(function () {
+            if (Carrousel_init()) {
+                $(".BlocCarrousel").show();
+            }
+        });
+    </script>
+    <link href="/styles/GabAccueil.min.css" rel="stylesheet" type="text/css" media="screen">
+
+
+    <style type="text/css">
+        .NonVisible { display:none; }
+    </style>
+
+    
+    
+        
+        <meta property="og:title" content="Accueil - Assemblée nationale du Québec">
+        <meta property="og:description" content="">
+        <meta property="og:image" content="https://www.assnat.qc.ca/Media/Process.aspx?process=Original&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz&amp;asset=ANQ.Vigie.Bll.Image_19205">
+<meta property="og:image" content="https://www.assnat.qc.ca/Media/Process.aspx?process=Original&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz&amp;asset=ANQ.Vigie.Bll.Image_19207">
+<meta property="og:image" content="https://www.assnat.qc.ca/Media/Process.aspx?process=Original&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz&amp;asset=ANQ.Vigie.Bll.Image_19209">
+<meta property="og:image" content="https://www.assnat.qc.ca/Media/Process.aspx?process=Original&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz&amp;asset=ANQ.Vigie.Bll.Image_19211">
+<meta property="og:image" content="https://www.assnat.qc.ca/Media/Process.aspx?process=Original&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz&amp;asset=ANQ.Vigie.Bll.Image_19213">
+<meta property="og:image" content="https://www.assnat.qc.ca/Media/Process.aspx?process=Original&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz&amp;asset=ANQ.Vigie.Bll.Image_19215">
+<meta property="og:image" content="https://www.assnat.qc.ca/Media/Process.aspx?process=Original&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz&amp;asset=ANQ.Vigie.Bll.Image_19217">
+
+    
+</head>
+<body id="Accueil" class="didomi-popup-open"><style type="text/css" scoped="true" id="didomi-css">#didomi-host .didomi-components-button{cursor:pointer;display:block;height:38px;padding:0 20px;font-size:16px;line-height:18px;font-weight:bold;text-align:center;color:#555;background-color:#eee;border:solid 1px rgba(34,34,34,.2)}#didomi-host .didomi-components-button:disabled{opacity:.4;cursor:initial}#didomi-host .didomi-components-button:hover{opacity:.7}#didomi-host .didomi-components-button span{background:rgba(0,0,0,0)}#didomi-host .didomi-mobile .didomi-components-button{font-size:14px}#didomi-host .didomi-screen-xsmall .didomi-components-button{padding:0 10px}#didomi-host .didomi-components-radio{display:-webkit-flexbox;display:flex;-moz-flex-direction:row;flex-direction:row;-webkit-flex-pack:justify;-moz-justify-content:space-between;justify-content:space-between;-moz-align-items:center;align-items:center}#didomi-host .didomi-components-radio__option{margin-right:5px;cursor:pointer;height:25px;box-shadow:1px 1px 0 0 rgba(0,0,0,.1);background-color:#fff;border:solid 1px #eee;padding:0 20px;line-height:12px;font-size:12px;color:#757575;font-weight:bold;transition:background-color 200ms,border-color 200ms;transition-timing-function:ease}#didomi-host .didomi-components-radio__option:hover{color:#757575;border-color:#757575}#didomi-host .didomi-components-radio__option:last-child{margin-right:0}[dir=rtl] #didomi-host .didomi-components-radio__option:last-child{margin-right:5px}#didomi-host .didomi-components-radio__option:first-child{margin-right:5px}[dir=rtl] #didomi-host .didomi-components-radio__option:first-child{margin-right:0}#didomi-host .didomi-components-radio__option>svg{margin-right:5px}#didomi-host .didomi-components-radio__option span{background:rgba(0,0,0,0)}#didomi-host .didomi-components-radio__option.didomi-components-radio__option--agree{background-color:#3d8548;color:#fff;border:solid 1px rgba(0,0,0,.3);padding:0 11.5px}#didomi-host .didomi-components-radio__option.didomi-components-radio__option--agree>svg{vertical-align:middle}#didomi-host .didomi-components-radio__option.didomi-components-radio__option--disagree{background-color:#e60000;color:#fff;border:solid 1px rgba(0,0,0,.3);padding:0 13.5px}#didomi-host .didomi-components-radio__option__reporting{box-sizing:border-box}#didomi-host .didomi-components-radio__option__reporting#didomi-radio-option-disagree-to-all{font-size:12px !important}#didomi-host .didomi-components-radio__option__reporting#didomi-radio-option-agree-to-all{font-size:12px !important}#didomi-host .didomi-components-radio__option__accepter{box-sizing:border-box}#didomi-host .didomi-components-accordion{flex:5}#didomi-host .didomi-components-accordion .label-click{cursor:pointer}#didomi-host .didomi-components-accordion .trigger-icon{width:15px;font-size:16px;display:inline-block;text-align:center}#didomi-host .didomi-components-accordion .didomi-content{display:none;overflow:hidden;max-height:0;opacity:0;visibility:hidden;font-weight:300;text-align:justify;transition:all .1s ease-in-out;transition-property:opacity,max-height,transform,visibility,padding-bottom}#didomi-host .didomi-components-accordion .didomi-content.active{display:block;max-height:3000px;opacity:1;visibility:visible;padding-bottom:10px;transition-property:opacity,max-height,transform,visibility;overflow:visible}#didomi-host .didomi-components-accordion .didomi-components-accordion-label-container{display:-webkit-flexbox;display:flex;-moz-flex-direction:row;flex-direction:row;-webkit-flex-pack:justify;-moz-justify-content:space-between;justify-content:space-between;-moz-align-items:center;align-items:center}#didomi-host .didomi-components-accordion .didomi-components-accordion-label-container .label-click{flex:2}#didomi-host .didomi-mobile .didomi-components-accordion{width:100%;flex:1 auto}#didomi-host .didomi-mobile .didomi-components-accordion .didomi-components-accordion-label-container{display:-webkit-flexbox;display:flex;-moz-flex-direction:column;flex-direction:column;-webkit-flex-pack:start;-moz-justify-content:flex-start;justify-content:flex-start;-moz-align-items:flex-start;align-items:flex-start}#didomi-host .lds-ellipsis-container{display:flex;align-items:center;justify-content:center;height:100%}#didomi-host .lds-ellipsis-container .lds-ellipsis{display:inline-block;position:relative;width:64px;height:64px}#didomi-host .lds-ellipsis-container .lds-ellipsis div{position:absolute;top:27px;width:11px;height:11px;border-radius:50%;background:#dcdcdc;animation-timing-function:cubic-bezier(0, 1, 1, 0)}#didomi-host .lds-ellipsis-container .lds-ellipsis div:nth-child(1){left:6px;animation:lds-ellipsis1 .6s infinite}#didomi-host .lds-ellipsis-container .lds-ellipsis div:nth-child(2){left:6px;animation:lds-ellipsis2 .6s infinite}#didomi-host .lds-ellipsis-container .lds-ellipsis div:nth-child(3){left:26px;animation:lds-ellipsis2 .6s infinite}#didomi-host .lds-ellipsis-container .lds-ellipsis div:nth-child(4){left:45px;animation:lds-ellipsis3 .6s infinite}@keyframes lds-ellipsis1{0%{transform:scale(0)}100%{transform:scale(1)}}@keyframes lds-ellipsis3{0%{transform:scale(1)}100%{transform:scale(0)}}@keyframes lds-ellipsis2{0%{transform:translate(0, 0)}100%{transform:translate(19px, 0)}}#didomi-host .didomi-components-skip-link{position:absolute;top:-100px;left:-100px;margin-bottom:16px;display:block}#didomi-host .didomi-components-skip-link:focus{position:relative;top:0;left:0}#didomi-host .didomi-popup-backdrop{position:fixed;top:0;left:0;width:100%;height:100%;background-color:rgba(255,255,255,.8);z-index:2147483642;overflow:auto;display:-webkit-flexbox;display:flex;-moz-flex-direction:row;flex-direction:row;align-items:flex-start}[dir=rtl] #didomi-host .didomi-popup-backdrop{overflow-y:auto;overflow-x:hidden}#didomi-host .didomi-exterior-border{border-style:solid;border-radius:5px;border-width:1px;padding:1px;margin:auto}#didomi-host .didomi-popup-container{background-color:#fff;opacity:1;max-width:650px;width:100%;border-style:solid;border-radius:3px;border-width:1px;-webkit-overflow-scrolling:touch}#didomi-host .didomi-popup-header{display:-webkit-flexbox;display:flex;-moz-flex-direction:row;flex-direction:row;-webkit-flex-pack:justify;-moz-justify-content:space-between;justify-content:space-between;-moz-align-items:center;align-items:center;padding:30px 20px 0;font-weight:bold;font-family:Arial}#didomi-host .didomi-popup-body{padding:30px 20px}#didomi-host .didomi-popup-body .didomi-popup-body-section{margin-bottom:22px}#didomi-host .didomi-popup-body .didomi-popup-body-section:last-child{margin-bottom:0}#didomi-host .didomi-popup-footer{display:-webkit-flexbox;display:flex;-moz-flex-direction:row;flex-direction:row;-webkit-flex-pack:justify;-moz-justify-content:space-between;justify-content:space-between;-moz-align-items:center;align-items:center;background-color:#fff;height:58px}#didomi-host .didomi-popup-footer .didomi-popup-actions{display:-webkit-flexbox;display:flex;-moz-flex-direction:row;flex-direction:row;-webkit-flex-pack:end;-moz-justify-content:flex-end;justify-content:flex-end;-moz-align-items:center;align-items:center}#didomi-host .didomi-popup-footer .didomi-popup-actions div,#didomi-host .didomi-popup-footer .didomi-popup-actions button{margin-right:10px}[dir=rtl] #didomi-host .didomi-popup-footer .didomi-popup-actions div,[dir=rtl] #didomi-host .didomi-popup-footer .didomi-popup-actions button{margin-right:0px;margin-left:10px}#didomi-host .didomi-popup-close{font-family:Arial;opacity:.5;font-size:30px;font-weight:500;line-height:30px;color:#000;text-shadow:0 1px 0 #fff;transition:500ms}#didomi-host .didomi-popup-close:hover{opacity:.7}#didomi-host .didomi-mobile .didomi-popup{width:100%;height:100%;max-width:none}body.didomi-popup-open{overflow:hidden !important}body.didomi-popup-open-ios{position:fixed;width:100%}#didomi-host .didomi-notice-data-processing-container{padding-top:15px;text-align:justify;font-size:12px;line-height:160%}#didomi-host .didomi-notice-data-processing-container .didomi-notice-data-processing-title{color:#333;font-weight:bold;display:block}#didomi-host .didomi-notice-data-processing-container .didomi-notice-data-processing-list{font-weight:bold;color:#526e7a}#didomi-host .didomi-notice-data-processing-container .didomi-notice-data-processing-list .didomi-notice-data-processing-item{padding-top:5px}#didomi-host .didomi-notice-data-processing-container .didomi-notice-data-processing-list .didomi-notice-data-processing-item div{display:inline-block}#didomi-host .didomi-notice-data-processing-container p{font-size:12px}#didomi-host .didomi-mobile .didomi-notice-data-processing-container .didomi-notice-data-processing-title{font-size:11px;line-height:160%}#didomi-host .didomi-mobile .didomi-notice-data-processing-container .didomi-notice-data-processing-list{font-size:11px;line-height:160%}#didomi-host .didomi-gpc-label{display:inline-block;width:369.7px;height:27.93px;background:#fff;border:1px solid #3f8964;border-radius:40px}#didomi-host .didomi-gpc-label .left-container{display:inline-block;width:173.7px;height:27.93px;background:#3f8964;border-radius:30px 0px 0px 30px}#didomi-host .didomi-gpc-label .left-container .gpc-image{display:inline-block;width:153.7px;height:15.93px;margin:5px 0 0 10px;background-image:url(https://sdk.privacy-center.org/sdk/6263d6e29dbe2d824b8f5e9ac318e770589d2f0a/modern/images/cb5b80c89a9fda353482-gpc.large.png);background-size:cover}#didomi-host .didomi-gpc-label .right-container{display:inline-block;width:181px;height:27.93px}#didomi-host .didomi-gpc-label .right-container .gpc-title{position:relative;top:-4px;left:5px;display:inline-block;width:161px;height:27.93px;font-family:"Arial";font-style:italic;font-weight:700;font-size:12px;line-height:27.93px;color:#3f8964}#didomi-host .didomi-gpc-label .right-container .gpc-icon{position:relative;display:inline-block;width:15px;height:15px;left:12px;background-image:url(https://sdk.privacy-center.org/sdk/6263d6e29dbe2d824b8f5e9ac318e770589d2f0a/modern/images/d8d7828e2df9a281bd96-gpc.icon.large.png);background-size:cover}#didomi-host .didomi-mobile .didomi-gpc-label{display:inline-block;width:318.38px;height:24px;background:#fff;border:.859518px solid #3f8964;border-radius:34.3807px}#didomi-host .didomi-mobile .didomi-gpc-label .left-container{display:inline-block;width:149.3px;height:24px;background:#3f8964;border-radius:25.7855px 0px 0px 25.7855px}#didomi-host .didomi-mobile .didomi-gpc-label .left-container .gpc-image{display:inline-block;width:132.11px;height:13.69px;margin:5px 0 0 10px;background-image:url(https://sdk.privacy-center.org/sdk/6263d6e29dbe2d824b8f5e9ac318e770589d2f0a/modern/images/6d53c29e73450d19e18a-gpc.medium.png);background-size:cover}#didomi-host .didomi-mobile .didomi-gpc-label .right-container{display:inline-block;width:156.19px;height:15px}#didomi-host .didomi-mobile .didomi-gpc-label .right-container .gpc-title{position:relative;top:-4px;left:5px;display:inline-block;width:139px;height:15px;font-family:"Arial";font-style:italic;font-weight:700;font-size:10.3142px;line-height:15px;color:#3f8964}#didomi-host .didomi-mobile .didomi-gpc-label .right-container .gpc-icon{position:relative;display:inline-block;width:12.89px;height:12.89px;left:12px;background-image:url(https://sdk.privacy-center.org/sdk/6263d6e29dbe2d824b8f5e9ac318e770589d2f0a/modern/images/2059cb26072bf78c2af3-gpc.icon.medium.png);background-size:cover}#didomi-host .didomi-screen-xsmall .didomi-gpc-label{display:inline-block;width:233.99px;height:17.66px;background:#fff;border:.632445px solid #3f8964;border-radius:25.2978px}#didomi-host .didomi-screen-xsmall .didomi-gpc-label .left-container{display:inline-block;width:109.86px;height:17.66px;background:#3f8964;border-radius:18.9734px 0px 0px 18.9734px}#didomi-host .didomi-screen-xsmall .didomi-gpc-label .left-container .gpc-image{display:inline-block;width:97.21px;height:10.07px;margin:3px 0 0 6px;background-image:url(https://sdk.privacy-center.org/sdk/6263d6e29dbe2d824b8f5e9ac318e770589d2f0a/modern/images/73e53fb633306e475eef-gpc.small.png);background-size:cover}#didomi-host .didomi-screen-xsmall .didomi-gpc-label .right-container{display:inline-block;width:114.65px;height:11px}#didomi-host .didomi-screen-xsmall .didomi-gpc-label .right-container .gpc-title{position:relative;top:-2px;left:5px;display:inline-block;width:102px;height:11px;font-family:"Arial";font-style:italic;font-weight:700;font-size:7.58934px;line-height:11px;color:#3f8964}#didomi-host .didomi-screen-xsmall .didomi-gpc-label .right-container .gpc-icon{position:relative;display:inline-block;width:9.49px;height:9.49px;left:9px;background-image:url(https://sdk.privacy-center.org/sdk/6263d6e29dbe2d824b8f5e9ac318e770589d2f0a/modern/images/178a6780e8762f4b120b-gpc.icon.small.png);background-size:cover}#didomi-host .didomi-vendors-iab-label{display:inline-block;margin-left:5px;padding:1px 4px;border-radius:2px;background:#fff;font-weight:800;font-size:10px;color:#757575;line-height:100%}[dir=rtl] #didomi-host .didomi-vendors-iab-label{margin-left:0px;margin-right:5px}#didomi-host .didomi-switch{position:relative;display:inline-block;width:56px;height:28px}#didomi-host .didomi-switch input{opacity:0;width:100%;height:100%}#didomi-host .didomi-slider{position:absolute;cursor:pointer;top:0;left:0;right:0;bottom:0;background-color:#fff;border:1px solid #e60000;border-radius:24px;transition:.4s}#didomi-host .didomi-slider::before{position:absolute;content:"";height:20px;width:20px;left:5px;bottom:3px;border-radius:50%;background-image:url(https://sdk.privacy-center.org/sdk/6263d6e29dbe2d824b8f5e9ac318e770589d2f0a/modern/images/b76a404a9fedcf3f2c2f-toggle-cross.svg);background-size:cover;transition:.4s}#didomi-host input:checked+.didomi-slider{border:1px solid #3d8548;border-radius:24px}#didomi-host input:focus+.didomi-slider{box-shadow:0 0 1px #2196f3;outline:#4d90fe auto 1px}#didomi-host input:checked+.didomi-slider::before{transform:translateX(23px);background-image:url(https://sdk.privacy-center.org/sdk/6263d6e29dbe2d824b8f5e9ac318e770589d2f0a/modern/images/0b30234b8ef077d3d0a4-toggle-check.svg);background-size:cover}#didomi-host .didomi-components-explanation-text{background:#f4f4f4;border-radius:7px;padding:7px 12px;font-size:12px;line-height:160%;margin-bottom:32px}@namespace svg "http://www.w3.org/2000/svg";#didomi-host{all:initial;-ms-overflow-style:auto;-moz-appearance:none;-moz-binding:none;-moz-border-bottom-colors:none;-moz-border-left-colors:none;-moz-border-right-colors:none;-moz-border-top-colors:none;-moz-context-properties:none;-moz-float-edge:content-box;-moz-force-broken-image-icon:0;-moz-image-region:auto;-moz-orient:inline;-moz-outline-radius-bottomleft:0;-moz-outline-radius-bottomright:0;-moz-outline-radius-topleft:0;-moz-outline-radius-topright:0;-moz-stack-sizing:stretch-to-fit;-moz-text-blink:none;-moz-user-focus:none;-moz-user-input:auto;-moz-user-modify:read-only;-moz-window-shadow:default;-webkit-border-before-color:currentcolor;-webkit-border-before-style:none;-webkit-border-before-width:medium;-webkit-box-reflect:none;-webkit-mask-attachment:scroll;-webkit-mask-clip:border;-webkit-mask-composite:source-over;-webkit-mask-image:none;-webkit-mask-origin:padding;-webkit-mask-position:0% 0%;-webkit-mask-position-x:0%;-webkit-mask-position-y:0%;-webkit-mask-repeat:repeat;-webkit-mask-repeat-x:repeat;-webkit-mask-repeat-y:repeat;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-text-stroke-color:currentcolor;-webkit-text-stroke-width:0;-webkit-touch-callout:default;align-content:stretch;align-items:stretch;align-self:auto;animation-delay:0s;animation-direction:normal;animation-duration:0s;animation-fill-mode:none;animation-iteration-count:1;animation-name:none;animation-play-state:running;animation-timing-function:ease;azimuth:center;-webkit-backface-visibility:visible;backface-visibility:visible;background-attachment:scroll;background-blend-mode:normal;background-clip:border-box;background-color:rgba(0,0,0,0);background-image:none;background-origin:padding-box;background-position:0% 0%;background-repeat:repeat;background-size:auto auto;block-size:auto;border-block-end-color:currentcolor;border-block-end-style:none;border-block-end-width:medium;border-block-start-color:currentcolor;border-block-start-style:none;border-block-start-width:medium;border-bottom-color:currentcolor;border-bottom-left-radius:0;border-bottom-right-radius:0;border-bottom-style:none;border-bottom-width:medium;border-collapse:separate;border-image-outset:0s;border-image-repeat:stretch;border-image-slice:100%;border-image-source:none;border-image-width:1;border-inline-end-color:currentcolor;border-inline-end-style:none;border-inline-end-width:medium;border-inline-start-color:currentcolor;border-inline-start-style:none;border-inline-start-width:medium;border-left-color:currentcolor;border-left-style:none;border-left-width:medium;border-right-color:currentcolor;border-right-style:none;border-right-width:medium;border-spacing:0;border-top-color:currentcolor;border-top-left-radius:0;border-top-right-radius:0;border-top-style:none;border-top-width:medium;bottom:auto;box-align:stretch;-webkit-box-decoration-break:slice;box-decoration-break:slice;box-direction:normal;box-flex:0;box-flex-group:1;box-lines:single;box-ordinal-group:1;box-orient:initial;box-pack:start;box-shadow:none;box-sizing:content-box;-moz-column-break-after:auto;break-after:auto;-moz-column-break-before:auto;break-before:auto;-moz-column-break-inside:auto;break-inside:auto;caption-side:top;caret-color:auto;clear:none;clip:auto;-webkit-clip-path:none;clip-path:none;color:initial;-moz-column-count:auto;column-count:auto;-moz-column-fill:balance;column-fill:balance;-moz-column-gap:normal;column-gap:normal;-moz-column-rule-color:currentcolor;column-rule-color:currentcolor;-moz-column-rule-style:none;column-rule-style:none;-moz-column-rule-width:medium;column-rule-width:medium;-moz-column-span:none;column-span:none;-moz-column-width:auto;column-width:auto;content:normal;counter-increment:none;counter-reset:none;cursor:auto;empty-cells:show;filter:none;flex-basis:auto;flex-direction:row;flex-grow:0;flex-shrink:1;flex-wrap:nowrap;float:none;font-family:initial;font-feature-settings:normal;-webkit-font-kerning:auto;font-kerning:auto;font-language-override:normal;font-size:medium;font-size-adjust:none;font-stretch:normal;font-style:normal;font-synthesis:weight style;font-variant:normal;font-variant-alternates:normal;font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal;font-variant-position:normal;font-weight:normal;grid-auto-columns:auto;grid-auto-flow:row;grid-auto-rows:auto;grid-column-end:auto;grid-column-gap:0;grid-column-start:auto;grid-row-end:auto;grid-row-gap:0;grid-row-start:auto;grid-template-areas:none;grid-template-columns:none;grid-template-rows:none;height:auto;-webkit-hyphens:manual;-ms-hyphens:manual;hyphens:manual;image-orientation:0deg;image-rendering:auto;image-resolution:1dppx;ime-mode:auto;inline-size:auto;isolation:auto;justify-content:flex-start;left:auto;letter-spacing:normal;line-break:auto;line-height:normal;list-style-image:none;list-style-position:outside;list-style-type:disc;-webkit-margin-after:0;margin-block-end:0;-webkit-margin-before:0;margin-block-start:0;margin-bottom:0;-webkit-margin-end:0;margin-inline-end:0;-webkit-margin-start:0;margin-inline-start:0;margin-left:0;margin-right:0;margin-top:0;marker-offset:auto;-webkit-mask-clip:border-box;mask-clip:border-box;-webkit-mask-composite:source-over;mask-composite:add;mask-image:none;mask-mode:match-source;-webkit-mask-origin:border-box;mask-origin:border-box;mask-position:0% 0%;mask-repeat:repeat;-webkit-mask-size:auto;mask-size:auto;mask-type:luminance;max-height:none;max-width:none;min-block-size:0;min-height:0;min-inline-size:0;min-width:0;mix-blend-mode:normal;object-fit:fill;object-position:50% 50%;offset-block-end:auto;offset-block-start:auto;offset-inline-end:auto;offset-inline-start:auto;opacity:1;order:0;orphans:2;outline-color:initial;outline-offset:0;outline-style:none;outline-width:medium;overflow:visible;overflow-clip-box:padding-box;overflow-wrap:normal;overflow-x:visible;overflow-y:visible;-webkit-padding-after:0;padding-block-end:0;-webkit-padding-before:0;padding-block-start:0;padding-bottom:0;-webkit-padding-end:0;padding-inline-end:0;-webkit-padding-start:0;padding-inline-start:0;padding-left:0;padding-right:0;padding-top:0;page-break-after:auto;page-break-before:auto;page-break-inside:auto;perspective:none;perspective-origin:50% 50%;pointer-events:auto;position:static;quotes:initial;resize:none;right:auto;ruby-align:space-around;ruby-merge:separate;ruby-position:over;scroll-behavior:auto;-webkit-scroll-snap-coordinate:none;-ms-scroll-snap-coordinate:none;scroll-snap-coordinate:none;-webkit-scroll-snap-destination:0px 0px;-ms-scroll-snap-destination:0px 0px;scroll-snap-destination:0px 0px;-webkit-scroll-snap-points-x:none;-ms-scroll-snap-points-x:none;scroll-snap-points-x:none;-webkit-scroll-snap-points-y:none;-ms-scroll-snap-points-y:none;scroll-snap-points-y:none;-webkit-scroll-snap-type:none;-ms-scroll-snap-type:none;scroll-snap-type:none;scroll-snap-type-x:none;scroll-snap-type-y:none;shape-image-threshold:0;shape-margin:0;shape-outside:none;-moz-tab-size:8;tab-size:8;table-layout:auto;text-align:initial;text-align-last:auto;text-combine-upright:none;-webkit-text-decoration-color:currentcolor;text-decoration-color:currentcolor;-webkit-text-decoration-line:none;text-decoration-line:none;-webkit-text-decoration-style:solid;text-decoration-style:solid;-webkit-text-emphasis-color:currentcolor;text-emphasis-color:currentcolor;-webkit-text-emphasis-position:over;text-emphasis-position:over right;-webkit-text-emphasis-style:none;text-emphasis-style:none;text-indent:0;text-justify:auto;-webkit-text-orientation:mixed;text-orientation:mixed;text-overflow:clip;text-rendering:auto;text-shadow:none;text-transform:none;text-underline-position:auto;top:auto;touch-action:auto;transform:none;transform-box:border-box;transform-origin:50% 50% 0;transform-style:flat;transition-delay:0s;transition-duration:0s;transition-property:all;transition-timing-function:ease;-webkit-user-select:auto;-moz-user-select:auto;-ms-user-select:auto;user-select:auto;vertical-align:baseline;visibility:visible;white-space:normal;widows:2;width:auto;will-change:auto;word-break:normal;word-spacing:normal;word-wrap:normal;-webkit-writing-mode:horizontal-tb;writing-mode:horizontal-tb;z-index:auto;-webkit-appearance:none;-ms-appearance:none;appearance:none}#didomi-host *:not(svg|*){all:unset;-webkit-text-fill-color:initial}button{line-height:initial}button span{padding-left:initial;padding-top:initial;padding-right:initial;padding-bottom:initial;background:initial;height:initial}#didomi-host{display:block;width:0;height:0;font-size:15px;line-height:160%;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased}#didomi-host .pad{padding:16px}#didomi-host .pad-xxl{padding:56px}#didomi-host .pad-xl{padding:48px}#didomi-host .pad-lg{padding:32px}#didomi-host .pad-md{padding:24px}#didomi-host .pad-sm{padding:8px}#didomi-host .pad-xs{padding:4px}#didomi-host .pad-none{padding:0px}#didomi-host .pad-bottom{padding-bottom:16px}#didomi-host .pad-bottom-xxl{padding-bottom:56px}#didomi-host .pad-bottom-xl{padding-bottom:48px}#didomi-host .pad-bottom-lg{padding-bottom:32px}#didomi-host .pad-bottom-md{padding-bottom:24px}#didomi-host .pad-bottom-sm{padding-bottom:8px}#didomi-host .pad-bottom-xs{padding-bottom:4px}#didomi-host .pad-bottom-none{padding-bottom:0px}#didomi-host .pad-top{padding-top:16px}#didomi-host .pad-top-xxl{padding-top:56px}#didomi-host .pad-top-xl{padding-top:48px}#didomi-host .pad-top-lg{padding-top:32px}#didomi-host .pad-top-md{padding-top:24px}#didomi-host .pad-top-sm{padding-top:8px}#didomi-host .pad-top-xs{padding-top:4px}#didomi-host .pad-top-none{padding-top:0px}#didomi-host .pad-left{padding-left:16px}#didomi-host .pad-left-xxl{padding-left:56px}#didomi-host .pad-left-xl{padding-left:48px}#didomi-host .pad-left-lg{padding-left:32px}#didomi-host .pad-left-md{padding-left:24px}#didomi-host .pad-left-sm{padding-left:8px}#didomi-host .pad-left-xs{padding-left:4px}#didomi-host .pad-left-none{padding-left:0px}#didomi-host .pad-right{padding-right:16px}#didomi-host .pad-right-xxl{padding-right:56px}#didomi-host .pad-right-xl{padding-right:48px}#didomi-host .pad-right-lg{padding-right:32px}#didomi-host .pad-right-md{padding-right:24px}#didomi-host .pad-right-sm{padding-right:8px}#didomi-host .pad-right-xs{padding-right:4px}#didomi-host .pad-right-none{padding-right:0px}#didomi-host .pull-xxl{margin:-56px}#didomi-host .pull-xl{margin:-48px}#didomi-host .pull-lg{margin:-32px}#didomi-host .pull-md{margin:-24px}#didomi-host .pull{margin:-16px}#didomi-host .pull-sm{margin:-8px}#didomi-host .pull-xs{margin:-4px}#didomi-host .pull-none{margin:0px}#didomi-host .pull-bottom-xxl{margin-bottom:-56px}#didomi-host .pull-bottom-xl{margin-bottom:-48px}#didomi-host .pull-bottom-lg{margin-bottom:-32px}#didomi-host .pull-bottom-md{margin-bottom:-24px}#didomi-host .pull-bottom{margin-bottom:-16px}#didomi-host .pull-bottom-sm{margin-bottom:-8px}#didomi-host .pull-bottom-xs{margin-bottom:-4px}#didomi-host .pull-bottom-none{margin-bottom:0px}#didomi-host .pull-top-xxl{margin-top:-56px}#didomi-host .pull-top-xl{margin-top:-48px}#didomi-host .pull-top-lg{margin-top:-32px}#didomi-host .pull-top-md{margin-top:-24px}#didomi-host .pull-top{margin-top:-16px}#didomi-host .pull-top-sm{margin-top:-8px}#didomi-host .pull-top-xs{margin-top:-4px}#didomi-host .pull-top-none{margin-top:0px}#didomi-host .pull-left-xxl{margin-left:-56px}#didomi-host .pull-left-xl{margin-left:-48px}#didomi-host .pull-left-lg{margin-left:-32px}#didomi-host .pull-left-md{margin-left:-24px}#didomi-host .pull-left{margin-left:-16px}#didomi-host .pull-left-sm{margin-left:-8px}#didomi-host .pull-left-xs{margin-left:-4px}#didomi-host .pull-left-none{margin-left:0px}#didomi-host .pull-right-xxl{margin-right:-56px}#didomi-host .pull-right-xl{margin-right:-48px}#didomi-host .pull-right-lg{margin-right:-32px}#didomi-host .pull-right-md{margin-right:-24px}#didomi-host .pull-right{margin-right:-16px}#didomi-host .pull-right-sm{margin-right:-8px}#didomi-host .pull-right-xs{margin-right:-4px}#didomi-host .pull-right-none{margin-right:0px}#didomi-host .push{margin:16px}#didomi-host .push-xxl{margin:56px}#didomi-host .push-xl{margin:48px}#didomi-host .push-lg{margin:32px}#didomi-host .push-md{margin:24px}#didomi-host .push-sm{margin:8px}#didomi-host .push-xs{margin:4px}#didomi-host .push-none{margin:0px}#didomi-host .push-bottom{margin-bottom:16px}#didomi-host .push-bottom-xxl{margin-bottom:56px}#didomi-host .push-bottom-xl{margin-bottom:48px}#didomi-host .push-bottom-lg{margin-bottom:32px}#didomi-host .push-bottom-md{margin-bottom:24px}#didomi-host .push-bottom-sm{margin-bottom:8px}#didomi-host .push-bottom-xs{margin-bottom:4px}#didomi-host .push-bottom-none{margin-bottom:0px}#didomi-host .push-top{margin-top:16px}#didomi-host .push-top-xxl{margin-top:56px}#didomi-host .push-top-xl{margin-top:48px}#didomi-host .push-top-lg{margin-top:32px}#didomi-host .push-top-md{margin-top:24px}#didomi-host .push-top-sm{margin-top:8px}#didomi-host .push-top-xs{margin-top:4px}#didomi-host .push-top-none{margin-top:0px}#didomi-host .push-left{margin-left:16px}#didomi-host .push-left-xxl{margin-left:56px}#didomi-host .push-left-xl{margin-left:48px}#didomi-host .push-left-lg{margin-left:32px}#didomi-host .push-left-md{margin-left:24px}#didomi-host .push-left-sm{margin-left:8px}#didomi-host .push-left-xs{margin-left:4px}#didomi-host .push-left-none{margin-left:0px}#didomi-host .push-right{margin-right:16px}#didomi-host .push-right-xxl{margin-right:56px}#didomi-host .push-right-xl{margin-right:48px}#didomi-host .push-right-lg{margin-right:32px}#didomi-host .push-right-md{margin-right:24px}#didomi-host .push-right-sm{margin-right:8px}#didomi-host .push-right-xs{margin-right:4px}#didomi-host .push-right-none{margin-right:0px}#didomi-host p,#didomi-host span,#didomi-host a{font-size:inherit;color:inherit;font-weight:inherit;line-height:inherit;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased}#didomi-host .didomi-icon{vertical-align:middle}#didomi-host .didomi-logo-icon{margin-left:10px}#didomi-host div{display:block}#didomi-host p{display:block;margin-bottom:16px}#didomi-host .p-title{font-weight:bold;font-size:1.1em;display:block;letter-spacing:.005em}#didomi-host ul{display:block;margin-bottom:16px}#didomi-host li{display:list-item;margin-left:20px}#didomi-host ol{display:block;list-style-type:decimal;margin-bottom:16px}#didomi-host table{box-sizing:border-box;display:table;width:100%;max-width:100%;border-collapse:separate;border-spacing:2px}#didomi-host table thead,#didomi-host table tbody{display:table-header-group}#didomi-host table tr{display:table-row}#didomi-host table th,#didomi-host table td{display:table-cell}#didomi-host a{cursor:pointer}#didomi-host a.didomi-no-link-style{text-decoration:none;color:#000}#didomi-host style{display:none}#didomi-host .text-bold{font-weight:bold}#didomi-host h1{display:block;font-size:2em;font-weight:bold;margin-bottom:16px}#didomi-host h2{display:block;font-size:1.5em;font-weight:bold;margin-bottom:16px}#didomi-host h3{display:block;font-size:1.17em;font-weight:bold;margin-bottom:16px}#didomi-host h4{display:block;font-weight:bold;margin-bottom:16px}#didomi-host h5{display:block;font-size:.83em;font-weight:bold;margin-bottom:16px}#didomi-host h6{display:block;font-size:.67em;font-weight:bold;margin-bottom:16px}#didomi-host b,#didomi-host strong{font-weight:bold}#didomi-host i,#didomi-host cite,#didomi-host em,#didomi-host var,#didomi-host dfn{font-style:italic}#didomi-host u,#didomi-host ins{text-decoration:underline}#didomi-host s,#didomi-host strike,#didomi-host del{text-decoration:line-through}#didomi-host sub{vertical-align:sub;font-size:smaller;line-height:normal}#didomi-host sup{vertical-align:super;font-size:smaller;line-height:normal}#didomi-host nobr{white-space:nowrap}#didomi-host hr{display:block;border:1px inset;margin:16px 0;color:gray;box-sizing:content-box}#didomi-host *:focus{outline:#4d90fe auto 1px}#didomi-host li[title] span{cursor:help;border-bottom:1px dashed #000}#didomi-host span[title]{cursor:help;border-bottom:1px dashed #000}#didomi-host .hbb-safe-area{position:absolute;left:128px;top:36px;width:1024px;height:648px;background-color:rgba(0,0,0,.5)}#didomi-host [dataTooltip]{position:relative;width:-webkit-fit-content;width:-moz-fit-content;width:fit-content;cursor:help;border-bottom:1px dashed #000}#didomi-host [dataTooltip]:focus{outline:none !important}[dir=rtl] #didomi-host [dataTooltip]::after{text-align:right}#didomi-host [dataTooltip]:focus::after{content:attr(dataTooltip);padding:5px;font-size:10px;line-height:12px;display:block;position:absolute;white-space:pre-line;text-align:left;background-color:#f1f0f1;border:1px solid #ddd;overflow-y:auto !important;max-height:80px;z-index:1}#didomi-host .didomi-consent-popup-vendor__description [dataTooltip],#didomi-host .didomi-consent-popup-categories [dataTooltip],#didomi-host .didomi-vendor-storage-disclosures [dataTooltip]{position:initial}#didomi-host .didomi-consent-popup-vendor__description [dataTooltip]:focus::after,#didomi-host .didomi-consent-popup-categories [dataTooltip]:focus::after,#didomi-host .didomi-vendor-storage-disclosures [dataTooltip]:focus::after{position:initial}#didomi-host .sr-only{border:0 !important;clip:rect(1px, 1px, 1px, 1px) !important;-webkit-clip-path:inset(50%) !important;clip-path:inset(50%) !important;height:1px !important;margin:-1px !important;overflow:hidden !important;padding:0 !important;position:fixed !important;width:1px !important;white-space:nowrap !important}#didomi-host [role=tooltip],#didomi-host .hidetooltip.hidetooltip.hidetooltip+[role=tooltip]{visibility:hidden;position:fixed}#didomi-host .didomi-vendor-purpose-description{margin:10px;border-radius:4px;background:#f8f8f8;display:flex;padding:8px 16px;flex-direction:column;align-items:flex-start;gap:10px;align-self:stretch}#didomi-host .didomi-vendor-purpose-description.tcfv_2_2{font-size:12px}#didomi-host #buttons #didomi-notice-learn-more-button>span{white-space:normal}#didomi-host #notice-vendors-number-section{display:flex;justify-content:end;align-items:center;color:#05687b}#didomi-host .didomi-vendors-count-view-vendors-list-link{cursor:pointer;display:flex;height:25px;padding:5px 15px;justify-content:center;align-items:center;gap:7px;border:1px solid #ebebeb;background:#fff;font-size:12px;color:#6a6a6a;font-weight:700;padding:5px 15px;line-height:17px;margin-left:10px}#didomi-host #didomi-notice{background-color:#fff}#didomi-host #didomi-notice p{margin:0px}#didomi-host #didomi-notice.didomi-regular-notice{position:fixed;font-size:13px;line-height:1.5em;z-index:2147483640}#didomi-host #didomi-notice.didomi-regular-notice.didomi-regular-notice-with-data-processing .didomi-notice-text{margin-right:40px}#didomi-host #didomi-notice.didomi-regular-notice a{color:inherit;text-decoration:underline}#didomi-host #didomi-notice.didomi-regular-notice .didomi-notice-view-partners-link,#didomi-host #didomi-notice.didomi-regular-notice .didomi-notice-view-partners-link-in-text{text-decoration:underline}#didomi-host #didomi-notice.didomi-regular-notice .didomi-buttons-with-x-button{margin-top:36px}#didomi-host #didomi-notice.didomi-regular-notice.shape-box{display:-webkit-flexbox;display:flex;-moz-flex-direction:column;flex-direction:column;-webkit-flex-pack:justify;-moz-justify-content:space-between;justify-content:space-between;padding:32px;max-width:310px}#didomi-host #didomi-notice.didomi-regular-notice.shape-box #buttons{margin-top:20px}#didomi-host #didomi-notice.didomi-regular-notice.shape-box #buttons.single{width:100%}#didomi-host #didomi-notice.didomi-regular-notice.shape-box #buttons.single button{width:100%}#didomi-host #didomi-notice.didomi-regular-notice.shape-box #buttons.multiple{width:100%}#didomi-host #didomi-notice.didomi-regular-notice.shape-box #buttons.multiple button{padding-right:.8em;width:100%}#didomi-host #didomi-notice.didomi-regular-notice.shape-box.top.left{margin:1em 0 0 1em}#didomi-host #didomi-notice.didomi-regular-notice.shape-box.top.right{margin:1em 1em 0 0}#didomi-host #didomi-notice.didomi-regular-notice.shape-box.bottom.left{margin:0 0 1em 1em}#didomi-host #didomi-notice.didomi-regular-notice.shape-box.bottom.right{margin:0 1em 1em 0}#didomi-host #didomi-notice.didomi-regular-notice.shape-banner{padding:1em 1.8em;left:0;right:0}#didomi-host #didomi-notice.didomi-regular-notice.shape-banner .didomi-notice__interior-border{display:-webkit-flexbox;display:flex;-moz-flex-direction:row;flex-direction:row;-webkit-flex-pack:justify;-moz-justify-content:space-between;justify-content:space-between;-moz-align-items:center;align-items:center}#didomi-host #didomi-notice.didomi-regular-notice.shape-banner #buttons.multiple{-ms-flex:0 0 auto}#didomi-host #didomi-notice.didomi-regular-notice.shape-banner #buttons.multiple button{margin-right:10px}#didomi-host #didomi-notice.didomi-regular-notice.shape-panel{max-width:600px}#didomi-host #didomi-notice.didomi-regular-notice.shape-panel.right{right:100px}#didomi-host #didomi-notice.didomi-regular-notice.shape-panel.left{left:100px}#didomi-host #didomi-notice.didomi-regular-notice.shape-panel.bottom{padding:1px;border-top-width:1px;border-top-style:solid;border-right-width:1px;border-right-style:solid;border-left-width:1px;border-left-style:solid;border-top-left-radius:5px;border-top-right-radius:5px}#didomi-host #didomi-notice.didomi-regular-notice.shape-panel.bottom .didomi-notice__interior-border{border-top-width:1px;border-top-style:solid;border-right-width:1px;border-right-style:solid;border-left-width:1px;border-left-style:solid;border-top-left-radius:3px;border-top-right-radius:3px;padding:10px}#didomi-host #didomi-notice.didomi-regular-notice.shape-panel.top{padding:1px;border-bottom-width:1px;border-bottom-style:solid;border-right-width:1px;border-right-style:solid;border-left-width:1px;border-left-style:solid;border-bottom-left-radius:5px;border-bottom-right-radius:5px}#didomi-host #didomi-notice.didomi-regular-notice.shape-panel.top .didomi-notice__interior-border{border-bottom-width:1px;border-bottom-style:solid;border-right-width:1px;border-right-style:solid;border-left-width:1px;border-left-style:solid;border-bottom-left-radius:3px;border-bottom-right-radius:3px;padding:10px}#didomi-host #didomi-notice.didomi-regular-notice.shape-panel #buttons.multiple{margin-top:20px}#didomi-host #didomi-notice.didomi-regular-notice.shape-panel #buttons.multiple button{margin-right:10px}#didomi-host #didomi-notice.didomi-regular-notice.top{top:0}#didomi-host #didomi-notice.didomi-regular-notice.bottom{bottom:0}#didomi-host #didomi-notice.didomi-regular-notice.left{left:0}#didomi-host #didomi-notice.didomi-regular-notice.right{right:0}#didomi-host #didomi-notice.didomi-regular-notice #buttons{display:-webkit-flexbox;display:flex;-moz-flex-direction:row;flex-direction:row;-webkit-flex-pack:center;-moz-justify-content:center;justify-content:center;-moz-align-items:center;align-items:center}#didomi-host #didomi-notice.didomi-regular-notice #buttons button{display:block;padding:.4em .8em;font-size:.9em;font-weight:700;border-width:1px;border-style:solid;text-align:center;white-space:nowrap;min-width:140px;cursor:pointer;text-decoration:none}#didomi-host #didomi-notice.didomi-regular-notice #buttons button.didomi-button-standard{background-color:#eee;border:solid 1px rgba(34,34,34,.2);color:#555}#didomi-host #didomi-notice.didomi-regular-notice .didomi-x-button{right:8px;top:8px}[dir=rtl] #didomi-host #didomi-notice.didomi-regular-notice .didomi-x-button{right:auto;left:8px}#didomi-host .didomi-banner-notice-optin-type .didomi-continue-without-agreeing{position:absolute;top:10px !important;right:35px !important}[dir=rtl] #didomi-host .didomi-banner-notice-optin-type .didomi-continue-without-agreeing{left:35px;right:auto !important}#didomi-host .didomi-screen-large #didomi-notice.didomi-regular-notice.didomi-regular-notice-with-data-processing .didomi-notice-text{max-width:1200px}#didomi-host .didomi-screen-xlarge #didomi-notice.didomi-regular-notice.didomi-regular-notice-with-data-processing .didomi-notice-text{max-width:1500px}#didomi-host .didomi-mobile .didomi-notice-text-with-x-button{margin-left:36px;margin-top:36px}#didomi-host .didomi-mobile #didomi-notice.didomi-regular-notice.didomi-support-full-height{box-sizing:border-box;height:auto;max-height:100%;display:flex}#didomi-host .didomi-mobile #didomi-notice.didomi-regular-notice.didomi-support-full-height.didomi-max-height-reached #buttons{box-shadow:0 -3px 10px -2px rgba(0,0,0,.1)}#didomi-host .didomi-mobile #didomi-notice.didomi-regular-notice.didomi-support-full-height .didomi-notice__interior-border{padding:0;width:100%;flex:1 0 auto;display:flex;max-height:100vh;max-height:-webkit-fill-available}#didomi-host .didomi-mobile #didomi-notice.didomi-regular-notice.didomi-support-full-height .didomi-notice__interior-border .didomi-notice-text{padding:1em 1.8em;margin:0;height:100%;overflow-y:auto;box-sizing:border-box}#didomi-host .didomi-mobile #didomi-notice.didomi-regular-notice.didomi-support-full-height .didomi-notice__interior-border .didomi-notice-text>*:last-child{margin-bottom:20px}#didomi-host .didomi-mobile #didomi-notice.didomi-regular-notice.didomi-support-full-height .didomi-notice__interior-border #buttons{flex:1 0 auto;box-sizing:border-box;padding:1em 1.8em 1em 1.8em;margin-top:0}#didomi-host .didomi-mobile #didomi-notice.didomi-regular-notice{left:0;right:0;font-size:11px;padding:1px}#didomi-host .didomi-mobile #didomi-notice.didomi-regular-notice.didomi-regular-notice-with-data-processing{font-size:12px}#didomi-host .didomi-mobile #didomi-notice.didomi-regular-notice.didomi-regular-notice-with-data-processing .didomi-notice-text{margin-right:0px}#didomi-host .didomi-mobile #didomi-notice.didomi-regular-notice .didomi-notice__interior-border{padding:1em 1.8em;display:-webkit-flexbox;display:flex;-moz-flex-direction:column;flex-direction:column}#didomi-host .didomi-mobile #didomi-notice.didomi-regular-notice.bottom{border-top-width:1px;border-top-style:solid}#didomi-host .didomi-mobile #didomi-notice.didomi-regular-notice.bottom .didomi-notice__interior-border{border-top-width:1px;border-top-style:solid}#didomi-host .didomi-mobile #didomi-notice.didomi-regular-notice.top{border-bottom-width:1px;border-bottom-style:solid}#didomi-host .didomi-mobile #didomi-notice.didomi-regular-notice.top .didomi-notice__interior-border{border-bottom-width:1px;border-bottom-style:solid}#didomi-host .didomi-mobile #didomi-notice.didomi-regular-notice #text{width:100%}#didomi-host .didomi-mobile #didomi-notice.didomi-regular-notice #buttons{margin-top:20px}#didomi-host .didomi-mobile #didomi-notice.didomi-regular-notice #buttons.single{width:100%}#didomi-host .didomi-mobile #didomi-notice.didomi-regular-notice #buttons.single button{width:100%}#didomi-host .didomi-mobile #didomi-notice.didomi-regular-notice #buttons.multiple{width:100%}#didomi-host .didomi-mobile #didomi-notice.didomi-regular-notice #buttons.multiple button{margin-right:10px;padding-right:.8em;width:100%}#didomi-host .didomi-mobile #didomi-notice.didomi-regular-notice #buttons.multiple button:last-child{margin-right:0}#didomi-host .didomi-mobile .didomi-banner-notice-optin-type .didomi-banner-notice-continue-without-agreeing-buttons{width:100%}#didomi-host .didomi-mobile .didomi-banner-notice-optin-type .didomi-continue-without-agreeing{align-self:flex-end;position:initial;margin-top:5px;margin-bottom:15px}#didomi-host .didomi-screen-xsmall #didomi-notice.didomi-regular-notice #buttons.multiple{-moz-flex-direction:column;flex-direction:column}#didomi-host .didomi-screen-xsmall #didomi-notice.didomi-regular-notice #buttons.multiple button{margin-bottom:10px;margin-right:0;padding-right:0;width:100%}#didomi-host .didomi-screen-xsmall #didomi-notice.didomi-regular-notice #buttons.multiple button:last-child{margin-bottom:0}#didomi-host #notice-vendors-number-section{display:flex;justify-content:end;align-items:center;color:#05687b}#didomi-host #notice-vendors-number-section p{margin:0px}#didomi-host .didomi-popup__backdrop{z-index:2147483641}#didomi-host .didomi-popup__backdrop.didomi-notice-popup .didomi-popup-view{width:100%}#didomi-host .didomi-popup__backdrop.didomi-popup-with-x-button{padding-top:18px}#didomi-host .didomi-popup__backdrop.didomi-notice-popup.didomi-support-full-height{box-sizing:border-box;display:flex;align-items:center;justify-content:center;height:100%;max-height:100vh}#didomi-host .didomi-popup__backdrop.didomi-notice-popup.didomi-support-full-height.didomi-max-height-reached .didomi-exterior-border{border-radius:0px}#didomi-host .didomi-popup__backdrop.didomi-notice-popup.didomi-support-full-height.didomi-max-height-reached .didomi-popup-container{border-radius:0px}#didomi-host .didomi-popup__backdrop.didomi-notice-popup.didomi-support-full-height.didomi-max-height-reached .didomi-popup-notice-logo-container{box-shadow:0px 3px 10px -2px rgba(0,0,0,.1)}#didomi-host .didomi-popup__backdrop.didomi-notice-popup.didomi-support-full-height.didomi-max-height-reached #buttons{box-shadow:0 -3px 10px -2px rgba(0,0,0,.1)}#didomi-host .didomi-popup__backdrop.didomi-notice-popup.didomi-support-full-height .didomi-exterior-border{display:inherit;box-sizing:border-box;margin:0 auto;z-index:2147483641;padding:0 !important;max-height:100%;display:flex}#didomi-host .didomi-popup__backdrop.didomi-notice-popup.didomi-support-full-height .didomi-exterior-border .didomi-popup-container{flex:1 0 auto;max-width:700px;display:flex;box-sizing:border-box;margin:0 auto;padding:0 !important}@media all and (-ms-high-contrast: none){#didomi-host .didomi-popup__backdrop.didomi-notice-popup.didomi-support-full-height .didomi-exterior-border .didomi-popup-container *::-ms-backdrop,#didomi-host .didomi-popup__backdrop.didomi-notice-popup.didomi-support-full-height .didomi-exterior-border .didomi-popup-container .didomi-popup-view{height:auto !important;overflow-y:auto}#didomi-host .didomi-popup__backdrop.didomi-notice-popup.didomi-support-full-height .didomi-exterior-border .didomi-popup-container *::-ms-backdrop,#didomi-host .didomi-popup__backdrop.didomi-notice-popup.didomi-support-full-height .didomi-exterior-border .didomi-popup-container .didomi-exterior-border{display:block !important}}#didomi-host .didomi-popup__backdrop.didomi-notice-popup.didomi-support-full-height .didomi-exterior-border .didomi-popup-container .didomi-popup-view{max-height:100vh;height:100%;height:-moz-fit-content;height:fit-content;height:-webkit-fit-content;width:100%;padding:0;flex:1 0 auto;display:-webkit-flexbox;display:flex;-moz-flex-direction:column;flex-direction:column;-webkit-flex-pack:start;-moz-justify-content:flex-start;justify-content:flex-start}#didomi-host .didomi-popup__backdrop.didomi-notice-popup.didomi-support-full-height .didomi-exterior-border .didomi-popup-container .didomi-popup-view>*:first-child{padding-top:50px}#didomi-host .didomi-popup__backdrop.didomi-notice-popup.didomi-support-full-height .didomi-exterior-border .didomi-popup-container .didomi-popup-view .didomi-popup-notice-logo-container{box-sizing:border-box;flex:1 0 auto;z-index:2147483640}#didomi-host .didomi-popup__backdrop.didomi-notice-popup.didomi-support-full-height .didomi-exterior-border .didomi-popup-container .didomi-popup-view .didomi-popup-notice-logo-container .didomi-popup-notice-logo{margin-bottom:30px}#didomi-host .didomi-popup__backdrop.didomi-notice-popup.didomi-support-full-height .didomi-exterior-border .didomi-popup-container .didomi-popup-view .didomi-popup-notice-text-container{height:100%;overflow-y:auto;padding:0px 50px;box-sizing:border-box}#didomi-host .didomi-popup__backdrop.didomi-notice-popup.didomi-support-full-height .didomi-exterior-border .didomi-popup-container .didomi-popup-view .didomi-popup-notice-text-container>*:last-child{margin-bottom:20px}#didomi-host .didomi-popup__backdrop.didomi-notice-popup.didomi-support-full-height .didomi-exterior-border .didomi-popup-container .didomi-popup-view #buttons{box-sizing:border-box;padding:20px 25px 50px 25px;margin-top:0;flex:1 0 auto}#didomi-host .didomi-popup__backdrop.didomi-notice-popup.didomi-support-full-height .didomi-exterior-border .didomi-popup-container .didomi-popup-view #buttons button:first-child{margin-top:0px !important}@media all and (-ms-high-contrast: none){#didomi-host .didomi-popup__backdrop.didomi-notice-popup.didomi-support-full-height .didomi-exterior-border .didomi-popup-container .didomi-popup-view *::-ms-backdrop,#didomi-host .didomi-popup__backdrop.didomi-notice-popup.didomi-support-full-height .didomi-exterior-border .didomi-popup-container .didomi-popup-view .didomi-popup-notice-logo-container{flex:1 0 0}#didomi-host .didomi-popup__backdrop.didomi-notice-popup.didomi-support-full-height .didomi-exterior-border .didomi-popup-container .didomi-popup-view *::-ms-backdrop,#didomi-host .didomi-popup__backdrop.didomi-notice-popup.didomi-support-full-height .didomi-exterior-border .didomi-popup-container .didomi-popup-view #buttons{flex:1 0 0}}#didomi-host .didomi-popup-notice{position:relative;display:-webkit-flexbox;display:flex;-moz-flex-direction:column;flex-direction:column;align-items:center;box-sizing:border-box;flex:1;max-width:600px;padding:50px}#didomi-host .didomi-popup-notice.didomi-popup-notice-with-data-processing{padding:45px 25px !important;color:#333}#didomi-host .didomi-popup-notice.didomi-popup-notice-with-data-processing h1{text-align:left;margin-top:0px;margin-bottom:25px}[dir=rtl] #didomi-host .didomi-popup-notice.didomi-popup-notice-with-data-processing h1{text-align:right}#didomi-host .didomi-popup-notice.didomi-popup-notice-with-data-processing p{margin-top:0px;margin-bottom:10px}#didomi-host .didomi-popup-notice.didomi-popup-notice-data-processing-list p span{font-size:12px}#didomi-host .didomi-popup-notice .didomi-popup-notice-text p{margin:0px;font-size:15px}#didomi-host .didomi-popup-notice h1{text-align:center;margin-bottom:50px}[dir=rtl] #didomi-host .didomi-popup-notice h1{text-align:right}#didomi-host .didomi-popup-notice .didomi-popup-notice-logo{width:200px;margin-bottom:30px}#didomi-host .didomi-popup-notice .didomi-popup-notice-text,#didomi-host .didomi-popup-notice .didomi-popup-notice-subtext{max-width:600px;width:100%;flex:0 auto;text-align:left}[dir=rtl] #didomi-host .didomi-popup-notice .didomi-popup-notice-text,[dir=rtl] #didomi-host .didomi-popup-notice .didomi-popup-notice-subtext{text-align:right}#didomi-host .didomi-popup-notice .didomi-notice-view-partners-link{display:block;text-align:center;margin-top:20px}#didomi-host .didomi-popup-notice .didomi-notice-view-partners-link-in-text{text-decoration:underline}#didomi-host .didomi-popup-notice .didomi-popup-notice-buttons{margin-top:30px;display:-webkit-flexbox;display:flex;-moz-flex-direction:row;flex-direction:row;justify-content:center;align-items:center}#didomi-host .didomi-popup-notice .didomi-popup-notice-buttons .didomi-components-button{padding:2px 25px}#didomi-host .didomi-popup-notice .didomi-popup-notice-buttons .didomi-components-button:hover{opacity:.7}#didomi-host .didomi-popup-notice .didomi-popup-notice-buttons a{text-decoration:underline}#didomi-host .didomi-popup-notice .didomi-popup-notice-buttons .didomi-button{min-width:200px;margin-right:10px}[dir=rtl] #didomi-host .didomi-popup-notice .didomi-popup-notice-buttons .didomi-button{margin-right:0px}#didomi-host .didomi-popup-notice .didomi-popup-notice-buttons .didomi-button:last-child{margin-right:0px}[dir=rtl] #didomi-host .didomi-popup-notice .didomi-popup-notice-buttons .didomi-button:last-child{margin-right:10px}[dir=rtl] #didomi-host .didomi-popup-notice .didomi-popup-notice-buttons .didomi-button:not(:last-child):not(:first-child){margin-right:10px}#didomi-host .didomi-popup-notice .didomi-popup-notice-subtext{margin-top:30px}#didomi-host .didomi-popup-notice .didomi-popup-close{position:absolute;right:30px;top:30px}#didomi-host .didomi-popup-notice-optin-type{max-width:730px}#didomi-host .didomi-popup-notice-optin-type .didomi-popup-notice-buttons{align-items:initial}#didomi-host .didomi-popup-notice-optin-type .didomi-popup-notice-buttons .didomi-components-button{padding:8px 16px !important;line-height:140%;height:auto}#didomi-host .didomi-popup-notice-optin-type .didomi-popup-notice-logo-container,#didomi-host .didomi-popup-notice-optin-type .didomi-popup-notice-text-container{clear:both}#didomi-host .didomi-popup-notice-optin-type .didomi-continue-without-agreeing{float:right;margin-top:-10px;margin-bottom:40px}[dir=rtl] #didomi-host .didomi-popup-notice-optin-type .didomi-continue-without-agreeing{float:left}#didomi-host .didomi-mobile #notice-vendors-number-section{align-items:end;flex-direction:column}#didomi-host .didomi-mobile #notice-vendors-number-section .didomi-vendors-count-view-vendors-list-link{border-color:#05687b;color:#05687b}#didomi-host .didomi-mobile #didomi-popup .didomi-popup-notice{padding:30px;font-size:12px;line-height:160%}#didomi-host .didomi-mobile #didomi-popup .didomi-popup-notice h1{margin-bottom:35px}#didomi-host .didomi-mobile #didomi-popup .didomi-popup-notice p{text-align:justify}#didomi-host .didomi-mobile .didomi-popup-with-x-button{padding-top:0}#didomi-host .didomi-mobile .didomi-notice-popup.didomi-support-full-height{max-height:-webkit-fill-available}#didomi-host .didomi-mobile .didomi-notice-popup.didomi-support-full-height .didomi-exterior-border .didomi-popup-container .didomi-popup-view{max-height:-webkit-fill-available}#didomi-host .didomi-mobile .didomi-notice-popup.didomi-support-full-height .didomi-exterior-border .didomi-popup-container .didomi-popup-view>*:first-child{padding-top:30px}#didomi-host .didomi-mobile .didomi-notice-popup.didomi-support-full-height .didomi-exterior-border .didomi-popup-container .didomi-popup-view .didomi-popup-notice-logo-container .didomi-popup-notice-logo{margin-bottom:30px}#didomi-host .didomi-mobile .didomi-notice-popup.didomi-support-full-height .didomi-exterior-border .didomi-popup-container .didomi-popup-view .didomi-popup-notice-text-container{padding:0px 30px}#didomi-host .didomi-mobile .didomi-notice-popup.didomi-support-full-height .didomi-exterior-border .didomi-popup-container .didomi-popup-view .didomi-popup-notice-text-container>*:first-child{margin-top:20px}#didomi-host .didomi-mobile .didomi-notice-popup.didomi-support-full-height .didomi-exterior-border .didomi-popup-container .didomi-popup-view .didomi-popup-notice-text-container>*:last-child{margin-bottom:15px}#didomi-host .didomi-mobile .didomi-notice-popup.didomi-support-full-height .didomi-exterior-border .didomi-popup-container .didomi-popup-view .didomi-popup-notice-text-container~.didomi-popup-notice-logo-container{padding:0px 30px}#didomi-host .didomi-mobile .didomi-notice-popup.didomi-support-full-height .didomi-exterior-border .didomi-popup-container .didomi-popup-view #buttons{padding:30px 15px}#didomi-host .didomi-mobile .didomi-notice-popup.didomi-support-full-height .didomi-exterior-border .didomi-popup-container .didomi-popup-view #buttons button:first-child{margin-top:0px !important}#didomi-host .didomi-mobile .didomi-notice-popup.didomi-support-full-height .didomi-exterior-border .didomi-popup-container .didomi-popup-view .didomi-popup-notice-subtext{margin-bottom:30px}#didomi-host .didomi-mobile .didomi-popup-notice-optin-type .didomi-continue-without-agreeing{margin-top:0px;margin-bottom:30px}#didomi-host .didomi-mobile .didomi-popup-notice-text p{margin:0px;font-size:12px}#didomi-host .didomi-screen-xsmall .didomi-popup-notice-buttons{-moz-flex-direction:column;flex-direction:column;margin-top:15px}#didomi-host .didomi-screen-xsmall .didomi-popup-notice-buttons .didomi-components-button{margin:10px 0 0 0 !important}#didomi-host .didomi-screen-xsmall .didomi-popup-with-x-button{padding-top:0}#didomi-host .didomi-screen-xsmall .didomi-notice-popup.didomi-support-full-height .didomi-exterior-border .didomi-popup-container .didomi-popup-view>*:first-child{padding-top:15px}#didomi-host .didomi-screen-xsmall .didomi-notice-popup.didomi-support-full-height .didomi-exterior-border .didomi-popup-container .didomi-popup-view .didomi-popup-notice-logo-container .didomi-popup-notice-logo{margin-bottom:15px}#didomi-host .didomi-screen-xsmall .didomi-notice-popup.didomi-support-full-height .didomi-exterior-border .didomi-popup-container .didomi-popup-view .didomi-popup-notice-text-container{padding:0px 15px}#didomi-host .didomi-screen-xsmall .didomi-notice-popup.didomi-support-full-height .didomi-exterior-border .didomi-popup-container .didomi-popup-view .didomi-popup-notice-text-container>*:first-child{margin-top:20px}#didomi-host .didomi-screen-xsmall .didomi-notice-popup.didomi-support-full-height .didomi-exterior-border .didomi-popup-container .didomi-popup-view .didomi-popup-notice-text-container>*:last-child{margin-bottom:15px}#didomi-host .didomi-screen-xsmall .didomi-notice-popup.didomi-support-full-height .didomi-exterior-border .didomi-popup-container .didomi-popup-view .didomi-popup-notice-text-container~.didomi-popup-notice-logo-container{padding:0px 15px}#didomi-host .didomi-screen-xsmall .didomi-notice-popup.didomi-support-full-height .didomi-exterior-border .didomi-popup-container .didomi-popup-view #buttons{padding:15px}#didomi-host .didomi-screen-xsmall .didomi-notice-popup.didomi-support-full-height .didomi-exterior-border .didomi-popup-container .didomi-popup-view #buttons button:first-child{margin-top:0px !important}#didomi-host .didomi-screen-xsmall .didomi-notice-popup.didomi-support-full-height .didomi-exterior-border .didomi-popup-container .didomi-popup-view .didomi-popup-notice-subtext{margin-bottom:15px}#didomi-host #didomi-notice.didomi-custom-notice-html{position:fixed;z-index:2147483640}#didomi-host #didomi-notice.didomi-custom-notice-html.shape-box{display:-webkit-flexbox;display:flex;-moz-flex-direction:column;flex-direction:column;-webkit-flex-pack:justify;-moz-justify-content:space-between;justify-content:space-between}#didomi-host #didomi-notice.didomi-custom-notice-html.shape-banner{left:0;right:0}#didomi-host #didomi-notice.didomi-custom-notice-html.top{top:0}#didomi-host #didomi-notice.didomi-custom-notice-html.bottom{bottom:0}#didomi-host #didomi-notice.didomi-custom-notice-html.left{left:0}#didomi-host #didomi-notice.didomi-custom-notice-html.right{right:0}#didomi-host .didomi-mobile #didomi-notice.didomi-custom-notice-html{left:0;right:0}#didomi-host .didomi-consent-popup-body{padding:30px 20px}#didomi-host .didomi-consent-popup-body .didomi-consent-popup-body__title{font-size:12px;color:#526e7a;text-transform:uppercase;font-weight:bold;margin-bottom:8px;display:block;font-weight:bold;font-family:"Arial"}#didomi-host .didomi-consent-popup-body .didomi-consent-popup-body__subtext{margin-bottom:22px}#didomi-host .didomi-consent-popup-body .didomi-consent-popup-body__explanation a{font-weight:bold;text-decoration:underline}#didomi-host .didomi-consent-popup__backdrop.didomi-support-full-height{box-sizing:border-box;display:flex;align-items:center;justify-content:center}#didomi-host .didomi-consent-popup__backdrop.didomi-support-full-height.didomi-max-height-reached .didomi-exterior-border{border-radius:0px}#didomi-host .didomi-consent-popup__backdrop.didomi-support-full-height.didomi-max-height-reached .didomi-popup-container{border-radius:0px}#didomi-host .didomi-consent-popup__backdrop.didomi-support-full-height .didomi-exterior-border{box-sizing:border-box;margin:0 auto;z-index:2147483641;padding:0 !important;max-height:100%;display:flex}@media all and (-ms-high-contrast: none){#didomi-host .didomi-consent-popup__backdrop.didomi-support-full-height .didomi-exterior-border *::-ms-backdrop,#didomi-host .didomi-consent-popup__backdrop.didomi-support-full-height .didomi-exterior-border .didomi-popup-container{display:block !important}#didomi-host .didomi-consent-popup__backdrop.didomi-support-full-height .didomi-exterior-border *::-ms-backdrop,#didomi-host .didomi-consent-popup__backdrop.didomi-support-full-height .didomi-exterior-border .didomi-consent-popup-preferences{display:block !important}}#didomi-host .didomi-consent-popup__backdrop.didomi-support-full-height .didomi-exterior-border .didomi-popup-container{flex:1 0 auto;box-sizing:border-box;margin:0 auto;padding:0 !important;display:flex}#didomi-host .didomi-consent-popup__backdrop.didomi-support-full-height .didomi-exterior-border .didomi-consent-popup-preferences{padding:0;display:flex}@media all and (-ms-high-contrast: none){#didomi-host .didomi-consent-popup__backdrop.didomi-support-full-height .didomi-exterior-border .didomi-consent-popup-preferences *::-ms-backdrop,#didomi-host .didomi-consent-popup__backdrop.didomi-support-full-height .didomi-exterior-border .didomi-consent-popup-preferences .didomi-popup-view{height:auto !important;overflow-y:auto}}#didomi-host .didomi-consent-popup__backdrop.didomi-support-full-height .didomi-exterior-border .didomi-consent-popup-preferences .didomi-popup-view{max-height:100vh;height:100%;height:-moz-fit-content;height:fit-content;height:-webkit-fit-content;width:100%;padding:0;flex:1;display:-webkit-flexbox;display:flex;-moz-flex-direction:column;flex-direction:column;-webkit-flex-pack:start;-moz-justify-content:flex-start;justify-content:flex-start}#didomi-host .didomi-consent-popup__backdrop.didomi-support-full-height .didomi-exterior-border .didomi-consent-popup-preferences .didomi-popup-view .didomi-popup-body{overflow-y:auto;padding:10px 20px 0px 20px}#didomi-host .didomi-consent-popup__backdrop.didomi-support-full-height .didomi-exterior-border .didomi-consent-popup-preferences .didomi-popup-view .didomi-popup-body>*:last-child{margin-bottom:20px}#didomi-host .didomi-consent-popup__backdrop.didomi-support-full-height .didomi-exterior-border .didomi-consent-popup-preferences .didomi-popup-view .didomi-popup-header{box-sizing:border-box;flex:1 0 auto;z-index:2147483640;padding:15px 20px}#didomi-host .didomi-consent-popup__backdrop.didomi-support-full-height .didomi-exterior-border .didomi-consent-popup-preferences .didomi-popup-view .didomi-popup-footer{box-sizing:border-box;flex:1 0 auto;z-index:2147483640;padding:10px 20px}#didomi-host .didomi-consent-popup__backdrop.didomi-support-full-height .didomi-exterior-border .didomi-consent-popup-preferences .didomi-popup-view .didomi-popup-footer .didomi-logo-icon{margin-left:0px}@media all and (-ms-high-contrast: none){#didomi-host .didomi-consent-popup__backdrop.didomi-support-full-height .didomi-exterior-border .didomi-consent-popup-preferences .didomi-popup-view *::-ms-backdrop,#didomi-host .didomi-consent-popup__backdrop.didomi-support-full-height .didomi-exterior-border .didomi-consent-popup-preferences .didomi-popup-view .didomi-popup-header{flex:1 0 0}#didomi-host .didomi-consent-popup__backdrop.didomi-support-full-height .didomi-exterior-border .didomi-consent-popup-preferences .didomi-popup-view *::-ms-backdrop,#didomi-host .didomi-consent-popup__backdrop.didomi-support-full-height .didomi-exterior-border .didomi-consent-popup-preferences .didomi-popup-view .didomi-popup-footer{flex:1 0 0}}#didomi-host .didomi-mobile .didomi-popup-backdrop.didomi-support-full-height .didomi-exterior-border .didomi-consent-popup-preferences .didomi-popup-view{max-height:-webkit-fill-available}#didomi-host .didomi-mobile .didomi-popup-backdrop.didomi-support-full-height .didomi-exterior-border .didomi-consent-popup-preferences .didomi-popup-view .didomi-popup-body{padding:15px 15px 0px 15px}#didomi-host .didomi-mobile .didomi-popup-backdrop.didomi-support-full-height .didomi-exterior-border .didomi-consent-popup-preferences .didomi-popup-view .didomi-popup-body>*:last-child{margin-bottom:15px}#didomi-host .didomi-mobile .didomi-popup-backdrop.didomi-support-full-height .didomi-exterior-border .didomi-consent-popup-preferences .didomi-popup-view .didomi-popup-header{padding:10px 15px;box-shadow:0px 3px 10px -2px rgba(0,0,0,.1)}#didomi-host .didomi-mobile .didomi-popup-backdrop.didomi-support-full-height .didomi-exterior-border .didomi-consent-popup-preferences .didomi-popup-view .didomi-popup-footer{padding:10px 15px;box-shadow:0 -3px 10px -2px rgba(0,0,0,.1)}#didomi-host .didomi-mobile .didomi-popup-backdrop.didomi-support-full-height .didomi-exterior-border .didomi-consent-popup-preferences .didomi-popup-view .didomi-popup-footer .didomi-consent-popup-actions{padding:0px}#didomi-host .didomi-consent-popup-preferences .didomi-consent-popup-data-processing__buttons{-webkit-flex-shrink:0;-webkit-box-flex:0;flex-shrink:0;margin-left:15px}#didomi-host .didomi-consent-popup-preferences .didomi-consent-popup-data-processing{display:-webkit-flexbox;display:flex;-moz-flex-direction:row;flex-direction:row;-webkit-flex-pack:justify;-moz-justify-content:space-between;justify-content:space-between;-moz-align-items:center;align-items:center;margin-bottom:8px}#didomi-host .didomi-consent-popup-preferences .didomi-consent-popup-vendor,#didomi-host .didomi-consent-popup-preferences .didomi-consent-popup-purpose{display:-webkit-flexbox;display:flex;-moz-flex-direction:row;flex-direction:row;-webkit-flex-pack:justify;-moz-justify-content:space-between;justify-content:space-between;-moz-align-items:center;align-items:center;flex-wrap:wrap;overflow:auto;margin-bottom:8px}#didomi-host .didomi-consent-popup-preferences .didomi-consent-popup-vendor .didomi-consent-popup-vendor__buttons,#didomi-host .didomi-consent-popup-preferences .didomi-consent-popup-vendor .didomi-consent-popup-purpose__buttons,#didomi-host .didomi-consent-popup-preferences .didomi-consent-popup-purpose .didomi-consent-popup-vendor__buttons,#didomi-host .didomi-consent-popup-preferences .didomi-consent-popup-purpose .didomi-consent-popup-purpose__buttons{-webkit-flex-shrink:0;-webkit-box-flex:0;flex-shrink:0;margin-left:15px}#didomi-host .didomi-consent-popup-preferences .didomi-consent-popup-vendor .didomi-consent-popup-vendor__start_aligned_buttons,#didomi-host .didomi-consent-popup-preferences .didomi-consent-popup-purpose .didomi-consent-popup-vendor__start_aligned_buttons{align-self:start}#didomi-host .didomi-consent-popup-preferences .didomi-consent-popup-vendor .didomi-consent-popup-vendor__right_aligned_buttons,#didomi-host .didomi-consent-popup-preferences .didomi-consent-popup-purpose .didomi-consent-popup-vendor__right_aligned_buttons{float:right;margin-top:-2px}#didomi-host .didomi-consent-popup-preferences .didomi-consent-popup-partner{display:inline-block;margin-right:15px;margin-bottom:5px}#didomi-host .didomi-consent-popup-preferences .didomi-consent-popup-partner a{border-bottom:1px dashed #000}#didomi-host .didomi-mobile #didomi-consent-popup .didomi-consent-popup-preferences .didomi-consent-popup-vendor{-moz-flex-direction:column;flex-direction:column;-moz-align-items:flex-start;align-items:flex-start;margin-bottom:8px}#didomi-host .didomi-mobile #didomi-consent-popup .didomi-consent-popup-preferences .didomi-consent-popup-vendor .didomi-consent-popup-vendor__buttons,#didomi-host .didomi-mobile #didomi-consent-popup .didomi-consent-popup-preferences .didomi-consent-popup-vendor .didomi-consent-popup-purpose__buttons{-webkit-flex-shrink:0;-webkit-box-flex:0;flex-shrink:0;margin-left:0px;margin-top:10px}#didomi-host .didomi-mobile #didomi-consent-popup .didomi-consent-popup-preferences .didomi-consent-popup-data-processing{display:-webkit-flexbox;display:flex;-moz-flex-direction:column;flex-direction:column;-webkit-flex-pack:start;-moz-justify-content:flex-start;justify-content:flex-start;-moz-align-items:flex-start;align-items:flex-start}#didomi-host .didomi-mobile #didomi-consent-popup .didomi-consent-popup-preferences .didomi-consent-popup-data-processing .didomi-consent-popup-data-processing__purpose,#didomi-host .didomi-mobile #didomi-consent-popup .didomi-consent-popup-preferences .didomi-consent-popup-data-processing .didomi-consent-popup-category__name{margin-bottom:6px}#didomi-host .didomi-mobile #didomi-consent-popup .didomi-consent-popup-preferences .didomi-consent-popup-data-processing .didomi-consent-popup-data-processing__description,#didomi-host .didomi-mobile #didomi-consent-popup .didomi-consent-popup-preferences .didomi-consent-popup-data-processing .didomi-consent-popup-category__description{font-size:12px}#didomi-host .didomi-mobile #didomi-consent-popup .didomi-consent-popup-category__description{margin-bottom:20px;font-size:12px}#didomi-host .didomi-mobile #didomi-consent-popup .didomi-consent-popup-data-processing__essential_purpose{flex:0}#didomi-host .didomi-mobile .didomi-consent-popup-vendor__right_aligned_buttons{display:flex;float:none !important;margin-top:0px !important}#didomi-host .didomi-consent-popup-information .didomi-consent-popup-body{max-height:300px;overflow:auto}#didomi-host .didomi-consent-popup-preferences-vendors .didomi-consent-popup-body_vendors-list .didomi-vendors-details-title{font-weight:700}#didomi-host .didomi-consent-popup-preferences-vendors .didomi-consent-popup-body_vendors-list ul{margin:0;padding:16px 12px}#didomi-host .didomi-consent-popup-preferences-vendors .didomi-consent-popup-body_vendors-list ul li{margin-bottom:10px}#didomi-host .didomi-consent-popup-preferences-vendors .didomi-consent-popup-body_vendors-list ul li:last-child{margin-bottom:0}#didomi-host .didomi-retention-time{color:#333;display:inline-block;border-radius:4px;background:#e2f5f9;padding:0 8px;text-align:center;margin-left:8px;font-size:10px}#didomi-host .didomi-retention-time span:first-child{font-weight:700}#didomi-host .didomi-consent-popup-vendor__description{color:#333;padding-top:3px;border-left:1px solid;padding-left:10px;border-color:#e6e2d7;font-size:14px}#didomi-host .didomi-consent-popup-vendor__description>div{margin-bottom:8px}#didomi-host .didomi-consent-popup-vendor__description>div:last-child{margin-bottom:0}#didomi-host .didomi-consent-popup-vendor__description .didomi-components-accordion-label-container{font-weight:700;text-decoration:underline;line-height:24px;word-wrap:break-word;padding-bottom:0}#didomi-host .didomi-consent-popup-vendor__description .didomi-components-accordion-label-container .trigger-icon{margin-right:4px}#didomi-host .didomi-consent-popup-vendor__description .didomi-content{margin:0;padding:16px 12px}#didomi-host .didomi-consent-popup-vendor__description .didomi-content p:first-child{margin-top:0}#didomi-host .didomi-consent-popup-vendor__description .didomi-content ul{margin:0;padding:0}#didomi-host .didomi-consent-popup-vendor__description .didomi-content ul li{margin-bottom:10px}#didomi-host .didomi-consent-popup-vendor__description .didomi-content ul li:last-child{margin-bottom:0}#didomi-host .didomi-consent-popup-preferences-vendors .didomi-consent-popup-body_vendors-list{height:280px;overflow:auto;border:2px solid rgba(0,0,0,.05);padding:12px}#didomi-host .didomi-consent-popup-preferences-vendors .didomi-consent-popup-body{padding:20px 20px}#didomi-host .didomi-consent-popup-preferences-vendors .didomi-consent-popup-container-click-all{font-weight:bold;background:rgba(0,0,0,.05);padding:8px 12px;margin:0px !important}#didomi-host .didomi-consent-popup-preferences-vendors .didomi-popup-title{cursor:pointer}#didomi-host .didomi-consent-popup-preferences-vendors .didomi-popup-title:hover{opacity:.7}#didomi-host .didomi-consent-popup-preferences-vendors .didomi-user-information-container{word-break:break-all;border:2px solid rgba(0,0,0,.05);padding:12px}#didomi-host .didomi-consent-popup-preferences-vendors .didomi-user-information-trigger{font-size:12px;color:#666;font-weight:700}#didomi-host .didomi-consent-popup-preferences-vendors .didomi-user-information-trigger>.trigger-icon{font-size:12px !important}#didomi-host .didomi-consent-popup-preferences-vendors .didomi-vendors-disclaimer,#didomi-host .didomi-consent-popup-preferences-vendors .didomi-vendors-iab-disclaimer{color:#333;margin-bottom:10px;margin-top:16px}#didomi-host .didomi-consent-popup-preferences-vendors .didomi-vendors-disclaimer p,#didomi-host .didomi-consent-popup-preferences-vendors .didomi-vendors-iab-disclaimer p{margin:0px}#didomi-host .didomi-consent-popup-preferences-vendors .didomi-vendors-disclaimer a,#didomi-host .didomi-consent-popup-preferences-vendors .didomi-vendors-iab-disclaimer a{color:#526e7a}#didomi-host .didomi-consent-popup-preferences .didomi-consent-popup-data-processing .didomi-consent-popup-data-processing-illustrations{background:#f1f0f1;border:1px #ddd solid;padding:10px;font-size:10px;line-height:16px}#didomi-host .didomi-consent-popup-preferences .didomi-consent-popup-data-processing .didomi-consent-popup-data-processing-illustrations .didomi-consent-popup-data-processing-illustration{display:block;margin:0;padding:10px 0;border-bottom:1px solid #ddd}#didomi-host .didomi-consent-popup-preferences .didomi-consent-popup-data-processing .didomi-consent-popup-data-processing-illustrations .didomi-consent-popup-data-processing-illustration:last-child{border-bottom:0;padding-bottom:0}#didomi-host .didomi-consent-popup-preferences-purposes .didomi-consent-popup-category{padding:0px;margin:12px 0 0;overflow-y:auto;scrollbar-width:none;-ms-overflow-style:none}#didomi-host .didomi-consent-popup-preferences-purposes .didomi-consent-popup-category::-webkit-scrollbar{display:none}#didomi-host .didomi-consent-popup-preferences-purposes .didomi-consent-popup-category .label-click{font-weight:700}#didomi-host .didomi-consent-popup-preferences-purposes .didomi-consent-popup-category .didomi-consent-popup-category__children{border-left:1px solid #e7e2d6;padding:0px 0px 5px 15px;margin-left:15px}#didomi-host .didomi-consent-popup-preferences-purposes .didomi-consent-popup-category .didomi-consent-popup-category__name{font-weight:bold;font-size:15px;margin-bottom:8px}#didomi-host .didomi-consent-popup-preferences-purposes .didomi-consent-popup-category .didomi-consent-popup-category__description{font-size:14px;font-weight:300}#didomi-host .didomi-consent-popup-preferences-purposes .didomi-consent-popup-category .didomi-consent-popup-category__children{margin-top:12px;padding-bottom:0}#didomi-host .didomi-consent-popup-preferences-purposes .didomi-consent-popup-category .didomi-consent-popup-category__children .didomi-consent-popup-category{padding:0}#didomi-host .didomi-consent-popup-preferences-purposes .didomi-consent-popup-category .didomi-consent-popup-category__children .didomi-consent-popup-category__name{font-size:14px}#didomi-host .didomi-consent-popup-preferences-purposes .didomi-consent-popup-category .didomi-consent-popup-category__children .didomi-consent-popup-data-processing{border:none;padding:0}#didomi-host .didomi-consent-popup-preferences-purposes .didomi-consent-popup-category .didomi-consent-popup-category__children .didomi-consent-popup-data-processing .didomi-consent-popup-data-processing__purpose{font-size:14px}#didomi-host .didomi-consent-popup-preferences-purposes .didomi-consent-popup-category .didomi-consent-popup-category__children .didomi-consent-popup-data-processing__description{padding:0px}#didomi-host .didomi-consent-popup-preferences-purposes .didomi-consent-popup-category .didomi-consent-popup-category__children .didomi-consent-popup-preferences-purposes-features{font-size:14px}#didomi-host .didomi-consent-popup-preferences-purposes .vendors-count-label{min-height:21px;border-radius:4px;background:#f0f0f0;font-size:10px;font-weight:400;letter-spacing:0em;margin-left:5px;border:none}#didomi-host .didomi-consent-popup-preferences-purposes .vendors-count-label:hover{background:#e2f5f9;cursor:pointer}#didomi-host .didomi-consent-popup-preferences-purposes .didomi-consent-popup-data-processing,#didomi-host .didomi-consent-popup-preferences-purposes .didomi-consent-popup-category{font-weight:bold}#didomi-host .didomi-consent-popup-preferences-purposes .didomi-consent-popup-data-processing .label-button-section,#didomi-host .didomi-consent-popup-preferences-purposes .didomi-consent-popup-category .label-button-section{display:contents}#didomi-host .didomi-consent-popup-preferences-purposes .didomi-consent-popup-data-processing__description{font-size:14px;color:#333}#didomi-host .didomi-consent-popup-preferences-purposes .didomi-consent-popup-data-processing__description p{margin:10px 0;padding:0}#didomi-host .didomi-consent-popup-preferences-purposes .didomi-consent-popup-data-processing__essential_purpose{display:flex;flex:2.75;justify-content:center;margin:5px 0px 5px 15px;text-transform:uppercase;font-size:14px;line-height:17px;color:#526e7a}#didomi-host .didomi-consent-popup-preferences-purposes .didomi-consent-popup-data-processing__essential_purpose_explanation{margin:0px;padding:0px;font-size:14px;font-weight:bold;color:#526e7a}#didomi-host .didomi-consent-popup-preferences-purposes .didomi-consent-popup-data-processing__description_legal_icon{border-bottom:none}#didomi-host .didomi-consent-popup-preferences-purposes .didomi-consent-popup-data-processing__description_legal_icon svg{margin-top:-5px}[dir=rtl] #didomi-host .didomi-consent-popup-preferences-purposes .didomi-consent-popup-data-processing__description_legal_icon::after{text-align:right}#didomi-host .didomi-consent-popup-preferences-purposes .didomi-consent-popup-data-processing__purpose_actions{display:flex;justify-content:flex-end;align-items:center;text-align:center;background-color:#fff;border-radius:1px;margin-bottom:15px;margin-top:10px}#didomi-host .didomi-consent-popup-preferences-purposes .didomi-consent-popup-data-processing__purpose_actions .didomi-consent-popup-data-processing__purpose_actions_title{font-weight:bold;color:#333}#didomi-host .didomi-consent-popup-preferences-purposes .didomi-consent-popup-data-processing__purpose_actions .didomi-consent-popup-data-processing__purpose_action_buttons{float:right}#didomi-host .didomi-consent-popup-preferences-purposes .didomi-consent-popup-categories-nested .didomi-consent-popup-data-processing{padding:0px;margin:12px 0 0}#didomi-host .didomi-consent-popup-preferences-purposes .didomi-consent-popup-categories-nested .didomi-consent-popup-data-processing__purpose{font-size:15px}#didomi-host .didomi-consent-popup-preferences-purposes .didomi-consent-popup-view-vendors-list{display:flex;justify-content:space-between;align-items:center;text-align:center;margin-bottom:16px}#didomi-host .didomi-consent-popup-preferences-purposes .didomi-consent-popup-view-vendors-list .didomi-consent-popup-body__title{margin-bottom:0}#didomi-host .didomi-consent-popup-preferences-purposes .didomi-consent-popup-view-vendors-list .didomi-consent-popup-view-vendors-list-link{cursor:pointer;box-shadow:1px 1px 0 0 rgba(0,0,0,.1);background-color:#fff;border:1px solid #eee;font-size:12px;color:#757575;font-weight:700;padding:5px 15px;text-transform:initial}#didomi-host .didomi-consent-popup-preferences-purposes .didomi-consent-popup-view-vendors-list .didomi-consent-popup-view-vendors-list-link:hover{background-color:#eee;color:#585858}#didomi-host .didomi-consent-popup-preferences-purposes .didomi-consent-popup-view-vendors-list .didomi-consent-popup-view-vendors-list-link span{background:rgba(0,0,0,0)}#didomi-host .didomi-consent-popup-preferences-purposes .didomi-consent-popup-footer .didomi-consent-popup-actions .didomi-consent-popup-information-save{margin-right:15px;font-style:italic;color:#757575;font-size:14px}#didomi-host .didomi-mobile .didomi-consent-popup-preferences-purposes .didomi-consent-popup-data-processing .label-button-section,#didomi-host .didomi-mobile .didomi-consent-popup-preferences-purposes .didomi-consent-popup-category .label-button-section{display:flex;justify-content:space-between;width:100%}#didomi-host .didomi-mobile .didomi-consent-popup-preferences-purposes .didomi-consent-popup-data-processing .vendors-count-label,#didomi-host .didomi-mobile .didomi-consent-popup-preferences-purposes .didomi-consent-popup-category .vendors-count-label{text-align:center;min-width:75px;margin-right:10px}#didomi-host .didomi-mobile .didomi-consent-popup-preferences-purposes .didomi-consent-popup-data-processing__purpose_actions .didomi-consent-popup-data-processing__purpose_actions_title{margin-right:15px}#didomi-host .didomi-mobile .didomi-consent-popup-preferences-purposes .didomi-consent-popup-data-processing__essential_purpose{display:inline-block;margin-left:0px !important}#didomi-host .didomi-mobile .didomi-consent-popup-preferences-purposes .didomi-consent-popup-footer{height:auto !important}#didomi-host .didomi-mobile .didomi-consent-popup-preferences-purposes .didomi-consent-popup-footer .didomi-consent-popup-actions{padding:8px 0}#didomi-host .didomi-mobile .didomi-consent-popup-preferences-purposes .didomi-consent-popup-footer .didomi-consent-popup-actions:not(.didomi-buttons-all){flex-direction:row}#didomi-host .didomi-mobile .didomi-consent-popup-preferences-purposes .didomi-consent-popup-footer .didomi-consent-popup-actions .didomi-consent-popup-information-save{text-align:center;margin-top:5px}#didomi-host .didomi-consent-popup__3e6e3e05-9201-4614-a13e-b9649d1fa0e4 .didomi-components-accordion-label-container .didomi-consent-popup-data-processing__purpose{font-size:15px !important}#didomi-host .didomi-consent-popup__3e6e3e05-9201-4614-a13e-b9649d1fa0e4 .didomi-consent-popup-category__children .didomi-consent-popup-categories .didomi-consent-popup-data-processing .didomi-components-accordion .didomi-components-accordion-label-container .didomi-consent-popup-data-processing__purpose{font-size:14px !important}#didomi-host .didomi-consent-popup-category__children .didomi-consent-popup-preferences-purposes-features{font-size:14px !important}#didomi-host .didomi-consent-popup-preferences-purposes-features{margin-top:22px}#didomi-host .didomi-consent-popup-preferences-purposes-features div{display:inline}#didomi-vendors-count .didomi-consent-popup-vendors-count{max-height:80vh;overflow-y:auto;width:600px;max-width:80vw}#didomi-vendors-count .didomi-popup-view{overflow-y:hidden}#didomi-vendors-count .didomi-popup-view .didomi-popup-header{flex-direction:column;align-items:start;background-color:#e2f5f9;padding:16px 20px}#didomi-vendors-count .didomi-popup-view .didomi-popup-header .didomi-arrow-back-vendors-count{border:none;background-color:rgba(0,0,0,0)}#didomi-vendors-count .didomi-popup-view .didomi-popup-header .vendors-list-labels{flex:1;min-width:160px;margin-left:25px}#didomi-vendors-count .didomi-popup-view .didomi-popup-header .vendors-list-labels .iab-vendors-count-label,#didomi-vendors-count .didomi-popup-view .didomi-popup-header .vendors-list-labels .vendors-count-label{padding:4px 8px;background:#fff;font-size:10px;font-weight:400;line-height:17px;letter-spacing:0em;text-align:right;margin-right:8px;border:none}#didomi-vendors-count .didomi-popup-view .didomi-popup-body{padding:24px 20px;max-height:50vh;overflow-y:auto;font-size:15px;line-height:24px}#didomi-vendors-count .didomi-popup-view .didomi-popup-body ul{margin:0;padding:0}#didomi-vendors-count .didomi-popup-view .didomi-popup-body ul li{margin-bottom:10px}.didomi-mobile #didomi-vendors-count .didomi-popup-header{flex-direction:column;align-items:flex-start}.didomi-continue-without-agreeing{text-decoration:underline;cursor:pointer;color:#444}.didomi-continue-without-agreeing:hover{opacity:.7}#didomi-host .didomi-storage-info{font-weight:bold}#didomi-host .didomi-storage-info .didomi-storage-info__description{color:#333;padding-top:3px;border-left:1px solid #e6e2d7;padding-left:24px;font-size:14px}#didomi-host .didomi-storage-info .didomi-storage-info__description.didomi-content.active{padding-bottom:0px !important}#didomi-host .didomi-storage-info .didomi-storage-info__description ul{list-style:initial}#didomi-host .didomi-storage-info .didomi-storage-info__description ul li{margin-bottom:10px}#didomi-host .didomi-storage-info .didomi-storage-info__time-label{color:#333;display:inline-block;border-radius:4px;background:#e2f5f9;padding:0 8px;text-align:center;margin-left:8px;font-size:10px}#didomi-host .didomi-storage-info .didomi-storage-info__time-label span:first-child{font-weight:700}#didomi-host .didomi-x-button{cursor:pointer;display:block;height:36px;width:36px;padding:2px 0 2px 2px;border-radius:18px;position:absolute;top:-18px;right:-18px;color:#fff;background-color:#095d70;border-style:none}#didomi-host .didomi-x-button .didomi-cross-icon{fill:#fff}[dir=rtl] #didomi-host .didomi-x-button{right:auto;left:-18px}#didomi-host .didomi-x-button:hover{opacity:.7}#didomi-host .didomi-mobile .didomi-x-button{height:48px;width:48px;padding:0 0 0 2px;border-radius:0px;background-color:rgba(0,0,0,0) !important;top:8px;right:8px}#didomi-host .didomi-mobile .didomi-x-button .didomi-cross-icon{fill:#000}[dir=rtl] #didomi-host .didomi-mobile .didomi-x-button{right:auto;left:8px}#didomi-host .didomi-screen-xsmall .didomi-x-button{height:48px;width:48px;padding:0 0 0 2px;border-radius:0px;background-color:rgba(0,0,0,0) !important;top:8px;right:8px}#didomi-host .didomi-screen-xsmall .didomi-x-button .didomi-cross-icon{fill:#000}[dir=rtl] #didomi-host .didomi-screen-xsmall .didomi-x-button{right:auto;left:8px} 
+    #didomi-host {
+      font-family: Arial;
+    }
+    #didomi-host a:not(.didomi-no-link-style) {
+      text-decoration: underline;
+      color: #646464 !important;
+      
+      &:hover {
+        opacity: 0.7 !important;
+      }
+    }
+    .didomi-notice-view-partners-link {
+  display: none!important;
+}
+
+#didomi-host .didomi-popup-container {
+border-color: #ffffff!important;
+}
+
+#didomi-host .didomi-exterior-border {
+    border-color: transparent!important;
+}
+#didomi-host .didomi-popup-backdrop {
+background-color: rgba(0,0,0,.6);
+}
+  </style><div id="didomi-host" data-nosnippet="true"><div class="notranslate didomi-screen-xlarge didomi-consent-popup__196da249-e5c8-4975-84d3-4b76bf16efd6"><div id="didomi-popup" class="didomi-popup-backdrop didomi-notice-popup didomi-popup__backdrop"><style type="text/css" scoped="true">
+      #didomi-host .didomi-exterior-border {
+        border-color: rgba(28,44,79,0.3);
+      }
+
+      #didomi-host .didomi-popup-container {
+        border-color: rgba(28,44,79,1);
+      }
+
+      #didomi-host .didomi-components-button {
+        border-radius: 0px;
+        border-color: rgba(34, 34, 34, 0.2);
+        border-width: 1px;
+        background-color: #eeeeee;
+        color: #444444;
+      }
+      </style><div class="didomi-exterior-border didomi-popup__exterior-border"><div class="didomi-popup-container didomi-popup__dialog didomi-popup-notice didomi-popup-notice-optin-type " role="dialog" aria-modal="true" aria-label="Bienvenue chez Assemblée nationale du Québec Gestion du consentement" data-testid="notice"><style type="text/css" scoped="true">
+#didomi-host .didomi-popup-container .didomi-popup-notice-text {
+  text-align: left;
+}
+
+#didomi-host .didomi-popup-container .didomi-popup-notice-logo-container {
+  text-align: center;
+}
+      </style><div class="didomi-popup-view" tabindex="-1" role="document" style="outline: none;"><div class="didomi-popup-notice-logo-container"><img class="didomi-popup-notice-logo" alt="Logo" src="https://www.assnat.qc.ca/soutien/Logos/logo_assnat.png"></div><div class="didomi-popup-notice-text-container"><div class="didomi-popup-notice-text"><p>L’Assemblée nationale du Québec a besoin de votre consentement pour que ce site Web puisse utiliser des témoins de connexion <i>(cookies)</i>. Par ces témoins de connexion, l’Assemblée nationale et les prestataires de services tiers auxquels elle a recours collectent des renseignements comme les pages visitées et le type d’appareil utilisé. Ces renseignements servent à mesurer les comportements de navigation, à produire des rapports statistiques, à améliorer l’expérience de navigation et à sonder les internautes. Vous pouvez paramétrer les témoins de connexion et retirer votre consentement en tout temps. Des informations complémentaires se trouvent dans la <b><a href="https://assnat.qc.ca/fr/propos-site/politique-confidentialite.html">politique de confidentialité de l’Assemblée nationale</a></b>.</p></div><a tabindex="0" class="didomi-notice-view-partners-link" role="button"><span>Voir nos partenaires</span></a></div><div id="buttons" class="multiple didomi-buttons didomi-popup-notice-buttons"><button id="didomi-notice-learn-more-button" class="didomi-components-button didomi-button didomi-learn-more-button didomi-button-standard standard-button" aria-label="En savoir plus: Configurer vos consentements" style="color: rgb(68, 68, 68); background-color: rgb(238, 238, 238); border-radius: 0px; border-color: rgba(34, 34, 34, 0.2); border-width: 1px;"><span>Personnaliser</span></button><button id="didomi-notice-disagree-button" class="didomi-components-button didomi-button didomi-disagree-button didomi-components-button--color didomi-button-highlight highlight-button" aria-label="Refuser: Refuser notre traitement des données et fermer" style="color: rgb(255, 255, 255); background-color: rgb(28, 44, 79); border-radius: 0px; border-color: rgba(28, 44, 79, 0.3); border-width: 1px;"><span>Refuser</span></button><button id="didomi-notice-agree-button" class="didomi-components-button didomi-button didomi-dismiss-button didomi-components-button--color didomi-button-highlight highlight-button" aria-label="Accepter &amp; Fermer: Accepter notre traitement des données et fermer" style="color: rgb(255, 255, 255); background-color: rgb(28, 44, 79); border-radius: 0px; border-color: rgba(28, 44, 79, 0.3); border-width: 1px;"><span>Accepter et fermer</span></button></div><div></div></div></div></div></div></div></div>
+    
+<!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5X47H2N" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+    
+    
+    <form method="post" action="/fr/index.html" id="aspnetForm">
+<div style="display: none;">
+<input type="hidden" name="versionProgrammationEnCache" id="versionProgrammationEnCache" value="0">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJOTk0MTQ0NjI1D2QWAmYPZBYCAgQQZGQWAgIRD2QWAgIJD2QWAmYPZBYCZg8VAg4vZW4vaW5kZXguaHRtbAdFbmdsaXNoZGT50pQTIgkUmR8YRsvhA+7o3EnKBw==">
+</div>
+
+<div style="display: none;">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CC3BF167">
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAARBf9qJiZm3FcCKBp6CyauW3hH/puXvwl4FGZa6rYP8j1mVEZ4vf9ptYWo57zpKTt6lEMKQhIoeAaAd1Tau8/yuFssj8MufR9nqZiG26FFQCfbU6mE=">
+</div>
+    <div id="Wrap">
+        
+
+
+<script type="text/javascript">
+    var motCleDefaut = 'Rechercher';
+</script>
+
+<a name="haut"></a>
+<div id="enteteUtilitaire">
+    <div id="skip" class="skiplinks">
+        <a href="#ancreContenuPrincipal">Atteindre le contenu</a>
+        <a href="#ancreSousNavigation">Atteindre la navigation secondaire</a>               
+    </div>
+    <div class="listeUtilitaires listeUtilitaires2">
+        <ul>
+            <li class="Premier">
+                <a class="sanssouligne nePasRediriger icoMobile" href="https://m.assnat.qc.ca">
+                    <span class="styleHyperlien">Mobile</span>
+                </a>
+            </li>
+            <li>
+                <a href="/fr/accueil/mediassociaux.html" class="sanssouligne icoMediasSociauxEntete">
+                    <span class="styleHyperlien">Suivez-nous</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="listeUtilitaires">
+        <ul>
+            <li><a id="A2" href="https://www.assnat.qc.ca/carrieres">Carrières</a></li>
+            <li><a href="/fr/nous-joindre.html" id="ctl00_Utilitaires_A1">Nous joindre</a></li>
+            <li>
+                <div class="outilRecherche">
+                    <label for="ctl00_Utilitaires_motCle" class="nepasafficher">Saisir un mot clé pour faire une recherche générale</label>
+                    <input type="text" id="ctl00_Utilitaires_motCle" class="outilRechercheMotCle">
+                    <input onclick="RechercherMotCle();return false;" type="image" src="/Images/btnRecherche_of.gif" class="btnRechercheGlobal" title="Rechercher" alt="Rechercher">
+                </div>
+            </li>
+            <li>
+                <a onclick="LancerRechercheAvancee();return false;">Recherche avancée</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<script type="text/javascript">
+    function RechercherMotCle() {
+        var mot = $('#ctl00_Utilitaires_motCle');
+        if (mot.val() != "")
+        {
+            window.location = '/fr/recherche/recherche-avancee.html?SectionRecherche=-1&MotsCles=' + encodeURIComponent(htmlEscape(mot.val()));
+        }
+    }
+
+    function LancerRechercheAvancee() {
+        var urlRechercheAvancee = '/fr/recherche/recherche-avancee.html';
+        window.location = urlRechercheAvancee + "?EstNouvelleRecherche=true";
+    }
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+<div id="Banniere">
+	
+<h1>Assemblée nationale du Québec</h1>
+    <img src="../Images/logo_blanc_Assemblee_nationale_du_Quebec.png" alt="Assemblée nationale du Québec">
+</div>        
+        
+
+<div id="NavigationPrincipaleConteneur">
+    <div id="NavPrincipaleNiveau1">
+        <ul>
+            <li class="btnAccueil menuActif">
+                <a href="/fr/index.html" id="ctl00_NavigationPrincipale_hrfAcceuil">
+                    Accueil</a></li>
+            <li aria-haspopup="true" class="menuHoverParent btnDeputes"><a href="/fr/deputes/index.html" id="ctl00_NavigationPrincipale_hrfDeputes" aria-haspopup="true">
+                Députés</a>
+                <div class="menuHoverEnfant">
+                    
+                            <ul>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10006.html">La présidente</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10002.html#listeDeputes">Liste des députés en fonction</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/11861.html">Les députés depuis 1764</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10002.html#listeDeputes">Coordonnées des députés</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10042.html">La fonction de député</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10014.html">Fonctions parlementaires des députés</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10020.html">Composition des commissions</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10028.html">Membres du Bureau de l'Assemblée</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10052.html">Indemnités et allocations</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/deputes/cerclefemmes/index.html">Cercle des femmes parlementaires</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12661.html">Cercle des jeunes parlementaires</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10965.html">Cercle des ex-parlementaires de l’Assemblée nationale du Québec</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12603.html">Fondation Jean-Charles-Bonenfant </a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12605.html">Fondation des parlementaires québécois Cultures à partager </a></li>
+</ul>
+                        
+                </div>
+            </li>
+            <li aria-haspopup="true" class="menuHoverParent btnTravaux">
+                <a href="/fr/travaux-parlementaires/index.html" id="ctl00_NavigationPrincipale_hrfTravauxParlementaires" aria-haspopup="true">
+                    Travaux parlementaires</a>
+                <div class="menuHoverEnfant">
+                    
+                            <ul>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12119.html">Calendrier hebdomadaire des travaux</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12213.html">Journal des débats</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/11867.html">Index du Journal des débats</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10114.html#procedure">Règlement et autres règles de procédure de l'Assemblée nationale</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10114.html#procedure">Propos non parlementaires</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10044.html">Assister aux travaux</a></li>
+</ul>
+<ul>
+<li><strong><a href="https://www.assnat.qc.ca/fr/lien/10118.html">Travaux de l'Assemblée</a></strong> 
+<ul>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10118.html">Toutes les séances</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10198.html">Documents déposés</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10192.html">Projets de loi</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12215.html">Cheminement des projets de loi</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12779.html">Registre des votes</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><strong><a href="https://www.assnat.qc.ca/fr/lien/10126.html">Travaux des commissions</a></strong> 
+<ul>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10126.html">Liste des commissions</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/11185.html">Mandats en cours</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10198.html">Documents déposés</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10140.html">Rapports et documents de réflexion</a></li>
+</ul>
+</li>
+</ul>
+                        
+                </div>
+            </li>
+            <li aria-haspopup="true" class="menuHoverParent btnExprimez">
+                <a href="/fr/exprimez-votre-opinion/index.html" id="ctl00_NavigationPrincipale_hrfExprimezVotreOpinion" aria-haspopup="true">
+                    Exprimez votre opinion!</a>
+                <div class="menuHoverEnfant">
+                    
+                            <ul>
+<li><strong><a href="https://www.assnat.qc.ca/fr/lien/10999.html">Pétitions</a></strong> 
+<ul>
+<li><a href="https://www.assnat.qc.ca/fr/lien/11001.html">Signer une pétition électronique</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/11003.html">Consulter une pétition présentée à l'Assemblée</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10108.html">Lancer une pétition</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/exprimez-votre-opinion/petition/cheminement-petition">Suivre le cheminement d'une pétition</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><strong><a href="https://www.assnat.qc.ca/fr/lien/10901.html">Consultations publiques</a></strong> 
+<ul>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10901.html#CommentParticiper">Comment participer à une consultation</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10126.html">Liste des consultations publiques</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><strong><a href="https://www.assnat.qc.ca/fr/lien/10997.html">Commenter un sujet à l'étude</a></strong></li>
+</ul>
+<ul>
+<li><strong><a href="https://www.assnat.qc.ca/fr/lien/10110.html">Présenter un projet de loi d'intérêt privé</a></strong></li>
+</ul>
+                        
+                </div>
+            </li>
+            <li aria-haspopup="true" class="menuHoverParent btnVideoAudio">
+                <a href="/fr/video-audio/index.html" id="ctl00_NavigationPrincipale_hrfVideoAudio" aria-haspopup="true">
+                    Vidéo</a>
+                <div class="menuHoverEnfant">
+                    
+                            <ul>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12541.html"><strong>En direct et webdiffusions à venir</strong></a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12543.html"><strong>Archives des travaux et activités parlementaires</strong></a> 
+<ul>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12545.html">Travaux de l'Assemblée </a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12559.html">Travaux des commissions</a> </li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12547.html">Activités de presse </a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12549.html">Activités spéciales et institutionnelles</a> </li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12551.html">Députés</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12553.html"><strong>Le Canal de l'Assemblée</strong></a> </li>
+</ul>
+<ul>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12555.html"><strong>Émissions et capsules promotionnelles</strong></a></li>
+</ul>
+<ul>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12561.html"><strong>Espace jeunesse</strong></a> </li>
+</ul>
+<ul>
+<li><a href="https://www.assnat.qc.ca/fr/lien/11183.html"><strong>Commander un extrait</strong></a> </li>
+</ul>
+                        
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+        
+
+<div id="NavigationPrincipaleNiveau2Conteneur">
+    <div id="NavPrincipaleNiveau2">
+        <ul>
+            <li class="" id="lienABC"><a href="/fr/abc-assemblee/index.html" id="ctl00_NavigationPrincipaleNiveau2_hrfABCDeLassemblee">
+                L'ABC de l'Assemblée</a></li>
+            <li class="" id="lienVisiteurs"><a href="/fr/visiteurs/index.html" id="ctl00_NavigationPrincipaleNiveau2_hrfVisiteurs">
+                Visiteurs</a></li>
+            <li class="" id="lienRestaurants"><a href="/fr/visiteurs/restaurants/index.html" id="ctl00_NavigationPrincipaleNiveau2_hrfRestaurants">
+                Restaurants</a></li>
+            <li class="" id="lienActualites"><a href="/fr/actualites-salle-presse/index.html" id="ctl00_NavigationPrincipaleNiveau2_hrfActualiteEtSalleDePresse">
+                Actualités et salle de presse</a></li>
+            <li class="" id="lienBibliotheque">
+                <a href="/fr/bibliotheque/index.html" id="ctl00_NavigationPrincipaleNiveau2_hrfBibliotheque">
+                    Bibliothèque</a></li>
+            <li class="" id="lienPublications">
+                <a href="/fr/publications/index.html" id="ctl00_NavigationPrincipaleNiveau2_hrfPublications">
+                    Publications</a></li>
+            <li class="" id="lienEducatives">
+                <a href="https://www.paricilademocratie.com" id="ctl00_NavigationPrincipaleNiveau2_hrfActivitesEducatives">
+                    Éducation</a></li>
+            <li class="" id="lienInternational">
+                <a href="/fr/diplomatie/index.html" id="ctl00_NavigationPrincipaleNiveau2_hrfInternational">
+                    Diplomatie</a></li>
+            <li class="" id="lienHistoire"><a href="/fr/patrimoine/index.html" id="ctl00_NavigationPrincipaleNiveau2_hrfHistoire">
+                Histoire</a></li>
+        </ul>
+    </div>
+</div>
+
+        <!-- Ancre pour le "skiplink atteindreSousNavigation" -->
+        <div id="divAncreSousNavigation" class="skipLinks">
+            <a name="ancreSousNavigation" id="ancreSousNavigation"></a>
+        </div>
+        <div class="ContentBandeau">
+            
+    
+    <div id="Bandeau" style="display: none;">
+        
+                <div class="texteBandeau">
+                    <p>
+<script type="text/javascript"><!--
+$(document).ready(function () {
+$("#Bandeau").css("display","none");
+});
+// --></script>
+</p>
+                </div>
+            
+    </div>
+    
+        </div>
+        <div class="ColGauche colonne">
+            
+    
+<div id="ZoneActualites" class="ZoneActualites">
+    <ul class="TabZoneActualites ui-tabs-nav">
+        <li class="Premier ui-tabs-selected"><a href="#Onglet-01">
+            <br>Actualités</a></li>
+        <li class="Second"><a href="#Onglet-02">
+            Projets de loi</a></li>
+        <li class="Troisieme"><a href="#Onglet-03">
+            Consultations publiques</a></li>
+    </ul>
+    <div class="clear">
+    </div>
+    <div id="Onglet-01" class="Onglets ui-tabs-panel" style="display: block;">
+        <div class="OngletsInterne">
+            <ul class="ListeLien">
+                <li><a href="/fr/actualites-salle-presse/index.html">
+                    Toutes les actualités</a></li>
+            </ul>
+            <div class="hr">
+                <hr>
+            </div>
+            
+            
+                    <ul class="listeActualites">
+                
+                    <li>
+                        <p>
+                            <span class="dateActualite">
+                                15 juillet 2024</span>
+                            <br>
+                            <a href="/fr/actualites-salle-presse/nouvelle/Actualite-63089.html">Le Camp de jour citoyen&nbsp;2024 de l’Assemblée nationale du Québec est lancé!&nbsp;&nbsp;<span>»</span></a>
+                        </p>
+                    </li>
+                
+                    <li>
+                        <p>
+                            <span class="dateActualite">
+                                9 juillet 2024</span>
+                            <br>
+                            <a href="/fr/actualites-salle-presse/communiques/CommuniquePresse-7189.html">La présidente de l’Assemblée&nbsp;nationale du Québec devient première vice-présidente de l’Assemblée parlementaire de la Francophonie&nbsp;<span>»</span></a>
+                        </p>
+                    </li>
+                
+                    <li>
+                        <p>
+                            <span class="dateActualite">
+                                4 juillet 2024</span>
+                            <br>
+                            <a href="/fr/actualites-salle-presse/communiques/CommuniquePresse-7187.html">Artistes d’ici : une exposition qui célèbre les talents artistiques du Québec!&nbsp;<span>»</span></a>
+                        </p>
+                    </li>
+                
+                    <li>
+                        <p>
+                            <span class="dateActualite">
+                                28 juin 2024</span>
+                            <br>
+                            <a href="/fr/travaux-parlementaires/mandats/Mandat-51813/index.html">La Commission de la culture et de l’éducation entreprend un nouveau mandat intitulé : Consultations particulières et auditions publiques sur le projet de loi n° 64, Loi instituant le Musée national de l’histoire du Québec&nbsp;<span>»</span></a>
+                        </p>
+                    </li>
+                
+                    <li>
+                        <p>
+                            <span class="dateActualite">
+                                27 juin 2024</span>
+                            <br>
+                            <a href="/fr/travaux-parlementaires/mandats/Mandat-51807/index.html">La Commission spéciale sur les impacts des écrans et des réseaux sociaux sur la santé et le développement des jeunes entreprend un nouveau mandat intitulé : Consultations particulières et auditions publiques sur les impacts des écrans et des réseaux sociaux sur la santé et le développement des jeunes&nbsp;<span>»</span></a>
+                        </p>
+                    </li>
+                
+                    </ul>
+                
+        </div>
+    </div>
+    <div id="Onglet-02" class="Onglets ui-tabs-panel ui-tabs-hide">
+        <div class="OngletsInterne">
+            <ul class="ListeLien">
+                <li><a href="/fr/travaux-parlementaires/projets-loi/index.html">
+                    Tous les projets de loi</a></li>
+            </ul>
+            <div class="hr">
+                <hr>
+            </div>
+            
+            
+                
+            
+                    <ul class="listeActualites">
+                        <li>
+                            <p>
+                                <span class="dateActualite">
+                                    Projets de loi présentés récemment&nbsp;:</span></p>
+                        </li>
+                
+                    <li>
+                        <p>
+                            <span class="dateActualite">
+                                7 juin 2024</span>
+                            <br>
+                            <span>
+                                N°
+                                70&nbsp;-&nbsp;</span><a href="/fr/travaux-parlementaires/projets-loi/projet-loi-70-43-1.html">Loi modifiant la Loi sur la protection sanitaire des animaux<span>&nbsp;»</span></a>
+                        </p>
+                    </li>
+                
+                    <li>
+                        <p>
+                            <span class="dateActualite">
+                                6 juin 2024</span>
+                            <br>
+                            <span>
+                                N°
+                                69&nbsp;-&nbsp;</span><a href="/fr/travaux-parlementaires/projets-loi/projet-loi-69-43-1.html">Loi assurant la gouvernance responsable des ressources énergétiques et modifiant diverses dispositions législatives<span>&nbsp;»</span></a>
+                        </p>
+                    </li>
+                
+                    <li>
+                        <p>
+                            <span class="dateActualite">
+                                4 juin 2024</span>
+                            <br>
+                            <span>
+                                N°
+                                67&nbsp;-&nbsp;</span><a href="/fr/travaux-parlementaires/projets-loi/projet-loi-67-43-1.html">Loi modifiant le Code des professions pour la modernisation du système professionnel et visant l’élargissement de certaines pratiques professionnelles dans le domaine de la santé et des services sociaux<span>&nbsp;»</span></a>
+                        </p>
+                    </li>
+                
+                    <li>
+                        <p>
+                            <span class="dateActualite">
+                                4 juin 2024</span>
+                            <br>
+                            <span>
+                                N°
+                                699&nbsp;-&nbsp;</span><a href="/fr/travaux-parlementaires/projets-loi/projet-loi-699-43-1.html">Loi modifiant la Charte des droits et libertés de la personne afin d’y consacrer le droit à un logement décent<span>&nbsp;»</span></a>
+                        </p>
+                    </li>
+                
+                    <li>
+                        <p>
+                            <span class="dateActualite">
+                                31 mai 2024</span>
+                            <br>
+                            <span>
+                                N°
+                                68&nbsp;-&nbsp;</span><a href="/fr/travaux-parlementaires/projets-loi/projet-loi-68-43-1.html">Loi visant principalement à réduire la charge administrative des médecins<span>&nbsp;»</span></a>
+                        </p>
+                    </li>
+                
+                    </ul>
+                
+        </div>
+    </div>
+    <div id="Onglet-03" class="Onglets ui-tabs-panel ui-tabs-hide">
+        <div class="OngletsInterne">
+            <ul class="ListeLien">
+                <li><a href="/fr/travaux-parlementaires/commissions/mandats-encours-commissions.html">
+                    Tous les mandats des <br> commissions en cours</a> </li>
+            </ul>
+            <div class="hr">
+                <hr>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+
+        </div>
+        <div class="ColCentre colonne Contenu">
+            
+
+    <div class="BlocCarrousel" style="display: block;">
+        
+                
+
+<div class="carrouselBase"> 
+    <div class="carrouselPrincipal">
+                     
+                
+                         
+                
+                         
+                
+                         
+                
+                         
+                
+                         
+                
+                         
+                
+                         
+                
+                         
+                
+                         
+                
+                         
+                
+                         
+                
+                         
+                
+                         
+                
+                         
+                
+                         
+                
+                         
+                
+                         
+                
+                         
+                
+                         
+                
+                         
+                
+                         
+                <div class="carrouselPage page0" data-date="2024-09-06T23:59:00" style="display: block;"><a href="/fr/lien/13835.html"><img alt="Nouvelle infolettre de l’Assemblée nationale : activités gratuites, histoire, vie parlementaire" title="Nouvelle infolettre de l’Assemblée nationale : activités gratuites, histoire, vie parlementaire" src="https://www.assnat.qc.ca/Media/Process.aspx?asset=ANQ.Vigie.Bll.Image_60681&amp;process=Original&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz"></a></div>
+                         
+                <div class="carrouselPage page1" data-date="2024-09-02T16:30:00"><a href="/fr/lien/10040.html"><img alt="Tout l’été, visitez le parlement et participez à nos activités gratuites!" title="Tout l’été, visitez le parlement et participez à nos activités gratuites!" src="https://www.assnat.qc.ca/Media/Process.aspx?asset=ANQ.Vigie.Bll.Image_60639&amp;process=Original&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz"></a></div>
+                         
+                <div class="carrouselPage page2" data-date="9999-12-31T23:59:59"><a href="/fr/lien/13825.html"><img alt="Rénovation de la salle de l'Assemblée nationale" title="Rénovation de la salle de l'Assemblée nationale" src="https://www.assnat.qc.ca/Media/Process.aspx?asset=ANQ.Vigie.Bll.Image_60631&amp;process=Original&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz"></a></div>
+                         
+                <div class="carrouselPage page3" data-date="9999-12-31T23:59:59"><a href="https://www.assnat.qc.ca/fr/visiteurs/programmation-citoyenne/artistes-ici-helena-vallee-dallaire.html"><img alt="Artistes d’ici, une nouvelle exposition qui célèbre les talents artistiques du Québec !" title="Artistes d’ici, une nouvelle exposition qui célèbre les talents artistiques du Québec !" src="https://www.assnat.qc.ca/Media/Process.aspx?asset=ANQ.Vigie.Bll.Image_60687&amp;process=Original&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz"></a></div>
+                         
+                
+                         
+                
+                         
+                
+                         
+                
+                         
+                
+                         
+                
+                         
+                
+                         
+                
+                         
+                
+            
+    </div>
+    <div class="carrouselNavigation">
+    <div class="carrouselNavigationGauche inactif cache"></div><div class="carrouselNavBouton active" data-numpage="0" data-numpagenav="0"><img alt="Nouvelle infolettre de l’Assemblée nationale : activités gratuites, histoire, vie parlementaire" title="Nouvelle infolettre de l’Assemblée nationale : activités gratuites, histoire, vie parlementaire" src="https://www.assnat.qc.ca/Media/Process.aspx?asset=ANQ.Vigie.Bll.Image_60681&amp;process=Original&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz"></div><div class="carrouselNavBouton" data-numpage="1" data-numpagenav="0"><img alt="Tout l’été, visitez le parlement et participez à nos activités gratuites!" title="Tout l’été, visitez le parlement et participez à nos activités gratuites!" src="https://www.assnat.qc.ca/Media/Process.aspx?asset=ANQ.Vigie.Bll.Image_60639&amp;process=Original&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz"></div><div class="carrouselNavBouton" data-numpage="2" data-numpagenav="0"><img alt="Rénovation de la salle de l'Assemblée nationale" title="Rénovation de la salle de l'Assemblée nationale" src="https://www.assnat.qc.ca/Media/Process.aspx?asset=ANQ.Vigie.Bll.Image_60631&amp;process=Original&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz"></div><div class="carrouselNavBouton" data-numpage="3" data-numpagenav="0"><img alt="Artistes d’ici, une nouvelle exposition qui célèbre les talents artistiques du Québec !" title="Artistes d’ici, une nouvelle exposition qui célèbre les talents artistiques du Québec !" src="https://www.assnat.qc.ca/Media/Process.aspx?asset=ANQ.Vigie.Bll.Image_60687&amp;process=Original&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz"></div><div class="carrouselNavigationDroite inactif cache"></div><div style="clear:both;"></div></div>
+    <div class="carrouselNumPage">0</div>
+    <div class="carrouselNumPageNavigation">0</div>
+    <div class="carrouselVitesseDefilement">
+        
+                4000
+            
+    </div>
+</div>
+            
+    </div>
+
+    <div class="BlocInfo">
+        
+
+<h2>
+    Députés
+</h2>
+
+<div class="champsRecherche champsDeputes">
+
+	
+			<ul class="ListeLien">
+<li><a id="lienListeDeputes" href="https://www.assnat.qc.ca/fr/lien/10002.html#listeDeputes">Liste des députés en fonction</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10006.html">La présidente de l’Assemblée nationale</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/deputes/cerclefemmes/index.html">Cercle des femmes parlementaires </a></li>
+</ul>
+<p>&nbsp;</p>			
+		
+
+    <div style="width:90%;">
+        <p><label for="ctl00_ColCentre_TrouverUnDepute1_inputRechercheDeputes">Trouver un député par code postal, par nom ou par circonscription :</label></p>
+        <div style="position:relative" class="controlWrapper" id="controlWrapperctl00_ColCentre_TrouverUnDepute1_inputRechercheDeputes"><input name="ctl00$ColCentre$TrouverUnDepute1$inputRechercheDeputes" type="text" id="ctl00_ColCentre_TrouverUnDepute1_inputRechercheDeputes" class="inputRecherche RechercheDeputes BulleInfo"><div class="btnInfoBulle"><a class="sanssouligne" href="javascript:void(0)"><img alt="Afficher l'aide" title="Afficher l'aide" src="https://www.assnat.qc.ca/Images/btnInfoBulle.gif"></a><span title="Pour savoir qui est votre député, saisissez votre code postal ou le nom de votre circonscription (comté). Pour accéder à la fiche biographique d’un député, saisissez le nom du député ou le nom de sa circonscription."></span></div></div>
+    </div>
+    <input onclick="RechercherDepute()" type="button" value="Rechercher" class="btnSoumettre">        
+</div>
+
+<script type="text/javascript">
+    
+
+    function RechercherDepute() {
+    
+        var mot = 'ctl00_ColCentre_TrouverUnDepute1_inputRechercheDeputes';
+        mot = '#' + mot;
+        var objetjq = $(mot);
+        if (objetjq.val() != "") {
+            window.location = '/fr/recherche/recherche-avancee.html?SectionRecherche=3&MotsCles=' + encodeURIComponent(htmlEscape(objetjq.val())) + '&EstRechercheTrouverUnDepute=true';
+        }
+    }
+
+    //Ajouter l'ancre au lien menant à la liste des députés.
+    var hrefOriginal = $("a#lienListeDeputes").attr('href');
+    $("a#lienListeDeputes").attr('href', hrefOriginal + '#listeDeputes');
+
+</script>
+
+    </div>
+    <div class="BlocInfo BlocInfoDroite">
+        
+<h2>Accès rapides</h2>
+    
+                <ul class="ListeLien">
+<li><a href="https://www.assnat.qc.ca/fr/travaux-parlementaires/documents-deposes/depots-du-jour.html">Dépôts du jour</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/exprimez-votre-opinion/petition/index.html">Pétitions </a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/11867.html">Index du Journal des débats </a></li>
+<li><a href="https://www.assnat.qc.ca/fr/patrimoine/lexique/index.html">Encyclopédie du parlementarisme québécois</a></li>
+</ul>
+        
+    </div>
+    <div class="clear"></div>
+    <div class="hr">
+        <hr>
+    </div>
+    <h2>Découvrir</h2>
+
+
+    
+            <div class="NouvellesBreves">
+                <div class="ImgAlignementGauche">
+                    <p><img src="https://www.assnat.qc.ca/Media/Process.aspx?asset=ANQ.Vigie.Bll.Image_33699&amp;process=Original&amp;params=&amp;token=ZyMoxNwUn8ikQ%2bTRKYwPCjWrKwg%2bvIv9rjij7p3xLGTZDmLVSmJLoqe%2fvG7%2fYWzz&amp;version=0" alt="" title=""></p>
+                </div>
+        
+    
+            <div class="texteAlignementDroit">
+                <h3>Diplomatie</h3>
+                <p>Visitez la section <a href="https://www.assnat.qc.ca/fr/diplomatie/index.html">Diplomatie parlementaire</a> pour en apprendre davantage sur l'action de l'Assemblée nationale du Québec à l'international.</p>
+            </div>
+            </div>
+        
+
+
+    
+    
+
+
+
+    
+    
+
+
+
+    
+    
+
+
+
+    
+            <div class="NouvellesBreves">
+                <div class="ImgAlignementGauche">
+                    <p><img src="https://www.assnat.qc.ca/Media/Process.aspx?asset=ANQ.Vigie.Bll.Image_3857&amp;process=Original&amp;params=&amp;token=ZyMoxNwUn8ikQ%2bTRKYwPCjWrKwg%2bvIv9rjij7p3xLGTZDmLVSmJLoqe%2fvG7%2fYWzz&amp;version=0" alt="" title=""></p>
+                </div>
+        
+    
+            <div class="texteAlignementDroit">
+                <h3>Carrières et stages</h3>
+                <p><strong>Vos compétences s'expriment ici !<br></strong>Soyez témoin et acteur d'événements marquants de l'actualité politique, sociale et culturelle du Québec en travaillant à l'Assemblée nationale. Visitez notre section&nbsp;<a href="https://www.assnat.qc.ca/fr/lien/12879.html">Carrières et stages</a>.</p>
+            </div>
+            </div>
+        
+
+        </div>
+        <div class="ColDroite colonne">
+            <!-- Ancre pour le "skiplink atteindreContenu" -->
+            <div id="divAncreContenuPrincipal" class="skipLinks">
+                <a name="ancreContenuPrincipal" id="ancreContenuPrincipal"></a>
+            </div>
+            
+    
+
+<script type="text/javascript">
+</script>
+
+<div class="calendrier calSommaire" id="Calendrier">
+    <div class="titreCalendrier" id="TitreCalendrier">
+        <ul>
+            <li class="btnCalendrier" id="btnCalendrier">
+                <a href="javascript:void(0)" id="ctl00_ColDroite_CalendrierSommaire_LienCalendrier">
+                    Calendrier
+                    <p class="libelleOuvrirFermer">
+                    Ouvrir</p></a>
+            </li>
+        </ul>
+    </div>
+    <div class="contenuCalendrier" id="ContenuCalendrier">
+        <div class="contenuCalendrierInterne" style="">
+            <div class="overlayCalendrier">
+                <p class="contenuOverlay">
+                    <img src="/Images/lightbox/loading.gif" alt="Chargement en cours" title="Chargement en cours">
+                </p>
+            </div>
+            <div class="blocAssembleeEnDirect">
+                <ul class="listeIconesHorizontale">
+                    <li id="IconeEnDirectCalendrier" class="icoEnDirectInactif"><span id="spnEnDirectCalendrier" class="couleurTexteNormal">
+                        En direct</span></li>
+                    <li><a class="anchorCalendrierDetaille" href="/fr/calendrier-detaille.html">
+                        Calendrier détaillé</a></li>
+                </ul>
+            </div>
+            <div class="blocNavigateurDates">
+                <div>
+                    <p id="ConteneurCalendrierPopup">
+                        <span class="calendrierPopup dp-applied"></span><a href="#" class="sanssouligne dp-choose-date cacherPourImpression"><img alt="Choisir une date" title="Choisir une date" src="/Images/btnCalendrier.gif">Choisir une date</a>
+                    </p>
+                    <h2 id="TitreDateDuJour">3 août 2024</h2>
+                </div>
+                <ul>
+                    <li class="versGauche"><a href="#" class="dateNavigateur fleche" id="dateNavGauche"><img alt="Semaine précédente" title="Semaine précédente" src="/Images/transparent.gif" width="15" height="25"></a></li>
+                        
+                    <li><a class="dateNavigateur" id="dateNavDi" title="28 juillet" href="#">
+                        <span class="overlayJour overlayJourSommaire"></span>
+                        <span class="libelleJournee">DIM</span><br>
+                        <span class="libelleDate">28</span></a></li>
+                        
+                    <li><a class="dateNavigateur" id="dateNavLu" title="29 juillet" href="#">
+                        <span class="overlayJour overlayJourSommaire"></span>
+                        <span class="libelleJournee">LUN</span><br>
+                        <span class="libelleDate">29</span></a></li>
+                        
+                    <li><a class="dateNavigateur" id="dateNavMa" title="30 juillet" href="#">
+                        <span class="overlayJour overlayJourSommaire"></span>
+                        <span class="libelleJournee">MAR</span><br>
+                        <span class="libelleDate">30</span></a></li>
+                        
+                    <li><a class="dateNavigateur" id="dateNavMe" title="31 juillet" href="#">
+                        <span class="overlayJour overlayJourSommaire"></span>
+                        <span class="libelleJournee">MER</span><br>
+                        <span class="libelleDate">31</span></a></li>
+                        
+                    <li><a class="dateNavigateur" id="dateNavJe" title="1<sup>er</sup> août" href="#">
+                        <span class="overlayJour overlayJourSommaire"></span>
+                        <span class="libelleJournee">JEU</span><br>
+                        <span class="libelleDate">1</span></a></li>
+                        
+                    <li><a class="dateNavigateur" id="dateNavVe" title="2 août" href="#">
+                        <span class="overlayJour overlayJourSommaire"></span>
+                        <span class="libelleJournee">VEN</span><br>
+                        <span class="libelleDate">2</span></a></li>
+                        
+                    <li><a class="dateNavigateur journeeActive" id="dateNavSa" title="3 août" href="#">
+                        <span class="overlayJour overlayJourSommaire"></span>
+                        <span class="libelleJournee">SAM</span><br>
+                        <span class="libelleDate">3</span></a></li>
+                        
+                    <li class="versDroite"><a href="#" class="dateNavigateur fleche" id="dateNavDroite">
+                        <img alt="Semaine suivante" title="Semaine suivante" src="/Images/transparent.gif" width="15" height="25"></a></li>
+                </ul>
+                <span class="aujourdhui"><a class="aujourdhuiLien" href="" style="display: none;">
+                    Aujourd'hui</a></span>
+            </div>
+            <hr>
+            <div class="blocEnCours" style="display: none;">
+                <div class="blocEnCoursTitre">
+                    <h3 id="HeureEnCours" class="heure">14 h 50</h3>
+                    <h3>
+                        En cours</h3>
+                </div>
+                <div class="boiteDefilante"></div>
+            </div>
+            <div class="blocActivitesDuJour">
+                <h3><label for="ctl00_ColDroite_CalendrierSommaire_selectFiltreCategorieActivite">Activités du jour</label></h3>
+                <div class="skinned-select">
+                    <div class="select-text">Toutes les activités</div><select name="ctl00$ColDroite$CalendrierSommaire$selectFiltreCategorieActivite" id="ctl00_ColDroite_CalendrierSommaire_selectFiltreCategorieActivite" class="selectFiltreCategorieActivite"><option value="*">Toutes les activités</option><option value="catD">Autres activités</option><option value="catC">Conférences et points de presse</option><option value="catA">Séances de l'Assemblée</option><option value="catB">Séances des commissions</option></select>
+                </div>
+                <div class="boiteDefilante"><div class="catD"><strong>15 h 30</strong><p><a href="/fr/lien/13031.html">Yoga extérieur</a> / Jardins de l’Assemblée nationale (en cas de pluie, l’activité aura lieu à l’Agora)</p></div></div>
+            </div>
+            <div class="blocExpositions" style="">
+                <h3>
+                    Exposition(s)</h3>
+                <div id="listeExpositions"><ul><li><a href="/fr/lien/13031.html">« Artistes d'ici », par l'artiste Helena Vallée-Dallaire</a> du 8 juillet 2024 au 24 août 2024 / Pavillon d'accueil</li><li><a href="/fr/lien/13031.html">De l’étiquette à la fourchette, l’art de recevoir au parlement</a> du 29 janvier 2024 au 13 décembre 2024 / Pavillon d'accueil</li></ul></div>
+            </div>
+            <div class="blocSurLesTours" id="BlocSurLesTours" style="display: none">
+                <h3>
+                    Drapeau(x) sur l'hôtel du Parlement</h3>
+                <div id="listeDrapeaux"></div>
+            </div>
+        </div>
+        <p id="calendrierNoJs" style="display: none;">
+            L'utilisation du calendrier requiert que Javascript soit activé dans votre navigateur.<br>
+            <a href="/fr/aide/aide-recherche.html#javascript">
+                Pour plus de renseignements</a>
+        </p>
+    </div>
+</div>
+
+
+        </div>
+        <div class="clear" id="ClearPiedPage"></div>
+        
+
+<div id="PiedDePage" class="PiedDePage">
+    <div id="bInfolettre" style="margin-bottom: 25px; display: block;"><a class="btnInfolettre" href="https://l.communications.assnat.qc.ca/T/WF/24042/op0ace/Optin/fr-CA/Form.ofsys" target="_blank">Abonnez-vous à notre infolettre!</a></div>
+    <ul>
+        <li class="Premier">
+            <a href="/fr/fils-rss.html" class="sanssouligne icoFilsRss">
+                <span class="styleHyperlien">Fils RSS</span>
+            </a>
+        </li>
+        
+        <li><a href="/fr/liens-interet.html">Liens d'intérêt</a></li>
+        <li><a href="/fr/aide/index.html">Aide</a></li>
+        <li><a href="/fr/plan-site.html">Plan du site</a></li>
+        
+        <li><a href="/fr/propos-site/accessibilite.html">Accessibilité</a></li>
+        <li><a href="/fr/abc-assemblee/acces-information/index.html">Accès à l'information</a></li>
+    </ul>
+    <br>
+    <ul>
+        
+        <li class="Premier"><a href="/fr/propos-site/index.html">À propos du site</a> </li>
+        <li><a href="/fr/propos-site/droits-propriete-intellectuelle.html">Conditions d'utilisation</a></li>
+        <li><a href="/fr/propos-site/politique-confidentialite.html">Politique de confidentialité</a></li>
+        <li><a href="https://m.assnat.qc.ca">Mobile</a></li>
+    
+        
+            <li><a href="/en/index.html">English</a></li>
+        
+
+    </ul>
+
+    <br>
+    <span class="NonVisible">
+        
+    </span>
+</div>
+
+
+<script type="text/javascript">
+
+    //Forcer l'affichage du popup Didomi dans la langue de la page affichée au lieu du langage du fureteur de l'utilisateur
+    var langage = $('html').attr('lang');
+    var boutonInfolettre = document.getElementById('bInfolettre');
+
+    $(document).ready(function(){
+        if (langage == 'fr') {
+            window.didomiConfig = {
+                languages: {
+                    enabled: ['fr'],
+                    default: 'fr'
+                }
+            };
+            boutonInfolettre.style.display = 'block';
+        } else {
+            window.didomiConfig = {
+                languages: {
+                    enabled: ['en'],
+                    default: 'en'
+                }
+            };
+            boutonInfolettre.style.display = 'none';
+        }
+    })
+    
+</script>
+
+    </div>    
+    </form>
+
+
+<div class="infoBulle" id="infoBulle" style="display:none"><div class="fermerBulle"><a href="javascript:void(0);" id="tme">[x] Fermer</a></div><p>&nbsp;</p></div><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Assemblée nationale du Québec",
+  "url": "https://assnat.qc.ca/",
+  "logo": "https://assnat.qc.ca/Images/logo_blanc_Assemblee_nationale_du_Quebec.png",
+  "sameAs": [
+    "https://www.facebook.com/AssnatQc",
+    "https://twitter.com/AssnatQc",
+    "https://www.instagram.com/assnatqc/",
+    "https://www.linkedin.com/company/assemblee-nationale-du-quebec"
+  ],
+  "contactPoint": [
+    {
+      "@type": "ContactPoint",
+      "telephone": "4181-643-7239",
+      "contactType": "customer service",
+      "email": "renseignements@assnat.qc.ca",
+      "areaServed": "CA",
+      "availableLanguage": "fr"
+    }
+  ]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "WebSite",
+  "name": "Assemblée nationale du Québec",
+  "url": "https://assnat.qc.ca/",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://assnat.qc.ca/{search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script><script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Assemblée nationale du Québec",
+            "item": "https://assnat.qc.ca/#breadcrumb"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Députés",
+            "item": "https://assnat.qc.ca/fr/deputes/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Travaux parlementaires",
+            "item": "https://assnat.qc.ca/fr/travaux-parlementaires/"
+        },
+         {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Vidéo en direct",
+            "item": "https://assnat.qc.ca/fr/video-audio/en-direct-webdiffusion.html"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Quoi faire",
+            "item": "https://assnat.qc.ca/fr/visiteurs/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Exprimez-votre opinion",
+            "item": "https://assnat.qc.ca/fr/exprimez-votre-opinion/"
+        }
+    ]
+}
+</script></body></html>

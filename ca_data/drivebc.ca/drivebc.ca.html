@@ -1,0 +1,27 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head runat="server">
+    <title>DriveBC</title>
+
+    <!-- Suggest Internet Explorer 'edge' compatibility -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+    <script>
+        // Turn on debugging to console if parameter exists..
+		if (!(window.location.hash.toLowerCase() == "#debug" ||
+            window.location.href.match(/[&?]debug\b/i))) {	// If 'debug' in url params, enable output.
+            // Disable all console output
+            window.console = { log: function () { }, error: function () { }, warn: function () { }, info: function () { } };
+        } else if ('console' in window) {	// Deal with IE and its older versions.
+            if (!('warn' in console)) { console.warn = function (a) { console.log("WARN: " + a); }; }
+            if (!('error' in console)) { console.error = function (a) { console.log("ERROR: " + a); }; }
+            if (!('info' in console)) { console.info = function (a) { console.log("INFO: " + a); }; }
+            if (!('dir' in console)) { console.dir = function (a) { console.log(a); }; }  // Object output
+        }
+    </script>
+
+    <link rel="stylesheet" type="text/css" href="ext/resources/css/ext-all.css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="js/map-plugin/dropmenu.css">
+
+	<script type="text/javascript" src="//maps.googleapis.com/maps/api/js?v=quarterly&amp;client=gme-ministryoftransportation2&amp;channel=MoTI-DBCMain"></script></head></html>

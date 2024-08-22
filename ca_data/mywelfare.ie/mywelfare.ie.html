@@ -1,0 +1,1400 @@
+<html lang="en" class="en"><head>
+    
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0f2666">
+<meta name="apple-mobile-web-app-capable" content="yes"><link rel="icon" type="image/png" href="/icons/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/icons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/icons/favicon-96x96.png" sizes="96x96">
+<link rel="apple-touch-icon" href="/icons/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="57x57" href="/icons/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/icons/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/icons/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/icons/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/icons/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/icons/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/icons/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/icons/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-icon-180x180.png">
+<meta name="msapplication-TileColor" content="#0f2666">
+<meta name="msapplication-TileImage" content="~/icons/ms-icon-144x144.png">
+<link rel="manifest" href="/manifest.json">
+<meta property="og:title" content="MyWelfare Homepage ">
+<meta property="og:description" content="MyWelfare is the online home of welfare services. It allows you easy online access to a range of services">
+<meta property="og:url" content="services.mywelfare.ie/">
+<meta property="og:image" content="/media/eohdmwa4/mywelfare_social.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="MyWelfare Homepage ">
+<meta name="twitter:description" content="MyWelfare is the online home of welfare services. It allows you easy online access to a range of services">
+<meta name="twitter:url" content="services.mywelfare.ie/">
+<meta name="twitter:image" content="/media/eohdmwa4/mywelfare_social.png">
+<meta name="description" content="MyWelfare is the online home of welfare services. It allows you easy online access to a range of services">
+
+    <title>MyWelfare Homepage </title>
+    <link rel="stylesheet" href="https://creation-kit.mywelfare.ie/framework.css">
+    <link rel="stylesheet" href="/css/accordion.css?v=ZxLJZ-Vjr8uWasr6nl4u2YH-RiTy8cxedHSEfC1SYNA">
+    <link rel="stylesheet" href="/css/site.css?v=2V9XzeINLXq7-1oyBi9br6hGP8DrfCJ0v-IRUu7anBE">
+    
+<script defer="" type="text/javascript">
+    !function (e, t) { "object" == typeof exports && "undefined" != typeof module ? module.exports = t() : "function" == typeof define && define.amd ? define(t) : (e = e || self, function () { var r = e.Cookies, n = e.Cookies = t(); n.noConflict = function () { return e.Cookies = r, n } }()) }(this, function () { "use strict"; function e(e) { for (var t = 1; t < arguments.length; t++) { var r = arguments[t]; for (var n in r) e[n] = r[n] } return e } var t = { read: function (e) { return e.replace(/%3B/g, ";") }, write: function (e) { return e.replace(/;/g, "%3B") } }; return function r(n, i) { function o(r, o, u) { if ("undefined" != typeof document) { "number" == typeof (u = e({}, i, u)).expires && (u.expires = new Date(Date.now() + 864e5 * u.expires)), u.expires && (u.expires = u.expires.toUTCString()), r = t.write(r).replace(/=/g, "%3D"), o = n.write(String(o), r); var c = ""; for (var f in u) u[f] && (c += "; " + f, !0 !== u[f] && (c += "=" + u[f].split(";")[0])); return document.cookie = r + "=" + o + c } } return Object.create({ set: o, get: function (e) { if ("undefined" != typeof document && (!arguments.length || e)) { for (var r = document.cookie ? document.cookie.split("; ") : [], i = {}, o = 0; o < r.length; o++) { var u = r[o].split("="), c = u.slice(1).join("="), f = t.read(u[0]).replace(/%3D/g, "="); if (i[f] = n.read(c, f), e === f) break } return e ? i[e] : i } }, remove: function (t, r) { o(t, "", e({}, r, { expires: -1 })) }, withAttributes: function (t) { return r(this.converter, e({}, this.attributes, t)) }, withConverter: function (t) { return r(e({}, this.converter, t), this.attributes) } }, { attributes: { value: Object.freeze(i) }, converter: { value: Object.freeze(n) } }) }(t, { path: "/" }) });
+    Cookies.set('_culture', 'en-IE', { expires: 30, path: '/', domain: '.mywelfare.ie', sameSite: 'none', Secure: 'true' });
+        Cookies.set('mywelfareurl', '//www.mywelfare.ie/', { expires: 30, path: '/', domain: '.mywelfare.ie', sameSite: 'none', Secure: 'true' });
+</script>
+
+
+
+    
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Ubuntu:400,700&amp;display=swap" rel="preload" as="style">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Ubuntu:400,700&amp;display=swap" rel="stylesheet">
+<script type="text/javascript">!function(T,l,y){var S=T.location,k="script",D="instrumentationKey",C="ingestionendpoint",I="disableExceptionTracking",E="ai.device.",b="toLowerCase",w="crossOrigin",N="POST",e="appInsightsSDK",t=y.name||"appInsights";(y.name||T[e])&&(T[e]=t);var n=T[t]||function(d){var g=!1,f=!1,m={initialize:!0,queue:[],sv:"5",version:2,config:d};function v(e,t){var n={},a="Browser";return n[E+"id"]=a[b](),n[E+"type"]=a,n["ai.operation.name"]=S&&S.pathname||"_unknown_",n["ai.internal.sdkVersion"]="javascript:snippet_"+(m.sv||m.version),{time:function(){var e=new Date;function t(e){var t=""+e;return 1===t.length&&(t="0"+t),t}return e.getUTCFullYear()+"-"+t(1+e.getUTCMonth())+"-"+t(e.getUTCDate())+"T"+t(e.getUTCHours())+":"+t(e.getUTCMinutes())+":"+t(e.getUTCSeconds())+"."+((e.getUTCMilliseconds()/1e3).toFixed(3)+"").slice(2,5)+"Z"}(),iKey:e,name:"Microsoft.ApplicationInsights."+e.replace(/-/g,"")+"."+t,sampleRate:100,tags:n,data:{baseData:{ver:2}}}}var h=d.url||y.src;if(h){function a(e){var t,n,a,i,r,o,s,c,u,p,l;g=!0,m.queue=[],f||(f=!0,t=h,s=function(){var e={},t=d.connectionString;if(t)for(var n=t.split(";"),a=0;a<n.length;a++){var i=n[a].split("=");2===i.length&&(e[i[0][b]()]=i[1])}if(!e[C]){var r=e.endpointsuffix,o=r?e.location:null;e[C]="https://"+(o?o+".":"")+"dc."+(r||"services.visualstudio.com")}return e}(),c=s[D]||d[D]||"",u=s[C],p=u?u+"/v2/track":d.endpointUrl,(l=[]).push((n="SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details)",a=t,i=p,(o=(r=v(c,"Exception")).data).baseType="ExceptionData",o.baseData.exceptions=[{typeName:"SDKLoadFailed",message:n.replace(/\./g,"-"),hasFullStack:!1,stack:n+"\nSnippet failed to load ["+a+"] -- Telemetry is disabled\nHelp Link: https://go.microsoft.com/fwlink/?linkid=2128109\nHost: "+(S&&S.pathname||"_unknown_")+"\nEndpoint: "+i,parsedStack:[]}],r)),l.push(function(e,t,n,a){var i=v(c,"Message"),r=i.data;r.baseType="MessageData";var o=r.baseData;return o.message='AI (Internal): 99 message:"'+("SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details) ("+n+")").replace(/\"/g,"")+'"',o.properties={endpoint:a},i}(0,0,t,p)),function(e,t){if(JSON){var n=T.fetch;if(n&&!y.useXhr)n(t,{method:N,body:JSON.stringify(e),mode:"cors"});else if(XMLHttpRequest){var a=new XMLHttpRequest;a.open(N,t),a.setRequestHeader("Content-type","application/json"),a.send(JSON.stringify(e))}}}(l,p))}function i(e,t){f||setTimeout(function(){!t&&m.core||a()},500)}var e=function(){var n=l.createElement(k);n.src=h;var e=y[w];return!e&&""!==e||"undefined"==n[w]||(n[w]=e),n.onload=i,n.onerror=a,n.onreadystatechange=function(e,t){"loaded"!==n.readyState&&"complete"!==n.readyState||i(0,t)},n}();y.ld<0?l.getElementsByTagName("head")[0].appendChild(e):setTimeout(function(){l.getElementsByTagName(k)[0].parentNode.appendChild(e)},y.ld||0)}try{m.cookie=l.cookie}catch(p){}function t(e){for(;e.length;)!function(t){m[t]=function(){var e=arguments;g||m.queue.push(function(){m[t].apply(m,e)})}}(e.pop())}var n="track",r="TrackPage",o="TrackEvent";t([n+"Event",n+"PageView",n+"Exception",n+"Trace",n+"DependencyData",n+"Metric",n+"PageViewPerformance","start"+r,"stop"+r,"start"+o,"stop"+o,"addTelemetryInitializer","setAuthenticatedUserContext","clearAuthenticatedUserContext","flush"]),m.SeverityLevel={Verbose:0,Information:1,Warning:2,Error:3,Critical:4};var s=(d.extensionConfig||{}).ApplicationInsightsAnalytics||{};if(!0!==d[I]&&!0!==s[I]){var c="onerror";t(["_"+c]);var u=T[c];T[c]=function(e,t,n,a,i){var r=u&&u(e,t,n,a,i);return!0!==r&&m["_"+c]({message:e,url:t,lineNumber:n,columnNumber:a,error:i}),r},d.autoExceptionInstrumented=!0}return m}(y.cfg);function a(){y.onInit&&y.onInit(n)}(T[t]=n).queue&&0===n.queue.length?(n.queue.push(a),n.trackPageView({})):a()}(window,document,{
+src: "https://js.monitor.azure.com/scripts/b/ai.2.min.js", // The SDK URL Source
+crossOrigin: "anonymous", 
+cfg: { // Application Insights Configuration
+    connectionString: 'InstrumentationKey=5313dd11-bfa5-4290-9e62-a35f0c21e64b;IngestionEndpoint=https://northeurope-0.in.applicationinsights.azure.com/'
+}});</script><script src="https://js.monitor.azure.com/scripts/b/ai.2.min.js" crossorigin="anonymous"></script></head>
+<body>
+
+
+
+        <script src="/scripts/cookies.js?v=K19EuSFxSJ-kfPcZWa3efHIOi-MSMrMVfGjMM96Dwu8" defer=""></script>
+        
+
+    <div class="a-backdrop --show" id="backdrop-cookie-banner"></div>
+    <div class="m-banner --bottom" id="cookie-banner" data-backdrop="backdrop-cookie-banner" data-domain=".mywelfare.ie">
+        <div class="t-singleColumn --page-container">
+            <div class="o-flex">
+                <div class="o-flex__row">
+                    <div class="o-flex__cell m-banner__content">
+                        <h2 class="b-h2">Cookies on MyWelfare</h2>
+                        <p>By clicking “Accept All Cookies” you agree to the storing of cookies on your device. Cookies help us to understand how you use this site, improve your experience and measure performance. You can choose your cookie preferences by clicking on "Manage Cookies". Find out more about how we use cookies in our <a rel="noopener" href="https://www.gov.ie/en/organisation-information/534503-privacy-statement/" target="_blank">Privacy policy.</a></p>
+                    </div>
+                    <div class="o-flex__cell --sidebar --centerHorizontally">
+                        <button class="a-btn m-banner__btn --secondary" id="accept-all-btn" data-track="CookiesAccepted">Accept all Cookies</button>
+                        <a style="" href="/other-info-pages/cookies-on-mywelfare/" class="a-btn m-banner__btn --secondary" data-track="ManageCookies">Manage Cookies</a>
+                                <a class="a-link" href="/ga">As Gaeilge</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    
+<header class="o-header" role="banner">
+    <nav class="o-header__navbar" role="navigation">
+        <a href="/en/" class="a-myWelfareLogo" alt="MyWelfare">
+            
+<svg class="MyWelfareLogo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 35.7" fill="#fff" width="180" height="36" aria-label="MyWelfare">
+    <title>MyWelfare</title>
+    <path data-name="Path 7122" class="cls-1" d="M7.6 3.1l1.5 3 1.8 3.9 1.9 4.3 1.8 4.1 1.8-4.1 1.9-4.3 1.8-3.9 1.5-3h5.3l.7 5.7.6 6.6.4 6.9.4 6.5h-5.6l-.3-8.2-.6-8.9-1.5 3.5-1.6 3.8-1.5 3.6-1.3 3h-4l-1.3-3L9.8 19l-1.6-3.8-1.5-3.5-.6 8.9-.3 8.2H0l.4-6.5.4-6.9c.2-2.2.3-4.4.6-6.5l.7-5.7h5.5z"></path>
+    <path data-name="Path 7123" class="cls-1" d="M51.1 9.3a165 165 0 0 1-3.5 10.6 102 102 0 0 1-4 9.6 12.1 12.1 0 0 1-1.6 2.8 8 8 0 0 1-1.7 1.9 5.3 5.3 0 0 1-2.1 1.1 11 11 0 0 1-2.7.4 16.6 16.6 0 0 1-2.4-.2 7.8 7.8 0 0 1-1.8-.5l1-4.4 1.5.4a6.2 6.2 0 0 0 1.4.1 3.2 3.2 0 0 0 2.3-.8 7.6 7.6 0 0 0 1.4-2.2c-1.3-2.5-2.5-5.3-3.8-8.3a89.5 89.5 0 0 1-3.6-10.4h5.9a21.2 21.2 0 0 0 .9 3.1l1.1 3.4 1.1 3.4 1.1 3 1-3 1-3.4 1-3.4.8-3.1h5.7z"></path>
+    <path data-name="Path 7124" class="cls-1" d="M69.7 6.3q1.8 6 3.6 10.8l3.5 8.9c.9-2.9 1.7-6.4 2.6-10.3.9-4 1.7-8.1 2.5-12.6h2.5L83 10.6l-1.4 6.6-1.6 6q-.8 2.9-1.8 5.7h-2.7l-1.7-4.2-1.7-4.4-1.7-4.7-1.7-5.2a303 303 0 0 0-1.7 5.2l-1.7 4.7-1.7 4.4-1.8 4.2h-2.7a54 54 0 0 1-1.8-5.7l-1.6-6-1.4-6.6L53 3.2h2.6l1.2 6.4 1.2 6.1 1.3 5.6 1.4 4.8 3.4-8.9c1.2-3.2 2.4-6.8 3.6-10.8h2z"></path>
+    <path data-name="Path 7125" class="cls-1" d="M87.3 19.3a11.6 11.6 0 0 1 .7-4.4 9.6 9.6 0 0 1 1.9-3.1 8.3 8.3 0 0 1 2.7-1.9 8.1 8.1 0 0 1 3.1-.6 7.2 7.2 0 0 1 5.6 2.3c1.4 1.5 2.1 3.9 2.1 7.1v.6a1.3 1.3 0 0 1-.1.6H89.8a8.9 8.9 0 0 0 1.7 5.4c1.1 1.3 2.8 1.9 5.2 1.9a8.6 8.6 0 0 0 3.1-.4l1.7-.6.4 2.1a10.3 10.3 0 0 1-2 .7 11.8 11.8 0 0 1-3.4.4 11 11 0 0 1-4.3-.7 7 7 0 0 1-2.9-2.1 9 9 0 0 1-1.7-3.2 27.3 27.3 0 0 1-.3-4.1zm13.6-1.6a7.3 7.3 0 0 0-1.4-4.7 4.7 4.7 0 0 0-3.8-1.7 5.6 5.6 0 0 0-2.3.5 4.9 4.9 0 0 0-1.8 1.4 8.2 8.2 0 0 0-1.2 2 6.9 6.9 0 0 0-.5 2.4h11z"></path>
+    <path data-name="Path 7126" class="cls-1" d="M113.6 29.2a6.6 6.6 0 0 1-2.1-.3 3.6 3.6 0 0 1-2.4-2.4 7.5 7.5 0 0 1-.3-2.3V.5l2.4-.4v24.1a4.6 4.6 0 0 0 .2 1.4 2.6 2.6 0 0 0 .5.9 2 2 0 0 0 .9.5l1.3.3z"></path>
+    <path data-name="Path 7127" class="cls-1" d="M125.3 0a15.7 15.7 0 0 1 2.5.2 11 11 0 0 1 1.3.4l-.5 2.1a8.3 8.3 0 0 0-1.2-.4 10.3 10.3 0 0 0-2-.2 4.6 4.6 0 0 0-3.7 1.3 6.8 6.8 0 0 0-1.1 4.2v2h7.7v2h-7.7v17.3h-2.4V7.6a8.1 8.1 0 0 1 1.7-5.6 7 7 0 0 1 5.4-2z"></path>
+    <path data-name="Path 7128" class="cls-1" d="M138.1 9.2a9.8 9.8 0 0 1 3.2.5 5.7 5.7 0 0 1 2.1 1.5 7.8 7.8 0 0 1 1.2 2.2 12.6 12.6 0 0 1 .4 2.8v12.1a2.7 2.7 0 0 1-1.1.2l-1.6.3a12.5 12.5 0 0 1-2.1.2 17.7 17.7 0 0 1-2.3.1 12 12 0 0 1-2.8-.3 5 5 0 0 1-2.2-1.1 5.8 5.8 0 0 1-1.5-1.9 6.1 6.1 0 0 1-.5-2.8 6 6 0 0 1 .6-2.7 4.9 4.9 0 0 1 1.7-1.8 8.9 8.9 0 0 1 2.6-1.1 16.6 16.6 0 0 1 3.2-.3 4.5 4.5 0 0 1 1.1.1l1.1.1a6.4 6.4 0 0 1 .9.2l.5.2v-1.2a13.4 13.4 0 0 0-.1-2 3.6 3.6 0 0 0-.7-1.7 3.3 3.3 0 0 0-1.4-1.2 5.4 5.4 0 0 0-2.4-.5 12.7 12.7 0 0 0-3.2.3l-1.5.5-.3-2.1a9.8 9.8 0 0 1 2-.6h3.1zm.2 17.9a19.3 19.3 0 0 0 2.5-.1l1.8-.2V20a6.8 6.8 0 0 0-1.3-.4 14.7 14.7 0 0 0-2.5-.2 12.8 12.8 0 0 0-1.9.1 6.4 6.4 0 0 0-1.8.6 3.7 3.7 0 0 0-1.3 1.2 4 4 0 0 0-.5 2 3.4 3.4 0 0 0 .4 1.8 3 3 0 0 0 1 1.2 6 6 0 0 0 1.6.7 11.5 11.5 0 0 0 2 .1z"></path>
+    <path data-name="Path 7129" class="cls-1" d="M157.7 9.3a15 15 0 0 1 2.2.2 4 4 0 0 1 1.5.4l-.5 2.1a5 5 0 0 0-1.2-.3 14.4 14.4 0 0 0-2.4-.2 15.7 15.7 0 0 0-2.5.2 4 4 0 0 0-1.2.4v16.8h-2.4V10.6a10 10 0 0 1 2.6-.8 10.9 10.9 0 0 1 3.9-.5z"></path>
+    <path data-name="Path 7130" class="cls-1" d="M163.9 19.3a11.6 11.6 0 0 1 .7-4.4 9.6 9.6 0 0 1 1.9-3.1 8.3 8.3 0 0 1 2.7-1.9 8.1 8.1 0 0 1 3.1-.6 7.2 7.2 0 0 1 5.6 2.3c1.4 1.5 2.1 3.9 2.1 7.1v.6a1.3 1.3 0 0 1-.1.6h-13.5a8.9 8.9 0 0 0 1.7 5.4c1.1 1.3 2.8 1.9 5.2 1.9a8.6 8.6 0 0 0 3.1-.4l1.7-.6.4 2.1a10.3 10.3 0 0 1-2 .7 11.8 11.8 0 0 1-3.4.4 11 11 0 0 1-4.3-.7 7 7 0 0 1-2.9-2.1 9 9 0 0 1-1.7-3.2 27.3 27.3 0 0 1-.3-4.1zm13.6-1.6a7.3 7.3 0 0 0-1.4-4.7 4.7 4.7 0 0 0-3.8-1.7 5.6 5.6 0 0 0-2.3.5 4.9 4.9 0 0 0-1.8 1.4 8.2 8.2 0 0 0-1.2 2 6.9 6.9 0 0 0-.5 2.4h11z"></path>
+</svg>
+        </a>
+
+        <div class="o-header__interface u-media--notmobile">
+            <a class="a-link --white --font-medium" tabindex="0" href="/ga/" alt="As Gaeilge">As Gaeilge</a>
+
+            <button aria-expanded="false" id="headerServicesButton" class="a-dropdown --font-medium --header u-bg--DarkBlue a-dropdown__megaMenu" for="serviceMenu">
+                Services
+                <svg width="96" height="96" viewBox="0 0 96 96" class="b-icon --svg-baseline">
+                    <polygon points="0.375,2.656 1.625,1.093 8.5,6.594 15.375,1.093 16.625,2.656 8.5,9.155" transform="matrix(5.2215379,0,0,5.2215379,3.6169278,21.24484)"></polygon>
+                </svg>
+            </button>
+
+            <nav aria-hidden="false" class="o-header__megaMenu --hide" id="serviceMenu" toggled-by="serviceMenu">
+                <div class="o-header__megaMenu__content">
+                    <div class="o-header__megaMenu__servicesContainer" role="menubar">
+                            <button class="o-header__serviceLink o-tab__MenuItems" id="megaMenu1223" aria-expanded="false" aria-owns="megaMenu1223-Details" data-target="megaMenu1223-Details" role="menuitem">
+                                    <span class="b-icon --svg-baseline" style="fill:#96b2ed">
+                                        <svg width="1024" height="1024" viewBox="0 0 100 100">
+<path d="M36.5,64.9h33.9v11c0,3.5-3.1,6.4-6.8,6.4H23.8l-9.6,8.5c-0.7,0.6-1.5,0.8-2.2,0.5c-0.7-0.3-1.1-1.1-1.1-2     l0-7h-4c-3.7,0-6.8-2.9-6.8-6.4V39.3c0-3.6,3-6.4,6.8-6.4h15.9v18.8C22.8,58.9,28.9,64.9,36.5,64.9z"></path>
+<path d="M99.9,15v36.6c0,3.5-3.1,6.4-6.8,6.4h-4l0,7c0,0.9-0.4,1.7-1.1,2c-0.2,0.1-0.5,0.2-0.7,0.2      c-0.5,0-1.1-0.2-1.5-0.6L76.2,58H36.5c-3.8,0-6.8-2.9-6.8-6.4V15c0-3.6,3.1-6.4,6.8-6.4h56.6C96.8,8.6,99.9,11.4,99.9,15z"></path>
+</svg>
+
+			
+                                    </span>
+                                <span alt="Pathways to Work">
+                                    Pathways to Work
+                                </span>
+                            </button>
+                            <button class="o-header__serviceLink o-tab__MenuItems" id="megaMenu1228" aria-expanded="false" aria-owns="megaMenu1228-Details" data-target="megaMenu1228-Details" role="menuitem">
+                                    <span class="b-icon --svg-baseline" style="fill:#93d932">
+                                        <svg width="1024" height="1024" viewBox="0 0 100 95">
+<path d="M35.1,36.9c0,7.5-6.1,13.7-13.7,13.7c-7.5,0-13.7-6.1-13.7-13.7s6.2-13.6,13.7-13.6     C28.9,23.3,35.1,29.4,35.1,36.9z"></path>
+		<path d="M91.4,38.1c0,7.3-6,13.3-13.3,13.3c-7.3,0-13.3-6-13.3-13.3s6-13.3,13.3-13.3C85.5,24.8,91.4,30.7,91.4,38.1     z"></path>
+<path d="M60.8,46.6c0,5.8-4.8,10.6-10.6,10.6c-5.8,0-10.6-4.7-10.6-10.6S44.4,36,50.2,36     C56.1,36,60.8,40.8,60.8,46.6z"></path>
+	
+	<path d="M36.2,56.4c0,0.8-0.4,1.5-1,1.9c-2.9,2.5-4.8,6.4-4.8,10.7v5.4c0,1.2-1,2.2-2.2,2.2h-26c-1.2,0-2.2-1-2.2-2.2   v-8.3c0-6.7,4.7-12.3,10.4-12.3h21.7c0.8,0,1.6,0.1,2.3,0.3C35.4,54.5,36.2,55.4,36.2,56.4z"></path>
+	<path d="M100,66.4v8.1c0,1.2-1,2.2-2.2,2.2H72.6c-1.2,0-2.2-1-2.2-2.2v-5.3c0-4.3-1.8-8-4.7-10.4c-0.6-0.4-1-1.1-1-1.9   c0-1,0.7-1.9,1.7-2.1c0.7-0.2,1.5-0.3,2.3-0.3h21.2C95.5,54.5,100,59.9,100,66.4z"></path>
+	<path d="M65.9,69.1v5.4c0,1.2-1,2.2-2.2,2.2H37.3c-1.2,0-2.2-1-2.2-2.2v-5.4c0-4.9,3.4-8.9,7.5-8.9h15.8   C62.5,60.1,65.9,64.1,65.9,69.1z"></path>
+
+</svg>
+                                    </span>
+                                <span alt="Parents, Children, Family">
+                                    Parents, Children, Family
+                                </span>
+                            </button>
+                            <button class="o-header__serviceLink o-tab__MenuItems" id="megaMenu1233" aria-expanded="false" aria-owns="megaMenu1233-Details" data-target="megaMenu1233-Details" role="menuitem">
+                                    <span class="b-icon --svg-baseline" style="fill:#0fc9a8">
+                                        <svg width="1024" height="1024" viewBox="0 0 100 100">
+	<path d="M97.9,49.8v36.5c0,3.2-2.6,5.9-5.8,5.9H8c-3.2,0-5.8-2.6-5.8-5.9V49.8h15.3V56c0,3.9,3.2,7,7.1,7s7-3.2,7-7   v-6.3h36.7V56c0,3.9,3.2,7,7,7c3.9,0,7.1-3.2,7.1-7v-6.3H97.9z"></path>
+	<g>
+		<g>
+			<path d="M70.6,13.5v3h-5v-3c0-0.4-0.3-0.8-0.8-0.8H35.1c-0.4,0-0.8,0.3-0.8,0.8v3h-5v-3c0-3.1,2.6-5.7,5.7-5.7h29.7     C68,7.8,70.6,10.4,70.6,13.5z"></path>
+		</g>
+	</g>
+	<path d="M100,27.3V39c0,3.2-2.6,5.8-5.8,5.8H82.4v-2.4c0-3.9-3.2-7.1-7.1-7.1c-3.9,0-7,3.2-7,7.1v2.4H31.6v-2.4   c0-3.9-3.2-7.1-7-7.1s-7.1,3.2-7.1,7.1v2.4H5.8C2.6,44.8,0,42.2,0,39V27.3c0-3.2,2.6-5.8,5.8-5.8h88.3C97.4,21.5,100,24.1,100,27.3   z"></path>
+	<g>
+		<path d="M77.5,42.4V56c0,1.2-1,2.2-2.2,2.2c-1.2,0-2.2-1-2.2-2.2V42.4c0-1.2,1-2.2,2.2-2.2    C76.5,40.2,77.5,41.2,77.5,42.4z"></path>
+	</g>
+	<g>
+		<path d="M26.7,42.4V56c0,1.2-1,2.2-2.2,2.2c-1.2,0-2.2-1-2.2-2.2V42.4c0-1.2,1-2.2,2.2-2.2    C25.7,40.2,26.7,41.2,26.7,42.4z"></path>
+</g></svg>
+                                    </span>
+                                <span alt="Out of Work Payments">
+                                    Out of Work Payments
+                                </span>
+                            </button>
+                            <button class="o-header__serviceLink o-tab__MenuItems" id="megaMenu1248" aria-expanded="false" aria-owns="megaMenu1248-Details" data-target="megaMenu1248-Details" role="menuitem">
+                                    <span class="b-icon --svg-baseline" style="fill:#dd54a9">
+                                        <svg width="1024" height="1024" viewBox="0 0 1024 1024">
+<path d="M715.595 85.233h-2.711c-76.29 0.776-146.208 27.431-201.546 71.588l0.662-0.51c-47.111-46.032-109.947-76.15-179.713-81.557l-0.993-0.062c-0.423-0.002-0.922-0.003-1.422-0.003-83.39 0-158.694 34.618-212.326 90.266l-0.087 0.091c-54.623 56.003-88.316 132.641-88.316 217.148s33.693 161.145 88.379 217.213l-0.063-0.065 341.534 329.186c13.983 12.999 32.789 20.977 53.459 20.977s39.476-7.978 53.508-21.022l-0.049 0.045 339.426-326.174v-1.506c54.072-56.248 87.373-132.809 87.373-217.148s-33.301-160.9-87.472-217.252l0.099 0.104c-47.386-50.123-114.339-81.32-188.578-81.32-0.409 0-0.817 0.001-1.226 0.003h0.063z"></path>
+</svg>
+                                    </span>
+                                <span alt="Health, Disability, Illness">
+                                    Health, Disability, Illness
+                                </span>
+                            </button>
+                            <button class="o-header__serviceLink o-tab__MenuItems" id="megaMenu1243" aria-expanded="false" aria-owns="megaMenu1243-Details" data-target="megaMenu1243-Details" role="menuitem">
+                                    <span class="b-icon --svg-baseline" style="fill:#4bbfe4">
+                                        <svg width="1024" height="1024" viewBox="0 0 100 100">
+<path d="M27.3,39.4c0-2.7,2.2-4.9,4.8-4.9c2.7,0,4.8,2.2,4.9,4.9c0,2.7-2.2,4.9-4.9,4.9    C29.5,44.2,27.3,42.1,27.3,39.4z"></path>
+		<path d="M92,17.8H8c-4.4,0-8,3.6-8,8v48.5c0,4.4,3.6,8,8,8h84c4.4,0,8-3.6,8-8V25.7C100,21.3,96.4,17.8,92,17.8z     M32.1,27.9c6.4,0,11.5,5.1,11.5,11.5c0,6.3-5.1,11.5-11.5,11.5c-6.3,0-11.5-5.2-11.5-11.5C20.6,33,25.8,27.9,32.1,27.9z M52.8,69    c0,1.7-1.4,3.1-3.1,3.1c-1.7,0-3.1-1.4-3.1-3.1v-6c0-2.2-1.8-4-4-4H22.2c-2.2,0-4,1.8-4,4v6c0,1.7-1.4,3.1-3.1,3.1    c-1.7,0-3.1-1.4-3.1-3.1v-6c0-5.7,4.6-10.3,10.3-10.3h20.3c5.7,0,10.2,4.6,10.2,10.3V69z M75.2,66.1H63.7c-1.7,0-3.1-1.4-3.1-3.1    c0-1.7,1.4-3.1,3.1-3.1h11.5c1.7,0,3.1,1.4,3.1,3.1C78.3,64.7,76.9,66.1,75.2,66.1z M84.9,53.6H63.7c-1.7,0-3.1-1.4-3.1-3.1    c0-1.7,1.4-3.1,3.1-3.1h21.1c1.7,0,3.2,1.4,3.2,3.1C88,52.2,86.6,53.6,84.9,53.6z M84.9,41.2H63.7c-1.7,0-3.1-1.4-3.1-3.1    c0-1.7,1.4-3.1,3.1-3.1h21.1c1.7,0,3.2,1.4,3.2,3.1C88,39.8,86.6,41.2,84.9,41.2z"></path>
+		<g>
+			<path d="M37,39.4c0,2.7-2.2,4.9-4.9,4.9c-2.7,0-4.8-2.2-4.8-4.9c0-2.7,2.2-4.9,4.8-4.9C34.8,34.5,37,36.7,37,39.4z"></path>
+		</g>
+	
+
+</svg>
+                                    </span>
+                                <span alt="Accessing Public Services">
+                                    Accessing Public Services
+                                </span>
+                            </button>
+                            <button class="o-header__serviceLink o-tab__MenuItems" id="megaMenu1323" aria-expanded="false" aria-owns="megaMenu1323-Details" data-target="megaMenu1323-Details" role="menuitem">
+                                    <span class="b-icon --svg-baseline" style="fill:#fcbe24">
+                                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
+<g>
+	<g>
+		<path class="st01" d="M78,67.9l-1.2,0l0,0l-1.2,0l0,0l-3.4,0l-0.3,0l-12.3,0c0,0,0,0,0,0c0.1-0.2,0.2-0.4,0.3-0.7
+			c0.4-1,0.5-1.9,0.4-2.7l0.1-0.1l16.2,0.2c0,0,0.9,0,1.5,0.9C78.7,66.4,78,67.9,78,67.9z"></path>
+	</g>
+	<path class="st01" d="M84.3,75.2c-0.2,0.6-0.7,1-1.3,1.2c0,0-0.1,0-0.1,0c-5.7,1.4-20.8,5.2-27.6,7c0,0,0,0,0,0
+		c-0.2,0-0.4,0.1-0.5,0.1c0,0-0.1,0-0.1,0c-0.5,0.1-1.1,0.2-1.6,0.2c-0.7,0-1.4-0.1-2.1-0.3c0,0,0,0,0,0l-1.5-0.5L21.8,72.7
+		l-6.4,1.1V48.5c3.8-1.9,8.9-3.6,13.9-2.8c4.5,0.7,8.4,3.5,11.3,8.2l0.2,0.3l14.4,5.4c0.5,0.3,4,2.6,2.5,6.6
+		c-0.2,0.7-0.5,1.2-0.9,1.6c-1.7,2.3-4.1,2-4.7,1.9l-3.9-1.4l-8-2.9l-0.8,2.2l6.9,2.5l5.1,1.9l0.1,0c1.5,0.3,4.2,0.1,6.3-1.9l1.7,0
+		l19.3,0.1l0.2,0c0,0,2.7-0.3,3.9,1.3c0.4,0.6,0.8,1.2,1,1.6c0.1,0.2,0.2,0.5,0.3,0.7C84.5,74.4,84.5,74.8,84.3,75.2z"></path>
+	<g>
+		<path class="st01" d="M12.5,47.2v28.4c0,1.6-1.3,2.8-2.8,2.8H2.8c-1.6,0-2.8-1.3-2.8-2.8l0-28.4c0-1.5,1.3-2.8,2.8-2.8h6.8
+			C11.2,44.4,12.5,45.7,12.5,47.2z"></path>
+	</g>
+	<path class="st01" d="M50.9,83.4c-0.1,0-0.2,0-0.3-0.1c0,0-0.1,0-0.1,0l-1-0.4c-0.1,0-0.1,0-0.2-0.1L50.9,83.4z"></path>
+	<g>
+		<path class="st01" d="M21.7,32.1l1.2,0l0,0l1.2,0l0,0l3.4,0l0.3,0l12.3,0c0,0,0,0,0,0c-0.1,0.2-0.2,0.4-0.3,0.7
+			c-0.4,1-0.5,1.9-0.4,2.7l-0.1,0.1l-16.2-0.2c0,0-0.9,0-1.5-0.9C21,33.6,21.7,32.1,21.7,32.1z"></path>
+	</g>
+	<path class="st01" d="M15.4,24.8c0.2-0.6,0.7-1,1.3-1.2c0,0,0.1,0,0.1,0c5.7-1.4,20.8-5.2,27.6-7c0,0,0,0,0,0c0.2,0,0.4-0.1,0.5-0.1
+		c0,0,0.1,0,0.1,0c0.5-0.1,1.1-0.2,1.6-0.2c0.7,0,1.4,0.1,2.1,0.3c0,0,0,0,0,0l1.5,0.5l27.7,10.1l6.4-1.1v25.3
+		c-3.8,1.9-8.9,3.6-13.9,2.8c-4.5-0.7-8.4-3.5-11.3-8.2l-0.2-0.3l-14.4-5.4c-0.5-0.3-4-2.6-2.5-6.6c0.2-0.7,0.5-1.2,0.9-1.6
+		c1.7-2.3,4.1-2,4.7-1.9l3.9,1.4l8,2.9l0.8-2.2l-6.9-2.5l-5.1-1.9l-0.1,0c-1.5-0.3-4.2-0.1-6.3,1.9l-1.7,0l-19.3-0.1l-0.2,0
+		c0,0-2.7,0.3-3.9-1.3c-0.4-0.6-0.8-1.2-1-1.6c-0.1-0.2-0.2-0.5-0.3-0.7C15.3,25.6,15.3,25.2,15.4,24.8z"></path>
+	<g>
+		<path class="st01" d="M87.3,52.8V24.3c0-1.6,1.3-2.8,2.8-2.8h6.8c1.6,0,2.8,1.3,2.8,2.8v28.4c0,1.5-1.3,2.8-2.8,2.8h-6.8
+			C88.6,55.6,87.3,54.3,87.3,52.8z"></path>
+	</g>
+	<path class="st01" d="M48.8,16.6c0.1,0,0.2,0,0.3,0.1c0,0,0.1,0,0.1,0l1,0.4c0.1,0,0.1,0,0.2,0.1L48.8,16.6z"></path>
+</g>
+</svg>
+                                    </span>
+                                <span alt="Community Welfare Services">
+                                    Community Welfare Services
+                                </span>
+                            </button>
+                            <button class="o-header__serviceLink o-tab__MenuItems" id="megaMenu1245" aria-expanded="false" aria-owns="megaMenu1245-Details" data-target="megaMenu1245-Details" role="menuitem">
+                                    <span class="b-icon --svg-baseline" style="fill:#7d2fc1">
+                                        <svg width="1024" height="1024" viewBox="0 0 100 100">
+<path d="M95.3,48.4h-1.8c-2.6,0-4.9-1.5-6.1-3.7h0c-3.3-6.3-8.6-11.6-15.2-15.4C69,39.2,59.8,46.4,48.8,46.4   c-10.8,0-20.1-7.1-23.3-16.9C16.4,34.8,9.8,43.1,7.8,52.7h-1c-1.7,0-3.1,0.7-4.3,1.7c-1.3,1.2-2.2,2.9-2.2,4.8   c0,1.9,0.9,3.6,2.2,4.8c1.1,1,2.6,1.6,4.3,1.6h1c1.6,7.7,6.1,14.5,12.5,19.6l0,0c3.9,3.3,6.9,7.6,8.6,12.3c0,0,0,0.1,0,0.1v0   c0.2,0.3,0.4,0.5,0.8,0.5h11c0.5,0,0.9-0.4,0.9-0.9v-2.7c0-4.1,3.3-7.4,7.4-7.4s7.4,3.3,7.4,7.4v2.7c0,0.1,0,0.1,0,0.2   c0,0,0,0.1,0,0.1v0c0.1,0.3,0.4,0.5,0.8,0.5h11c0.5,0,0.9-0.4,0.9-0.9v0.2c1.8-4.7,4.7-9,8.6-12.3l0.1,0c4-3.3,7.4-7.2,9.6-11.6h0   c1.1-2.2,3.5-3.6,6.1-3.6h1.8c2.4,0,4.3-2,4.3-4.4V52.7C99.7,50.3,97.8,48.4,95.3,48.4z M75.8,56c-2.3,0-4.2-1.9-4.2-4.2   s1.9-4.2,4.2-4.2c2.3,0,4.2,1.9,4.2,4.2S78.1,56,75.8,56z"></path>
+<path d="M48.8,1.8c-11.1,0-20,9-20,20c0,1.9,0.3,3.8,0.8,5.6c2.4,8.3,10.1,14.5,19.2,14.5c9.2,0,16.9-6.2,19.3-14.6    c0.5-1.7,0.8-3.6,0.8-5.4C68.9,10.8,59.9,1.8,48.8,1.8z M58.1,29.4c-0.9,0.9-2,1.8-3.3,2.5c-1.3,0.7-2.9,1.2-4.9,1.2h0    c-4.6,0-8.7-2.8-10.4-7.1h-1.8c-0.8,0-1.5-0.7-1.5-1.5c0-0.4,0.2-0.8,0.5-1.1c0.3-0.3,0.7-0.4,1.1-0.4l1.1,0c0-0.3-0.1-0.7-0.1-1    v-0.4h-1.1c-0.9,0-1.5-0.7-1.5-1.5c0-0.8,0.7-1.5,1.5-1.5h1.6c0.7-2.2,2.1-4.2,4-5.6c1.9-1.4,4.2-2.2,6.7-2.2c4,0,6.4,1.8,8.2,3.7    c0.6,0.6,0.6,1.6,0,2.2c-0.6,0.6-1.6,0.6-2.2,0c-1.7-1.7-3.3-2.8-6-2.8c-3.2,0-6,1.8-7.4,4.7h8c0.9,0,1.6,0.7,1.6,1.5    c0,0.8-0.7,1.5-1.6,1.5h-8.8v0.4c0,0.3,0,0.7,0.1,1h8.7c0.9,0,1.6,0.7,1.6,1.5c0,0.9-0.7,1.5-1.6,1.5h-7.7c1.4,2.5,4.1,4,7,4h0.1    c2.7,0,4.2-1,6-2.8c0.6-0.6,1.6-0.6,2.2,0C58.7,27.8,58.7,28.8,58.1,29.4z"></path>
+	
+</svg>
+                                    </span>
+                                <span alt="Pensions and Older People">
+                                    Pensions and Older People
+                                </span>
+                            </button>
+                            <button class="o-header__serviceLink o-tab__MenuItems" id="megaMenu1247" aria-expanded="false" aria-owns="megaMenu1247-Details" data-target="megaMenu1247-Details" role="menuitem">
+                                    <span class="b-icon --svg-baseline" style="fill:#ed4848">
+                                        <svg width="1024" height="1024" viewBox="0 0 100 100">
+			<path d="M35.4,68.5V68h0.1c0,0.1,0,0.2-0.1,0.3c0,0,0,0,0,0C35.4,68.4,35.4,68.4,35.4,68.5z"></path>
+			<path d="M35.7,70.7c0.2-0.5,0.6-0.9,1.1-1.2c-0.1,0.1-0.2,0.2-0.3,0.4c0,0,0,0,0,0C36.2,70.1,35.9,70.4,35.7,70.7z"></path>
+			<path d="M35.4,71.7c0-0.3,0.1-0.6,0.3-0.9C35.6,71,35.5,71.4,35.4,71.7z"></path>
+			<path d="M21.9,77.7C21.9,77.6,21.9,77.6,21.9,77.7c-0.1-0.1-0.1-0.2-0.1-0.2C21.8,77.5,21.8,77.5,21.9,77.7     C21.9,77.6,21.9,77.6,21.9,77.7z"></path>
+			<path d="M21.7,77.3C21.6,77.2,21.6,77.2,21.7,77.3C21.6,77.2,21.6,77.2,21.7,77.3c-0.1-0.2-0.2-0.4-0.2-0.5     c0,0,0,0,0,0c0,0,0,0,0-0.1c0,0,0-0.1,0-0.2v0c0,0,0-0.1,0-0.1c0,0.1,0,0.1,0,0.2c0,0.1,0,0.1,0,0.2c0,0,0,0,0,0.1     C21.5,76.9,21.6,77,21.7,77.3C21.6,77.2,21.6,77.2,21.7,77.3C21.7,77.2,21.7,77.2,21.7,77.3z"></path>
+			<path d="M21.4,79.6C21.3,79.6,21.3,79.6,21.4,79.6c0-0.2,0-0.3,0-0.5v-3.3c0,0.1,0,0.1,0,0.2v-0.2c0,0.1,0,0.3,0,0.4     v0.1c0,0,0,0,0-0.1c0-0.1,0-0.1,0-0.2v3.1C21.3,79.3,21.3,79.4,21.4,79.6L21.4,79.6z"></path>
+			<path d="M21.7,80.6C21.6,80.6,21.6,80.6,21.7,80.6C21.6,80.6,21.6,80.6,21.7,80.6c-0.1-0.2-0.2-0.4-0.2-0.5     c0,0,0,0,0,0c0,0,0,0,0-0.1c0,0,0-0.1,0-0.2v0c0,0,0-0.1,0-0.1c0,0.1,0,0.1,0,0.2c0,0.1,0,0.1,0,0.2c0,0,0,0,0,0.1     C21.5,80.2,21.6,80.4,21.7,80.6C21.6,80.6,21.6,80.6,21.7,80.6C21.7,80.6,21.7,80.6,21.7,80.6z"></path>
+			<path d="M21.9,81C21.9,81,21.9,81,21.9,81c-0.1-0.1-0.1-0.2-0.1-0.2C21.8,80.8,21.8,80.9,21.9,81     C21.9,81,21.9,81,21.9,81z"></path>
+			<path d="M78.1,87.5v6.4c0,3.3-4,6-9,6H10.3c-5.3,0-9.6-4-9.6-8.9V16.1c0-4.9,4.3-8.9,9.6-8.9h5.5v73.9     c0,3.5,4.2,6.4,9.3,6.4H78.1z"></path>
+		
+	
+	<path d="M35.4,71.7c0-0.3,0.1-0.6,0.3-0.9C35.6,71,35.5,71.4,35.4,71.7z"></path>
+	<path d="M90.2,84H38c1.4-1.4,2.2-3,2.2-4.8V72c0-0.2,0.3-0.4,0.6-0.4h57.7c0.4,0,0.6,0.2,0.6,0.4v5.7   c0,1.6-0.9,3.2-2.7,4.4c-0.4,0.3-0.9,0.6-1.4,0.8c-0.3,0.1-0.6,0.3-0.9,0.4c0,0-0.1,0-0.1,0c-0.3,0.1-0.6,0.2-0.9,0.3   c-0.2,0-0.4,0.1-0.6,0.1c-0.2,0-0.4,0.1-0.6,0.1c-0.3,0-0.6,0.1-0.9,0.1C90.8,84,90.5,84,90.2,84z"></path>
+	<g>
+		<g>
+			<path d="M73,84v0.2h0L73,84L73,84z M73,64.9L73,64.9L73,64.9L73,64.9L73,64.9z"></path>
+		</g>
+		<g>
+			<path d="M22.1,1.6c-0.2,0.2-0.4,0.4-0.5,0.6C21.7,2,21.9,1.8,22.1,1.6z"></path>
+			<path d="M21.5,2.4C21.5,2.3,21.5,2.3,21.5,2.4L21.5,2.4c0-0.1,0-0.1,0.1-0.1C21.6,2.2,21.5,2.3,21.5,2.4     C21.5,2.3,21.5,2.3,21.5,2.4C21.5,2.3,21.5,2.3,21.5,2.4z"></path>
+		
+			<path d="M21.4,76.3C21.3,76.3,21.3,76.2,21.4,76.3c0-0.1,0-0.2,0-0.2v-0.2C21.3,76,21.3,76.1,21.4,76.3L21.4,76.3z"></path>
+			<path d="M21.4,76.6L21.4,76.6c0,0,0-0.1,0-0.2v0c0,0,0-0.1,0-0.1c0,0.1,0,0.1,0,0.2C21.4,76.5,21.4,76.6,21.4,76.6z"></path>
+			<path d="M21.7,77.3C21.6,77.2,21.6,77.2,21.7,77.3C21.6,77.2,21.6,77.2,21.7,77.3c-0.1-0.2-0.2-0.4-0.2-0.5     c0,0,0,0,0,0v-0.1c0,0,0,0,0,0.1C21.5,76.9,21.6,77,21.7,77.3C21.6,77.2,21.6,77.2,21.7,77.3C21.7,77.2,21.7,77.2,21.7,77.3z"></path>
+			<path d="M21.9,77.7C21.9,77.6,21.9,77.6,21.9,77.7c-0.1-0.1-0.1-0.2-0.1-0.2C21.8,77.5,21.8,77.5,21.9,77.7     C21.9,77.6,21.9,77.6,21.9,77.7z"></path>
+			<path d="M21.9,77.6L21.9,77.6C21.9,77.6,21.9,77.6,21.9,77.6C21.9,77.6,21.9,77.6,21.9,77.6z M21.7,77.2     C21.7,77.2,21.7,77.2,21.7,77.2C21.7,77.2,21.7,77.2,21.7,77.2C21.7,77.2,21.7,77.2,21.7,77.2z M21.5,76.7L21.5,76.7     c0,0.2,0.1,0.4,0.2,0.5h0C21.6,77,21.5,76.9,21.5,76.7z M21.5,2.3C21.5,2.3,21.5,2.3,21.5,2.3C21.5,2.3,21.5,2.3,21.5,2.3     L21.5,2.3z M21.4,2.7C21.4,2.7,21.4,2.7,21.4,2.7c0,0.1,0,0.2,0,0.2C21.4,2.9,21.4,2.8,21.4,2.7C21.4,2.7,21.4,2.7,21.4,2.7     C21.4,2.7,21.4,2.7,21.4,2.7z M21.3,68v0.3h0L21.3,68L21.3,68z M21.3,75.8v0.2c0,0.1,0,0.1,0,0.2c0,0,0,0,0,0.1v-0.1     C21.4,76.1,21.3,76,21.3,75.8z M21.4,76.6c0,0,0-0.1,0-0.2c0,0,0,0,0,0v0C21.4,76.5,21.4,76.6,21.4,76.6     C21.4,76.6,21.4,76.7,21.4,76.6L21.4,76.6C21.5,76.7,21.5,76.6,21.4,76.6z"></path>
+			<path d="M21.3,75.8v0.2c0,0.1,0,0.1,0,0.2c0,0,0,0,0,0.1v-0.1C21.4,76.1,21.3,76,21.3,75.8z M21.7,77.2     C21.7,77.2,21.7,77.2,21.7,77.2C21.7,77.2,21.7,77.2,21.7,77.2C21.7,77.2,21.7,77.2,21.7,77.2z M21.6,77.2     c-0.1-0.2-0.1-0.3-0.2-0.5c0,0,0,0,0-0.1c0,0,0-0.1,0-0.2c0,0,0,0,0,0v0c0,0,0,0.1,0,0.2c0,0,0,0,0,0.1c0,0,0,0,0,0     C21.5,76.9,21.6,77,21.6,77.2C21.6,77.2,21.6,77.2,21.6,77.2C21.7,77.2,21.7,77.2,21.6,77.2z M21.9,77.6c0-0.1-0.1-0.1-0.1-0.2     C21.8,77.5,21.8,77.5,21.9,77.6C21.9,77.6,21.9,77.6,21.9,77.6C21.9,77.6,21.9,77.6,21.9,77.6z"></path>
+			<path d="M77.5,0.1c-0.2,0-0.5,0-0.7,0h-52c-0.1,0-0.2,0-0.3,0c-2.1,0.2-3.8,1.5-3.8,3V68h0.6v0.3h-0.6v10.9     c0,2.8,3.3,5,7.4,5s7.3-2.3,7.3-5v-7.3c0-0.1,0-0.1,0-0.2c0-0.3,0.1-0.6,0.3-0.9c0,0,0,0,0,0c0.2-0.5,0.6-0.9,1.1-1.2     c0.5-0.5,1.2-0.9,2-1.2c0.5-0.2,1.1-0.3,1.8-0.3h40.6V3.1C81.2,1.6,79.6,0.4,77.5,0.1z M21.5,2.3C21.5,2.3,21.5,2.2,21.5,2.3     C21.6,2.2,21.6,2.3,21.5,2.3C21.5,2.3,21.5,2.3,21.5,2.3C21.5,2.3,21.5,2.3,21.5,2.3z M21.4,2.8C21.4,2.7,21.4,2.7,21.4,2.8     C21.4,2.7,21.4,2.7,21.4,2.8C21.4,2.7,21.4,2.7,21.4,2.8c0,0.1,0,0.1,0,0.2C21.4,2.9,21.4,2.8,21.4,2.8z M21.4,76.3     C21.4,76.3,21.4,76.3,21.4,76.3c0-0.1,0-0.2,0-0.2v-0.2C21.3,76,21.4,76.1,21.4,76.3L21.4,76.3z M21.5,76.7     C21.5,76.7,21.5,76.7,21.5,76.7c0-0.1,0-0.1,0-0.1c0,0,0-0.1,0-0.2v0c0,0,0,0,0,0c0,0,0,0.1,0,0.2C21.5,76.6,21.5,76.7,21.5,76.7     c0,0.1,0.1,0.3,0.2,0.4c0,0,0,0,0,0c0,0,0,0,0,0C21.6,77,21.5,76.9,21.5,76.7z M21.7,77.3C21.7,77.2,21.7,77.2,21.7,77.3     C21.7,77.2,21.7,77.2,21.7,77.3C21.7,77.2,21.7,77.2,21.7,77.3z M21.9,77.6c0-0.1-0.1-0.1-0.1-0.2C21.8,77.5,21.8,77.5,21.9,77.6     C21.9,77.6,21.9,77.6,21.9,77.6C21.9,77.6,21.9,77.6,21.9,77.6z M51.9,56.3H34c-2.3,0-4.2-1.7-4.2-3.9c0-2.1,1.9-3.9,4.2-3.9     h17.9c2.3,0,4.2,1.7,4.2,3.9C56,54.6,54.2,56.3,51.9,56.3z M73,65L73,65L73,65L73,65L73,65z M69.8,38.8H34     c-2.3,0-4.2-1.7-4.2-3.9c0-2.1,1.9-3.9,4.2-3.9h35.7c2.3,0,4.2,1.7,4.2,3.9C73.9,37.1,72.1,38.8,69.8,38.8z M69.8,21.3H34     c-2.3,0-4.2-1.7-4.2-3.9c0-2.1,1.9-3.9,4.2-3.9h35.7c2.3,0,4.2,1.7,4.2,3.9C73.9,19.5,72.1,21.3,69.8,21.3z"></path>
+			<path d="M25.1,0.1c-0.2,0-0.5,0-0.7,0C24.7,0.1,24.9,0.1,25.1,0.1l51.6,0c0.2,0,0.5,0,0.7,0c-0.2,0-0.5,0-0.7,0H25.1     z"></path>
+			<path d="M22.1,1.6c-0.2,0.2-0.4,0.4-0.5,0.6C21.7,2,21.9,1.8,22.1,1.6z"></path>
+			<path d="M21.5,2.4C21.5,2.3,21.5,2.3,21.5,2.4L21.5,2.4c0-0.1,0-0.1,0.1-0.1C21.6,2.2,21.5,2.3,21.5,2.4     C21.5,2.3,21.5,2.3,21.5,2.4C21.5,2.3,21.5,2.3,21.5,2.4z"></path>
+			<path d="M21.3,2.9c0-0.1,0-0.1,0-0.2c0,0,0,0,0-0.1c0,0,0,0,0,0c0,0,0,0.1,0,0.1C21.4,2.8,21.3,2.9,21.3,2.9z"></path>
+			<path d="M21.9,77.7C21.9,77.6,21.9,77.6,21.9,77.7c-0.1-0.1-0.1-0.2-0.1-0.2C21.8,77.5,21.8,77.5,21.9,77.7     C21.9,77.6,21.9,77.6,21.9,77.7z"></path>
+</g></g></svg>
+
+		
+                                    </span>
+                                <span alt="Statements, Refunds and Repayments">
+                                    Statements, Refunds and Repayments
+                                </span>
+                            </button>
+                            <button class="o-header__serviceLink o-tab__MenuItems" id="megaMenu1366" aria-expanded="false" aria-owns="megaMenu1366-Details" data-target="megaMenu1366-Details" role="menuitem">
+                                    <span class="b-icon --svg-baseline" style="fill:#bd61ed">
+                                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 36 36" style="enable-background:new 0 0 36 36;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;}
+</style>
+<path d="M29.5,0h-23C5.3,0,4.3,1,4.3,2.2v31.6c0,1.2,1,2.2,2.2,2.2h23c1.2,0,2.2-1,2.2-2.2V2.2C31.7,1,30.7,0,29.5,0z
+	 M13,30.5c0,1.4-1.1,2.5-2.5,2.5s-2.5-1.1-2.5-2.5v-0.1c0-1.4,1.1-2.5,2.5-2.5c0.7,0,1.3,0.3,1.8,0.7c0.5,0.5,0.7,1.1,0.7,1.8V30.5z
+	 M13,23.7c0,1.4-1.1,2.5-2.5,2.5s-2.5-1.1-2.5-2.5v-0.1c0-1.4,1.1-2.5,2.5-2.5c0.7,0,1.3,0.3,1.8,0.7c0.5,0.5,0.7,1.1,0.7,1.8V23.7z
+	 M13,16.9c0,1.4-1.1,2.5-2.5,2.5s-2.5-1.1-2.5-2.5v-0.1c0-1.4,1.1-2.5,2.5-2.5c0.7,0,1.3,0.3,1.8,0.7c0.5,0.5,0.7,1.1,0.7,1.8V16.9z
+	 M20.7,30.5c0,1.4-1.1,2.5-2.5,2.5c-1.4,0-2.5-1.1-2.5-2.5v-0.1c0-1.4,1.1-2.5,2.5-2.5c0.7,0,1.3,0.3,1.8,0.7
+	c0.5,0.5,0.7,1.1,0.7,1.8V30.5z M20.7,23.7c0,1.4-1.1,2.5-2.5,2.5c-1.4,0-2.5-1.1-2.5-2.5v-0.1c0-1.4,1.1-2.5,2.5-2.5
+	c0.7,0,1.3,0.3,1.8,0.7c0.5,0.5,0.7,1.1,0.7,1.8V23.7z M20.7,16.9c0,1.4-1.1,2.5-2.5,2.5c-1.4,0-2.5-1.1-2.5-2.5v-0.1
+	c0-1.4,1.1-2.5,2.5-2.5c0.7,0,1.3,0.3,1.8,0.7c0.5,0.5,0.7,1.1,0.7,1.8V16.9z M28.3,30.5c0,1.4-1.1,2.5-2.5,2.5
+	c-1.4,0-2.5-1.1-2.5-2.5v-0.1c0-1.4,1.1-2.5,2.5-2.5c0.7,0,1.3,0.3,1.8,0.7c0.5,0.5,0.7,1.1,0.7,1.8V30.5z M28.3,23.7
+	c0,1.4-1.1,2.5-2.5,2.5c-1.4,0-2.5-1.1-2.5-2.5v-0.1c0-1.4,1.1-2.5,2.5-2.5c0.7,0,1.3,0.3,1.8,0.7c0.5,0.5,0.7,1.1,0.7,1.8V23.7z
+	 M28.3,16.9c0,1.4-1.1,2.5-2.5,2.5c-1.4,0-2.5-1.1-2.5-2.5v-0.1c0-1.4,1.1-2.5,2.5-2.5c0.7,0,1.3,0.3,1.8,0.7
+	c0.5,0.5,0.7,1.1,0.7,1.8V16.9z M28.3,9.1c0,0.8-0.7,1.5-1.5,1.5H9.4c-0.8,0-1.5-0.7-1.5-1.5V5.6c0-0.8,0.7-1.5,1.5-1.5h17.4
+	c0.8,0,1.5,0.7,1.5,1.5V9.1z"></path>
+</svg>
+
+                                    </span>
+                                <span alt="Calculators and Estimators">
+                                    Calculators and Estimators
+                                </span>
+                            </button>
+                            <button class="o-header__serviceLink o-tab__MenuItems" id="megaMenu1250" aria-expanded="false" aria-owns="megaMenu1250-Details" data-target="megaMenu1250-Details" role="menuitem">
+                                    <span class="b-icon --svg-baseline" style="fill:#0057b8">
+                                        <svg xmlns:xlink="http://www.w3.org/1999/xlink" class="p-Iconography__iconpanel__icon__svg" style="fill:#ffd700;" version="1.1" xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+                                    <path d="m 902.64604,736.2348 c -37.99219,11.17418 -76.62289,20.43277 -115.57286,27.7758 a 133.45153,133.45153 0 0 1 -95.77861,55.87086 211.35146,211.35146 0 0 1 -37.67292,1.91557 919.7939,919.7939 0 0 1 -114.61506,-9.57786 h -9.57786 a 20.752032,20.752032 0 0 1 -18.19794,-22.34834 21.071294,21.071294 0 0 1 22.34834,-19.47499 v 0 c 3.19262,0 6.38524,0 9.57786,0 a 688.96746,688.96746 0 0 0 140.4753,7.34303 c 60.97904,-9.57786 79.17698,-45.97373 75.98436,-77.26141 a 49.804876,49.804876 0 0 0 -50.4434,-49.16635 1047.1795,1047.1795 0 0 1 -141.43308,-7.66229 780.59566,780.59566 0 0 0 -152.92651,-3.19262 504.75327,504.75327 0 0 0 -102.80237,31.9262 c -9.57787,4.15041 -19.15573,7.66229 -27.7758,11.81269 v 270.09568 a 1213.1957,1213.1957 0 0 0 243.27766,69.27983 c 121.00031,9.2586 359.16978,-127.70478 427.49186,-172.72073 A 63.852406,63.852406 0 0 0 902.64604,736.2348 Z"></path>
+                                    <path d="M 213.35932,636.94431 H 72.884025 a 28.733582,28.733582 0 0 0 -27.775793,28.09506 v 308.72638 a 28.733582,28.733582 0 0 0 27.775793,27.77585 H 213.35932 a 28.733582,28.733582 0 0 0 28.09506,-27.77585 V 665.03937 a 28.733582,28.733582 0 0 0 -28.09506,-28.09506 z"></path>
+                                    <path d="M 536.13323,525.52187 776.21827,285.43682 A 164.41994,164.41994 0 1 0 549.22297,47.586613 l -5.10819,5.10819 -26.81801,26.81801 -27.7758,-26.81801 a 164.73921,164.73921 0 0 0 -234.97685,2.23484 167.61256,167.61256 0 0 0 5.10819,234.338327 l 237.85021,237.85021 a 27.456534,27.456534 0 0 0 38.63071,0 z"></path>
+                                </svg>
+                                    </span>
+                                <span alt="Ukraine Supports">
+                                    Ukraine Supports
+                                </span>
+                            </button>
+                            <button class="o-header__serviceLink o-tab__MenuItems" id="megaMenu1391" aria-expanded="false" aria-owns="megaMenu1391-Details" data-target="megaMenu1391-Details" role="menuitem">
+                                    <span class="b-icon --svg-baseline" style="fill:#00a0a7">
+                                        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 36 36">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        fill-rule: evenodd;
+        stroke-width: 0px;
+      }
+    </style>
+  </defs>
+  <path class="cls-1" d="M35.6,28.9l-5.4-5.4-.2-.2v-.2c1.1-1.4,1.6-3.1,1.6-4.8,0-4-2.7-7.4-6.5-8.4,0,0,0,0,0,0-.7-.2-1.4-.3-2.1-.3-4.8,0-8.7,3.9-8.7,8.7,0,3.2,1.8,6.1,4.6,7.6,1.3.6,2.7,1,4.1,1s1.4,0,2.1-.3c0,0,0,0,0,0,.9-.3,1.8-.6,2.6-1.2h.2c0-.1.2,0,.2,0l5.4,5.4c.3.3.6.4,1,.4s.7-.2,1-.4c.6-.6.6-1.4,0-2M28.8,20.8c-.7,1.6-2,2.9-3.6,3.5,0,0,0,0-.1,0-.7.3-1.4.4-2.2.4h0c-1.7,0-3.3-.6-4.5-1.8-1.2-1.2-1.9-2.8-1.9-4.5,0-2.6,1.5-4.9,3.9-5.9.8-.3,1.6-.5,2.5-.5s1.5.1,2.2.4c0,0,0,0,.1,0,.8.3,1.5.8,2.2,1.4,1.8,1.8,2.4,4.5,1.4,6.9"></path>
+  <path class="cls-1" d="M22.8,7.8c.7,0,1.4,0,2.2.2v-2.7c0-1.3-1-2.3-2.3-2.3H2.3C1,3,0,4,0,5.3v25.4C0,32,1,33,2.3,33h20.3c1.3,0,2.3-1,2.3-2.3v-2.1c-.7.2-1.5.2-2.2.2-1.7,0-3.4-.4-4.9-1.2-3.4-1.8-5.6-5.4-5.6-9.3,0-5.8,4.7-10.6,10.6-10.6h0ZM3.6,19.8c.3-.3.6-.4,1-.4h4.3c.8,0,1.5.7,1.5,1.5s-.2.8-.4,1c-.3.3-.6.4-1,.4h-4.3c-.8,0-1.5-.7-1.5-1.5s.2-.8.4-1h0ZM3.2,15.2c0-.4.2-.8.4-1,.3-.3.6-.4,1-.4h4.3c.8,0,1.5.7,1.5,1.5s-.2.8-.4,1c-.3.3-.6.4-1,.4h-4.3c-.8,0-1.5-.7-1.5-1.5h0ZM13.3,26.5c0,.4-.2.8-.4,1-.3.3-.6.4-1,.4h-7.1c-.8,0-1.5-.7-1.5-1.5s.2-.8.4-1,.6-.4,1-.4h7.1c.8,0,1.5.7,1.5,1.5h0ZM12.7,10.5c-.3.3-.6.4-1,.4h-7.1c-.8,0-1.5-.7-1.5-1.5s.2-.8.4-1c.3-.3.6-.4,1-.4h7.1c.8,0,1.5.7,1.5,1.5s-.2.8-.4,1h0Z"></path>
+</svg>
+                                    </span>
+                                <span alt="Appeals">
+                                    Appeals
+                                </span>
+                            </button>
+                    </div>
+                    <div class="o-header__megaMenu__details" id="serviceDetails">
+                            <div id="megaMenu1223-Details" class="o-header__serviceDetail --hide" aria-hidden="true">
+                                <h2 class="b-h3"><a href="/en/topics/pathways-to-work/" alt="Pathways to Work">Pathways to Work</a></h2>
+                                <div class="b-p"><p>Here you will find services that will help you find work, upskill, retrain or return to education</p></div>
+                                <ul class="b-list --unstyled">
+                                        <li class="b-p">
+                                            <a href="/en/topics/pathways-to-work/jobs-ireland/" alt="JobsIreland.ie">JobsIreland.ie</a>
+                                        </li>
+                                        <li class="b-p">
+                                            <a href="/en/topics/pathways-to-work/pathways-to-work/" alt="Pathways to work">Pathways to work</a>
+                                        </li>
+                                </ul>
+                            </div>
+                            <div id="megaMenu1228-Details" class="o-header__serviceDetail --hide" aria-hidden="true">
+                                <h2 class="b-h3"><a href="/en/topics/parents-children-family/" alt="Parents, Children, Family">Parents, Children, Family</a></h2>
+                                <div class="b-p"><p>Apply for family payments such as Maternity Benefit, Child Benefit and more</p></div>
+                                <ul class="b-list --unstyled">
+                                        <li class="b-p">
+                                            <a href="/en/topics/parents-children-family/back-to-school-clothing-footwear-allowance/" alt="Back to School Clothing and Footwear Allowance">Back to School Clothing and Footwear Allowance</a>
+                                        </li>
+                                        <li class="b-p">
+                                            <a href="/en/topics/parents-children-family/maternity-benefit/" alt="Maternity Benefit">Maternity Benefit</a>
+                                        </li>
+                                        <li class="b-p">
+                                            <a href="/en/topics/parents-children-family/paternity-benefit/" alt="Paternity Benefit">Paternity Benefit</a>
+                                        </li>
+                                        <li class="b-p">
+                                            <a href="/en/topics/parents-children-family/parents-benefit/" alt="Parent's Benefit">Parent's Benefit</a>
+                                        </li>
+                                        <li class="b-p">
+                                            <a href="/en/topics/parents-children-family/child-benefit/" alt="Child Benefit">Child Benefit</a>
+                                        </li>
+                                        <li class="b-p">
+                                            <a href="/en/topics/parents-children-family/working-family-payment/" alt="Working Family Payment">Working Family Payment</a>
+                                        </li>
+                                        <li class="b-p">
+                                            <a href="/en/topics/parents-children-family/change-my-payment-method/" alt="Change my payment method">Change my payment method</a>
+                                        </li>
+                                        <li class="b-p">
+                                            <a href="/en/topics/parents-children-family/benefit-of-work-estimator-for-jobseekers-and-one-parent-families/" alt="Benefit of work estimator ">Benefit of work estimator </a>
+                                        </li>
+                                </ul>
+                            </div>
+                            <div id="megaMenu1233-Details" class="o-header__serviceDetail --hide" aria-hidden="true">
+                                <h2 class="b-h3"><a href="/en/topics/out-of-work-payments/" alt="Out of Work Payments">Out of Work Payments</a></h2>
+                                <div class="b-p"><p>Apply for Jobseeker's Payments, make your declaration for your casual (part-time) Jobseeker's claim or calculate how income affects your payment</p></div>
+                                <ul class="b-list --unstyled">
+                                        <li class="b-p">
+                                            <a href="/en/topics/out-of-work-payments/apply-for-jobseekers-payment/" alt="Jobseeker's Payment">Jobseeker's Payment</a>
+                                        </li>
+                                        <li class="b-p">
+                                            <a href="/en/topics/out-of-work-payments/part-time-jobseekers-declaration/" alt="Part-time Jobseeker's Declaration">Part-time Jobseeker's Declaration</a>
+                                        </li>
+                                        <li class="b-p">
+                                            <a href="/en/topics/out-of-work-payments/benefit-of-work-estimator/" alt="Benefit of Work Estimator ">Benefit of Work Estimator </a>
+                                        </li>
+                                        <li class="b-p">
+                                            <a href="/en/topics/out-of-work-payments/benefit-payment-for-65-year-olds/" alt="Benefit Payment for 65 year olds">Benefit Payment for 65 year olds</a>
+                                        </li>
+                                        <li class="b-p">
+                                            <a href="/en/topics/out-of-work-payments/redundancy-calculator/" alt="Redundancy Calculator">Redundancy Calculator</a>
+                                        </li>
+                                </ul>
+                            </div>
+                            <div id="megaMenu1248-Details" class="o-header__serviceDetail --hide" aria-hidden="true">
+                                <h2 class="b-h3"><a href="/en/topics/health-disability-illness/" alt="Health, Disability, Illness">Health, Disability, Illness</a></h2>
+                                <div class="b-p"><p>Apply for payments such as Illness Benefit, check your eligibility for Treatment Benefits and more</p></div>
+                                <ul class="b-list --unstyled">
+                                        <li class="b-p">
+                                            <a href="/en/topics/health-disability-illness/illness-benefit/" alt="Illness Benefit">Illness Benefit</a>
+                                        </li>
+                                        <li class="b-p">
+                                            <a href="/en/topics/health-disability-illness/household-benefits/" alt="Household Benefits">Household Benefits</a>
+                                        </li>
+                                        <li class="b-p">
+                                            <a href="/en/topics/health-disability-illness/benefit-of-work-estimator/" alt="Benefit of Work Estimator">Benefit of Work Estimator</a>
+                                        </li>
+                                        <li class="b-p">
+                                            <a href="/en/topics/health-disability-illness/eligibility-checker/" alt="Treatment benefits eligibility ">Treatment benefits eligibility </a>
+                                        </li>
+                                        <li class="b-p">
+                                            <a href="/en/topics/health-disability-illness/change-my-payment-method/" alt="Change my payment method">Change my payment method</a>
+                                        </li>
+                                        <li class="b-p">
+                                            <a href="/en/topics/health-disability-illness/fuel-allowance/" alt="Fuel Allowance">Fuel Allowance</a>
+                                        </li>
+                                </ul>
+                            </div>
+                            <div id="megaMenu1243-Details" class="o-header__serviceDetail --hide" aria-hidden="true">
+                                <h2 class="b-h3"><a href="/en/topics/identity-services/" alt="Accessing Public Services">Accessing Public Services</a></h2>
+                                <div class="b-p"><p>Apply for a Personal Public Service (PPS) Number or renew your Public Services Card</p></div>
+                                <ul class="b-list --unstyled">
+                                        <li class="b-p">
+                                            <a href="/en/topics/identity-services/personal-public-service-pps-number/" alt="Personal Public Service (PPS) Number">Personal Public Service (PPS) Number</a>
+                                        </li>
+                                        <li class="b-p">
+                                            <a href="/en/topics/identity-services/public-services-card-renewal/" alt="Renew your Public Services Card">Renew your Public Services Card</a>
+                                        </li>
+                                        <li class="b-p">
+                                            <a href="/en/topics/identity-services/public-services-card/" alt="Public Services Card">Public Services Card</a>
+                                        </li>
+                                </ul>
+                            </div>
+                            <div id="megaMenu1323-Details" class="o-header__serviceDetail --hide" aria-hidden="true">
+                                <h2 class="b-h3"><a href="/en/topics/community-welfare-services/" alt="Community Welfare Services">Community Welfare Services</a></h2>
+                                <div class="b-p"><p>Additional payments for people in exceptional circumstances where certain expenses cannot be met</p></div>
+                                <ul class="b-list --unstyled">
+                                        <li class="b-p">
+                                            <a href="/en/topics/community-welfare-services/additional-needs-payment/" alt="Additional Needs Payment">Additional Needs Payment</a>
+                                        </li>
+                                        <li class="b-p">
+                                            <a href="/en/topics/community-welfare-services/fuel-allowance/" alt="Fuel Allowance">Fuel Allowance</a>
+                                        </li>
+                                </ul>
+                            </div>
+                            <div id="megaMenu1245-Details" class="o-header__serviceDetail --hide" aria-hidden="true">
+                                <h2 class="b-h3"><a href="/en/topics/pensions-and-older-people/" alt="Pensions and Older People">Pensions and Older People</a></h2>
+                                <div class="b-p"><p>Pension services and payments for over 65 year olds</p></div>
+                                <ul class="b-list --unstyled">
+                                        <li class="b-p">
+                                            <a href="/en/topics/pensions-and-older-people/fuel-allowance/" alt="Fuel Allowance">Fuel Allowance</a>
+                                        </li>
+                                        <li class="b-p">
+                                            <a href="/en/topics/pensions-and-older-people/household-benefits/" alt="Household Benefits">Household Benefits</a>
+                                        </li>
+                                        <li class="b-p">
+                                            <a href="/en/topics/pensions-and-older-people/benefit-payment-for-65-year-olds/" alt="Benefit Payment for 65 year olds">Benefit Payment for 65 year olds</a>
+                                        </li>
+                                        <li class="b-p">
+                                            <a href="/en/topics/pensions-and-older-people/change-my-payment-method/" alt="Change my payment method">Change my payment method</a>
+                                        </li>
+                                        <li class="b-p">
+                                            <a href="/en/topics/pensions-and-older-people/caring-periods/" alt="Caring Periods">Caring Periods</a>
+                                        </li>
+                                </ul>
+                            </div>
+                            <div id="megaMenu1247-Details" class="o-header__serviceDetail --hide" aria-hidden="true">
+                                <h2 class="b-h3"><a href="/en/topics/statements-refunds-and-repayments/" alt="Statements, Refunds and Repayments">Statements, Refunds and Repayments</a></h2>
+                                <div class="b-p"><p>Make a repayment, or apply for a payment statement, contribution statement or PRSI refund</p></div>
+                                <ul class="b-list --unstyled">
+                                        <li class="b-p">
+                                            <a href="/en/topics/statements-refunds-and-repayments/contribution-statement/" alt="Contribution Statement">Contribution Statement</a>
+                                        </li>
+                                        <li class="b-p">
+                                            <a href="/en/topics/statements-refunds-and-repayments/payment-statement/" alt="Payment Statement">Payment Statement</a>
+                                        </li>
+                                        <li class="b-p">
+                                            <a href="/en/topics/statements-refunds-and-repayments/prsi-refund/" alt="PRSI Refund">PRSI Refund</a>
+                                        </li>
+                                        <li class="b-p">
+                                            <a href="/en/topics/statements-refunds-and-repayments/make-a-repayment/" alt="Make a Repayment">Make a Repayment</a>
+                                        </li>
+                                </ul>
+                            </div>
+                            <div id="megaMenu1366-Details" class="o-header__serviceDetail --hide" aria-hidden="true">
+                                <h2 class="b-h3"><a href="/en/topics/calculators-and-estimators/" alt="Calculators and Estimators">Calculators and Estimators</a></h2>
+                                <div class="b-p"><p>Calculate how additional income may affect a payment, or estimate potential redundancy payments</p></div>
+                                <ul class="b-list --unstyled">
+                                        <li class="b-p">
+                                            <a href="/en/topics/calculators-and-estimators/benefit-of-work-estimator-js/" alt="Benefit of Work Estimator">Benefit of Work Estimator</a>
+                                        </li>
+                                        <li class="b-p">
+                                            <a href="/en/topics/calculators-and-estimators/redundancy-calculator/" alt="Redundancy Calculator">Redundancy Calculator</a>
+                                        </li>
+                                        <li class="b-p">
+                                            <a href="/en/topics/calculators-and-estimators/benefit-of-work-estimator-da/" alt="Benefit of Work Estimator">Benefit of Work Estimator</a>
+                                        </li>
+                                </ul>
+                            </div>
+                            <div id="megaMenu1250-Details" class="o-header__serviceDetail --hide" aria-hidden="true">
+                                <h2 class="b-h3"><a href="/en/topics/ukraine-emergency-supports/" alt="Ukraine Supports">Ukraine Supports</a></h2>
+                                <div class="b-p"><p>Apply for the Accommodation Recognition Payment</p></div>
+                                <ul class="b-list --unstyled">
+                                        <li class="b-p">
+                                            <a href="/en/topics/ukraine-emergency-supports/ukraine-change-of-post-office/" alt="Ukraine: Change of Post Office">Ukraine: Change of Post Office</a>
+                                        </li>
+                                        <li class="b-p">
+                                            <a href="/en/topics/ukraine-emergency-supports/accommodation-recognition-payment/" alt="Accommodation Recognition Payment">Accommodation Recognition Payment</a>
+                                        </li>
+                                </ul>
+                            </div>
+                            <div id="megaMenu1391-Details" class="o-header__serviceDetail --hide" aria-hidden="true">
+                                <h2 class="b-h3"><a href="/en/topics/appeals/" alt="Appeals">Appeals</a></h2>
+                                <div class="b-p"><p><span style="font-size: 11.0pt; line-height: 107%; font-family: 'Calibri',sans-serif; mso-ascii-theme-font: minor-latin; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-hansi-theme-font: minor-latin; mso-bidi-font-family: 'Times New Roman'; mso-bidi-theme-font: minor-bidi; mso-ansi-language: EN-IE; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;">Make an appeal on a decision related to your claim or view your current appeal status</span></p></div>
+                                <ul class="b-list --unstyled">
+                                        <li class="b-p">
+                                            <a href="/en/topics/appeals/make-an-appeal/" alt="Make an Appeal">Make an Appeal</a>
+                                        </li>
+                                        <li class="b-p">
+                                            <a href="/en/topics/appeals/my-appeal-status/" alt="My appeal status">My appeal status</a>
+                                        </li>
+                                </ul>
+                            </div>
+                    </div>
+                </div>
+            </nav>
+
+                <a href="/login" alt="Login with MyGovID" class="a-btn a-btn--block a-btn--mygov --MyGovId">
+                    <span class="u-valign--middle">
+                        Login with MyGovID
+                    </span>
+                    <svg class="u-valign--middle" height="1.2em" width="1.2em" viewBox="0 0 1024 1024" fill="#fff">
+    <path d="M617.244 512c-48.356 0-71.111 31.289-71.111 96.711 0 31.289 5.689 56.889 19.911 73.956 14.222 19.911 34.133 28.444 62.578 28.444 8.533 0 17.067 0 22.756 0 8.533 0 17.067-2.844 17.067-2.844v-182.044c0-2.844-14.222-8.533-22.756-8.533-8.533-2.844-17.067-5.689-28.444-5.689zM512 14.222c-275.911 0-497.778 221.867-497.778 497.778s221.867 497.778 497.778 497.778 497.778-221.867 497.778-497.778-221.867-497.778-497.778-497.778zM315.733 247.467c34.133 0 62.578 28.444 62.578 62.578s-28.444 62.578-62.578 62.578-62.578-28.444-62.578-62.578 28.444-62.578 62.578-62.578zM406.756 640h-14.222c-11.378 0-19.911 8.533-19.911 22.756v125.156h-105.244v-125.156c0-11.378-8.533-22.756-22.756-22.756h-8.533v-184.889c0-22.756 19.911-39.822 42.667-39.822h85.333c22.756 0 42.667 14.222 42.667 36.978 0 0 0 187.733 0 187.733zM776.533 776.533c-8.533 2.844-22.756 5.689-34.133 8.533s-25.6 5.689-36.978 5.689c-14.222 2.844-25.6 2.844-39.822 2.844-11.378 2.844-25.6 2.844-36.978 2.844-28.444 0-54.044-2.844-76.8-14.222-22.756-8.533-42.667-19.911-56.889-36.978-14.222-14.222-28.444-34.133-36.978-56.889s-11.378-48.356-11.378-76.8c0-28.444 2.844-54.044 11.378-76.8s17.067-42.667 31.289-59.733c14.222-17.067 28.444-28.444 48.356-36.978s42.667-14.222 65.422-14.222c14.222 0 25.6 2.844 36.978 2.844s22.756 5.689 31.289 11.378v-184.889l108.089-17.067-2.844 540.444z"></path>
+</svg>
+
+
+                </a>
+        </div>
+
+        <div class="o-header__interface u-media--mobile">
+            <button for="mobile-menu" class="a-btn --header a-dropdown__mobileUserDropDown" ref="mobileMenu">
+                <div class="m-accountDropdown__notification-counter" style="display:none">
+                    0
+                </div>
+                <span>Menu</span>
+            </button>
+        </div>
+    </nav>
+    
+    <input type="checkbox" class="u-displayToggle" id="mobile-menu">
+    <div class="a-backdrop --mobileMenu a-backdrop__userDropdown">
+        <div class="o-header__navbar">
+            <a href="/en/" class="a-myWelfareLogo" alt="MyWelfare">
+                
+<svg class="MyWelfareLogo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 35.7" fill="#fff" width="180" height="36" aria-label="MyWelfare">
+    <title>MyWelfare</title>
+    <path data-name="Path 7122" class="cls-1" d="M7.6 3.1l1.5 3 1.8 3.9 1.9 4.3 1.8 4.1 1.8-4.1 1.9-4.3 1.8-3.9 1.5-3h5.3l.7 5.7.6 6.6.4 6.9.4 6.5h-5.6l-.3-8.2-.6-8.9-1.5 3.5-1.6 3.8-1.5 3.6-1.3 3h-4l-1.3-3L9.8 19l-1.6-3.8-1.5-3.5-.6 8.9-.3 8.2H0l.4-6.5.4-6.9c.2-2.2.3-4.4.6-6.5l.7-5.7h5.5z"></path>
+    <path data-name="Path 7123" class="cls-1" d="M51.1 9.3a165 165 0 0 1-3.5 10.6 102 102 0 0 1-4 9.6 12.1 12.1 0 0 1-1.6 2.8 8 8 0 0 1-1.7 1.9 5.3 5.3 0 0 1-2.1 1.1 11 11 0 0 1-2.7.4 16.6 16.6 0 0 1-2.4-.2 7.8 7.8 0 0 1-1.8-.5l1-4.4 1.5.4a6.2 6.2 0 0 0 1.4.1 3.2 3.2 0 0 0 2.3-.8 7.6 7.6 0 0 0 1.4-2.2c-1.3-2.5-2.5-5.3-3.8-8.3a89.5 89.5 0 0 1-3.6-10.4h5.9a21.2 21.2 0 0 0 .9 3.1l1.1 3.4 1.1 3.4 1.1 3 1-3 1-3.4 1-3.4.8-3.1h5.7z"></path>
+    <path data-name="Path 7124" class="cls-1" d="M69.7 6.3q1.8 6 3.6 10.8l3.5 8.9c.9-2.9 1.7-6.4 2.6-10.3.9-4 1.7-8.1 2.5-12.6h2.5L83 10.6l-1.4 6.6-1.6 6q-.8 2.9-1.8 5.7h-2.7l-1.7-4.2-1.7-4.4-1.7-4.7-1.7-5.2a303 303 0 0 0-1.7 5.2l-1.7 4.7-1.7 4.4-1.8 4.2h-2.7a54 54 0 0 1-1.8-5.7l-1.6-6-1.4-6.6L53 3.2h2.6l1.2 6.4 1.2 6.1 1.3 5.6 1.4 4.8 3.4-8.9c1.2-3.2 2.4-6.8 3.6-10.8h2z"></path>
+    <path data-name="Path 7125" class="cls-1" d="M87.3 19.3a11.6 11.6 0 0 1 .7-4.4 9.6 9.6 0 0 1 1.9-3.1 8.3 8.3 0 0 1 2.7-1.9 8.1 8.1 0 0 1 3.1-.6 7.2 7.2 0 0 1 5.6 2.3c1.4 1.5 2.1 3.9 2.1 7.1v.6a1.3 1.3 0 0 1-.1.6H89.8a8.9 8.9 0 0 0 1.7 5.4c1.1 1.3 2.8 1.9 5.2 1.9a8.6 8.6 0 0 0 3.1-.4l1.7-.6.4 2.1a10.3 10.3 0 0 1-2 .7 11.8 11.8 0 0 1-3.4.4 11 11 0 0 1-4.3-.7 7 7 0 0 1-2.9-2.1 9 9 0 0 1-1.7-3.2 27.3 27.3 0 0 1-.3-4.1zm13.6-1.6a7.3 7.3 0 0 0-1.4-4.7 4.7 4.7 0 0 0-3.8-1.7 5.6 5.6 0 0 0-2.3.5 4.9 4.9 0 0 0-1.8 1.4 8.2 8.2 0 0 0-1.2 2 6.9 6.9 0 0 0-.5 2.4h11z"></path>
+    <path data-name="Path 7126" class="cls-1" d="M113.6 29.2a6.6 6.6 0 0 1-2.1-.3 3.6 3.6 0 0 1-2.4-2.4 7.5 7.5 0 0 1-.3-2.3V.5l2.4-.4v24.1a4.6 4.6 0 0 0 .2 1.4 2.6 2.6 0 0 0 .5.9 2 2 0 0 0 .9.5l1.3.3z"></path>
+    <path data-name="Path 7127" class="cls-1" d="M125.3 0a15.7 15.7 0 0 1 2.5.2 11 11 0 0 1 1.3.4l-.5 2.1a8.3 8.3 0 0 0-1.2-.4 10.3 10.3 0 0 0-2-.2 4.6 4.6 0 0 0-3.7 1.3 6.8 6.8 0 0 0-1.1 4.2v2h7.7v2h-7.7v17.3h-2.4V7.6a8.1 8.1 0 0 1 1.7-5.6 7 7 0 0 1 5.4-2z"></path>
+    <path data-name="Path 7128" class="cls-1" d="M138.1 9.2a9.8 9.8 0 0 1 3.2.5 5.7 5.7 0 0 1 2.1 1.5 7.8 7.8 0 0 1 1.2 2.2 12.6 12.6 0 0 1 .4 2.8v12.1a2.7 2.7 0 0 1-1.1.2l-1.6.3a12.5 12.5 0 0 1-2.1.2 17.7 17.7 0 0 1-2.3.1 12 12 0 0 1-2.8-.3 5 5 0 0 1-2.2-1.1 5.8 5.8 0 0 1-1.5-1.9 6.1 6.1 0 0 1-.5-2.8 6 6 0 0 1 .6-2.7 4.9 4.9 0 0 1 1.7-1.8 8.9 8.9 0 0 1 2.6-1.1 16.6 16.6 0 0 1 3.2-.3 4.5 4.5 0 0 1 1.1.1l1.1.1a6.4 6.4 0 0 1 .9.2l.5.2v-1.2a13.4 13.4 0 0 0-.1-2 3.6 3.6 0 0 0-.7-1.7 3.3 3.3 0 0 0-1.4-1.2 5.4 5.4 0 0 0-2.4-.5 12.7 12.7 0 0 0-3.2.3l-1.5.5-.3-2.1a9.8 9.8 0 0 1 2-.6h3.1zm.2 17.9a19.3 19.3 0 0 0 2.5-.1l1.8-.2V20a6.8 6.8 0 0 0-1.3-.4 14.7 14.7 0 0 0-2.5-.2 12.8 12.8 0 0 0-1.9.1 6.4 6.4 0 0 0-1.8.6 3.7 3.7 0 0 0-1.3 1.2 4 4 0 0 0-.5 2 3.4 3.4 0 0 0 .4 1.8 3 3 0 0 0 1 1.2 6 6 0 0 0 1.6.7 11.5 11.5 0 0 0 2 .1z"></path>
+    <path data-name="Path 7129" class="cls-1" d="M157.7 9.3a15 15 0 0 1 2.2.2 4 4 0 0 1 1.5.4l-.5 2.1a5 5 0 0 0-1.2-.3 14.4 14.4 0 0 0-2.4-.2 15.7 15.7 0 0 0-2.5.2 4 4 0 0 0-1.2.4v16.8h-2.4V10.6a10 10 0 0 1 2.6-.8 10.9 10.9 0 0 1 3.9-.5z"></path>
+    <path data-name="Path 7130" class="cls-1" d="M163.9 19.3a11.6 11.6 0 0 1 .7-4.4 9.6 9.6 0 0 1 1.9-3.1 8.3 8.3 0 0 1 2.7-1.9 8.1 8.1 0 0 1 3.1-.6 7.2 7.2 0 0 1 5.6 2.3c1.4 1.5 2.1 3.9 2.1 7.1v.6a1.3 1.3 0 0 1-.1.6h-13.5a8.9 8.9 0 0 0 1.7 5.4c1.1 1.3 2.8 1.9 5.2 1.9a8.6 8.6 0 0 0 3.1-.4l1.7-.6.4 2.1a10.3 10.3 0 0 1-2 .7 11.8 11.8 0 0 1-3.4.4 11 11 0 0 1-4.3-.7 7 7 0 0 1-2.9-2.1 9 9 0 0 1-1.7-3.2 27.3 27.3 0 0 1-.3-4.1zm13.6-1.6a7.3 7.3 0 0 0-1.4-4.7 4.7 4.7 0 0 0-3.8-1.7 5.6 5.6 0 0 0-2.3.5 4.9 4.9 0 0 0-1.8 1.4 8.2 8.2 0 0 0-1.2 2 6.9 6.9 0 0 0-.5 2.4h11z"></path>
+</svg>
+            </a>
+            <div class="o-header__interface u-media--mobile">
+                <button class="a-btn --header --close a-dropdown__closeButton" ref="mobileMenu" alt="Close">
+                    Close
+                    <svg width="69" height="69" viewBox="0 0 69 69" class="b-icon --svg-baseline">
+                        <path d="M 46.380414,13.507998 34.430618,25.457794 22.577192,13.507998 c -2.216495,-2.21649 -5.589424,-1.927386 -7.80592,0.385479 l -0.674583,0.674583 c -2.216496,2.216497 -2.60197,5.589424 -0.385474,7.805921 L 25.661011,34.323776 13.711215,46.177202 c -2.216496,2.216496 -2.409236,6.456747 -0.192739,8.673237 l 0.674583,0.67459 c 2.216495,2.216489 6.071268,1.734645 8.287763,-0.48185 L 34.430618,43.189753 46.380414,55.139549 c 2.216496,2.216496 6.264007,2.601969 8.480503,0.38548 l 0.674584,-0.67459 c 2.216495,-2.21649 1.927386,-6.264001 -0.38548,-8.480497 L 43.296595,34.323776 55.24639,22.373981 c 2.216497,-2.216497 2.120126,-5.396685 -0.192733,-7.61318 l -0.674589,-0.674583 c -2.216497,-2.312866 -5.685789,-2.79471 -7.998654,-0.57822 z"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <nav class="o-header__wrapper --hide" id="mobileMenu" aria-label="Header mobile top menu">            
+            <div class="o-header__mobileMenu">
+                <div class="carousel slide" id="carousel-menu" data-interval="false">
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <nav class="o-header__wrapper a-backdrop__content --hide" id="mobileMenu" aria-label="Header mobile menu">
+
+                                    <a class="a-btn --MyGovId" href="/login" title="Widget View" alt="Login with MyGovID">
+                                        <span class="u-valign--middle">Login with MyGovID</span>
+                                        <svg class="u-valign--middle" height="1.2em" width="1.2em" viewBox="0 0 1024 1024" fill="#fff">
+    <path d="M617.244 512c-48.356 0-71.111 31.289-71.111 96.711 0 31.289 5.689 56.889 19.911 73.956 14.222 19.911 34.133 28.444 62.578 28.444 8.533 0 17.067 0 22.756 0 8.533 0 17.067-2.844 17.067-2.844v-182.044c0-2.844-14.222-8.533-22.756-8.533-8.533-2.844-17.067-5.689-28.444-5.689zM512 14.222c-275.911 0-497.778 221.867-497.778 497.778s221.867 497.778 497.778 497.778 497.778-221.867 497.778-497.778-221.867-497.778-497.778-497.778zM315.733 247.467c34.133 0 62.578 28.444 62.578 62.578s-28.444 62.578-62.578 62.578-62.578-28.444-62.578-62.578 28.444-62.578 62.578-62.578zM406.756 640h-14.222c-11.378 0-19.911 8.533-19.911 22.756v125.156h-105.244v-125.156c0-11.378-8.533-22.756-22.756-22.756h-8.533v-184.889c0-22.756 19.911-39.822 42.667-39.822h85.333c22.756 0 42.667 14.222 42.667 36.978 0 0 0 187.733 0 187.733zM776.533 776.533c-8.533 2.844-22.756 5.689-34.133 8.533s-25.6 5.689-36.978 5.689c-14.222 2.844-25.6 2.844-39.822 2.844-11.378 2.844-25.6 2.844-36.978 2.844-28.444 0-54.044-2.844-76.8-14.222-22.756-8.533-42.667-19.911-56.889-36.978-14.222-14.222-28.444-34.133-36.978-56.889s-11.378-48.356-11.378-76.8c0-28.444 2.844-54.044 11.378-76.8s17.067-42.667 31.289-59.733c14.222-17.067 28.444-28.444 48.356-36.978s42.667-14.222 65.422-14.222c14.222 0 25.6 2.844 36.978 2.844s22.756 5.689 31.289 11.378v-184.889l108.089-17.067-2.844 540.444z"></path>
+</svg>
+
+                                    </a>
+
+                                <hr class="b-hr --primary-blue --marginTop32">
+
+                                <div class="o-header__mobileMenu__accountMenu__explore">
+                                    <a href="#carousel-menu" data-slide="next" class="a-link --white --marginBottom32" alt="Explore services">
+                                        Explore services
+                                        <img class="b-icon --headerArrow" src="/media/xdbkxe1f/arrow-orange.svg" alt="Orange arrow right">
+                                    </a>
+                                    <a tabindex="0" class="o-header__mobileMenu__language a-link --white" href="/ga/">As Gaeilge</a>
+                                </div>
+                            </nav>
+                        </div>
+                        <div id="topicsItem" class="item">
+                            <div class="o-header__mobileMenu__accountMenu__services">
+
+                                <a href="#carousel-menu" data-slide="prev" class="a-link --white --marginBottom32">
+                                    <svg class="rotate-180" width="15" height="15" viewBox="0 0 15 15">
+                                        <polygon points="7,0 15,7 7,15 5,13 11,7 5,2"></polygon>
+                                    </svg>
+                                    <span>Back to menu</span>
+                                </a>
+
+                                    <a href="#carousel-menu" class="a-link --white --marginBottom32 mainServiceLink" id="pathways-to-work" data-slide="next">
+                                        <span>Pathways to Work</span>
+                                        <img class="b-icon --headerArrow --xs" src="/media/xdbkxe1f/arrow-orange.svg" alt="Orange arrow right">
+                                    </a>
+                                    <a href="#carousel-menu" class="a-link --white --marginBottom32 mainServiceLink" id="parents-children-family" data-slide="next">
+                                        <span>Parents, Children, Family</span>
+                                        <img class="b-icon --headerArrow --xs" src="/media/xdbkxe1f/arrow-orange.svg" alt="Orange arrow right">
+                                    </a>
+                                    <a href="#carousel-menu" class="a-link --white --marginBottom32 mainServiceLink" id="out-of-work-payments" data-slide="next">
+                                        <span>Out of Work Payments</span>
+                                        <img class="b-icon --headerArrow --xs" src="/media/xdbkxe1f/arrow-orange.svg" alt="Orange arrow right">
+                                    </a>
+                                    <a href="#carousel-menu" class="a-link --white --marginBottom32 mainServiceLink" id="health-disability-illness" data-slide="next">
+                                        <span>Health, Disability, Illness</span>
+                                        <img class="b-icon --headerArrow --xs" src="/media/xdbkxe1f/arrow-orange.svg" alt="Orange arrow right">
+                                    </a>
+                                    <a href="#carousel-menu" class="a-link --white --marginBottom32 mainServiceLink" id="identity-services" data-slide="next">
+                                        <span>Accessing Public Services</span>
+                                        <img class="b-icon --headerArrow --xs" src="/media/xdbkxe1f/arrow-orange.svg" alt="Orange arrow right">
+                                    </a>
+                                    <a href="#carousel-menu" class="a-link --white --marginBottom32 mainServiceLink" id="community-welfare-services" data-slide="next">
+                                        <span>Community Welfare Services</span>
+                                        <img class="b-icon --headerArrow --xs" src="/media/xdbkxe1f/arrow-orange.svg" alt="Orange arrow right">
+                                    </a>
+                                    <a href="#carousel-menu" class="a-link --white --marginBottom32 mainServiceLink" id="pensions-and-older-people" data-slide="next">
+                                        <span>Pensions and Older People</span>
+                                        <img class="b-icon --headerArrow --xs" src="/media/xdbkxe1f/arrow-orange.svg" alt="Orange arrow right">
+                                    </a>
+                                    <a href="#carousel-menu" class="a-link --white --marginBottom32 mainServiceLink" id="statements-refunds-and-repayments" data-slide="next">
+                                        <span>Statements, Refunds and Repayments</span>
+                                        <img class="b-icon --headerArrow --xs" src="/media/xdbkxe1f/arrow-orange.svg" alt="Orange arrow right">
+                                    </a>
+                                    <a href="#carousel-menu" class="a-link --white --marginBottom32 mainServiceLink" id="calculators-and-estimators" data-slide="next">
+                                        <span>Calculators and Estimators</span>
+                                        <img class="b-icon --headerArrow --xs" src="/media/xdbkxe1f/arrow-orange.svg" alt="Orange arrow right">
+                                    </a>
+                                    <a href="#carousel-menu" class="a-link --white --marginBottom32 mainServiceLink" id="ukraine-emergency-supports" data-slide="next">
+                                        <span>Ukraine Supports</span>
+                                        <img class="b-icon --headerArrow --xs" src="/media/xdbkxe1f/arrow-orange.svg" alt="Orange arrow right">
+                                    </a>
+                                    <a href="#carousel-menu" class="a-link --white --marginBottom32 mainServiceLink" id="appeals" data-slide="next">
+                                        <span>Appeals</span>
+                                        <img class="b-icon --headerArrow --xs" src="/media/xdbkxe1f/arrow-orange.svg" alt="Orange arrow right">
+                                    </a>
+
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="o-header__mobileMenu__accountMenu__services">
+
+                                <a href="#carousel-menu" data-slide="prev" class="a-link --white --marginBottom32">
+                                    <svg class="rotate-180" width="15" height="15" viewBox="0 0 15 15">
+                                        <polygon points="7,0 15,7 7,15 5,13 11,7 5,2"></polygon>
+                                    </svg>
+                                    <span>Back to explore services</span>
+                                </a>
+
+                                    <div class="linksContainer" id="pathways-to-work" style="display: none;">
+                                        <div class="--marginBottom24 display-flex">
+                                            <span class="b-icon --min-width-1 --marginRight16 --marginTop4">
+                                            </span>
+                                            <h3 class="b-h3 --white --marginBottom0">Pathways to Work</h3>
+                                        </div>
+
+                                            <a href="/en/topics/pathways-to-work/jobs-ireland/" alt="JobsIreland.ie" class="a-link --white --marginBottom32 --underline">
+                                                <span>JobsIreland.ie</span>
+                                            </a>
+                                            <a href="/en/topics/pathways-to-work/pathways-to-work/" alt="Pathways to work" class="a-link --white --marginBottom32 --underline">
+                                                <span>Pathways to work</span>
+                                            </a>
+                                    </div>
+                                    <div class="linksContainer" id="parents-children-family" style="display: none;">
+                                        <div class="--marginBottom24 display-flex">
+                                            <span class="b-icon --min-width-1 --marginRight16 --marginTop4">
+                                            </span>
+                                            <h3 class="b-h3 --white --marginBottom0">Parents, Children, Family</h3>
+                                        </div>
+
+                                            <a href="/en/topics/parents-children-family/back-to-school-clothing-footwear-allowance/" alt="Back to School Clothing and Footwear Allowance" class="a-link --white --marginBottom32 --underline">
+                                                <span>Back to School Clothing and Footwear Allowance</span>
+                                            </a>
+                                            <a href="/en/topics/parents-children-family/maternity-benefit/" alt="Maternity Benefit" class="a-link --white --marginBottom32 --underline">
+                                                <span>Maternity Benefit</span>
+                                            </a>
+                                            <a href="/en/topics/parents-children-family/paternity-benefit/" alt="Paternity Benefit" class="a-link --white --marginBottom32 --underline">
+                                                <span>Paternity Benefit</span>
+                                            </a>
+                                            <a href="/en/topics/parents-children-family/parents-benefit/" alt="Parent's Benefit" class="a-link --white --marginBottom32 --underline">
+                                                <span>Parent's Benefit</span>
+                                            </a>
+                                            <a href="/en/topics/parents-children-family/child-benefit/" alt="Child Benefit" class="a-link --white --marginBottom32 --underline">
+                                                <span>Child Benefit</span>
+                                            </a>
+                                            <a href="/en/topics/parents-children-family/working-family-payment/" alt="Working Family Payment" class="a-link --white --marginBottom32 --underline">
+                                                <span>Working Family Payment</span>
+                                            </a>
+                                            <a href="/en/topics/parents-children-family/change-my-payment-method/" alt="Change my payment method" class="a-link --white --marginBottom32 --underline">
+                                                <span>Change my payment method</span>
+                                            </a>
+                                            <a href="/en/topics/parents-children-family/benefit-of-work-estimator-for-jobseekers-and-one-parent-families/" alt="Benefit of work estimator " class="a-link --white --marginBottom32 --underline">
+                                                <span>Benefit of work estimator </span>
+                                            </a>
+                                    </div>
+                                    <div class="linksContainer" id="out-of-work-payments" style="display: none;">
+                                        <div class="--marginBottom24 display-flex">
+                                            <span class="b-icon --min-width-1 --marginRight16 --marginTop4">
+                                            </span>
+                                            <h3 class="b-h3 --white --marginBottom0">Out of Work Payments</h3>
+                                        </div>
+
+                                            <a href="/en/topics/out-of-work-payments/apply-for-jobseekers-payment/" alt="Jobseeker's Payment" class="a-link --white --marginBottom32 --underline">
+                                                <span>Jobseeker's Payment</span>
+                                            </a>
+                                            <a href="/en/topics/out-of-work-payments/part-time-jobseekers-declaration/" alt="Part-time Jobseeker's Declaration" class="a-link --white --marginBottom32 --underline">
+                                                <span>Part-time Jobseeker's Declaration</span>
+                                            </a>
+                                            <a href="/en/topics/out-of-work-payments/benefit-of-work-estimator/" alt="Benefit of Work Estimator " class="a-link --white --marginBottom32 --underline">
+                                                <span>Benefit of Work Estimator </span>
+                                            </a>
+                                            <a href="/en/topics/out-of-work-payments/benefit-payment-for-65-year-olds/" alt="Benefit Payment for 65 year olds" class="a-link --white --marginBottom32 --underline">
+                                                <span>Benefit Payment for 65 year olds</span>
+                                            </a>
+                                            <a href="/en/topics/out-of-work-payments/redundancy-calculator/" alt="Redundancy Calculator" class="a-link --white --marginBottom32 --underline">
+                                                <span>Redundancy Calculator</span>
+                                            </a>
+                                    </div>
+                                    <div class="linksContainer" id="health-disability-illness" style="display: none;">
+                                        <div class="--marginBottom24 display-flex">
+                                            <span class="b-icon --min-width-1 --marginRight16 --marginTop4">
+                                            </span>
+                                            <h3 class="b-h3 --white --marginBottom0">Health, Disability, Illness</h3>
+                                        </div>
+
+                                            <a href="/en/topics/health-disability-illness/illness-benefit/" alt="Illness Benefit" class="a-link --white --marginBottom32 --underline">
+                                                <span>Illness Benefit</span>
+                                            </a>
+                                            <a href="/en/topics/health-disability-illness/household-benefits/" alt="Household Benefits" class="a-link --white --marginBottom32 --underline">
+                                                <span>Household Benefits</span>
+                                            </a>
+                                            <a href="/en/topics/health-disability-illness/benefit-of-work-estimator/" alt="Benefit of Work Estimator" class="a-link --white --marginBottom32 --underline">
+                                                <span>Benefit of Work Estimator</span>
+                                            </a>
+                                            <a href="/en/topics/health-disability-illness/eligibility-checker/" alt="Treatment benefits eligibility " class="a-link --white --marginBottom32 --underline">
+                                                <span>Treatment benefits eligibility </span>
+                                            </a>
+                                            <a href="/en/topics/health-disability-illness/change-my-payment-method/" alt="Change my payment method" class="a-link --white --marginBottom32 --underline">
+                                                <span>Change my payment method</span>
+                                            </a>
+                                            <a href="/en/topics/health-disability-illness/fuel-allowance/" alt="Fuel Allowance" class="a-link --white --marginBottom32 --underline">
+                                                <span>Fuel Allowance</span>
+                                            </a>
+                                    </div>
+                                    <div class="linksContainer" id="identity-services" style="display: none;">
+                                        <div class="--marginBottom24 display-flex">
+                                            <span class="b-icon --min-width-1 --marginRight16 --marginTop4">
+                                            </span>
+                                            <h3 class="b-h3 --white --marginBottom0">Accessing Public Services</h3>
+                                        </div>
+
+                                            <a href="/en/topics/identity-services/personal-public-service-pps-number/" alt="Personal Public Service (PPS) Number" class="a-link --white --marginBottom32 --underline">
+                                                <span>Personal Public Service (PPS) Number</span>
+                                            </a>
+                                            <a href="/en/topics/identity-services/public-services-card-renewal/" alt="Renew your Public Services Card" class="a-link --white --marginBottom32 --underline">
+                                                <span>Renew your Public Services Card</span>
+                                            </a>
+                                            <a href="/en/topics/identity-services/public-services-card/" alt="Public Services Card" class="a-link --white --marginBottom32 --underline">
+                                                <span>Public Services Card</span>
+                                            </a>
+                                    </div>
+                                    <div class="linksContainer" id="community-welfare-services" style="display: none;">
+                                        <div class="--marginBottom24 display-flex">
+                                            <span class="b-icon --min-width-1 --marginRight16 --marginTop4">
+                                            </span>
+                                            <h3 class="b-h3 --white --marginBottom0">Community Welfare Services</h3>
+                                        </div>
+
+                                            <a href="/en/topics/community-welfare-services/additional-needs-payment/" alt="Additional Needs Payment" class="a-link --white --marginBottom32 --underline">
+                                                <span>Additional Needs Payment</span>
+                                            </a>
+                                            <a href="/en/topics/community-welfare-services/fuel-allowance/" alt="Fuel Allowance" class="a-link --white --marginBottom32 --underline">
+                                                <span>Fuel Allowance</span>
+                                            </a>
+                                    </div>
+                                    <div class="linksContainer" id="pensions-and-older-people" style="display: none;">
+                                        <div class="--marginBottom24 display-flex">
+                                            <span class="b-icon --min-width-1 --marginRight16 --marginTop4">
+                                            </span>
+                                            <h3 class="b-h3 --white --marginBottom0">Pensions and Older People</h3>
+                                        </div>
+
+                                            <a href="/en/topics/pensions-and-older-people/fuel-allowance/" alt="Fuel Allowance" class="a-link --white --marginBottom32 --underline">
+                                                <span>Fuel Allowance</span>
+                                            </a>
+                                            <a href="/en/topics/pensions-and-older-people/household-benefits/" alt="Household Benefits" class="a-link --white --marginBottom32 --underline">
+                                                <span>Household Benefits</span>
+                                            </a>
+                                            <a href="/en/topics/pensions-and-older-people/benefit-payment-for-65-year-olds/" alt="Benefit Payment for 65 year olds" class="a-link --white --marginBottom32 --underline">
+                                                <span>Benefit Payment for 65 year olds</span>
+                                            </a>
+                                            <a href="/en/topics/pensions-and-older-people/change-my-payment-method/" alt="Change my payment method" class="a-link --white --marginBottom32 --underline">
+                                                <span>Change my payment method</span>
+                                            </a>
+                                            <a href="/en/topics/pensions-and-older-people/caring-periods/" alt="Caring Periods" class="a-link --white --marginBottom32 --underline">
+                                                <span>Caring Periods</span>
+                                            </a>
+                                    </div>
+                                    <div class="linksContainer" id="statements-refunds-and-repayments" style="display: none;">
+                                        <div class="--marginBottom24 display-flex">
+                                            <span class="b-icon --min-width-1 --marginRight16 --marginTop4">
+                                            </span>
+                                            <h3 class="b-h3 --white --marginBottom0">Statements, Refunds and Repayments</h3>
+                                        </div>
+
+                                            <a href="/en/topics/statements-refunds-and-repayments/contribution-statement/" alt="Contribution Statement" class="a-link --white --marginBottom32 --underline">
+                                                <span>Contribution Statement</span>
+                                            </a>
+                                            <a href="/en/topics/statements-refunds-and-repayments/payment-statement/" alt="Payment Statement" class="a-link --white --marginBottom32 --underline">
+                                                <span>Payment Statement</span>
+                                            </a>
+                                            <a href="/en/topics/statements-refunds-and-repayments/prsi-refund/" alt="PRSI Refund" class="a-link --white --marginBottom32 --underline">
+                                                <span>PRSI Refund</span>
+                                            </a>
+                                            <a href="/en/topics/statements-refunds-and-repayments/make-a-repayment/" alt="Make a Repayment" class="a-link --white --marginBottom32 --underline">
+                                                <span>Make a Repayment</span>
+                                            </a>
+                                    </div>
+                                    <div class="linksContainer" id="calculators-and-estimators" style="display: none;">
+                                        <div class="--marginBottom24 display-flex">
+                                            <span class="b-icon --min-width-1 --marginRight16 --marginTop4">
+                                            </span>
+                                            <h3 class="b-h3 --white --marginBottom0">Calculators and Estimators</h3>
+                                        </div>
+
+                                            <a href="/en/topics/calculators-and-estimators/benefit-of-work-estimator-js/" alt="Benefit of Work Estimator" class="a-link --white --marginBottom32 --underline">
+                                                <span>Benefit of Work Estimator</span>
+                                            </a>
+                                            <a href="/en/topics/calculators-and-estimators/redundancy-calculator/" alt="Redundancy Calculator" class="a-link --white --marginBottom32 --underline">
+                                                <span>Redundancy Calculator</span>
+                                            </a>
+                                            <a href="/en/topics/calculators-and-estimators/benefit-of-work-estimator-da/" alt="Benefit of Work Estimator" class="a-link --white --marginBottom32 --underline">
+                                                <span>Benefit of Work Estimator</span>
+                                            </a>
+                                    </div>
+                                    <div class="linksContainer" id="ukraine-emergency-supports" style="display: none;">
+                                        <div class="--marginBottom24 display-flex">
+                                            <span class="b-icon --min-width-1 --marginRight16 --marginTop4">
+                                            </span>
+                                            <h3 class="b-h3 --white --marginBottom0">Ukraine Supports</h3>
+                                        </div>
+
+                                            <a href="/en/topics/ukraine-emergency-supports/ukraine-change-of-post-office/" alt="Ukraine: Change of Post Office" class="a-link --white --marginBottom32 --underline">
+                                                <span>Ukraine: Change of Post Office</span>
+                                            </a>
+                                            <a href="/en/topics/ukraine-emergency-supports/accommodation-recognition-payment/" alt="Accommodation Recognition Payment" class="a-link --white --marginBottom32 --underline">
+                                                <span>Accommodation Recognition Payment</span>
+                                            </a>
+                                    </div>
+                                    <div class="linksContainer" id="appeals" style="display: none;">
+                                        <div class="--marginBottom24 display-flex">
+                                            <span class="b-icon --min-width-1 --marginRight16 --marginTop4">
+                                            </span>
+                                            <h3 class="b-h3 --white --marginBottom0">Appeals</h3>
+                                        </div>
+
+                                            <a href="/en/topics/appeals/make-an-appeal/" alt="Make an Appeal" class="a-link --white --marginBottom32 --underline">
+                                                <span>Make an Appeal</span>
+                                            </a>
+                                            <a href="/en/topics/appeals/my-appeal-status/" alt="My appeal status" class="a-link --white --marginBottom32 --underline">
+                                                <span>My appeal status</span>
+                                            </a>
+                                    </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+    </div>
+
+</header>
+
+
+
+    <div class="m-application__title">
+        <h1 id="main-title-page">How can we help you today?</h1>
+    </div>
+
+    <div class="background__image" style="padding-bottom: 100px;">
+        
+<div class="t-doubleColumn --page-container">
+    <div class="t-doubleColumn__main" role="main">
+
+                <a class="m-chip" href="/en/topics/pathways-to-work/" alt="Pathways to Work">
+                <span class="m-chip__label" style="background-color: #96b2ed;">
+                    <svg width="1024" height="1024" viewBox="0 0 100 100">
+<path d="M36.5,64.9h33.9v11c0,3.5-3.1,6.4-6.8,6.4H23.8l-9.6,8.5c-0.7,0.6-1.5,0.8-2.2,0.5c-0.7-0.3-1.1-1.1-1.1-2     l0-7h-4c-3.7,0-6.8-2.9-6.8-6.4V39.3c0-3.6,3-6.4,6.8-6.4h15.9v18.8C22.8,58.9,28.9,64.9,36.5,64.9z"></path>
+<path d="M99.9,15v36.6c0,3.5-3.1,6.4-6.8,6.4h-4l0,7c0,0.9-0.4,1.7-1.1,2c-0.2,0.1-0.5,0.2-0.7,0.2      c-0.5,0-1.1-0.2-1.5-0.6L76.2,58H36.5c-3.8,0-6.8-2.9-6.8-6.4V15c0-3.6,3.1-6.4,6.8-6.4h56.6C96.8,8.6,99.9,11.4,99.9,15z"></path>
+</svg>
+
+			
+                </span>
+            <div class="m-chip__body">
+                <div class="m-chip__content">
+                    <div class="u-table__cell">
+                        <h3 class="b-h3">Pathways to Work</h3>
+                        <p class="m-chip__content__text">
+                            Here you will find services that will help you find work, upskill, retrain or return to education
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <a class="m-chip" href="/en/topics/parents-children-family/" alt="Parents, Children, Family">
+                <span class="m-chip__label" style="background-color: #93d932;">
+                    <svg width="1024" height="1024" viewBox="0 0 100 95">
+<path d="M35.1,36.9c0,7.5-6.1,13.7-13.7,13.7c-7.5,0-13.7-6.1-13.7-13.7s6.2-13.6,13.7-13.6     C28.9,23.3,35.1,29.4,35.1,36.9z"></path>
+		<path d="M91.4,38.1c0,7.3-6,13.3-13.3,13.3c-7.3,0-13.3-6-13.3-13.3s6-13.3,13.3-13.3C85.5,24.8,91.4,30.7,91.4,38.1     z"></path>
+<path d="M60.8,46.6c0,5.8-4.8,10.6-10.6,10.6c-5.8,0-10.6-4.7-10.6-10.6S44.4,36,50.2,36     C56.1,36,60.8,40.8,60.8,46.6z"></path>
+	
+	<path d="M36.2,56.4c0,0.8-0.4,1.5-1,1.9c-2.9,2.5-4.8,6.4-4.8,10.7v5.4c0,1.2-1,2.2-2.2,2.2h-26c-1.2,0-2.2-1-2.2-2.2   v-8.3c0-6.7,4.7-12.3,10.4-12.3h21.7c0.8,0,1.6,0.1,2.3,0.3C35.4,54.5,36.2,55.4,36.2,56.4z"></path>
+	<path d="M100,66.4v8.1c0,1.2-1,2.2-2.2,2.2H72.6c-1.2,0-2.2-1-2.2-2.2v-5.3c0-4.3-1.8-8-4.7-10.4c-0.6-0.4-1-1.1-1-1.9   c0-1,0.7-1.9,1.7-2.1c0.7-0.2,1.5-0.3,2.3-0.3h21.2C95.5,54.5,100,59.9,100,66.4z"></path>
+	<path d="M65.9,69.1v5.4c0,1.2-1,2.2-2.2,2.2H37.3c-1.2,0-2.2-1-2.2-2.2v-5.4c0-4.9,3.4-8.9,7.5-8.9h15.8   C62.5,60.1,65.9,64.1,65.9,69.1z"></path>
+
+</svg>
+                </span>
+            <div class="m-chip__body">
+                <div class="m-chip__content">
+                    <div class="u-table__cell">
+                        <h3 class="b-h3">Parents, Children, Family</h3>
+                        <p class="m-chip__content__text">
+                            Apply for family payments such as Maternity Benefit, Child Benefit and more
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <a class="m-chip" href="/en/topics/out-of-work-payments/" alt="Out of Work Payments">
+                <span class="m-chip__label" style="background-color: #0fc9a8;">
+                    <svg width="1024" height="1024" viewBox="0 0 100 100">
+	<path d="M97.9,49.8v36.5c0,3.2-2.6,5.9-5.8,5.9H8c-3.2,0-5.8-2.6-5.8-5.9V49.8h15.3V56c0,3.9,3.2,7,7.1,7s7-3.2,7-7   v-6.3h36.7V56c0,3.9,3.2,7,7,7c3.9,0,7.1-3.2,7.1-7v-6.3H97.9z"></path>
+	<g>
+		<g>
+			<path d="M70.6,13.5v3h-5v-3c0-0.4-0.3-0.8-0.8-0.8H35.1c-0.4,0-0.8,0.3-0.8,0.8v3h-5v-3c0-3.1,2.6-5.7,5.7-5.7h29.7     C68,7.8,70.6,10.4,70.6,13.5z"></path>
+		</g>
+	</g>
+	<path d="M100,27.3V39c0,3.2-2.6,5.8-5.8,5.8H82.4v-2.4c0-3.9-3.2-7.1-7.1-7.1c-3.9,0-7,3.2-7,7.1v2.4H31.6v-2.4   c0-3.9-3.2-7.1-7-7.1s-7.1,3.2-7.1,7.1v2.4H5.8C2.6,44.8,0,42.2,0,39V27.3c0-3.2,2.6-5.8,5.8-5.8h88.3C97.4,21.5,100,24.1,100,27.3   z"></path>
+	<g>
+		<path d="M77.5,42.4V56c0,1.2-1,2.2-2.2,2.2c-1.2,0-2.2-1-2.2-2.2V42.4c0-1.2,1-2.2,2.2-2.2    C76.5,40.2,77.5,41.2,77.5,42.4z"></path>
+	</g>
+	<g>
+		<path d="M26.7,42.4V56c0,1.2-1,2.2-2.2,2.2c-1.2,0-2.2-1-2.2-2.2V42.4c0-1.2,1-2.2,2.2-2.2    C25.7,40.2,26.7,41.2,26.7,42.4z"></path>
+</g></svg>
+                </span>
+            <div class="m-chip__body">
+                <div class="m-chip__content">
+                    <div class="u-table__cell">
+                        <h3 class="b-h3">Out of Work Payments</h3>
+                        <p class="m-chip__content__text">
+                            Apply for Jobseeker's Payments, make your declaration for your casual (part-time) Jobseeker's claim or calculate how income affects your payment
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <a class="m-chip" href="/en/topics/health-disability-illness/" alt="Health, Disability, Illness">
+                <span class="m-chip__label" style="background-color: #dd54a9;">
+                    <svg width="1024" height="1024" viewBox="0 0 1024 1024">
+<path d="M715.595 85.233h-2.711c-76.29 0.776-146.208 27.431-201.546 71.588l0.662-0.51c-47.111-46.032-109.947-76.15-179.713-81.557l-0.993-0.062c-0.423-0.002-0.922-0.003-1.422-0.003-83.39 0-158.694 34.618-212.326 90.266l-0.087 0.091c-54.623 56.003-88.316 132.641-88.316 217.148s33.693 161.145 88.379 217.213l-0.063-0.065 341.534 329.186c13.983 12.999 32.789 20.977 53.459 20.977s39.476-7.978 53.508-21.022l-0.049 0.045 339.426-326.174v-1.506c54.072-56.248 87.373-132.809 87.373-217.148s-33.301-160.9-87.472-217.252l0.099 0.104c-47.386-50.123-114.339-81.32-188.578-81.32-0.409 0-0.817 0.001-1.226 0.003h0.063z"></path>
+</svg>
+                </span>
+            <div class="m-chip__body">
+                <div class="m-chip__content">
+                    <div class="u-table__cell">
+                        <h3 class="b-h3">Health, Disability, Illness</h3>
+                        <p class="m-chip__content__text">
+                            Apply for payments such as Illness Benefit, check your eligibility for Treatment Benefits and more
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <a class="m-chip" href="/en/topics/identity-services/" alt="Accessing Public Services">
+                <span class="m-chip__label" style="background-color: #4bbfe4;">
+                    <svg width="1024" height="1024" viewBox="0 0 100 100">
+<path d="M27.3,39.4c0-2.7,2.2-4.9,4.8-4.9c2.7,0,4.8,2.2,4.9,4.9c0,2.7-2.2,4.9-4.9,4.9    C29.5,44.2,27.3,42.1,27.3,39.4z"></path>
+		<path d="M92,17.8H8c-4.4,0-8,3.6-8,8v48.5c0,4.4,3.6,8,8,8h84c4.4,0,8-3.6,8-8V25.7C100,21.3,96.4,17.8,92,17.8z     M32.1,27.9c6.4,0,11.5,5.1,11.5,11.5c0,6.3-5.1,11.5-11.5,11.5c-6.3,0-11.5-5.2-11.5-11.5C20.6,33,25.8,27.9,32.1,27.9z M52.8,69    c0,1.7-1.4,3.1-3.1,3.1c-1.7,0-3.1-1.4-3.1-3.1v-6c0-2.2-1.8-4-4-4H22.2c-2.2,0-4,1.8-4,4v6c0,1.7-1.4,3.1-3.1,3.1    c-1.7,0-3.1-1.4-3.1-3.1v-6c0-5.7,4.6-10.3,10.3-10.3h20.3c5.7,0,10.2,4.6,10.2,10.3V69z M75.2,66.1H63.7c-1.7,0-3.1-1.4-3.1-3.1    c0-1.7,1.4-3.1,3.1-3.1h11.5c1.7,0,3.1,1.4,3.1,3.1C78.3,64.7,76.9,66.1,75.2,66.1z M84.9,53.6H63.7c-1.7,0-3.1-1.4-3.1-3.1    c0-1.7,1.4-3.1,3.1-3.1h21.1c1.7,0,3.2,1.4,3.2,3.1C88,52.2,86.6,53.6,84.9,53.6z M84.9,41.2H63.7c-1.7,0-3.1-1.4-3.1-3.1    c0-1.7,1.4-3.1,3.1-3.1h21.1c1.7,0,3.2,1.4,3.2,3.1C88,39.8,86.6,41.2,84.9,41.2z"></path>
+		<g>
+			<path d="M37,39.4c0,2.7-2.2,4.9-4.9,4.9c-2.7,0-4.8-2.2-4.8-4.9c0-2.7,2.2-4.9,4.8-4.9C34.8,34.5,37,36.7,37,39.4z"></path>
+		</g>
+	
+
+</svg>
+                </span>
+            <div class="m-chip__body">
+                <div class="m-chip__content">
+                    <div class="u-table__cell">
+                        <h3 class="b-h3">Accessing Public Services</h3>
+                        <p class="m-chip__content__text">
+                            Apply for a Personal Public Service (PPS) Number or renew your Public Services Card
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <a class="m-chip" href="/en/topics/community-welfare-services/" alt="Community Welfare Services">
+                <span class="m-chip__label" style="background-color: #fcbe24;">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
+<g>
+	<g>
+		<path class="st01" d="M78,67.9l-1.2,0l0,0l-1.2,0l0,0l-3.4,0l-0.3,0l-12.3,0c0,0,0,0,0,0c0.1-0.2,0.2-0.4,0.3-0.7
+			c0.4-1,0.5-1.9,0.4-2.7l0.1-0.1l16.2,0.2c0,0,0.9,0,1.5,0.9C78.7,66.4,78,67.9,78,67.9z"></path>
+	</g>
+	<path class="st01" d="M84.3,75.2c-0.2,0.6-0.7,1-1.3,1.2c0,0-0.1,0-0.1,0c-5.7,1.4-20.8,5.2-27.6,7c0,0,0,0,0,0
+		c-0.2,0-0.4,0.1-0.5,0.1c0,0-0.1,0-0.1,0c-0.5,0.1-1.1,0.2-1.6,0.2c-0.7,0-1.4-0.1-2.1-0.3c0,0,0,0,0,0l-1.5-0.5L21.8,72.7
+		l-6.4,1.1V48.5c3.8-1.9,8.9-3.6,13.9-2.8c4.5,0.7,8.4,3.5,11.3,8.2l0.2,0.3l14.4,5.4c0.5,0.3,4,2.6,2.5,6.6
+		c-0.2,0.7-0.5,1.2-0.9,1.6c-1.7,2.3-4.1,2-4.7,1.9l-3.9-1.4l-8-2.9l-0.8,2.2l6.9,2.5l5.1,1.9l0.1,0c1.5,0.3,4.2,0.1,6.3-1.9l1.7,0
+		l19.3,0.1l0.2,0c0,0,2.7-0.3,3.9,1.3c0.4,0.6,0.8,1.2,1,1.6c0.1,0.2,0.2,0.5,0.3,0.7C84.5,74.4,84.5,74.8,84.3,75.2z"></path>
+	<g>
+		<path class="st01" d="M12.5,47.2v28.4c0,1.6-1.3,2.8-2.8,2.8H2.8c-1.6,0-2.8-1.3-2.8-2.8l0-28.4c0-1.5,1.3-2.8,2.8-2.8h6.8
+			C11.2,44.4,12.5,45.7,12.5,47.2z"></path>
+	</g>
+	<path class="st01" d="M50.9,83.4c-0.1,0-0.2,0-0.3-0.1c0,0-0.1,0-0.1,0l-1-0.4c-0.1,0-0.1,0-0.2-0.1L50.9,83.4z"></path>
+	<g>
+		<path class="st01" d="M21.7,32.1l1.2,0l0,0l1.2,0l0,0l3.4,0l0.3,0l12.3,0c0,0,0,0,0,0c-0.1,0.2-0.2,0.4-0.3,0.7
+			c-0.4,1-0.5,1.9-0.4,2.7l-0.1,0.1l-16.2-0.2c0,0-0.9,0-1.5-0.9C21,33.6,21.7,32.1,21.7,32.1z"></path>
+	</g>
+	<path class="st01" d="M15.4,24.8c0.2-0.6,0.7-1,1.3-1.2c0,0,0.1,0,0.1,0c5.7-1.4,20.8-5.2,27.6-7c0,0,0,0,0,0c0.2,0,0.4-0.1,0.5-0.1
+		c0,0,0.1,0,0.1,0c0.5-0.1,1.1-0.2,1.6-0.2c0.7,0,1.4,0.1,2.1,0.3c0,0,0,0,0,0l1.5,0.5l27.7,10.1l6.4-1.1v25.3
+		c-3.8,1.9-8.9,3.6-13.9,2.8c-4.5-0.7-8.4-3.5-11.3-8.2l-0.2-0.3l-14.4-5.4c-0.5-0.3-4-2.6-2.5-6.6c0.2-0.7,0.5-1.2,0.9-1.6
+		c1.7-2.3,4.1-2,4.7-1.9l3.9,1.4l8,2.9l0.8-2.2l-6.9-2.5l-5.1-1.9l-0.1,0c-1.5-0.3-4.2-0.1-6.3,1.9l-1.7,0l-19.3-0.1l-0.2,0
+		c0,0-2.7,0.3-3.9-1.3c-0.4-0.6-0.8-1.2-1-1.6c-0.1-0.2-0.2-0.5-0.3-0.7C15.3,25.6,15.3,25.2,15.4,24.8z"></path>
+	<g>
+		<path class="st01" d="M87.3,52.8V24.3c0-1.6,1.3-2.8,2.8-2.8h6.8c1.6,0,2.8,1.3,2.8,2.8v28.4c0,1.5-1.3,2.8-2.8,2.8h-6.8
+			C88.6,55.6,87.3,54.3,87.3,52.8z"></path>
+	</g>
+	<path class="st01" d="M48.8,16.6c0.1,0,0.2,0,0.3,0.1c0,0,0.1,0,0.1,0l1,0.4c0.1,0,0.1,0,0.2,0.1L48.8,16.6z"></path>
+</g>
+</svg>
+                </span>
+            <div class="m-chip__body">
+                <div class="m-chip__content">
+                    <div class="u-table__cell">
+                        <h3 class="b-h3">Community Welfare Services</h3>
+                        <p class="m-chip__content__text">
+                            Additional payments for people in exceptional circumstances where certain expenses cannot be met
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <a class="m-chip" href="/en/topics/pensions-and-older-people/" alt="Pensions and Older People">
+                <span class="m-chip__label" style="background-color: #7d2fc1;">
+                    <svg width="1024" height="1024" viewBox="0 0 100 100">
+<path d="M95.3,48.4h-1.8c-2.6,0-4.9-1.5-6.1-3.7h0c-3.3-6.3-8.6-11.6-15.2-15.4C69,39.2,59.8,46.4,48.8,46.4   c-10.8,0-20.1-7.1-23.3-16.9C16.4,34.8,9.8,43.1,7.8,52.7h-1c-1.7,0-3.1,0.7-4.3,1.7c-1.3,1.2-2.2,2.9-2.2,4.8   c0,1.9,0.9,3.6,2.2,4.8c1.1,1,2.6,1.6,4.3,1.6h1c1.6,7.7,6.1,14.5,12.5,19.6l0,0c3.9,3.3,6.9,7.6,8.6,12.3c0,0,0,0.1,0,0.1v0   c0.2,0.3,0.4,0.5,0.8,0.5h11c0.5,0,0.9-0.4,0.9-0.9v-2.7c0-4.1,3.3-7.4,7.4-7.4s7.4,3.3,7.4,7.4v2.7c0,0.1,0,0.1,0,0.2   c0,0,0,0.1,0,0.1v0c0.1,0.3,0.4,0.5,0.8,0.5h11c0.5,0,0.9-0.4,0.9-0.9v0.2c1.8-4.7,4.7-9,8.6-12.3l0.1,0c4-3.3,7.4-7.2,9.6-11.6h0   c1.1-2.2,3.5-3.6,6.1-3.6h1.8c2.4,0,4.3-2,4.3-4.4V52.7C99.7,50.3,97.8,48.4,95.3,48.4z M75.8,56c-2.3,0-4.2-1.9-4.2-4.2   s1.9-4.2,4.2-4.2c2.3,0,4.2,1.9,4.2,4.2S78.1,56,75.8,56z"></path>
+<path d="M48.8,1.8c-11.1,0-20,9-20,20c0,1.9,0.3,3.8,0.8,5.6c2.4,8.3,10.1,14.5,19.2,14.5c9.2,0,16.9-6.2,19.3-14.6    c0.5-1.7,0.8-3.6,0.8-5.4C68.9,10.8,59.9,1.8,48.8,1.8z M58.1,29.4c-0.9,0.9-2,1.8-3.3,2.5c-1.3,0.7-2.9,1.2-4.9,1.2h0    c-4.6,0-8.7-2.8-10.4-7.1h-1.8c-0.8,0-1.5-0.7-1.5-1.5c0-0.4,0.2-0.8,0.5-1.1c0.3-0.3,0.7-0.4,1.1-0.4l1.1,0c0-0.3-0.1-0.7-0.1-1    v-0.4h-1.1c-0.9,0-1.5-0.7-1.5-1.5c0-0.8,0.7-1.5,1.5-1.5h1.6c0.7-2.2,2.1-4.2,4-5.6c1.9-1.4,4.2-2.2,6.7-2.2c4,0,6.4,1.8,8.2,3.7    c0.6,0.6,0.6,1.6,0,2.2c-0.6,0.6-1.6,0.6-2.2,0c-1.7-1.7-3.3-2.8-6-2.8c-3.2,0-6,1.8-7.4,4.7h8c0.9,0,1.6,0.7,1.6,1.5    c0,0.8-0.7,1.5-1.6,1.5h-8.8v0.4c0,0.3,0,0.7,0.1,1h8.7c0.9,0,1.6,0.7,1.6,1.5c0,0.9-0.7,1.5-1.6,1.5h-7.7c1.4,2.5,4.1,4,7,4h0.1    c2.7,0,4.2-1,6-2.8c0.6-0.6,1.6-0.6,2.2,0C58.7,27.8,58.7,28.8,58.1,29.4z"></path>
+	
+</svg>
+                </span>
+            <div class="m-chip__body">
+                <div class="m-chip__content">
+                    <div class="u-table__cell">
+                        <h3 class="b-h3">Pensions and Older People</h3>
+                        <p class="m-chip__content__text">
+                            Pension services and payments for over 65 year olds
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <a class="m-chip" href="/en/topics/statements-refunds-and-repayments/" alt="Statements, Refunds and Repayments">
+                <span class="m-chip__label" style="background-color: #ed4848;">
+                    <svg width="1024" height="1024" viewBox="0 0 100 100">
+			<path d="M35.4,68.5V68h0.1c0,0.1,0,0.2-0.1,0.3c0,0,0,0,0,0C35.4,68.4,35.4,68.4,35.4,68.5z"></path>
+			<path d="M35.7,70.7c0.2-0.5,0.6-0.9,1.1-1.2c-0.1,0.1-0.2,0.2-0.3,0.4c0,0,0,0,0,0C36.2,70.1,35.9,70.4,35.7,70.7z"></path>
+			<path d="M35.4,71.7c0-0.3,0.1-0.6,0.3-0.9C35.6,71,35.5,71.4,35.4,71.7z"></path>
+			<path d="M21.9,77.7C21.9,77.6,21.9,77.6,21.9,77.7c-0.1-0.1-0.1-0.2-0.1-0.2C21.8,77.5,21.8,77.5,21.9,77.7     C21.9,77.6,21.9,77.6,21.9,77.7z"></path>
+			<path d="M21.7,77.3C21.6,77.2,21.6,77.2,21.7,77.3C21.6,77.2,21.6,77.2,21.7,77.3c-0.1-0.2-0.2-0.4-0.2-0.5     c0,0,0,0,0,0c0,0,0,0,0-0.1c0,0,0-0.1,0-0.2v0c0,0,0-0.1,0-0.1c0,0.1,0,0.1,0,0.2c0,0.1,0,0.1,0,0.2c0,0,0,0,0,0.1     C21.5,76.9,21.6,77,21.7,77.3C21.6,77.2,21.6,77.2,21.7,77.3C21.7,77.2,21.7,77.2,21.7,77.3z"></path>
+			<path d="M21.4,79.6C21.3,79.6,21.3,79.6,21.4,79.6c0-0.2,0-0.3,0-0.5v-3.3c0,0.1,0,0.1,0,0.2v-0.2c0,0.1,0,0.3,0,0.4     v0.1c0,0,0,0,0-0.1c0-0.1,0-0.1,0-0.2v3.1C21.3,79.3,21.3,79.4,21.4,79.6L21.4,79.6z"></path>
+			<path d="M21.7,80.6C21.6,80.6,21.6,80.6,21.7,80.6C21.6,80.6,21.6,80.6,21.7,80.6c-0.1-0.2-0.2-0.4-0.2-0.5     c0,0,0,0,0,0c0,0,0,0,0-0.1c0,0,0-0.1,0-0.2v0c0,0,0-0.1,0-0.1c0,0.1,0,0.1,0,0.2c0,0.1,0,0.1,0,0.2c0,0,0,0,0,0.1     C21.5,80.2,21.6,80.4,21.7,80.6C21.6,80.6,21.6,80.6,21.7,80.6C21.7,80.6,21.7,80.6,21.7,80.6z"></path>
+			<path d="M21.9,81C21.9,81,21.9,81,21.9,81c-0.1-0.1-0.1-0.2-0.1-0.2C21.8,80.8,21.8,80.9,21.9,81     C21.9,81,21.9,81,21.9,81z"></path>
+			<path d="M78.1,87.5v6.4c0,3.3-4,6-9,6H10.3c-5.3,0-9.6-4-9.6-8.9V16.1c0-4.9,4.3-8.9,9.6-8.9h5.5v73.9     c0,3.5,4.2,6.4,9.3,6.4H78.1z"></path>
+		
+	
+	<path d="M35.4,71.7c0-0.3,0.1-0.6,0.3-0.9C35.6,71,35.5,71.4,35.4,71.7z"></path>
+	<path d="M90.2,84H38c1.4-1.4,2.2-3,2.2-4.8V72c0-0.2,0.3-0.4,0.6-0.4h57.7c0.4,0,0.6,0.2,0.6,0.4v5.7   c0,1.6-0.9,3.2-2.7,4.4c-0.4,0.3-0.9,0.6-1.4,0.8c-0.3,0.1-0.6,0.3-0.9,0.4c0,0-0.1,0-0.1,0c-0.3,0.1-0.6,0.2-0.9,0.3   c-0.2,0-0.4,0.1-0.6,0.1c-0.2,0-0.4,0.1-0.6,0.1c-0.3,0-0.6,0.1-0.9,0.1C90.8,84,90.5,84,90.2,84z"></path>
+	<g>
+		<g>
+			<path d="M73,84v0.2h0L73,84L73,84z M73,64.9L73,64.9L73,64.9L73,64.9L73,64.9z"></path>
+		</g>
+		<g>
+			<path d="M22.1,1.6c-0.2,0.2-0.4,0.4-0.5,0.6C21.7,2,21.9,1.8,22.1,1.6z"></path>
+			<path d="M21.5,2.4C21.5,2.3,21.5,2.3,21.5,2.4L21.5,2.4c0-0.1,0-0.1,0.1-0.1C21.6,2.2,21.5,2.3,21.5,2.4     C21.5,2.3,21.5,2.3,21.5,2.4C21.5,2.3,21.5,2.3,21.5,2.4z"></path>
+		
+			<path d="M21.4,76.3C21.3,76.3,21.3,76.2,21.4,76.3c0-0.1,0-0.2,0-0.2v-0.2C21.3,76,21.3,76.1,21.4,76.3L21.4,76.3z"></path>
+			<path d="M21.4,76.6L21.4,76.6c0,0,0-0.1,0-0.2v0c0,0,0-0.1,0-0.1c0,0.1,0,0.1,0,0.2C21.4,76.5,21.4,76.6,21.4,76.6z"></path>
+			<path d="M21.7,77.3C21.6,77.2,21.6,77.2,21.7,77.3C21.6,77.2,21.6,77.2,21.7,77.3c-0.1-0.2-0.2-0.4-0.2-0.5     c0,0,0,0,0,0v-0.1c0,0,0,0,0,0.1C21.5,76.9,21.6,77,21.7,77.3C21.6,77.2,21.6,77.2,21.7,77.3C21.7,77.2,21.7,77.2,21.7,77.3z"></path>
+			<path d="M21.9,77.7C21.9,77.6,21.9,77.6,21.9,77.7c-0.1-0.1-0.1-0.2-0.1-0.2C21.8,77.5,21.8,77.5,21.9,77.7     C21.9,77.6,21.9,77.6,21.9,77.7z"></path>
+			<path d="M21.9,77.6L21.9,77.6C21.9,77.6,21.9,77.6,21.9,77.6C21.9,77.6,21.9,77.6,21.9,77.6z M21.7,77.2     C21.7,77.2,21.7,77.2,21.7,77.2C21.7,77.2,21.7,77.2,21.7,77.2C21.7,77.2,21.7,77.2,21.7,77.2z M21.5,76.7L21.5,76.7     c0,0.2,0.1,0.4,0.2,0.5h0C21.6,77,21.5,76.9,21.5,76.7z M21.5,2.3C21.5,2.3,21.5,2.3,21.5,2.3C21.5,2.3,21.5,2.3,21.5,2.3     L21.5,2.3z M21.4,2.7C21.4,2.7,21.4,2.7,21.4,2.7c0,0.1,0,0.2,0,0.2C21.4,2.9,21.4,2.8,21.4,2.7C21.4,2.7,21.4,2.7,21.4,2.7     C21.4,2.7,21.4,2.7,21.4,2.7z M21.3,68v0.3h0L21.3,68L21.3,68z M21.3,75.8v0.2c0,0.1,0,0.1,0,0.2c0,0,0,0,0,0.1v-0.1     C21.4,76.1,21.3,76,21.3,75.8z M21.4,76.6c0,0,0-0.1,0-0.2c0,0,0,0,0,0v0C21.4,76.5,21.4,76.6,21.4,76.6     C21.4,76.6,21.4,76.7,21.4,76.6L21.4,76.6C21.5,76.7,21.5,76.6,21.4,76.6z"></path>
+			<path d="M21.3,75.8v0.2c0,0.1,0,0.1,0,0.2c0,0,0,0,0,0.1v-0.1C21.4,76.1,21.3,76,21.3,75.8z M21.7,77.2     C21.7,77.2,21.7,77.2,21.7,77.2C21.7,77.2,21.7,77.2,21.7,77.2C21.7,77.2,21.7,77.2,21.7,77.2z M21.6,77.2     c-0.1-0.2-0.1-0.3-0.2-0.5c0,0,0,0,0-0.1c0,0,0-0.1,0-0.2c0,0,0,0,0,0v0c0,0,0,0.1,0,0.2c0,0,0,0,0,0.1c0,0,0,0,0,0     C21.5,76.9,21.6,77,21.6,77.2C21.6,77.2,21.6,77.2,21.6,77.2C21.7,77.2,21.7,77.2,21.6,77.2z M21.9,77.6c0-0.1-0.1-0.1-0.1-0.2     C21.8,77.5,21.8,77.5,21.9,77.6C21.9,77.6,21.9,77.6,21.9,77.6C21.9,77.6,21.9,77.6,21.9,77.6z"></path>
+			<path d="M77.5,0.1c-0.2,0-0.5,0-0.7,0h-52c-0.1,0-0.2,0-0.3,0c-2.1,0.2-3.8,1.5-3.8,3V68h0.6v0.3h-0.6v10.9     c0,2.8,3.3,5,7.4,5s7.3-2.3,7.3-5v-7.3c0-0.1,0-0.1,0-0.2c0-0.3,0.1-0.6,0.3-0.9c0,0,0,0,0,0c0.2-0.5,0.6-0.9,1.1-1.2     c0.5-0.5,1.2-0.9,2-1.2c0.5-0.2,1.1-0.3,1.8-0.3h40.6V3.1C81.2,1.6,79.6,0.4,77.5,0.1z M21.5,2.3C21.5,2.3,21.5,2.2,21.5,2.3     C21.6,2.2,21.6,2.3,21.5,2.3C21.5,2.3,21.5,2.3,21.5,2.3C21.5,2.3,21.5,2.3,21.5,2.3z M21.4,2.8C21.4,2.7,21.4,2.7,21.4,2.8     C21.4,2.7,21.4,2.7,21.4,2.8C21.4,2.7,21.4,2.7,21.4,2.8c0,0.1,0,0.1,0,0.2C21.4,2.9,21.4,2.8,21.4,2.8z M21.4,76.3     C21.4,76.3,21.4,76.3,21.4,76.3c0-0.1,0-0.2,0-0.2v-0.2C21.3,76,21.4,76.1,21.4,76.3L21.4,76.3z M21.5,76.7     C21.5,76.7,21.5,76.7,21.5,76.7c0-0.1,0-0.1,0-0.1c0,0,0-0.1,0-0.2v0c0,0,0,0,0,0c0,0,0,0.1,0,0.2C21.5,76.6,21.5,76.7,21.5,76.7     c0,0.1,0.1,0.3,0.2,0.4c0,0,0,0,0,0c0,0,0,0,0,0C21.6,77,21.5,76.9,21.5,76.7z M21.7,77.3C21.7,77.2,21.7,77.2,21.7,77.3     C21.7,77.2,21.7,77.2,21.7,77.3C21.7,77.2,21.7,77.2,21.7,77.3z M21.9,77.6c0-0.1-0.1-0.1-0.1-0.2C21.8,77.5,21.8,77.5,21.9,77.6     C21.9,77.6,21.9,77.6,21.9,77.6C21.9,77.6,21.9,77.6,21.9,77.6z M51.9,56.3H34c-2.3,0-4.2-1.7-4.2-3.9c0-2.1,1.9-3.9,4.2-3.9     h17.9c2.3,0,4.2,1.7,4.2,3.9C56,54.6,54.2,56.3,51.9,56.3z M73,65L73,65L73,65L73,65L73,65z M69.8,38.8H34     c-2.3,0-4.2-1.7-4.2-3.9c0-2.1,1.9-3.9,4.2-3.9h35.7c2.3,0,4.2,1.7,4.2,3.9C73.9,37.1,72.1,38.8,69.8,38.8z M69.8,21.3H34     c-2.3,0-4.2-1.7-4.2-3.9c0-2.1,1.9-3.9,4.2-3.9h35.7c2.3,0,4.2,1.7,4.2,3.9C73.9,19.5,72.1,21.3,69.8,21.3z"></path>
+			<path d="M25.1,0.1c-0.2,0-0.5,0-0.7,0C24.7,0.1,24.9,0.1,25.1,0.1l51.6,0c0.2,0,0.5,0,0.7,0c-0.2,0-0.5,0-0.7,0H25.1     z"></path>
+			<path d="M22.1,1.6c-0.2,0.2-0.4,0.4-0.5,0.6C21.7,2,21.9,1.8,22.1,1.6z"></path>
+			<path d="M21.5,2.4C21.5,2.3,21.5,2.3,21.5,2.4L21.5,2.4c0-0.1,0-0.1,0.1-0.1C21.6,2.2,21.5,2.3,21.5,2.4     C21.5,2.3,21.5,2.3,21.5,2.4C21.5,2.3,21.5,2.3,21.5,2.4z"></path>
+			<path d="M21.3,2.9c0-0.1,0-0.1,0-0.2c0,0,0,0,0-0.1c0,0,0,0,0,0c0,0,0,0.1,0,0.1C21.4,2.8,21.3,2.9,21.3,2.9z"></path>
+			<path d="M21.9,77.7C21.9,77.6,21.9,77.6,21.9,77.7c-0.1-0.1-0.1-0.2-0.1-0.2C21.8,77.5,21.8,77.5,21.9,77.7     C21.9,77.6,21.9,77.6,21.9,77.7z"></path>
+</g></g></svg>
+
+		
+                </span>
+            <div class="m-chip__body">
+                <div class="m-chip__content">
+                    <div class="u-table__cell">
+                        <h3 class="b-h3">Statements, Refunds and Repayments</h3>
+                        <p class="m-chip__content__text">
+                            Make a repayment, or apply for a payment statement, contribution statement or PRSI refund
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <a class="m-chip" href="/en/topics/calculators-and-estimators/" alt="Calculators and Estimators">
+                <span class="m-chip__label" style="background-color: #bd61ed;">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 36 36" style="enable-background:new 0 0 36 36;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;}
+</style>
+<path d="M29.5,0h-23C5.3,0,4.3,1,4.3,2.2v31.6c0,1.2,1,2.2,2.2,2.2h23c1.2,0,2.2-1,2.2-2.2V2.2C31.7,1,30.7,0,29.5,0z
+	 M13,30.5c0,1.4-1.1,2.5-2.5,2.5s-2.5-1.1-2.5-2.5v-0.1c0-1.4,1.1-2.5,2.5-2.5c0.7,0,1.3,0.3,1.8,0.7c0.5,0.5,0.7,1.1,0.7,1.8V30.5z
+	 M13,23.7c0,1.4-1.1,2.5-2.5,2.5s-2.5-1.1-2.5-2.5v-0.1c0-1.4,1.1-2.5,2.5-2.5c0.7,0,1.3,0.3,1.8,0.7c0.5,0.5,0.7,1.1,0.7,1.8V23.7z
+	 M13,16.9c0,1.4-1.1,2.5-2.5,2.5s-2.5-1.1-2.5-2.5v-0.1c0-1.4,1.1-2.5,2.5-2.5c0.7,0,1.3,0.3,1.8,0.7c0.5,0.5,0.7,1.1,0.7,1.8V16.9z
+	 M20.7,30.5c0,1.4-1.1,2.5-2.5,2.5c-1.4,0-2.5-1.1-2.5-2.5v-0.1c0-1.4,1.1-2.5,2.5-2.5c0.7,0,1.3,0.3,1.8,0.7
+	c0.5,0.5,0.7,1.1,0.7,1.8V30.5z M20.7,23.7c0,1.4-1.1,2.5-2.5,2.5c-1.4,0-2.5-1.1-2.5-2.5v-0.1c0-1.4,1.1-2.5,2.5-2.5
+	c0.7,0,1.3,0.3,1.8,0.7c0.5,0.5,0.7,1.1,0.7,1.8V23.7z M20.7,16.9c0,1.4-1.1,2.5-2.5,2.5c-1.4,0-2.5-1.1-2.5-2.5v-0.1
+	c0-1.4,1.1-2.5,2.5-2.5c0.7,0,1.3,0.3,1.8,0.7c0.5,0.5,0.7,1.1,0.7,1.8V16.9z M28.3,30.5c0,1.4-1.1,2.5-2.5,2.5
+	c-1.4,0-2.5-1.1-2.5-2.5v-0.1c0-1.4,1.1-2.5,2.5-2.5c0.7,0,1.3,0.3,1.8,0.7c0.5,0.5,0.7,1.1,0.7,1.8V30.5z M28.3,23.7
+	c0,1.4-1.1,2.5-2.5,2.5c-1.4,0-2.5-1.1-2.5-2.5v-0.1c0-1.4,1.1-2.5,2.5-2.5c0.7,0,1.3,0.3,1.8,0.7c0.5,0.5,0.7,1.1,0.7,1.8V23.7z
+	 M28.3,16.9c0,1.4-1.1,2.5-2.5,2.5c-1.4,0-2.5-1.1-2.5-2.5v-0.1c0-1.4,1.1-2.5,2.5-2.5c0.7,0,1.3,0.3,1.8,0.7
+	c0.5,0.5,0.7,1.1,0.7,1.8V16.9z M28.3,9.1c0,0.8-0.7,1.5-1.5,1.5H9.4c-0.8,0-1.5-0.7-1.5-1.5V5.6c0-0.8,0.7-1.5,1.5-1.5h17.4
+	c0.8,0,1.5,0.7,1.5,1.5V9.1z"></path>
+</svg>
+
+                </span>
+            <div class="m-chip__body">
+                <div class="m-chip__content">
+                    <div class="u-table__cell">
+                        <h3 class="b-h3">Calculators and Estimators</h3>
+                        <p class="m-chip__content__text">
+                            Calculate how additional income may affect a payment, or estimate potential redundancy payments
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <a class="m-chip" href="/en/topics/ukraine-emergency-supports/" alt="Ukraine Supports">
+                <span class="m-chip__label" style="background-color: #0057b8;">
+                    <svg xmlns:xlink="http://www.w3.org/1999/xlink" class="p-Iconography__iconpanel__icon__svg" style="fill:#ffd700;" version="1.1" xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+                                    <path d="m 902.64604,736.2348 c -37.99219,11.17418 -76.62289,20.43277 -115.57286,27.7758 a 133.45153,133.45153 0 0 1 -95.77861,55.87086 211.35146,211.35146 0 0 1 -37.67292,1.91557 919.7939,919.7939 0 0 1 -114.61506,-9.57786 h -9.57786 a 20.752032,20.752032 0 0 1 -18.19794,-22.34834 21.071294,21.071294 0 0 1 22.34834,-19.47499 v 0 c 3.19262,0 6.38524,0 9.57786,0 a 688.96746,688.96746 0 0 0 140.4753,7.34303 c 60.97904,-9.57786 79.17698,-45.97373 75.98436,-77.26141 a 49.804876,49.804876 0 0 0 -50.4434,-49.16635 1047.1795,1047.1795 0 0 1 -141.43308,-7.66229 780.59566,780.59566 0 0 0 -152.92651,-3.19262 504.75327,504.75327 0 0 0 -102.80237,31.9262 c -9.57787,4.15041 -19.15573,7.66229 -27.7758,11.81269 v 270.09568 a 1213.1957,1213.1957 0 0 0 243.27766,69.27983 c 121.00031,9.2586 359.16978,-127.70478 427.49186,-172.72073 A 63.852406,63.852406 0 0 0 902.64604,736.2348 Z"></path>
+                                    <path d="M 213.35932,636.94431 H 72.884025 a 28.733582,28.733582 0 0 0 -27.775793,28.09506 v 308.72638 a 28.733582,28.733582 0 0 0 27.775793,27.77585 H 213.35932 a 28.733582,28.733582 0 0 0 28.09506,-27.77585 V 665.03937 a 28.733582,28.733582 0 0 0 -28.09506,-28.09506 z"></path>
+                                    <path d="M 536.13323,525.52187 776.21827,285.43682 A 164.41994,164.41994 0 1 0 549.22297,47.586613 l -5.10819,5.10819 -26.81801,26.81801 -27.7758,-26.81801 a 164.73921,164.73921 0 0 0 -234.97685,2.23484 167.61256,167.61256 0 0 0 5.10819,234.338327 l 237.85021,237.85021 a 27.456534,27.456534 0 0 0 38.63071,0 z"></path>
+                                </svg>
+                </span>
+            <div class="m-chip__body">
+                <div class="m-chip__content">
+                    <div class="u-table__cell">
+                        <h3 class="b-h3">Ukraine Supports</h3>
+                        <p class="m-chip__content__text">
+                            Apply for the Accommodation Recognition Payment
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <a class="m-chip" href="/en/topics/appeals/" alt="Appeals">
+                <span class="m-chip__label" style="background-color: #00a0a7;">
+                    <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 36 36">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        fill-rule: evenodd;
+        stroke-width: 0px;
+      }
+    </style>
+  </defs>
+  <path class="cls-1" d="M35.6,28.9l-5.4-5.4-.2-.2v-.2c1.1-1.4,1.6-3.1,1.6-4.8,0-4-2.7-7.4-6.5-8.4,0,0,0,0,0,0-.7-.2-1.4-.3-2.1-.3-4.8,0-8.7,3.9-8.7,8.7,0,3.2,1.8,6.1,4.6,7.6,1.3.6,2.7,1,4.1,1s1.4,0,2.1-.3c0,0,0,0,0,0,.9-.3,1.8-.6,2.6-1.2h.2c0-.1.2,0,.2,0l5.4,5.4c.3.3.6.4,1,.4s.7-.2,1-.4c.6-.6.6-1.4,0-2M28.8,20.8c-.7,1.6-2,2.9-3.6,3.5,0,0,0,0-.1,0-.7.3-1.4.4-2.2.4h0c-1.7,0-3.3-.6-4.5-1.8-1.2-1.2-1.9-2.8-1.9-4.5,0-2.6,1.5-4.9,3.9-5.9.8-.3,1.6-.5,2.5-.5s1.5.1,2.2.4c0,0,0,0,.1,0,.8.3,1.5.8,2.2,1.4,1.8,1.8,2.4,4.5,1.4,6.9"></path>
+  <path class="cls-1" d="M22.8,7.8c.7,0,1.4,0,2.2.2v-2.7c0-1.3-1-2.3-2.3-2.3H2.3C1,3,0,4,0,5.3v25.4C0,32,1,33,2.3,33h20.3c1.3,0,2.3-1,2.3-2.3v-2.1c-.7.2-1.5.2-2.2.2-1.7,0-3.4-.4-4.9-1.2-3.4-1.8-5.6-5.4-5.6-9.3,0-5.8,4.7-10.6,10.6-10.6h0ZM3.6,19.8c.3-.3.6-.4,1-.4h4.3c.8,0,1.5.7,1.5,1.5s-.2.8-.4,1c-.3.3-.6.4-1,.4h-4.3c-.8,0-1.5-.7-1.5-1.5s.2-.8.4-1h0ZM3.2,15.2c0-.4.2-.8.4-1,.3-.3.6-.4,1-.4h4.3c.8,0,1.5.7,1.5,1.5s-.2.8-.4,1c-.3.3-.6.4-1,.4h-4.3c-.8,0-1.5-.7-1.5-1.5h0ZM13.3,26.5c0,.4-.2.8-.4,1-.3.3-.6.4-1,.4h-7.1c-.8,0-1.5-.7-1.5-1.5s.2-.8.4-1,.6-.4,1-.4h7.1c.8,0,1.5.7,1.5,1.5h0ZM12.7,10.5c-.3.3-.6.4-1,.4h-7.1c-.8,0-1.5-.7-1.5-1.5s.2-.8.4-1c.3-.3.6-.4,1-.4h7.1c.8,0,1.5.7,1.5,1.5s-.2.8-.4,1h0Z"></path>
+</svg>
+                </span>
+            <div class="m-chip__body">
+                <div class="m-chip__content">
+                    <div class="u-table__cell">
+                        <h3 class="b-h3">Appeals</h3>
+                        <p class="m-chip__content__text">
+                            Make an appeal on a decision related to your claim or view your current appeal status
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </a>
+
+
+
+
+    </div>
+    <aside class="t-doubleColumn__side" role="complementary">
+        
+        <a href="/en/sales-pages/back-to-school-clothing-and-footwear-allowance/" class="o-card --advertisement --advertisement--default" alt="Back to School Clothing and Footwear Allowance">
+        
+            <div class="o-card__body">
+                <header class="o-card__body__header">
+                    <h3 class="b-h3 o-card__body__header__title">Back to School Clothing and Footwear Allowance</h3>
+                        <div class="o-card__body__header__text --advertismentText"></div>
+                </header>
+                
+                    <div class="o-card__body__content__img " style="background-color: #ffffff;">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="219" width="204" viewBox="0 0 219.3 204.9"><defs>
+<style>
+.clsbts-1,.clsbts-8{fill:none}
+.clsbts-1{stroke:#ec9300;stroke-linecap:round;stroke-width:3px}
+.clsbts-1,.clsbts-10,.clsbts-3,.clsbts-8{stroke-miterlimit:10}.clsbts-3,.clsbts-5{fill:#d5def2}.clsbts-10,.clsbts-3,.clsbts-8{stroke:#24305e}.clsbts-3,.clsbts-8{stroke-width:8px}.cls-6{fill:#fff}.clsbts-10{fill:#f19602;stroke-width:5px}</style></defs><g data-name="Layer 2"><g data-name="Layer 1"><path class="clsbts-1" d="M217.8 77.4l-3.5 3.5M207.1 88.2l-3.6 3.5M203.5 77.4l3.6 3.5M214.3 88.2l3.5 3.5"></path><path d="M189.7 143.9h9.7a3.6 3.6 0 003.6-3.6v-33.5a3.6 3.6 0 00-.7-2 1.7 1.7 0 00-.1-.3l-6.3-10.9a1.6 1.6 0 00-2.8 0l-6.3 11a1 1 0 00-.1.2 3.6 3.6 0 00-.6 2v33.5a3.6 3.6 0 003.6 3.6zm10-37v26h-3.6v-26.5h3.3a.4.4 0 01.4.4zm-8.5-3.7l3.3-5.6 3.3 5.6v.2h-6.7zm-2 3.6a.4.4 0 01.4-.4h3.3l.1 26.6h-3.7zm0 29.4h10.5v4.1a.4.4 0 01-.4.4h-9.7a.4.4 0 01-.4-.4z" fill="#24305e"></path><path class="clsbts-3" d="M8.2 130.4h23.4a4.2 4.2 0 014.2 4.2v41.8a15.9 15.9 0 01-16 15.9 15.9 15.9 0 01-15.8-16v-41.7a4.2 4.2 0 014.2-4.2zM177.3 130.4h23.4a4.2 4.2 0 014.2 4.2v41.8a15.9 15.9 0 01-15.9 15.9 15.9 15.9 0 01-15.9-16v-41.7a4.2 4.2 0 014.2-4.2z"></path><path d="M84.6 23.2a19.2 19.2 0 0138.5 0" stroke="#f09602" stroke-width="8" stroke-miterlimit="10" fill="none"></path><path class="clsbts-5" d="M24.4 189.1c-.4 4.3 2.6 8 6.4 8h146c4 0 7-3.7 6.5-8L168 31.8c-.4-3.7-3.1-6.5-6.5-6.5H46.2c-3.4 0-6.2 2.8-6.5 6.5L32 109.5l-.9 9.2z"></path><path class="cls-6" d="M154.5 99.4H53.3c-10 0-17.6-8.3-16.6-17.7L42.3 32a6.7 6.7 0 016.8-5.9h109.6a6.8 6.8 0 016.8 5.9l5.5 49.7c1 9.4-6.6 17.7-16.5 17.7z"></path><path d="M165.2 198.1H42.5a18.2 18.2 0 01-18.1-19.8L37 32.9a10.7 10.7 0 0110.7-9.7H160a10.7 10.7 0 0110.7 9.7l12.7 145.4a18.2 18.2 0 01-18.2 19.8z" stroke-width="6" stroke="#96afdb" stroke-miterlimit="10" fill="none"></path><path class="clsbts-8" d="M167.1 200.9H40.6a18.8 18.8 0 01-18.8-20.5L35 30.4a11 11 0 0111-10h115.8a11 11 0 0111 10l13 150a18.8 18.8 0 01-18.7 20.5z"></path><path class="clsbts-5" d="M106.6 101H50.4c-9 0-14.1-8.4-13.2-18.1l3.1-50.7a6.4 6.4 0 016.3-6h41"></path><path d="M152.9 97.6H54.4c-9.6 0-17.1-7.7-16.1-16.6l4.4-46.6a6.5 6.5 0 016.6-5.5H158a6.5 6.5 0 016.6 5.5L169 81c1 8.9-6.5 16.6-16.1 16.6z" stroke="#96afdb" stroke-width="8" stroke-miterlimit="10" fill="none"></path><rect class="cls-6" x="45.5" y="114.8" width="117" height="64.8" rx="10.4"></rect><path class="clsbts-5" d="M43.8 118.3l.7 37.6c-1 13.1-.4 24.6 9.2 24.6h69.1l-13-65.7"></path><path class="clsbts-8" d="M157 180H50.7a8.7 8.7 0 01-8.7-8.7l3.3-47.9a8.7 8.7 0 018.7-8.7h99.7a8.7 8.7 0 018.7 8.7l3.3 48a8.7 8.7 0 01-8.7 8.6z"></path><rect class="clsbts-10" x="128.6" y="90.5" width="10.6" height="32.6" rx="5.3"></rect>
+<rect class="clsbts-10" x="68.6" y="90.5" width="10.6" height="32.6" rx="5.3"></rect></g></g></svg>
+                    </div>
+            </div>
+            
+                <footer class="o-card__footer">
+                    <div class="m-righthand__panel__footer__content">Find out more</div>
+                </footer>
+        </a>
+        <a href="/en/other-info-pages/change-payment-method/" class="o-card --advertisement --advertisement--default" alt="Change Your Payment Method">
+        
+            <div class="o-card__body">
+                <header class="o-card__body__header">
+                    <h3 class="b-h3 o-card__body__header__title">Change Your Payment Method</h3>
+                        <div class="o-card__body__header__text --advertismentText"></div>
+                </header>
+                
+                    <div class="o-card__body__content__img " style="background-color: #ffffff;">
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 200 200" xml:space="preserve" width="220" height="220"><style>.st0{fill:#96b2ed}.st1{fill:#0f2666}.st3{fill:#fff}.st4{fill:#f19600}.st6{fill:#24305e}.st8{fill:#d5def2}.st9{fill:#f19602}</style><path class="st4" d="M192.5 101.8c-.4 0-.7-.1-1-.4-.5-.5-.5-1.4 0-1.9l3.2-3.2c.5-.5 1.4-.5 1.9 0s.5 1.4 0 1.9l-3.2 3.2c-.2.3-.5.4-.9.4zM182.7 111.6c-.4 0-.7-.1-1-.4-.5-.5-.5-1.4 0-1.9l3.2-3.2c.5-.5 1.4-.5 1.9 0s.5 1.4 0 1.9l-3.2 3.2c-.2.3-.5.4-.9.4zM185.9 101.8c-.4 0-.7-.1-1-.4l-3.2-3.2c-.5-.5-.5-1.4 0-1.9s1.4-.5 1.9 0l3.2 3.2c.5.5.5 1.4 0 1.9-.2.3-.5.4-.9.4zM195.7 111.6c-.4 0-.7-.1-1-.4l-3.2-3.2c-.5-.5-.5-1.4 0-1.9s1.4-.5 1.9 0l3.2 3.2c.5.5.5 1.4 0 1.9-.2.3-.5.4-.9.4z"></path><path class="st0" d="M116.6 36.4v6.4H111v-6.4c0-1.3-.9-2.3-1.9-2.3H65.3c-1.1 0-1.9 1-1.9 2.3v6.4h-5.7v-6.4c0-4.9 3.4-9 7.6-9H109c4.2.1 7.6 4.1 7.6 9z"></path><path class="st0" d="M116.6 37.4v6.4H111v-6.4c0-1.3-.9-2.3-1.9-2.3H65.3c-1.1 0-1.9 1-1.9 2.3v6.4h-5.7v-6.4c0-4.9 3.4-9 7.6-9H109c4.2.1 7.6 4.1 7.6 9z"></path><path class="st1" d="M112.2 32.7v5.4h-5.7v-5.4c0-1.1-.9-1.9-1.9-1.9H60.7c-1.1 0-1.9.9-1.9 1.9v5.4H53v-5.4c0-4.2 3.4-7.6 7.6-7.6h43.9c4.3 0 7.7 3.4 7.7 7.6z"></path><path class="st0" d="M172.4 60.1v22.8c0 3.2-1.2 6.1-3.2 8.2v63.1c0 6-4.9 11-11 11H25.8c-6.1 0-11-4.9-11-11v-63c-2-2.2-3.2-5.1-3.2-8.3V60.1c0-6.8 5.5-12.3 12.3-12.3h136c7 0 12.5 5.5 12.5 12.3z"></path><path class="st8" d="M148.9 152.5H16.4c-4.5 0-8.1-3.6-8.1-8.1V66.1c0-4.5 3.6-8.1 8.1-8.1h132.5c4.5 0 8.1 3.6 8.1 8.1v78.3c0 4.5-3.6 8.1-8.1 8.1z"></path><path class="st1" d="M148.9 155.4H16.4c-6.1 0-11-4.9-11-11V66.1c0-6.1 4.9-11 11-11h132.5c6.1 0 11 4.9 11 11v78.3c-.1 6.1-5 11-11 11zM16.4 60.8c-2.9 0-5.3 2.4-5.3 5.3v78.3c0 2.9 2.4 5.3 5.3 5.3h132.5c2.9 0 5.3-2.4 5.3-5.3V66.1c0-2.9-2.4-5.3-5.3-5.3H16.4z"></path><g><path class="st8" d="M150.7 82.6h-136c-5.2 0-9.5-4.3-9.5-9.5V50.3c0-5.2 4.3-9.5 9.5-9.5h136c5.2 0 9.5 4.3 9.5 9.5v22.8c0 5.3-4.3 9.5-9.5 9.5z"></path><path class="st1" d="M150.7 85.5h-136C7.9 85.5 2.4 80 2.4 73.2V50.3C2.3 43.5 7.8 38 14.6 38h136c6.8 0 12.3 5.5 12.3 12.3v22.8c.1 6.8-5.4 12.4-12.2 12.4zM14.6 43.7c-3.7 0-6.7 3-6.7 6.7v22.8c0 3.7 3 6.7 6.7 6.7h136c3.7 0 6.7-3 6.7-6.7V50.3c0-3.7-3-6.7-6.7-6.7h-136z"></path></g><g><path class="st9" d="M126.3 68.9c2.5 0 4.4 2 4.4 4.4v18.6c0 2.5-2 4.4-4.4 4.4-2.5 0-4.4-2-4.4-4.4V73.3c0-2.4 2-4.4 4.4-4.4z"></path><path class="st1" d="M126.3 98.4c-3.6 0-6.5-2.9-6.5-6.5V73.3c0-3.6 2.9-6.5 6.5-6.5s6.5 2.9 6.5 6.5v18.6c0 3.6-2.9 6.5-6.5 6.5zm0-27.5c-1.3 0-2.4 1.1-2.4 2.4v18.6c0 1.3 1.1 2.4 2.4 2.4 1.3 0 2.4-1.1 2.4-2.4V73.3c0-1.3-1-2.4-2.4-2.4z"></path></g><g><path class="st9" d="M42.1 68.9c2.5 0 4.4 2 4.4 4.4v18.6c0 2.5-2 4.4-4.4 4.4-2.5 0-4.4-2-4.4-4.4V73.3c0-2.4 2-4.4 4.4-4.4z"></path><path class="st1" d="M42.1 98.4c-3.6 0-6.5-2.9-6.5-6.5V73.3c0-3.6 2.9-6.5 6.5-6.5s6.5 2.9 6.5 6.5v18.6c0 3.6-2.9 6.5-6.5 6.5zm0-27.5c-1.3 0-2.4 1.1-2.4 2.4v18.6c0 1.3 1.1 2.4 2.4 2.4 1.3 0 2.4-1.1 2.4-2.4V73.3c0-1.3-1.1-2.4-2.4-2.4z"></path></g><g><circle class="st0" cx="149.3" cy="149" r="42.8"></circle><path class="st3" d="M157.3 153.7c-2.9 2.9-6.7 5.8-12.9 5.8-7.3 0-13.9-4.5-16.5-11.4h-3.2c-1.2 0-2.1-1-2.1-2.1.1-1.2 1-2.1 2.2-2h2.1c-.1-.7-.1-1.4-.1-2.1v-1.1h-2.1c-1.2 0-2.1-1-2.1-2.1 0-1.2 1-2.1 2.1-2.1h2.9c1.1-3.7 3.4-6.8 6.4-9 3-2.2 6.6-3.5 10.5-3.5 6.2 0 10 2.9 12.9 5.8.8.8.8 2.1 0 3-.4.4-.9.6-1.5.6s-1.1-.2-1.5-.6c-2.9-2.9-5.4-4.5-9.9-4.5-5.4 0-10.3 3.3-12.4 8.3h13.4c1.2 0 2.1 1 2.1 2.1 0 1.2-1 2.1-2.1 2.1H131v1.1c0 .7.1 1.4.1 2h14.3c1.2 0 2.1 1 2.1 2.1 0 1.2-1 2.1-2.1 2.1h-12.9c2.3 4.5 6.9 7.3 12 7.2 4.4 0 7-1.7 9.9-4.6.4-.4.9-.6 1.5-.6s1.1.2 1.5.6c.8.7.8 2-.1 2.9z"></path><path class="st3" d="M142 106.3c-19.6 0-35.5 15.9-35.5 35.5s15.9 35.5 35.5 35.5 35.5-15.9 35.5-35.5-15.9-35.5-35.5-35.5zm15.3 47.4c-2.9 2.9-6.7 5.8-12.9 5.8-7.3 0-13.9-4.5-16.5-11.4h-3.2c-1.2 0-2.1-1-2.1-2.1.1-1.2 1-2.1 2.2-2h2.1c-.1-.7-.1-1.4-.1-2.1v-1.1h-2.1c-1.2 0-2.1-1-2.1-2.1 0-1.2 1-2.1 2.1-2.1h2.9c1.1-3.7 3.4-6.8 6.4-9 3-2.2 6.6-3.5 10.5-3.5 6.2 0 10 2.9 12.9 5.8.8.8.8 2.1 0 3-.4.4-.9.6-1.5.6s-1.1-.2-1.5-.6c-2.9-2.9-5.4-4.5-9.9-4.5-5.4 0-10.3 3.3-12.4 8.3h13.4c1.2 0 2.1 1 2.1 2.1 0 1.2-1 2.1-2.1 2.1H131v1.1c0 .7.1 1.4.1 2h14.3c1.2 0 2.1 1 2.1 2.1 0 1.2-1 2.1-2.1 2.1h-12.9c2.3 4.5 6.9 7.3 12 7.2 4.4 0 7-1.7 9.9-4.6.4-.4.9-.6 1.5-.6s1.1.2 1.5.6c.8.7.8 2-.1 2.9z"></path><path d="M157.3 153.7c-2.9 2.9-6.7 5.8-12.9 5.8-7.3 0-13.9-4.5-16.5-11.4h-3.2c-1.2 0-2.1-1-2.1-2.1.1-1.2 1-2.1 2.2-2h2.1c-.1-.7-.1-1.4-.1-2.1v-1.1h-2.1c-1.2 0-2.1-1-2.1-2.1 0-1.2 1-2.1 2.1-2.1h2.9c1.1-3.7 3.4-6.8 6.4-9 3-2.2 6.6-3.5 10.5-3.5 6.2 0 10 2.9 12.9 5.8.8.8.8 2.1 0 3-.4.4-.9.6-1.5.6s-1.1-.2-1.5-.6c-2.9-2.9-5.4-4.5-9.9-4.5-5.4 0-10.3 3.3-12.4 8.3h13.4c1.2 0 2.1 1 2.1 2.1 0 1.2-1 2.1-2.1 2.1H131v1.1c0 .7.1 1.4.1 2h14.3c1.2 0 2.1 1 2.1 2.1 0 1.2-1 2.1-2.1 2.1h-12.9c2.3 4.5 6.9 7.3 12 7.2 4.4 0 7-1.7 9.9-4.6.4-.4.9-.6 1.5-.6s1.1.2 1.5.6c.8.7.8 2-.1 2.9z" fill="#232e5b"></path><g><path class="st6" d="M113 119.8c-.6.8-1.2 1.6-1.7 2.4.6-.8 1.1-1.6 1.7-2.4zM160.1 110.2c-5.3-3-11.5-4.8-18.1-4.8-9.4 0-18 3.6-24.5 9.4 6.5-5.9 15-9.5 24.5-9.5 6.6.1 12.7 1.9 18.1 4.9z"></path><path class="st1" d="M157.3 153.7c-2.9 2.9-6.7 5.8-12.9 5.8-7.3 0-13.9-4.5-16.5-11.4h-3.2c-1.2 0-2.1-1-2.1-2.1.1-1.2 1-2.1 2.2-2h2.1c-.1-.7-.1-1.4-.1-2.1v-1.1h-2.1c-1.2 0-2.1-1-2.1-2.1 0-1.2 1-2.1 2.1-2.1h2.9c1.1-3.7 3.4-6.8 6.4-9 3-2.2 6.6-3.5 10.5-3.5 6.2 0 10 2.9 12.9 5.8.8.8.8 2.1 0 3-.4.4-.9.6-1.5.6s-1.1-.2-1.5-.6c-2.9-2.9-5.4-4.5-9.9-4.5-5.4 0-10.3 3.3-12.4 8.3h13.4c1.2 0 2.1 1 2.1 2.1 0 1.2-1 2.1-2.1 2.1H131v1.1c0 .7.1 1.4.1 2h14.3c1.2 0 2.1 1 2.1 2.1 0 1.2-1 2.1-2.1 2.1h-12.9c2.3 4.5 6.9 7.3 12 7.2 4.4 0 7-1.7 9.9-4.6.4-.4.9-.6 1.5-.6s1.1.2 1.5.6c.8.7.8 2-.1 2.9z"></path><path class="st6" d="M170.9 119.8c-.6-.8-1.2-1.5-1.9-2.3.7.7 1.3 1.5 1.9 2.3zM175.9 128.8c-.1-.1-.1-.3-.2-.4-.1-.2-.2-.5-.3-.8l.3.6s0 .1.1.1c0 .2.1.3.1.5zM176.1 129.3c0-.1 0-.1-.1-.2.1.1.1.1.1.2zM178.4 141.8c0 20.1-16.3 36.4-36.4 36.4-20.1 0-36.4-16.3-36.4-36.4 0-5.9 1.4-11.4 3.9-16.3-2.4 4.9-3.8 10.4-3.8 16.3 0 20.1 16.3 36.4 36.4 36.4s36.2-16.3 36.3-36.4c0-1.4-.1-2.7-.3-4.1 0-.2-.1-.4-.1-.7 0-.2-.1-.4-.1-.7-.2-1.3-.4-2.6-.8-3.8-.1-.2-.1-.5-.2-.7-.1-.3-.2-.6-.3-1-.1-.2-.1-.5-.2-.7-.1-.2-.2-.5-.2-.7.1.2.1.4.2.6 0 .1 0 .1.1.2.1.2.2.5.2.8.1.3.2.6.2.9.1.2.1.4.2.6.1.2.1.5.2.7.1.2.1.5.2.7.1.3.1.6.2.8 0 .2.1.4.1.6.1.4.1.7.2 1 0 .2.1.5.1.7 0 .2.1.4.1.6.1 1.5.2 2.8.2 4.2z"></path><g><path d="M175.7 128.2v.1c.1 0 0-.1 0-.1zm.7 1.9v.2c.1-.1.1-.1 0-.2z" fill="#97b0dc"></path><path class="st1" d="M142 98.7c-23.8 0-43.1 19.3-43.1 43.1s19.3 43.1 43.1 43.1 43.1-19.3 43.1-43.1-19.3-43.1-43.1-43.1zm0 79.5c-20.1 0-36.4-16.3-36.4-36.4 0-5.9 1.4-11.4 3.9-16.3.6-1.1 1.2-2.2 1.9-3.3.5-.8 1.1-1.6 1.7-2.4.2-.3.4-.5.6-.8.4-.5.8-1 1.3-1.5.4-.5.9-1 1.4-1.4.4-.4.8-.8 1.3-1.2 6.5-5.9 15-9.5 24.5-9.5 6.6 0 12.8 1.8 18.1 4.8.6.3 1.1.7 1.7 1 .8.5 1.6 1.1 2.4 1.7.3.2.5.4.8.6.5.4 1 .8 1.5 1.3.4.4.8.8 1.3 1.2l1.4 1.4c.7.7 1.3 1.5 1.9 2.3.6.8 1.2 1.6 1.7 2.4.5.7.9 1.4 1.3 2.2.2.4.4.7.6 1.1.2.3.3.6.4.9.1.3.3.6.4.9 0 .1.1.2.1.2l.3.6s0 .1.1.1c.1.1.1.3.2.4.1.1.1.2.1.4 0 .1 0 .1.1.2 0 .1.1.2.1.2.1.2.1.4.2.6 0 .1 0 .1.1.2.1.2.2.5.2.8.1.3.2.6.2.9.1.2.1.4.2.6.1.2.1.5.2.7.1.2.1.5.2.7.1.3.1.6.2.8 0 .2.1.4.1.6.1.4.1.7.2 1 0 .2.1.5.1.7 0 .2.1.4.1.6.2 1.3.2 2.7.2 4.1-.5 20.3-16.9 36.6-36.9 36.6z"></path><path class="st0" d="M178.1 137.7c0-.2-.1-.4-.1-.7 0-.2-.1-.4-.1-.7-.2-1.3-.4-2.6-.8-3.8-.1-.2-.1-.5-.2-.7-.1-.3-.2-.6-.3-1-.1-.5-.3-1-.5-1.4 0-.1-.1-.2-.1-.2 0-.1 0-.1-.1-.2 0-.1-.1-.2-.1-.4-.1-.1-.1-.3-.2-.4-.1-.2-.2-.5-.3-.8 0-.1-.1-.2-.1-.2-.1-.3-.3-.6-.4-.9-.1-.3-.3-.6-.4-.9-.2-.4-.4-.8-.6-1.1-.4-.7-.8-1.5-1.3-2.2-.5-.8-1.1-1.6-1.7-2.4-.6-.8-1.2-1.5-1.9-2.3-.4-.5-.9-1-1.4-1.4-.4-.4-.8-.8-1.3-1.2-.5-.4-1-.9-1.5-1.3-.3-.2-.5-.4-.8-.6-.8-.6-1.6-1.2-2.4-1.7-.5-.4-1.1-.7-1.7-1-5.3-3-11.5-4.8-18.1-4.8-9.4 0-18 3.6-24.5 9.4-.4.4-.8.8-1.3 1.2l-1.4 1.4c-.4.5-.8 1-1.3 1.5-.2.2-.4.5-.6.8-.6.8-1.2 1.6-1.7 2.4-.7 1.1-1.3 2.2-1.9 3.3-2.4 4.9-3.8 10.4-3.8 16.3 0 20.1 16.3 36.4 36.4 36.4s36.4-16.3 36.4-36.4c.3-1.3.3-2.6.1-4zM142 177.3c-19.6 0-35.5-15.9-35.5-35.5s15.9-35.5 35.5-35.5 35.5 15.9 35.5 35.5-15.9 35.5-35.5 35.5z"></path></g></g></g></svg>
+                    </div>
+            </div>
+            
+                <footer class="o-card__footer">
+                    <div class="m-righthand__panel__footer__content">Find out more</div>
+                </footer>
+        </a>
+
+
+    </aside>
+</div>
+
+    </div>
+
+    
+
+<footer class="t-footer --withBackground" role="contentinfo">
+    <div class="t-footer__container">
+        <div class="t-footer__services">
+            <h3 class="b-h3">MyWelfare Services</h3>
+
+            <div class="t-footer__body">
+                <ul class="t-footer__body__serviceList --twoColumns">
+                        <li class="t-footer__body__serviceList__item">
+                            <a class="a-link" href="/en/topics/pathways-to-work/" alt="Pathways to Work">Pathways to Work</a>
+                        </li>
+                        <li class="t-footer__body__serviceList__item">
+                            <a class="a-link" href="/en/topics/parents-children-family/" alt="Parents, Children, Family">Parents, Children, Family</a>
+                        </li>
+                        <li class="t-footer__body__serviceList__item">
+                            <a class="a-link" href="/en/topics/out-of-work-payments/" alt="Out of Work Payments">Out of Work Payments</a>
+                        </li>
+                        <li class="t-footer__body__serviceList__item">
+                            <a class="a-link" href="/en/topics/health-disability-illness/" alt="Health, Disability, Illness">Health, Disability, Illness</a>
+                        </li>
+                        <li class="t-footer__body__serviceList__item">
+                            <a class="a-link" href="/en/topics/identity-services/" alt="Accessing Public Services">Accessing Public Services</a>
+                        </li>
+                        <li class="t-footer__body__serviceList__item">
+                            <a class="a-link" href="/en/topics/community-welfare-services/" alt="Community Welfare Services">Community Welfare Services</a>
+                        </li>
+                        <li class="t-footer__body__serviceList__item">
+                            <a class="a-link" href="/en/topics/pensions-and-older-people/" alt="Pensions and Older People">Pensions and Older People</a>
+                        </li>
+                        <li class="t-footer__body__serviceList__item">
+                            <a class="a-link" href="/en/topics/statements-refunds-and-repayments/" alt="Statements, Refunds and Repayments">Statements, Refunds and Repayments</a>
+                        </li>
+                        <li class="t-footer__body__serviceList__item">
+                            <a class="a-link" href="/en/topics/calculators-and-estimators/" alt="Calculators and Estimators">Calculators and Estimators</a>
+                        </li>
+                        <li class="t-footer__body__serviceList__item">
+                            <a class="a-link" href="/en/topics/ukraine-emergency-supports/" alt="Ukraine Supports">Ukraine Supports</a>
+                        </li>
+                        <li class="t-footer__body__serviceList__item">
+                            <a class="a-link" href="/en/topics/appeals/" alt="Appeals">Appeals</a>
+                        </li>
+                </ul>
+            </div>
+        </div>
+
+                <div class="t-footer__moreInformations">
+                    <h3 class="b-h3">
+                        More information
+                    </h3>
+
+                    <div class="t-footer__body">
+                        <ul class="t-footer__body__infoList list-group">
+                                <li class="t-footer__body__infoList__item">
+                                    <a class="a-link" href="/en/other-info-pages/contact-us/" alt="">Contact us</a>
+                                </li>
+                                <li class="t-footer__body__infoList__item">
+                                    <a class="a-link" href="/en/sales-pages/get-the-most-from-your-mywelfare-account/" alt="">MyWelfare</a>
+                                </li>
+                                <li class="t-footer__body__infoList__item">
+                                    <a class="a-link" href="/en/other-info-pages/mywelfare-security-page/">Security</a>
+                                </li>
+                                <li class="t-footer__body__infoList__item">
+                                    <a class="a-link" href="/en/other-info-pages/alert-on-scam-phone-calls-and-scam-text-messages/">Phishing and Fraud Alert</a>
+                                </li>
+                        </ul>
+                    </div>
+                </div>
+
+        <div class="t-footer__info">
+                    <ul class="t-footer__info__list">
+                                <li>
+                                    <a class="a-link" href="https://www.gov.ie/en/organisation-information/534503-privacy-statement/" alt="_blank">Privacy</a>
+                                </li>
+                                <li>
+                                    <a class="a-link" href="https://www.gov.ie/en/" alt="_blank">Gov.ie</a>
+                                </li>
+                                <li>
+                                    <a class="a-link" href="/en/other-info-pages/cookies-on-mywelfare/">Cookies</a>
+                                </li>
+                                <li>
+                                    <a class="a-link" href="/en/other-info-pages/accessibility-statement/">Accessibility Statement</a>
+                                </li>
+                    </ul>
+            <div class="t-footer__logo">
+                <a href="/" class="a-myWelfareLogo" alt="MyWelfare">
+                    
+<svg class="MyWelfareLogo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 35.7" fill="#fff" width="180" height="36" aria-label="MyWelfare">
+    <title>MyWelfare</title>
+    <path data-name="Path 7122" class="cls-1" d="M7.6 3.1l1.5 3 1.8 3.9 1.9 4.3 1.8 4.1 1.8-4.1 1.9-4.3 1.8-3.9 1.5-3h5.3l.7 5.7.6 6.6.4 6.9.4 6.5h-5.6l-.3-8.2-.6-8.9-1.5 3.5-1.6 3.8-1.5 3.6-1.3 3h-4l-1.3-3L9.8 19l-1.6-3.8-1.5-3.5-.6 8.9-.3 8.2H0l.4-6.5.4-6.9c.2-2.2.3-4.4.6-6.5l.7-5.7h5.5z"></path>
+    <path data-name="Path 7123" class="cls-1" d="M51.1 9.3a165 165 0 0 1-3.5 10.6 102 102 0 0 1-4 9.6 12.1 12.1 0 0 1-1.6 2.8 8 8 0 0 1-1.7 1.9 5.3 5.3 0 0 1-2.1 1.1 11 11 0 0 1-2.7.4 16.6 16.6 0 0 1-2.4-.2 7.8 7.8 0 0 1-1.8-.5l1-4.4 1.5.4a6.2 6.2 0 0 0 1.4.1 3.2 3.2 0 0 0 2.3-.8 7.6 7.6 0 0 0 1.4-2.2c-1.3-2.5-2.5-5.3-3.8-8.3a89.5 89.5 0 0 1-3.6-10.4h5.9a21.2 21.2 0 0 0 .9 3.1l1.1 3.4 1.1 3.4 1.1 3 1-3 1-3.4 1-3.4.8-3.1h5.7z"></path>
+    <path data-name="Path 7124" class="cls-1" d="M69.7 6.3q1.8 6 3.6 10.8l3.5 8.9c.9-2.9 1.7-6.4 2.6-10.3.9-4 1.7-8.1 2.5-12.6h2.5L83 10.6l-1.4 6.6-1.6 6q-.8 2.9-1.8 5.7h-2.7l-1.7-4.2-1.7-4.4-1.7-4.7-1.7-5.2a303 303 0 0 0-1.7 5.2l-1.7 4.7-1.7 4.4-1.8 4.2h-2.7a54 54 0 0 1-1.8-5.7l-1.6-6-1.4-6.6L53 3.2h2.6l1.2 6.4 1.2 6.1 1.3 5.6 1.4 4.8 3.4-8.9c1.2-3.2 2.4-6.8 3.6-10.8h2z"></path>
+    <path data-name="Path 7125" class="cls-1" d="M87.3 19.3a11.6 11.6 0 0 1 .7-4.4 9.6 9.6 0 0 1 1.9-3.1 8.3 8.3 0 0 1 2.7-1.9 8.1 8.1 0 0 1 3.1-.6 7.2 7.2 0 0 1 5.6 2.3c1.4 1.5 2.1 3.9 2.1 7.1v.6a1.3 1.3 0 0 1-.1.6H89.8a8.9 8.9 0 0 0 1.7 5.4c1.1 1.3 2.8 1.9 5.2 1.9a8.6 8.6 0 0 0 3.1-.4l1.7-.6.4 2.1a10.3 10.3 0 0 1-2 .7 11.8 11.8 0 0 1-3.4.4 11 11 0 0 1-4.3-.7 7 7 0 0 1-2.9-2.1 9 9 0 0 1-1.7-3.2 27.3 27.3 0 0 1-.3-4.1zm13.6-1.6a7.3 7.3 0 0 0-1.4-4.7 4.7 4.7 0 0 0-3.8-1.7 5.6 5.6 0 0 0-2.3.5 4.9 4.9 0 0 0-1.8 1.4 8.2 8.2 0 0 0-1.2 2 6.9 6.9 0 0 0-.5 2.4h11z"></path>
+    <path data-name="Path 7126" class="cls-1" d="M113.6 29.2a6.6 6.6 0 0 1-2.1-.3 3.6 3.6 0 0 1-2.4-2.4 7.5 7.5 0 0 1-.3-2.3V.5l2.4-.4v24.1a4.6 4.6 0 0 0 .2 1.4 2.6 2.6 0 0 0 .5.9 2 2 0 0 0 .9.5l1.3.3z"></path>
+    <path data-name="Path 7127" class="cls-1" d="M125.3 0a15.7 15.7 0 0 1 2.5.2 11 11 0 0 1 1.3.4l-.5 2.1a8.3 8.3 0 0 0-1.2-.4 10.3 10.3 0 0 0-2-.2 4.6 4.6 0 0 0-3.7 1.3 6.8 6.8 0 0 0-1.1 4.2v2h7.7v2h-7.7v17.3h-2.4V7.6a8.1 8.1 0 0 1 1.7-5.6 7 7 0 0 1 5.4-2z"></path>
+    <path data-name="Path 7128" class="cls-1" d="M138.1 9.2a9.8 9.8 0 0 1 3.2.5 5.7 5.7 0 0 1 2.1 1.5 7.8 7.8 0 0 1 1.2 2.2 12.6 12.6 0 0 1 .4 2.8v12.1a2.7 2.7 0 0 1-1.1.2l-1.6.3a12.5 12.5 0 0 1-2.1.2 17.7 17.7 0 0 1-2.3.1 12 12 0 0 1-2.8-.3 5 5 0 0 1-2.2-1.1 5.8 5.8 0 0 1-1.5-1.9 6.1 6.1 0 0 1-.5-2.8 6 6 0 0 1 .6-2.7 4.9 4.9 0 0 1 1.7-1.8 8.9 8.9 0 0 1 2.6-1.1 16.6 16.6 0 0 1 3.2-.3 4.5 4.5 0 0 1 1.1.1l1.1.1a6.4 6.4 0 0 1 .9.2l.5.2v-1.2a13.4 13.4 0 0 0-.1-2 3.6 3.6 0 0 0-.7-1.7 3.3 3.3 0 0 0-1.4-1.2 5.4 5.4 0 0 0-2.4-.5 12.7 12.7 0 0 0-3.2.3l-1.5.5-.3-2.1a9.8 9.8 0 0 1 2-.6h3.1zm.2 17.9a19.3 19.3 0 0 0 2.5-.1l1.8-.2V20a6.8 6.8 0 0 0-1.3-.4 14.7 14.7 0 0 0-2.5-.2 12.8 12.8 0 0 0-1.9.1 6.4 6.4 0 0 0-1.8.6 3.7 3.7 0 0 0-1.3 1.2 4 4 0 0 0-.5 2 3.4 3.4 0 0 0 .4 1.8 3 3 0 0 0 1 1.2 6 6 0 0 0 1.6.7 11.5 11.5 0 0 0 2 .1z"></path>
+    <path data-name="Path 7129" class="cls-1" d="M157.7 9.3a15 15 0 0 1 2.2.2 4 4 0 0 1 1.5.4l-.5 2.1a5 5 0 0 0-1.2-.3 14.4 14.4 0 0 0-2.4-.2 15.7 15.7 0 0 0-2.5.2 4 4 0 0 0-1.2.4v16.8h-2.4V10.6a10 10 0 0 1 2.6-.8 10.9 10.9 0 0 1 3.9-.5z"></path>
+    <path data-name="Path 7130" class="cls-1" d="M163.9 19.3a11.6 11.6 0 0 1 .7-4.4 9.6 9.6 0 0 1 1.9-3.1 8.3 8.3 0 0 1 2.7-1.9 8.1 8.1 0 0 1 3.1-.6 7.2 7.2 0 0 1 5.6 2.3c1.4 1.5 2.1 3.9 2.1 7.1v.6a1.3 1.3 0 0 1-.1.6h-13.5a8.9 8.9 0 0 0 1.7 5.4c1.1 1.3 2.8 1.9 5.2 1.9a8.6 8.6 0 0 0 3.1-.4l1.7-.6.4 2.1a10.3 10.3 0 0 1-2 .7 11.8 11.8 0 0 1-3.4.4 11 11 0 0 1-4.3-.7 7 7 0 0 1-2.9-2.1 9 9 0 0 1-1.7-3.2 27.3 27.3 0 0 1-.3-4.1zm13.6-1.6a7.3 7.3 0 0 0-1.4-4.7 4.7 4.7 0 0 0-3.8-1.7 5.6 5.6 0 0 0-2.3.5 4.9 4.9 0 0 0-1.8 1.4 8.2 8.2 0 0 0-1.2 2 6.9 6.9 0 0 0-.5 2.4h11z"></path>
+</svg>
+                </a>
+            </div>
+        </div>
+
+        <div class="t-footer__copyright">© 2024 Department of Social Protection</div>
+    </div>
+</footer>
+
+    <script src="/scripts/bundle.js?v=du4vBsSCzDA-dC355Qm4wBYkuX-H1CS9lLhdM_SFssE"></script>
+
+        <script src="/scripts/cookies.js?v=K19EuSFxSJ-kfPcZWa3efHIOi-MSMrMVfGjMM96Dwu8" defer=""></script>
+
+    
+
+
+
+</body></html>
