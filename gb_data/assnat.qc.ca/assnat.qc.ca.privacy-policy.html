@@ -1,0 +1,1364 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
+
+    <!-- Enonces d'inclusion de fichiers JS et CSS -->
+    
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+<meta http-equiv="content-language" content="fr">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<link type="text/css" href="/styles/ResetCSS.min.css" rel="stylesheet" media="screen">
+<link type="text/css" href="/styles/AssNat.min.css" rel="stylesheet" media="screen">
+<link type="text/css" href="/styles/Reguliere.css" title="Reguliere" rel="alternate stylesheet" media="screen">
+<link type="text/css" href="/styles/Moyenne.css" title="Moyenne" rel="alternate stylesheet" media="screen">
+<link type="text/css" href="/styles/Grande.css" title="Grande" rel="alternate stylesheet" media="screen">
+<link type="text/css" href="/styles/infoBulle.min.css" rel="stylesheet" media="screen">
+<link type="text/css" href="/styles/jScrollPane.min.css" rel="stylesheet" media="screen">
+<link type="text/css" href="/styles/jquery.treeview.min.css" rel="stylesheet" media="screen">
+<link type="text/css" href="/styles/jquery.skinned-select.min.css" rel="stylesheet" media="screen">
+<link type="text/css" href="/styles/jquery.datePicker.min.css" rel="stylesheet" media="screen">
+<link type="text/css" href="/styles/Calendrier.min.css" rel="stylesheet" media="screen">
+<link href="/Images/favicon.ico" rel="shortcut icon">
+
+<!-- Didomi -->
+<link rel="preconnect" as="script" href="https://sdk.privacy-center.org/"><link rel="dns-prefetch" as="script" href="https://sdk.privacy-center.org/"><link rel="preload" as="script" href="https://sdk.privacy-center.org/196da249-e5c8-4975-84d3-4b76bf16efd6/loader.js?target_type=notice&amp;target=UgnH3adf"><script type="text/javascript" async="" src="https://stats.assnat.qc.ca/piwik/matomo.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-KTMHVEF0VV&amp;l=dataLayer&amp;cx=c"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-5X47H2N"></script><script id="spcloader" type="text/javascript" async="" charset="utf-8" src="https://sdk.privacy-center.org/196da249-e5c8-4975-84d3-4b76bf16efd6/loader.js?target_type=notice&amp;target=UgnH3adf"></script><script type="text/javascript">window.gdprAppliesGlobally = false; (function () { (function (e, r) { var t = document.createElement("link"); t.rel = "preconnect"; t.as = "script"; var n = document.createElement("link"); n.rel = "dns-prefetch"; n.as = "script"; var i = document.createElement("link"); i.rel = "preload"; i.as = "script"; var o = document.createElement("script"); o.id = "spcloader"; o.type = "text/javascript"; o["async"] = true; o.charset = "utf-8"; var a = "https://sdk.privacy-center.org/" + e + "/loader.js?target_type=notice&target=" + r; if (window.didomiConfig && window.didomiConfig.user) { var c = window.didomiConfig.user; var s = c.country; var d = c.region; if (s) { a = a + "&country=" + s; if (d) { a = a + "&region=" + d } } } t.href = "https://sdk.privacy-center.org/"; n.href = "https://sdk.privacy-center.org/"; i.href = a; o.src = a; var p = document.getElementsByTagName("script")[0]; p.parentNode.insertBefore(t, p); p.parentNode.insertBefore(n, p); p.parentNode.insertBefore(i, p); p.parentNode.insertBefore(o, p) })("196da249-e5c8-4975-84d3-4b76bf16efd6", "UgnH3adf") })();</script>
+
+
+<!-- Feuilles de styles specifiques IE -->
+
+<!--[if lte IE 6]>
+    <link type="text/css" href="/styles/CorrectionsIE6.min.css" rel="stylesheet" media="screen"  />
+<![endif]-->
+
+<!--[if IE 7]>
+    <link type="text/css" href="/styles/CorrectionsIE7.min.css" rel="stylesheet" media="screen"  />
+<![endif]-->
+
+<!--[if IE 8]>
+    <link type="text/css" href="/styles/CorrectionsIE8.min.css" rel="stylesheet" media="screen"  />
+<![endif]-->
+<link type="text/css" href="/styles/Impression.min.css" rel="stylesheet" media="print">
+
+<link type="text/css" href="/styles/Tableau.min.css" rel="stylesheet" media="screen">
+
+<script type="text/javascript" src="/scripts/jquery.js?version=1.2.6"></script>
+
+<script type="text/javascript" src="/scripts/jquery-ui.js?version=1.5.2"></script>
+
+<!-- Google Tag Manager -->
+<script>(function (w, d, s, l, i) {
+        w[l] = w[l] || []; w[l].push({
+            'gtm.start':
+                new Date().getTime(), event: 'gtm.js'
+        }); var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+})(window, document, 'script', 'dataLayer', 'GTM-5X47H2N');</script> 
+<!-- End Google Tag Manager -->
+
+
+<script type="text/javascript">
+//<![CDATA[
+// Libellé du calendrier
+$.dpText = {
+	TEXT_PREV_YEAR		:	'Année précédente',
+	TEXT_PREV_MONTH		:	'Mois précédent',
+	TEXT_NEXT_YEAR		:	'Année suivante',
+	TEXT_NEXT_MONTH		:	'Mois suivant',
+	TEXT_CLOSE			:	'[x] Fermer',
+	TEXT_CHOOSE_DATE	:	'Choisir une date'
+}
+
+var _contenuLoading = '<img style="width: 16px;height: 16px;" src="/Images/lightbox/loading.gif" />&nbsp; Chargement en cours...';
+
+var _nbAnneeArchiveActivite = '3';
+// Voir Calendrier.js pour _dtSetStartDate
+var _dtSetEndDate = '2024-08-31';
+var intNombreAnneeArchiveActivite = 3;
+var langueCourante = 'fr';
+
+_initCalendrierTypeActiviteJSON = eval([{"NomTypeActivite":"Autres activités","Categorie":"D","Name":null,"Description":null},{"NomTypeActivite":"Conférences et points de presse","Categorie":"C","Name":null,"Description":null},{"NomTypeActivite":"Séances de l'Assemblée","Categorie":"A","Name":null,"Description":null},{"NomTypeActivite":"Séances des commissions","Categorie":"B","Name":null,"Description":null}]);name 
+_urlGetCalendrierDataJSON = '/WebMethod/Calendrier.aspx/GetCalendrier?langue=fr';
+_documentURL = "https://www.assnat.qc.ca/Media/Process.aspx?process=Thumbnail&token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz&MediaId=";
+_imageThumbnailURL = "https://www.assnat.qc.ca/Media/Process.aspx?process=AlbumThumbnail&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz&amp;asset=";
+_imageOriginaleURL = "https://www.assnat.qc.ca/Media/Process.aspx?process=Original&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz&amp;asset=";
+_imageThumbnailDrapeauURL = "https://www.assnat.qc.ca/Media/Process.aspx?process=ThumbnailDrapeau&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz&amp;asset=";
+_lienContenuURL = "/fr/deputes/index";
+_extensionPagesDuSite = "html";
+_lienPatronUrlCommuniquePresse = '/fr/actualites-salle-presse/communiques/';
+_lienPatronUrlTranscription = '/fr/actualites-salle-presse/conferences-points-presse/';
+_lienPatronUrlEnDirect = '/fr/video-audio/index';
+_lienJournalDebat ='/fr/travaux-parlementaires/{0}.html';
+_lienJournalDebatCom ='/fr/travaux-parlementaires/commissions/{0}/journal-debats/index';
+_lienJournalDebatChmbr ='/fr/travaux-parlementaires/{0}';
+_listeObjetMetierPatronUrl = "DocumentGenerique:/fr/document/{0}.html|Commission:/fr/travaux-parlementaires/commissions/{0}/index.html|Mandat:/fr/travaux-parlementaires/mandats/{0}/index.html|Lien:/fr/lien/{0}.html|CommuniquePresse:/fr/actualites-salle-presse/communiques/{0}.html|Actualite:/fr/actualites-salle-presse/nouvelle/{0}.html|ConferencePointPresse:/fr/actualites-salle-presse/conferences-points-presse/{0}.html|Consultation:/fr/travaux-parlementaires/consultations/{0}.html|SeanceAssemblee:/fr/travaux-parlementaires/assemblee-nationale/{0}/index.html|ProjetLoi:/fr/travaux-parlementaires/projets-loi/projet-loi-{0}.html|VideoAudio:/fr/video-audio/{0}.html|Journal:/fr/travaux-parlementaires/{0}.html|SyndicationRSS:/fr/rss/{0}.html|Petition:/fr/exprimez-votre-opinion/petition/{0}/index.html|TermeEncyclopedique:/fr/patrimoine/lexique/{0}.html|SectionDelegation:/fr/diplomatie/{0}/{1}/index.html|Vote:/fr/travaux-parlementaires/registre-des-votes/{0}/index.html|Depute:/fr/deputes/{0}/index.html|Texte:/fr/{0}.html|Individu:/fr/patrimoine/anciens-parlementaires/{0}.html|";
+_lienAideSoutienTechnique = '/fr/aide/aide-recherche.html#javascript';
+
+var _urlGetCalendrierObtenirActiviteEnOndes = '/WebMethod/Calendrier.aspx/ObtenirActiviteEnOndes';
+var intervalleRafraichissementWebDiffusion = '60';
+var urlPageVideoAudio = '/fr/video-audio/index.html?activite={0}';
+var libelleDateDebutDu = 'Du';
+var libelleDateDebutVers = 'Vers';
+var libelleDateFinJusqua = 'jusqu\'à';
+var libelleDateFinAu = 'au';
+var libelleHeureFinA = 'à'
+var libelleDebutApresPeriodeCourante = 'début : après la période des affaires courantes de l\'Assemblée';
+var bulleAidePeriodeAffaireCourante = '<span class="btnInfoBulle sansControle"><a href="javascript:void(0)" class="sanssouligne"><img src="http://www.assnat.qc.ca/Images/btnInfoBulle.gif" title="Afficher l\'aide" alt="Afficher l\'aide"></a><span title="Début : après la période des affaires courantes de l\'Assemblée"></span></span>';
+var bulleAideApresAvisTravauxCommissions = '<span class="btnInfoBulle sansControle"><a href="javascript:void(0)" class="sanssouligne"> <img src="http://www.assnat.qc.ca/Images/btnInfoBulle.gif" title="Afficher l\'aide" alt="Afficher l\'aide"></a><span title="Début : après les avis touchant les travaux des commissions"></span></span>'
+var libelleActiviteReporteeDateUlterieure = 'Activité reportée à une date ultérieure';
+
+var libelleCalAPartirDe = 'À partir de';
+var libelleCalEnCours = 'En cours';
+var libelleCalDebut = 'Début';
+
+var libelleDuree = 'Durée :';
+
+    var libelleAucunVideo = "La recherche n’a donné aucun résultat.";
+    var libelleAucuneAutreActiviteEnDirect = "Aucune autre activité en direct."
+
+var libelleNombreResultat = 'Nombre de résultats&nbsp;';
+var libelleMotsCles = 'Mots clés';
+var libelleCategorie = 'Catégorie';
+var libelleSession = 'Session';
+var libelleDateOuPeriode = 'Date ou période&nbsp;: ';
+var libelleAPartirDu = 'À partir du';
+var libelleJusquAu = "Jusqu'au";
+
+
+
+var arrCalendrierLblGeneral = {
+                                "lblCalOuvrir": "Ouvrir",
+                                "lblCalFermerEntete": "Fermer"       
+                            };
+var arrCalLblJoursSemaine = ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'lblFormDeputesSortants'];
+var arrCalLblMoisAnnee = ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'];
+var arrCalLblMoisAnneeAbr = ['JA', 'FE', 'MR', 'AR', 'MA', 'JN', 'JL', 'AU', 'SE', 'OC', 'NO', 'DE'];
+var lblCalAucuneActivite = "Aucune activité au calendrier aujourd'hui.";
+var lblCalDifficulteTechnique = "Le calendrier n'est pas accessible en ce moment. Veuillez réessayer dans quelques minutes.";
+var lblCalActPrivee = "Activité privée"; 
+var lblCalActSurInvitation = "Sur invitation";
+var lblCalActAnnulee = "Activité annulée"; 
+var lblCalEnDirect = "En direct";
+var lblCalTranscription = "Transcription";
+var lblCalCommunique = "Communiqué";
+var lblCalToutesActivites = "Toutes les activités";
+var lblCalVideo = "Vidéo";
+var lblCalAudio = "Audio";
+
+// Libellés du date picker
+
+    Date.dayNames = ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'lblFormDeputesSortants'];
+    Date.abbrDayNames = ['DIM', 'LUN', 'MAR', 'MER', 'JEU', 'VEN', 'SAM'];
+    Date.monthNames = ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'];
+    Date.abbrMonthNames = ['JA', 'FE', 'MR', 'AR', 'MA', 'JN', 'JL', 'AU', 'SE', 'OC', 'NO', 'DE'];
+	Date.firstDayOfWeek = 7;
+
+
+// Libellés pour treeview - overrider dans les pages au besoin
+var lblOuvrirTout = 'Afficher tout le contenu';
+var lblFermerTout = 'Masquer tout le contenu';
+
+// Libelles pour paginateur
+var _lblPaginationPage = 'Page';
+var _lblPaginationDe = 'de';
+
+// URL drapeau generique 
+var _urlDrapeauGenerique = '/Images/Temp/icoDrapeaux.gif'
+
+// Pour visionneuse: libelle 'Image' utilise dans slimbox2.js
+var lblVisionneuseTermeImage = "Image {x} de {y}"; 
+
+// Libelle pour le bouton Fermer de la visionneuse
+var libelleCloseLink = "Fermer";
+
+// Libellés pour fermer les bulles d'aide
+var lblBulleAideFermer = "[x] Fermer";
+
+var urlBoutonCalendrier = '/Images/btnCalendrier.gif';
+
+
+var urlObtenirVisionneusePhotos = '/Gabarits/InfrastructuresAvecVisionneuse.aspx/ObtenirVisionneusePhotos';
+var lblAlbumPhotos = 'Album de photos';
+var lblAgrandir = 'Agrandir';
+
+// Le script d'effet ne fonctionne pas sous Internet Explorer, ce script distingue ie des autres fureteurs 
+ if ($.browser.msie) {
+    }
+    else {
+        document.write("<script type='text\/javascript' src='\/scripts/jquery.easing.min.js?version=1.3'><\/script>")
+    }
+//]]>
+ 
+    var valEtatDeputeAncienDeputes = "AncienDeputes";
+
+    var urlObtenirTypeTravauxParSessionLegislature = '/Gabarits/RechercheAvancee.aspx/ObtenirTypeTravauxParSessionLegislature';
+    var urlObtenirTypeTravauxParPeriode = '/Gabarits/RechercheAvancee.aspx/ObtenirTypeTravauxParPeriode';
+    var urlObtenirTypeDocumentParTypeTravaux = '/Gabarits/RechercheAvancee.aspx/ObtenirTypeDocumentParTypeTravaux';
+    var urlObtenirSousCategorieVideoParCategorieVideo = '/Gabarits/RechercheAvancee.aspx/ObtenirSousCategorieVideoParCategorieVideo';
+    
+    var idsSectionRechercheTravauxParlementaires = ['9',
+                                                        '27',
+                                                        '29',
+                                                        '31',
+                                                        '33'];
+
+    var idCategorieDocumentJournauxDebats = '13'
+
+    var msgFormatDateInvalide = "Veuillez saisir une date valide selon le format aaaa-mm-jj.";
+    var msgPeriodeInvalide = "La date de début doit précéder la date de fin.";
+    var msgPeriodeDebutFutur = "La date doit être antérieure ou égale à la date du jour.";
+
+    $(document).ready(function(){
+        $("a").each(function(i, e) {
+            var href = $(e).attr('href');
+            if(href && href.search(/^http:/) == 0){
+                $(e).attr('href', "https:" + href.substring(5));
+            }
+        })
+
+        $("img").each(function (i, e) {
+            var src = $(e).attr('src');
+            if (src && src.search(/^http:/) == 0) {
+                $(e).attr('src', "https:" + src.substring(5));
+            }
+            if (src && src.search(/^https+:/) == 0) {
+                $(e).attr('src', "https:" + src.substring(src.indexOf(":") + 1));
+            }
+        })
+    });
+</script><script type="text/javascript" src="/scripts/jquery.easing.min.js?version=1.3"></script><script type="text/javascript" async="" src="https://sdk.privacy-center.org/sdk/f8c24e62c2b7ae0753f5f82d1c49cc00430e44b4/modern/sdk.f8c24e62c2b7ae0753f5f82d1c49cc00430e44b4.js" charset="utf-8"></script>
+
+<!-- Gestion des cookies. Documentation : http://stilbuero.de/jquery/cookie/ -->
+<script type="text/javascript" src="/scripts/jquery.cookie.min.js"></script>
+
+<!-- Corrige les problème de z-index d'Internet Explorer. Doc: http://brandonaaron.net/jquery/plugins/bgiframe/docs/ -->
+<script type="text/javascript" src="/scripts/jquery.bgiframe.min.js"></script>
+
+<!-- Permet la gestion de l'objet date. -->
+<script type="text/javascript" src="/scripts/date.min.js"></script>
+
+<!-- Génère des paneaux (Tabs) à partir d'une liste (ul li). info et doc: http://docs.jquery.com/UI/Tabs-->
+<script type="text/javascript" src="/scripts/ui.tabs.js"></script>
+
+<!-- Génère l'affichage dynamique d'un liste (ul li). info et doc: http://bassistance.de/jquery-plugins/jquery-plugin-treeview/ -->
+<script type="text/javascript" src="/scripts/jquery.treeview.pack.min.js"></script>
+
+<!-- Permet de modifier la feuille de style. info et doc:http://kelvinluck.com/article/switch-stylesheets-with-jquery -->
+<script type="text/javascript" src="/scripts/StyleSwitcher.min.js"></script>
+
+<!-- Permet de modifier l'apparence des selects. info et doc:http://www.lotsofcode.com/javascript-and-ajax/jquery-select-box-skin.htm -->
+<script type="text/javascript" src="/scripts/jquery.skinned-select.min.js"></script>
+
+<!-- Permet de créer des masques sur les formulaires info et doc:http://digitalbush.com/projects/masked-input-plugin/ -->
+<script type="text/javascript" src="/scripts/jquery.maskedinput-1.2.2.min.js"></script>
+
+<!-- Permet de générer un calendrier. docs et info : http://kelvinluck.com/assets/jquery/datePicker/v2/demo/datePickerLocalised.html -->
+<script type="text/javascript" src="/scripts/jquery.datePicker.js"></script>
+
+<!-- Permet de gérer les bulles d'aide en popup -->
+<script type="text/javascript" src="/scripts/BulleAide.min.js"></script>
+
+<!-- Permet de modifier l'apparence des scrollbars. info et doc: http://www.kelvinluck.com/assets/jquery/jScrollPane/jScrollPane.html -->
+<script type="text/javascript" src="/scripts/jScrollPane.min.js"></script>
+
+<!-- Permet d'utiliser des PNG transparent dans IE 6 et 5.5. info et doc: http://jquery.andreaseberhard.de/pngFix/ -->
+<script type="text/javascript" src="/scripts/jquery.pngFix.min.js"></script>
+
+<!-- Permet de trier et de paginer des tableaux. docs et info : http://tablesorter.com -->
+<script type="text/javascript" src="/scripts/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="/scripts/jquery.tablesorter.pager.min.js"></script>
+
+<script type="text/javascript" src="/scripts/jquery.uilock.min.js"></script>
+
+<!-- script general -->
+<script type="text/javascript" src="/scripts/AssNat.min.js"></script>
+
+<script type="text/javascript" src="/Scripts/moment.min.js"></script>
+
+<!-- evenements et gestion du calendrier -->
+<script type="text/javascript" src="/scripts/Calendrier.min.js"></script>
+
+<!-- sert uniquement pour débugger les objets JSON. -->
+<script type="text/javascript" src="/scripts/json.min.js"></script>
+
+
+
+
+
+
+    <!-- Placeholder: permet d'ajouter des enonces specifiques dans le HEAD -->
+    
+
+    <!-- Feuille de style pour le layout de la page -->
+    
+	<link href="/styles/GabGauche-mCentre-l.min.css" rel="stylesheet" type="text/css" media="screen">
+
+
+    <!-- Placeholder: remplace automatiquement selon rubrique -->
+    <title>
+	
+            Politique de confidentialité - Assemblée nationale du Québec
+        
+</title>
+        
+        <meta property="og:title" content="Politique de confidentialité - Assemblée nationale du Québec">
+        <meta property="og:description" content="">
+        <meta property="og:image" content="https://www.assnat.qc.ca/Media/Process.aspx?process=Original&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz&amp;asset=ANQ.Vigie.Bll.Image_19205">
+<meta property="og:image" content="https://www.assnat.qc.ca/Media/Process.aspx?process=Original&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz&amp;asset=ANQ.Vigie.Bll.Image_19207">
+<meta property="og:image" content="https://www.assnat.qc.ca/Media/Process.aspx?process=Original&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz&amp;asset=ANQ.Vigie.Bll.Image_19209">
+<meta property="og:image" content="https://www.assnat.qc.ca/Media/Process.aspx?process=Original&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz&amp;asset=ANQ.Vigie.Bll.Image_19211">
+<meta property="og:image" content="https://www.assnat.qc.ca/Media/Process.aspx?process=Original&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz&amp;asset=ANQ.Vigie.Bll.Image_19213">
+<meta property="og:image" content="https://www.assnat.qc.ca/Media/Process.aspx?process=Original&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz&amp;asset=ANQ.Vigie.Bll.Image_19215">
+<meta property="og:image" content="https://www.assnat.qc.ca/Media/Process.aspx?process=Original&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz&amp;asset=ANQ.Vigie.Bll.Image_19217">
+
+    <style type="text/css">
+	.ctl00_SousNavigationPlaceHolder_SousNavigation_Menu1_0 { background-color:white;visibility:hidden;display:none;position:absolute;left:0px;top:0px; }
+	.ctl00_SousNavigationPlaceHolder_SousNavigation_Menu1_1 { text-decoration:none; }
+	.ctl00_SousNavigationPlaceHolder_SousNavigation_Menu1_2 {  }
+
+</style><script type="text/javascript" async="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/982566139/?random=1717856758973&amp;cv=11&amp;fst=1717856758973&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;gtm=45je4650v875527057z8839336089za200zb839336089&amp;gcd=13l3l3l3l1&amp;dma=0&amp;tcfd=10000&amp;tag_exp=0&amp;u_w=1920&amp;u_h=1080&amp;url=https%3A%2F%2Fassnat.qc.ca%2Ffr%2Fpropos-site%2Fpolitique-confidentialite.html&amp;hn=www.googleadservices.com&amp;frm=0&amp;tiba=Politique%20de%20confidentialit%C3%A9%20-%20Assembl%C3%A9e%20nationale%20du%20Qu%C3%A9bec&amp;npa=0&amp;us_privacy=1---&amp;auid=1836685114.1717856747&amp;uaa=arm&amp;uab=64&amp;uafvl=Google%2520Chrome%3B125.0.6422.142%7CChromium%3B125.0.6422.142%7CNot.A%252FBrand%3B24.0.0.0&amp;uamb=0&amp;uam=&amp;uap=macOS&amp;uapv=14.5.0&amp;uaw=0&amp;fledge=1&amp;data=event%3Dgtag.config&amp;rfmt=3&amp;fmt=4"></script></head>
+
+<!-- Placeholder: permet de specifier un tag body personnalise (default: <body>) -->
+<body><div id="didomi-host" data-nosnippet="true" aria-hidden="true"></div>
+
+
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5X47H2N" height="0" width="0" style="display: none; visibility: hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<form method="post" action="/fr/propos-site/politique-confidentialite.html" id="aspnetForm">
+<div style="display: none;">
+<input type="hidden" name="versionProgrammationEnCache" id="versionProgrammationEnCache" value="0">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJMTIwNzIzOTQyD2QWAmYPZBYCAgMQZGQWAgILD2QWAgIJD2QWAmYPZBYCZg8VAi4vZW4vcHJvcG9zLXNpdGUvcG9saXRpcXVlLWNvbmZpZGVudGlhbGl0ZS5odG1sB0VuZ2xpc2hkGAEFNGN0bDAwJFNvdXNOYXZpZ2F0aW9uUGxhY2VIb2xkZXIkU291c05hdmlnYXRpb24kTWVudTEPD2QFL8OAIHByb3BvcyBkdSBzaXRlXFBvbGl0aXF1ZSBkZSBjb25maWRlbnRpYWxpdMOpZDfYPshmWYfRVJ4u54NzK45Ozn33">
+</div>
+
+<div style="display: none;">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="F576E20B">
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAANj8QULDzdrTN4XVWGts3dE3hH/puXvwl4FGZa6rYP8j7zfnYlPDIamE8E+dcJv2yOmp9VxK2cPbeMJ7W8mLbc76bB73Q==">
+</div>
+    <div id="Wrap">
+
+        <!-- Utilitaires: impression, agrandir texte, recherche, etc -->
+        
+
+
+<script type="text/javascript">
+    var motCleDefaut = 'Rechercher';
+</script>
+
+<a name="haut"></a>
+<div id="enteteUtilitaire">
+    <div id="skip" class="skiplinks">
+        <a href="#ancreContenuPrincipal">Atteindre le contenu</a>
+        <a href="#ancreSousNavigation">Atteindre la navigation secondaire</a>               
+    </div>
+    <div class="listeUtilitaires listeUtilitaires2">
+        <ul>
+            <li class="Premier">
+                <a class="sanssouligne nePasRediriger icoMobile" href="https://m.assnat.qc.ca">
+                    <span class="styleHyperlien">Mobile</span>
+                </a>
+            </li>
+            <li>
+                <a href="/fr/accueil/mediassociaux.html" class="sanssouligne icoMediasSociauxEntete">
+                    <span class="styleHyperlien">Suivez-nous</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="listeUtilitaires">
+        <ul>
+            <li><a id="A2" href="https://www.assnat.qc.ca/carrieres">Carrières</a></li>
+            <li><a href="/fr/nous-joindre.html" id="ctl00_Utilitaires_A1">Nous joindre</a></li>
+            <li>
+                <div class="outilRecherche">
+                    <label for="ctl00_Utilitaires_motCle" class="nepasafficher">Saisir un mot clé pour faire une recherche générale</label>
+                    <input type="text" id="ctl00_Utilitaires_motCle" class="outilRechercheMotCle">
+                    <input onclick="RechercherMotCle();return false;" type="image" src="/Images/btnRecherche_of.gif" class="btnRechercheGlobal" title="Rechercher" alt="Rechercher">
+                </div>
+            </li>
+            <li>
+                <a onclick="LancerRechercheAvancee();return false;">Recherche avancée</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<script type="text/javascript">
+    function RechercherMotCle() {
+        var mot = $('#ctl00_Utilitaires_motCle');
+        if (mot.val() != "")
+        {
+            window.location = '/fr/recherche/recherche-avancee.html?SectionRecherche=-1&MotsCles=' + encodeURIComponent(htmlEscape(mot.val()));
+        }
+    }
+
+    function LancerRechercheAvancee() {
+        var urlRechercheAvancee = '/fr/recherche/recherche-avancee.html';
+        window.location = urlRechercheAvancee + "?EstNouvelleRecherche=true";
+    }
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- Banniere: image d'entete -->
+        
+<div id="Banniere">
+	<a href="/fr/index.html" class="sanssouligne" title="Assemblée nationale du Québec - Retour à l'accueil">
+    <img class="nepasafficher" width="88" height="58" title="Assemblée nationale du Québec - Retour à l'accueil" alt="Assemblée nationale du Québec - Retour à l'accueil" src="/images/transparent.gif"></a>
+</div>
+
+
+        <!-- NavigationPrincipale: menu horizontal -->
+        
+
+<div id="NavigationPrincipaleConteneur">
+    <div id="NavPrincipaleNiveau1">
+        <ul>
+            <li class="btnAccueil">
+                <a href="/fr/index.html" id="ctl00_NavigationPrincipale_hrfAcceuil">
+                    Accueil</a></li>
+            <li aria-haspopup="true" class="menuHoverParent btnDeputes"><a href="/fr/deputes/index.html" id="ctl00_NavigationPrincipale_hrfDeputes" aria-haspopup="true">
+                Députés</a>
+                <div class="menuHoverEnfant">
+                    
+                            <ul>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10006.html">La présidente</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10002.html#listeDeputes">Liste des députés en fonction</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/11861.html">Les députés depuis 1764</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10002.html#listeDeputes">Coordonnées des députés</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10042.html">La fonction de député</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10014.html">Fonctions parlementaires des députés</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10020.html">Composition des commissions</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10028.html">Membres du Bureau de l'Assemblée</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10052.html">Indemnités et allocations</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/deputes/cerclefemmes/index.html">Cercle des femmes parlementaires</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12661.html">Cercle des jeunes parlementaires</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10965.html">Cercle des ex-parlementaires de l’Assemblée nationale du Québec</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12603.html">Fondation Jean-Charles-Bonenfant </a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12605.html">Fondation des parlementaires québécois Cultures à partager </a></li>
+</ul>
+                        
+                </div>
+            </li>
+            <li aria-haspopup="true" class="menuHoverParent btnTravaux">
+                <a href="/fr/travaux-parlementaires/index.html" id="ctl00_NavigationPrincipale_hrfTravauxParlementaires" aria-haspopup="true">
+                    Travaux parlementaires</a>
+                <div class="menuHoverEnfant">
+                    
+                            <ul>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12119.html">Calendrier hebdomadaire des travaux</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12213.html">Journal des débats</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/11867.html">Index du Journal des débats</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10114.html#procedure">Règlement et autres règles de procédure de l'Assemblée nationale</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10114.html#procedure">Propos non parlementaires</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10044.html">Assister aux travaux</a></li>
+</ul>
+<ul>
+<li><strong><a href="https://www.assnat.qc.ca/fr/lien/10118.html">Travaux de l'Assemblée</a></strong> 
+<ul>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10118.html">Toutes les séances</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10198.html">Documents déposés</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10192.html">Projets de loi</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12215.html">Cheminement des projets de loi</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12779.html">Registre des votes</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><strong><a href="https://www.assnat.qc.ca/fr/lien/10126.html">Travaux des commissions</a></strong> 
+<ul>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10126.html">Liste des commissions</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/11185.html">Mandats en cours</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10198.html">Documents déposés</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10140.html">Rapports et documents de réflexion</a></li>
+</ul>
+</li>
+</ul>
+                        
+                </div>
+            </li>
+            <li aria-haspopup="true" class="menuHoverParent btnExprimez">
+                <a href="/fr/exprimez-votre-opinion/index.html" id="ctl00_NavigationPrincipale_hrfExprimezVotreOpinion" aria-haspopup="true">
+                    Exprimez votre opinion!</a>
+                <div class="menuHoverEnfant">
+                    
+                            <ul>
+<li><strong><a href="https://www.assnat.qc.ca/fr/lien/10999.html">Pétitions</a></strong> 
+<ul>
+<li><a href="https://www.assnat.qc.ca/fr/lien/11001.html">Signer une pétition électronique</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/11003.html">Consulter une pétition présentée à l'Assemblée</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10108.html">Lancer une pétition</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/exprimez-votre-opinion/petition/cheminement-petition">Suivre le cheminement d'une pétition</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><strong><a href="https://www.assnat.qc.ca/fr/lien/10901.html">Consultations publiques</a></strong> 
+<ul>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10901.html#CommentParticiper">Comment participer à une consultation</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10126.html">Liste des consultations publiques</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><strong><a href="https://www.assnat.qc.ca/fr/lien/10997.html">Commenter un sujet à l'étude</a></strong></li>
+</ul>
+<ul>
+<li><strong><a href="https://www.assnat.qc.ca/fr/lien/10110.html">Présenter un projet de loi d'intérêt privé</a></strong></li>
+</ul>
+                        
+                </div>
+            </li>
+            <li aria-haspopup="true" class="menuHoverParent btnVideoAudio">
+                <a href="/fr/video-audio/index.html" id="ctl00_NavigationPrincipale_hrfVideoAudio" aria-haspopup="true">
+                    Vidéo</a>
+                <div class="menuHoverEnfant">
+                    
+                            <ul>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12541.html"><strong>En direct et webdiffusions à venir</strong></a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12543.html"><strong>Archives des travaux et activités parlementaires</strong></a> 
+<ul>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12545.html">Travaux de l'Assemblée </a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12559.html">Travaux des commissions</a> </li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12547.html">Activités de presse </a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12549.html">Activités spéciales et institutionnelles</a> </li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12551.html">Députés</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12553.html"><strong>Le Canal de l'Assemblée</strong></a> </li>
+</ul>
+<ul>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12555.html"><strong>Émissions et capsules promotionnelles</strong></a></li>
+</ul>
+<ul>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12561.html"><strong>Espace jeunesse</strong></a> </li>
+</ul>
+<ul>
+<li><a href="https://www.assnat.qc.ca/fr/lien/11183.html"><strong>Commander un extrait</strong></a> </li>
+</ul>
+                        
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+        <!-- PlaceHolder: permet de masquer le calendrier sommaire (defaut: s'affiche) -->
+        
+				
+
+<script type="text/javascript">
+</script>
+
+<div class="calendrier calSommaire" id="Calendrier">
+    <div class="titreCalendrier" id="TitreCalendrier">
+        <ul>
+            <li class="btnCalendrier" id="btnCalendrier">
+                <a href="javascript:void(0)" id="ctl00_CalendrierSommaire_CalendrierSommaire1_LienCalendrier">
+                    Calendrier
+                    <p class="libelleOuvrirFermer">
+                    Ouvrir</p></a>
+            </li>
+        </ul>
+    </div>
+    <div class="contenuCalendrier" id="ContenuCalendrier">
+        <div class="contenuCalendrierInterne" style="">
+            <div class="overlayCalendrier">
+                <p class="contenuOverlay">
+                    <img src="/Images/lightbox/loading.gif" alt="Chargement en cours" title="Chargement en cours">
+                </p>
+            </div>
+            <div class="blocAssembleeEnDirect">
+                <ul class="listeIconesHorizontale">
+                    <li id="IconeEnDirectCalendrier" class="icoEnDirectInactif"><span id="spnEnDirectCalendrier" class="couleurTexteNormal">
+                        En direct</span></li>
+                    <li><a class="anchorCalendrierDetaille" href="/fr/calendrier-detaille.html">
+                        Calendrier détaillé</a></li>
+                </ul>
+            </div>
+            <div class="blocNavigateurDates">
+                <div>
+                    <p id="ConteneurCalendrierPopup">
+                        <span class="calendrierPopup dp-applied"></span><a href="#" class="sanssouligne dp-choose-date cacherPourImpression"><img alt="Choisir une date" title="Choisir une date" src="/Images/btnCalendrier.gif">Choisir une date</a>
+                    </p>
+                    <h2 id="TitreDateDuJour">_date_du_jour
+                    </h2>
+                </div>
+                <ul>
+                    <li class="versGauche"><a href="#" class="dateNavigateur fleche" id="dateNavGauche"><img alt="Semaine précédente" title="Semaine précédente" src="/Images/transparent.gif" width="15" height="25"></a></li>
+                        
+                    <li><a class="dateNavigateur" id="dateNavDi" title="_dimanche" href="#">
+                        <span class="overlayJour overlayJourSommaire"></span>
+                        <span class="libelleJournee">DIM</span><br>
+                        <span class="libelleDate">6</span></a></li>
+                        
+                    <li><a class="dateNavigateur" id="dateNavLu" title="_lundi" href="#">
+                        <span class="overlayJour overlayJourSommaire"></span>
+                        <span class="libelleJournee">LUN</span><br>
+                        <span class="libelleDate">7</span></a></li>
+                        
+                    <li><a class="dateNavigateur" id="dateNavMa" title="_mardi" href="#">
+                        <span class="overlayJour overlayJourSommaire"></span>
+                        <span class="libelleJournee">MAR</span><br>
+                        <span class="libelleDate">8</span></a></li>
+                        
+                    <li><a class="dateNavigateur" id="dateNavMe" title="_mercredi" href="#">
+                        <span class="overlayJour overlayJourSommaire"></span>
+                        <span class="libelleJournee">MER</span><br>
+                        <span class="libelleDate">9</span></a></li>
+                        
+                    <li><a class="dateNavigateur" id="dateNavJe" title="_jeudi" href="#">
+                        <span class="overlayJour overlayJourSommaire"></span>
+                        <span class="libelleJournee">JEU</span><br>
+                        <span class="libelleDate">10</span></a></li>
+                        
+                    <li><a class="dateNavigateur" id="dateNavVe" title="_vendredi" href="#">
+                        <span class="overlayJour overlayJourSommaire"></span>
+                        <span class="libelleJournee">VEN</span><br>
+                        <span class="libelleDate">11</span></a></li>
+                        
+                    <li><a class="dateNavigateur" id="dateNavSa" title="_samedi" href="#">
+                        <span class="overlayJour overlayJourSommaire"></span>
+                        <span class="libelleJournee">SAM</span><br>
+                        <span class="libelleDate">12</span></a></li>
+                        
+                    <li class="versDroite"><a href="#" class="dateNavigateur fleche" id="dateNavDroite">
+                        <img alt="Semaine suivante" title="Semaine suivante" src="/Images/transparent.gif" width="15" height="25"></a></li>
+                </ul>
+                <span class="aujourdhui"><a class="aujourdhuiLien" href="">
+                    Aujourd'hui</a></span>
+            </div>
+            <hr>
+            <div class="blocEnCours" style="display: none">
+                <div class="blocEnCoursTitre">
+                    <h3 id="HeureEnCours" class="heure">_heure_en_cours
+                    </h3>
+                    <h3>
+                        En cours</h3>
+                </div>
+                <div class="boiteDefilante">
+                </div>
+            </div>
+            <div class="blocActivitesDuJour">
+                <h3><label for="ctl00_CalendrierSommaire_CalendrierSommaire1_selectFiltreCategorieActivite">Activités du jour</label></h3>
+                <div class="skinned-select">
+                    <div class="select-text">Toutes les activités</div><select name="ctl00$CalendrierSommaire$CalendrierSommaire1$selectFiltreCategorieActivite" id="ctl00_CalendrierSommaire_CalendrierSommaire1_selectFiltreCategorieActivite" class="selectFiltreCategorieActivite"><option value="*">Toutes les activités</option><option value="catD">Autres activités</option><option value="catC">Conférences et points de presse</option><option value="catA">Séances de l'Assemblée</option><option value="catB">Séances des commissions</option></select>
+                </div>
+                <div class="boiteDefilante">
+                </div>
+            </div>
+            <div class="blocExpositions" style="display: none">
+                <h3>
+                    Exposition(s)</h3>
+                <div id="listeExpositions">
+                </div>
+            </div>
+            <div class="blocSurLesTours" id="BlocSurLesTours" style="display: none">
+                <h3>
+                    Drapeau(x) sur l'hôtel du Parlement</h3>
+                <div id="listeDrapeaux">
+                </div>
+            </div>
+        </div>
+        <p id="calendrierNoJs" style="display: none;">
+            L'utilisation du calendrier requiert que Javascript soit activé dans votre navigateur.<br>
+            <a href="/fr/aide/aide-recherche.html#javascript">
+                Pour plus de renseignements</a>
+        </p>
+    </div>
+</div>
+
+			
+
+        <!-- NavigationPrincipaleNiveau2: menu horizontal -->
+        
+
+<div id="NavigationPrincipaleNiveau2Conteneur">
+    <div id="NavPrincipaleNiveau2">
+        <ul>
+            <li class="" id="lienABC"><a href="/fr/abc-assemblee/index.html" id="ctl00_NavigationPrincipaleNiveau2_hrfABCDeLassemblee">
+                L'ABC de l'Assemblée</a></li>
+            <li class="" id="lienVisiteurs"><a href="/fr/visiteurs/index.html" id="ctl00_NavigationPrincipaleNiveau2_hrfVisiteurs">
+                Visiteurs</a></li>
+            <li class="" id="lienRestaurants"><a href="/fr/visiteurs/restaurants/index.html" id="ctl00_NavigationPrincipaleNiveau2_hrfRestaurants">
+                Restaurants</a></li>
+            <li class="" id="lienActualites"><a href="/fr/actualites-salle-presse/index.html" id="ctl00_NavigationPrincipaleNiveau2_hrfActualiteEtSalleDePresse">
+                Actualités et salle de presse</a></li>
+            <li class="" id="lienBibliotheque">
+                <a href="/fr/bibliotheque/index.html" id="ctl00_NavigationPrincipaleNiveau2_hrfBibliotheque">
+                    Bibliothèque</a></li>
+            <li class="" id="lienPublications">
+                <a href="/fr/publications/index.html" id="ctl00_NavigationPrincipaleNiveau2_hrfPublications">
+                    Publications</a></li>
+            <li class="" id="lienEducatives">
+                <a href="https://www.paricilademocratie.com" id="ctl00_NavigationPrincipaleNiveau2_hrfActivitesEducatives">
+                    Éducation</a></li>
+            <li class="" id="lienInternational">
+                <a href="/fr/diplomatie/index.html" id="ctl00_NavigationPrincipaleNiveau2_hrfInternational">
+                    Diplomatie</a></li>
+            <li class="" id="lienHistoire"><a href="/fr/patrimoine/index.html" id="ctl00_NavigationPrincipaleNiveau2_hrfHistoire">
+                Histoire</a></li>
+        </ul>
+    </div>
+</div>
+
+
+        <!-- FilAriane: affiche le fil d'ariane -->
+        
+				
+<div id="FilAriane" class="FilAriane">
+<span id="ctl00_FilAriane_FilAriane1_SiteMapPath1"><span><a href="/fr/index.html">Accueil</a></span><span> &gt; </span><span><a href="/fr/propos-site/index.html">À propos du site</a></span><span> &gt; </span><span>Politique de confidentialité</span></span>
+</div>
+			
+
+        
+            
+
+        <!-- Ancre pour le "skiplink atteindreSousNavigation" -->
+        <div id="divAncreSousNavigation" class="skipLinks">
+            <a name="ancreSousNavigation" id="ancreSousNavigation"></a>
+        </div>
+
+        <div class="ColGauche colonne">
+
+            <!-- PlaceHolder: permet de masquer la navigation secondaire (defaut: s'affiche) -->
+            
+                    
+<div id="SousNavigation" class="ContenuNavigation SousNavigation treeview">
+
+
+	
+	<ul>
+		<li class="collapsable lastCollapsable">
+			<h2><a href="/fr/propos-site/index.html" class="selected">
+				À propos du site</a></h2>
+			<ul style="display: block;">
+				<li>
+					<a href="/fr/propos-site/politique-editoriale.html" class="">
+						Politique éditoriale</a>
+				</li>
+				<li>
+					<a href="/fr/propos-site/accessibilite.html" class="">
+						Accessibilité</a>
+				</li>
+				<li>
+					<a href="/fr/propos-site/politique-confidentialite.html" class="selected">
+						Politique de confidentialité</a>
+				</li>
+				<li>
+					<a href="/fr/propos-site/droits-propriete-intellectuelle.html" class="">
+						Conditions d’utilisation des contenus</a>
+				</li>
+				<li class="last">
+					<a href="/fr/propos-site/qui-peut-consulter-cette-page.html" class="">
+						Qui peut consulter cette page?</a>
+				</li>
+			</ul>
+		</li>
+	</ul>
+
+	
+  <div class="clear"></div>
+</div>
+
+
+<script type="text/javascript">
+
+</script>        
+				
+
+            <!-- PlaceHolder: permet d'ajouter du contenu sous la navigation secondaire (defaut: vide) -->
+            
+
+        </div>
+
+        <div class="ColCentre colonne Contenu">
+
+            <!-- PlaceHolder: permet d'afficher une accroche (defaut: vide) -->
+            
+
+            <!-- PlaceHolder: conteneur pour tout le contenu excepte la navigation -->
+            
+	            				
+					<!-- PlaceHolder: permet de masquer les utilitaires d'Assemblee (defaut: s'affiche) -->
+					
+						
+
+<div class="utilitairesAssemblee" id="utilitairesAssemblee">
+    <div id="ColIconesUtilitairesAssemblee">
+        <div id="ColOutilsUtilitairesAssemblee">
+            <ul class="utilitairesAssemblee listeSansPuces">
+                <li>
+                    <a href="javascript:ImprimerBase()">
+			            <img alt="Imprimer la page" title="Imprimer la page" src="/Images/icones/partageImprimante.gif" width="16" height="16"></a>
+                </li>
+                <li class="styleswitch">
+                    <a href="#Reguliere" rel="Reguliere" class="styleswitch Reguliere">
+                        <img alt="Taille du texte : régulière" title="Taille du texte : régulière" src="/Images/icones/retrecir.gif" width="16" height="16"></a>
+                    <a href="#Grande" rel="Grande" title="Taille du texte : très grande" class="styleswitch Grande">
+                        <img alt="Taille du texte : très grande" title="Taille du texte : très grande" src="/Images/icones/agrandir.gif" width="16" height="16"></a>
+                </li>
+                <li>
+                    <a href="/fr/fils-rss.html" class="nePasRediriger">
+                        <img alt="Fils RSS" title="Fils RSS" src="/Images/icones/partageRss.gif" width="16" height="16"></a>
+                </li>
+            </ul>
+        </div>
+  
+            
+        <div id="ColPartageUtilitairesAssemblee">
+            <div class="boutonPartager">
+                <a href="#">Partager</a>
+            </div>
+            <ul class="utilitairesAssemblee listeSansPuces" style="z-index:999;">
+                <div class="fleche"></div>
+                
+                
+                    <li>
+                        <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://assnat.qc.ca%2ffr%2fpropos-site%2fpolitique-confidentialite.html" class="nePasRediriger">
+                            <img alt="Partager par Facebook" title="Partager par Facebook" src="/Images/icones/partageFacebook.gif"></a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://x.com/intent/tweet?url=http://assnat.qc.ca%2ffr%2fpropos-site%2fpolitique-confidentialite.html" class="nePasRediriger">
+                            <img alt="Partager par X" title="Partager par X" src="/Images/icones/partageTwitter.gif"></a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.linkedin.com/sharing/share-offsite/?url=http://assnat.qc.ca%2ffr%2fpropos-site%2fpolitique-confidentialite.html" class="nePasRediriger">
+                            <img alt="Partager par LinkedIn" title="Partager par LinkedIn" src="/Images/icones/partageLinkedin.gif"></a>
+                    </li>
+            </ul>
+        </div>
+        
+    </div>
+    <div id="ColLiensUtilitairesAssemblee">
+        <ul class="listeIconesHorizontale listeIconesHorizontaleUtilitaires listeSansPuces">
+            <!-- Icone "Diagramme de l'Assemblée" -->
+		    
+			    <li class="icoDiagramme">
+                    <a href="/fr/document/19787.html">Diagramme de l'Assemblée</a>
+                </li>
+		    
+
+            <li id="IndicateurEnDirectPage">
+                <span id="spnEnDirect" class="couleurTexteNormal">
+		            <span id="IconeEnDirect" class="icoEnDirectInactif"> </span>		
+		            En direct sur le Web
+	            </span>
+            </li>
+            <!-- Section "Vidéo et audio" -->
+            
+        </ul>
+    </div>
+</div>        
+					
+
+                    <!-- Ancre pour le "skiplink atteindreContenu" -->
+                    <div id="divAncreContenuPrincipal" class="skipLinks">
+                        <a name="ancreContenuPrincipal" id="ancreContenuPrincipal"></a>
+                    </div>
+
+                    <!-- Note sur les titres H1: dans ce gabarit, il y a 2 emplacements possibles pour le H1. Le cas
+						 le plus usuel est généré par défaut. Si necessaire, overrider dans la page ASPX -->
+			
+					<!-- PlaceHolder: permet d'afficher le titre sur les 2 colonnes. Cas plus rare. (default: vide) -->
+					
+
+					<!-- PlaceHolder: permet d'afficher le texte en dessus des colonnes -->
+					
+					
+					<div class="conteneurColonnesImbriquees">		
+                        <div class="colonneImbriquee imbGauche">
+
+							<!-- PlaceHolder: permet d'afficher le titre sur 1 colonne. Cas usuel. (default: s'affiche) -->
+							
+    
+		
+				
+
+<h1 class="">
+	<span id="ctl00_ColCentre_TitreSurUneColonne_rptTitreRubrique_ctl00_TitrePrincipalContenu1_SiteMapPathTitreContenu"><span>Politique de confidentialité</span></span></h1>
+    
+    
+			
+		
+
+
+							<!-- PlaceHolder: contenu principal de la page (defaut: vide) -->
+							
+
+	
+			<p>L’Assemblée nationale du Québec vous invite à prendre connaissance de sa politique de confidentialité, laquelle concerne les renseignements personnels qu’elle recueille par un moyen technologique. La publication de cette politique est exigée par l’article&nbsp;63.4 de la <em><a href="https://www.assnat.qc.ca/fr/lien/11165.html" target="_blank">Loi sur l’accès aux documents des organismes publics et sur la protection des renseignements personnels</a></em> <span style="white-space: nowrap;">(RLRQ, chapitre A-2.1)</span> (ci-après la «&nbsp;LADPRP&nbsp;»). Cette loi s’applique à l’Assemblée nationale sous réserve de l’application des privilèges parlementaires.</p>
+<p>Les <strong>renseignements  personnels </strong>sont des renseignements qui concernent une personne physique et qui  permettent de l’identifier. Cette définition se trouve à l’article&nbsp;54 de  la LADPRP.</p>
+<ul class="ListeLien">
+<li><a href="#collecte">Collecte et utilisation des renseignements personnels</a></li>
+<li><a href="#communication">Communication des renseignements personnels</a></li>
+<li><a href="#temoins">Témoins de connexion (<em>cookies</em>)</a></li>
+<li><a href="#conservation">Conservation et destruction des renseignements personnels</a></li>
+<li><a href="#mesures">Mesures de protection des renseignements personnels</a></li>
+<li><a href="#droits">Droits de la personne concernée par les renseignements personnels</a></li>
+</ul>
+<h2 id="collecte">Collecte et utilisation des renseignements personnels</h2>
+<h3>Moyens par lesquels les renseignements sont recueillis</h3>
+<p>Les renseignements personnels recueillis par l’Assemblée nationale lui sont fournis directement par vous quand vous communiquez avec l’Assemblée nationale par écrit ou verbalement ou par le remplissage de champs vides dans différentes pages Web ou différents formulaires, soit notamment lorsque vous :</p>
+<ul>
+<li>signez une pétition;</li>
+<li>commentez un sujet à l’étude;</li>
+<li>participez à une consultation en ligne ou à un sondage;</li>
+<li>effectuez une réservation pour une visite à l’Assemblée nationale;</li>
+<li>naviguez sur le site Web de l’Assemblée nationale, par l’intermédiaire des <a href="#temoins">témoins de connexion</a> (<em>cookies</em>);</li>
+<li>formulez une plainte. </li>
+</ul>
+<h3>Transmission de renseignements personnels par courriel</h3>
+<p>Considérant que les courriels ne sont pas systématiquement sécurisés, il n’est pas recommandé de transmettre des renseignements personnels par ce moyen s’il ne comporte pas un système de chiffrement des données. En conséquence, il est recommandé de ne pas transmettre certains renseignements personnels par courriel, comme les numéros d’assurance sociale ou de cartes de crédit.</p>
+<h3>Transmission de renseignements personnels par des formulaires ou questionnaires</h3>
+<p>L’Assemblée nationale recueille des renseignements personnels par le biais de formulaires ou de questionnaires utilisés par les internautes notamment pour&nbsp;:</p>
+<ul>
+<li>participer à une consultation en ligne;</li>
+<li>commenter un sujet à l’étude;</li>
+<li>transmettre une demande d’intervention en commission parlementaire;</li>
+<li>signer une pétition électronique;</li>
+<li>s’inscrire à une activité éducative;</li>
+<li>formuler une plainte.</li>
+</ul>
+<p>Dans ces formulaires et questionnaires, les champs qu’il faut obligatoirement remplir pour que la demande soit traitée sont identifiés comme tels. Les autres champs sont facultatifs.</p>
+<p>Les renseignements inscrits dans ces formulaires et questionnaires sont transmis à l’Assemblée nationale par l’intermédiaire d’une connexion sécurisée, dont l’URL indiquée dans la barre d’adresse commence par&nbsp;https.</p>
+<p>Certains renseignements recueillis à l’aide d’un formulaire sont pris en charge par le service Microsoft Forms pour traitement par l’Assemblée nationale. Les renseignements personnels ainsi communiqués sont protégés par Microsoft. Pour plus d’information sur la confidentialité de vos renseignements dans ce contexte, vous pouvez consulter le <a href="https://www.assnat.qc.ca/fr/lien/13813.html" target="_blank">microsoft.com</a>.</p>
+<h3>Consentement</h3>
+<p>Lorsqu’elle requiert un renseignement personnel, l’Assemblée nationale s’assure que son utilisation est nécessaire et qu’il est utilisé aux fins pour lesquelles il a été recueilli. De plus, la collecte de certains renseignements personnels est soumise à des consentements précis, pour lesquels les renseignements suivants vous sont fournis&nbsp;:</p>
+<ul>
+<li>au nom de qui la collecte est faite;</li>
+<li>les fins pour lesquelles les renseignements sont recueillis;</li>
+<li>les moyens par lesquels les renseignements sont recueillis;</li>
+<li>le caractère obligatoire ou facultatif de la demande;</li>
+<li>les conséquences pour la personne concernée ou, selon le cas, pour le tiers, d’un refus de répondre à la demande ou, le cas échéant, d’un retrait du consentement à la communication ou à l’utilisation des renseignements recueillis à la suite d’une demande facultative;</li>
+<li>les droits d’accès et de rectification prévus par la LADPRP.</li>
+</ul>
+<h3>Catégories de renseignements personnels</h3>
+<p>L’Assemblée nationale a regroupé, sous forme de catégories, les renseignements personnels qu’elle peut recueillir auprès de vous ainsi que les fins pour lesquelles ils sont collectés.</p>
+<table style="border: 0;">
+<caption>Catégories de renseignements avec exemples et fins pour lesquelles vos renseignements sont collectés</caption><thead> 
+<tr>
+<th>Catégorie de renseignements</th><th>Exemples de renseignements</th><th>Fins pour lesquelles vos renseignements sont collectés</th>
+</tr>
+</thead> 
+<tbody>
+<tr>
+<td>Renseignements d’identification</td>
+<td>
+<ul>
+<li>Nom et prénom</li>
+<li>Adresses électronique et postale</li>
+<li>Numéro de téléphone</li>
+<li>Province ou État</li>
+<li>Pays</li>
+</ul>
+</td>
+<td>
+<ul>
+<li>Vérifier votre identité</li>
+<li>Vous autoriser à entrer dans les édifices de l’Assemblée nationale</li>
+<li>Vous permettre de vous inscrire à une activité offerte par l’Assemblée nationale</li>
+<li>Vous identifier comme pétitionnaire</li>
+<li>Vous permettre d’effectuer une réservation au restaurant Le&nbsp;Parlementaire</li>
+<li>Vous permettre de participer à une consultation en ligne</li>
+<li>Vous permettre de commenter un sujet à l’étude</li>
+<li>Vous identifier comme plaignant, demandeur ou divulgateur et assurer le suivi de votre plainte, de votre demande ou de votre divulgation</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>
+<p>Renseignements pour l’inscription à une activité éducative</p>
+<p>Note : Les renseignements personnels recueillis peuvent dépendre du contexte de l’activité.</p>
+</td>
+<td>
+<ul>
+<li>Nom de l’établissement scolaire fréquenté</li>
+<li>Occupation (ex. : étudiant, enseignant,&nbsp;etc.)</li>
+<li>Numéro d’assurance maladie</li>
+<li>Allergies ou restrictions alimentaires</li>
+<li>Médicaments</li>
+<li>Image et voix</li>
+</ul>
+</td>
+<td>
+<ul>
+<li>Vous permettre de procéder à votre inscription ou à celle de votre enfant à l’une des activités éducatives offertes par l’Assemblée nationale</li>
+<li>Assurer la prise en charge adéquate de votre enfant et de sa sécurité</li>
+<li>Assurer le bon déroulement de l’activité</li>
+<li>Faire la promotion de l’activité sur les plateformes de l’Assemblée nationale, dont les réseaux sociaux</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>
+<p>Renseignements pour le dépôt d’une candidature à un concours</p>
+</td>
+<td>
+<ul>
+<li>Date de naissance</li>
+<li>Curriculum vitae</li>
+<li>Image et voix</li>
+</ul>
+<p>&nbsp;</p>
+</td>
+<td>
+<ul>
+<li>Recevoir votre candidature pour un concours (ex.&nbsp;: Prix du livre politique)</li>
+<li>Faire la promotion du concours sur les plateformes de l’Assemblée nationale, dont les réseaux sociaux</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>
+<p>Renseignements concernant une plainte ou la divulgation d’un acte répréhensible</p>
+</td>
+<td>
+<p>Renseignements que vous partagez avec nous concernant votre plainte ou votre divulgation</p>
+</td>
+<td>
+<ul>
+<li>Assurer le traitement et le suivi de votre plainte ou de votre divulgation<br><br>Note : Votre plainte ou votre divulgation est traitée en toute confidentialité et les renseignements personnels que vous nous soumettez pour son traitement sont protégés. </li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>
+<p>Renseignements sur votre utilisation de notre site Web</p>
+</td>
+<td>
+<p>Renseignements recueillis par le biais de témoins de connexion, dont&nbsp;:</p>
+<ul>
+<li>l’adresse IP tronquée de l’ordinateur (l’adresse n’est pas consignée dans un format qui peut être utilisé pour identifier une ou un internaute)</li>
+<li>les renseignements relatifs à votre appareil, système d’exploitation ou navigateur</li>
+<li>les renseignements sur votre comportement de navigation (ex.&nbsp;: pages consultées, dates et heures de consultation)</li>
+</ul>
+</td>
+<td>
+<ul>
+<li>Assurer le bon fonctionnement de notre site Web</li>
+<li>Faciliter la navigation</li>
+<li>Analyser les données de navigation</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Accès aux renseignements personnels</h3>
+<p>Seules les personnes autorisées par l’Assemblée nationale ont accès aux renseignements personnels recueillis, et elles y ont accès uniquement lorsque cela est nécessaire à l’exercice de leurs fonctions. Les catégories de personnes suivantes sont susceptibles d’avoir accès à vos renseignements personnels&nbsp;:</p>
+<ul>
+<li>les employées et employés de la sécurité;</li>
+<li>les employées et employés responsables du traitement des plaintes;</li>
+<li>les employées et employés de l’accueil et de la mission éducative;</li>
+<li>les employées et employés des commissions parlementaires.</li>
+</ul>
+<h3>Utilisation des renseignements personnels</h3>
+<p>L’utilisation des renseignements personnels recueillis est limitée aux fins pour lesquelles ils ont été collectés.</p>
+<h2 id="communication">Communication des renseignements personnels</h2>
+<h3>Communication à des tiers</h3>
+<p>Vos renseignements ne peuvent être transmis à d’autres personnes ou organismes que dans les cas prévus par la loi.</p>
+<p>Dans certaines circonstances, l’Assemblée nationale peut communiquer vos renseignements personnels à ses fournisseurs de services ou à ses partenaires.</p>
+<p>Certaines communications requièrent votre consentement. Toutefois, certains renseignements personnels pourraient être communiqués à des fournisseurs sans votre consentement, et ce, conformément à la LADPRP, lorsque cette communication est nécessaire à l’exercice d’un mandat ou à l’exécution d’un contrat de service ou d’entreprise conclu par l’Assemblée nationale. Ces fournisseurs utilisent vos renseignements personnels uniquement pour fournir les services retenus.</p>
+<p>Par exemple, il est possible que l’Assemblée nationale communique vos renseignements personnels aux fournisseurs suivants&nbsp;:</p>
+<ul>
+<li>les fournisseurs pour le traitement des réservations;</li>
+<li>les fournisseurs de services pour le traitement des paiements;</li>
+<li>les fournisseurs pour la gestion des communications, des courriels et des témoins de connexion;</li>
+<li>les fournisseurs de services et de produits informatiques;</li>
+<li>les services infonuagiques, d’hébergement Web et de traitement de données.</li>
+</ul>
+<p>Lorsque l’Assemblée nationale communique vos renseignements personnels à ces fournisseurs, elle s’assure que les contrats comportent les clauses de protection nécessaires pour veiller à la confidentialité de vos renseignements personnels.</p>
+<h3>Communication à l’extérieur du Québec</h3>
+<p>Certains de vos renseignements personnels peuvent être communiqués ou conservés à l’extérieur du Québec par une personne ou un organisme à qui l’Assemblée nationale peut confier la tâche de recueillir, d’utiliser, de communiquer ou de conserver de tels renseignements.</p>
+<p>Dans une telle situation, l’Assemblée nationale s’assure que ces renseignements bénéficient d’une protection adéquate, notamment au regard des principes de protection des renseignements personnels généralement reconnus. Par ailleurs, lorsque l’Assemblée nationale souhaite obtenir le consentement des personnes lors de la collecte de renseignements personnels, elle indique si les renseignements personnels collectés seront communiqués à l’extérieur du Québec.</p>
+<h2 id="temoins">Témoins de connexion (<em>cookies</em>)</h2>
+<p>Les témoins de connexion sont de petits fichiers texte que les sites Web demandent à votre navigateur de stocker sur votre ordinateur ou appareil mobile.</p>
+<p>Ce site Web utilise des témoins de connexion qui permettent d’assurer son bon fonctionnement et qui ne nécessitent pas votre consentement. Il peut s’agir soit de témoins de connexion persistants, lesquels sont enregistrés sur votre ordinateur et ne sont pas supprimés automatiquement lorsque vous fermez votre navigateur, soit de témoins de connexion de session qui sont supprimés lorsque vous le fermez. Vous pouvez supprimer les témoins de connexion persistants en effaçant l’historique de navigation de votre navigateur.</p>
+<p>Ce site Web utilise également des témoins de connexion analytiques. À ce sujet, l’Assemblée nationale utilise Google Analytics et Matomo, des outils permettant de mesurer l’audience Web et d’analyser les visites sur ce site. À l’aide de témoins de connexion, ces outils recueillent des renseignements sur la navigation, dont :</p>
+<ul>
+<li>l’adresse IP tronquée de l’ordinateur (l’adresse n’est pas consignée dans un format qui peut être utilisé pour identifier une ou un internaute);</li>
+<li>le fournisseur de services Internet;</li>
+<li>le système d’exploitation (ex.&nbsp;: MacOS, Windows);</li>
+<li>le type et le modèle d’appareil (ex.&nbsp;: iPhone 12);</li>
+<li>le type de navigateur, sa langue, sa version et d’autres données relatives à celui-ci (ex.&nbsp;: Chrome, Safari);</li>
+<li>la région ou la ville où se trouve l’internaute;</li>
+<li>l’adresse du site référent;</li>
+<li>le point d’origine (ex. : bannière, courriel, réseau social);</li>
+<li>les pages consultées sur assnat.qc.ca (ex.&nbsp;: séquence de consultation, interactions dans la page, date, heure, durée et fréquence des visites et activités [clics, défilement d’écran,&nbsp;etc.]).</li>
+</ul>
+<p>Votre consentement est nécessaire pour permettre l’utilisation de ces témoins de connexion. Lors de votre première visite sur l’un des sites Web gérés par l’Assemblée nationale, vous êtes invitée ou invité à accepter ou à refuser ces témoins de connexion.</p>
+<h3>Acceptation ou blocage des témoins de connexion analytiques</h3>
+<p>Lorsque vous acceptez l’utilisation des témoins de connexion analytiques, votre consentement est valide pour une durée de 12 mois. Il est toujours possible de <a href="javascript:Didomi.preferences.show()">retirer votre consentement</a>. Il est également possible de configurer votre navigateur pour empêcher l’enregistrement des témoins de connexion sur votre appareil.</p>
+<h3>Témoins de connexion de prestataires de services tiers</h3>
+<p>L’Assemblée nationale utilise des outils fournis par des tiers. Ces derniers peuvent conserver des renseignements à l’extérieur du Québec, notamment aux États-Unis. Pour plus d’information sur l’utilisation des renseignements recueillis, l’Assemblée nationale vous invite à consulter les conditions d’utilisation de chacun de ces outils :</p>
+<ul>
+<li><a href="https://www.assnat.qc.ca/fr/lien/13815.html" target="_blank">Google Analytics</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/13817.html" target="_blank">Matomo</a> (en anglais seulement)</li>
+</ul>
+<h2 id="conservation">Conservation et destruction des renseignements personnels</h2>
+<h3>Conservation des renseignements personnels</h3>
+<p>L’Assemblée nationale conserve vos renseignements personnels de manière sécuritaire tant et aussi longtemps qu’elle les utilise afin de mener ses activités, d’accomplir sa mission et de vous offrir ses services. L’Assemblée nationale les conservera conformément aux périodes prévues à son recueil de classification et de conservation.</p>
+<h3>Destruction des renseignements personnels</h3>
+<p>Une fois la durée de vie des renseignements personnels atteinte, l’Assemblée nationale s’assure de les détruire ou de les anonymiser. La destruction ou l’anonymisation s’effectue de manière sécuritaire, selon les meilleures pratiques.</p>
+<h2 id="mesures">Mesures de protection des renseignements personnels</h2>
+<p>L’Assemblée nationale est responsable de la protection des renseignements personnels qu’elle détient. Elle prend les mesures de sécurité propres à assurer la protection de vos renseignements personnels, de leur collecte jusqu’à leur destruction en passant par leur utilisation, leur conservation et leur communication.</p>
+<p>Ces mesures sont notamment les suivantes&nbsp;:</p>
+<ul>
+<li>mesures de protection physique : gestion des accès physiques et utilisation de matériel sécurisé (classeurs verrouillés);</li>
+<li>mesures de protection technologique : sécurisation des composants informatiques, gestion des mots de passe, procédure d’identification et d’authentification;</li>
+<li>mesures de protection administrative : cadre normatif, formation et sensibilisation en matière de protection des renseignements personnels et en sécurité de l’information.</li>
+</ul>
+<h2 id="droits">Droits de la personne concernée par les renseignements personnels</h2>
+<h3>Accès et rectification de vos renseignements personnels</h3>
+<p>L’Assemblée nationale s’engage à respecter les droits des visiteuses et visiteurs de son site en matière de protection des renseignements personnels, soit en ce qui concerne&nbsp;:</p>
+<ul>
+<li>le respect de la confidentialité de ces renseignements;</li>
+<li>l’accès à ces renseignements;</li>
+<li>la rectification de ces renseignements, s’ils se révèlent incomplets ou inexacts;</li>
+<li>la suppression de ces renseignements, si la collecte, la communication ou la conservation de ceux-ci ne sont pas autorisées par la loi.</li>
+</ul>
+<p>Vous pouvez soumettre une demande d’accès pour connaître les renseignements personnels détenus par l’Assemblée nationale et vous concernant en communiquant avec la personne responsable de l’accès aux documents et de la protection des renseignements personnels. Vous pouvez également communiquer avec cette personne si vous souhaitez faire rectifier les renseignements personnels vous concernant.</p>
+<p>Pour obtenir l’accès à vos renseignements personnels ou y apporter une correction, vous devez transmettre une demande écrite, par la poste, par télécopieur ou par courriel, à la personne responsable de l’accès aux documents et de la protection des renseignements personnels :</p>
+<p>M<sup>e</sup> Valérie&nbsp;Roy<br>Assemblée nationale du Québec<br>Édifice André-Laurendeau<br>1050, rue des Parlementaires<br>5<sup>e</sup> étage, bureau&nbsp;5.49<br>Québec (Québec)&nbsp; G1A 1A3</p>
+<ul>
+<li>Téléphone&nbsp;:                           
+<ul>
+<li>région de Québec&nbsp;: 418&nbsp;528-0020</li>
+<li>numéro sans frais&nbsp;: 1 866 DÉPUTÉS (1&nbsp;866&nbsp;337-8837)</li>
+</ul>
+</li>
+<li>Télécopieur&nbsp;: 418&nbsp;528-0993</li>
+<li>Courriel&nbsp;: <a href="mailto:af.juridiques@assnat.qc.ca">af.juridiques@assnat.qc.ca</a></li>
+</ul>
+<h3>Application de la politique de confidentialité et plaintes</h3>
+<p>À l’Assemblée nationale, M<sup>e</sup>&nbsp;Valérie Roy, responsable de l’accès aux documents et de la protection des renseignements personnels, est aussi responsable de l’application de la politique de confidentialité. Pour toute question relative à cette politique, vous pouvez communiquer avec M<sup>e</sup>&nbsp;Valérie Roy aux coordonnées indiquées ci-dessus.</p>
+<p>Vous pouvez consulter la <a href="https://www.assnat.qc.ca/fr/abc-assemblee/acces-information/index.html">Politique de gestion des renseignements personnels de l’Assemblée&nbsp;nationale</a>.</p>
+<p>Si vous êtes d’avis que l’Assemblée nationale ne respecte pas les obligations auxquelles elle est tenue en vertu de la <a href="https://www.assnat.qc.ca/fr/lien/11165.html" target="_blank"><em>Loi sur l’accès aux documents des organismes publics et sur la protection des renseignements personnels en matière de protection des renseignements personnels</em></a>, vous pouvez consulter le <a href="https://www.assnat.qc.ca/fr/abc-assemblee/acces-information/traitement-plaintes.html">processus de traitement des plaintes</a>.</p>
+<p>Dernière mise à jour de la politique&nbsp;: 14 décembre 2023</p>			
+		
+	
+
+							
+						</div>
+						
+						<div class="colonneImbriquee imbDroite">
+						
+							<!-- PlaceHolder: contenu secondaire de la page (defaut: vide) -->
+							
+						</div>
+
+					</div>
+
+					<!-- PlaceHolder: permet d'afficher du texte en dessous des colonnes -->
+					
+
+					<!-- PlaceHolder: contenu en complement de la page -->
+					
+	
+
+
+
+
+				
+        </div>
+
+        <!-- N'est plus utilisee a cause des utilitaire d'assemblee qui doivent spanner col centre + col droite -->
+        <div class="ColDroite colonne"></div>
+
+        <div class="clear" id="ClearPiedPage"></div>
+
+        <!-- Bandeau lorsque la langue est différente que français -->
+        
+
+        <!-- PiedDePage: affiche le contenu du pied de page -->
+        
+
+<div id="PiedDePage" class="PiedDePage">
+    <ul>
+        <li class="Premier">
+            <a href="/fr/fils-rss.html" class="sanssouligne icoFilsRss">
+                <span class="styleHyperlien">Fils RSS</span>
+            </a>
+        </li>
+        
+        <li><a href="/fr/liens-interet.html">Liens d'intérêt</a></li>
+        <li><a href="/fr/aide/index.html">Aide</a></li>
+        <li><a href="/fr/plan-site.html">Plan du site</a></li>
+        
+        <li><a href="/fr/propos-site/accessibilite.html">Accessibilité</a></li>
+        <li><a href="/fr/abc-assemblee/acces-information/index.html">Accès à l'information</a></li>
+    </ul>
+    <br>
+    <ul>
+        
+        <li class="Premier"><a href="/fr/propos-site/index.html">À propos du site</a> </li>
+        <li><a href="/fr/propos-site/droits-propriete-intellectuelle.html">Conditions d'utilisation</a></li>
+        <li><a href="/fr/propos-site/politique-confidentialite.html">Politique de confidentialité</a></li>
+        <li><a href="https://m.assnat.qc.ca">Mobile</a></li>
+    
+        
+            <li><a href="/en/propos-site/politique-confidentialite.html">English</a></li>
+        
+
+    </ul>
+
+    <br>
+    <span class="NonVisible">
+        
+                <ul>
+            
+                <li class="Premier">Date de la dernière modification : 10 mars 2009 </li>
+            
+                </ul>
+            
+    </span>
+</div>
+
+
+<script type="text/javascript">
+
+    //Forcer l'affichage du popup Didomi dans la langue de la page affichée au lieu du langage du fureteur de l'utilisateur
+    var langage = $('html').attr('lang');
+
+    $(document).ready(function(){
+        if (langage == 'fr') {
+            window.didomiConfig = {
+                languages: {
+                    enabled: ['fr'],
+                    default: 'fr'
+                }
+            };
+        } else {
+            window.didomiConfig = {
+                languages: {
+                    enabled: ['en'],
+                    default: 'en'
+                }
+            };
+        }
+    })
+    
+</script>
+
+    </div>
+</form>
+
+
+	            				
+    
+
+
+<div class="infoBulle" id="infoBulle" style="display:none"><div class="fermerBulle"><a href="javascript:void(0);" id="tme">[x] Fermer</a></div><p>&nbsp;</p></div><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Assemblée nationale du Québec",
+  "url": "https://assnat.qc.ca/",
+  "logo": "https://assnat.qc.ca/Images/logo_blanc_Assemblee_nationale_du_Quebec.png",
+  "sameAs": [
+    "https://www.facebook.com/AssnatQc",
+    "https://twitter.com/AssnatQc",
+    "https://www.instagram.com/assnatqc/",
+    "https://www.linkedin.com/company/assemblee-nationale-du-quebec"
+  ],
+  "contactPoint": [
+    {
+      "@type": "ContactPoint",
+      "telephone": "4181-643-7239",
+      "contactType": "customer service",
+      "email": "renseignements@assnat.qc.ca",
+      "areaServed": "CA",
+      "availableLanguage": "fr"
+    }
+  ]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "WebSite",
+  "name": "Assemblée nationale du Québec",
+  "url": "https://assnat.qc.ca/",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://assnat.qc.ca/{search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script><script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Assemblée nationale du Québec",
+            "item": "https://assnat.qc.ca/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Députés",
+            "item": "https://assnat.qc.ca/fr/deputes/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Travaux parlementaires",
+            "item": "https://assnat.qc.ca/fr/travaux-parlementaires/"
+        },
+         {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Vidéo en direct",
+            "item": "https://assnat.qc.ca/fr/video-audio/en-direct-webdiffusion.html"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Quoi faire",
+            "item": "https://assnat.qc.ca/fr/visiteurs/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Exprimez-votre opinion",
+            "item": "https://assnat.qc.ca/fr/exprimez-votre-opinion/"
+        }
+    ]
+}
+</script>
+<script type="text/javascript" id="" charset="">var _paq=window._paq=window._paq||[];_paq.push(["trackPageView"]);_paq.push(["enableLinkTracking"]);(function(){var c="https://stats.assnat.qc.ca/piwik/";_paq.push(["setTrackerUrl",c+"matomo.php"]);_paq.push(["setSiteId","3"]);var a=document,b=a.createElement("script");a=a.getElementsByTagName("script")[0];b.type="text/javascript";b.async=!0;b.src=c+"matomo.js";a.parentNode.insertBefore(b,a)})();</script><iframe allow="join-ad-interest-group" data-tagging-id="AW-982566139" data-load-time="1717856758974" height="0" width="0" src="https://td.doubleclick.net/td/rul/982566139?random=1717856758973&amp;cv=11&amp;fst=1717856758973&amp;fmt=3&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;gtm=45je4650v875527057z8839336089za200zb839336089&amp;gcd=13l3l3l3l1&amp;dma=0&amp;tcfd=10000&amp;tag_exp=0&amp;u_w=1920&amp;u_h=1080&amp;url=https%3A%2F%2Fassnat.qc.ca%2Ffr%2Fpropos-site%2Fpolitique-confidentialite.html&amp;hn=www.googleadservices.com&amp;frm=0&amp;tiba=Politique%20de%20confidentialit%C3%A9%20-%20Assembl%C3%A9e%20nationale%20du%20Qu%C3%A9bec&amp;npa=0&amp;us_privacy=1---&amp;auid=1836685114.1717856747&amp;uaa=arm&amp;uab=64&amp;uafvl=Google%2520Chrome%3B125.0.6422.142%7CChromium%3B125.0.6422.142%7CNot.A%252FBrand%3B24.0.0.0&amp;uamb=0&amp;uam=&amp;uap=macOS&amp;uapv=14.5.0&amp;uaw=0&amp;fledge=1&amp;data=event%3Dgtag.config" style="display: none; visibility: hidden;"></iframe>
+</body></html>

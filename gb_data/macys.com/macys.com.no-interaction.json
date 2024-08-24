@@ -1,0 +1,1 @@
+[{"domain": ".macys.com", "httpOnly": false, "name": "currency", "path": "/", "sameSite": "Lax", "secure": true, "value": "GBP"}, {"domain": ".macys.com", "httpOnly": false, "name": "shippingCountry", "path": "/", "sameSite": "Lax", "secure": true, "value": "GB"}]

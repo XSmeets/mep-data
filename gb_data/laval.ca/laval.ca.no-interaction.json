@@ -1,0 +1,1 @@
+[{"domain": "www.laval.ca", "httpOnly": false, "name": "WSS_FullScreenMode", "path": "/", "sameSite": "Lax", "secure": false, "value": "false"}, {"domain": ".www.laval.ca", "httpOnly": false, "name": "TS01fad96b", "path": "/", "sameSite": "Lax", "secure": false, "value": "017819b20c9a59409abd70ddbb9b588eee5895fc0e0562dc0d4b449c996462c76ed32fcd0f88f25d369d18c7d748ce41579c105bbc"}]

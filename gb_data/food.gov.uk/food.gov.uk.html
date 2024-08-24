@@ -1,0 +1,1828 @@
+<html lang="en" dir="ltr" prefix="og: https://ogp.me/ns#" class=" js"><head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" async="" src="https://scripts.simpleanalyticscdn.com/latest.js"></script><script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-TG0TGF4DHQ&amp;l=dataLayer&amp;cx=c"></script><script src="https://www.googletagmanager.com/gtm.js?id=GTM-TH697XV&amp;gtm_auth=qiSnyllzn5flpcJTEzjYGA&amp;gtm_preview=env-2&amp;gtm_cookies_win=x" async=""></script><script type="text/javascript">
+      // Get all cookie_preferences cookie.
+      var cookies = document.cookie.split('; ');
+      if (typeof cookies !== "undefined") {
+        var cook = cookies.filter(function(row) { return row.match(/^cookie_preferences/) })[0];
+        if (typeof cook !== "undefined") {
+          cook = cook.toString();
+          cook = unescape(cook.split("=")[1].toString());
+          cook = JSON.parse(cook);
+          window.cook = cook;
+        }
+      }
+
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments)};
+      gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'analytics_storage': 'denied'
+      });
+
+
+      // If cookies
+      if (!cook || cook.analytics === 'no') {
+        window['ga-disable-UA-54078849-3'] = true;
+        window['ga-disable-UA-54078849-1'] = true;
+      }
+      else {
+        gtag('consent', 'update', {
+          analytics_storage: 'granted',
+        });
+      }
+    </script>
+    <meta charset="utf-8"><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"9601a3739a",applicationID:"126145947"};;/*! For license information please see nr-loader-rum-1.260.1.min.js.LICENSE.txt */
+(()=>{var e,t,r={234:(e,t,r)=>{"use strict";r.d(t,{P_:()=>v,Mt:()=>b,C5:()=>s,OP:()=>k,lF:()=>P,Yu:()=>_,Dg:()=>m,CX:()=>c,GE:()=>w,sU:()=>N});var n=r(8632),i=r(9567);const o={beacon:n.ce.beacon,errorBeacon:n.ce.errorBeacon,licenseKey:void 0,applicationID:void 0,sa:void 0,queueTime:void 0,applicationTime:void 0,ttGuid:void 0,user:void 0,account:void 0,product:void 0,extra:void 0,jsAttributes:{},userAttributes:void 0,atts:void 0,transactionName:void 0,tNamePlain:void 0},a={};function s(e){if(!e)throw new Error("All info objects require an agent identifier!");if(!a[e])throw new Error("Info for ".concat(e," was never set"));return a[e]}function c(e,t){if(!e)throw new Error("All info objects require an agent identifier!");a[e]=(0,i.D)(t,o);const r=(0,n.ek)(e);r&&(r.info=a[e])}const u=e=>{if(!e||"string"!=typeof e)return!1;try{document.createDocumentFragment().querySelector(e)}catch{return!1}return!0};var d=r(7056),l=r(50);const f="[data-nr-mask]",g=()=>{const e={mask_selector:"*",block_selector:"[data-nr-block]",mask_input_options:{color:!1,date:!1,"datetime-local":!1,email:!1,month:!1,number:!1,range:!1,search:!1,tel:!1,text:!1,time:!1,url:!1,week:!1,textarea:!1,select:!1,password:!0}};return{feature_flags:[],proxy:{assets:void 0,beacon:void 0},privacy:{cookies_enabled:!0},ajax:{deny_list:void 0,block_internal:!0,enabled:!0,harvestTimeSeconds:10,autoStart:!0},distributed_tracing:{enabled:void 0,exclude_newrelic_header:void 0,cors_use_newrelic_header:void 0,cors_use_tracecontext_headers:void 0,allowed_origins:void 0},session:{expiresMs:d.oD,inactiveMs:d.Hb},ssl:void 0,obfuscate:void 0,jserrors:{enabled:!0,harvestTimeSeconds:10,autoStart:!0},metrics:{enabled:!0,autoStart:!0},page_action:{enabled:!0,harvestTimeSeconds:30,autoStart:!0},page_view_event:{enabled:!0,autoStart:!0},page_view_timing:{enabled:!0,harvestTimeSeconds:30,long_task:!1,autoStart:!0},session_trace:{enabled:!0,harvestTimeSeconds:10,autoStart:!0},harvest:{tooManyRequestsDelay:60},session_replay:{autoStart:!0,enabled:!1,harvestTimeSeconds:60,preload:!1,sampling_rate:10,error_sampling_rate:100,collect_fonts:!1,inline_images:!1,inline_stylesheet:!0,mask_all_inputs:!0,get mask_text_selector(){return e.mask_selector},set mask_text_selector(t){u(t)?e.mask_selector="".concat(t,",").concat(f):""===t||null===t?e.mask_selector=f:(0,l.Z)("An invalid session_replay.mask_selector was provided. '*' will be used.",t)},get block_class(){return"nr-block"},get ignore_class(){return"nr-ignore"},get mask_text_class(){return"nr-mask"},get block_selector(){return e.block_selector},set block_selector(t){u(t)?e.block_selector+=",".concat(t):""!==t&&(0,l.Z)("An invalid session_replay.block_selector was provided and will not be used",t)},get mask_input_options(){return e.mask_input_options},set mask_input_options(t){t&&"object"==typeof t?e.mask_input_options={...t,password:!0}:(0,l.Z)("An invalid session_replay.mask_input_option was provided and will not be used",t)}},spa:{enabled:!0,harvestTimeSeconds:10,autoStart:!0},soft_navigations:{enabled:!0,harvestTimeSeconds:10,autoStart:!0}}},p={},h="All configuration objects require an agent identifier!";function v(e){if(!e)throw new Error(h);if(!p[e])throw new Error("Configuration for ".concat(e," was never set"));return p[e]}function m(e,t){if(!e)throw new Error(h);p[e]=(0,i.D)(t,g());const r=(0,n.ek)(e);r&&(r.init=p[e])}function b(e,t){if(!e)throw new Error(h);var r=v(e);if(r){for(var n=t.split("."),i=0;i<n.length-1;i++)if("object"!=typeof(r=r[n[i]]))return;r=r[n[n.length-1]]}return r}const y={accountID:void 0,trustKey:void 0,agentID:void 0,licenseKey:void 0,applicationID:void 0,xpid:void 0},A={};function w(e,t){if(!e)throw new Error("All loader-config objects require an agent identifier!");A[e]=(0,i.D)(t,y);const r=(0,n.ek)(e);r&&(r.loader_config=A[e])}const _=(0,n.mF)().o;var E=r(385),x=r(6818);const D={buildEnv:x.Re,distMethod:x.gF,version:x.q4,originTime:E.sK},S={customTransaction:void 0,disabled:!1,isolatedBacklog:!1,loaderType:void 0,maxBytes:3e4,onerror:void 0,origin:""+E._A.location,ptid:void 0,releaseIds:{},appMetadata:{},session:void 0,denyList:void 0,harvestCount:0,timeKeeper:void 0},R={};function k(e){if(!e)throw new Error("All runtime objects require an agent identifier!");if(!R[e])throw new Error("Runtime for ".concat(e," was never set"));return R[e]}function N(e,t){if(!e)throw new Error("All runtime objects require an agent identifier!");R[e]={...(0,i.D)(t,S),...D};const r=(0,n.ek)(e);r&&(r.runtime=R[e])}function P(e){return function(e){try{const t=s(e);return!!t.licenseKey&&!!t.errorBeacon&&!!t.applicationID}catch(e){return!1}}(e)}},9567:(e,t,r)=>{"use strict";r.d(t,{D:()=>i});var n=r(50);function i(e,t){try{if(!e||"object"!=typeof e)return(0,n.Z)("Setting a Configurable requires an object as input");if(!t||"object"!=typeof t)return(0,n.Z)("Setting a Configurable requires a model to set its initial properties");const r=Object.create(Object.getPrototypeOf(t),Object.getOwnPropertyDescriptors(t)),o=0===Object.keys(r).length?e:r;for(let a in o)if(void 0!==e[a])try{if(null===e[a]){r[a]=null;continue}Array.isArray(e[a])&&Array.isArray(t[a])?r[a]=Array.from(new Set([...e[a],...t[a]])):"object"==typeof e[a]&&"object"==typeof t[a]?r[a]=i(e[a],t[a]):r[a]=e[a]}catch(e){(0,n.Z)("An error occurred while setting a property of a Configurable",e)}return r}catch(e){(0,n.Z)("An error occured while setting a Configurable",e)}}},6818:(e,t,r)=>{"use strict";r.d(t,{Re:()=>i,gF:()=>o,q4:()=>n});const n="1.260.1",i="PROD",o="CDN"},385:(e,t,r)=>{"use strict";r.d(t,{Nk:()=>l,Tt:()=>c,_A:()=>a,iS:()=>s,il:()=>i,sK:()=>f,ux:()=>u,v6:()=>o,w1:()=>d});var n=r(7894);const i="undefined"!=typeof window&&!!window.document,o="undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self.navigator instanceof WorkerNavigator||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis.navigator instanceof WorkerNavigator),a=i?window:"undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis),s=Boolean("hidden"===a?.document?.visibilityState),c=/iPad|iPhone|iPod/.test(a.navigator?.userAgent),u=c&&"undefined"==typeof SharedWorker,d=((()=>{const e=a.navigator?.userAgent?.match(/Firefox[/\s](\d+\.\d+)/);Array.isArray(e)&&e.length>=2&&e[1]})(),Boolean(i&&window.document.documentMode)),l=!!a.navigator?.sendBeacon,f=Date.now()-(0,n.z)()},1117:(e,t,r)=>{"use strict";r.d(t,{w:()=>o});var n=r(50);const i={agentIdentifier:"",ee:void 0};class o{constructor(e){try{if("object"!=typeof e)return(0,n.Z)("shared context requires an object as input");this.sharedContext={},Object.assign(this.sharedContext,i),Object.entries(e).forEach((e=>{let[t,r]=e;Object.keys(i).includes(t)&&(this.sharedContext[t]=r)}))}catch(e){(0,n.Z)("An error occurred while setting SharedContext",e)}}}},8e3:(e,t,r)=>{"use strict";r.d(t,{LP:()=>l,RP:()=>c,o5:()=>u});var n=r(8325),i=r(1284),o=r(4322),a=r(3325);const s={};function c(e,t){const r={staged:!1,priority:a.p[t]||0};d(e),s[e].get(t)||s[e].set(t,r)}function u(e,t){d(e),s[e].get(t)&&s[e].delete(t),s[e].size&&f(e)}function d(e){if(!e)throw new Error("agentIdentifier required");s[e]||(s[e]=new Map)}function l(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:"",t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:"feature",r=arguments.length>2&&void 0!==arguments[2]&&arguments[2];if(d(e),!e||!s[e].get(t)||r)return g(e,t);s[e].get(t).staged=!0,f(e)}function f(e){const t=Array.from(s[e]);t.every((e=>{let[t,r]=e;return r.staged}))&&(t.sort(((e,t)=>e[1].priority-t[1].priority)),t.forEach((t=>{let[r]=t;s[e].delete(r),g(e,r)})))}function g(e,t){const r=e?n.ee.get(e):n.ee,a=o.X.handlers;if(r.backlog&&a){var s=r.backlog[t],c=a[t];if(c){for(var u=0;s&&u<s.length;++u)p(s[u],c);(0,i.D)(c,(function(e,t){(0,i.D)(t,(function(t,r){r[0].on(e,r[1])}))}))}r.isolatedBacklog||delete a[t],r.backlog[t]=null,r.emit("drain-"+t,[])}}function p(e,t){var r=e[1];(0,i.D)(t[r],(function(t,r){var n=e[0];if(r[0]===n){var i=r[1],o=e[3],a=e[2];i.apply(o,a)}}))}},8325:(e,t,r)=>{"use strict";r.d(t,{A:()=>c,ee:()=>u});var n=r(8632),i=r(2210),o=r(234);class a{constructor(e){this.contextId=e}}var s=r(3117);const c="nr@context:".concat(s.a),u=function e(t,r){var n={},s={},d={},l=!1;try{l=16===r.length&&(0,o.OP)(r).isolatedBacklog}catch(e){}var f={on:p,addEventListener:p,removeEventListener:function(e,t){var r=n[e];if(!r)return;for(var i=0;i<r.length;i++)r[i]===t&&r.splice(i,1)},emit:function(e,r,n,i,o){!1!==o&&(o=!0);if(u.aborted&&!i)return;t&&o&&t.emit(e,r,n);for(var a=g(n),c=h(e),d=c.length,l=0;l<d;l++)c[l].apply(a,r);var p=m()[s[e]];p&&p.push([f,e,r,a]);return a},get:v,listeners:h,context:g,buffer:function(e,t){const r=m();if(t=t||"feature",f.aborted)return;Object.entries(e||{}).forEach((e=>{let[n,i]=e;s[i]=t,t in r||(r[t]=[])}))},abort:function(){f._aborted=!0,Object.keys(f.backlog).forEach((e=>{delete f.backlog[e]}))},isBuffering:function(e){return!!m()[s[e]]},debugId:r,backlog:l?{}:t&&"object"==typeof t.backlog?t.backlog:{},isolatedBacklog:l};return Object.defineProperty(f,"aborted",{get:()=>{let e=f._aborted||!1;return e||(t&&(e=t.aborted),e)}}),f;function g(e){return e&&e instanceof a?e:e?(0,i.X)(e,c,(()=>new a(c))):new a(c)}function p(e,t){n[e]=h(e).concat(t)}function h(e){return n[e]||[]}function v(t){return d[t]=d[t]||e(f,t)}function m(){return f.backlog}}(void 0,"globalEE"),d=(0,n.fP)();d.ee||(d.ee=u)},5546:(e,t,r)=>{"use strict";r.d(t,{E:()=>n,p:()=>i});var n=r(8325).ee.get("handle");function i(e,t,r,i,o){o?(o.buffer([e],i),o.emit(e,t,r)):(n.buffer([e],i),n.emit(e,t,r))}},4322:(e,t,r)=>{"use strict";r.d(t,{X:()=>o});var n=r(5546);o.on=a;var i=o.handlers={};function o(e,t,r,o){a(o||n.E,i,e,t,r)}function a(e,t,r,i,o){o||(o="feature"),e||(e=n.E);var a=t[o]=t[o]||{};(a[r]=a[r]||[]).push([e,i])}},3239:(e,t,r)=>{"use strict";r.d(t,{bP:()=>s,iz:()=>c,m$:()=>a});var n=r(385);let i=!1,o=!1;try{const e={get passive(){return i=!0,!1},get signal(){return o=!0,!1}};n._A.addEventListener("test",null,e),n._A.removeEventListener("test",null,e)}catch(e){}function a(e,t){return i||o?{capture:!!e,passive:i,signal:t}:!!e}function s(e,t){let r=arguments.length>2&&void 0!==arguments[2]&&arguments[2],n=arguments.length>3?arguments[3]:void 0;window.addEventListener(e,t,a(r,n))}function c(e,t){let r=arguments.length>2&&void 0!==arguments[2]&&arguments[2],n=arguments.length>3?arguments[3]:void 0;document.addEventListener(e,t,a(r,n))}},3117:(e,t,r)=>{"use strict";r.d(t,{a:()=>n});const n=(0,r(4402).Rl)()},4402:(e,t,r)=>{"use strict";r.d(t,{Rl:()=>a,ky:()=>s});var n=r(385);const i="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx";function o(e,t){return e?15&e[t]:16*Math.random()|0}function a(){const e=n._A?.crypto||n._A?.msCrypto;let t,r=0;return e&&e.getRandomValues&&(t=e.getRandomValues(new Uint8Array(30))),i.split("").map((e=>"x"===e?o(t,r++).toString(16):"y"===e?(3&o()|8).toString(16):e)).join("")}function s(e){const t=n._A?.crypto||n._A?.msCrypto;let r,i=0;t&&t.getRandomValues&&(r=t.getRandomValues(new Uint8Array(e)));const a=[];for(var s=0;s<e;s++)a.push(o(r,i++).toString(16));return a.join("")}},7056:(e,t,r)=>{"use strict";r.d(t,{Bq:()=>n,Hb:()=>a,IK:()=>u,K4:()=>i,oD:()=>o,uT:()=>c,wO:()=>s});const n="NRBA",i="SESSION",o=144e5,a=18e5,s={STARTED:"session-started",PAUSE:"session-pause",RESET:"session-reset",RESUME:"session-resume",UPDATE:"session-update"},c={SAME_TAB:"same-tab",CROSS_TAB:"cross-tab"},u={OFF:0,FULL:1,ERROR:2}},7894:(e,t,r)=>{"use strict";function n(){return Math.floor(performance.now())}r.d(t,{z:()=>n})},50:(e,t,r)=>{"use strict";function n(e,t){"function"==typeof console.warn&&(console.warn("New Relic: ".concat(e)),t&&console.warn(t))}r.d(t,{Z:()=>n})},2825:(e,t,r)=>{"use strict";r.d(t,{N:()=>c,T:()=>s});var n=r(8325),i=r(385);const o="newrelic";const a=new Set,s={};function c(e,t){const r=n.ee.get(t);s[t]??={},e&&"object"==typeof e&&(a.has(t)||(r.emit("rumresp",[e]),s[t]=e,a.add(t),function(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{};try{i._A.dispatchEvent(new CustomEvent(o,{detail:e}))}catch(e){}}({loaded:!0})))}},2210:(e,t,r)=>{"use strict";r.d(t,{X:()=>i});var n=Object.prototype.hasOwnProperty;function i(e,t,r){if(n.call(e,t))return e[t];var i=r();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:i,writable:!0,enumerable:!1}),i}catch(e){}return e[t]=i,i}},7872:(e,t,r)=>{"use strict";function n(e){var t=this;let r=arguments.length>1&&void 0!==arguments[1]?arguments[1]:500,n=arguments.length>2&&void 0!==arguments[2]?arguments[2]:{};const i=n?.leading||!1;let o;return function(){for(var n=arguments.length,a=new Array(n),s=0;s<n;s++)a[s]=arguments[s];i&&void 0===o&&(e.apply(t,a),o=setTimeout((()=>{o=clearTimeout(o)}),r)),i||(clearTimeout(o),o=setTimeout((()=>{e.apply(t,a)}),r))}}function i(e){var t=this;let r=!1;return function(){if(!r){r=!0;for(var n=arguments.length,i=new Array(n),o=0;o<n;o++)i[o]=arguments[o];e.apply(t,i)}}}r.d(t,{D:()=>n,Z:()=>i})},1284:(e,t,r)=>{"use strict";r.d(t,{D:()=>n});const n=(e,t)=>Object.entries(e||{}).map((e=>{let[r,n]=e;return t(r,n)}))},4351:(e,t,r)=>{"use strict";r.d(t,{P:()=>o});var n=r(8325);const i=()=>{const e=new WeakSet;return(t,r)=>{if("object"==typeof r&&null!==r){if(e.has(r))return;e.add(r)}return r}};function o(e){try{return JSON.stringify(e,i())}catch(e){try{n.ee.emit("internal-error",[e])}catch(e){}}}},3960:(e,t,r)=>{"use strict";r.d(t,{KB:()=>a,b2:()=>o});var n=r(3239);function i(){return"undefined"==typeof document||"complete"===document.readyState}function o(e,t){if(i())return e();(0,n.bP)("load",e,t)}function a(e){if(i())return e();(0,n.iz)("DOMContentLoaded",e)}},8632:(e,t,r)=>{"use strict";r.d(t,{EZ:()=>d,ce:()=>o,ek:()=>u,fP:()=>a,gG:()=>l,h5:()=>c,mF:()=>s});var n=r(385),i=r(7894);const o={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net"};function a(){return n._A.NREUM||(n._A.NREUM={}),void 0===n._A.newrelic&&(n._A.newrelic=n._A.NREUM),n._A.NREUM}function s(){let e=a();return e.o||(e.o={ST:n._A.setTimeout,SI:n._A.setImmediate,CT:n._A.clearTimeout,XHR:n._A.XMLHttpRequest,REQ:n._A.Request,EV:n._A.Event,PR:n._A.Promise,MO:n._A.MutationObserver,FETCH:n._A.fetch}),e}function c(e,t){let r=a();r.initializedAgents??={},t.initializedAt={ms:(0,i.z)(),date:new Date},r.initializedAgents[e]=t}function u(e){let t=a();return t.initializedAgents?.[e]}function d(e,t){a()[e]=t}function l(){return function(){let e=a();const t=e.info||{};e.info={beacon:o.beacon,errorBeacon:o.errorBeacon,...t}}(),function(){let e=a();const t=e.init||{};e.init={...t}}(),s(),function(){let e=a();const t=e.loader_config||{};e.loader_config={...t}}(),a()}},7956:(e,t,r)=>{"use strict";r.d(t,{N:()=>i});var n=r(3239);function i(e){let t=arguments.length>1&&void 0!==arguments[1]&&arguments[1],r=arguments.length>2?arguments[2]:void 0,i=arguments.length>3?arguments[3]:void 0;(0,n.iz)("visibilitychange",(function(){if(t)return void("hidden"===document.visibilityState&&e());e(document.visibilityState)}),r,i)}},3081:(e,t,r)=>{"use strict";r.d(t,{gF:()=>o,mY:()=>i,t9:()=>n,vz:()=>s,xS:()=>a});const n=r(3325).D.metrics,i="sm",o="cm",a="storeSupportabilityMetrics",s="storeEventMetrics"},7633:(e,t,r)=>{"use strict";r.d(t,{t:()=>n});const n=r(3325).D.pageViewEvent},9251:(e,t,r)=>{"use strict";r.d(t,{t:()=>n});const n=r(3325).D.pageViewTiming},7144:(e,t,r)=>{"use strict";r.d(t,{Ef:()=>i});var n=r(7056);r(3325).D.sessionReplay;const i={RECORD:"recordReplay",PAUSE:"pauseReplay",REPLAY_RUNNING:"replayRunning",ERROR_DURING_REPLAY:"errorDuringReplay"};n.IK.ERROR,n.IK.FULL,n.IK.OFF},5938:(e,t,r)=>{"use strict";r.d(t,{W:()=>i});var n=r(8325);class i{constructor(e,t,r){this.agentIdentifier=e,this.aggregator=t,this.ee=n.ee.get(e),this.featureName=r,this.blocked=!1}}},2758:(e,t,r)=>{"use strict";r.d(t,{j:()=>E});var n=r(3325),i=r(234),o=r(5546),a=r(8325),s=r(8e3),c=r(3960),u=r(385),d=r(50),l=r(3081),f=r(8632),g=r(7144);const p=["setErrorHandler","finished","addToTrace","addRelease","addPageAction","setCurrentRouteName","setPageViewName","setCustomAttribute","interaction","noticeError","setUserId","setApplicationVersion","start",g.Ef.RECORD,g.Ef.PAUSE],h=["setErrorHandler","finished","addToTrace","addRelease"];var v=r(7894),m=r(7056);function b(){const e=(0,f.gG)();p.forEach((t=>{e[t]=function(){for(var r=arguments.length,n=new Array(r),i=0;i<r;i++)n[i]=arguments[i];return function(t){for(var r=arguments.length,n=new Array(r>1?r-1:0),i=1;i<r;i++)n[i-1]=arguments[i];let o=[];return Object.values(e.initializedAgents).forEach((e=>{e.exposed&&e.api[t]&&o.push(e.api[t](...n))})),o.length>1?o:o[0]}(t,...n)}}))}const y={};var A=r(2825);const w=e=>{const t=e.startsWith("http");e+="/",r.p=t?e:"https://"+e};let _=!1;function E(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{},p=arguments.length>2?arguments[2]:void 0,E=arguments.length>3?arguments[3]:void 0,{init:x,info:D,loader_config:S,runtime:R={loaderType:p},exposed:k=!0}=t;const N=(0,f.gG)();D||(x=N.init,D=N.info,S=N.loader_config),(0,i.Dg)(e.agentIdentifier,x||{}),(0,i.GE)(e.agentIdentifier,S||{}),D.jsAttributes??={},u.v6&&(D.jsAttributes.isWorker=!0),(0,i.CX)(e.agentIdentifier,D);const P=(0,i.P_)(e.agentIdentifier),j=[D.beacon,D.errorBeacon];_||(P.proxy.assets&&(w(P.proxy.assets),j.push(P.proxy.assets)),P.proxy.beacon&&j.push(P.proxy.beacon),b(),(0,f.EZ)("activatedFeatures",A.T),e.runSoftNavOverSpa&&=!0===P.soft_navigations.enabled&&P.feature_flags.includes("soft_nav")),R.denyList=[...P.ajax.deny_list||[],...P.ajax.block_internal?j:[]],R.ptid=e.agentIdentifier,(0,i.sU)(e.agentIdentifier,R),void 0===e.api&&(e.api=function(e,t){let f=arguments.length>2&&void 0!==arguments[2]&&arguments[2];t||(0,s.RP)(e,"api");const p={};var b=a.ee.get(e),A=b.get("tracer");y[e]=m.IK.OFF,b.on(g.Ef.REPLAY_RUNNING,(t=>{y[e]=t}));var w="api-",_=w+"ixn-";function E(t,r,n,o){const a=(0,i.C5)(e);return null===r?delete a.jsAttributes[t]:(0,i.CX)(e,{...a,jsAttributes:{...a.jsAttributes,[t]:r}}),S(w,n,!0,o||null===r?"session":void 0)(t,r)}function x(){}h.forEach((e=>{p[e]=S(w,e,!0,"api")})),p.addPageAction=S(w,"addPageAction",!0,n.D.pageAction),p.setPageViewName=function(t,r){if("string"==typeof t)return"/"!==t.charAt(0)&&(t="/"+t),(0,i.OP)(e).customTransaction=(r||"http://custom.transaction")+t,S(w,"setPageViewName",!0)()},p.setCustomAttribute=function(e,t){let r=arguments.length>2&&void 0!==arguments[2]&&arguments[2];if("string"==typeof e){if(["string","number","boolean"].includes(typeof t)||null===t)return E(e,t,"setCustomAttribute",r);(0,d.Z)("Failed to execute setCustomAttribute.\nNon-null value must be a string, number or boolean type, but a type of <".concat(typeof t,"> was provided."))}else(0,d.Z)("Failed to execute setCustomAttribute.\nName must be a string type, but a type of <".concat(typeof e,"> was provided."))},p.setUserId=function(e){if("string"==typeof e||null===e)return E("enduser.id",e,"setUserId",!0);(0,d.Z)("Failed to execute setUserId.\nNon-null value must be a string type, but a type of <".concat(typeof e,"> was provided."))},p.setApplicationVersion=function(e){if("string"==typeof e||null===e)return E("application.version",e,"setApplicationVersion",!1);(0,d.Z)("Failed to execute setApplicationVersion. Expected <String | null>, but got <".concat(typeof e,">."))},p.start=()=>{try{(0,o.p)(l.xS,["API/start/called"],void 0,n.D.metrics,b),b.emit("manual-start-all")}catch(e){(0,d.Z)("An unexpected issue occurred",e)}},p[g.Ef.RECORD]=function(){(0,o.p)(l.xS,["API/recordReplay/called"],void 0,n.D.metrics,b),(0,o.p)(g.Ef.RECORD,[],void 0,n.D.sessionReplay,b)},p[g.Ef.PAUSE]=function(){(0,o.p)(l.xS,["API/pauseReplay/called"],void 0,n.D.metrics,b),(0,o.p)(g.Ef.PAUSE,[],void 0,n.D.sessionReplay,b)},p.interaction=function(e){return(new x).get("object"==typeof e?e:{})};const D=x.prototype={createTracer:function(e,t){var r={},i=this,a="function"==typeof t;return(0,o.p)(l.xS,["API/createTracer/called"],void 0,n.D.metrics,b),f||(0,o.p)(_+"tracer",[(0,v.z)(),e,r],i,n.D.spa,b),function(){if(A.emit((a?"":"no-")+"fn-start",[(0,v.z)(),i,a],r),a)try{return t.apply(this,arguments)}catch(e){const t="string"==typeof e?new Error(e):e;throw A.emit("fn-err",[arguments,this,t],r),t}finally{A.emit("fn-end",[(0,v.z)()],r)}}}};function S(e,t,r,i){return function(){return(0,o.p)(l.xS,["API/"+t+"/called"],void 0,n.D.metrics,b),i&&(0,o.p)(e+t,[(0,v.z)(),...arguments],r?null:this,i,b),r?void 0:this}}function R(){r.e(75).then(r.bind(r,7438)).then((t=>{let{setAPI:r}=t;r(e),(0,s.LP)(e,"api")})).catch((e=>{(0,d.Z)("Downloading runtime APIs failed...",e),b.abort()}))}return["actionText","setName","setAttribute","save","ignore","onEnd","getContext","end","get"].forEach((e=>{D[e]=S(_,e,void 0,f?n.D.softNav:n.D.spa)})),p.setCurrentRouteName=f?S(_,"routeName",void 0,n.D.softNav):S(w,"routeName",!0,n.D.spa),p.noticeError=function(t,r){"string"==typeof t&&(t=new Error(t)),(0,o.p)(l.xS,["API/noticeError/called"],void 0,n.D.metrics,b),(0,o.p)("err",[t,(0,v.z)(),!1,r,!!y[e]],void 0,n.D.jserrors,b)},u.il?(0,c.b2)((()=>R()),!0):R(),p}(e.agentIdentifier,E,e.runSoftNavOverSpa)),void 0===e.exposed&&(e.exposed=k),_=!0}},8993:(e,t,r)=>{r.nc=(()=>{try{return document?.currentScript?.nonce}catch(e){}return""})()},3325:(e,t,r)=>{"use strict";r.d(t,{D:()=>n,p:()=>i});const n={ajax:"ajax",jserrors:"jserrors",metrics:"metrics",pageAction:"page_action",pageViewEvent:"page_view_event",pageViewTiming:"page_view_timing",sessionReplay:"session_replay",sessionTrace:"session_trace",softNav:"soft_navigations",spa:"spa"},i={[n.pageViewEvent]:1,[n.pageViewTiming]:2,[n.metrics]:3,[n.jserrors]:4,[n.ajax]:5,[n.sessionTrace]:6,[n.pageAction]:7,[n.spa]:8,[n.softNav]:9,[n.sessionReplay]:10}}},n={};function i(e){var t=n[e];if(void 0!==t)return t.exports;var o=n[e]={exports:{}};return r[e](o,o.exports,i),o.exports}i.m=r,i.d=(e,t)=>{for(var r in t)i.o(t,r)&&!i.o(e,r)&&Object.defineProperty(e,r,{enumerable:!0,get:t[r]})},i.f={},i.e=e=>Promise.all(Object.keys(i.f).reduce(((t,r)=>(i.f[r](e,t),t)),[])),i.u=e=>"nr-rum-1.260.1.min.js",i.o=(e,t)=>Object.prototype.hasOwnProperty.call(e,t),e={},t="NRBA-1.260.1.PROD:",i.l=(r,n,o,a)=>{if(e[r])e[r].push(n);else{var s,c;if(void 0!==o)for(var u=document.getElementsByTagName("script"),d=0;d<u.length;d++){var l=u[d];if(l.getAttribute("src")==r||l.getAttribute("data-webpack")==t+o){s=l;break}}if(!s){c=!0;var f={75:"sha512-WLWoh5UWJ/3XNXjYcJoBc8bSPHGDdu86FTMTgY1yxRTQeEmWWEBFFVPIfCRSbxd8K297eHg86RaJPD+UJxG1+w=="};(s=document.createElement("script")).charset="utf-8",s.timeout=120,i.nc&&s.setAttribute("nonce",i.nc),s.setAttribute("data-webpack",t+o),s.src=r,0!==s.src.indexOf(window.location.origin+"/")&&(s.crossOrigin="anonymous"),f[a]&&(s.integrity=f[a])}e[r]=[n];var g=(t,n)=>{s.onerror=s.onload=null,clearTimeout(p);var i=e[r];if(delete e[r],s.parentNode&&s.parentNode.removeChild(s),i&&i.forEach((e=>e(n))),t)return t(n)},p=setTimeout(g.bind(null,void 0,{type:"timeout",target:s}),12e4);s.onerror=g.bind(null,s.onerror),s.onload=g.bind(null,s.onload),c&&document.head.appendChild(s)}},i.r=e=>{"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},i.p="https://js-agent.newrelic.com/",(()=>{var e={50:0,832:0};i.f.j=(t,r)=>{var n=i.o(e,t)?e[t]:void 0;if(0!==n)if(n)r.push(n[2]);else{var o=new Promise(((r,i)=>n=e[t]=[r,i]));r.push(n[2]=o);var a=i.p+i.u(t),s=new Error;i.l(a,(r=>{if(i.o(e,t)&&(0!==(n=e[t])&&(e[t]=void 0),n)){var o=r&&("load"===r.type?"missing":r.type),a=r&&r.target&&r.target.src;s.message="Loading chunk "+t+" failed.\n("+o+": "+a+")",s.name="ChunkLoadError",s.type=o,s.request=a,n[1](s)}}),"chunk-"+t,t)}};var t=(t,r)=>{var n,o,[a,s,c]=r,u=0;if(a.some((t=>0!==e[t]))){for(n in s)i.o(s,n)&&(i.m[n]=s[n]);if(c)c(i)}for(t&&t(r);u<a.length;u++)o=a[u],i.o(e,o)&&e[o]&&e[o][0](),e[o]=0},r=self["webpackChunk:NRBA-1.260.1.PROD"]=self["webpackChunk:NRBA-1.260.1.PROD"]||[];r.forEach(t.bind(null,0)),r.push=t.bind(null,r.push.bind(r))})(),(()=>{"use strict";i(8993);var e=i(50),t=i(7144),r=i(4402),n=i(8325);class o{agentIdentifier;constructor(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:(0,r.ky)(16);this.agentIdentifier=e,this.ee=n.ee.get(e)}#e(t){for(var r=arguments.length,n=new Array(r>1?r-1:0),i=1;i<r;i++)n[i-1]=arguments[i];if("function"==typeof this.api?.[t])return this.api[t](...n);(0,e.Z)("Call to agent api ".concat(t," failed. The API is not currently initialized."))}addPageAction(e,t){return this.#e("addPageAction",e,t)}setPageViewName(e,t){return this.#e("setPageViewName",e,t)}setCustomAttribute(e,t,r){return this.#e("setCustomAttribute",e,t,r)}noticeError(e,t){return this.#e("noticeError",e,t)}setUserId(e){return this.#e("setUserId",e)}setApplicationVersion(e){return this.#e("setApplicationVersion",e)}setErrorHandler(e){return this.#e("setErrorHandler",e)}finished(e){return this.#e("finished",e)}addRelease(e,t){return this.#e("addRelease",e,t)}start(e){return this.#e("start",e)}recordReplay(){return this.#e(t.Ef.RECORD)}pauseReplay(){return this.#e(t.Ef.PAUSE)}addToTrace(e){return this.#e("addToTrace",e)}setCurrentRouteName(e){return this.#e("setCurrentRouteName",e)}interaction(){return this.#e("interaction")}}var a=i(3325),s=i(234);const c=Object.values(a.D);function u(e){const t={};return c.forEach((r=>{t[r]=function(e,t){return!0===(0,s.Mt)(t,"".concat(e,".enabled"))}(r,e)})),t}var d=i(2758);var l=i(8e3),f=i(5938),g=i(3960),p=i(385);const h=e=>p.il&&!0===(0,s.Mt)(e,"privacy.cookies_enabled");function v(e){return!!s.Yu.MO&&h(e)&&!0===(0,s.Mt)(e,"session_trace.enabled")}var m=i(7872);class b extends f.W{constructor(e,t,r){let n=!(arguments.length>3&&void 0!==arguments[3])||arguments[3];super(e,t,r),this.auto=n,this.abortHandler=void 0,this.featAggregate=void 0,this.onAggregateImported=void 0,!1===(0,s.Mt)(this.agentIdentifier,"".concat(this.featureName,".autoStart"))&&(this.auto=!1),this.auto?(0,l.RP)(e,r):this.ee.on("manual-start-all",(0,m.Z)((()=>{(0,l.RP)(this.agentIdentifier,this.featureName),this.auto=!0,this.importAggregator()})))}importAggregator(){let t,r=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{};if(this.featAggregate||!this.auto)return;this.onAggregateImported=new Promise((e=>{t=e}));const n=async()=>{let n;try{if(h(this.agentIdentifier)){const{setupAgentSession:e}=await i.e(75).then(i.bind(i,7920));n=e(this.agentIdentifier)}}catch(t){(0,e.Z)("A problem occurred when starting up session manager. This page will not start or extend any session.",t),this.featureName===a.D.sessionReplay&&this.abortHandler?.()}try{if(!this.#t(this.featureName,n))return(0,l.LP)(this.agentIdentifier,this.featureName),void t(!1);const{lazyFeatureLoader:e}=await i.e(75).then(i.bind(i,8582)),{Aggregate:o}=await e(this.featureName,"aggregate");this.featAggregate=new o(this.agentIdentifier,this.aggregator,r),t(!0)}catch(r){(0,e.Z)("Downloading and initializing ".concat(this.featureName," failed..."),r),this.abortHandler?.(),(0,l.LP)(this.agentIdentifier,this.featureName,!0),t(!1),this.ee&&this.ee.abort()}};p.il?(0,g.b2)((()=>n()),!0):n()}#t(e,t){return e!==a.D.sessionReplay||(r=this.agentIdentifier,n=t,!(!v(r)||!n?.isNew&&!n?.state.sessionReplayMode));var r,n}}var y=i(7633);class A extends b{static featureName=y.t;constructor(e,t){let r=!(arguments.length>2&&void 0!==arguments[2])||arguments[2];super(e,t,y.t,r),this.importAggregator()}}var w=i(1117),_=i(1284);class E extends w.w{constructor(e){super(e),this.aggregatedData={}}store(e,t,r,n,i){var o=this.getBucket(e,t,r,i);return o.metrics=function(e,t){t||(t={count:0});return t.count+=1,(0,_.D)(e,(function(e,r){t[e]=x(r,t[e])})),t}(n,o.metrics),o}merge(e,t,r,n,i){var o=this.getBucket(e,t,n,i);if(o.metrics){var a=o.metrics;a.count+=r.count,(0,_.D)(r,(function(e,t){if("count"!==e){var n=a[e],i=r[e];i&&!i.c?a[e]=x(i.t,n):a[e]=function(e,t){if(!t)return e;t.c||(t=D(t.t));return t.min=Math.min(e.min,t.min),t.max=Math.max(e.max,t.max),t.t+=e.t,t.sos+=e.sos,t.c+=e.c,t}(i,a[e])}}))}else o.metrics=r}storeMetric(e,t,r,n){var i=this.getBucket(e,t,r);return i.stats=x(n,i.stats),i}getBucket(e,t,r,n){this.aggregatedData[e]||(this.aggregatedData[e]={});var i=this.aggregatedData[e][t];return i||(i=this.aggregatedData[e][t]={params:r||{}},n&&(i.custom=n)),i}get(e,t){return t?this.aggregatedData[e]&&this.aggregatedData[e][t]:this.aggregatedData[e]}take(e){for(var t={},r="",n=!1,i=0;i<e.length;i++)t[r=e[i]]=Object.values(this.aggregatedData[r]||{}),t[r].length&&(n=!0),delete this.aggregatedData[r];return n?t:null}}function x(e,t){return null==e?function(e){e?e.c++:e={c:1};return e}(t):t?(t.c||(t=D(t.t)),t.c+=1,t.t+=e,t.sos+=e*e,e>t.max&&(t.max=e),e<t.min&&(t.min=e),t):{t:e}}function D(e){return{t:e,min:e,max:e,sos:e*e,c:1}}var S=i(8632),R=i(4351);var k=i(5546),N=i(7956),P=i(3239),j=i(9251),T=i(7894);class I extends b{static featureName=j.t;constructor(e,t){let r=!(arguments.length>2&&void 0!==arguments[2])||arguments[2];super(e,t,j.t,r),p.il&&((0,N.N)((()=>(0,k.p)("docHidden",[(0,T.z)()],void 0,j.t,this.ee)),!0),(0,P.bP)("pagehide",(()=>(0,k.p)("winPagehide",[(0,T.z)()],void 0,j.t,this.ee))),this.importAggregator())}}var O=i(3081);class M extends b{static featureName=O.t9;constructor(e,t){let r=!(arguments.length>2&&void 0!==arguments[2])||arguments[2];super(e,t,O.t9,r),this.importAggregator()}}new class extends o{constructor(t,r){super(r),p._A?(this.sharedAggregator=new E({agentIdentifier:this.agentIdentifier}),this.features={},(0,S.h5)(this.agentIdentifier,this),this.desiredFeatures=new Set(t.features||[]),this.desiredFeatures.add(A),this.runSoftNavOverSpa=[...this.desiredFeatures].some((e=>e.featureName===a.D.softNav)),(0,d.j)(this,t,t.loaderType||"agent"),this.run()):(0,e.Z)("Failed to initialize the agent. Could not determine the runtime environment.")}get config(){return{info:this.info,init:this.init,loader_config:this.loader_config,runtime:this.runtime}}run(){try{const t=u(this.agentIdentifier),r=[...this.desiredFeatures];r.sort(((e,t)=>a.p[e.featureName]-a.p[t.featureName])),r.forEach((r=>{if(!t[r.featureName]&&r.featureName!==a.D.pageViewEvent)return;if(this.runSoftNavOverSpa&&r.featureName===a.D.spa)return;if(!this.runSoftNavOverSpa&&r.featureName===a.D.softNav)return;const n=function(e){switch(e){case a.D.ajax:return[a.D.jserrors];case a.D.sessionTrace:return[a.D.ajax,a.D.pageViewEvent];case a.D.sessionReplay:return[a.D.sessionTrace];case a.D.pageViewTiming:return[a.D.pageViewEvent];default:return[]}}(r.featureName);n.every((e=>e in this.features))||(0,e.Z)("".concat(r.featureName," is enabled but one or more dependent features has not been initialized (").concat((0,R.P)(n),"). This may cause unintended consequences or missing data...")),this.features[r.featureName]=new r(this.agentIdentifier,this.sharedAggregator)}))}catch(t){(0,e.Z)("Failed to initialize all enabled instrument classes (agent aborted) -",t);for(const e in this.features)this.features[e].abortHandler?.();const r=(0,S.fP)();delete r.initializedAgents[this.agentIdentifier]?.api,delete r.initializedAgents[this.agentIdentifier]?.features,delete this.sharedAggregator;return r.ee.get(this.agentIdentifier).abort(),!1}}}({features:[A,I,M],loaderType:"lite"})})()})();</script>
+<meta name="description" content="Food Standards Agency makes sure food is safe and what it says it is.">
+<link rel="canonical" href="https://www.food.gov.uk/">
+<link rel="shortlink" href="https://www.food.gov.uk/">
+<meta property="og:site_name" content="Food Standards Agency">
+<meta property="og:url" content="https://www.food.gov.uk/">
+<meta property="og:title" content="Homepage">
+<meta property="og:description" content="Food Standards Agency makes sure food is safe and what it says it is.">
+<meta property="og:image" content="https://www.food.gov.uk//themes/custom/fsa/share-default.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:description" content="Food Standards Agency makes sure food is safe and what it says it is.">
+<meta name="twitter:title" content="Homepage">
+<meta name="twitter:site" content="@foodgov">
+<meta name="twitter:site:id" content="68686173">
+<meta name="twitter:url" content="https://www.food.gov.uk/home">
+<meta name="twitter:image" content="https://www.food.gov.uk//themes/custom/fsa/share-default.png">
+<meta name="google-site-verification" content="QKdwbKx5K9wx94C9VRt1d5n4EH22aI7MVGUfA1w8raE">
+<meta name="Generator" content="Drupal 10 (https://www.drupal.org)">
+<meta name="MobileOptimized" content="width">
+<meta name="HandheldFriendly" content="true">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="/themes/custom/fsa_2021/dist/img/favicon/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+<link href="/themes/custom/fsa_2021/dist/img/favicon/favicon-16x16.png" rel="icon" sizes="16x16">
+<link href="/themes/custom/fsa_2021/dist/img/favicon/favicon-32x32.png" rel="icon" sizes="32x32">
+<link href="/themes/custom/fsa_2021/manifest.json" rel="manifest">
+<link href="/themes/custom/fsa_2021/safari-pinned-tab.svg" rel="mask-icon" color="#007ac9">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" href="/themes/custom/fsa_2021/favicon.ico" type="image/vnd.microsoft.icon">
+<link rel="alternate" hreflang="en" href="https://www.food.gov.uk/">
+<link rel="alternate" hreflang="cy" href="https://www.food.gov.uk/cy">
+<script src="/sites/default/files/google_tag/primary/google_tag.script.js?sedrqr" defer=""></script>
+
+    <title>Homepage | Food Standards Agency</title>
+    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_5iYDLaNiuG52w_TwY9QWISM-eXEyrVn4bemG_aa_TqM.css?delta=0&amp;language=en&amp;theme=fsa_2021&amp;include=eJyFUltygzAMvJDBbc-Q6UxPwQhbgBK_agkabl_zyDQh7fRL1mptraU1MV4ITQyMQTSjCIWelXmAH7LKU1AWBBzMmHWLA0wUM6uOodmYOiaJozQQwM1C5qG2hWZ_TTkKF5IllaUVGIPM1JIjmRXPLOh1C4zrE28vb6-6d7EFp_Aqy11t85jA1XuqEmToM6SBb5UfpB5DGltHPKBVVFo2jA6N3Jh3UNPlVZHdpI8s0euBSshz04K53OMJemxSpvKdO5QRshmajpzgbTxbZTkWvZjLfA54xVN_5FYZfZzwNCZHBgTtx-mJMiDYsrl3uh4rX9h2MfsjLOWbaYgBq47Q2aeWEGz01TrS480BPVYS-95tW2GcMGgPxRdLuk6jQ7TLmPRDpnYxeo_1quwIFmW-eKG2KECOa4YJ_yXteo40OMP1z7u-WK3IK27PqMv21oXU588R8_y7NBN9ikzyt55ifSrW_gbvjk3G">
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_nUmXRsaliExIdVOe8EtTUPnaxmbs7bNtE9Re8vf77tI.css?delta=1&amp;language=en&amp;theme=fsa_2021&amp;include=eJyFUltygzAMvJDBbc-Q6UxPwQhbgBK_agkabl_zyDQh7fRL1mptraU1MV4ITQyMQTSjCIWelXmAH7LKU1AWBBzMmHWLA0wUM6uOodmYOiaJozQQwM1C5qG2hWZ_TTkKF5IllaUVGIPM1JIjmRXPLOh1C4zrE28vb6-6d7EFp_Aqy11t85jA1XuqEmToM6SBb5UfpB5DGltHPKBVVFo2jA6N3Jh3UNPlVZHdpI8s0euBSshz04K53OMJemxSpvKdO5QRshmajpzgbTxbZTkWvZjLfA54xVN_5FYZfZzwNCZHBgTtx-mJMiDYsrl3uh4rX9h2MfsjLOWbaYgBq47Q2aeWEGz01TrS480BPVYS-95tW2GcMGgPxRdLuk6jQ7TLmPRDpnYxeo_1quwIFmW-eKG2KECOa4YJ_yXteo40OMP1z7u-WK3IK27PqMv21oXU588R8_y7NBN9ikzyt55ifSrW_gbvjk3G">
+
+    <script src="/themes/custom/fsa_2021/dist/app.js?v=0.1.x"></script><style id="inert-style">
+[inert] {
+  pointer-events: none;
+  cursor: default;
+}
+
+[inert], [inert] * {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+</style>
+<script src="/themes/custom/fsa_2021/fsa-search-app/bundle.js?v=0.1.x"></script><style>/**
+* THIS IS SIMPLY AN EXAMPLE
+* SHOULD BE REPLACED BY A STORYBOOK ELEMENT 
+**/
+.loader {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+}
+.loader-loaded {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.loader:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #000;
+  border-color: #000 transparent #000 transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+</style>
+<script src="/themes/custom/fsa_2021/fsa-frontend/main.js?v=0.1.x"></script>
+
+  <link rel="stylesheet" type="text/css" href="/modules/custom/fsa_custom/css/cookieconsent.css"></head>
+  <body class="new-theme" data-once="form-single-submit webform-single-submit">
+    <div class="skip-to-main-content">
+  <a href="#main-content" class="skip-to-main-content__link">Skip to main content</a>
+</div>    <section class="cc_placeholder" aria-label="Banner for Cookie acceptance"><div class="cc_banner-wrapper ">
+<div class="cookie-banner">
+  <p class="cookie-banner__message">We use cookies to make food.gov.uk work, understand how you use the website and make improvements.<br>They aren’t used to identify you personally. <a href="/cookie-policy" class="cookie-banner__find-out-more">Find out more about cookies</a></p>
+  <div class="cookie-banner__actions">
+    <a href="/cookie-consent?dest=/home" class="cookie-banner__manage">Manage cookies</a>
+    <button class="cookie-banner__accept" data-cc-event="click:dismiss">Accept cookies</button>
+  </div>
+</div></div></section>
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TH697XV&gtm_auth=qiSnyllzn5flpcJTEzjYGA&gtm_preview=env-2&gtm_cookies_win=x" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas="">
+        <div class="language-switcher language-switcher--hidden">
+      <a href="/home?navref=quicklink" class="language-link is-active" hreflang="en" data-drupal-link-query="{&quot;navref&quot;:&quot;quicklink&quot;}" data-drupal-link-system-path="node/251">English</a>
+      <a href="/cy/home?navref=quicklink" class="language-link" hreflang="cy" data-drupal-link-query="{&quot;navref&quot;:&quot;quicklink&quot;}" data-drupal-link-system-path="node/251">Cymraeg</a>
+  </div>
+
+
+
+<header class="header header--main">
+  <div class="header__grid-container">
+    <div class="header__grid-row">
+      <div class="header__wrapper">
+                          <div class="header__top">
+                        <nav class="header__languages header__languages--desktop header__nav" aria-label="Language switcher" aria-hidden="false">
+              <ul class="header__languages-list">
+                <li class="header__language">
+                  <a href="/home" class="header__language-link header__language-link--selected">English</a>
+                </li>
+                <li class="header__language">
+                  <a href="/cy/home" lang="cy" class="header__language-link header__language-link--">
+                                          Cymraeg
+                                      </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+                <div class="header__bottom">
+          <div class="header__logo-container">
+            <div class="header__logo-wrapper header__primary-logo-wrapper">
+              <a href="/" class="header__logo">
+                <span class="header__logo-label visually-hidden">Food Standards Agency - Frontpage</span>
+                <div class="header__logo-svg header__logo-svg--english" aria-hidden="true"></div>
+                              </a>
+            </div>
+          </div>
+                      <nav class="header__links header__links--desktop header__links--english" aria-label="Secondary Menu">
+              <div class="header__links-wrapper">
+                                  <div class="header__links-item">
+                    <a href="https://www.food.gov.uk/contact/consumers/find-details" class="header__links-anchor header__links-anchor--contact">Contact</a>
+                  </div>
+                                                  <div class="header__links-item">
+                    <a href="https://www.food.gov.uk/contact/consumers/report-a-food-problem" class="header__links-anchor header__links-anchor--report">Report</a>
+                  </div>
+                              </div>
+                              <div class="header__links-item header__links-item--right">
+                  <a href="https://ratings.food.gov.uk/" class="header__links-anchor header__links-anchor--ratings" target="_blank" onclick="saAutomatedLink(this, 'outbound');">Food hygiene ratings <span class="visually-hidden">(Opens in a new window)</span></a>
+                </div>
+                          </nav>
+                                              <div class="header__search-bar-wrapper">
+                <div class="header__search-bar header__search-bar--full">
+                  <form class="search-bar" action="/search" autocomplete="off" data-once="form-updated" data-drupal-form-fields="search">
+  <label class="search-bar__label" for="search">Search Food Standards Agency</label>
+      <input class="search-bar__box" value="" name="keywords" type="search" id="search" data-fsa-at="search-input">
+    <button class="search-bar__submit" aria-label="search" data-fsa-at="search-submit">
+    <span class="search-bar__span visually-hidden">Search Food Standards Agency</span>
+  </button>
+</form>
+                </div>
+                <a class="header__search-bar header__search-bar--icon" href="/search">
+                  <span class="visually-hidden header__search-bar-label">Search Food Standards Agency</span>
+                  <div aria-hidden="true" class="header__search-svg"></div>
+                </a>
+              </div>
+                                    <button class="header__menu " aria-expanded="false" aria-controls="navigation">
+              <span class="visually-hidden">menu</span>
+              <svg class="header__menu-symbol header__menu-toggle" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" version="1.0" width="47" height="47" viewBox="0 0 258 186" preserveAspectRatio="xMidYMid meet" focusable="false">
+  <g class="svg-menu-toggle" transform="translate(0,186) scale(0.1,-0.1)" fill="#007c75" stroke="none">
+  <path class="line line-1" d="M837 1572 c-35 -36 -34 -71 1 -105 l28 -27 505 0 505 0 27 28 c34 36 34 68 0 104 l-27 28 -506 0 -506 0 -27 -28z"></path>
+  <path class="line line-2" d="M477 972 c-35 -36 -34 -71 1 -105 l28 -27 684 0 684 0 28 27 c36 35 36 71 0 106 l-28 27 -685 0 -685 0 -27 -28z"></path>
+  <path class="line line-3" d="M837 372 c-35 -36 -34 -71 1 -105 l28 -27 505 0 505 0 27 28 c34 36 34 68 0 104 l-27 28 -506 0 -506 0 -27 -28z"></path>
+  </g>
+ </svg>            </button>
+                    </div>
+      </div>
+    </div>
+  </div>
+    <div class="header__navigation">
+              <nav class="header__links header__links--mobile header__links--english" aria-label="Secondary Menu">
+        <div class="header__links-wrapper">
+                      <div class="header__links-item">
+              <a href="https://www.food.gov.uk/contact/consumers/find-details" class="header__links-anchor header__links-anchor--contact">Contact</a>
+            </div>
+                                <div class="header__links-item">
+              <a href="https://www.food.gov.uk/contact/consumers/report-a-food-problem" class="header__links-anchor header__links-anchor--report">Report</a>
+            </div>
+                  </div>
+                  <div class="header__links-item header__links-item--right">
+            <a href="https://ratings.food.gov.uk/" class="header__links-anchor header__links-anchor--ratings" target="_blank" onclick="saAutomatedLink(this, 'outbound');">Food hygiene ratings <span class="visually-hidden">(Opens in a new window)</span></a>
+          </div>
+              </nav>
+        <div class="header__navigation">
+      <nav id="navigation" class="navigation" aria-label="Main navigation">
+  <div class="navigation__background-blur"></div>
+  <div class="navigation__container">
+    <div class="navigation__row">
+      <div class="navigation__wrapper">
+                  <ul class="navigation__menu navigation__menu--level-1">
+            <li class="navigation__link navigation__link--home">
+              <a href="/" aria-label="Home">
+                <span>Home</span>
+                <svg aria-hidden="true" focusable="false" width="36" height="38" xmlns="http://www.w3.org/2000/svg" viewBox="-1.5 -1.5 40 40">
+                  <g fill="none" fill-rule="evenodd">
+                    <path d="M36 19.013c0 9.941-8.059 18-18 18s-18-8.059-18-18 8.059-18 18-18 18 8.059 18 18" fill="#FFF" stroke="#ffffff" stroke-width="3"></path>
+                    <path d="m18 8.013-9 6.585v11.415h6.075v-4.61c0-1.58 1.304-2.853 2.925-2.853 1.62 0 2.925 1.272 2.925 2.853v4.61H27V14.598l-9-6.585z" fill="#2A0247" fill-rule="nonzero"></path>
+                  </g>
+                </svg>
+              </a>
+            </li>
+                          <li class="navigation__link">
+                                  <button aria-expanded="false" id="nav-news-and-alerts" title="News and alerts">
+                    <span class="navigation__link__label">
+                      News and alerts
+                    </span>
+                    <span class="navigation__link__arrow">
+                      <svg aria-hidden="true" focusable="false" width="18" height="11" viewBox="0 0 18 11" xmlns="http://www.w3.org/2000/svg">
+                        <path d="m1 1 8 8 8-8" fill="none" fill-rule="evenodd"></path>
+                      </svg>
+                    </span>
+                  </button>
+                  <div class="navigation__submenu" role="region" aria-labelledby="news-and-alerts">
+                                          <div class="navigation__group">
+                        <p class="navigation__group-title navigation__group-title--desktop">News and alerts</p>
+                        <button class="navigation__group-title navigation__group-title--mobile" aria-expanded="false" id="submenu--0-0-news-and-alerts" title="News and alerts">
+                          <span class="navigation__link__label">
+                            News and alerts
+                          </span>
+                          <span class="navigation__link__arrow">
+                            <svg aria-hidden="true" focusable="false" width="18" height="11" viewBox="0 0 18 11" xmlns="http://www.w3.org/2000/svg">
+                              <path d="m1 1 8 8 8-8" fill="none" fill-rule="evenodd"></path>
+                            </svg>
+                          </span>
+                        </button>
+                        <div class="navigation__menu-wrapper" aria-labelledby="submenu--0-0-news-and-alerts" role="">
+                          <ul class="navigation__menu navigation__menu--level-2">
+                                                          <li class="navigation__link">
+                                <a href="https://www.food.gov.uk/search?keywords=&amp;filter_type%5BNews%5D=News">News</a>
+                              </li>
+                                                          <li class="navigation__link">
+                                <a href="https://www.food.gov.uk/search?keywords=&amp;filter_type%5BFood%20alert%5D=Food%20alert">Food alerts</a>
+                              </li>
+                                                          <li class="navigation__link">
+                                <a href="https://www.food.gov.uk/search?keywords=&amp;filter_type%5BAllergy%20alert%5D=Allergy%20alert">Allergy alerts</a>
+                              </li>
+                                                          <li class="navigation__link">
+                                <a href="https://www.food.gov.uk/news-alerts/subscribe">Sign up to news and alerts</a>
+                              </li>
+                                                                                      <li class="navigation__link navigation__link--read-more">
+                                <a href="https://www.food.gov.uk/news-alerts">
+                                  <span class="navigation__link__read-more-arrow"></span>More in News and alerts
+                                </a>
+                              </li>
+                                                      </ul>
+                        </div>
+                      </div>
+                                      </div>
+                              </li>
+                          <li class="navigation__link">
+                                  <button aria-expanded="false" id="nav-consumer-advice" title="Consumer advice">
+                    <span class="navigation__link__label">
+                      Consumer advice
+                    </span>
+                    <span class="navigation__link__arrow">
+                      <svg aria-hidden="true" focusable="false" width="18" height="11" viewBox="0 0 18 11" xmlns="http://www.w3.org/2000/svg">
+                        <path d="m1 1 8 8 8-8" fill="none" fill-rule="evenodd"></path>
+                      </svg>
+                    </span>
+                  </button>
+                  <div class="navigation__submenu" role="region" aria-labelledby="consumer-advice">
+                                          <div class="navigation__group">
+                        <p class="navigation__group-title navigation__group-title--desktop">Food hygiene</p>
+                        <button class="navigation__group-title navigation__group-title--mobile" aria-expanded="false" id="submenu--1-0-food-hygiene" title="Food hygiene">
+                          <span class="navigation__link__label">
+                            Food hygiene
+                          </span>
+                          <span class="navigation__link__arrow">
+                            <svg aria-hidden="true" focusable="false" width="18" height="11" viewBox="0 0 18 11" xmlns="http://www.w3.org/2000/svg">
+                              <path d="m1 1 8 8 8-8" fill="none" fill-rule="evenodd"></path>
+                            </svg>
+                          </span>
+                        </button>
+                        <div class="navigation__menu-wrapper" aria-labelledby="submenu--1-0-food-hygiene" role="">
+                          <ul class="navigation__menu navigation__menu--level-2">
+                                                          <li class="navigation__link">
+                                <a href="https://www.food.gov.uk/safety-hygiene/home-food-fact-checker">Home food fact checker</a>
+                              </li>
+                                                          <li class="navigation__link">
+                                <a href="https://www.food.gov.uk/safety-hygiene/how-to-chill-freeze-and-defrost-food-safely">Chilling</a>
+                              </li>
+                                                          <li class="navigation__link">
+                                <a href="https://www.food.gov.uk/safety-hygiene/cooking-your-food">Cooking</a>
+                              </li>
+                                                          <li class="navigation__link">
+                                <a href="https://www.food.gov.uk/safety-hygiene/why-is-cleaning-important">Cleaning</a>
+                              </li>
+                                                          <li class="navigation__link">
+                                <a href="https://www.food.gov.uk/safety-hygiene/why-avoiding-cross-contamination-is-important">Cross-contamination</a>
+                              </li>
+                                                          <li class="navigation__link">
+                                <a href="https://www.food.gov.uk/safety-hygiene/food-hygiene-rating-scheme">Food hygiene ratings explained </a>
+                              </li>
+                                                                                      <li class="navigation__link navigation__link--read-more">
+                                <a href="https://www.food.gov.uk/consumer-advice/food-hygiene">
+                                  <span class="navigation__link__read-more-arrow"></span>More in Food hygiene
+                                </a>
+                              </li>
+                                                      </ul>
+                        </div>
+                      </div>
+                                          <div class="navigation__group">
+                        <p class="navigation__group-title navigation__group-title--desktop">Food safety</p>
+                        <button class="navigation__group-title navigation__group-title--mobile" aria-expanded="false" id="submenu--1-1-food-safety" title="Food safety">
+                          <span class="navigation__link__label">
+                            Food safety
+                          </span>
+                          <span class="navigation__link__arrow">
+                            <svg aria-hidden="true" focusable="false" width="18" height="11" viewBox="0 0 18 11" xmlns="http://www.w3.org/2000/svg">
+                              <path d="m1 1 8 8 8-8" fill="none" fill-rule="evenodd"></path>
+                            </svg>
+                          </span>
+                        </button>
+                        <div class="navigation__menu-wrapper" aria-labelledby="submenu--1-1-food-safety" role="">
+                          <ul class="navigation__menu navigation__menu--level-2">
+                                                          <li class="navigation__link">
+                                <a href="https://www.food.gov.uk/safety-hygiene/best-before-and-use-by-dates">Use-by and best before dates</a>
+                              </li>
+                                                          <li class="navigation__link">
+                                <a href="https://www.food.gov.uk/safety-hygiene/food-allergy-and-intolerance">Allergy and intolerance</a>
+                              </li>
+                                                          <li class="navigation__link">
+                                <a href="https://www.food.gov.uk/safety-hygiene/bbq-food-safety">BBQ food safety</a>
+                              </li>
+                                                          <li class="navigation__link">
+                                <a href="https://www.food.gov.uk/safety-hygiene/food-additives">Additives</a>
+                              </li>
+                                                                                      <li class="navigation__link navigation__link--read-more">
+                                <a href="https://www.food.gov.uk/food-safety-0">
+                                  <span class="navigation__link__read-more-arrow"></span>More in Food safety
+                                </a>
+                              </li>
+                                                      </ul>
+                        </div>
+                      </div>
+                                          <div class="navigation__group">
+                        <p class="navigation__group-title navigation__group-title--desktop">Food poisoning</p>
+                        <button class="navigation__group-title navigation__group-title--mobile" aria-expanded="false" id="submenu--1-2-food-poisoning" title="Food poisoning">
+                          <span class="navigation__link__label">
+                            Food poisoning
+                          </span>
+                          <span class="navigation__link__arrow">
+                            <svg aria-hidden="true" focusable="false" width="18" height="11" viewBox="0 0 18 11" xmlns="http://www.w3.org/2000/svg">
+                              <path d="m1 1 8 8 8-8" fill="none" fill-rule="evenodd"></path>
+                            </svg>
+                          </span>
+                        </button>
+                        <div class="navigation__menu-wrapper" aria-labelledby="submenu--1-2-food-poisoning" role="">
+                          <ul class="navigation__menu navigation__menu--level-2">
+                                                          <li class="navigation__link">
+                                <a href="https://www.food.gov.uk/safety-hygiene/salmonella">Salmonella</a>
+                              </li>
+                                                          <li class="navigation__link">
+                                <a href="https://www.food.gov.uk/safety-hygiene/e-coli">E. coli</a>
+                              </li>
+                                                          <li class="navigation__link">
+                                <a href="https://www.food.gov.uk/listeria">Listeria</a>
+                              </li>
+                                                          <li class="navigation__link">
+                                <a href="https://www.food.gov.uk/contact/consumers/report-problem/report-a-food-safety-or-hygiene-issue">Report food poisoning</a>
+                              </li>
+                                                                                      <li class="navigation__link navigation__link--read-more">
+                                <a href="https://www.food.gov.uk/consumer-advice/food-poisoning">
+                                  <span class="navigation__link__read-more-arrow"></span>More in Food poisoning
+                                </a>
+                              </li>
+                                                      </ul>
+                        </div>
+                      </div>
+                                          <div class="navigation__group">
+                        <p class="navigation__group-title navigation__group-title--desktop">Nutrition in Northern Ireland</p>
+                        <button class="navigation__group-title navigation__group-title--mobile" aria-expanded="false" id="submenu--1-3-nutrition-in-northern-ireland" title="Nutrition in Northern Ireland">
+                          <span class="navigation__link__label">
+                            Nutrition in Northern Ireland
+                          </span>
+                          <span class="navigation__link__arrow">
+                            <svg aria-hidden="true" focusable="false" width="18" height="11" viewBox="0 0 18 11" xmlns="http://www.w3.org/2000/svg">
+                              <path d="m1 1 8 8 8-8" fill="none" fill-rule="evenodd"></path>
+                            </svg>
+                          </span>
+                        </button>
+                        <div class="navigation__menu-wrapper" aria-labelledby="submenu--1-3-nutrition-in-northern-ireland" role="">
+                          <ul class="navigation__menu navigation__menu--level-2">
+                                                          <li class="navigation__link">
+                                <a href="https://www.food.gov.uk/business-guidance/the-eatwell-guide-and-resources">Eatwell Guide</a>
+                              </li>
+                                                          <li class="navigation__link">
+                                <a href="https://www.food.gov.uk/safety-hygiene/check-the-label">Check the label</a>
+                              </li>
+                                                          <li class="navigation__link">
+                                <a href="https://www.food.gov.uk/safety-hygiene/nutrients-what-you-need-to-know">Nutrients</a>
+                              </li>
+                                                          <li class="navigation__link">
+                                <a href="https://www.food.gov.uk/business-guidance/food-poverty">Food poverty</a>
+                              </li>
+                                                          <li class="navigation__link">
+                                <a href="https://www.food.gov.uk/safety-hygiene/healthy-recipes">Healthy Recipes</a>
+                              </li>
+                                                                                      <li class="navigation__link navigation__link--read-more">
+                                <a href="https://www.food.gov.uk/consumer-advice/nutrition-in-northern-ireland-for-consumers">
+                                  <span class="navigation__link__read-more-arrow"></span>More in Nutrition in Northern Ireland
+                                </a>
+                              </li>
+                                                      </ul>
+                        </div>
+                      </div>
+                                      </div>
+                              </li>
+                          <li class="navigation__link">
+                                  <button aria-expanded="false" id="nav-business-guidance" title="Business guidance">
+                    <span class="navigation__link__label">
+                      Business guidance
+                    </span>
+                    <span class="navigation__link__arrow">
+                      <svg aria-hidden="true" focusable="false" width="18" height="11" viewBox="0 0 18 11" xmlns="http://www.w3.org/2000/svg">
+                        <path d="m1 1 8 8 8-8" fill="none" fill-rule="evenodd"></path>
+                      </svg>
+                    </span>
+                  </button>
+                  <div class="navigation__submenu" role="region" aria-labelledby="business-guidance">
+                                          <div class="navigation__group">
+                        <p class="navigation__group-title navigation__group-title--desktop">Popular content</p>
+                        <button class="navigation__group-title navigation__group-title--mobile" aria-expanded="false" id="submenu--2-0-popular-content" title="Popular content">
+                          <span class="navigation__link__label">
+                            Popular content
+                          </span>
+                          <span class="navigation__link__arrow">
+                            <svg aria-hidden="true" focusable="false" width="18" height="11" viewBox="0 0 18 11" xmlns="http://www.w3.org/2000/svg">
+                              <path d="m1 1 8 8 8-8" fill="none" fill-rule="evenodd"></path>
+                            </svg>
+                          </span>
+                        </button>
+                        <div class="navigation__menu-wrapper" aria-labelledby="submenu--2-0-popular-content" role="">
+                          <ul class="navigation__menu navigation__menu--level-2">
+                                                          <li class="navigation__link">
+                                <a href="https://www.food.gov.uk/business-guidance/safer-food-better-business-sfbb">Safer food better business (SFBB)</a>
+                              </li>
+                                                          <li class="navigation__link">
+                                <a href="https://www.food.gov.uk/business-guidance/allergen-guidance-for-food-businesses">Allergen guidance</a>
+                              </li>
+                                                          <li class="navigation__link">
+                                <a href="https://www.food.gov.uk/business-guidance/online-food-safety-training">Online training</a>
+                              </li>
+                                                          <li class="navigation__link">
+                                <a href="https://www.food.gov.uk/business-guidance/getting-ready-to-start-your-food-business">Starting a food business</a>
+                              </li>
+                                                          <li class="navigation__link">
+                                <a href="https://www.food.gov.uk/here-to-help">Running a food business</a>
+                              </li>
+                                                          <li class="navigation__link">
+                                <a href="https://www.food.gov.uk/business-guidance/how-food-hygiene-ratings-work">Food hygiene ratings</a>
+                              </li>
+                                                                                  </ul>
+                        </div>
+                      </div>
+                                          <div class="navigation__group">
+                        <p class="navigation__group-title navigation__group-title--desktop">Business guidance</p>
+                        <button class="navigation__group-title navigation__group-title--mobile" aria-expanded="false" id="submenu--2-1-business-guidance" title="Business guidance">
+                          <span class="navigation__link__label">
+                            Business guidance
+                          </span>
+                          <span class="navigation__link__arrow">
+                            <svg aria-hidden="true" focusable="false" width="18" height="11" viewBox="0 0 18 11" xmlns="http://www.w3.org/2000/svg">
+                              <path d="m1 1 8 8 8-8" fill="none" fill-rule="evenodd"></path>
+                            </svg>
+                          </span>
+                        </button>
+                        <div class="navigation__menu-wrapper" aria-labelledby="submenu--2-1-business-guidance" role="">
+                          <ul class="navigation__menu navigation__menu--level-2">
+                                                          <li class="navigation__link">
+                                <a href="https://www.food.gov.uk/business-guidance/business-guidance/packaging-and-labelling">Packaging and labelling</a>
+                              </li>
+                                                          <li class="navigation__link">
+                                <a href="https://www.food.gov.uk/food-hygiene">Food hygiene</a>
+                              </li>
+                                                          <li class="navigation__link">
+                                <a href="https://www.food.gov.uk/business-guidance/business-guidance/food-safety-management-for-businesses">Food safety management</a>
+                              </li>
+                                                          <li class="navigation__link">
+                                <a href="https://www.food.gov.uk/business-guidance/cannabidiol-cbd">CBD guidance</a>
+                              </li>
+                                                          <li class="navigation__link">
+                                <a href="https://www.food.gov.uk/business-guidance/operational-safety">Operational safety</a>
+                              </li>
+                                                          <li class="navigation__link">
+                                <a href="https://www.food.gov.uk/business-guidance/chemical-safety">Chemical safety</a>
+                              </li>
+                                                                                      <li class="navigation__link navigation__link--read-more">
+                                <a href="https://www.food.gov.uk/here-to-help">
+                                  <span class="navigation__link__read-more-arrow"></span>More in Business guidance
+                                </a>
+                              </li>
+                                                      </ul>
+                        </div>
+                      </div>
+                                          <div class="navigation__group">
+                        <p class="navigation__group-title navigation__group-title--desktop">Industry guidance</p>
+                        <button class="navigation__group-title navigation__group-title--mobile" aria-expanded="false" id="submenu--2-2-industry-guidance" title="Industry guidance">
+                          <span class="navigation__link__label">
+                            Industry guidance
+                          </span>
+                          <span class="navigation__link__arrow">
+                            <svg aria-hidden="true" focusable="false" width="18" height="11" viewBox="0 0 18 11" xmlns="http://www.w3.org/2000/svg">
+                              <path d="m1 1 8 8 8-8" fill="none" fill-rule="evenodd"></path>
+                            </svg>
+                          </span>
+                        </button>
+                        <div class="navigation__menu-wrapper" aria-labelledby="submenu--2-2-industry-guidance" role="">
+                          <ul class="navigation__menu navigation__menu--level-2">
+                                                          <li class="navigation__link">
+                                <a href="https://www.food.gov.uk/animal-feed-0">Animal feed</a>
+                              </li>
+                                                          <li class="navigation__link">
+                                <a href="https://www.food.gov.uk/business-guidance/dairy-and-farming">Dairy and farming</a>
+                              </li>
+                                                          <li class="navigation__link">
+                                <a href="https://www.food.gov.uk/business-guidance/industry-guidance/fish-and-shellfish">Fish and shellfish</a>
+                              </li>
+                                                          <li class="navigation__link">
+                                <a href="https://www.food.gov.uk/business-guidance/imports-exports">Imports and exports</a>
+                              </li>
+                                                          <li class="navigation__link">
+                                <a href="https://www.food.gov.uk/business-guidance/meat-premises-and-slaughter">Meat and slaughter</a>
+                              </li>
+                                                          <li class="navigation__link">
+                                <a href="https://www.food.gov.uk/business-guidance/industry-guidance/regulated-products">Regulated products</a>
+                              </li>
+                                                          <li class="navigation__link">
+                                <a href="https://www.food.gov.uk/business-guidance/industry-guidance/wine">Wine</a>
+                              </li>
+                                                                                  </ul>
+                        </div>
+                      </div>
+                                          <div class="navigation__group">
+                        <p class="navigation__group-title navigation__group-title--desktop">Nutrition in Northern Ireland</p>
+                        <button class="navigation__group-title navigation__group-title--mobile" aria-expanded="false" id="submenu--2-3-nutrition-in-northern-ireland" title="Nutrition in Northern Ireland">
+                          <span class="navigation__link__label">
+                            Nutrition in Northern Ireland
+                          </span>
+                          <span class="navigation__link__arrow">
+                            <svg aria-hidden="true" focusable="false" width="18" height="11" viewBox="0 0 18 11" xmlns="http://www.w3.org/2000/svg">
+                              <path d="m1 1 8 8 8-8" fill="none" fill-rule="evenodd"></path>
+                            </svg>
+                          </span>
+                        </button>
+                        <div class="navigation__menu-wrapper" aria-labelledby="submenu--2-3-nutrition-in-northern-ireland" role="">
+                          <ul class="navigation__menu navigation__menu--level-2">
+                                                          <li class="navigation__link">
+                                <a href="https://www.food.gov.uk/business-guidance/calorie-wise">Calorie Wise</a>
+                              </li>
+                                                          <li class="navigation__link">
+                                <a href="https://www.food.gov.uk/business-guidance/healthier-catering-guidance-for-different-types-of-businesses">Healthier catering guides</a>
+                              </li>
+                                                          <li class="navigation__link">
+                                <a href="https://www.food.gov.uk/business-guidance/healthier-food-reformulation">Healthier food reformulation </a>
+                              </li>
+                                                          <li class="navigation__link">
+                                <a href="https://www.food.gov.uk/business-guidance/menucal-calorie-and-allergen-tool">MenuCal</a>
+                              </li>
+                                                          <li class="navigation__link">
+                                <a href="https://www.food.gov.uk/business-guidance/nutrition-labelling">Nutrition labelling</a>
+                              </li>
+                                                          <li class="navigation__link">
+                                <a href="https://www.food.gov.uk/safety-hygiene/nutrition-research">Nutrition research</a>
+                              </li>
+                                                                                      <li class="navigation__link navigation__link--read-more">
+                                <a href="https://www.food.gov.uk/nutrition-in-northern-ireland-for-businesses">
+                                  <span class="navigation__link__read-more-arrow"></span>More in Nutrition in Northern Ireland
+                                </a>
+                              </li>
+                                                      </ul>
+                        </div>
+                      </div>
+                                          <div class="navigation__group">
+                        <p class="navigation__group-title navigation__group-title--desktop">Business services</p>
+                        <button class="navigation__group-title navigation__group-title--mobile" aria-expanded="false" id="submenu--2-4-business-services" title="Business services">
+                          <span class="navigation__link__label">
+                            Business services
+                          </span>
+                          <span class="navigation__link__arrow">
+                            <svg aria-hidden="true" focusable="false" width="18" height="11" viewBox="0 0 18 11" xmlns="http://www.w3.org/2000/svg">
+                              <path d="m1 1 8 8 8-8" fill="none" fill-rule="evenodd"></path>
+                            </svg>
+                          </span>
+                        </button>
+                        <div class="navigation__menu-wrapper" aria-labelledby="submenu--2-4-business-services" role="">
+                          <ul class="navigation__menu navigation__menu--level-2">
+                                                          <li class="navigation__link">
+                                <a href="https://fsa-services-eng-forms.food.gov.uk/regulated-products-application" class="external-link" data-extlink="" target="_blank" rel="noopener" onclick="saAutomatedLink(this, 'outbound');">Apply for a regulated product authorisation<svg focusable="false" class="external-link" role="img" aria-label="(link is external)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 40"><metadata><sfw xmlns="http://ns.adobe.com/SaveForWeb/1.0/"><slicesourcebounds y="-8160" x="-8165" width="16389" height="16384" bottomleftorigin="true"></slicesourcebounds><optimizationsettings><targetsettings targetsettingsid="0" fileformat="PNG24Format"><png24format transparency="true" filtered="false" interlaced="false" nomattecolor="false" mattecolor="#FFFFFF"></png24format></targetsettings></optimizationsettings></sfw></metadata><title>(link is external)</title><path d="M48 26c-1.1 0-2 0.9-2 2v26H10V18h26c1.1 0 2-0.9 2-2s-0.9-2-2-2H8c-1.1 0-2 0.9-2 2v40c0 1.1 0.9 2 2 2h40c1.1 0 2-0.9 2-2V28C50 26.9 49.1 26 48 26z"></path><path d="M56 6H44c-1.1 0-2 0.9-2 2s0.9 2 2 2h7.2L30.6 30.6c-0.8 0.8-0.8 2 0 2.8C31 33.8 31.5 34 32 34s1-0.2 1.4-0.6L54 12.8V20c0 1.1 0.9 2 2 2s2-0.9 2-2V8C58 6.9 57.1 6 56 6z"></path></svg> <span class="visually-hidden">(Opens in a new window)</span></a>
+                              </li>
+                                                          <li class="navigation__link">
+                                <a href="https://www.food.gov.uk/business-guidance/how-to-apply-for-approval-of-a-meat-or-food-establishment">Apply for approval of a meat or food establishment</a>
+                              </li>
+                                                          <li class="navigation__link">
+                                <a href="https://fsa-services-eng-forms.food.gov.uk/Wine-Registration-Service" class="external-link" data-extlink="" target="_blank" rel="noopener" onclick="saAutomatedLink(this, 'outbound');">Register a vineyard or winery<svg focusable="false" class="external-link" role="img" aria-label="(link is external)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 40"><metadata><sfw xmlns="http://ns.adobe.com/SaveForWeb/1.0/"><slicesourcebounds y="-8160" x="-8165" width="16389" height="16384" bottomleftorigin="true"></slicesourcebounds><optimizationsettings><targetsettings targetsettingsid="0" fileformat="PNG24Format"><png24format transparency="true" filtered="false" interlaced="false" nomattecolor="false" mattecolor="#FFFFFF"></png24format></targetsettings></optimizationsettings></sfw></metadata><title>(link is external)</title><path d="M48 26c-1.1 0-2 0.9-2 2v26H10V18h26c1.1 0 2-0.9 2-2s-0.9-2-2-2H8c-1.1 0-2 0.9-2 2v40c0 1.1 0.9 2 2 2h40c1.1 0 2-0.9 2-2V28C50 26.9 49.1 26 48 26z"></path><path d="M56 6H44c-1.1 0-2 0.9-2 2s0.9 2 2 2h7.2L30.6 30.6c-0.8 0.8-0.8 2 0 2.8C31 33.8 31.5 34 32 34s1-0.2 1.4-0.6L54 12.8V20c0 1.1 0.9 2 2 2s2-0.9 2-2V8C58 6.9 57.1 6 56 6z"></path></svg> <span class="visually-hidden">(Opens in a new window)</span></a>
+                              </li>
+                                                                                      <li class="navigation__link navigation__link--read-more">
+                                <a href="https://www.food.gov.uk/contact/businesses/services">
+                                  <span class="navigation__link__read-more-arrow"></span>More in Business services
+                                </a>
+                              </li>
+                                                      </ul>
+                        </div>
+                      </div>
+                                      </div>
+                              </li>
+                          <li class="navigation__link">
+                                  <button aria-expanded="false" id="nav-our-work" title="Our work">
+                    <span class="navigation__link__label">
+                      Our work
+                    </span>
+                    <span class="navigation__link__arrow">
+                      <svg aria-hidden="true" focusable="false" width="18" height="11" viewBox="0 0 18 11" xmlns="http://www.w3.org/2000/svg">
+                        <path d="m1 1 8 8 8-8" fill="none" fill-rule="evenodd"></path>
+                      </svg>
+                    </span>
+                  </button>
+                  <div class="navigation__submenu" role="region" aria-labelledby="our-work">
+                                          <div class="navigation__group">
+                        <p class="navigation__group-title navigation__group-title--desktop">Science and evidence</p>
+                        <button class="navigation__group-title navigation__group-title--mobile" aria-expanded="false" id="submenu--3-0-science-and-evidence" title="Science and evidence">
+                          <span class="navigation__link__label">
+                            Science and evidence
+                          </span>
+                          <span class="navigation__link__arrow">
+                            <svg aria-hidden="true" focusable="false" width="18" height="11" viewBox="0 0 18 11" xmlns="http://www.w3.org/2000/svg">
+                              <path d="m1 1 8 8 8-8" fill="none" fill-rule="evenodd"></path>
+                            </svg>
+                          </span>
+                        </button>
+                        <div class="navigation__menu-wrapper" aria-labelledby="submenu--3-0-science-and-evidence" role="">
+                          <ul class="navigation__menu navigation__menu--level-2">
+                                                          <li class="navigation__link">
+                                <a href="https://www.food.gov.uk/about-us/areas-of-research-interest">Areas of research interest</a>
+                              </li>
+                                                          <li class="navigation__link">
+                                <a href="https://www.food.gov.uk/search?keywords=&amp;filter_type%5BResearch%20and%20evidence%5D=Research%20and%20evidence">Research reports</a>
+                              </li>
+                                                          <li class="navigation__link">
+                                <a href="https://www.food.gov.uk/about-us/scientific-advisory-committees">Science Committees</a>
+                              </li>
+                                                          <li class="navigation__link">
+                                <a href="https://www.food.gov.uk/about-us/applying-for-research-funding">Apply for research funding</a>
+                              </li>
+                                                                                      <li class="navigation__link navigation__link--read-more">
+                                <a href="https://www.food.gov.uk/our-work/science-and-evidence">
+                                  <span class="navigation__link__read-more-arrow"></span>More in Science and evidence
+                                </a>
+                              </li>
+                                                      </ul>
+                        </div>
+                      </div>
+                                          <div class="navigation__group">
+                        <p class="navigation__group-title navigation__group-title--desktop">Risk analysis</p>
+                        <button class="navigation__group-title navigation__group-title--mobile" aria-expanded="false" id="submenu--3-1-risk-analysis" title="Risk analysis">
+                          <span class="navigation__link__label">
+                            Risk analysis
+                          </span>
+                          <span class="navigation__link__arrow">
+                            <svg aria-hidden="true" focusable="false" width="18" height="11" viewBox="0 0 18 11" xmlns="http://www.w3.org/2000/svg">
+                              <path d="m1 1 8 8 8-8" fill="none" fill-rule="evenodd"></path>
+                            </svg>
+                          </span>
+                        </button>
+                        <div class="navigation__menu-wrapper" aria-labelledby="submenu--3-1-risk-analysis" role="">
+                          <ul class="navigation__menu navigation__menu--level-2">
+                                                          <li class="navigation__link">
+                                <a href="https://www.food.gov.uk/business-guidance/how-risk-analysis-keeps-food-and-feed-safe">Our risk analysis</a>
+                              </li>
+                                                          <li class="navigation__link">
+                                <a href="https://www.food.gov.uk/about-us/risk-analysis/register-of-risk-analysis-issues">Register of risk analysis issues</a>
+                              </li>
+                                                                                      <li class="navigation__link navigation__link--read-more">
+                                <a href="https://www.food.gov.uk/our-work/risk-analysis">
+                                  <span class="navigation__link__read-more-arrow"></span>More in Risk analysis
+                                </a>
+                              </li>
+                                                      </ul>
+                        </div>
+                      </div>
+                                          <div class="navigation__group">
+                        <p class="navigation__group-title navigation__group-title--desktop">National Food Crime Unit</p>
+                        <button class="navigation__group-title navigation__group-title--mobile" aria-expanded="false" id="submenu--3-2-national-food-crime-unit" title="National Food Crime Unit">
+                          <span class="navigation__link__label">
+                            National Food Crime Unit
+                          </span>
+                          <span class="navigation__link__arrow">
+                            <svg aria-hidden="true" focusable="false" width="18" height="11" viewBox="0 0 18 11" xmlns="http://www.w3.org/2000/svg">
+                              <path d="m1 1 8 8 8-8" fill="none" fill-rule="evenodd"></path>
+                            </svg>
+                          </span>
+                        </button>
+                        <div class="navigation__menu-wrapper" aria-labelledby="submenu--3-2-national-food-crime-unit" role="">
+                          <ul class="navigation__menu navigation__menu--level-2">
+                                                          <li class="navigation__link">
+                                <a href="https://www.food.gov.uk/about-us/national-food-crime-unit">About the Food Crime Unit</a>
+                              </li>
+                                                          <li class="navigation__link">
+                                <a href="https://www.food.gov.uk/safety-hygiene/food-crime">Food crime</a>
+                              </li>
+                                                          <li class="navigation__link">
+                                <a href="https://www.food.gov.uk/contact/consumers/report-problem/report-a-product-labelling-issue/report-a-food-crime">Report a food crime</a>
+                              </li>
+                                                                                      <li class="navigation__link navigation__link--read-more">
+                                <a href="https://www.food.gov.uk/our-work/nfcu">
+                                  <span class="navigation__link__read-more-arrow"></span>More in National Food Crime Unit
+                                </a>
+                              </li>
+                                                      </ul>
+                        </div>
+                      </div>
+                                          <div class="navigation__group">
+                        <p class="navigation__group-title navigation__group-title--desktop">Consultations</p>
+                        <button class="navigation__group-title navigation__group-title--mobile" aria-expanded="false" id="submenu--3-3-consultations" title="Consultations">
+                          <span class="navigation__link__label">
+                            Consultations
+                          </span>
+                          <span class="navigation__link__arrow">
+                            <svg aria-hidden="true" focusable="false" width="18" height="11" viewBox="0 0 18 11" xmlns="http://www.w3.org/2000/svg">
+                              <path d="m1 1 8 8 8-8" fill="none" fill-rule="evenodd"></path>
+                            </svg>
+                          </span>
+                        </button>
+                        <div class="navigation__menu-wrapper" aria-labelledby="submenu--3-3-consultations" role="">
+                          <ul class="navigation__menu navigation__menu--level-2">
+                                                          <li class="navigation__link">
+                                <a href="https://www.food.gov.uk/news-alerts/search/consultations">All consultations</a>
+                              </li>
+                                                          <li class="navigation__link">
+                                <a href="https://www.food.gov.uk/news-alerts/search/consultations?consultation_status%5BOpen%5D=Open">Open consultations</a>
+                              </li>
+                                                          <li class="navigation__link">
+                                <a href="https://www.food.gov.uk/news-alerts/search/consultations?consultation_type%5BRegulated%20products%20consultation%5D=Regulated%20products%20consultation">Regulated products consultations</a>
+                              </li>
+                                                          <li class="navigation__link">
+                                <a href="https://www.food.gov.uk/search?keywords=&amp;filter_type%5BConsultation%5D=Consultation&amp;consultation_type%5BCall%20for%20evidence%5D=Call%20for%20evidence">Calls for evidence</a>
+                              </li>
+                                                                                  </ul>
+                        </div>
+                      </div>
+                                      </div>
+                              </li>
+                          <li class="navigation__link">
+                                  <button aria-expanded="false" id="nav-about-us" title="About us">
+                    <span class="navigation__link__label">
+                      About us
+                    </span>
+                    <span class="navigation__link__arrow">
+                      <svg aria-hidden="true" focusable="false" width="18" height="11" viewBox="0 0 18 11" xmlns="http://www.w3.org/2000/svg">
+                        <path d="m1 1 8 8 8-8" fill="none" fill-rule="evenodd"></path>
+                      </svg>
+                    </span>
+                  </button>
+                  <div class="navigation__submenu" role="region" aria-labelledby="about-us">
+                                          <div class="navigation__group">
+                        <p class="navigation__group-title navigation__group-title--desktop">Our organisation</p>
+                        <button class="navigation__group-title navigation__group-title--mobile" aria-expanded="false" id="submenu--4-0-our-organisation" title="Our organisation">
+                          <span class="navigation__link__label">
+                            Our organisation
+                          </span>
+                          <span class="navigation__link__arrow">
+                            <svg aria-hidden="true" focusable="false" width="18" height="11" viewBox="0 0 18 11" xmlns="http://www.w3.org/2000/svg">
+                              <path d="m1 1 8 8 8-8" fill="none" fill-rule="evenodd"></path>
+                            </svg>
+                          </span>
+                        </button>
+                        <div class="navigation__menu-wrapper" aria-labelledby="submenu--4-0-our-organisation" role="">
+                          <ul class="navigation__menu navigation__menu--level-2">
+                                                          <li class="navigation__link">
+                                <a href="https://www.food.gov.uk/about-us/fsa-board-meetings">Board meetings</a>
+                              </li>
+                                                          <li class="navigation__link">
+                                <a href="https://www.food.gov.uk/about-us/leadership-team">Leadership team</a>
+                              </li>
+                                                          <li class="navigation__link">
+                                <a href="https://www.food.gov.uk/about-us/our-strategy">Our strategy</a>
+                              </li>
+                                                                                      <li class="navigation__link navigation__link--read-more">
+                                <a href="https://www.food.gov.uk/about-us/our-organisation">
+                                  <span class="navigation__link__read-more-arrow"></span>More in Our organisation
+                                </a>
+                              </li>
+                                                      </ul>
+                        </div>
+                      </div>
+                                          <div class="navigation__group">
+                        <p class="navigation__group-title navigation__group-title--desktop">How we work</p>
+                        <button class="navigation__group-title navigation__group-title--mobile" aria-expanded="false" id="submenu--4-1-how-we-work" title="How we work">
+                          <span class="navigation__link__label">
+                            How we work
+                          </span>
+                          <span class="navigation__link__arrow">
+                            <svg aria-hidden="true" focusable="false" width="18" height="11" viewBox="0 0 18 11" xmlns="http://www.w3.org/2000/svg">
+                              <path d="m1 1 8 8 8-8" fill="none" fill-rule="evenodd"></path>
+                            </svg>
+                          </span>
+                        </button>
+                        <div class="navigation__menu-wrapper" aria-labelledby="submenu--4-1-how-we-work" role="">
+                          <ul class="navigation__menu navigation__menu--level-2">
+                                                          <li class="navigation__link">
+                                <a href="https://www.food.gov.uk/about-us/who-we-are">Who we are</a>
+                              </li>
+                                                          <li class="navigation__link">
+                                <a href="https://www.food.gov.uk/about-us/four-country-working">Four-country working</a>
+                              </li>
+                                                          <li class="navigation__link">
+                                <a href="https://www.food.gov.uk/about-us/freedom-of-information">Freedom of information</a>
+                              </li>
+                                                          <li class="navigation__link">
+                                <a href="https://www.food.gov.uk/about-us/regulatory-approach">Regulatory approach</a>
+                              </li>
+                                                          <li class="navigation__link">
+                                <a href="https://www.food.gov.uk/local-authorities/local-authorities">Working with local authorities</a>
+                              </li>
+                                                          <li class="navigation__link">
+                                <a href="https://www.food.gov.uk/about-us/contracts-and-tenders">Contracts and tenders</a>
+                              </li>
+                                                                                      <li class="navigation__link navigation__link--read-more">
+                                <a href="https://www.food.gov.uk/about-us/how-we-work">
+                                  <span class="navigation__link__read-more-arrow"></span>More in How we work
+                                </a>
+                              </li>
+                                                      </ul>
+                        </div>
+                      </div>
+                                          <div class="navigation__group">
+                        <p class="navigation__group-title navigation__group-title--desktop">Contact us</p>
+                        <button class="navigation__group-title navigation__group-title--mobile" aria-expanded="false" id="submenu--4-2-contact-us" title="Contact us">
+                          <span class="navigation__link__label">
+                            Contact us
+                          </span>
+                          <span class="navigation__link__arrow">
+                            <svg aria-hidden="true" focusable="false" width="18" height="11" viewBox="0 0 18 11" xmlns="http://www.w3.org/2000/svg">
+                              <path d="m1 1 8 8 8-8" fill="none" fill-rule="evenodd"></path>
+                            </svg>
+                          </span>
+                        </button>
+                        <div class="navigation__menu-wrapper" aria-labelledby="submenu--4-2-contact-us" role="">
+                          <ul class="navigation__menu navigation__menu--level-2">
+                                                          <li class="navigation__link">
+                                <a href="https://www.food.gov.uk/contact/businesses/services">Find business services</a>
+                              </li>
+                                                          <li class="navigation__link">
+                                <a href="https://www.food.gov.uk/contact/consumers/report-a-food-problem">Report a food problem</a>
+                              </li>
+                                                          <li class="navigation__link">
+                                <a href="https://www.food.gov.uk/contact/consumers/find-details">Find contact details</a>
+                              </li>
+                                                                                  </ul>
+                        </div>
+                      </div>
+                                          <div class="navigation__group">
+                        <p class="navigation__group-title navigation__group-title--desktop">Working for us</p>
+                        <button class="navigation__group-title navigation__group-title--mobile" aria-expanded="false" id="submenu--4-3-working-for-us" title="Working for us">
+                          <span class="navigation__link__label">
+                            Working for us
+                          </span>
+                          <span class="navigation__link__arrow">
+                            <svg aria-hidden="true" focusable="false" width="18" height="11" viewBox="0 0 18 11" xmlns="http://www.w3.org/2000/svg">
+                              <path d="m1 1 8 8 8-8" fill="none" fill-rule="evenodd"></path>
+                            </svg>
+                          </span>
+                        </button>
+                        <div class="navigation__menu-wrapper" aria-labelledby="submenu--4-3-working-for-us" role="">
+                          <ul class="navigation__menu navigation__menu--level-2">
+                                                          <li class="navigation__link">
+                                <a href="https://www.food.gov.uk/about-us/working-for-us">Current vacancies</a>
+                              </li>
+                                                          <li class="navigation__link">
+                                <a href="https://www.food.gov.uk/about-us/equality-and-diversity">Equality and diversity</a>
+                              </li>
+                                                                                  </ul>
+                        </div>
+                      </div>
+                                      </div>
+                              </li>
+                      </ul>
+              </div>
+    </div>
+  </div>
+</nav>    </div>
+    <nav class="header__languages header__languages--mobile" aria-label="Language switcher" aria-hidden="true">
+      <ul class="header__languages-list">
+        <li class="header__language">
+          <a href="/home" class="header__language-link header__language-link--selected">English</a>
+        </li>
+        <li class="header__language">
+          <a href="/cy/home" class="header__language-link header__language-link--">
+                          Cymraeg
+                      </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main-content">
+          
+
+
+  
+<section class="hero hero--with-image">
+  <div class="hero__mask-wrapper hero__theme--blue">
+    <div class="hero__container">
+      <div class="hero__row">
+        <div class="hero__content-wrapper">
+          <div class="hero__content hero__theme--blue">
+            <div class="hero__text-content">
+              <h1 class="hero__title">Food you can trust</h1>
+              <p class="hero__description">Our fundamental mission is food you can trust. By this, we mean that people can trust that the food they buy and eat is safe and what it says it is, and food is healthier and more sustainable.</p>
+                          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+      <div class="hero__image">
+      <svg version="1.1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 200 200" xml:space="preserve" focusable="false">
+            <defs>
+              <circle id="circle" cx="100" cy="100" r="100"></circle>
+            </defs>
+        <clipPath id="clip-circle">
+          <use xlink:href="#circle" overflow="visible"></use>
+        </clipPath>
+        <g clip-path="url(#clip-circle)">
+          <image overflow="visible" href="https://www.food.gov.uk/sites/default/files/media/image/couple-shopping-2.jpg" height="100%" width="100%" preserveAspectRatio="xMidYMid slice"></image>
+        </g>
+      </svg>
+    </div>
+        </section>
+  
+
+
+      <div class="full-width"> 
+  <div class="full-width__container">
+    <div class="full-width__row">
+      <div class="full-width__wrapper">
+                    
+
+
+            </div>
+    </div>
+  </div>
+</div>
+              <div class="latest-teaser">
+  <div class="latest-teaser__container">
+          <div class="title-and-description__text-row">
+  <div class="title-and-description__text-wrapper">
+          <h2 class="title-and-description__title">Latest news and alerts</h2>
+              </div>
+</div>
+    
+    <div class="latest-teaser__cards-row">
+              <div class="latest-teaser__card">
+          <div class="latest-teaser__card-wrapper latest-teaser__card-wrapper--alerts">
+            <h3 lang="en" class="latest-teaser__type">Food alert</h3>
+            <div class="latest-teaser__anchor-wrapper">
+              <a href="/news-alerts/alert/fsa-prin-25-2024" lang="en" class="latest-teaser__anchor">Crosta &amp; Mollica recalls Crosta &amp; Mollica Sugo Alla Norma Aubergine, Ricotta and Tomato because it may contain pieces of glass</a>
+            </div>
+            <span class="latest-teaser__date">25 May 2024</span>
+          </div>
+        </div>
+              <div class="latest-teaser__card">
+          <div class="latest-teaser__card-wrapper latest-teaser__card-wrapper--alerts">
+            <h3 lang="en" class="latest-teaser__type">Food alert</h3>
+            <div class="latest-teaser__anchor-wrapper">
+              <a href="/news-alerts/alert/fsa-prin-24-2024" lang="en" class="latest-teaser__anchor">Lituanica UK Ltd recalls Daivida Rokiskio Mesine Pork Tongue and Ear Roll because of contamination with Listeria monocytogenes</a>
+            </div>
+            <span class="latest-teaser__date">22 May 2024</span>
+          </div>
+        </div>
+              <div class="latest-teaser__card">
+          <div class="latest-teaser__card-wrapper latest-teaser__card-wrapper--alerts">
+            <h3 lang="en" class="latest-teaser__type">Food alert</h3>
+            <div class="latest-teaser__anchor-wrapper">
+              <a href="/news-alerts/alert/fsa-prin-23-2024" lang="en" class="latest-teaser__anchor">Kellogg’s recalls Kellogg’s Corn Flakes Chocolate Flavour because of small hard lumps of food</a>
+            </div>
+            <span class="latest-teaser__date">22 May 2024</span>
+          </div>
+        </div>
+              <div class="latest-teaser__card">
+          <div class="latest-teaser__card-wrapper latest-teaser__card-wrapper--news">
+            <h3 lang="en" class="latest-teaser__type">News</h3>
+            <div class="latest-teaser__anchor-wrapper">
+              <a href="/news-alerts/news/around-6-of-the-uk-adult-population-have-a-food-allergy-new-report-from-the-food-standards-agency-finds" lang="en" class="latest-teaser__anchor">Around 6% of the UK adult population have a food allergy, new report from the Food Standards Agency finds  </a>
+            </div>
+            <span class="latest-teaser__date">16 May 2024</span>
+          </div>
+        </div>
+          </div>
+
+    
+  </div>
+</div>
+
+    <div class="landing-links">
+  <div class="landing-links__container">
+    <div class="landing-links__row">
+      <div class="landing-links__title">
+        <h2>Are you looking for specific information? </h2>
+      </div>
+    </div>
+    <div class="landing-links__row landing-links__row--centred">
+            <div class="landing-links__item">
+        <a href="/contact/businesses/report-safety-concern/report-a-food-crime">
+          <div class="landing-links__svg">
+            <svg class="icon icon--law" aria-hidden="true" focusable="false">
+  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#law"></use>
+</svg>
+          </div>
+          <span class="landing-links__link">Whistleblowing/reporting a food crime</span>
+        </a>
+      </div>
+            <div class="landing-links__item">
+        <a href="/business-guidance/regulated-products-application-guidance">
+          <div class="landing-links__svg">
+            <svg class="icon icon--apply-approval" aria-hidden="true" focusable="false">
+  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#apply-approval"></use>
+</svg>
+          </div>
+          <span class="landing-links__link">Regulated products</span>
+        </a>
+      </div>
+            <div class="landing-links__item">
+        <a href="/business-guidance/dairy-and-farming">
+          <div class="landing-links__svg">
+            <svg class="icon icon--farming" aria-hidden="true" focusable="false">
+  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#farming"></use>
+</svg>
+          </div>
+          <span class="landing-links__link">Dairy and farming</span>
+        </a>
+      </div>
+            <div class="landing-links__item">
+        <a href="/business-guidance/animal-feed">
+          <div class="landing-links__svg">
+            <svg class="icon icon--animal-feed" aria-hidden="true" focusable="false">
+  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#animal-feed"></use>
+</svg>
+          </div>
+          <span class="landing-links__link">Animal feed</span>
+        </a>
+      </div>
+            <div class="landing-links__item">
+        <a href="/business-guidance/imports-exports">
+          <div class="landing-links__svg">
+            <svg class="icon icon--export" aria-hidden="true" focusable="false">
+  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#export"></use>
+</svg>
+          </div>
+          <span class="landing-links__link">Imports and exports</span>
+        </a>
+      </div>
+            <div class="landing-links__item">
+        <a href="/business-guidance/industry-guidance/wine">
+          <div class="landing-links__svg">
+            <svg class="icon icon--wine" aria-hidden="true" focusable="false">
+  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wine"></use>
+</svg>
+          </div>
+          <span class="landing-links__link">Wine</span>
+        </a>
+      </div>
+          </div>
+  </div>
+</div>
+    <div class="promo-group">
+  <div class="promo-group__grid-container">
+          <div class="title-and-description__text-row">
+  <div class="title-and-description__text-wrapper">
+          <h2 class="title-and-description__title">Popular content</h2>
+              </div>
+</div>
+        <div class="promo-group__grid-row">
+              <div class="promo-group__card-wrapper 
+           
+          nope">
+          <div class="promo-group__card promo-group__card--multiple-links">
+                          <div class="promo-group__background" style="background-image: url('https://www.food.gov.uk/sites/default/files/media/image/NDawe_Bell_FSA_150320_324.jpg')"></div>
+                        <p class="promo-group__sub-heading">
+                              For consumers
+                          </p>
+                          <p class="promo-group__description"></p>
+                                      <ul class="promo-group__list">
+                                  <li class="promo-group__list-item">
+                    <a class="promo-group__list-link" href="/ratings">Check a food hygiene rating</a>
+                  </li>
+                                  <li class="promo-group__list-item">
+                    <a class="promo-group__list-link" href="/contact/consumers/report-problem">Report a food problem</a>
+                  </li>
+                                  <li class="promo-group__list-item">
+                    <a class="promo-group__list-link" href="/safety-hygiene/food-allergy-and-intolerance">Allergy and intolerance</a>
+                  </li>
+                                  <li class="promo-group__list-item">
+                    <a class="promo-group__list-link" href="/news-alerts">Subscribe to news and alerts</a>
+                  </li>
+                                  <li class="promo-group__list-item">
+                    <a class="promo-group__list-link" href="/consumer-advice/food-hygiene">Food hygiene</a>
+                  </li>
+                                  <li class="promo-group__list-item">
+                    <a class="promo-group__list-link" href="https://www.food.gov.uk/consumer-advice/food-safety-advice">Food safety</a>
+                  </li>
+                              </ul>
+                      </div>
+        </div>
+              <div class="promo-group__card-wrapper 
+           
+          nope">
+          <div class="promo-group__card promo-group__card--multiple-links">
+                          <div class="promo-group__background" style="background-image: url('https://www.food.gov.uk/sites/default/files/media/image/industry-kitchen-cooking_0.jpg')"></div>
+                        <p class="promo-group__sub-heading">
+                              For businesses
+                          </p>
+                          <p class="promo-group__description"></p>
+                                      <ul class="promo-group__list">
+                                  <li class="promo-group__list-item">
+                    <a class="promo-group__list-link" href="/business-guidance/getting-ready-to-start-your-food-business">Starting a food business</a>
+                  </li>
+                                  <li class="promo-group__list-item">
+                    <a class="promo-group__list-link" href="/business-guidance/safer-food-better-business-sfbb">Safer food, better business</a>
+                  </li>
+                                  <li class="promo-group__list-item">
+                    <a class="promo-group__list-link" href="/business-guidance/allergen-guidance-for-food-businesses">Allergen guidance</a>
+                  </li>
+                                  <li class="promo-group__list-item">
+                    <a class="promo-group__list-link" href="https://www.food.gov.uk/business-guidance/food-hygiene">Food hygiene</a>
+                  </li>
+                                  <li class="promo-group__list-item">
+                    <a class="promo-group__list-link" href="/business-guidance/business-guidance/food-safety-management-for-businesses">Food safety management</a>
+                  </li>
+                                  <li class="promo-group__list-item">
+                    <a class="promo-group__list-link" href="/business-guidance/online-food-safety-training">Online food safety training</a>
+                  </li>
+                              </ul>
+                      </div>
+        </div>
+              <div class="promo-group__card-wrapper 
+           
+          nope">
+          <div class="promo-group__card promo-group__card--multiple-links">
+                          <div class="promo-group__background" style="background-image: url('https://www.food.gov.uk/sites/default/files/media/image/AS_FSA_011216_L1_276.jpg')"></div>
+                        <p class="promo-group__sub-heading">
+                              About us and our work
+                          </p>
+                          <p class="promo-group__description"></p>
+                                      <ul class="promo-group__list">
+                                  <li class="promo-group__list-item">
+                    <a class="promo-group__list-link" href="/about-us/fsa-board-meetings">FSA Board meetings</a>
+                  </li>
+                                  <li class="promo-group__list-item">
+                    <a class="promo-group__list-link" href="/about-us/who-we-are">Who we are</a>
+                  </li>
+                                  <li class="promo-group__list-item">
+                    <a class="promo-group__list-link" href="/our-work/risk-analysis">Our risk analysis</a>
+                  </li>
+                                  <li class="promo-group__list-item">
+                    <a class="promo-group__list-link" href="/our-work/science-and-evidence">Science and evidence</a>
+                  </li>
+                                  <li class="promo-group__list-item">
+                    <a class="promo-group__list-link" href="/about-us/national-food-crime-unit">National Food Crime Unit</a>
+                  </li>
+                                  <li class="promo-group__list-item">
+                    <a class="promo-group__list-link" href="/contact/consumers/find-details">Contact us</a>
+                  </li>
+                              </ul>
+                      </div>
+        </div>
+          </div>
+  </div>
+</div>
+
+  
+  
+<div class="largePromoGroup">
+  <div class="largePromoGroup__container">
+      <div class="largePromoGroup__row largePromoGroup__row--even">
+      <div style="background-image: url(https://www.food.gov.uk/sites/default/files/media/image/here-to-help-home-cook.png)" class="largePromoGroup__background-image"></div>
+        <div class="largePromoGroup__content">
+                  <h2 class="largePromoGroup__title">Food business registration</h2>
+                          <div class="largePromoGroup__description">When you start a new food business, or take over an existing business, you must register with your local authority. You should do this at least 28 days before you start trading.
+
+We have more information on how to register a food business, including who needs to register, taking over an existing food business, and how to update your business details.</div>
+                <div class="largePromoGroup__cta">
+          
+  <a href="/business-guidance/getting-ready-to-start-your-food-business" class="button button--secondary">
+    Register a food business
+  </a>
+        </div>
+      </div>
+    </div>
+      <div class="largePromoGroup__row largePromoGroup__row--odd">
+      <div style="background-image: url(https://www.food.gov.uk/sites/default/files/media/image/fhrs-5_0.jpg)" class="largePromoGroup__background-image"></div>
+        <div class="largePromoGroup__content">
+                  <h2 class="largePromoGroup__title">Food hygiene ratings</h2>
+                          <div class="largePromoGroup__description">Food hygiene ratings help you choose where to eat out or shop for food by telling you how seriously the business takes their food hygiene standards.</div>
+                <div class="largePromoGroup__cta">
+          
+  <a href="/ratings" class="button button--primary">
+    Find a food hygiene rating
+  </a>
+        </div>
+      </div>
+    </div>
+      <div class="largePromoGroup__row largePromoGroup__row--even">
+      <div style="background-image: url(https://www.food.gov.uk/sites/default/files/media/image/allergy-training-inspection.png)" class="largePromoGroup__background-image"></div>
+        <div class="largePromoGroup__content">
+                  <h2 class="largePromoGroup__title">Food allergy and intolerance training</h2>
+                          <div class="largePromoGroup__description">Food business operators must make sure that staff receive training on managing allergens effectively. We have free online food safety courses available to help you and your business comply with food hygiene and food standards.</div>
+                <div class="largePromoGroup__cta">
+          
+  <a href="/business-guidance/online-food-safety-training" class="button button--secondary">
+    Online food safety training
+  </a>
+        </div>
+      </div>
+    </div>
+    </div>
+</div>
+
+
+
+
+
+  </main>
+  <section class="feedback" aria-label="Feedback about the content on the page" aria-live="polite">
+  <div class="feedback__grid-container">
+    <div class="feedback__grid-row">
+      <div class="feedback__grid-wrapper">
+        <div class="feedback__texts">
+                      <div class="feedback__questions">
+              <div class="feedback__wrapper">
+                <h2 class="feedback__heading">Is this page useful?</h2>
+                <p class="feedback__options">
+                  <a class="feedback__yes" role="button" href="/webform/page-feedback">Yes<span class="visually-hidden">this page is useful</span></a>
+                  <a class="feedback__no" aria-expanded="false" aria-controls="feedback__form" role="button" href="/webform/page-feedback">No<span class="visually-hidden">this page is not useful</span></a>
+                </p>
+              </div>
+              <button class="feedback__report-button" aria-expanded="false" aria-controls="feedback__form">
+                Is there anything wrong with this page?
+              </button>
+            </div>
+            <span class="feedback__thank" role="status">Thanks for your feedback</span>
+                  </div>
+                <div class="feedback__form-wrapper">
+              <span id="webform-submission-page-feedback-node-251-form-ajax-content"></span><div id="webform-submission-page-feedback-node-251-form-ajax" class="webform-ajax-form-wrapper" data-effect="fade" data-progress-type="throbber"><form class="webform-submission-form webform-submission-add-form webform-submission-page-feedback-form webform-submission-page-feedback-add-form webform-submission-page-feedback-node-251-form webform-submission-page-feedback-node-251-add-form js-webform-details-toggle webform-details-toggle feedback__form" data-drupal-selector="webform-submission-page-feedback-node-251-add-form" novalidate="novalidate" action="/" method="post" id="webform-submission-page-feedback-node-251-add-form" accept-charset="UTF-8" data-once="form-updated webform-details-toggle" data-drupal-form-fields="edit-feedback,edit-actions-submit,edit-fax--1">
+  
+  <input class="hidden page_url" data-drupal-selector="edit-page-url" type="hidden" name="page_url" value="https://www.food.gov.uk/node/251">
+
+<fieldset class="fieldset feedback_wrapper js-webform-type-fieldset webform-type-fieldset js-form-item form-item js-form-wrapper form-wrapper" data-drupal-selector="edit-feedback-wrapper" id="edit-feedback-wrapper" data-once="wrapper"><button class="feedback__close">Close<span class="visually-hidden">the feedback form</span></button>
+  <div class="fieldset-wrapper">
+      <div class="textarea">
+  <div class="">
+    <label class="textarea__label" for="edit-feedback">
+      <span class="textarea__label-content">Please give us your feedback on this page.</span>
+      <span class="textarea__required"></span>
+    </label>
+      </div>
+      <p class="textarea__description" id="label-feedback"></p>
+      <textarea class="textarea__field textarea__field--with-desc" name="feedback" id="edit-feedback" rows="5 " aria-describedby="'label-feedback'"></textarea>
+  </div>
+
+  </div>
+</fieldset>
+<div class="webform_actions actions form-actions webform-actions js-form-wrapper form-wrapper" data-drupal-selector="edit-actions" id="edit-actions--1">
+    <div class="multistep-function">
+  <div class="multistep-function__container">
+    
+         
+    <input class="webform-button--submit button button--primary js-form-submit form-submit" data-drupal-selector="edit-actions-submit" data-disable-refocus="true" type="submit" id="edit-actions-submit" name="op" value="Submit" data-once="drupal-ajax">
+
+   
+  </div>
+</div>
+
+</div>
+<input autocomplete="off" data-drupal-selector="form-6biqon7y8bpdcqdgjkc3jkyvopfnmcxqikq3nq9rgy4" type="hidden" name="form_build_id" value="form-6BIQOn7Y8bpdCqDGjKc3JkyVOpFNMcXQIKQ3Nq9RGY4">
+<input data-drupal-selector="edit-webform-submission-page-feedback-node-251-add-form" type="hidden" name="form_id" value="webform_submission_page_feedback_node_251_add_form">
+<div class="fax-textfield js-form-wrapper form-wrapper" style="display: none !important;">
+<div class="js-form-item form-item js-form-type-textfield form-item-fax js-form-item-fax">
+            <label for="edit-fax--1">Leave this field blank</label>
+                    <input autocomplete="off" data-drupal-selector="edit-fax" type="text" id="edit-fax--1" name="fax" value="" size="20" maxlength="128" class="form-text">
+
+                </div>
+</div>
+
+
+  
+<input class="is_useful" name="is_useful" value="Yes" type="hidden"></form>
+</div>
+          </div>
+              </div>
+    </div>
+  </div>
+</section>
+
+
+
+<footer class="footer">
+  <div class="footer__grid-container">
+    <div class="footer__grid-row">
+      <nav class="footer__nav">
+        <h2 class="visually-hidden">Footer links</h2>
+        <ul class="footer__menu">
+                      <li class="footer__menu-item">
+              <a href="https://www.food.gov.uk/crown-copyright" class="footer__menu-link  " target="_self">Copyright
+                              </a>
+            </li>
+                      <li class="footer__menu-item">
+              <a href="https://www.food.gov.uk/accessibility" class="footer__menu-link  " target="_self">Accessibility
+                              </a>
+            </li>
+                      <li class="footer__menu-item">
+              <a href="https://www.food.gov.uk/about-us/freedom-of-information" class="footer__menu-link  " target="_self">Freedom of information
+                              </a>
+            </li>
+                      <li class="footer__menu-item">
+              <a href="https://www.food.gov.uk/terms-and-conditions" class="footer__menu-link  " target="_self">Terms and conditions
+                              </a>
+            </li>
+                      <li class="footer__menu-item">
+              <a href="https://www.food.gov.uk/about-us/privacy-policy" class="footer__menu-link  " target="_self">Privacy
+                              </a>
+            </li>
+                      <li class="footer__menu-item">
+              <a href="https://www.food.gov.uk/about-us/personal-information-charter" class="footer__menu-link  " target="_self">Personal information charter
+                              </a>
+            </li>
+                      <li class="footer__menu-item">
+              <a href="https://www.food.gov.uk/contact/consumers/feedback" class="footer__menu-link  " target="_self">Feedback and complaints
+                              </a>
+            </li>
+                      <li class="footer__menu-item">
+              <a href="https://www.food.gov.uk/cookie-policy" class="footer__menu-link  " target="_self">Cookies
+                              </a>
+            </li>
+                      <li class="footer__menu-item">
+              <a href="https://www.food.gov.uk/our-data" class="footer__menu-link  " target="_self">Data
+                              </a>
+            </li>
+                      <li class="footer__menu-item">
+              <a href="https://www.gov.uk/" class="footer__menu-link external-link" target="_blank" data-extlink="" rel="noopener" onclick="saAutomatedLink(this, 'outbound');">GOV.UK
+                              <svg focusable="false" class="external-link" role="img" aria-label="(link is external)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 40"><metadata><sfw xmlns="http://ns.adobe.com/SaveForWeb/1.0/"><slicesourcebounds y="-8160" x="-8165" width="16389" height="16384" bottomleftorigin="true"></slicesourcebounds><optimizationsettings><targetsettings targetsettingsid="0" fileformat="PNG24Format"><png24format transparency="true" filtered="false" interlaced="false" nomattecolor="false" mattecolor="#FFFFFF"></png24format></targetsettings></optimizationsettings></sfw></metadata><title>(link is external)</title><path d="M48 26c-1.1 0-2 0.9-2 2v26H10V18h26c1.1 0 2-0.9 2-2s-0.9-2-2-2H8c-1.1 0-2 0.9-2 2v40c0 1.1 0.9 2 2 2h40c1.1 0 2-0.9 2-2V28C50 26.9 49.1 26 48 26z"></path><path d="M56 6H44c-1.1 0-2 0.9-2 2s0.9 2 2 2h7.2L30.6 30.6c-0.8 0.8-0.8 2 0 2.8C31 33.8 31.5 34 32 34s1-0.2 1.4-0.6L54 12.8V20c0 1.1 0.9 2 2 2s2-0.9 2-2V8C58 6.9 57.1 6 56 6z"></path></svg> <span class="visually-hidden">(Opens in a new window)</span></a>
+            </li>
+                  </ul>
+      </nav>
+      <div class="footer__social">
+        <p class="visually-hidden">Food Standards Agency on social media</p>
+        <ul class="footer__social-list">
+                      <li class="footer__social-item">
+              <a href="https://www.facebook.com/FoodStandardsAgency" class="footer__social-link" title="Facebook" target="_blank" rel="noopener" onclick="saAutomatedLink(this, 'outbound');">
+                <span class="visually-hidden">Facebook
+                  (Open in a new window)</span>
+                <span class="footer__social-svg">
+                  <svg aria-hidden="true" width="44px" height="44px" viewBox="0 0 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" focusable="false">
+  <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g transform="translate(-1254.000000, -44.000000)" fill="#FFFFFF">
+      <g id="fsa-facebook" transform="translate(1254.000000, 44.000000)">
+        <path d="M0,22 C0,9.9 9.9,0 22,0 C34.1,0 44,9.9 44,22 C44,34.1 34.1,44 22,44 C9.9,44 0,34.1 0,22 Z M23.54,34.21 L23.54,22.22 L26.84,22.22 L27.28,18.04 L23.54,18.04 L23.54,15.95 C23.54,14.85 23.65,14.3 25.19,14.3 L27.28,14.3 L27.28,10.23 L23.98,10.23 C20.02,10.23 18.59,12.21 18.59,15.62 L18.59,18.15 L16.17,18.15 L16.17,22.33 L18.59,22.33 L18.59,34.32 C18.59,34.21 23.54,34.21 23.54,34.21 Z"></path>
+      </g>
+    </g>
+  </g>
+</svg>
+                </span>
+              </a>
+            </li>
+                      <li class="footer__social-item">
+              <a href="https://twitter.com/foodgov" class="footer__social-link" title="Twitter" target="_blank" rel="noopener" onclick="saAutomatedLink(this, 'outbound');">
+                <span class="visually-hidden">Twitter
+                  (Open in a new window)</span>
+                <span class="footer__social-svg">
+                  <svg aria-hidden="true" width="44px" height="44px" viewBox="0 0 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" focusable="false">
+  <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g transform="translate(-1316.000000, -44.000000)" fill="#FFFFFF">
+      <g id="fsa-twitter" transform="translate(1316.000000, 44.000000)">
+        <path d="M0,22 C0,9.9 9.9,0 22,0 C34.1,0 44,9.9 44,22 C44,34.1 34.1,44 22,44 C9.9,44 0,34.1 0,22 Z M21.34,17.93 L21.34,18.7 L20.57,18.59 C17.82,18.26 15.29,17.05 13.2,14.96 L12.21,13.97 L11.99,14.74 C11.44,16.39 11.77,18.15 12.98,19.36 C13.64,20.02 13.42,20.13 12.43,19.69 C12.1,19.58 11.77,19.47 11.66,19.47 C11.55,19.58 11.88,21.01 12.21,21.56 C12.65,22.33 13.42,23.1 14.3,23.54 L15.07,23.87 L14.19,23.87 C13.31,23.87 13.31,23.87 13.42,24.2 C13.75,25.19 14.96,26.29 16.28,26.73 L17.27,27.06 L16.39,27.61 C15.18,28.38 13.75,28.71 12.32,28.71 C11.66,28.71 11.11,28.82 11.11,28.82 C11.11,28.93 12.98,29.81 14.08,30.14 C17.38,31.13 21.23,30.69 24.2,29.04 C26.29,27.83 28.38,25.41 29.37,22.99 C29.92,21.78 30.47,19.47 30.47,18.37 C30.47,17.71 30.47,17.6 31.35,16.72 C31.9,16.17 32.34,15.73 32.45,15.51 C32.56,15.18 32.56,15.18 31.79,15.51 C30.47,15.95 30.25,15.95 30.91,15.18 C31.35,14.63 32.01,13.75 32.01,13.53 C32.01,13.53 31.79,13.53 31.57,13.75 C31.24,13.86 30.69,14.19 30.25,14.3 L29.37,14.52 L28.6,13.97 C28.16,13.64 27.61,13.42 27.28,13.31 C26.51,13.09 25.3,13.09 24.64,13.42 C22.44,14.08 21.23,15.95 21.34,17.93 Z"></path>
+      </g>
+    </g>
+  </g>
+</svg>
+                </span>
+              </a>
+            </li>
+                      <li class="footer__social-item">
+              <a href="https://www.linkedin.com/company/food-standards-agency" class="footer__social-link" title="Linkedin" target="_blank" rel="noopener" onclick="saAutomatedLink(this, 'outbound');">
+                <span class="visually-hidden">Linkedin
+                  (Open in a new window)</span>
+                <span class="footer__social-svg">
+                  <svg aria-hidden="true" width="44px" height="44px" viewBox="0 0 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" focusable="false">
+  <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g transform="translate(-1378.000000, -44.000000)" fill="#FFFFFF">
+      <g id="fsa-linkedin" transform="translate(1378.000000, 44.000000)">
+        <path d="M0,22 C0,9.9 9.9,0 22,0 C34.1,0 44,9.9 44,22 C44,34.1 34.1,44 22,44 C9.9,44 0,34.1 0,22 Z M15.51,18.26 L10.56,18.26 L10.56,33.22 L15.51,33.22 L15.51,18.26 L15.51,18.26 Z M15.84,13.64 C15.84,12.21 14.74,11 13.09,11 C11.33,11 10.23,12.1 10.23,13.64 C10.23,15.07 11.33,16.28 12.98,16.28 L12.98,16.28 C14.74,16.17 15.84,15.07 15.84,13.64 Z M33.55,24.64 C33.55,20.02 31.13,17.93 27.83,17.93 C25.19,17.93 23.98,19.36 23.32,20.35 L23.32,18.26 L18.37,18.26 C18.48,19.69 18.37,33.22 18.37,33.22 L23.32,33.22 L23.32,24.86 C23.32,24.42 23.32,23.98 23.43,23.65 C23.76,22.77 24.64,21.78 25.96,21.78 C27.72,21.78 28.49,23.1 28.49,25.19 L28.49,33.22 L33.44,33.22 C33.55,33.22 33.55,24.64 33.55,24.64 Z"></path>
+      </g>
+    </g>
+  </g>
+</svg>
+                </span>
+              </a>
+            </li>
+                      <li class="footer__social-item">
+              <a href="https://www.youtube.com/user/FoodStandardsAgency" class="footer__social-link" title="Youtube" target="_blank" rel="noopener" onclick="saAutomatedLink(this, 'outbound');">
+                <span class="visually-hidden">Youtube
+                  (Open in a new window)</span>
+                <span class="footer__social-svg">
+                  <svg aria-hidden="true" width="44px" height="44px" viewBox="0 0 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" focusable="false">
+  <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g transform="translate(-1440.000000, -44.000000)" fill="#FFFFFF">
+      <g id="fsa-youtube" transform="translate(1440.000000, 44.000000)">
+        <path d="M0,22 C0,9.9 9.9,0 22,0 C34.1,0 44,9.9 44,22 C44,34.1 34.1,44 22,44 C9.9,44 0,34.1 0,22 Z M33.55,17.6 C33.55,17.6 33.33,15.95 32.67,15.18 C31.79,14.19 30.8,14.19 30.36,14.19 C27.06,13.97 22.11,13.97 22.11,13.97 L22.11,13.97 C22.11,13.97 17.16,13.97 13.86,14.19 C13.42,14.3 12.43,14.3 11.55,15.18 C10.78,15.95 10.45,17.6 10.45,17.6 C10.45,17.6 10.23,19.58 10.23,21.45 L10.23,23.32 C10.23,25.3 10.45,27.17 10.45,27.17 C10.45,27.17 10.67,28.82 11.33,29.59 C12.21,30.58 13.42,30.47 13.97,30.58 C15.95,30.69 22,30.8 22,30.8 C22,30.8 26.95,30.8 30.25,30.58 C30.69,30.58 31.68,30.47 32.56,29.59 C33.22,28.82 33.44,27.17 33.44,27.17 C33.44,27.17 33.66,25.19 33.66,23.32 L33.66,21.45 C33.77,19.47 33.55,17.6 33.55,17.6 Z"></path>
+        <polygon id="Path" points="19.8 25.85 19.8 19.14 26.18 22.55"></polygon>
+      </g>
+    </g>
+  </g>
+</svg>
+                </span>
+              </a>
+            </li>
+                      <li class="footer__social-item">
+              <a href="https://www.instagram.com/foodgov/" class="footer__social-link" title="Instagram" target="_blank" rel="noopener" onclick="saAutomatedLink(this, 'outbound');">
+                <span class="visually-hidden">Instagram
+                  (Open in a new window)</span>
+                <span class="footer__social-svg">
+                  <svg aria-hidden="true" width="44px" height="44px" viewBox="0 0 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" focusable="false">
+  <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g transform="translate(-1502.000000, -44.000000)" fill="#FFFFFF">
+      <g id="fsa-instagram" transform="translate(1502.000000, 44.000000)">
+        <path d="M22,0 C9.9,0 0,9.9 0,22 C0,34.1 9.9,44 22,44 C34.1,44 44,34.1 44,22 C44,9.9 34.1,0 22,0 Z M31.9,26.07 C31.9,26.84 31.68,27.72 31.46,28.49 C30.91,29.81 29.92,30.91 28.6,31.35 C27.83,31.68 27.06,31.79 26.18,31.79 C25.08,31.79 24.75,31.79 22.11,31.79 C19.47,31.79 19.03,31.79 18.04,31.79 C17.27,31.79 16.39,31.57 15.62,31.35 C14.3,30.8 13.2,29.81 12.76,28.49 C12.43,27.72 12.32,26.95 12.32,26.07 C12.32,24.97 12.21,24.64 12.21,22 C12.21,19.36 12.21,18.92 12.32,17.93 C12.32,17.16 12.54,16.28 12.76,15.51 C13.31,14.19 14.3,13.09 15.62,12.65 C16.39,12.32 17.16,12.21 18.04,12.21 C19.14,12.21 19.47,12.1 22.11,12.1 C24.75,12.1 25.19,12.1 26.18,12.21 C26.95,12.21 27.83,12.43 28.6,12.65 C29.92,13.2 31.02,14.19 31.46,15.51 C31.79,16.28 31.9,17.05 31.9,17.93 C31.9,19.03 31.9,19.36 31.9,22 C31.9,24.64 31.9,25.08 31.9,26.07 Z M22,16.94 C19.14,16.94 16.94,19.25 16.94,22 C16.94,24.75 19.25,27.06 22,27.06 C24.75,27.06 27.06,24.75 27.06,22 C27.06,19.25 24.86,16.94 22,16.94 C22,16.94 22,16.94 22,16.94 Z M22,25.3 C20.13,25.3 18.7,23.87 18.7,22 C18.7,20.13 20.13,18.7 22,18.7 C23.87,18.7 25.3,20.13 25.3,22 C25.3,23.87 23.87,25.3 22,25.3 Z M28.49,16.72 C28.49,17.38 27.94,17.93 27.28,17.93 C26.62,17.93 26.07,17.38 26.07,16.72 C26.07,16.06 26.62,15.51 27.28,15.51 L27.28,15.51 C27.94,15.51 28.49,16.06 28.49,16.72 Z"></path>
+      </g>
+    </g>
+  </g>
+</svg>
+                </span>
+              </a>
+            </li>
+                      <li class="footer__social-item">
+              <a href="https://food.blog.gov.uk/" class="footer__social-link" title="FSA Blog" target="_blank" rel="noopener" onclick="saAutomatedLink(this, 'outbound');">
+                <span class="visually-hidden">FSA Blog
+                  (Open in a new window)</span>
+                <span class="footer__social-svg">
+                  <svg aria-hidden="true" width="44px" height="44px" viewBox="0 0 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" focusable="false">
+  <defs>
+    <polygon id="path-1" points="0 0 44 0 44 44.0000862 0 44.0000862"></polygon>
+  </defs>
+  <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g transform="translate(-1564.000000, -44.000000)">
+      <g id="Group-12" transform="translate(1564.000000, 44.000000)">
+        <path d="M14.2979027,25.3320157 L25.7721027,25.3320157 C26.6943238,25.3320157 27.4422104,26.0799022 27.4422104,27.0021234 C27.4422104,27.9243445 26.6943238,28.6722311 25.7721027,28.6722311 L14.2979027,28.6722311 C13.3753943,28.6722311 12.627795,27.9243445 12.627795,27.0021234 C12.627795,26.0799022 13.3753943,25.3320157 14.2979027,25.3320157 L14.2979027,25.3320157 Z M14.2979027,18.6860496 L30.1657928,18.6860496 C31.0883011,18.6860496 31.8359005,19.4339362 31.8359005,20.3561574 C31.8359005,21.2786657 31.0883011,22.0262651 30.1657928,22.0262651 L14.2979027,22.0262651 C13.3753943,22.0262651 12.627795,21.2786657 12.627795,20.3561574 C12.627795,19.4339362 13.3753943,18.6860496 14.2979027,18.6860496 L14.2979027,18.6860496 Z M9.78473457,31.5150043 C9.78473457,32.4708286 10.5624907,33.2482975 11.518315,33.2482975 L32.9539966,33.2482975 C33.909821,33.2482975 34.6872899,32.4708286 34.6872899,31.5150043 L34.6872899,26.996092 L30.3323727,28.4878443 C30.0848004,28.5728575 29.8478548,28.3356247 29.9331552,28.0880524 L31.557597,23.3721163 L34.6872899,20.2424235 L34.6872899,14.9032485 L9.78473457,14.9032485 L9.78473457,31.5150043 Z" id="Fill-1" fill="#FFFFFF"></path>
+        <path d="M16.8285682,13.2765377 C17.5813373,13.2765377 18.191939,12.6662232 18.191939,11.9131669 C18.191939,11.1603978 17.5813373,10.5500833 16.8285682,10.5500833 C16.0755119,10.5500833 15.4651974,11.1603978 15.4651974,11.9131669 C15.4651974,12.6662232 16.0755119,13.2765377 16.8285682,13.2765377" id="Fill-3" fill="#FFFFFF"></path>
+        <path d="M13.0335895,13.2765377 C13.7866458,13.2765377 14.3969603,12.6662232 14.3969603,11.9131669 C14.3969603,11.1603978 13.7866458,10.5500833 13.0335895,10.5500833 C12.2808204,10.5500833 11.6702187,11.1603978 11.6702187,11.9131669 C11.6702187,12.6662232 12.2808204,13.2765377 13.0335895,13.2765377" id="Fill-5" fill="#FFFFFF"></path>
+        <g id="Group-9">
+          <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+          </mask>
+          <g id="Clip-8"></g>
+          <path d="M35.5983386,26.3273884 L35.5983386,31.5149181 C35.5983386,32.9753648 34.4144721,34.1592314 32.9540254,34.1592314 L11.5183437,34.1592314 C10.057897,34.1592314 8.87374323,32.9753648 8.87374323,31.5149181 L8.87374323,11.5678294 C8.87374323,10.1073827 10.057897,8.92322896 11.5183437,8.92322896 L11.7259942,8.92322896 L32.5157477,8.92322896 L32.9540254,8.92322896 C34.4144721,8.92322896 35.5983386,10.1073827 35.5983386,11.5678294 L35.5983386,19.3313172 L39.5069364,15.4227195 L43.0048283,18.9208987 L35.5983386,26.3273884 Z M40.4690792,14.4605766 L42.0288995,12.9007563 C38.5666212,5.29264744 30.903943,0 21.9999569,0 C9.84967203,0 -8.61620486e-05,9.84975819 -8.61620486e-05,22.0000431 C-8.61620486e-05,34.150328 9.84967203,44.0000862 21.9999569,44.0000862 C34.1502418,44.0000862 44,34.150328 44,22.0000431 C44,20.4712411 43.8434723,18.9789144 43.5465004,17.5379978 L40.4690792,14.4605766 Z" id="Fill-7" fill="#FFFFFF" mask="url(#mask-2)"></path>
+        </g>
+        <path d="M20.6235756,13.2765377 C21.3766319,13.2765377 21.9869464,12.6662232 21.9869464,11.9131669 C21.9869464,11.1603978 21.3766319,10.5500833 20.6235756,10.5500833 C19.8708065,10.5500833 19.2602048,11.1603978 19.2602048,11.9131669 C19.2602048,12.6662232 19.8708065,13.2765377 20.6235756,13.2765377" id="Fill-10" fill="#FFFFFF"></path>
+      </g>
+    </g>
+  </g>
+</svg>
+                </span>
+              </a>
+            </li>
+                  </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  </div>
+
+    <script>window.dataLayer = window.dataLayer || []; window.dataLayer.push({"drupalLanguage":"en","drupalCountry":"","siteName":"Food Standards Agency","entityCreated":"1514459279","entityLangcode":"en","entityStatus":"1","entityUid":"1","entityVid":"272081","entityType":"node","entityBundle":"lander","entityId":"251","entityTitle":"Homepage","entityTaxonomy":{"nation":{"31":"England","33":"Northern Ireland","32":"Wales"}},"userUid":0});</script>
+
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/251","currentPathIsAdmin":false,"isFront":true,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"ajaxPageState":{"libraries":"cookieconsent\/cookieconsent-min,cookieconsent\/settings,core\/internal.jquery.form,datalayer\/behaviors,extlink\/drupal.extlink,fsa_2021\/global,fsa_cookie\/cookie_consent,fsa_cookie\/optout_analytics,fsa_custom\/fsa-headingFix,fsa_custom\/fsa-random-link,fsa_custom\/fsa-removeDuplicatedIDs,fsa_custom\/fsa-svgs,fsa_custom\/fsa-telephone-field,fsa_custom\/fsa-theme-toggle,fsa_custom\/fsa-webform,fsa_custom\/fsa_external,fsa_custom\/history_back,fsa_custom\/page_print,fsa_custom\/search_filters,fsa_page_feedback\/page_feedback,fsa_seven\/main,icon_select\/drupal.icon_select_frontend,linkit_content\/accessibility,paragraphs\/drupal.paragraphs.unpublished,system\/base,webform\/webform.ajax,webform\/webform.composite,webform\/webform.element.details.save,webform\/webform.element.details.toggle,webform\/webform.element.message,webform\/webform.element.options,webform\/webform.form","theme":"fsa_2021","theme_token":null},"ajaxTrustedUrl":{"form_action_p_pvdeGsVG5zNF_XLGPTvYSKCf43t8qZYSwcfZl2uzM":true,"\/home?ajax_form=1":true},"cookieconsent":{"message":"We use cookies to make food.gov.uk work, understand how you use the website and make improvements.\u003Cbr \/\u003EThey aren\u2019t used to identify you personally.","dismiss":"Accept cookies","learnMore":"Find out more about cookies","link":"\/cookie-policy","path":"\/","expiry":365,"target":"_self","domain":".www.food.gov.uk","markup":"\n\u003Cdiv class=\u0022cookie-banner\u0022 \u003E\n  \u003Cp class=\u0022cookie-banner__message\u0022\u003EWe use cookies to make food.gov.uk work, understand how you use the website and make improvements.\u003Cbr \/\u003EThey aren\u2019t used to identify you personally. \u003Ca href=\u0022\/cookie-policy\u0022 class=\u0022cookie-banner__find-out-more\u0022\u003EFind out more about cookies\u003C\/a\u003E\u003C\/p\u003E\n  \u003Cdiv class=\u0022cookie-banner__actions\u0022\u003E\n    \u003Ca href=\u0022\/cookie-consent?dest=\/home\u0022 class=\u0022cookie-banner__manage\u0022\u003EManage cookies\u003C\/a\u003E\n    \u003Cbutton class=\u0022cookie-banner__accept\u0022 data-cc-event=\u0022click:dismiss\u0022\u003EAccept cookies\u003C\/button\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E","container":".cc_placeholder","theme":"\/modules\/custom\/fsa_custom\/css\/cookieconsent.css"},"dataLayer":{"defaultLang":"en","languages":{"en":{"id":"en","name":"English","direction":"ltr","weight":0},"cy":{"id":"cy","name":"Welsh","direction":"ltr","weight":1}}},"data":{"extlink":{"extTarget":true,"extTargetNoOverride":false,"extNofollow":false,"extNoreferrer":false,"extFollowNoOverride":false,"extClass":"external-link","extLabel":"(link is external)","extImgClass":false,"extSubdomains":false,"extExclude":"","extInclude":"^.*\\.(pdf|PDF|xlsx|XLSX|doc|DOC|xls|XLS|ocx|OCX|PTX|ptx|txt|TXT)$","extCssExclude":".document-download__link, .header__links-anchor","extCssExplicit":"","extAlert":false,"extAlertText":"This link will take you to an external web site. We are not responsible for their content.","mailtoClass":"0","mailtoLabel":"(link sends email)","extUseFontAwesome":false,"extIconPlacement":"append","extFaLinkClasses":"fa fa-external-link","extFaMailtoClasses":"fa fa-envelope-o","whitelistedDomains":[]}},"icon_select":{"icon_select_url":"\/sites\/default\/files\/icons\/icon_select_map.svg?hash=de3dec9a77b3acc17df7afb16b803a57"},"ajax":{"edit-actions-submit":{"callback":"::submitAjaxForm","event":"click","effect":"fade","speed":500,"progress":{"type":"throbber","message":""},"disable-refocus":true,"url":"\/home?ajax_form=1","httpMethod":"POST","dialogType":"ajax","submit":{"_triggering_element_name":"op","_triggering_element_value":"Submit"}}},"user":{"uid":0,"permissionsHash":"fe6ea08cc1485ddc6fc53ce326ce52d18e6ad2935137225d595d1afbf49e9b9b"}}</script>
+<script src="/sites/default/files/js/js__70YJQqefqlJryBGTpwu2PJBybHPaYhLEInhrJoCe3Y.js?scope=footer&amp;delta=0&amp;language=en&amp;theme=fsa_2021&amp;include=eJyFUltygzAMvJDBbc-Q6UxPwQhbgBK_agkabl_zyDQh7fRL1mptraU1MV4ITQyMQTSjCIWelXmAH7LKU1AWBBzMmHWLA0wUM6uOodmYOiaJozQQwM1C5qG2hWZ_TTkKF5IllaUVGIPM1JIjmRXPLOh1C4zrE28vb6-6d7EFp_Aqy11t85jA1XuqEmToM6SBb5UfpB5DGltHPKBVVFo2jA6N3Jh3UNPlVZHdpI8s0euBSshz04K53OMJemxSpvKdO5QRshmajpzgbTxbZTkWvZjLfA54xVN_5FYZfZzwNCZHBgTtx-mJMiDYsrl3uh4rX9h2MfsjLOWbaYgBq47Q2aeWEGz01TrS480BPVYS-95tW2GcMGgPxRdLuk6jQ7TLmPRDpnYxeo_1quwIFmW-eKG2KECOa4YJ_yXteo40OMP1z7u-WK3IK27PqMv21oXU588R8_y7NBN9ikzyt55ifSrW_gbvjk3G"></script>
+
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"9601a3739a","applicationID":"126145947","transactionName":"bwRWNRNTVxJZUBJQVlZOdQIVW1YPF0MHXlxnAlUCCVc=","queueTime":11,"applicationTime":39,"atts":"Q0NBQ1tJRE0aUkQDQkUc","errorBeacon":"bam.nr-data.net","agent":""}</script>
+
+<div id="drupal-live-announce" class="visually-hidden" aria-live="polite" aria-busy="false"></div><svg xmlns="http://www.w3.org/2000/svg" style="width: 0px; height: 0px; visibility: hidden; position: absolute; display: block;" id="svg-icon-sprite"><symbol id="animal-feed" viewBox="0 0 50 50"><defs>
+    <style>
+      .ec5e0e4a-0d35-45e4-90c6-0ea6a0ce9468 {
+        fill: none;
+      }
+    </style>
+  </defs><title>animal-feed</title><g id="8a27bea6-014d-445a-ab68-47063ae47e83_1717361093045" data-name="animal-feed">
+    <rect class="ec5e0e4a-0d35-45e4-90c6-0ea6a0ce9468" width="50" height="50"></rect>
+    <path d="M41,48H11.09c1.3-1.92.65-3.28,0-4.56s3.25.73,3.9,2.65c0,0,1.3-.09.65-3.92-.15-.89,3.25,3.28,3.25,3.28s2-2.27,2-1.37c0,1.92,1.3,2,1.3,2S26,41.9,26,42.8c0,1.92.65,2,2,3.28,0,0,2,.55,2-3.28,0,0,1.3-1.19,3.25,2a32.17,32.17,0,0,1,3.25-2v2.65a20.13,20.13,0,0,1,3.25-1.37S39.7,47.36,41,48Zm7-34.74c0,1.26-1.92,3.15-5.75,3.15s-5.11-3.15-5.75-1.26c0,0,.7,5.61-2.56,8.83a4.81,4.81,0,0,0-.64,5.67c.64,1.26,1.51,6.29-1.92,8.83A11.18,11.18,0,0,1,25,41a11.17,11.17,0,0,1-6.39-2.52c-3.43-2.54-2.56-7.57-1.92-8.83A4.81,4.81,0,0,0,16.06,24c-3.26-3.22-2.56-8.83-2.56-8.83-.64-1.89-1.86,1.26-5.75,1.26S2,14.52,2,13.26C2,11.36,5.2,9.47,8.39,9.47c1.92,0,7,2.67,7,1.26,0-.63-2.56-.63-3.83-1.89a6,6,0,0,1-1.28-5.67c1.18-3.49,2.56,1.89,4.47,2.52C15.64,6,18,7,19.89,6.32A18.86,18.86,0,0,1,25,5.06a18.88,18.88,0,0,1,5.11,1.26C32,7,34.36,6,35.22,5.69c1.92-.63,3.29-6,4.47-2.52a6,6,0,0,1-1.28,5.67c-1.28,1.26-3.83,1.26-3.83,1.89,0,1.41,5.11-1.26,7-1.26C44.81,9.47,48,11.36,48,13.26ZM22.1,33.31a.79.79,0,1,0,0,1.58c1.61,0,1,1.32,1.61,1.32S24.24,33.31,22.1,33.31Zm6.72.79a.8.8,0,0,0-.8-.79c-2.14,0-2.14,2.9-1.61,2.9s0-1.32,1.61-1.32A.8.8,0,0,0,28.82,34.11ZM20.93,19.77a1.8,1.8,0,1,0-1.8,1.77A1.78,1.78,0,0,0,20.93,19.77Zm11.74,0a1.8,1.8,0,1,0-1.8,1.77A1.78,1.78,0,0,0,32.67,19.77Z"></path>
+  </g></symbol><symbol id="animal-slaughtering" viewBox="0 0 50 50"><defs>
+    <style>
+      .\35 16efbde-1273-45ff-961d-d9e73e211fae {
+        fill: none;
+      }
+    </style>
+  </defs><title>slaughtering</title><g id="3bb855ec-28f5-4b98-9ac5-8b7b28414eb3_1717361093045" data-name="slaughtering">
+    <rect class="516efbde-1273-45ff-961d-d9e73e211fae" width="50" height="50"></rect>
+    <g>
+      <path d="M10.57,22v0c.09.5.2,1,.32,1.41.87-.25,2.13-.61,3.63-1,0-.14,0-.28,0-.42,0-2.24,1.54-5.45,2.44-7.13l-.38,0c-2.36,0-3.34-.7-4-1.46A23.49,23.49,0,0,0,11.84,11a4.94,4.94,0,0,0-.48-1,1.52,1.52,0,0,0-.78-.66h0l-.14,0h0a.48.48,0,0,0-.46.63,3.59,3.59,0,0,1,.09,1.73,4.22,4.22,0,0,0-.56,0c-.22,0-.46,0-.71,0-1.9.13-2.34,1.86-4,3.38a6.24,6.24,0,0,1-2.07,1.11h0A1,1,0,0,0,2,17c0,4,2.49,2.12,7,3.4A3.35,3.35,0,0,1,10.57,22Z"></path>
+      <path d="M13.44,29.3h0a20.13,20.13,0,0,1,.17,8.24,1.43,1.43,0,0,0,2.82.51,23.2,23.2,0,0,0,0-8.24A8.23,8.23,0,0,1,13.44,29.3Z"></path>
+      <path d="M14.59,23.43c-1.41.38-2.59.71-3.42.95a12.5,12.5,0,0,0,.91,2.11,3.85,3.85,0,0,0,1.3,1.29,5.4,5.4,0,0,0,2.4.65A27,27,0,0,1,14.59,23.43Z"></path>
+      <path d="M15.5,22c0,.05,0,.11,0,.16a107.77,107.77,0,0,1,10.88-2.32c.61-.09,1.25-.16,1.92-.22a38.42,38.42,0,0,0-1.93-6h-.32a40.41,40.41,0,0,0-7.85,1C17.55,15.81,15.5,19.62,15.5,22Z"></path>
+      <path d="M29.32,19.55a97.48,97.48,0,0,1,10.31,0,8.55,8.55,0,0,0,0-1.28,28.13,28.13,0,0,0-1.59-6,17,17,0,0,0-1.92.4,59.61,59.61,0,0,1-8.64.94A37.59,37.59,0,0,1,29.32,19.55Z"></path>
+      <path d="M37.11,26.9l.38.14.47.17a36,36,0,0,0,1.6-6.65,96.78,96.78,0,0,0-10,0c0,.21.06.42.09.63.31,2.79-.93,7-1.57,9a17.69,17.69,0,0,0,6.85-1.78,10.6,10.6,0,0,0,1.94-1.25Z"></path>
+      <path d="M45.81,21c-.77-.07-2.74-.23-5.26-.37a36,36,0,0,1-1.64,6.91l.61.18A20,20,0,0,1,40.66,39h0a1.43,1.43,0,1,0,2.82.51,23.15,23.15,0,0,0-.11-9Z"></path>
+      <path d="M27,30.21c.58-1.72,1.95-6.2,1.64-8.93,0-.22-.06-.44-.09-.66-.69.06-1.35.13-2,.22a107.78,107.78,0,0,0-11,2.34A27.59,27.59,0,0,0,17,28.82.49.49,0,0,1,17,29a20,20,0,0,1,.66,10h0a1.43,1.43,0,1,0,2.82.51,23.08,23.08,0,0,0-.42-10.24A25.78,25.78,0,0,0,27,30.21Z"></path>
+      <path d="M47.86,16.1a4.72,4.72,0,0,0-1-2.17,4.64,4.64,0,0,0-2.18-1.41A17.85,17.85,0,0,0,39,12.14a28.4,28.4,0,0,1,1.56,6,9.54,9.54,0,0,1,0,1.44c2.73.14,4.82.33,5.44.38.28-1.35.59-4-.76-5.87a3,3,0,0,1,.69.58,3.55,3.55,0,0,1,.76,1.63,8.89,8.89,0,0,1,.13,2.3.13.13,0,0,0,0,0c-.18,1.75-.66,3.73-1.09,5.87a26.93,26.93,0,0,0-.67,6.57v0A.94.94,0,0,0,47,31h0a24.9,24.9,0,0,1,.27-6.17c.29-2.1.66-4.22.72-6.05v0A10,10,0,0,0,47.86,16.1Z"></path>
+      <path d="M37.36,28.41a10.52,10.52,0,0,1-1,.67,20.08,20.08,0,0,1,.22,8.46,1.43,1.43,0,1,0,2.82.51,23.18,23.18,0,0,0-.12-9C38.54,28.81,37.86,28.59,37.36,28.41Z"></path>
+    </g>
+  </g></symbol><symbol id="apply-approval" viewBox="0 0 50.04 50"><defs>
+    <style>
+      .bba71e33-97c4-493e-af73-2c37fd25b0d9 {
+        fill: none;
+      }
+    </style>
+  </defs><title>apply-approval</title><g id="ebc75bcb-4bc9-4510-af06-57faaaae611c_1717361093045" data-name="apply-approval">
+    <rect class="bba71e33-97c4-493e-af73-2c37fd25b0d9" width="50" height="50"></rect>
+    <path d="M30.95,38.79,21.4,42l3.18-9.55L35,22V7a1,1,0,0,0-1-1H29V3a1,1,0,0,0-1-1H10A1,1,0,0,0,9,3V6H4A1,1,0,0,0,3,7V47a1,1,0,0,0,1,1H34a1,1,0,0,0,1-1V34.74ZM11,4H27V8H11ZM8.12,19.47a1.09,1.09,0,1,1,1.35-1.71l2.28,1.79,5-5a1.09,1.09,0,1,1,1.54,1.54L12.6,21.77a1.09,1.09,0,0,1-1.44.08ZM18.5,23.37a1.09,1.09,0,0,1-.25,1.2L12.6,30.23a1.09,1.09,0,0,1-1.44.08l-3-2.39a1.09,1.09,0,1,1,1.35-1.71L11.75,28l5-5a1.09,1.09,0,0,1,1.78.34Zm0,8.45a1.09,1.09,0,0,1-.25,1.2L12.6,38.68a1.09,1.09,0,0,1-1.44.08l-3-2.39a1.09,1.09,0,1,1,1.35-1.71l2.28,1.79,5-5a1.09,1.09,0,0,1,1.78.34ZM49.67,21.49,43.3,27.85a1,1,0,0,1-1.41-1.41l5.66-5.66-.71-.71-17,17-5.3,1.77,1.77-5.3L45.78,14.06a2.5,2.5,0,0,1,3.54,3.54l-1.06,1.06,1.41,1.41A1,1,0,0,1,49.67,21.49Z"></path>
+  </g></symbol><symbol id="catering-retail" viewBox="0 0 50 50"><defs>
+    <style>
+      .\36 112f5a6-7557-4c26-a932-7c9979ff9e2b {
+        fill: none;
+      }
+    </style>
+  </defs><title>retail-catering-caring</title><g id="43bc6b9c-8c25-4153-8bf8-8177d953c4b1_1717361093045" data-name="retail-catering-caring">
+    <g>
+      <path d="M47.42,15.42h0a2,2,0,0,0-2.83,0L39,21H11L5.59,15.58a2,2,0,0,0-2.83,0l-.19.19a2,2,0,0,0,0,2.83L8,24V35a6,6,0,0,0,6,6H36a6,6,0,0,0,6-6V23.66l5.42-5.42A2,2,0,0,0,47.42,15.42Z"></path>
+      <path d="M27,12.12V11a2,2,0,0,0-4,0v1.12A17,17,0,0,0,11.27,19H38.73A17,17,0,0,0,27,12.12Z"></path>
+    </g>
+    <rect class="6112f5a6-7557-4c26-a932-7c9979ff9e2b" width="50" height="50"></rect>
+  </g></symbol><symbol id="contact-food-safety-team" viewBox="0 0 50 50"><defs>
+    <style>
+      .d07cc401-129c-4cb0-892b-7f72d750dfa3 {
+        fill: none;
+      }
+    </style>
+  </defs><title>contact-food-safety</title><g id="2ab7f462-beda-4542-98bc-5944bba789da_1717361093045" data-name="food-safety-team">
+    <rect class="d07cc401-129c-4cb0-892b-7f72d750dfa3" width="50" height="50"></rect>
+    <path d="M48,3V23a1,1,0,0,1-1,1H33.74a8,8,0,0,0-15.47,0H15v5a1,1,0,0,1-1.71.71L7.59,24H3a1,1,0,0,1-1-1V3A1,1,0,0,1,3,2H47A1,1,0,0,1,48,3ZM18,10a2,2,0,1,0,2,2A2,2,0,0,0,18,10Zm8,0a2,2,0,1,0,2,2A2,2,0,0,0,26,10Zm8,0a2,2,0,1,0,2,2A2,2,0,0,0,34,10ZM32,29V26a6,6,0,0,0-6-6h0a6,6,0,0,0-6,6v3a6,6,0,0,0,6,6h0A6,6,0,0,0,32,29Zm7,14a6,6,0,0,0-6-6H19a6,6,0,0,0-6,6v5H39Z"></path>
+  </g></symbol><symbol id="contact-fsa" viewBox="0 0 50 50"><defs>
+    <style>
+      .\34 2e0e2af-93e5-40d0-8a03-7cdfa7202a13 {
+        fill: none;
+      }
+    </style>
+  </defs><title>contact-fsa</title><g id="eb203816-f5e0-4525-aac8-172cbedf7aec_1717361093045" data-name="contact-fsa">
+    <rect class="42e0e2af-93e5-40d0-8a03-7cdfa7202a13" width="50" height="50"></rect>
+    <path d="M45.77,13.44,42.1,17.11a.69.69,0,0,1-1,0L32.92,8.88a.69.69,0,0,1,0-1l3.67-3.67a.69.69,0,0,1,1,0l8.21,8.23A.63.63,0,0,1,45.77,13.44ZM6.11,36.79a.71.71,0,0,0-1.19.4l-.88,8a.66.66,0,0,0,.75.75l8-.88a.69.69,0,0,0,.4-1.19Zm25.83-23-.49-.49a.69.69,0,0,0-1,0L10,33.82a.69.69,0,0,0,0,1l.49.49a.69.69,0,0,0,1,0L31.95,14.72A.69.69,0,0,0,31.95,13.74Zm7.73,4.82a.69.69,0,0,1,0,1L16.23,43a.69.69,0,0,1-1,0L7,34.8a.69.69,0,0,1,0-1L30.49,10.34a.69.69,0,0,1,1,0Z"></path>
+  </g></symbol><symbol id="export" viewBox="0 0 50 50"><defs>
+    <style>
+      .f494b09c-e784-4f47-a136-ddf9cd12f6d3 {
+        fill: none;
+      }
+    </style>
+  </defs><title>export</title><g id="af7dd439-a34a-4b07-b3b0-2c08c345ed2d_1717361093045" data-name="export">
+    <path d="M41,32a3,3,0,1,1-3,3A3,3,0,0,1,41,32ZM22,35a3,3,0,1,0,3-3A3,3,0,0,0,22,35ZM10,35a3,3,0,1,0,3-3A3,3,0,0,0,10,35ZM33,18V34a1,1,0,0,0,1,1h2a5,5,0,0,1,10,0h1a1,1,0,0,0,1-1V28H36V20h8.12l-.95-1.89A2,2,0,0,0,41.38,17H34A1,1,0,0,0,33,18Zm5,8h9l-2-4H38ZM16,23H7V34a1,1,0,0,0,1,1,5,5,0,0,1,10,0h2a5,5,0,0,1,10,0,1,1,0,0,0,1-1V14a2,2,0,0,0-2-2H8a1,1,0,0,0-1,1v6h9V16a1,1,0,0,1,1.64-.77l6,5a1,1,0,0,1,0,1.54l-6,5A1,1,0,0,1,16,26ZM2,20v2a1,1,0,0,0,1,1H7V19H3A1,1,0,0,0,2,20Z"></path>
+    <rect class="f494b09c-e784-4f47-a136-ddf9cd12f6d3" width="50" height="50"></rect>
+  </g></symbol><symbol id="fake-product" viewBox="0 0 50 50"><defs>
+    <style>
+      .\38 8a13556-ba50-47dc-b44a-6ca15cdf74d9 {
+        fill: none;
+      }
+    </style>
+  </defs><title>fake-product</title><g id="5d8f2cf6-88aa-4305-979a-63a4557912d2_1717361093045" data-name="suspected-fake-product">
+    <rect class="88a13556-ba50-47dc-b44a-6ca15cdf74d9" width="50" height="50"></rect>
+    <path d="M37,14.18V4a1,1,0,0,0,0-2H33a1,1,0,0,0,0,2V14.18a6.52,6.52,0,0,0-3.88,2.71A11,11,0,0,0,16.25,33.43L6.92,42.75a2,2,0,0,0,2.83,2.83l9.33-9.33A11,11,0,0,0,28,37.86V46a2,2,0,0,0,2,2H40a2,2,0,0,0,2-2V20.5A6.52,6.52,0,0,0,37,14.18ZM18.94,33.56a9,9,0,1,1,12.73,0A9,9,0,0,1,18.94,33.56Z"></path>
+  </g></symbol><symbol id="farming" viewBox="0 0 50 50"><defs>
+    <style>
+      .\33 1e5ef2a-d41c-4f5b-bb40-58e0142f3098 {
+        fill: none;
+      }
+    </style>
+  </defs><title>farming</title><g id="1b5ce56c-3e34-46b2-afe6-5aaf0b0558c1_1717361093045" data-name="farming">
+    <rect class="31e5ef2a-d41c-4f5b-bb40-58e0142f3098" width="50" height="50"></rect>
+    <path d="M11.79,34.53a3.44,3.44,0,0,1,3.54,3.32,3.39,3.39,0,0,1-3.54,3.32,3.44,3.44,0,0,1-3.54-3.32A3.39,3.39,0,0,1,11.79,34.53Zm24.68-6a4.61,4.61,0,1,1,0,9.23,4.61,4.61,0,1,1,0-9.23Zm-8.82-18.4H37V21.62h-.51a11.35,11.35,0,0,0-4,.74l-8-.65,3.13-11.53ZM21.21,21.66H15.79V10.59H13.44v11l-7.77,1,.64,7.2H2v7.61H5v.51a6.85,6.85,0,1,0,13.69,0,6.63,6.63,0,0,0-1.06-3.64h7.44a11.49,11.49,0,1,0,15.07-12V7.32H25.3Z"></path>
+  </g></symbol><symbol id="feedback" viewBox="0 0 50 50"><defs>
+    <style>
+      .bfd9a368-501a-476d-abcd-997fe422f5a6 {
+        fill: none;
+      }
+
+      .adf33827-3035-45ed-8334-d1479a372234 {
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs><title>feedback</title><rect class="bfd9a368-501a-476d-abcd-997fe422f5a6" width="50" height="50"></rect><path class="adf33827-3035-45ed-8334-d1479a372234" d="M25,5C12.22,5,2,13.22,2,23.14H2a14.76,14.76,0,0,0,1.68,6.8,17.27,17.27,0,0,0,2.08,3.12c.78.94.62,1.87,0,3.73-.33.92-.65,1.7-1.58,3.84A16.51,16.51,0,0,1,2,44a2.61,2.61,0,0,0,1.08-.13c1.1-.35,2.33-.8,4.65-1.68l.15-.06c6.18-2.37,7-2.65,8.2-2.26A28.25,28.25,0,0,0,25,41.28c12.78,0,23-8.22,23-18.14S37.78,5,25,5ZM15,26a3,3,0,1,1,3-3A3,3,0,0,1,15,26Zm10,0a3,3,0,1,1,3-3A3,3,0,0,1,25,26Zm10,0a3,3,0,1,1,3-3A3,3,0,0,1,35,26Z"></path></symbol><symbol id="fish-shellfish" viewBox="0 0 50 50"><defs>
+    <style>
+      .e6c4f930-7e2d-4419-b946-a1c9c37f8270 {
+        fill: none;
+      }
+
+      .c736717c-aca0-4efc-96b0-7ba721cb96d1 {
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs><title>fish-shellfish</title><g id="448454d0-d150-462c-a15d-676634df9214_1717361093045" data-name="fish-shellfish">
+    <rect class="e6c4f930-7e2d-4419-b946-a1c9c37f8270" width="50" height="50"></rect>
+    <g>
+      <path class="c736717c-aca0-4efc-96b0-7ba721cb96d1" d="M20.37,28.44a29,29,0,0,0,.38,6.66h8.09A27.42,27.42,0,0,0,29,28.43c-.53-7-2.24-12.27-4.31-12.27h0C22.41,16.16,20.61,21.69,20.37,28.44Z"></path>
+      <path class="c736717c-aca0-4efc-96b0-7ba721cb96d1" d="M29.28,37.25a1,1,0,0,0-.8-1H21.39c-.44,0-.8.51-.8,1a1,1,0,0,0,.8,1h2.28l4.81,0A1,1,0,0,0,29.28,37.25Z"></path>
+      <path class="c736717c-aca0-4efc-96b0-7ba721cb96d1" d="M22.53,39.67c-.44,0-.8.51-.8,1a1,1,0,0,0,.8,1l4.8,0a1,1,0,0,0,0-2Z"></path>
+      <path class="c736717c-aca0-4efc-96b0-7ba721cb96d1" d="M28,42.89c-.05,0-.11,0-.17.06h0a.7.7,0,0,0-.66-.42H22.68a.71.71,0,0,0-.66.42l-.11,0a2.21,2.21,0,0,0,0,4.36,1.67,1.67,0,0,0,1-.35A2.93,2.93,0,0,0,25,48a3.15,3.15,0,0,0,2.07-1,1.66,1.66,0,0,0,.91.28,2.22,2.22,0,0,0,0-4.38Z"></path>
+      <path class="c736717c-aca0-4efc-96b0-7ba721cb96d1" d="M17.84,28.61a24.89,24.89,0,0,1-3.71-2.93A2,2,0,0,1,14.2,23c.93-1,3.14-3.5,3.71-6a3.85,3.85,0,0,1,.64-1.29c.4-.47,3-3.62,2.5-7.07,0-.42-.4-.33-.67,0-.91,1.2-2.8,3.64-3.75,4.59a.73.73,0,0,1-.4.14.47.47,0,0,1-.38-.71,26.15,26.15,0,0,1,2.22-3.24.63.63,0,0,0-.41-1.1s-5.51-1-8.23,9.69c0,0-1.07,6.21,2.36,6.56a.73.73,0,0,1,.43.17c.23.25.26.76-.57,1.26-1.07.65-.71,1.22-.14,1.64s4.33,3.62,4.33,3.62h0c.48.41,1.13,1.14,1.58,1.52,0,0,.43.24.69-.36a9,9,0,0,0,.43-1.83c.09-.62.26-1.36,0-1.66Z"></path>
+      <path class="c736717c-aca0-4efc-96b0-7ba721cb96d1" d="M37.76,26.14c-.83-.51-.8-1-.57-1.26a.75.75,0,0,1,.43-.17C41,24.36,40,18.15,40,18.15c-2.71-10.71-8.23-9.7-8.23-9.7h0a.63.63,0,0,0-.41,1.1,26.26,26.26,0,0,1,2.22,3.24.46.46,0,0,1-.38.71.74.74,0,0,1-.41-.14c-.95-1-2.84-3.39-3.76-4.59-.26-.31-.63-.41-.67,0-.49,3.44,2.1,6.6,2.5,7.07a3.88,3.88,0,0,1,.64,1.29c.57,2.5,2.78,5,3.71,6a2,2,0,0,1,.07,2.64,25.14,25.14,0,0,1-3.71,2.92l-.64.36c-.31.31-.13,1,0,1.66a9,9,0,0,0,.43,1.83c.26.59.69.36.69.36.45-.38,1.11-1.12,1.59-1.52,0,0,3.77-3.18,4.33-3.61S38.83,26.79,37.76,26.14Z"></path>
+      <path class="c736717c-aca0-4efc-96b0-7ba721cb96d1" d="M25.63,15c.5,0,.56-.57.56-.57s-.19-9,6.93-11.29a.62.62,0,0,0,.43-.69c-.1-.59-.79-.43-.81-.42h0c-7.56,2.52-7.67,11.51-7.67,12.25C25.07,14.27,25.07,14.94,25.63,15Z"></path>
+      <path class="c736717c-aca0-4efc-96b0-7ba721cb96d1" d="M16.09,3.12C23.21,5.43,23,14.41,23,14.41h0s.06.61.56.57.56-.71.56-.72c0-.74-.11-9.74-7.67-12.26,0,0-.71-.17-.81.42A.62.62,0,0,0,16.09,3.12Z"></path>
+      <path class="c736717c-aca0-4efc-96b0-7ba721cb96d1" d="M12,37,9.84,32.72S8.89,28,6.53,26.1c0,0-4.53,3.58-3.31,10.74L2,39H4.16a33,33,0,0,0,1.55,3h0L3.15,45.76c1.22-1.55,5.54-1.55,6.69,0,0,0-2.16-3.24-2.63-3.72,0,0,2.23-3,2.5-5ZM6.73,30.89a1,1,0,0,1-1-1,1.05,1.05,0,0,1,1-1.08,1.07,1.07,0,0,1,1.08,1.08A1.05,1.05,0,0,1,6.73,30.89Z"></path>
+      <path class="c736717c-aca0-4efc-96b0-7ba721cb96d1" d="M45.7,37,48,37l-2.16-4.26S44.89,28,42.53,26.1c0,0-4.53,3.58-3.31,10.74L38,39h2.16a33,33,0,0,0,1.55,3h0l-2.57,3.72c1.22-1.55,5.54-1.55,6.69,0,0,0-2.16-3.24-2.63-3.72C43.2,42,45.43,39.07,45.7,37Zm-4-7.16a1.05,1.05,0,0,1,1-1.08,1.07,1.07,0,0,1,1.08,1.08,1.05,1.05,0,0,1-1.08,1A1,1,0,0,1,41.72,29.88Z"></path>
+    </g>
+  </g></symbol><symbol id="food-incident" viewBox="0 0 50 50"><defs>
+    <style>
+      .b951c5f1-8876-4806-b066-861dec49bd9c {
+        fill: none;
+      }
+    </style>
+  </defs><title>food-incident</title><g id="ad8a94fb-4fe6-4569-b06f-09241ac2088b_1717361093045" data-name="report-food-incident">
+    <rect class="b951c5f1-8876-4806-b066-861dec49bd9c" x="-0.09" width="50" height="50"></rect>
+    <path d="M48.53,44c-1.47,0-1.47,0-1.47-1.5V29.59c0-2-2.06,1.05-2.06-12.31,0-8.86,5-11.2,5-7.78v33C50,44,50,44,48.53,44Zm-45-.07c-1.54,0-1.37,0-1.4-1.5V23.72c0-2.16-2.07-1.44-2.1-9V9.5C0,8,0,8,.7,8s.67,0,.7,1.5v6.74c0,.84,1.4.84,1.4,0V9.5C2.8,8,2.8,8,3.5,8s.73,0,.7,1.5v6.74a.7.7,0,0,0,1.4,0V9.5c0-1.5,0-1.5.7-1.5S7,8,7,9.5v5.24c0,7.55-2.1,6.82-2.1,9V42.43C4.9,43.93,4.73,43.93,3.5,43.93ZM43,26A18,18,0,1,1,25,8,18,18,0,0,1,43,26ZM25,32a2.51,2.51,0,1,0,2.44,2.5A2.35,2.35,0,0,0,25,32Zm0-2c.83,0,1.56-1.27,1.62-2.82L27,17.82C27,16.27,26.14,15,25,15s-2,1.27-2,2.82l.36,9.34C23.42,28.7,24.15,30,25,30Z"></path>
+  </g></symbol><symbol id="food-poisoning" viewBox="0 0 50 50"><defs>
+    <style>
+      .\35 92db083-d581-4bca-92e4-66d94fe8b556 {
+        fill: none;
+      }
+    </style>
+  </defs><title>food-poisoning</title><g id="3d3749f9-0345-4622-b868-c3e3d05c6e55_1717361093045" data-name="suspected-food-poisoning">
+    <rect class="592db083-d581-4bca-92e4-66d94fe8b556" width="50" height="50"></rect>
+    <path d="M23,49.5a2.94,2.94,0,0,1-1.17-.25,31.55,31.55,0,0,1-8.27-5.1,21.05,21.05,0,0,1-1.66-1.64,18.09,18.09,0,0,1-1.16-1.41A15.72,15.72,0,0,1,7.5,31.56a21.33,21.33,0,0,1,2.83-10.18,25.94,25.94,0,0,1,2.81-4.2,2.94,2.94,0,0,1,2.23-1,3,3,0,0,1,.48,0,11,11,0,0,0,17.94,0,2.92,2.92,0,0,1,2.53.82,25.8,25.8,0,0,1,3,3.81A17.35,17.35,0,0,1,42.5,30a11.12,11.12,0,0,1-3.24,7.84q-.39.4-.82.78a17.08,17.08,0,0,1-2.25,1.66,28.4,28.4,0,0,1-7.31,3.06,2.86,2.86,0,0,1-.79.11,3,3,0,0,1-2.83-2.16,3,3,0,0,1,.89-3,2.85,2.85,0,0,1,1.15-.63C31.8,36.35,34,34.78,35,33.69l.23-.27c.11-.13.22-.27.32-.39a.5.5,0,0,0-.64-.74l-.44.25a35.58,35.58,0,0,1-7.72,3.28,4.72,4.72,0,0,0-1.24.55,4.84,4.84,0,0,0-2.23,3.49,4.7,4.7,0,0,0,0,1.18,5.42,5.42,0,0,0,.09.54,21.09,21.09,0,0,1-7.35-5.73c-.44-.48-.84-.91-1.2-1.27a.5.5,0,0,0-.35-.14.5.5,0,0,0-.47.68,10.57,10.57,0,0,0,1.36,2.45c1.68,2.27,4.43,4.29,8.2,6l.52.24a2.94,2.94,0,0,1,1.26,1.06,3,3,0,0,1,.26,2.84,3.09,3.09,0,0,1-.26.47A3,3,0,0,1,23,49.5Zm-.34-30.28a9.64,9.64,0,0,0,9.7-3.34,9.69,9.69,0,1,0-15,0,9.61,9.61,0,0,0,5.3,3.34ZM31,9a1,1,0,0,1-1,1,4,4,0,0,1-4-4,1,1,0,0,1,2,0,2,2,0,0,0,2,2A1,1,0,0,1,31,9ZM20,10a1,1,0,0,1,0-2,2,2,0,0,0,2-2,1,1,0,0,1,2,0A4,4,0,0,1,20,10Zm10.5,4a.5.5,0,0,1-1,0,.5.5,0,0,0-1,0,1.5,1.5,0,0,1-3,0,.5.5,0,0,0-1,0,1.5,1.5,0,0,1-3,0,.5.5,0,0,0-1,0,.5.5,0,0,1-1,0,1.5,1.5,0,0,1,3,0,.5.5,0,0,0,1,0,1.5,1.5,0,0,1,3,0,.5.5,0,0,0,1,0,1.5,1.5,0,0,1,3,0Z"></path>
+  </g></symbol><symbol id="food-product" viewBox="0 0 50 50"><defs>
+    <style>
+      .\32 4329348-4b9a-4158-b8f6-9522361231a2 {
+        fill: none;
+      }
+    </style>
+  </defs><title>food-product</title><g id="5f798f5c-e67a-4cf2-b87a-f811eabc85d4_1717361093045" data-name="food-product">
+    <rect class="24329348-4b9a-4158-b8f6-9522361231a2" width="50" height="50"></rect>
+    <path d="M23.89,17l2.17-2.17A68.51,68.51,0,0,1,38,5.33C40.09,4,43.78,1.87,45.14,2a3.18,3.18,0,0,1,1.93.92h0a3.19,3.19,0,0,1,0,4.51L30.72,23.79Zm-7.06,7.06-.54.54a3.19,3.19,0,0,0,0,4.51l0,0L2.93,42.56a3.19,3.19,0,0,0,4.51,4.51L23.66,30.84Zm3.08-12.51L10.6,2.29a1,1,0,0,0-1.42,0,1,1,0,0,0,0,1.41l8.65,8.6h0a.62.62,0,0,1,0,.88.63.63,0,0,1-.88,0h0L8.3,4.57a1,1,0,0,0-1.42,0A1,1,0,0,0,6.89,6l8.65,8.6h0a.62.62,0,0,1,0,.88.63.63,0,0,1-.88,0h0L6,6.86a1,1,0,0,0-1.42,0,1,1,0,0,0,0,1.41l8.65,8.6h0a.62.62,0,0,1,0,.88.63.63,0,0,1-.88,0h0L3.71,9.14a1,1,0,0,0-1.41,0,1,1,0,0,0,0,1.41L11.6,19.8l.05,0,0,0a5.9,5.9,0,0,0,5.37,1.58L42.88,47.13a3,3,0,0,0,4.24,0,3,3,0,0,0,0-4.22L21.47,17.41A5.81,5.81,0,0,0,20,11.64l-.05,0,0-.05Z"></path>
+  </g></symbol><symbol id="hygiene" viewBox="0 0 50 50"><defs>
+    <style>
+      .\38 abaf986-6f1c-4842-99d1-4cc98e10fa08 {
+        fill: none;
+      }
+    </style>
+  </defs><title>hygiene</title><g id="8831b2b3-72e2-4fca-b792-e9cb78df947a_1717361093045" data-name="poor-hygiene-practices">
+    <rect class="8abaf986-6f1c-4842-99d1-4cc98e10fa08" width="50" height="50"></rect>
+    <path d="M22,20.33a.44.44,0,0,0,0,.34,1.22,1.22,0,0,1,.07,1l0,.06a2.7,2.7,0,0,0-1,.44,1.26,1.26,0,0,1-.73-.58l0-.06a.45.45,0,0,0-.61-.17.44.44,0,0,0-.17.6l0,.06a2.12,2.12,0,0,0,.86.84A2.66,2.66,0,0,0,20,24a1.27,1.27,0,0,1-.82-.11l-.06,0a.45.45,0,0,0-.44,0,.44.44,0,0,0,0,.77l.06,0a2.16,2.16,0,0,0,1.26.21,2.67,2.67,0,0,0,.49,1.08,1.24,1.24,0,0,1-.75.47h-.06a.44.44,0,0,0-.35.52.45.45,0,0,0,.53.34H20a2.16,2.16,0,0,0,1.19-.7l.78.75a1.24,1.24,0,0,1-.5.8l-.05,0a.44.44,0,0,0-.2.29.44.44,0,0,0,.08.34.45.45,0,0,0,.65.08l.05,0A2.12,2.12,0,0,0,22.7,28a2.74,2.74,0,0,0,1.11.41,1.22,1.22,0,0,1,.06,1l0,.06a.44.44,0,0,0,.27.57.45.45,0,0,0,.57-.27l0-.06a2.11,2.11,0,0,0,0-1.3,2.71,2.71,0,0,0,1-.41,2.16,2.16,0,0,0,1.17.75.45.45,0,0,0,.35,0A.44.44,0,0,0,27.4,28a.45.45,0,0,0-.29-.2,1.24,1.24,0,0,1-.74-.5,2.67,2.67,0,0,0,.48-1.11,2.18,2.18,0,0,0,1.34-.05.45.45,0,0,0,.28-.23.44.44,0,0,0,0-.36.44.44,0,0,0-.25-.25.45.45,0,0,0-.36,0,1.26,1.26,0,0,1-1-.06h0a2.67,2.67,0,0,0-.45-1.07,2.13,2.13,0,0,0,.9-.82.44.44,0,0,0-.16-.61.45.45,0,0,0-.61.16,1.25,1.25,0,0,1-.79.58l-.87-.83a2.11,2.11,0,0,0,.51-1.29.44.44,0,0,0-.12-.32.45.45,0,0,0-.31-.14.45.45,0,0,0-.46.43,1.23,1.23,0,0,1-.29.75A2.74,2.74,0,0,0,23,21.66a2.1,2.1,0,0,0-.21-1.41.45.45,0,0,0-.82.08Zm14.19-6.85a.44.44,0,0,0-.34,0,1.22,1.22,0,0,1-1,.07l-.06,0a2.7,2.7,0,0,0-.44-1,1.26,1.26,0,0,1,.58-.73l.06,0a.45.45,0,0,0,.17-.61.44.44,0,0,0-.6-.17l-.06,0a2.12,2.12,0,0,0-.84.86,2.66,2.66,0,0,0-1.13-.43,1.27,1.27,0,0,1,.11-.82l0-.06a.45.45,0,0,0,0-.44.44.44,0,0,0-.77,0l0,.06a2.16,2.16,0,0,0-.21,1.26,2.67,2.67,0,0,0-1.08.49,1.24,1.24,0,0,1-.47-.75v-.06a.44.44,0,0,0-.52-.35.45.45,0,0,0-.34.53v.06h0a2.16,2.16,0,0,0,.7,1.19l-.75.78a1.24,1.24,0,0,1-.8-.5l0-.05a.44.44,0,0,0-.29-.2.44.44,0,0,0-.34.08.45.45,0,0,0-.08.65l0,.05a2.12,2.12,0,0,0,.89.72,2.74,2.74,0,0,0-.41,1.11,1.22,1.22,0,0,1-1,.06l-.06,0a.44.44,0,0,0-.57.27.45.45,0,0,0,.27.57l.06,0a2.11,2.11,0,0,0,1.3,0,2.71,2.71,0,0,0,.41,1,2.16,2.16,0,0,0-.75,1.17.45.45,0,0,0,0,.35.44.44,0,0,0,.62.15.45.45,0,0,0,.2-.29,1.24,1.24,0,0,1,.5-.74,2.67,2.67,0,0,0,1.11.48,2.18,2.18,0,0,0,.05,1.34.45.45,0,0,0,.23.28A.44.44,0,0,0,31,20a.44.44,0,0,0,.25-.25.45.45,0,0,0,0-.36,1.26,1.26,0,0,1,.06-1v0h0a2.67,2.67,0,0,0,1.07-.45,2.13,2.13,0,0,0,.82.9.44.44,0,0,0,.61-.16.45.45,0,0,0-.16-.61,1.25,1.25,0,0,1-.58-.79l.83-.87a2.11,2.11,0,0,0,1.29.51.44.44,0,0,0,.32-.12.45.45,0,0,0,.14-.31.45.45,0,0,0-.43-.46,1.23,1.23,0,0,1-.75-.29,2.74,2.74,0,0,0,.41-1.18,2.1,2.1,0,0,0,1.41-.21.45.45,0,0,0-.08-.82ZM22.74,3.65a.44.44,0,0,0-.21.26,1.22,1.22,0,0,1-.65.75l-.06,0a2.7,2.7,0,0,0-1-.37,1.26,1.26,0,0,1-.1-.93l0-.06a.45.45,0,0,0-.31-.55.44.44,0,0,0-.55.3l0,.06a2.12,2.12,0,0,0,0,1.2,2.66,2.66,0,0,0-1.1.49,1.27,1.27,0,0,1-.51-.66l0-.06a.45.45,0,0,0-.33-.3.44.44,0,0,0-.52.57l0,.06a2.16,2.16,0,0,0,.75,1,2.67,2.67,0,0,0-.42,1.12,1.24,1.24,0,0,1-.86-.19l-.06,0a.44.44,0,0,0-.62.12.45.45,0,0,0,.13.62l.05,0h0a2.16,2.16,0,0,0,1.34.35l0,1.08a1.24,1.24,0,0,1-.92.21h-.07a.44.44,0,0,0-.35.06.44.44,0,0,0-.19.3.45.45,0,0,0,.4.52h.07a2.12,2.12,0,0,0,1.14-.12,2.74,2.74,0,0,0,.5,1.07,1.22,1.22,0,0,1-.64.73l-.06,0a.44.44,0,0,0-.21.59.45.45,0,0,0,.6.21l.06,0a2.11,2.11,0,0,0,.94-.89,2.71,2.71,0,0,0,1,.39,2.16,2.16,0,0,0,.3,1.35.45.45,0,0,0,.28.22.44.44,0,0,0,.55-.33.45.45,0,0,0-.07-.34,1.24,1.24,0,0,1-.17-.88A2.67,2.67,0,0,0,22,11.22a2.18,2.18,0,0,0,1,.91.45.45,0,0,0,.36,0,.44.44,0,0,0,.27-.24.44.44,0,0,0,0-.36.45.45,0,0,0-.26-.25,1.26,1.26,0,0,1-.67-.75v0h0a2.67,2.67,0,0,0,.44-1.07,2.13,2.13,0,0,0,1.22.06A.44.44,0,0,0,24.68,9a.45.45,0,0,0-.55-.32,1.25,1.25,0,0,1-1-.15l0-1.2a2.11,2.11,0,0,0,1.28-.56.44.44,0,0,0,.14-.31.45.45,0,0,0-.12-.32.45.45,0,0,0-.63,0,1.23,1.23,0,0,1-.74.32,2.74,2.74,0,0,0-.54-1.12,2.1,2.1,0,0,0,.85-1.14.45.45,0,0,0-.64-.53ZM13.32,47.15a4.12,4.12,0,0,0-1.79-2.49L7.62,41.9a3.06,3.06,0,0,1-1.39-2l-4-14.3a4.72,4.72,0,0,1,.19-3.52l6-14.9a3,3,0,0,1,2.38,1.66c.83,1.67.82,5.4-3.43,13.08a3.76,3.76,0,0,0-.25,3.44c.7,2.57,1.37,5,2.24,7.39a4.59,4.59,0,0,0,1.76,2.23.51.51,0,0,0,.7-.09.65.65,0,0,0,0-.71,1.24,1.24,0,0,0-.27-.31,3.81,3.81,0,0,1-1.13-1.64C9.69,29.81,9,27.5,8.29,25a3.43,3.43,0,0,1,.31-2.84A17.4,17.4,0,0,1,10,19.82c1-1.82,1.67-.13,2,1a29.45,29.45,0,0,1,1.06,5.26,5.11,5.11,0,0,0,1.34,3.13l4.27,4.24A4.2,4.2,0,0,1,20,36.1ZM30,36.1a4.2,4.2,0,0,1,1.35-2.61l4.27-4.24a5.11,5.11,0,0,0,1.34-3.13A29.45,29.45,0,0,1,38,20.86c.37-1.17,1-2.86,2-1a17.4,17.4,0,0,1,1.35,2.34A3.43,3.43,0,0,1,41.71,25c-.69,2.5-1.4,4.81-2.2,7.2a3.81,3.81,0,0,1-1.13,1.64,1.24,1.24,0,0,0-.27.31.65.65,0,0,0,0,.71.51.51,0,0,0,.7.09,4.59,4.59,0,0,0,1.76-2.23c.87-2.43,1.54-4.82,2.24-7.39a3.76,3.76,0,0,0-.25-3.44c-4.25-7.68-4.26-11.41-3.43-13.08a3,3,0,0,1,2.38-1.66l6,14.9a4.72,4.72,0,0,1,.19,3.52l-4,14.3a3.06,3.06,0,0,1-1.39,2l-3.9,2.77a4.12,4.12,0,0,0-1.79,2.49Z"></path>
+  </g></symbol><symbol id="import" viewBox="0 0 50 50"><defs>
+    <style>
+      .\32 22d0765-062e-4176-b410-e4ec31271e50 {
+        fill: none;
+      }
+    </style>
+  </defs><title>import</title><g id="3d0fe7a3-0008-4be0-9b08-a282fd557b04_1717361093045" data-name="import">
+    <rect class="222d0765-062e-4176-b410-e4ec31271e50" width="50" height="50"></rect>
+    <path d="M12,35a3,3,0,1,1-3-3A3,3,0,0,1,12,35Zm13-3a3,3,0,1,0,3,3A3,3,0,0,0,25,32Zm12,0a3,3,0,1,0,3,3A3,3,0,0,0,37,32ZM16,17H8.62a2,2,0,0,0-1.79,1.11L5.88,20H14v8H2v6a1,1,0,0,0,1,1H4a5,5,0,0,1,10,0h2a1,1,0,0,0,1-1V18A1,1,0,0,0,16,17Zm-4,5H5L3,26h9Zm22,4a1,1,0,0,1-1.64.77l-6-5a1,1,0,0,1,0-1.54l6-5A1,1,0,0,1,34,16v3h9V13a1,1,0,0,0-1-1H21a2,2,0,0,0-2,2V34a1,1,0,0,0,1,1,5,5,0,0,1,10,0h2a5,5,0,0,1,10,0,1,1,0,0,0,1-1V23H34Zm13-7H43v4h4a1,1,0,0,0,1-1V20A1,1,0,0,0,47,19Z"></path>
+  </g></symbol><symbol id="import-and-export" viewBox="0 0 50 50"><defs>
+    <style>
+      .a797e377-7091-4d03-a886-bf6c61bf1ce6 {
+        fill: none;
+      }
+    </style>
+  </defs><title>import-and-export</title><g id="c4784cb5-3305-48fd-b061-7d63bdf500a9_1717361093045" data-name="and-exports">
+    <rect class="a797e377-7091-4d03-a886-bf6c61bf1ce6" width="50" height="50"></rect>
+    <path d="M2,34a1,1,0,0,0,1,1,5,5,0,0,1,10,0h7a5,5,0,0,1,10,0,1,1,0,0,0,1-1V14a2,2,0,0,0-2-2H3a1,1,0,0,0-1,1ZM28,19a.64.64,0,0,1-.19.46l-3.33,3.32a.64.64,0,1,1-.91-.91l2.28-2.27H14.61a.61.61,0,1,1,0-1.21H25.84l-2.27-2.26a.64.64,0,1,1,.91-.91l3.33,3.32A.64.64,0,0,1,28,19Zm-9,5a.61.61,0,0,1-.61.61H7.16L9.43,26.9a.64.64,0,1,1-.91.91L5.19,24.49a.66.66,0,0,1,0-.92l3.33-3.32a.64.64,0,0,1,.91.91L7.15,23.43H18.39A.61.61,0,0,1,19,24Zm22,8a3,3,0,1,1-3,3A3,3,0,0,1,41,32ZM22,35a3,3,0,1,0,3-3A3,3,0,0,0,22,35ZM5,35a3,3,0,1,0,3-3A3,3,0,0,0,5,35ZM33,18V34a1,1,0,0,0,1,1h2a5,5,0,0,1,10,0h1a1,1,0,0,0,1-1V28H36V20h8.12l-.95-1.89A2,2,0,0,0,41.38,17H34A1,1,0,0,0,33,18Zm5,8h9l-2-4H38Z"></path>
+  </g></symbol><symbol id="improve-food-gov-uk" viewBox="0 0 50 50"><defs>
+    <style>
+      .\30 49f3d64-0b99-40f4-816d-e38a638d4af0 {
+        fill: none;
+      }
+    </style>
+  </defs><title>improve-food-gov-uk</title><g id="c066c623-ac24-4566-9302-c5faed156015_1717361093045" data-name="improve-fsa">
+    <rect class="049f3d64-0b99-40f4-816d-e38a638d4af0" width="50" height="50"></rect>
+    <path d="M31,39a1,1,0,0,1-1,1H20a1,1,0,0,1-1-1H0v2a1,1,0,0,0,1,1H49a1,1,0,0,0,1-1V39ZM3,36V8A1,1,0,0,1,4,7H46a1,1,0,0,1,1,1V36a1,1,0,0,1-1,1H4A1,1,0,0,1,3,36ZM17.89,19.09H15.11A1.12,1.12,0,0,0,14,20.21V30a1.12,1.12,0,0,0,1.1,1.12h2.78A1.12,1.12,0,0,0,19,30V20.21A1.12,1.12,0,0,0,17.89,19.09Zm14.43.11h0a18.64,18.64,0,0,0-3.12.09.75.75,0,0,1-.8-.92c.42-1.82.86-4.08,1.06-5.09.35-1.93-2.36-2.62-3-1.12S24,19,21,20.43a1,1,0,0,0-.55.92c0,1.66,0,5.74,0,7.46a1,1,0,0,0,.75,1,39.38,39.38,0,0,0,8.88,1.55c1.92,0,3-.16,3.47-2s1-4.75,1.37-6.9C35.33,20.1,34.34,19.33,32.32,19.2Z"></path>
+  </g></symbol><symbol id="labelling" viewBox="0 0 50 50"><defs>
+    <style>
+      .c3446752-8497-443a-b19e-d0d1acdf5040 {
+        fill: none;
+      }
+    </style>
+  </defs><title>labelling</title><g id="f54d2c58-39b7-4a59-a120-0213d307b2c5_1717361093045" data-name="product-labelling">
+    <rect class="c3446752-8497-443a-b19e-d0d1acdf5040" width="50" height="50"></rect>
+    <path d="M38,12h0a1,1,0,0,1,0-1.4l8.39-8.39a1,1,0,0,1,1.4,0h0a1,1,0,0,1,0,1.4L39.44,12A1,1,0,0,1,38,12ZM45,7.84l-4,4A3,3,0,1,1,38.19,9l4-4A11.4,11.4,0,0,0,27.21,6L2.4,30.83a1,1,0,0,0,0,1.4L17.77,47.6a1,1,0,0,0,1.4,0L44,22.79A11.4,11.4,0,0,0,45,7.84ZM25.46,32.93l-8.39-8.39a1,1,0,0,1,0-1.4h0a1,1,0,0,1,1.4,0l8.39,8.39a1,1,0,0,1,0,1.4h0A1,1,0,0,1,25.46,32.93Zm-2.8,2.8-8.39-8.39a1,1,0,0,1,0-1.4h0a1,1,0,0,1,1.4,0l8.39,8.39a1,1,0,0,1,0,1.4h0A1,1,0,0,1,22.67,35.72Zm-2.8,2.8-8.39-8.39a1,1,0,0,1,0-1.4h0a1,1,0,0,1,1.4,0l8.39,8.39a1,1,0,0,1,0,1.4h0A1,1,0,0,1,19.87,38.52Z"></path>
+  </g></symbol><symbol id="law" viewBox="0 0 50 50"><defs>
+    <style>
+      .\32 57e6b2f-d258-4a90-b89f-4cda9fee3dfe {
+        fill: none;
+      }
+    </style>
+  </defs><title>law</title><g id="63caaf0b-cde5-4a6e-b6e6-51cabc48d0f5_1717361093045" data-name="law">
+    <rect class="257e6b2f-d258-4a90-b89f-4cda9fee3dfe" x="-0.09" width="50" height="50"></rect>
+    <path d="M2,40H33v6.06a.94.94,0,0,1-.94.94H2.94A.94.94,0,0,1,2,46.06Zm27-3a3.24,3.24,0,0,0-3.44-3H9.44A3.25,3.25,0,0,0,6,37v2H29ZM45.3,28.9a65.48,65.48,0,0,0-7.44-6.06,69.18,69.18,0,0,0-7.38-4.67L31.3,17l1,.75a1.59,1.59,0,0,0,2.22-.37l2-2.85a1.59,1.59,0,0,0-.37-2.21L23.52,3.28a1.63,1.63,0,0,0-2.21.37l-2,2.85A1.54,1.54,0,0,0,19,7.67a1.57,1.57,0,0,0,.64,1l1.06.75-4.5,6.3L15.15,15a1.64,1.64,0,0,0-2.22.37l-2,2.85a1.61,1.61,0,0,0-.28,1.19,1.58,1.58,0,0,0,.64,1L24,29.5a1.59,1.59,0,0,0,2.22-.37l2-2.85a1.59,1.59,0,0,0-.37-2.21l-1-.75.81-1.14a68.56,68.56,0,0,0,6.81,5.46c4.49,3.21,10,6.45,12.09,6.45a1.44,1.44,0,0,0,1.24-.56c.67-.95,0-2.29-2.46-4.63Z"></path>
+  </g></symbol><symbol id="local-authority" viewBox="0 0 50 50"><defs>
+    <style>
+      .\31 e857aa9-66d3-4954-9f66-68ed37dede31 {
+        fill: none;
+      }
+    </style>
+  </defs><title>local-authority</title><g id="9cea90fb-5e12-4342-8634-3afec001bbbd_1717361093045" data-name="local-authority">
+    <path d="M42.74,48H7.34A2.31,2.31,0,0,1,5,45.75c.08-6.54.3-10.24,5.13-11.91A48.2,48.2,0,0,0,18,30.21l3.77,11.47.53,1.53,1.66-4.58c-3.85-5.23.38-5.52,1.06-5.52s4.91.22,1.06,5.45l1.66,4.58.53-1.53L32,30.14a48.21,48.21,0,0,0,7.85,3.63c4.83,1.67,5.06,5.37,5.13,11.91A2.21,2.21,0,0,1,42.73,48ZM37.1,13.39H35.47V13A9.79,9.79,0,0,0,32.42,5.9a10.48,10.48,0,0,0-3.09-2.06A2.46,2.46,0,0,0,26.92,2H23.28a2.47,2.47,0,0,0-2.42,1.83A10.08,10.08,0,0,0,14.71,13v.41H13.1a1,1,0,1,0,0,1.93h2.3a10.63,10.63,0,0,0,.32,1.09c-.83,0-1.81.44-.91,3.56.68,2.25,1.28,2.9,1.74,3a9.73,9.73,0,0,0,6.19,7.34,6.92,6.92,0,0,0,4.53,0,10,10,0,0,0,6.19-7.34c.45,0,1.06-.65,1.74-3,.91-3.12-.08-3.56-.91-3.49a9.93,9.93,0,0,0,.34-1.16H37.1a1,1,0,1,0,0-1.93Zm-14.3-9a.47.47,0,0,1,.48-.41h3.64a.47.47,0,0,1,.48.36l-.47,5.47a1,1,0,0,0,2,.16L29.27,6A8.35,8.35,0,0,1,31,7.27,7.9,7.9,0,0,1,33.47,13v.41H16.71V13a8.09,8.09,0,0,1,4.2-7l.35,3.94a1,1,0,0,0,1.08.88,1,1,0,0,0,.91-1Z"></path>
+    <rect class="1e857aa9-66d3-4954-9f66-68ed37dede31" x="0.1" width="50" height="50"></rect>
+  </g></symbol><symbol id="make-an-appeal" viewBox="0 0 50 50"><defs>
+    <style>
+      .e61e343b-f5a9-484b-b49f-6a1e36623e28 {
+        fill: none;
+      }
+    </style>
+  </defs><title>make-an-appeal</title><g id="052f0004-3886-4306-ab4d-d2336143b22a_1717361093045" data-name="make-an-appeal">
+    <rect class="e61e343b-f5a9-484b-b49f-6a1e36623e28" width="50" height="50"></rect>
+    <path d="M9,48H9a2,2,0,0,1-2-2V4A2,2,0,0,1,9,2H9a2,2,0,0,1,2,2V46A2,2,0,0,1,9,48ZM43,25,36.82,15,43,5a1,1,0,0,0-.88-1H13.88A1,1,0,0,0,13,5V25a1,1,0,0,0,.88,1H42.12A1,1,0,0,0,43,25ZM28,21.5A1.5,1.5,0,1,1,26.5,20,1.5,1.5,0,0,1,28,21.5Zm0-13v9a1.5,1.5,0,0,1-3,0v-9a1.5,1.5,0,0,1,3,0Z"></path>
+  </g></symbol><symbol id="manufacturers" viewBox="0 0 50 50"><defs>
+    <style>
+      .aa3896a1-91ba-469e-bbbc-c6a56cfdd4ca {
+        fill: none;
+      }
+    </style>
+  </defs><title>manufacturers</title><g id="a52f8486-3f53-4ff6-a2ba-0819e5d5240a_1717361093045" data-name="manufacturers">
+    <rect class="aa3896a1-91ba-469e-bbbc-c6a56cfdd4ca" width="50" height="50"></rect>
+    <path d="M2,43H2a1,1,0,0,1,1-1H47a1,1,0,0,1,1,1h0a1,1,0,0,1-1,1H3A1,1,0,0,1,2,43ZM29.4,9.87a4.53,4.53,0,0,1,0,4.59,5,5,0,0,1-8.72,0,4.53,4.53,0,0,1,0-4.59h0l0,0,4.08-5.7a.37.37,0,0,1,.6,0l4.08,5.7ZM26.11,28.71a5.5,5.5,0,0,0,2.4-.6v-.75l-.26-.15L25.33,21.4h-.75L21.76,27l-.12.21-.25.15v.32h.07a7.88,7.88,0,0,1,2.85.64,5.28,5.28,0,0,0,1.78.45Zm3.23-2.52a1.4,1.4,0,0,1,.58,1.11V38.66A1.33,1.33,0,0,1,28.61,40H21.3A1.35,1.35,0,0,1,20,38.66V27.31a1.36,1.36,0,0,1,.61-1.11l2.07-4.12a.63.63,0,0,1-.48-.66v-.71a.71.71,0,0,1,.71-.71H27a.72.72,0,0,1,.71.71v.71a.66.66,0,0,1-.51.66l2.1,4.12Zm14,0-2.1-4.12a.66.66,0,0,0,.51-.66v-.71A.72.72,0,0,0,41,20H36.86a.71.71,0,0,0-.71.71v.71a.63.63,0,0,0,.48.66l-2.07,4.12A1.36,1.36,0,0,0,34,27.31V38.66A1.35,1.35,0,0,0,35.3,40h7.31a1.33,1.33,0,0,0,1.32-1.34V27.31a1.4,1.4,0,0,0-.58-1.11Zm-28,0-2.1-4.12a.66.66,0,0,0,.51-.66v-.71A.72.72,0,0,0,13,20H8.86a.71.71,0,0,0-.71.71v.71a.63.63,0,0,0,.48.66L6.56,26.19A1.36,1.36,0,0,0,6,27.31V38.66A1.35,1.35,0,0,0,7.3,40h7.31a1.33,1.33,0,0,0,1.32-1.34V27.31a1.4,1.4,0,0,0-.58-1.11ZM7.3,39A.35.35,0,0,1,7,38.66V27.31A.36.36,0,0,1,7.12,27l.22-.15,2.75-5.47h1.69l2.78,5.46.2.14a.4.4,0,0,1,.16.3V38.66a.33.33,0,0,1-.32.34Z"></path>
+  </g></symbol><symbol id="meat" viewBox="0 0 50 50"><defs>
+    <style>
+      .a2d14fdf-8511-43a3-b348-5cbbf2c38392 {
+        fill: none;
+      }
+    </style>
+  </defs><title>meat</title><g id="a50d8c5e-6bbe-4b88-a373-a47eb9e1f966_1717361093045" data-name="meat">
+    <rect class="a2d14fdf-8511-43a3-b348-5cbbf2c38392" width="50" height="50"></rect>
+    <g>
+      <path d="M13,29.47c-1.25,1.25-.6,3.78,1.52,5.89a7.93,7.93,0,0,0,3,1.93,4.07,4.07,0,0,0,1.28.23,2.28,2.28,0,0,0,1.66-.64c1.25-1.25.59-3.78-1.53-5.9S14.27,28.22,13,29.47Z"></path>
+      <path d="M46.88,7.16a3.83,3.83,0,0,0-3-1.1,3.82,3.82,0,0,0-6.51-2.95A5.79,5.79,0,0,0,35.7,7.24,3.93,3.93,0,0,1,34.53,10l-2.8,2.8c-3.59-1.22-8.42-.58-13.71,1.93C13.21,13.44,8.89,14.25,6.14,17L3.36,19.77l0,0,0,0L3,20.16H3a1,1,0,0,0-.23.4c-2.31,3.77,1,11.66,8,18.68C16.32,44.77,22.4,48,26.58,48a5,5,0,0,0,3.69-1.32,4.23,4.23,0,0,0,.66-.89l2-2C35.72,41,36.53,36.7,35.2,31.9c2.52-5.27,3.16-10.1,1.94-13.67l2.81-2.8a4,4,0,0,1,2.8-1.16h0a5.81,5.81,0,0,0,4.13-1.71A3.81,3.81,0,0,0,46.88,7.16ZM12.17,37.85c-6.93-6.91-9.49-14.07-7.6-16.46,1.17-.9,3.38-.79,6.18.36A33.17,33.17,0,0,1,21,29a33.06,33.06,0,0,1,7.23,10.2c1.22,3,1.29,5.29.19,6.38h0a.93.93,0,0,0-.09.14C25.6,47.06,18.77,44.42,12.17,37.85Z"></path>
+    </g>
+  </g></symbol><symbol id="mislabelling" viewBox="0 0 50 50"><defs>
+    <style>
+      .\39 ef4de82-fe1a-4851-bc8e-28eed5004b62 {
+        fill: none;
+      }
+    </style>
+  </defs><title>mislabeling</title><g id="a4ec4e0d-5d41-4aff-827b-5e25b150e3b1_1717361093045" data-name="mislabeling">
+    <rect class="9ef4de82-fe1a-4851-bc8e-28eed5004b62" x="-0.09" width="50" height="50"></rect>
+    <path d="M37.93,12.07h0a1,1,0,0,1,0-1.4l8.39-8.39a1,1,0,0,1,1.4,0h0a1,1,0,0,1,0,1.4l-8.39,8.39A1,1,0,0,1,37.93,12.07ZM44.84,8l-4,4a3,3,0,1,1-2.8-2.8l4-4a11.4,11.4,0,0,0-14.95,1L2.29,30.94a1,1,0,0,0,0,1.4L17.66,47.71a1,1,0,0,0,1.4,0L43.87,22.9A11.4,11.4,0,0,0,44.84,8ZM20,23.5v12a1.5,1.5,0,0,1-3,0v-12a1.5,1.5,0,0,1,3,0Zm5,11A1.5,1.5,0,1,1,23.5,33,1.5,1.5,0,0,1,25,34.5Zm-5,5A1.5,1.5,0,1,1,18.5,38,1.5,1.5,0,0,1,20,39.5Zm10-26v12a1.5,1.5,0,0,1-3,0v-12a1.5,1.5,0,0,1,3,0Zm0,16A1.5,1.5,0,1,1,28.5,28,1.5,1.5,0,0,1,30,29.5Zm-5-11v12a1.5,1.5,0,0,1-3,0v-12a1.5,1.5,0,0,1,3,0Z"></path>
+  </g></symbol><symbol id="misleading-label" viewBox="0 0 50 50"><defs>
+    <style>
+      .b4eed337-168f-4aba-a88d-f584ad9185ff {
+        fill: none;
+      }
+    </style>
+  </defs><title>misleading</title><g id="f8cb0dd1-a56c-4afb-bc50-18d8b7eace9c_1717361093045" data-name="misleading-info">
+    <rect class="b4eed337-168f-4aba-a88d-f584ad9185ff" width="50" height="50"></rect>
+    <path d="M37.93,12.07h0a1,1,0,0,1,0-1.4l8.39-8.39a1,1,0,0,1,1.4,0h0a1,1,0,0,1,0,1.4l-8.39,8.39A1,1,0,0,1,37.93,12.07ZM44.84,8l-4,4a3,3,0,1,1-2.8-2.8l4-4a11.4,11.4,0,0,0-14.95,1L2.29,30.94a1,1,0,0,0,0,1.4L17.66,47.71a1,1,0,0,0,1.4,0L43.87,22.9A11.4,11.4,0,0,0,44.84,8ZM25.34,34.71a1.59,1.59,0,0,1-.45,1.11,1.5,1.5,0,0,1-1.08.46,1.52,1.52,0,0,1-1.4-1,1.6,1.6,0,0,1,.33-1.71,1.49,1.49,0,0,1,1.66-.34A1.57,1.57,0,0,1,25.34,34.71ZM29,23.46a5.42,5.42,0,0,1-.92,3.21,5.17,5.17,0,0,1-2.6,2s-.15.05-.15.15v1.24a1.51,1.51,0,1,1-3,0V28.82a3.37,3.37,0,0,1,.62-1.92,3.2,3.2,0,0,1,1.59-1.18A2.21,2.21,0,0,0,26,23.55a2.24,2.24,0,0,0-2.17-2.15,2.14,2.14,0,0,0-1.92,1.26,1.49,1.49,0,0,1-2,.73,1.58,1.58,0,0,1-.71-2.08A5.27,5.27,0,0,1,21,19.11a5,5,0,0,1,2.74-.83h0a5.14,5.14,0,0,1,3.6,1.52A5.46,5.46,0,0,1,29,23.46Z"></path>
+  </g></symbol><symbol id="poultry" viewBox="0 0 50 50"><defs>
+    <style>
+      .a939ba3d-b2d7-4dc2-8445-9476f783a432 {
+        fill: none;
+      }
+    </style>
+  </defs><title>poultry</title><g id="cb50aded-eb4f-4a72-93cd-ae63d0c859ae_1717361093045" data-name="poultry">
+    <rect class="a939ba3d-b2d7-4dc2-8445-9476f783a432" width="50" height="50"></rect>
+    <path d="M33.36,46H31.52a.51.51,0,0,1-.25-.07l-3.53-2L25,44.49a.51.51,0,0,1-.57-.69L25,42.41a.51.51,0,0,1,.27-.27l2.08-.89-1.14-3.6a.51.51,0,0,1,0-.34L26.72,36a15.49,15.49,0,0,0-4-2.06A3,3,0,0,0,20,35.12a.52.52,0,0,1-.44.15.51.51,0,0,1-.38-.26,62.73,62.73,0,0,1-2.51-6.4,3.67,3.67,0,0,0-1.2,2.19.51.51,0,0,1-.93.2,8,8,0,0,1-1.08-4.16,4.21,4.21,0,0,0-1.22,2.45.51.51,0,0,1-1,.18,11.67,11.67,0,0,1-.66-5.72,13.42,13.42,0,0,0-3.93,5.66.5.5,0,0,1-.51.36.51.51,0,0,1-.48-.4c-.9-3.92,1.41-8.62,2.65-10.78C2.41,20.94,1.66,28.81,1.65,28.89a.51.51,0,0,1-.46.46A.52.52,0,0,1,.66,29,13,13,0,0,1,2.53,17.42,13.31,13.31,0,0,1,13.16,12c6.59-.09,8.89,3.32,10.41,5.58a8.49,8.49,0,0,0,1.28,1.64A2.58,2.58,0,0,0,27,20c1.37-.25,2.89-1.91,4.53-4.94,2.36-4.35,5.09-6,6.48-6.52-.45-.4-.88-.77-1.12-.94a1.18,1.18,0,0,1-.38-1.25,2.22,2.22,0,0,1,1.4-1.72,1.83,1.83,0,0,1,1.41.4,1,1,0,0,1,.19-.72A.81.81,0,0,1,40.18,4c.71,0,1.06.74,1.36,1.4.07.15.15.33.23.48a1.58,1.58,0,0,1,.47-.78.7.7,0,0,1,.65-.15c.53.15.77.84,1.16,2a6.65,6.65,0,0,0,.43,1.14c.52.61.07,1.63-.27,2.2l1.73,2.12a.51.51,0,0,1-.45.83,4.92,4.92,0,0,0-2.17.18,1.41,1.41,0,0,0-.63.69.79.79,0,0,0,0,.69l.27.49a9.44,9.44,0,0,1,1.34,4.22c.3,2.88-1.16,6.55-3.13,7.86a19.7,19.7,0,0,0-3.42,3.17c-.51.55-1,1.1-1.57,1.64a27.49,27.49,0,0,1-4.05,2.95,15.4,15.4,0,0,0-2.51,1.8,2.67,2.67,0,0,0,0,2.35,19.93,19.93,0,0,0,1.62,2.14l3.64.28a.51.51,0,0,1,.29.12l1.55,1.3a.51.51,0,0,1-.33.9H32.38l1.3,1a.51.51,0,0,1-.32.91Z"></path>
+  </g></symbol><symbol id="register-food-business" viewBox="0 0 50.04 50"><defs>
+    <style>
+      .a0252260-e13c-43a4-b6c8-96718bcef580 {
+        fill: none;
+      }
+    </style>
+  </defs><title>register-new-food-business</title><g id="0d7bd601-84ee-4428-8fdf-451c3780e202_1717361093045" data-name="register-new-food-business">
+    <rect class="a0252260-e13c-43a4-b6c8-96718bcef580" x="-0.04" width="50" height="50"></rect>
+    <path d="M30.95,38.79,21.4,42l3.18-9.55L35,22V5a1,1,0,0,0-1-1H4A1,1,0,0,0,3,5V45a1,1,0,0,0,1,1H34a1,1,0,0,0,1-1V34.74ZM8,9H30a1,1,0,0,1,0,2H8A1,1,0,0,1,8,9Zm0,5H30a1,1,0,0,1,0,2H8a1,1,0,0,1,0-2Zm0,5H30a1,1,0,0,1,0,2H8a1,1,0,0,1,0-2ZM7,25a1,1,0,0,1,1-1H22a1,1,0,0,1,0,2H8A1,1,0,0,1,7,25Zm42.67-3.51L43.3,27.85a1,1,0,0,1-1.41-1.41l5.66-5.66-.71-.71-17,17-5.3,1.77,1.77-5.3L45.78,14.06a2.5,2.5,0,0,1,3.54,3.54l-1.06,1.06,1.41,1.41A1,1,0,0,1,49.67,21.49Z"></path>
+  </g></symbol><symbol id="report-illegal-behaviour" viewBox="0 0 50 50"><defs>
+    <style>
+      .c366993b-4e0b-4368-b388-fa9f007fffd1 {
+        fill: none;
+      }
+    </style>
+  </defs><title>report-illegal</title><g id="13e7b26c-bed0-486d-bb57-d67e6de0f276_1717361093045" data-name="report-illegal">
+    <rect class="c366993b-4e0b-4368-b388-fa9f007fffd1" width="50" height="50"></rect>
+    <path d="M49,26A23,23,0,1,1,26,3,23,23,0,0,1,49,26ZM19.89,17.59H17.11A1.12,1.12,0,0,0,16,18.71v9.77a1.12,1.12,0,0,0,1.1,1.12h2.78A1.12,1.12,0,0,0,21,28.49V18.71A1.12,1.12,0,0,0,19.89,17.59Zm17,8.65c-.4-2.15-1-5-1.37-6.9s-1.55-2-3.47-2a39.38,39.38,0,0,0-8.88,1.55,1,1,0,0,0-.75,1c0,1.73,0,5.81,0,7.46a1,1,0,0,0,.55.92c3,1.41,4.95,6.84,5.5,8.27s3.31.81,3-1.12c-.2-1-.64-3.27-1.06-5.09a.75.75,0,0,1,.8-.92,18.64,18.64,0,0,0,3.12.09h0C36.34,29.36,37.33,28.6,36.91,26.25ZM26,6A20,20,0,1,0,46,26,20,20,0,0,0,26,6Zm0,38A18,18,0,1,1,44,26,18,18,0,0,1,26,44Z"></path>
+  </g></symbol><symbol id="wine" viewBox="0 0 50 50"><defs>
+    <style>
+      .\34 53048b1-fa5e-4b70-8b1e-ef405c3131a7 {
+        fill: none;
+      }
+    </style>
+  </defs><title>wine</title><g id="0e1bdde7-7cb8-46a1-a101-adbad6267e35_1717361093045" data-name="wine">
+    <rect class="453048b1-fa5e-4b70-8b1e-ef405c3131a7" width="50" height="50"></rect>
+    <path d="M22.23,47.4c.2,0,.3.13.3.3a.3.3,0,0,1-.3.3H10.76a.28.28,0,0,1-.3-.3.29.29,0,0,1,.3-.3s5.11-.72,5.11-3.84V38.1c.3-6-9.36-7-4.51-20.1H21.63c4.85,13.05-4.81,14.1-4.51,20.1v5.45c0,3.12,5.11,3.84,5.11,3.84ZM33,43V22h7V20.5a6.52,6.52,0,0,0-5-6.32V4a1,1,0,0,0,0-2H31a1,1,0,0,0,0,2V14.18a6.52,6.52,0,0,0-5,6.32V46a2,2,0,0,0,2,2H38a2,2,0,0,0,2-2V43Z"></path>
+  </g></symbol></svg><script type="text/javascript" id="">window.sa_event=window.sa_event||function(){var a=[].slice.call(arguments);window.sa_event.q?window.sa_event.q.push(a):window.sa_event.q=[a]};</script>
+<script type="text/javascript" id="" src="https://scripts.simpleanalyticscdn.com/auto-events.js"></div></script><script type="text/javascript" id="">(function(b){b(document).ajaxSuccess(function(f,c,g){var d="webform-confirmation",e='aria-label\x3d"Error message"';c.responseJSON&&c.responseJSON.forEach(function(a){a.selector&&a.command&&"insert"==a.command&&a.data&&(-1!==a.data.indexOf(d)?window.dataLayer.push({event:"ajaxFormSubmissionSuccess",formId:b(a.selector+" form")[0].id.split("--")[0]}):-1!==a.data.indexOf(e)&&window.dataLayer.push({event:"ajaxFormSubmissionError",formId:b(a.selector+" form")[0].id.split("--")[0]}))})})})(jQuery);</script><script type="text/javascript" id="">var feedbackOpenedFrom;(function(a){a("#edit-is-useful-no, #open-feedback").click(function(){feedbackOpenedFrom=this.id.split("-").pop()})})(jQuery);</script><script type="text/javascript" id="">(function(a){a("form[id*\x3d'webform'] input, form[id*\x3d'webform'] textarea").focus(function(){window.dataLayer.push({event:"webformInputFocus",formId:this.closest("form").id})})})(jQuery);</script><script type="text/javascript" id="">(function(){var a=document.cookie.split("; ");if("undefined"!==typeof a&&(a=a.filter(function(c){return c.match(/^cookie_preferences/)})[0],"undefined"!==typeof a&&(a=a.toString(),a=unescape(a.split("\x3d")[1].toString()),a=JSON.parse(a)),console.log(a),a&&"yes"===a.analytics)){a=document.createElement("script");a.type="text/javascript";a.async=!0;a.src="//siteimproveanalytics.com/js/siteanalyze_267311.js";var b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b)}})();</script>
+</body></html>

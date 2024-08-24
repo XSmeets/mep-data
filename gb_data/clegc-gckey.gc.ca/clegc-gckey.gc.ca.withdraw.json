@@ -1,0 +1,1 @@
+[{"domain": ".clegc-gckey.gc.ca", "httpOnly": true, "name": "_gckey_lb", "path": "/", "sameSite": "None", "secure": true, "value": ".01"}, {"domain": "clegc-gckey.gc.ca", "httpOnly": true, "name": "JSESSIONID", "path": "/j/", "sameSite": "Lax", "secure": true, "value": "6A8145E29BFC8E0A7DD47EDCE5251B6F"}]
