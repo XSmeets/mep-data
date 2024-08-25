@@ -1,0 +1,1168 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+    <!-- Enonces d'inclusion de fichiers JS et CSS -->
+    
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+<meta http-equiv="content-language" content="en">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<link type="text/css" href="/styles/ResetCSS.min.css" rel="stylesheet" media="screen">
+<link type="text/css" href="/styles/AssNat.min.css" rel="stylesheet" media="screen">
+<link type="text/css" href="/styles/Reguliere.css" title="Reguliere" rel="alternate stylesheet" media="screen">
+<link type="text/css" href="/styles/Moyenne.css" title="Moyenne" rel="alternate stylesheet" media="screen">
+<link type="text/css" href="/styles/Grande.css" title="Grande" rel="alternate stylesheet" media="screen">
+<link type="text/css" href="/styles/infoBulle.min.css" rel="stylesheet" media="screen">
+<link type="text/css" href="/styles/jScrollPane.min.css" rel="stylesheet" media="screen">
+<link type="text/css" href="/styles/jquery.treeview.min.css" rel="stylesheet" media="screen">
+<link type="text/css" href="/styles/jquery.skinned-select.min.css" rel="stylesheet" media="screen">
+<link type="text/css" href="/styles/jquery.datePicker.min.css" rel="stylesheet" media="screen">
+<link type="text/css" href="/styles/Calendrier.min.css" rel="stylesheet" media="screen">
+<link href="/Images/favicon.ico" rel="shortcut icon">
+
+<!-- Didomi -->
+<link rel="preconnect" as="script" href="https://sdk.privacy-center.org/"><link rel="dns-prefetch" as="script" href="https://sdk.privacy-center.org/"><link rel="preload" as="script" href="https://sdk.privacy-center.org/196da249-e5c8-4975-84d3-4b76bf16efd6/loader.js?target_type=notice&amp;target=UgnH3adf"><script type="text/javascript" async="" src="https://stats.assnat.qc.ca/piwik/matomo.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-KTMHVEF0VV&amp;l=dataLayer&amp;cx=c"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-5X47H2N"></script><script id="spcloader" type="text/javascript" async="" charset="utf-8" src="https://sdk.privacy-center.org/196da249-e5c8-4975-84d3-4b76bf16efd6/loader.js?target_type=notice&amp;target=UgnH3adf"></script><script type="text/javascript">window.gdprAppliesGlobally = false; (function () { (function (e, r) { var t = document.createElement("link"); t.rel = "preconnect"; t.as = "script"; var n = document.createElement("link"); n.rel = "dns-prefetch"; n.as = "script"; var i = document.createElement("link"); i.rel = "preload"; i.as = "script"; var o = document.createElement("script"); o.id = "spcloader"; o.type = "text/javascript"; o["async"] = true; o.charset = "utf-8"; var a = "https://sdk.privacy-center.org/" + e + "/loader.js?target_type=notice&target=" + r; if (window.didomiConfig && window.didomiConfig.user) { var c = window.didomiConfig.user; var s = c.country; var d = c.region; if (s) { a = a + "&country=" + s; if (d) { a = a + "&region=" + d } } } t.href = "https://sdk.privacy-center.org/"; n.href = "https://sdk.privacy-center.org/"; i.href = a; o.src = a; var p = document.getElementsByTagName("script")[0]; p.parentNode.insertBefore(t, p); p.parentNode.insertBefore(n, p); p.parentNode.insertBefore(i, p); p.parentNode.insertBefore(o, p) })("196da249-e5c8-4975-84d3-4b76bf16efd6", "UgnH3adf") })();</script>
+
+
+<!-- Feuilles de styles specifiques IE -->
+
+<!--[if lte IE 6]>
+    <link type="text/css" href="/styles/CorrectionsIE6.min.css" rel="stylesheet" media="screen"  />
+<![endif]-->
+
+<!--[if IE 7]>
+    <link type="text/css" href="/styles/CorrectionsIE7.min.css" rel="stylesheet" media="screen"  />
+<![endif]-->
+
+<!--[if IE 8]>
+    <link type="text/css" href="/styles/CorrectionsIE8.min.css" rel="stylesheet" media="screen"  />
+<![endif]-->
+<link type="text/css" href="/styles/Impression.min.css" rel="stylesheet" media="print">
+
+<link type="text/css" href="/styles/Tableau.min.css" rel="stylesheet" media="screen">
+
+<script type="text/javascript" src="/scripts/jquery.js?version=1.2.6"></script>
+
+<script type="text/javascript" src="/scripts/jquery-ui.js?version=1.5.2"></script>
+
+<!-- Google Tag Manager -->
+<script>(function (w, d, s, l, i) {
+        w[l] = w[l] || []; w[l].push({
+            'gtm.start':
+                new Date().getTime(), event: 'gtm.js'
+        }); var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+})(window, document, 'script', 'dataLayer', 'GTM-5X47H2N');</script> 
+<!-- End Google Tag Manager -->
+
+
+<script type="text/javascript">
+//<![CDATA[
+// Libellé du calendrier
+$.dpText = {
+	TEXT_PREV_YEAR		:	'Previous year',
+	TEXT_PREV_MONTH		:	'Previous month',
+	TEXT_NEXT_YEAR		:	'Following year',
+	TEXT_NEXT_MONTH		:	'Following month',
+	TEXT_CLOSE			:	'Close',
+	TEXT_CHOOSE_DATE	:	'Choose a date'
+}
+
+var _contenuLoading = '<img style="width: 16px;height: 16px;" src="/Images/lightbox/loading.gif" />&nbsp; Loading...';
+
+var _nbAnneeArchiveActivite = '3';
+// Voir Calendrier.js pour _dtSetStartDate
+var _dtSetEndDate = '2024-06-07';
+var intNombreAnneeArchiveActivite = 3;
+var langueCourante = 'en';
+
+_initCalendrierTypeActiviteJSON = eval([{"NomTypeActivite":"Other activities","Categorie":"D","Name":null,"Description":null},{"NomTypeActivite":"Press conferences and briefings","Categorie":"C","Name":null,"Description":null},{"NomTypeActivite":"Assembly sittings","Categorie":"A","Name":null,"Description":null},{"NomTypeActivite":"Committee sittings","Categorie":"B","Name":null,"Description":null}]);name 
+_urlGetCalendrierDataJSON = '/WebMethod/Calendrier.aspx/GetCalendrier?langue=en';
+_documentURL = "https://www.assnat.qc.ca/Media/Process.aspx?process=Thumbnail&token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz&MediaId=";
+_imageThumbnailURL = "https://www.assnat.qc.ca/Media/Process.aspx?process=AlbumThumbnail&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz&amp;asset=";
+_imageOriginaleURL = "https://www.assnat.qc.ca/Media/Process.aspx?process=Original&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz&amp;asset=";
+_imageThumbnailDrapeauURL = "https://www.assnat.qc.ca/Media/Process.aspx?process=ThumbnailDrapeau&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz&amp;asset=";
+_lienContenuURL = "/en/deputes/index";
+_extensionPagesDuSite = "html";
+_lienPatronUrlCommuniquePresse = '/en/actualites-salle-presse/communiques/';
+_lienPatronUrlTranscription = '/en/actualites-salle-presse/conferences-points-presse/';
+_lienPatronUrlEnDirect = '/en/video-audio/index';
+_lienJournalDebat ='/en/travaux-parlementaires/{0}.html';
+_lienJournalDebatCom ='/en/travaux-parlementaires/commissions/{0}/journal-debats/index';
+_lienJournalDebatChmbr ='/en/travaux-parlementaires/{0}';
+_listeObjetMetierPatronUrl = "DocumentGenerique:/en/document/{0}.html|Commission:/en/travaux-parlementaires/commissions/{0}/index.html|Mandat:/en/travaux-parlementaires/mandats/{0}/index.html|Lien:/en/lien/{0}.html|CommuniquePresse:/en/actualites-salle-presse/communiques/{0}.html|Actualite:/en/actualites-salle-presse/nouvelle/{0}.html|ConferencePointPresse:/en/actualites-salle-presse/conferences-points-presse/{0}.html|Consultation:/en/travaux-parlementaires/consultations/{0}.html|SeanceAssemblee:/en/travaux-parlementaires/assemblee-nationale/{0}/index.html|ProjetLoi:/en/travaux-parlementaires/projets-loi/projet-loi-{0}.html|VideoAudio:/en/video-audio/{0}.html|Journal:/en/travaux-parlementaires/{0}.html|SyndicationRSS:/en/rss/{0}.html|Petition:/en/exprimez-votre-opinion/petition/{0}/index.html|TermeEncyclopedique:/en/patrimoine/lexique/{0}.html|SectionDelegation:/en/diplomatie/{0}/{1}/index.html|Vote:/en/travaux-parlementaires/registre-des-votes/{0}/index.html|Depute:/en/deputes/{0}/index.html|Texte:/en/{0}.html|Individu:/en/patrimoine/anciens-parlementaires/{0}.html|";
+_lienAideSoutienTechnique = '/en/aide/aide-recherche.html#javascript';
+
+var _urlGetCalendrierObtenirActiviteEnOndes = '/WebMethod/Calendrier.aspx/ObtenirActiviteEnOndes';
+var intervalleRafraichissementWebDiffusion = '60';
+var urlPageVideoAudio = '/en/video-audio/index.html?activite={0}';
+var libelleDateDebutDu = 'From';
+var libelleDateDebutVers = 'Around';
+var libelleDateFinJusqua = 'until';
+var libelleDateFinAu = 'to';
+var libelleHeureFinA = 'to'
+var libelleDebutApresPeriodeCourante = '(Starts after Routine Proceedings) ';
+var bulleAidePeriodeAffaireCourante = '<span class="btnInfoBulle sansControle"><a href="javascript:void(0)" class="sanssouligne"> <img src="http://www.assnat.qc.ca/Images/btnInfoBulle.gif" title="Afficher l\'aide" alt="Afficher l\'aide"></a><span title="(Starts after Routine Proceedings)"></span></span>';
+var bulleAideApresAvisTravauxCommissions = '<span class="btnInfoBulle sansControle"><a href="javascript:void(0)" class="sanssouligne"> <img src="http://www.assnat.qc.ca/Images/btnInfoBulle.gif" title="Afficher l\'aide" alt="Afficher l\'aide"></a><span title="Début : après les avis touchant les travaux des commissions"></span></span>'
+var libelleActiviteReporteeDateUlterieure = 'Activity postponed to a later date';
+
+var libelleCalAPartirDe = 'Beginning at';
+var libelleCalEnCours = 'in progress';
+var libelleCalDebut = '';
+
+var libelleDuree = 'Duration:';
+
+    var libelleAucunVideo = "No search results.";
+    var libelleAucuneAutreActiviteEnDirect = "No other activity is being live-streamed at this time."
+
+var libelleNombreResultat = 'Results';
+var libelleMotsCles = 'Keywords';
+var libelleCategorie = 'Category';
+var libelleSession = 'Session';
+var libelleDateOuPeriode = 'Date or period: ';
+var libelleAPartirDu = 'From';
+var libelleJusquAu = "To";
+
+
+
+var arrCalendrierLblGeneral = {
+                                "lblCalOuvrir": "Open",
+                                "lblCalFermerEntete": "Close"       
+                            };
+var arrCalLblJoursSemaine = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+var arrCalLblMoisAnnee = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+var arrCalLblMoisAnneeAbr = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
+var lblCalAucuneActivite = "No activities scheduled today";
+var lblCalDifficulteTechnique = "Le calendrier n'est pas accessible en ce moment. Veuillez réessayer dans quelques minutes.";
+var lblCalActPrivee = "Private activity"; 
+var lblCalActSurInvitation = "By invitation";
+var lblCalActAnnulee = "Activity cancelled"; 
+var lblCalEnDirect = "Live streaming";
+var lblCalTranscription = "Transcription";
+var lblCalCommunique = "Press release";
+var lblCalToutesActivites = "All activities";
+var lblCalVideo = "Video";
+var lblCalAudio = "Audio";
+
+// Libellés du date picker
+
+    Date.dayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    Date.abbrDayNames = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
+    Date.monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    Date.abbrMonthNames = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
+	Date.firstDayOfWeek = 7;
+
+
+// Libellés pour treeview - overrider dans les pages au besoin
+var lblOuvrirTout = 'Display all content';
+var lblFermerTout = 'Hide all content';
+
+// Libelles pour paginateur
+var _lblPaginationPage = 'Page';
+var _lblPaginationDe = 'of';
+
+// URL drapeau generique 
+var _urlDrapeauGenerique = '/Images/Temp/icoDrapeaux.gif'
+
+// Pour visionneuse: libelle 'Image' utilise dans slimbox2.js
+var lblVisionneuseTermeImage = "Picture {x} of {y}"; 
+
+// Libelle pour le bouton Fermer de la visionneuse
+var libelleCloseLink = "Close";
+
+// Libellés pour fermer les bulles d'aide
+var lblBulleAideFermer = "[x] Close";
+
+var urlBoutonCalendrier = '/Images/btnCalendrier.gif';
+
+
+var urlObtenirVisionneusePhotos = '/Gabarits/InfrastructuresAvecVisionneuse.aspx/ObtenirVisionneusePhotos';
+var lblAlbumPhotos = 'Photo album';
+var lblAgrandir = 'Enlarge';
+
+// Le script d'effet ne fonctionne pas sous Internet Explorer, ce script distingue ie des autres fureteurs 
+ if ($.browser.msie) {
+    }
+    else {
+        document.write("<script type='text\/javascript' src='\/scripts/jquery.easing.min.js?version=1.3'><\/script>")
+    }
+//]]>
+ 
+    var valEtatDeputeAncienDeputes = "AncienDeputes";
+
+    var urlObtenirTypeTravauxParSessionLegislature = '/Gabarits/RechercheAvancee.aspx/ObtenirTypeTravauxParSessionLegislature';
+    var urlObtenirTypeTravauxParPeriode = '/Gabarits/RechercheAvancee.aspx/ObtenirTypeTravauxParPeriode';
+    var urlObtenirTypeDocumentParTypeTravaux = '/Gabarits/RechercheAvancee.aspx/ObtenirTypeDocumentParTypeTravaux';
+    var urlObtenirSousCategorieVideoParCategorieVideo = '/Gabarits/RechercheAvancee.aspx/ObtenirSousCategorieVideoParCategorieVideo';
+    
+    var idsSectionRechercheTravauxParlementaires = ['9',
+                                                        '27',
+                                                        '29',
+                                                        '31',
+                                                        '33'];
+
+    var idCategorieDocumentJournauxDebats = '13'
+
+    var msgFormatDateInvalide = "Enter date in yyyy-mm-dd format.";
+    var msgPeriodeInvalide = "Start date must precede end date.";
+    var msgPeriodeDebutFutur = "The date must be prior to or the same as today’s date.";
+
+    $(document).ready(function(){
+        $("a").each(function(i, e) {
+            var href = $(e).attr('href');
+            if(href && href.search(/^http:/) == 0){
+                $(e).attr('href', "https:" + href.substring(5));
+            }
+        })
+
+        $("img").each(function (i, e) {
+            var src = $(e).attr('src');
+            if (src && src.search(/^http:/) == 0) {
+                $(e).attr('src', "https:" + src.substring(5));
+            }
+            if (src && src.search(/^https+:/) == 0) {
+                $(e).attr('src', "https:" + src.substring(src.indexOf(":") + 1));
+            }
+        })
+    });
+</script><script type="text/javascript" src="/scripts/jquery.easing.min.js?version=1.3"></script><script type="text/javascript" async="" src="https://sdk.privacy-center.org/sdk/e6f9f80fe8cc8a77f24c2975076fb8b791b20d15/modern/sdk.e6f9f80fe8cc8a77f24c2975076fb8b791b20d15.js" charset="utf-8"></script>
+
+<!-- Gestion des cookies. Documentation : http://stilbuero.de/jquery/cookie/ -->
+<script type="text/javascript" src="/scripts/jquery.cookie.min.js"></script>
+
+<!-- Corrige les problème de z-index d'Internet Explorer. Doc: http://brandonaaron.net/jquery/plugins/bgiframe/docs/ -->
+<script type="text/javascript" src="/scripts/jquery.bgiframe.min.js"></script>
+
+<!-- Permet la gestion de l'objet date. -->
+<script type="text/javascript" src="/scripts/date.min.js"></script>
+
+<!-- Génère des paneaux (Tabs) à partir d'une liste (ul li). info et doc: http://docs.jquery.com/UI/Tabs-->
+<script type="text/javascript" src="/scripts/ui.tabs.js"></script>
+
+<!-- Génère l'affichage dynamique d'un liste (ul li). info et doc: http://bassistance.de/jquery-plugins/jquery-plugin-treeview/ -->
+<script type="text/javascript" src="/scripts/jquery.treeview.pack.min.js"></script>
+
+<!-- Permet de modifier la feuille de style. info et doc:http://kelvinluck.com/article/switch-stylesheets-with-jquery -->
+<script type="text/javascript" src="/scripts/StyleSwitcher.min.js"></script>
+
+<!-- Permet de modifier l'apparence des selects. info et doc:http://www.lotsofcode.com/javascript-and-ajax/jquery-select-box-skin.htm -->
+<script type="text/javascript" src="/scripts/jquery.skinned-select.min.js"></script>
+
+<!-- Permet de créer des masques sur les formulaires info et doc:http://digitalbush.com/projects/masked-input-plugin/ -->
+<script type="text/javascript" src="/scripts/jquery.maskedinput-1.2.2.min.js"></script>
+
+<!-- Permet de générer un calendrier. docs et info : http://kelvinluck.com/assets/jquery/datePicker/v2/demo/datePickerLocalised.html -->
+<script type="text/javascript" src="/scripts/jquery.datePicker.js"></script>
+
+<!-- Permet de gérer les bulles d'aide en popup -->
+<script type="text/javascript" src="/scripts/BulleAide.min.js"></script>
+
+<!-- Permet de modifier l'apparence des scrollbars. info et doc: http://www.kelvinluck.com/assets/jquery/jScrollPane/jScrollPane.html -->
+<script type="text/javascript" src="/scripts/jScrollPane.min.js"></script>
+
+<!-- Permet d'utiliser des PNG transparent dans IE 6 et 5.5. info et doc: http://jquery.andreaseberhard.de/pngFix/ -->
+<script type="text/javascript" src="/scripts/jquery.pngFix.min.js"></script>
+
+<!-- Permet de trier et de paginer des tableaux. docs et info : http://tablesorter.com -->
+<script type="text/javascript" src="/scripts/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="/scripts/jquery.tablesorter.pager.min.js"></script>
+
+<script type="text/javascript" src="/scripts/jquery.uilock.min.js"></script>
+
+<!-- script general -->
+<script type="text/javascript" src="/scripts/AssNat.min.js"></script>
+
+<script type="text/javascript" src="/Scripts/moment.min.js"></script>
+
+<!-- evenements et gestion du calendrier -->
+<script type="text/javascript" src="/scripts/Calendrier.min.js"></script>
+
+<!-- sert uniquement pour débugger les objets JSON. -->
+<script type="text/javascript" src="/scripts/json.min.js"></script>
+
+
+
+
+
+
+    <!-- Placeholder: permet d'ajouter des enonces specifiques dans le HEAD -->
+    
+
+    <!-- Feuille de style pour le layout de la page -->
+    
+	<link href="/styles/GabGauche-mCentre-l.min.css" rel="stylesheet" type="text/css" media="screen">
+
+
+    <!-- Placeholder: remplace automatiquement selon rubrique -->
+    <title>
+	
+            Terms of Use of Website Content - National Assembly of Québec
+        
+</title>
+        
+        <meta property="og:title" content="Terms of Use of Website Content - National Assembly of Québec">
+        <meta property="og:description" content="">
+        <meta property="og:image" content="https://www.assnat.qc.ca/Media/Process.aspx?process=Original&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz&amp;asset=ANQ.Vigie.Bll.Image_19205">
+<meta property="og:image" content="https://www.assnat.qc.ca/Media/Process.aspx?process=Original&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz&amp;asset=ANQ.Vigie.Bll.Image_19207">
+<meta property="og:image" content="https://www.assnat.qc.ca/Media/Process.aspx?process=Original&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz&amp;asset=ANQ.Vigie.Bll.Image_19209">
+<meta property="og:image" content="https://www.assnat.qc.ca/Media/Process.aspx?process=Original&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz&amp;asset=ANQ.Vigie.Bll.Image_19211">
+<meta property="og:image" content="https://www.assnat.qc.ca/Media/Process.aspx?process=Original&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz&amp;asset=ANQ.Vigie.Bll.Image_19213">
+<meta property="og:image" content="https://www.assnat.qc.ca/Media/Process.aspx?process=Original&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz&amp;asset=ANQ.Vigie.Bll.Image_19215">
+<meta property="og:image" content="https://www.assnat.qc.ca/Media/Process.aspx?process=Original&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz&amp;asset=ANQ.Vigie.Bll.Image_19217">
+
+    <style type="text/css">
+	.ctl00_SousNavigationPlaceHolder_SousNavigation_Menu1_0 { background-color:white;visibility:hidden;display:none;position:absolute;left:0px;top:0px; }
+	.ctl00_SousNavigationPlaceHolder_SousNavigation_Menu1_1 { text-decoration:none; }
+	.ctl00_SousNavigationPlaceHolder_SousNavigation_Menu1_2 {  }
+
+</style></head>
+
+<!-- Placeholder: permet de specifier un tag body personnalise (default: <body>) -->
+<body><div id="didomi-host" data-nosnippet="true" aria-hidden="true"></div>
+
+
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5X47H2N" height="0" width="0" style="display: none; visibility: hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<form method="post" action="/en/propos-site/droits-propriete-intellectuelle.html" id="aspnetForm">
+<div style="display: none;">
+<input type="hidden" name="versionProgrammationEnCache" id="versionProgrammationEnCache" value="0">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJMTIwNzIzOTQyD2QWAmYPZBYCAgMQZGQWAgILD2QWAgIJD2QWAmYPZBYCZg8VAjQvZnIvcHJvcG9zLXNpdGUvZHJvaXRzLXByb3ByaWV0ZS1pbnRlbGxlY3R1ZWxsZS5odG1sCUZyYW7Dp2Fpc2QYAQU0Y3RsMDAkU291c05hdmlnYXRpb25QbGFjZUhvbGRlciRTb3VzTmF2aWdhdGlvbiRNZW51MQ8PZAUxQWJvdXQgdGhlIFdlYnNpdGVcVGVybXMgb2YgVXNlIG9mIFdlYnNpdGUgQ29udGVudGS5gjbT+Snz8Yit4M4HwxSjd0qVzA==">
+</div>
+
+<div style="display: none;">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="F576E20B">
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAMbRLu+cgw5eonrQ5UvYfs93hH/puXvwl4FGZa6rYP8j7zfnYlPDIamE8E+dcJv2yNByhgHT9SzZrgMOT8EeaxoVmFmaQ==">
+</div>
+    <div id="Wrap">
+
+        <!-- Utilitaires: impression, agrandir texte, recherche, etc -->
+        
+
+
+<script type="text/javascript">
+    var motCleDefaut = 'Search';
+</script>
+
+<a name="haut"></a>
+<div id="enteteUtilitaire">
+    <div id="skip" class="skiplinks">
+        <a href="#ancreContenuPrincipal">Go to content</a>
+        <a href="#ancreSousNavigation">Go to secondary menu</a>               
+    </div>
+    <div class="listeUtilitaires listeUtilitaires2">
+        <ul>
+            <li class="Premier">
+                <a class="sanssouligne nePasRediriger icoMobile" href="https://m.assnat.qc.ca">
+                    <span class="styleHyperlien">Mobile</span>
+                </a>
+            </li>
+            <li>
+                <a href="/en/accueil/mediassociaux.html" class="sanssouligne icoMediasSociauxEntete">
+                    <span class="styleHyperlien">Follow us</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="listeUtilitaires">
+        <ul>
+            <li><a id="A2" href="https://www.assnat.qc.ca/carrieres">Careers</a></li>
+            <li><a href="/en/nous-joindre.html" id="ctl00_Utilitaires_A1">Contact us</a></li>
+            <li>
+                <div class="outilRecherche">
+                    <label for="ctl00_Utilitaires_motCle" class="nepasafficher">Enter keyword for general search</label>
+                    <input type="text" id="ctl00_Utilitaires_motCle" class="outilRechercheMotCle">
+                    <input onclick="RechercherMotCle();return false;" type="image" src="/Images/btnRecherche_of.gif" class="btnRechercheGlobal" title="Search" alt="Search">
+                </div>
+            </li>
+            <li>
+                <a onclick="LancerRechercheAvancee();return false;">Advanced search</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<script type="text/javascript">
+    function RechercherMotCle() {
+        var mot = $('#ctl00_Utilitaires_motCle');
+        if (mot.val() != "")
+        {
+            window.location = '/en/recherche/recherche-avancee.html?SectionRecherche=-1&MotsCles=' + encodeURIComponent(htmlEscape(mot.val()));
+        }
+    }
+
+    function LancerRechercheAvancee() {
+        var urlRechercheAvancee = '/en/recherche/recherche-avancee.html';
+        window.location = urlRechercheAvancee + "?EstNouvelleRecherche=true";
+    }
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- Banniere: image d'entete -->
+        
+<div id="Banniere_en">
+	<a href="/en/index.html" class="sanssouligne" title="National Assembly of Québec - Return to homepage">
+    <img class="nepasafficher" width="88" height="58" title="National Assembly of Québec - Return to homepage" alt="National Assembly of Québec - Return to homepage" src="/images/transparent.gif"></a>
+</div>
+
+
+        <!-- NavigationPrincipale: menu horizontal -->
+        
+
+<div id="NavigationPrincipaleConteneur">
+    <div id="NavPrincipaleNiveau1">
+        <ul>
+            <li class="btnAccueil">
+                <a href="/en/index.html" id="ctl00_NavigationPrincipale_hrfAcceuil">
+                    Home</a></li>
+            <li aria-haspopup="true" class="menuHoverParent btnDeputes"><a href="/en/deputes/index.html" id="ctl00_NavigationPrincipale_hrfDeputes" aria-haspopup="true">
+                Members</a>
+                <div class="menuHoverEnfant">
+                    
+                            <ul>
+<li><a href="https://www.assnat.qc.ca/en/lien/10006.html">President of the National Assembly</a></li>
+<li><a href="https://www.assnat.qc.ca/en/lien/10002.html#listeDeputes">List of MNAs in office</a></li>
+<li><a href="https://www.assnat.qc.ca/en/lien/11861.html">List of MNAs since 1764</a></li>
+<li><a href="https://www.assnat.qc.ca/en/lien/10002.html#listeDeputes">MNA Contact Information</a></li>
+<li><a href="https://www.assnat.qc.ca/en/lien/10042.html">The&nbsp;Office of MNA</a></li>
+<li><a href="https://www.assnat.qc.ca/en/lien/10014.html">Parliamentary Offices</a></li>
+<li><a href="https://www.assnat.qc.ca/en/lien/10020.html">Committee Makeup</a></li>
+<li><a href="https://www.assnat.qc.ca/en/lien/10028.html">Members of the Bureau de l'Assemblée</a></li>
+<li><a href="https://www.assnat.qc.ca/en/lien/10052.html">Indemnities and Allowances</a></li>
+<li><a href="https://www.assnat.qc.ca/en/deputes/cerclefemmes/index.html">Cercle des femmes parlementaires</a></li>
+<li><a href="https://www.assnat.qc.ca/en/lien/12661.html">Cercle des jeunes parlementaires</a></li>
+<li><a href="https://www.assnat.qc.ca/en/lien/10965.html">Cercle des ex-parlementaires de l’Assemblée nationale du Québec</a></li>
+<li><a href="https://www.assnat.qc.ca/en/lien/12603.html">Fondation Jean-Charles-Bonenfant </a></li>
+<li><a href="https://www.assnat.qc.ca/en/lien/12605.html">Fondation des parlementaires québécois Cultures à partager </a></li>
+</ul>
+                        
+                </div>
+            </li>
+            <li aria-haspopup="true" class="menuHoverParent btnTravaux">
+                <a href="/en/travaux-parlementaires/index.html" id="ctl00_NavigationPrincipale_hrfTravauxParlementaires" aria-haspopup="true">
+                    Parliamentary Proceedings</a>
+                <div class="menuHoverEnfant">
+                    
+                            <ul>
+<li><a href="https://www.assnat.qc.ca/en/lien/12119.html">Calendrier hebdomadaire des travaux</a></li>
+<li><a href="https://www.assnat.qc.ca/en/lien/12213.html">Journal des débats (Hansard)</a></li>
+<li><a href="https://www.assnat.qc.ca/en/lien/11867.html">Index du Journal des débats</a></li>
+<li><a href="https://www.assnat.qc.ca/en/lien/10114.html#procedure">Standing Orders of the National Assembly</a></li>
+<li><a href="https://www.assnat.qc.ca/en/lien/10114.html#procedure">Propos non parlementaires</a></li>
+<li><a href="https://www.assnat.qc.ca/en/lien/10044.html">Attending Proceedings</a></li>
+</ul>
+<ul>
+<li><a href="https://www.assnat.qc.ca/en/lien/10118.html"><strong>National Assembly&nbsp;Proceedings</strong></a> 
+<ul>
+<li><a href="https://www.assnat.qc.ca/en/lien/10118.html">All Assembly Sittings</a></li>
+<li><a href="https://www.assnat.qc.ca/en/lien/10198.html">Documents Tabled</a></li>
+<li><a href="https://www.assnat.qc.ca/en/lien/10192.html">Bills</a></li>
+<li><a href="https://www.assnat.qc.ca/en/lien/12215.html">Cheminement des projets de loi</a></li>
+<li><a href="https://www.assnat.qc.ca/en/lien/12779.html">Register of Recorded Divisions</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><strong><a href="https://www.assnat.qc.ca/en/lien/10126.html">Committee Proceedings</a></strong> 
+<ul>
+<li><a href="https://www.assnat.qc.ca/en/lien/10126.html">Committees</a></li>
+<li><a href="https://www.assnat.qc.ca/en/lien/11185.html">Current Orders</a></li>
+<li><a href="https://www.assnat.qc.ca/en/lien/10198.html">Documents Tabled</a></li>
+<li><a href="https://www.assnat.qc.ca/en/lien/10140.html">Reports and Discussion Papers</a></li>
+</ul>
+</li>
+</ul>
+                        
+                </div>
+            </li>
+            <li aria-haspopup="true" class="menuHoverParent btnExprimez">
+                <a href="/en/exprimez-votre-opinion/index.html" id="ctl00_NavigationPrincipale_hrfExprimezVotreOpinion" aria-haspopup="true">
+                    Voice Your Opinion!</a>
+                <div class="menuHoverEnfant">
+                    
+                            <ul>
+<li><strong><a href="https://www.assnat.qc.ca/en/lien/10999.html">Petitions</a></strong> 
+<ul>
+<li><a href="https://www.assnat.qc.ca/en/lien/11001.html">Signing an E-Petition</a></li>
+<li><a href="https://www.assnat.qc.ca/en/lien/11003.html">Consulting a Petition Presented in the National Assembly</a></li>
+<li><a href="https://www.assnat.qc.ca/en/lien/10108.html">Starting a Petition</a></li>
+<li><a href="https://www.assnat.qc.ca/en/lien/11009.html">Following a Petition's Path</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><strong><a href="https://www.assnat.qc.ca/en/lien/10901.html">Public Consultations</a></strong> 
+<ul>
+<li><a href="https://www.assnat.qc.ca/en/lien/10901.html#TakingPart">Taking Part in a Consultation</a></li>
+<li><a href="https://www.assnat.qc.ca/en/lien/10126.html">List of Public Consultations</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><strong><a href="https://www.assnat.qc.ca/en/lien/10997.html">Commenting on a Subject under Study</a></strong></li>
+</ul>
+<ul>
+<li><strong><a href="https://www.assnat.qc.ca/en/lien/10110.html">Introducing a Private Bill</a></strong></li>
+</ul>
+                        
+                </div>
+            </li>
+            <li aria-haspopup="true" class="menuHoverParent btnVideoAudio">
+                <a href="/en/video-audio/index.html" id="ctl00_NavigationPrincipale_hrfVideoAudio" aria-haspopup="true">
+                    Video</a>
+                <div class="menuHoverEnfant">
+                    
+                            <ul>
+<li><a href="https://www.assnat.qc.ca/en/lien/12541.html"><strong>Live Streaming and Webcasts </strong></a></li>
+<li><a href="https://www.assnat.qc.ca/en/lien/12543.html"><strong>Archives of Parliamentary Proceedings and Activities</strong></a> 
+<ul>
+<li><a href="https://www.assnat.qc.ca/en/lien/12545.html">National Assembly Proceedings</a> </li>
+<li><a href="https://www.assnat.qc.ca/en/lien/12559.html">Parliamentary Committee Proceedings </a></li>
+<li><a href="https://www.assnat.qc.ca/en/lien/12547.html">Media Activities</a> </li>
+<li><a href="https://www.assnat.qc.ca/en/lien/12549.html">Special and Institutional Events </a></li>
+<li><a href="https://www.assnat.qc.ca/en/lien/12551.html">Members</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><a href="https://www.assnat.qc.ca/en/lien/12553.html"><strong>National Assembly Channel</strong></a> </li>
+</ul>
+<ul>
+<li><a href="https://www.assnat.qc.ca/en/lien/12555.html"><strong>Promotional Programs and Capsules</strong></a> </li>
+</ul>
+<ul>
+<li><a href="https://www.assnat.qc.ca/en/lien/12561.html"><strong>Youth Section</strong></a> </li>
+</ul>
+<ul>
+<li><a href="https://www.assnat.qc.ca/en/lien/11183.html"><strong>Ordering a Video Excerpt</strong></a> </li>
+</ul>
+                        
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+        <!-- PlaceHolder: permet de masquer le calendrier sommaire (defaut: s'affiche) -->
+        
+				
+
+<script type="text/javascript">
+</script>
+
+<div class="calendrier calSommaire" id="Calendrier">
+    <div class="titreCalendrier" id="TitreCalendrier">
+        <ul>
+            <li class="btnCalendrier" id="btnCalendrier">
+                <a href="javascript:void(0)" id="ctl00_CalendrierSommaire_CalendrierSommaire1_LienCalendrier">
+                    Calendar
+                    <p class="libelleOuvrirFermer">
+                    Open</p></a>
+            </li>
+        </ul>
+    </div>
+    <div class="contenuCalendrier" id="ContenuCalendrier">
+        <div class="contenuCalendrierInterne" style="">
+            <div class="overlayCalendrier">
+                <p class="contenuOverlay">
+                    <img src="/Images/lightbox/loading.gif" alt="Loading" title="Loading">
+                </p>
+            </div>
+            <div class="blocAssembleeEnDirect">
+                <ul class="listeIconesHorizontale">
+                    <li id="IconeEnDirectCalendrier" class="icoEnDirectInactif"><span id="spnEnDirectCalendrier" class="couleurTexteNormal">
+                        Live streaming</span></li>
+                    <li><a class="anchorCalendrierDetaille" href="/en/calendrier-detaille.html">
+                        Detailed Calendar</a></li>
+                </ul>
+            </div>
+            <div class="blocNavigateurDates">
+                <div>
+                    <p id="ConteneurCalendrierPopup">
+                        <span class="calendrierPopup dp-applied"></span><a href="#" class="sanssouligne dp-choose-date cacherPourImpression"><img alt="Choose a date" title="Choose a date" src="/Images/btnCalendrier.gif">Choose a date</a>
+                    </p>
+                    <h2 id="TitreDateDuJour">_date_du_jour
+                    </h2>
+                </div>
+                <ul>
+                    <li class="versGauche"><a href="#" class="dateNavigateur fleche" id="dateNavGauche"><img alt="Previous week" title="Previous week" src="/Images/transparent.gif" width="15" height="25"></a></li>
+                        
+                    <li><a class="dateNavigateur" id="dateNavDi" title="_dimanche" href="#">
+                        <span class="overlayJour overlayJourSommaire"></span>
+                        <span class="libelleJournee">SUN</span><br>
+                        <span class="libelleDate">6</span></a></li>
+                        
+                    <li><a class="dateNavigateur" id="dateNavLu" title="_lundi" href="#">
+                        <span class="overlayJour overlayJourSommaire"></span>
+                        <span class="libelleJournee">MON</span><br>
+                        <span class="libelleDate">7</span></a></li>
+                        
+                    <li><a class="dateNavigateur" id="dateNavMa" title="_mardi" href="#">
+                        <span class="overlayJour overlayJourSommaire"></span>
+                        <span class="libelleJournee">TUE</span><br>
+                        <span class="libelleDate">8</span></a></li>
+                        
+                    <li><a class="dateNavigateur" id="dateNavMe" title="_mercredi" href="#">
+                        <span class="overlayJour overlayJourSommaire"></span>
+                        <span class="libelleJournee">WED</span><br>
+                        <span class="libelleDate">9</span></a></li>
+                        
+                    <li><a class="dateNavigateur" id="dateNavJe" title="_jeudi" href="#">
+                        <span class="overlayJour overlayJourSommaire"></span>
+                        <span class="libelleJournee">THU</span><br>
+                        <span class="libelleDate">10</span></a></li>
+                        
+                    <li><a class="dateNavigateur" id="dateNavVe" title="_vendredi" href="#">
+                        <span class="overlayJour overlayJourSommaire"></span>
+                        <span class="libelleJournee">FRI</span><br>
+                        <span class="libelleDate">11</span></a></li>
+                        
+                    <li><a class="dateNavigateur" id="dateNavSa" title="_samedi" href="#">
+                        <span class="overlayJour overlayJourSommaire"></span>
+                        <span class="libelleJournee">SAT</span><br>
+                        <span class="libelleDate">12</span></a></li>
+                        
+                    <li class="versDroite"><a href="#" class="dateNavigateur fleche" id="dateNavDroite">
+                        <img alt="Following week" title="Following week" src="/Images/transparent.gif" width="15" height="25"></a></li>
+                </ul>
+                <span class="aujourdhui"><a class="aujourdhuiLien" href="">
+                    Today</a></span>
+            </div>
+            <hr>
+            <div class="blocEnCours" style="display: none">
+                <div class="blocEnCoursTitre">
+                    <h3 id="HeureEnCours" class="heure">_heure_en_cours
+                    </h3>
+                    <h3>
+                        In Progress</h3>
+                </div>
+                <div class="boiteDefilante">
+                </div>
+            </div>
+            <div class="blocActivitesDuJour">
+                <h3><label for="ctl00_CalendrierSommaire_CalendrierSommaire1_selectFiltreCategorieActivite">Today's Activities</label></h3>
+                <div class="skinned-select">
+                    <div class="select-text">All activities</div><select name="ctl00$CalendrierSommaire$CalendrierSommaire1$selectFiltreCategorieActivite" id="ctl00_CalendrierSommaire_CalendrierSommaire1_selectFiltreCategorieActivite" class="selectFiltreCategorieActivite"><option value="*">All activities</option><option value="catD">Other activities</option><option value="catC">Press conferences and briefings</option><option value="catA">Assembly sittings</option><option value="catB">Committee sittings</option></select>
+                </div>
+                <div class="boiteDefilante">
+                </div>
+            </div>
+            <div class="blocExpositions" style="display: none">
+                <h3>
+                    Exhibitions</h3>
+                <div id="listeExpositions">
+                </div>
+            </div>
+            <div class="blocSurLesTours" id="BlocSurLesTours" style="display: none">
+                <h3>
+                    Flag(s) flying above the Parliament Building</h3>
+                <div id="listeDrapeaux">
+                </div>
+            </div>
+        </div>
+        <p id="calendrierNoJs" style="display: none;">
+            To use the Calendar, Javascript must be activated in your browser.<br>
+            <a href="/en/aide/aide-recherche.html#javascript">
+                For more information</a>
+        </p>
+    </div>
+</div>
+
+			
+
+        <!-- NavigationPrincipaleNiveau2: menu horizontal -->
+        
+
+<div id="NavigationPrincipaleNiveau2Conteneur">
+    <div id="NavPrincipaleNiveau2">
+        <ul>
+            <li class="" id="lienABC"><a href="/en/abc-assemblee/index.html" id="ctl00_NavigationPrincipaleNiveau2_hrfABCDeLassemblee">
+                The ABC of the Assembly</a></li>
+            <li class="" id="lienVisiteurs"><a href="/en/visiteurs/index.html" id="ctl00_NavigationPrincipaleNiveau2_hrfVisiteurs">
+                Visitors</a></li>
+            <li class="" id="lienRestaurants"><a href="/en/visiteurs/restaurants/index.html" id="ctl00_NavigationPrincipaleNiveau2_hrfRestaurants">
+                Restaurants</a></li>
+            <li class="" id="lienActualites"><a href="/en/actualites-salle-presse/index.html" id="ctl00_NavigationPrincipaleNiveau2_hrfActualiteEtSalleDePresse">
+                News and Press Room</a></li>
+            <li class="" id="lienBibliotheque">
+                <a href="/en/bibliotheque/index.html" id="ctl00_NavigationPrincipaleNiveau2_hrfBibliotheque">
+                    Library</a></li>
+            <li class="" id="lienPublications">
+                <a href="/en/publications/index.html" id="ctl00_NavigationPrincipaleNiveau2_hrfPublications">
+                    Publications</a></li>
+            <li class="" id="lienEducatives">
+                <a href="https://www.paricilademocratie.com" id="ctl00_NavigationPrincipaleNiveau2_hrfActivitesEducatives">
+                    Éducation</a></li>
+            <li class="" id="lienInternational">
+                <a href="/en/diplomatie/index.html" id="ctl00_NavigationPrincipaleNiveau2_hrfInternational">
+                    Diplomacy</a></li>
+            <li class="" id="lienHistoire"><a href="/en/patrimoine/index.html" id="ctl00_NavigationPrincipaleNiveau2_hrfHistoire">
+                History</a></li>
+        </ul>
+    </div>
+</div>
+
+
+        <!-- FilAriane: affiche le fil d'ariane -->
+        
+				
+<div id="FilAriane" class="FilAriane">
+<span id="ctl00_FilAriane_FilAriane1_SiteMapPath1"><span><a href="/en/index.html">Home</a></span><span> &gt; </span><span><a href="/en/propos-site/index.html">About the Website</a></span><span> &gt; </span><span>Terms of Use of Website Content</span></span>
+</div>
+			
+
+        
+            
+
+        <!-- Ancre pour le "skiplink atteindreSousNavigation" -->
+        <div id="divAncreSousNavigation" class="skipLinks">
+            <a name="ancreSousNavigation" id="ancreSousNavigation"></a>
+        </div>
+
+        <div class="ColGauche colonne">
+
+            <!-- PlaceHolder: permet de masquer la navigation secondaire (defaut: s'affiche) -->
+            
+                    
+<div id="SousNavigation" class="ContenuNavigation SousNavigation treeview">
+
+
+	
+	<ul>
+		<li class="collapsable lastCollapsable">
+			<h2><a href="/en/propos-site/index.html" class="selected">
+				About the Website</a></h2>
+			<ul style="display: block;">
+				<li>
+					<a href="/en/propos-site/politique-editoriale.html" class="">
+						Editorial Policy</a>
+				</li>
+				<li>
+					<a href="/en/propos-site/accessibilite.html" class="">
+						Accessibility</a>
+				</li>
+				<li>
+					<a href="/en/propos-site/politique-confidentialite.html" class="">
+						Privacy Policy</a>
+				</li>
+				<li>
+					<a href="/en/propos-site/droits-propriete-intellectuelle.html" class="selected">
+						Terms of Use of Website Content</a>
+				</li>
+				<li class="last">
+					<a href="/en/propos-site/qui-peut-consulter-cette-page.html" class="">
+						Who may consult this page?</a>
+				</li>
+			</ul>
+		</li>
+	</ul>
+
+	
+  <div class="clear"></div>
+</div>
+
+
+<script type="text/javascript">
+
+</script>        
+				
+
+            <!-- PlaceHolder: permet d'ajouter du contenu sous la navigation secondaire (defaut: vide) -->
+            
+
+        </div>
+
+        <div class="ColCentre colonne Contenu">
+
+            <!-- PlaceHolder: permet d'afficher une accroche (defaut: vide) -->
+            
+
+            <!-- PlaceHolder: conteneur pour tout le contenu excepte la navigation -->
+            
+	            				
+					<!-- PlaceHolder: permet de masquer les utilitaires d'Assemblee (defaut: s'affiche) -->
+					
+						
+
+<div class="utilitairesAssemblee" id="utilitairesAssemblee">
+    <div id="ColIconesUtilitairesAssemblee">
+        <div id="ColOutilsUtilitairesAssemblee">
+            <ul class="utilitairesAssemblee listeSansPuces">
+                <li>
+                    <a href="javascript:ImprimerBase()">
+			            <img alt="Print page" title="Print page" src="/Images/icones/partageImprimante.gif" width="16" height="16"></a>
+                </li>
+                <li class="styleswitch">
+                    <a href="#Reguliere" rel="Reguliere" class="styleswitch Reguliere">
+                        <img alt="Text size: regular" title="Text size: regular" src="/Images/icones/retrecir.gif" width="16" height="16"></a>
+                    <a href="#Grande" rel="Grande" title="Taille du texte : très grande" class="styleswitch Grande">
+                        <img alt="Taille du texte : très grande" title="Taille du texte : très grande" src="/Images/icones/agrandir.gif" width="16" height="16"></a>
+                </li>
+                <li>
+                    <a href="/en/fils-rss.html" class="nePasRediriger">
+                        <img alt="RSS feeds" title="RSS feeds" src="/Images/icones/partageRss.gif" width="16" height="16"></a>
+                </li>
+            </ul>
+        </div>
+  
+            
+        <div id="ColPartageUtilitairesAssemblee">
+            <div class="boutonPartager">
+                <a href="#">Share</a>
+            </div>
+            <ul class="utilitairesAssemblee listeSansPuces" style="z-index:999;">
+                <div class="fleche"></div>
+                
+                
+                    <li>
+                        <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://assnat.qc.ca%2fen%2fpropos-site%2fdroits-propriete-intellectuelle.html" class="nePasRediriger">
+                            <img alt="Share on Facebook" title="Share on Facebook" src="/Images/icones/partageFacebook.gif"></a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://twitter.com/home?status=http://assnat.qc.ca%2fen%2fpropos-site%2fdroits-propriete-intellectuelle.html" class="nePasRediriger">
+                            <img alt="Share on Twitter" title="Share on Twitter" src="/Images/icones/partageTwitter.gif"></a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.linkedin.com/cws/share?url=http://assnat.qc.ca%2fen%2fpropos-site%2fdroits-propriete-intellectuelle.html" class="nePasRediriger">
+                            <img alt="Share on LinkedIn" title="Share on LinkedIn" src="/Images/icones/partageLinkedin.gif"></a>
+                    </li>
+            </ul>
+        </div>
+        
+    </div>
+    <div id="ColLiensUtilitairesAssemblee">
+        <ul class="listeIconesHorizontale listeIconesHorizontaleUtilitaires listeSansPuces">
+            <!-- Icone "Diagramme de l'Assemblée" -->
+		    
+			    <li class="icoDiagramme">
+                    <a href="/en/document/19787.html">Seat plan of the Assembly (French only)</a>
+                </li>
+		    
+
+            <li id="IndicateurEnDirectPage">
+                <span id="spnEnDirect" class="couleurTexteNormal">
+		            <span id="IconeEnDirect" class="icoEnDirectInactif"> </span>		
+		            Live on the Web
+	            </span>
+            </li>
+            <!-- Section "Vidéo et audio" -->
+            
+        </ul>
+    </div>
+</div>        
+					
+
+                    <!-- Ancre pour le "skiplink atteindreContenu" -->
+                    <div id="divAncreContenuPrincipal" class="skipLinks">
+                        <a name="ancreContenuPrincipal" id="ancreContenuPrincipal"></a>
+                    </div>
+
+                    <!-- Note sur les titres H1: dans ce gabarit, il y a 2 emplacements possibles pour le H1. Le cas
+						 le plus usuel est généré par défaut. Si necessaire, overrider dans la page ASPX -->
+			
+					<!-- PlaceHolder: permet d'afficher le titre sur les 2 colonnes. Cas plus rare. (default: vide) -->
+					
+
+					<!-- PlaceHolder: permet d'afficher le texte en dessus des colonnes -->
+					
+					
+					<div class="conteneurColonnesImbriquees">		
+                        <div class="colonneImbriquee imbGauche">
+
+							<!-- PlaceHolder: permet d'afficher le titre sur 1 colonne. Cas usuel. (default: s'affiche) -->
+							
+    
+		
+				
+
+<h1 class="">
+	<span id="ctl00_ColCentre_TitreSurUneColonne_rptTitreRubrique_ctl00_TitrePrincipalContenu1_SiteMapPathTitreContenu"><span>Terms of Use of Website Content</span></span></h1>
+    
+    
+			
+		
+
+
+							<!-- PlaceHolder: contenu principal de la page (defaut: vide) -->
+							
+
+	
+			<p>Users of the Assemblée nationale website must accept the terms of use set out below. As these may be modified at any time, users are encouraged to visit this web page regularly.</p>
+<h2>General Terms of Use</h2>
+<p>All content posted by the Assemblée nationale on its website, including</p>
+<ul>
+<li>texts,</li>
+<li>publications (promotional brochures, educational resources,&nbsp;etc.) and official documents, including  
+<ul>
+<li><a href="https://www.assnat.qc.ca/en/lien/10192.html">bills</a>,</li>
+<li>the <a href="https://www.assnat.qc.ca/en/lien/10078.html#JDD">Journal des débats</a> (Hansard),&nbsp;and</li>
+<li>other parliamentary documents,</li>
+</ul>
+</li>
+<li>images (including the Assemblée’s logo),</li>
+<li>videos and audio files, and&nbsp;</li>
+<li>data,</li>
+</ul>
+<p>is the property of the State (the Assemblée nationale). Unless otherwise indicated, the rights of the Assemblée nationale apply to all documents, data, compilations and other works that it produces, publishes, disseminates or shares, whether the documents are official or administrative, or of any other kind.</p>
+<p>The Assemblée nationale authorizes the reproduction of these works, free of charge, under the following conditions:</p>
+<ul>
+<li>the use is reasonable, fair, non-commercial and non-profit,</li>
+<li>the content is not modified or altered,</li>
+<li>the use does not adversely affect the honour or reputation of the Assemblée nationale or of the persons whose likeness or voice is found on the institution’s website, and</li>
+<li>the medium of dissemination credits the Assemblée nationale du Québec as its source.</li>
+</ul>
+<p>This permission is valid both for documents prepared by the Assemblée nationale and for documents prepared by a third party that has transferred the copyright or granted a user license to the Assemblée nationale.</p>
+<p>The use of content from the Assemblée nationale is subject to Canadian intellectual property laws and to parliamentary privilege. Every user of Assemblée nationale content must comply with the legislation in force and, in particular, is responsible for determining whether a person or entity other than the Assemblée nationale has intellectual property rights in the content used.</p>
+<p>The Assemblée nationale logo may not be used without prior permission from the Assemblée nationale.</p>
+<p>The <strong>reproduction</strong> of Assemblée nationale, committee or subcommittee debates for the purpose of broadcasting them in whole or in part <strong>does not require the permission</strong> of the Assemblée nationale, subject to sections 48 and 49 of the <em><a href="https://www.assnat.qc.ca/en/lien/11145.html">Act respecting the National Assembly</a></em> (CQLR,&nbsp;chapter&nbsp;A-23.1).</p>
+<p>Any other use of these debates requires the permission of the Assemblée nationale.</p>
+<h2>Terms of Use of Content for Commercial Purposes</h2>
+<p>Content published on the Assemblée nationale website may not be used for commercial or promotional purposes without prior permission from the Assemblée nationale. This also holds for images (photos, videos, diagrams, tables, etc.) and&nbsp;bills.</p>
+<p>Requests for permission must be emailed to <a href="mailto:renseignements@assnat.qc.ca">renseignements@assnat.qc.ca</a>.</p>
+<h2>Integrity of Information</h2>
+<p>The Assemblée nationale</p>
+<ul>
+<li>guarantees the integrity of the information at the time it is posted on the website but not after that time; and</li>
+<li>is not responsible for documents, data or other content that are modified in any way before or after they are downloaded.</li>
+</ul>
+<p>In the case of discrepancies, the official text takes precedence over the content of the Assemblée nationale website.</p>
+<h2>Exclusion of Liability</h2>
+<p>The content on the Assemblée nationale website is provided for information purposes only.</p>
+<p>The Assemblée nationale cannot be held responsible for the use of information contained on this website. The user is responsible for complying with all applicable obligations.</p>			
+		
+	
+
+							
+						</div>
+						
+						<div class="colonneImbriquee imbDroite">
+						
+							<!-- PlaceHolder: contenu secondaire de la page (defaut: vide) -->
+							
+						</div>
+
+					</div>
+
+					<!-- PlaceHolder: permet d'afficher du texte en dessous des colonnes -->
+					
+
+					<!-- PlaceHolder: contenu en complement de la page -->
+					
+	
+
+
+
+
+				
+        </div>
+
+        <!-- N'est plus utilisee a cause des utilitaire d'assemblee qui doivent spanner col centre + col droite -->
+        <div class="ColDroite colonne"></div>
+
+        <div class="clear" id="ClearPiedPage"></div>
+
+        <!-- Bandeau lorsque la langue est différente que français -->
+        
+        <div class="lien-page-exception">
+            <a href="/en/propos-site/qui-peut-consulter-cette-page.html">Who may consult this page?</a>
+        </div>
+        
+
+        <!-- PiedDePage: affiche le contenu du pied de page -->
+        
+
+<div id="PiedDePage" class="PiedDePage">
+    <ul>
+        <li class="Premier">
+            <a href="/en/fils-rss.html" class="sanssouligne icoFilsRss">
+                <span class="styleHyperlien">RSS Feeds</span>
+            </a>
+        </li>
+        
+        <li><a href="/en/liens-interet.html">Links of Interest</a></li>
+        <li><a href="/en/aide/index.html">Help</a></li>
+        <li><a href="/en/plan-site.html">Site Map</a></li>
+        
+        <li><a href="/en/propos-site/accessibilite.html">Accessibility</a></li>
+        <li><a href="/en/abc-assemblee/acces-information/index.html">Access to Information</a></li>
+    </ul>
+    <br>
+    <ul>
+        
+        <li class="Premier"><a href="/en/propos-site/index.html">About the Website</a> </li>
+        <li><a href="/en/propos-site/droits-propriete-intellectuelle.html">Terms of Use</a></li>
+        <li><a href="/en/propos-site/politique-confidentialite.html">Privacy Policy</a></li>
+        <li><a href="https://m.assnat.qc.ca">Mobile</a></li>
+    
+        
+            <li><a href="/fr/propos-site/droits-propriete-intellectuelle.html">Français</a></li>
+        
+
+    </ul>
+
+    <br>
+    <span class="NonVisible">
+        
+                <ul>
+            
+                <li class="Premier">Date of last modification : April 20, 2009 </li>
+            
+                </ul>
+            
+    </span>
+</div>
+
+
+<script type="text/javascript">
+
+    //Forcer l'affichage du popup Didomi dans la langue de la page affichée au lieu du langage du fureteur de l'utilisateur
+    var langage = $('html').attr('lang');
+
+    $(document).ready(function(){
+        if (langage == 'fr') {
+            window.didomiConfig = {
+                languages: {
+                    enabled: ['fr'],
+                    default: 'fr'
+                }
+            };
+        } else {
+            window.didomiConfig = {
+                languages: {
+                    enabled: ['en'],
+                    default: 'en'
+                }
+            };
+        }
+    })
+    
+</script>
+
+    </div>
+</form>
+
+
+	            				
+    
+
+
+<div class="infoBulle" id="infoBulle" style="display:none"><div class="fermerBulle"><a href="javascript:void(0);" id="tme">[x] Close</a></div><p>&nbsp;</p></div><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Assemblée nationale du Québec",
+  "url": "https://assnat.qc.ca/",
+  "logo": "https://assnat.qc.ca/Images/logo_blanc_Assemblee_nationale_du_Quebec.png",
+  "sameAs": [
+    "https://www.facebook.com/AssnatQc",
+    "https://twitter.com/AssnatQc",
+    "https://www.instagram.com/assnatqc/",
+    "https://www.linkedin.com/company/assemblee-nationale-du-quebec"
+  ],
+  "contactPoint": [
+    {
+      "@type": "ContactPoint",
+      "telephone": "4181-643-7239",
+      "contactType": "customer service",
+      "email": "renseignements@assnat.qc.ca",
+      "areaServed": "CA",
+      "availableLanguage": "fr"
+    }
+  ]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "WebSite",
+  "name": "Assemblée nationale du Québec",
+  "url": "https://assnat.qc.ca/",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://assnat.qc.ca/{search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script><script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Assemblée nationale du Québec",
+            "item": "https://assnat.qc.ca/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Députés",
+            "item": "https://assnat.qc.ca/fr/deputes/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Travaux parlementaires",
+            "item": "https://assnat.qc.ca/fr/travaux-parlementaires/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Exprimez-votre opinion",
+            "item": "https://assnat.qc.ca/fr/exprimez-votre-opinion/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Visiteurs",
+            "item": "https://assnat.qc.ca/fr/visiteurs/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Vidéo en direct",
+            "item": "https://assnat.qc.ca/fr/video-audio/en-direct-webdiffusion.html"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Calendrier",
+            "item": "https://assnat.qc.ca/fr/calendrier-detaille.html"
+        }
+    ]
+}
+</script>
+<script type="text/javascript" id="">var _paq=window._paq=window._paq||[];_paq.push(["trackPageView"]);_paq.push(["enableLinkTracking"]);(function(){var c="https://stats.assnat.qc.ca/piwik/";_paq.push(["setTrackerUrl",c+"matomo.php"]);_paq.push(["setSiteId","3"]);var a=document,b=a.createElement("script");a=a.getElementsByTagName("script")[0];b.type="text/javascript";b.async=!0;b.src=c+"matomo.js";a.parentNode.insertBefore(b,a)})();</script>
+</body></html>

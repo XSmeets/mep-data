@@ -1,0 +1,57 @@
+<html lang="cs"><head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="shortcut icon" href="/favicon.ico">
+		<title>Nastavení souhlasu s personalizací</title>
+
+		<style>
+			body {
+				height: 100%;
+				margin: 0;
+				overflow: hidden;
+			}
+
+			.scmp-layer {
+				background-color: unset;
+			}
+
+			iframe#site-iframe {
+				height: 100vh;
+				width: 100vw;
+				pointer-events: none;
+				-webkit-filter: blur(3px);
+				filter: blur(3px);
+			}
+		</style>
+	<style id="scmp-noscroll">.scmp-noscroll { height: 100vh; height: -webkit-fill-available; margin: 0; overflow: hidden; }</style></head>
+	<body class="scmp-noscroll">
+<!--		<script>-->
+<!--			if ('URLSearchParams' in window) {-->
+<!--				var urlParams = new URLSearchParams(window.location.search);-->
+<!--				var returnUrl = decodeURIComponent(urlParams.get('return_url'));-->
+
+<!--				if (returnUrl && returnUrl !== 'null') {-->
+<!--					var iframe = document.createElement('iframe');-->
+<!--					iframe.setAttribute('src', returnUrl);-->
+<!--					iframe.setAttribute('id', 'site-iframe');-->
+<!--					iframe.setAttribute('frameborder', '0');-->
+<!--					iframe.setAttribute('sandbox', '');-->
+
+<!--					document.body.appendChild(iframe);-->
+<!--				}-->
+<!--			}-->
+<!--		</script>-->
+		<script src="https://h.seznam.cz/js/dot-small.js"></script>
+		<script>
+			function handleScriptError() {
+				const paragraph = document.createElement('p');
+				paragraph.style = 'border: 2px solid black; font-size: 1.2rem; font-weight: bold; padding: 1rem; text-align: center'
+				paragraph.innerText = 'Pravděpodobně používáte rozšíření či blokátory, jež mohou ovlivňovat načtení této stránky. Pro správnou funkčnost prosíme, deaktivujte všechna tato rozšíření a zkuste stránku načíst znovu.'
+
+				document.body.appendChild(paragraph);
+			}
+		</script>
+		<script id="scmp-cw" src="https://h.seznam.cz/js/cmp2/scmp-cw.js" onerror="handleScriptError()" onabort="handleScriptError()"></script>
+	
+
+<div class="szn-cmp-dialog-container" style="margin: unset; padding: unset; width: unset; height: 100%;"></div></body></html>

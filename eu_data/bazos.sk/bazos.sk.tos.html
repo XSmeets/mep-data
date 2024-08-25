@@ -1,0 +1,407 @@
+<html lang="sk"><head>
+<title>Podmienky - Bezplatná inzercia | Bazos.sk</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="Bezplatná inzercia, online bazár - kúpte si nový byt alebo predaj staré auto, toto všetko hravo zvládne náš Bazoš - Vaše inzeráty.">
+<meta name="google-play-app" content="app-id=cz.ackee.bazos">
+<meta name="apple-itunes-app" content="app-id=1195042966">
+<meta property="fb:admins" content="1055875657">
+<meta property="og:image" content="https://www.bazos.sk/obrazky/bazoslogoface.png">
+<link rel="stylesheet" href="https://www.bazos.sk/bazos63hp.css" type="text/css"><link rel="preload" as="image" href="https://www.bazos.sk/obrazky/bazos.svg">
+<link rel="icon" href="https://www.bazos.sk/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="https://www.bazos.sk/favicon.ico" sizes="32x32">
+<link rel="apple-touch-icon" href="https://www.bazos.sk/apple-touch-icon.png">
+<link rel="search" type="application/opensearchdescription+xml" href="https://www.bazos.sk/search.xml" title="Bazoš.sk">
+
+<script>
+var xhr = new XMLHttpRequest();
+var naseptavac_value = '';
+function naseptavac(value) {
+  if (value=='')  {
+  	naseptavac_value = '';
+  	document.getElementById('vysledek').innerHTML='';
+  	}
+else {
+	if (naseptavac_value == value) {
+		return false;
+	}
+	naseptavac_value = value;
+	setTimeout(function () {
+		if (naseptavac_value != value) {
+			return false;
+		}
+		xhr.onreadystatechange = function() {
+ 		 if (this.readyState == 4 && naseptavac_value == value){
+				document.getElementById('vysledek').innerHTML = this.responseText;
+			}
+ 		 };
+		xhr.open("POST", '/suggest.php');
+		xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+		xhr.send('rubnas=HP&qnas='+encodeURIComponent(naseptavac_value));
+	}, 250);
+}
+}
+
+var naseptavacpsc_value = '';
+function naseptavacpsc(value) {
+  if (value=='')  {
+  	naseptavacpsc_value = '';
+  	document.getElementById('vysledekpsc').innerHTML='<table cellpadding=\"3\" cellspacing=\"0\" class=\"tablenaspsc\"><tr><td class=\"act\" onclick=\"getLocation();\"><b>Inzeráty v okolí</b></td></tr></table>';
+  	}
+else {
+	if (naseptavacpsc_value == value) {
+		return false;
+	}
+	naseptavacpsc_value = value;
+	setTimeout(function () {
+		if (naseptavacpsc_value != value) {
+			return false;
+		}
+		xhr.onreadystatechange = function() {
+ 		 if (this.readyState == 4 && naseptavacpsc_value == value){
+				document.getElementById('vysledekpsc').innerHTML = this.responseText;
+			}
+ 		 };
+		xhr.open("POST", '/suggestpsc.php');
+		xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+		xhr.send('qnaspsc='+encodeURIComponent(naseptavacpsc_value));
+	}, 250);
+}
+}
+
+function getLocation() {
+if (navigator.geolocation) {navigator.geolocation.getCurrentPosition(showPosition);}
+else {document.getElementById('hlokalita').value = '';}
+}
+function showPosition(position) {
+		xhr.onreadystatechange = function() {
+ 		 if (this.readyState == 4){
+				document.getElementById('hlokalita').value = this.responseText;
+				document.forms['formt'].submit();
+			}
+ 		 };
+		xhr.open("POST", '/zip.php');
+		xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+		xhr.send('latitude='+encodeURIComponent(position.coords.latitude)+'&longitude='+encodeURIComponent(position.coords.longitude));
+}
+
+function odeslatakci(postaction,value1,value2,value3) {
+document.getElementById('postaction').value = postaction;
+document.getElementById("postv1").value = value1;
+document.getElementById("postv2").value = value2;
+document.getElementById("postv3").value = value3;
+document.formaction.submit();
+}
+</script>
+<style type="text/css"></style><style type="text/css">.termsfeed-com---reset{-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;-ms-overflow-style:scrollbar;-webkit-tap-highlight-color:rgba(0,0,0,0);margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";font-size:1rem;font-weight:400;line-height:1.5;color:#212529;text-align:left;background-color:#fff}.termsfeed-com---reset *,.termsfeed-com---reset *::before,.termsfeed-com---reset *::after{box-sizing:border-box}.termsfeed-com---reset a,.termsfeed-com---reset li,.termsfeed-com---reset p,.termsfeed-com---reset h1,.termsfeed-com---reset h2,.termsfeed-com---reset input,.termsfeed-com---reset button,.termsfeed-com---reset select{border-style:none;box-shadow:none;margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;outline:none}@-ms-viewport{.termsfeed-com---reset{width:device-width}}.termsfeed-com---reset [tabindex="-1"]:focus{outline:0 !important}.termsfeed-com---reset h1,.termsfeed-com---reset h2,.termsfeed-com---reset h3,.termsfeed-com---reset h4,.termsfeed-com---reset h5,.termsfeed-com---reset h6{margin-top:0;margin-bottom:0;color:#000}.termsfeed-com---reset p{margin-top:0;margin-bottom:1rem}.termsfeed-com---reset div{display:block}.termsfeed-com---reset ol,.termsfeed-com---reset ul,.termsfeed-com---reset dl{margin-top:0;margin-bottom:1rem}.termsfeed-com---reset ol ol,.termsfeed-com---reset ul ul,.termsfeed-com---reset ol ul,.termsfeed-com---reset ul ol{margin-bottom:0}.termsfeed-com---reset b,.termsfeed-com---reset strong{font-weight:bolder}.termsfeed-com---reset small{font-size:80%}.termsfeed-com---reset a{color:#007bff;text-decoration:none;background-color:rgba(0,0,0,0);-webkit-text-decoration-skip:objects}.termsfeed-com---reset a:hover{color:#0056b3;text-decoration:underline}.termsfeed-com---reset a:not([href]):not([tabindex]){color:inherit;text-decoration:none}.termsfeed-com---reset a:not([href]):not([tabindex]):hover,.termsfeed-com---reset a:not([href]):not([tabindex]):focus{color:inherit;text-decoration:none}.termsfeed-com---reset a:not([href]):not([tabindex]):focus{outline:0}.termsfeed-com---reset label{display:inline-block;margin-bottom:.5rem}.termsfeed-com---reset button{border-radius:2px;padding:.5rem 1rem;outline:none;background:#dcdae5;color:#111;cursor:pointer;border:none}.termsfeed-com---reset button:focus{outline:none}.termsfeed-com---reset select{border-style:none;padding:.5rem 1rem}.termsfeed-com---reset input,.termsfeed-com---reset button,.termsfeed-com---reset select,.termsfeed-com---reset optgroup,.termsfeed-com---reset textarea{margin:0;font-family:inherit;font-size:inherit;line-height:inherit}.termsfeed-com---reset button,.termsfeed-com---reset input{overflow:visible}.termsfeed-com---reset button,.termsfeed-com---reset select{text-transform:none}.termsfeed-com---reset button,.termsfeed-com---reset html [type=button],.termsfeed-com---reset [type=reset],.termsfeed-com---reset [type=submit]{-webkit-appearance:button}.termsfeed-com---reset button::-moz-focus-inner,.termsfeed-com---reset [type=button]::-moz-focus-inner,.termsfeed-com---reset [type=reset]::-moz-focus-inner,.termsfeed-com---reset [type=submit]::-moz-focus-inner{padding:0;border-style:none}.termsfeed-com---reset input[type=radio],.termsfeed-com---reset input[type=checkbox]{box-sizing:border-box;padding:0}.termsfeed-com---reset [hidden]{display:none !important}</style><style type="text/css">.termsfeed-com---nb{overflow:auto;z-index:99999999999;font-size:16px}.termsfeed-com---nb .cc-nb-main-container{padding:1.4rem}.termsfeed-com---nb .cc-nb-title{font-size:20px;font-weight:600}.termsfeed-com---nb .cc-nb-text{font-size:14px;margin:0 0 1.25rem 0}.termsfeed-com---nb .cc-nb-okagree,.termsfeed-com---nb .cc-nb-reject,.termsfeed-com---nb .cc-nb-changep{font-weight:bold;font-size:14px;margin-right:.25rem !important;margin-bottom:.25rem !important}@media(max-width: 480px){.termsfeed-com---nb .cc-nb-okagree,.termsfeed-com---nb .cc-nb-reject,.termsfeed-com---nb .cc-nb-changep{display:block;width:100%}}.termsfeed-com---nb-headline{right:0;top:auto;bottom:0;left:0;max-width:100%;position:relative}@media(max-width: 320px),(max-height: 480px){.termsfeed-com---nb-headline{overflow:auto;height:200px;max-width:100%;right:0;top:auto;bottom:0;left:auto;position:fixed}}.termsfeed-com---nb-simple{border-radius: 3px;right:0;top:auto;bottom:0;left:auto;max-width:50%;position:fixed}@media screen and (max-width: 600px){.termsfeed-com---nb-simple{max-width:80%}}@media(max-width: 320px),(max-height: 480px){.termsfeed-com---nb-simple{overflow:auto;height:200px;max-width:100%}}.termsfeed-com---nb-interstitial-overlay{position:fixed;top:0;left:0;height:100%;width:100%;background:rgba(0,0,0,.8);z-index:9999999999}.termsfeed-com---nb-interstitial{right:3vw;top:3vh;left:3vw;max-width:100%;position:fixed}@media(max-width: 320px),(max-height: 480px){.termsfeed-com---nb-interstitial{overflow:auto;height:200px;right:0;top:auto;bottom:0;left:auto;position:fixed}}.termsfeed-com---nb-standalone{position:fixed;top:0;left:0;height:100%;width:100%}@media(max-width: 320px),(max-height: 480px){.termsfeed-com---nb-standalone{overflow:auto;height:200px;max-width:100%;right:0;top:auto;bottom:0;left:auto;position:fixed}}.termsfeed-com---pc-overlay{width:100%;height:100%;position:fixed;background:rgba(0,0,0,.5);z-index:999999999999;top:0;left:0;display:none}@media screen and (max-width: 600px){.termsfeed-com---pc-overlay{overflow-y:scroll}}.termsfeed-com---pc-dialog{position:absolute;margin:30px auto;width:750px;max-width:90%;height:auto;left:0;right:0}.termsfeed-com---pc-dialog>div{width:100%}.termsfeed-com---pc-dialog .cc-pc-container{width:100%;display:flex;background:#fff;flex-direction:column}.termsfeed-com---pc-dialog .cc-pc-head{background:#fff;color:#111;display:flex;flex-direction:row;justify-content:space-between}@media screen and (max-width: 600px){.termsfeed-com---pc-dialog .cc-pc-head{flex-direction:column}}.termsfeed-com---pc-dialog .cc-pc-head-title{display:flex;padding-left:15px;flex-direction:column;justify-content:center;align-items:baseline}@media screen and (max-width: 600px){.termsfeed-com---pc-dialog .cc-pc-head-title{align-items:center;padding:15px 0 0 0}}.termsfeed-com---pc-dialog .cc-pc-head-title-text{font-size:16px;line-height:1.5;margin:0}.termsfeed-com---pc-dialog .cc-pc-head-title-headline{font-size:18px;font-weight:600;margin:0}.termsfeed-com---pc-dialog .cc-pc-head-lang{display:flex;align-items:center;padding-right:15px;min-height:80px;justify-content:center;flex-direction:row-reverse}@media screen and (max-width: 600px){.termsfeed-com---pc-dialog .cc-pc-head-lang{padding:15px 0;min-height:20px}}.termsfeed-com---pc-dialog .cc-pc-head-close{display:flex;align-items:center;justify-content:center;margin-left:15px}.termsfeed-com---pc-dialog .cc-cp-body{display:flex;flex-direction:row;align-items:stretch;background:#292929;color:#f5f5f5;border-bottom:none}@media screen and (max-width: 600px){.termsfeed-com---pc-dialog .cc-cp-body{flex-direction:column}}.termsfeed-com---pc-dialog .cc-cp-body-tabs{font-family:Arial,sans-serif !important;width:150px;margin:0;padding:0;background:#e6e6e6;min-width:150px}@media screen and (max-width: 600px){.termsfeed-com---pc-dialog .cc-cp-body-tabs{width:100%}}.termsfeed-com---pc-dialog .cc-cp-body-tabs-item{margin:0;padding:0;float:left;display:block;width:100%;color:#666;background:#e6e6e6;border-bottom:1px solid #ccc;border-right:1px solid #ccc;transition:all ease .1s;box-sizing:content-box}@media screen and (max-width: 600px){.termsfeed-com---pc-dialog .cc-cp-body-tabs-item{border-right:0}}.termsfeed-com---pc-dialog .cc-cp-body-tabs-item[active=true]{background:#292929;color:#f5f5f5}.termsfeed-com---pc-dialog .cc-cp-body-tabs-item-link{text-decoration:none;color:#666;display:block;padding:10px 5px 10px 10px;font-weight:700;font-size:12px;line-height:19px;position:relative;cursor:pointer;width:100%;text-align:left;background:none;word-wrap:break-word;white-space:break-spaces}.termsfeed-com---pc-dialog .cc-cp-body-content{background:#292929;color:#f5f5f5}.termsfeed-com---pc-dialog .cc-cp-body-content-entry{width:100%;display:none;padding:25px;box-sizing:border-box}.termsfeed-com---pc-dialog .cc-cp-body-content-entry[active=true]{display:block}.termsfeed-com---pc-dialog .cc-cp-body-content-entry-title{font-size:20px;font-weight:600}.termsfeed-com---pc-dialog .cc-cp-body-content-entry-text{font-size:14px;line-height:1.5}.termsfeed-com---pc-dialog .cc-cp-foot{background:#f2f2f2;display:flex;flex-direction:row;align-items:center;border-top:1px solid #ccc;justify-content:space-between}.termsfeed-com---pc-dialog .cc-cp-foot-byline{padding:20px 10px;font-size:14px;color:#333;display:block !important}.termsfeed-com---pc-dialog .cc-cp-foot-byline a{color:#999}.termsfeed-com---pc-dialog .cc-cp-foot-save{margin-right:10px;opacity:.9;transition:all ease .3s;font-size:14px;font-weight:bold;height:auto}.termsfeed-com---pc-dialog .cc-cp-foot-save:hover{opacity:1}.termsfeed-com---pc-dialog input[type=checkbox].cc-custom-checkbox{position:absolute;margin:2px 0 0 16px;cursor:pointer;appearance:none;border:0}.termsfeed-com---pc-dialog input[type=checkbox].cc-custom-checkbox+label{position:relative;padding:4px 0 0 50px;line-height:2em;cursor:pointer;display:inline;font-size:14px}.termsfeed-com---pc-dialog input[type=checkbox].cc-custom-checkbox+label:before{content:"";position:absolute;display:block;left:0;top:0;width:40px;height:24px;border-radius:16px;background:#fff;border:1px solid #d9d9d9;-webkit-transition:all .3s;transition:all .3s}.termsfeed-com---pc-dialog input[type=checkbox].cc-custom-checkbox+label:after{content:"";position:absolute;display:block;left:0px;top:0px;width:24px;height:24px;border-radius:16px;background:#fff;border:1px solid #d9d9d9;-webkit-transition:all .3s;transition:all .3s}.termsfeed-com---pc-dialog input[type=checkbox].cc-custom-checkbox+label:hover:after{box-shadow:0 0 5px rgba(0,0,0,.3)}.termsfeed-com---pc-dialog input[type=checkbox].cc-custom-checkbox:checked+label:after{margin-left:16px}.termsfeed-com---pc-dialog input[type=checkbox].cc-custom-checkbox:checked+label:before{background:#55d069}</style><style type="text/css">.termsfeed-com---palette-dark.termsfeed-com---nb{background-color:#111;color:#fff}.termsfeed-com---palette-dark .cc-nb-title{color:#fff}.termsfeed-com---palette-dark .cc-nb-text{color:#fff}.termsfeed-com---palette-dark .cc-nb-text a{color:#fff;text-decoration:underline}.termsfeed-com---palette-dark .cc-nb-text a:hover{text-decoration:none}.termsfeed-com---palette-dark .cc-nb-text a:focus{box-shadow:0 0 0 2px #3dd000}.termsfeed-com---palette-dark .cc-nb-okagree{color:#000;background-color:#ff0}.termsfeed-com---palette-dark .cc-nb-okagree:focus{box-shadow:0 0 0 2px #3dd000}.termsfeed-com---palette-dark .cc-nb-reject{color:#000;background-color:#ff0}.termsfeed-com---palette-dark .cc-nb-reject:focus{box-shadow:0 0 0 2px #3dd000}.termsfeed-com---palette-dark .cc-nb-changep{background-color:#eaeaea;color:#111}.termsfeed-com---palette-dark .cc-nb-changep:focus{box-shadow:0 0 0 2px #3dd000}.termsfeed-com---palette-dark .cc-pc-container{background:#212121}.termsfeed-com---palette-dark .cc-pc-head{background:#212121;color:#fff;border-bottom:1px solid #111}.termsfeed-com---palette-dark .cc-pc-head-title-headline{color:#fff}.termsfeed-com---palette-dark .cc-pc-head-title-text{color:#fff}.termsfeed-com---palette-dark .cc-pc-head-lang select{color:#212121}.termsfeed-com---palette-dark .cc-pc-head-lang select:focus{box-shadow:0 0 0 2px #ff0}.termsfeed-com---palette-dark .cc-pc-head-close{background:none;color:#e6e6e6}.termsfeed-com---palette-dark .cc-pc-head-close:active,.termsfeed-com---palette-dark .cc-pc-head-close:focus{border:2px solid #ff0}.termsfeed-com---palette-dark .cc-cp-body{background:#292929 !important;color:#f5f5f5}.termsfeed-com---palette-dark .cc-cp-body-tabs{color:#666;background:#e6e6e6}.termsfeed-com---palette-dark .cc-cp-body-tabs-item{border-right-color:#ccc;border-bottom-color:#ccc}.termsfeed-com---palette-dark .cc-cp-body-tabs-item-link{color:#666}.termsfeed-com---palette-dark .cc-cp-body-tabs-item-link:hover{color:#666}.termsfeed-com---palette-dark .cc-cp-body-tabs-item-link:focus{box-shadow:0 0 0 2px #292929}.termsfeed-com---palette-dark .cc-cp-body-tabs-item[active=true]{background:#292929 !important}.termsfeed-com---palette-dark .cc-cp-body-tabs-item[active=true] button{color:#f5f5f5}.termsfeed-com---palette-dark .cc-cp-body-content{background:#292929 !important;color:#f5f5f5}.termsfeed-com---palette-dark .cc-cp-body-content-entry-title{color:#fff}.termsfeed-com---palette-dark .cc-cp-body-content-entry-text{color:#fff}.termsfeed-com---palette-dark .cc-cp-body-content-entry a{color:#fff;text-decoration:underline}.termsfeed-com---palette-dark .cc-cp-body-content-entry a:hover{text-decoration:none}.termsfeed-com---palette-dark .cc-cp-body-content-entry a:focus{box-shadow:0 0 0 2px #ff0}.termsfeed-com---palette-dark .cc-cp-foot{background:#212121;border-top-color:#111}.termsfeed-com---palette-dark .cc-cp-foot-byline{color:#fff}.termsfeed-com---palette-dark .cc-cp-foot-byline a:focus{box-shadow:0 0 0 2px #ff0}.termsfeed-com---palette-dark .cc-cp-foot-save{background:#ff0;color:#000}.termsfeed-com---palette-dark .cc-cp-foot-save:focus{box-shadow:0 0 0 2px #3dd000}</style><style type="text/css">.termsfeed-com---palette-light.termsfeed-com---nb{background-color:#FBF3E1;color:#111}.termsfeed-com---palette-light .cc-nb-title{color:#111}.termsfeed-com---palette-light .cc-nb-text{color:#111}.termsfeed-com---palette-light .cc-nb-text a{color:#111;text-decoration:underline}.termsfeed-com---palette-light .cc-nb-text a:hover{text-decoration:none}.termsfeed-com---palette-light .cc-nb-text a:focus{box-shadow:0 0 0 2px #ff8d00}.termsfeed-com---palette-light .cc-nb-okagree{color:#fff;background-color:orange}.termsfeed-com---palette-light .cc-nb-okagree:focus{box-shadow:0 0 0 2px #ff8d00}.termsfeed-com---palette-light .cc-nb-reject{color:#fff;background-color:orange}.termsfeed-com---palette-light .cc-nb-reject:focus{box-shadow:0 0 0 2px #ff8d00}.termsfeed-com---palette-light .cc-nb-changep{background-color:#eaeaea;color:#111}.termsfeed-com---palette-light .cc-nb-changep:focus{box-shadow:0 0 0 2px #ff8d00}.termsfeed-com---palette-light .cc-pc-container{background:#fff}.termsfeed-com---palette-light .cc-pc-head{background:#fff;color:#111;border-bottom:1px solid #ccc}.termsfeed-com---palette-light .cc-pc-head-title-headline{color:#111}.termsfeed-com---palette-light .cc-pc-head-title-text{color:#111}.termsfeed-com---palette-light .cc-pc-head-lang select{color:#111}.termsfeed-com---palette-light .cc-pc-head-lang select:focus{box-shadow:0 0 0 2px orange}.termsfeed-com---palette-light .cc-pc-head-close{background:none;color:#666}.termsfeed-com---palette-light .cc-pc-head-close:active,.termsfeed-com---palette-light .cc-pc-head-close:focus{border:2px solid orange}.termsfeed-com---palette-light .cc-cp-body{background:#fbfbfb !important;color:#111}.termsfeed-com---palette-light .cc-cp-body-tabs{color:#666;background:#e6e6e6}.termsfeed-com---palette-light .cc-cp-body-tabs-item{border-right-color:#ccc;border-bottom-color:#ccc}.termsfeed-com---palette-light .cc-cp-body-tabs-item-link{color:#666}.termsfeed-com---palette-light .cc-cp-body-tabs-item-link:hover{color:#666}.termsfeed-com---palette-light .cc-cp-body-tabs-item-link:focus{box-shadow:0 0 0 2px #fbfbfb}.termsfeed-com---palette-light .cc-cp-body-tabs-item[active=true]{background:#fbfbfb !important}.termsfeed-com---palette-light .cc-cp-body-tabs-item[active=true] button{color:#111}.termsfeed-com---palette-light .cc-cp-body-content{background:#fbfbfb !important;color:#111}.termsfeed-com---palette-light .cc-cp-body-content-entry-title{color:#111}.termsfeed-com---palette-light .cc-cp-body-content-entry-text{color:#111}.termsfeed-com---palette-light .cc-cp-body-content-entry a{color:#111;text-decoration:underline}.termsfeed-com---palette-light .cc-cp-body-content-entry a:hover{text-decoration:none}.termsfeed-com---palette-light .cc-cp-body-content-entry a:focus{box-shadow:0 0 0 2px orange}.termsfeed-com---palette-light .cc-cp-foot{background:#f2f2f2;border-top-color:#ccc}.termsfeed-com---palette-light .cc-cp-foot-byline{color:#111}.termsfeed-com---palette-light .cc-cp-foot-byline a:focus{box-shadow:0 0 0 2px orange}.termsfeed-com---palette-light .cc-cp-foot-save{background:orange;color:#fff}.termsfeed-com---palette-light .cc-cp-foot-save:focus{box-shadow:0 0 0 2px #ff8d00}</style><style type="text/css">.termsfeed-com---is-hidden{display:none}.termsfeed-com---is-visible{display:block}</style><style type="text/css">.termsfeed-com---nb.termsfeed-com---lang-ar,.termsfeed-com---pc-overlay.termsfeed-com---lang-ar{text-align:right}</style></head>
+
+<body><div class="termsfeed-com---reset termsfeed-com---nb termsfeed-com---palette-light termsfeed-com---nb-simple termsfeed-com---lang-sk" id="termsfeed-com---nb" role="dialog" aria-modal="true" aria-labelledby="cc-nb-title" aria-describedby="cc-nb-text"><div class="cc-nb-main-container"><div class="cc-nb-title-container"><p class="cc-nb-title" id="cc-nb-title">Používame cookies</p></div><div class="cc-nb-text-container"><p class="cc-nb-text" id="cc-nb-text">Súbory cookie a ďalšie technológie sledovania používame na zlepšenie vášho zážitku z prehliadania našich webových stránok, na to, aby sme vám zobrazovali prispôsobený obsah a cielené reklamy, na analýzu návštevnosti našich webových stránok a na pochopenie toho, odkiaľ naši návštevníci prichádzajú.</p></div><div class="cc-nb-buttons-container"><button class="cc-nb-okagree" role="button">Súhlasím</button><button class="cc-nb-reject" role="button">Odmietam</button><button class="cc-nb-changep" role="button">Zmeniť moje nastavenia</button></div></div></div>
+
+<div class="sirka">
+
+
+<div class="listalogor">
+<div class="listalogol"><a href="https://www.bazos.sk/" title="Bazos.sk - Inzercia, inzeráty"><img src="https://www.bazos.sk/obrazky/bazos.svg" width="199" height="34" alt="Bazos.sk - Inzercia, inzeráty"></a></div>
+<div class="listalogom"> <img src="/ukflag.jpg" height="25px" width="38px"> <b>... inzercia pre každého</b></div>
+<div class="listalogop"><a href="https://www.bazos.sk/oblubene.php"><b>Obľúbené inzeráty</b></a> <a href="https://www.bazos.sk/moje-inzeraty.php"><b>Moje inzeráty</b></a> <a href="/pridat-inzerat.php"><b><span class="pridati">Pridať inzerát</span></b></a></div>
+</div>
+
+<form name="formt" id="formt" method="get" action="/search.php">
+<div class="listah">
+<div class="rubriky">
+<b>
+Čo: <span class="vysokoli"><span id="vysledek"></span><input type="search" onkeyup="naseptavac(this.value);" id="hledat" name="hledat" size="17" maxlength="256" value="" autocomplete="off" title="Čo? Hľadaný výraz"></span>
+
+<select name="rubriky" onchange="this.form.submit();" title="Vyber rubriku">
+<option value="www" selected="">Všetky rubriky</option>
+<option value="auto">Auto</option>
+<option value="deti">Deti</option>
+<option value="dom">Dom a záhrada</option>
+<option value="elektro">Elektro</option>
+<option value="foto">Foto</option>
+<option value="hudba">Hudba</option>
+<option value="knihy">Knihy</option>
+<option value="mobil">Mobily</option>
+<option value="motocykle">Motocykle</option>
+<option value="nabytok">Nábytok</option>
+<option value="oblecenie">Oblečenie</option>
+<option value="pc">PC</option>
+<option value="praca">Práca</option>
+<option value="reality">Reality</option>
+<option value="sluzby">Služby</option>
+<option value="sport">Šport</option>
+<option value="stroje">Stroje</option>
+<option value="vstupenky">Vstupenky</option>
+<option value="zvierata">Zvieratá</option>
+<option value="ostatne">Ostatné</option>
+</select>
+
+PSČ (miesto): <span class="vysokolipsc"><span id="vysledekpsc"></span><input type="search" name="hlokalita" id="hlokalita" onkeyup="naseptavacpsc(this.value);" onclick="naseptavacpsc(this.value);" value="" size="5" maxlength="25" autocomplete="off" title="Kde? PSČ (miesto)" style="-webkit-appearance: none;"></span>
+Okolie: <input name="humkreis" title="Okolie v km" value="25" size="3" style="width: 25px;"> km
+Cena od: <input name="cenaod" title="Cena od €" maxlength="12" size="4" value=""> - do: <input name="cenado" title="Cena do €" maxlength="12" size="4" value=""> €  <input type="submit" name="Submit" value="Hľadať">
+<input type="hidden" name="order" id="order"><input type="hidden" name="kitx" value="ano"></b>
+</div>
+</div>
+</form>
+<div class="drobky"><a href="https://www.bazos.sk/">Hlavná stránka</a> &gt; <b>Podmienky</b></div><br>
+
+
+<div class="flexmain"><div class="menuleft"><div class="nadpismenu">Inzercia</div>
+<div class="barvalmenu">
+<div class="barvaleva">
+<div align="center">
+
+<br>
+<a href="https://auto.bazos.sk/"><b>Auto</b></a>
+Inzeráty Celkom: 232626<br>
+Za 24 hodín: 12779<br><br>
+
+<br>
+<a href="https://deti.bazos.sk/"><b>Deti</b></a>
+Inzeráty Celkom: 112869<br>
+Za 24 hodín: 2721<br><br>
+
+<br>
+<a href="https://dom.bazos.sk/"><b>Dom a záhrada</b></a>
+Inzeráty Celkom: 69579<br>
+Za 24 hodín: 2853<br><br>
+
+<br>
+<a href="https://elektro.bazos.sk/"><b>Elektro</b></a>
+Inzeráty Celkom: 54146<br>
+Za 24 hodín: 1611<br><br>
+
+<br>
+<a href="https://foto.bazos.sk/"><b>Foto</b></a>
+Inzeráty Celkom: 9420<br>
+Za 24 hodín: 337<br><br>
+
+<br>
+<a href="https://hudba.bazos.sk/"><b>Hudba</b></a>
+Inzeráty Celkom: 17144<br>
+Za 24 hodín: 592<br><br>
+
+<br>
+<a href="https://knihy.bazos.sk/"><b>Knihy</b></a>
+Inzeráty Celkom: 33372<br>
+Za 24 hodín: 742<br><br>
+
+<br>
+<a href="https://mobil.bazos.sk/"><b>Mobily</b></a>
+Inzeráty Celkom: 24879<br>
+Za 24 hodín: 1482<br><br>
+
+<br>
+<a href="https://motocykle.bazos.sk/"><b>Motocykle</b></a>
+Inzeráty Celkom: 35635<br>
+Za 24 hodín: 1781<br><br>
+
+<br>
+<a href="https://nabytok.bazos.sk/"><b>Nábytok</b></a>
+Inzeráty Celkom: 51806<br>
+Za 24 hodín: 1751<br><br>
+
+<br>
+<a href="https://oblecenie.bazos.sk/"><b>Oblečenie</b></a>
+Inzeráty Celkom: 123841<br>
+Za 24 hodín: 3183<br><br>
+
+<br>
+<a href="https://pc.bazos.sk/"><b>PC</b></a>
+Inzeráty Celkom: 39878<br>
+Za 24 hodín: 2085<br><br>
+
+<br>
+<a href="https://praca.bazos.sk/"><b>Práca</b></a>
+Inzeráty Celkom: 11716<br>
+Za 24 hodín: 1331<br><br>
+
+<br>
+<a href="https://reality.bazos.sk/"><b>Reality</b></a>
+Inzeráty Celkom: 63884<br>
+Za 24 hodín: 5676<br><br>
+
+<br>
+<a href="https://sluzby.bazos.sk/"><b>Služby</b></a>
+Inzeráty Celkom: 23692<br>
+Za 24 hodín: 2783<br><br>
+
+<br>
+<a href="https://stroje.bazos.sk/"><b>Stroje</b></a>
+Inzeráty Celkom: 43726<br>
+Za 24 hodín: 1771<br><br>
+
+<br>
+<a href="https://sport.bazos.sk/"><b>Šport</b></a>
+Inzeráty Celkom: 67913<br>
+Za 24 hodín: 2545<br><br>
+
+<br>
+<a href="https://vstupenky.bazos.sk/"><b>Vstupenky</b></a>
+Inzeráty Celkom: 1711<br>
+Za 24 hodín: 136<br><br>
+
+<br>
+<a href="https://zvierata.bazos.sk/"><b>Zvieratá</b></a>
+Inzeráty Celkom: 26417<br>
+Za 24 hodín: 1417<br><br>
+
+<br>
+<a href="https://ostatne.bazos.sk/"><b>Ostatné</b></a>
+Inzeráty Celkom: 102047<br>
+Za 24 hodín: 2664<br><br>
+
+</div>
+</div></div>
+
+<br><br>
+
+
+
+</div><div class="maincontent">
+
+<div class="bilytext">
+
+<b>Podmienky využívania služieb serveru Bazos.sk<br></b><br><br>
+<b>1. </b>Bazos.sk sú internetové stránky prevádzkované fyzickou osobou Radim Smička, Dubany 17, Vrbátky, 798 12, Česká republika, IČO 65773551 ďalej len prevádzkovateľ.
+<br><br>
+<b>2. </b>Stránky umožňujú bezplatne zverejňovať a vyhľadávať ponuky tovaru, služieb a iného majetku súkromných osôb a podnikateľských subjektov, ďalej len užívateľov.
+Užívatelia nesmú inzerovať priamo svoju podnikateľskú činnosť. Tovar sa môže inzerovať iba celkom konkrétne, tj. po jednom kuse, jednej farby, tvaru, typu a veľkosti. Napríklad realitná kancelária nesmie inzerovať svoju činnosť (vykúpime Váš dom, ...), ale iba konkrétnu ponúknutú nehnuteľnosť. Autobazár môže inzerovať iba konkrétny voz, a nie svoje služby a firmu ako celok. Zákaz platí i na opakované dopyty, výkupy.
+Bazoš nie je katalóg tovaru, firmám sú primárne určené odkazy Google Adwords nad inzerátmi a sekcia Služby.
+<br><br>
+Na inzertnom serveri Bazoš.sk je zakázaná inzercia:<br>
+(<b>Tento zákaz platí bez ohľadu na Topovanie.</b>)
+<ul>
+  <li>webovej stránky a loga firmy, nadmerné množstvo hviezdičiek, výkričníkov a podobných znakov (a to ako v texte inzerátu, tak na mieste obrázku alebo cez obrázok), orámovanie obrázkov;</li>
+  <li>chudnutia;</li>
+  <li>Multilevel a províznych systémov;</li>
+  <li>Emailingu a iných bezprácnych zárobkov;</li>
+  <li>práce s poplatkom vopred;</li>
+  <li>kopírovania diskiet, CD, DVD;</li>
+  <li>firemnej činnosti a tovaru na objednávku (v sekcii služby platí výnimka na ponúkanie služieb, ponuka nového tovaru je zakázaná aj tu);</li>
+  <li>opakované inzercie stále rovnakého nového tovaru;</li>
+  <li>neobmedzené množstvo tovaru;</li>
+  <li>tovar kúpený iba za účelom ďalšieho predaja (zárobku);</li>
+  <li>kópií, napodobenín, padelkov;</li>
+  <li>chip tuningu, powerboxov, diagnostických sád, antiradarov, a pod.;</li>
+  <li>dokladov a technických preukazov;</li>
+  <li>pohonných hmôt;</li>
+  <li>výkupu;</li>
+  <li>dopytov v realitách;</li>
+  <li>erotických inzerátov, erotických pomôcok;</li>
+  <li>livechatu, práca spoločnice, tanečnice, konzumentky a hostesky v zahraničí;</li>
+  <li>eKníh;</li>
+  <li>pôžičiek, úverov a hypoték, exekúcie, oddlženie;</li>
+  <li>zoznamu kľúčových slov, text inzerátov musí dávať zmysel;</li>
+  <li>liekov a potravinových doplnkov;</li>
+  <li>cigaret, e-cigaret, tabáku, alkoholu;</li>
+  <li>bitcoinov, litecoinov, minerů.</li>
+  <li>herných účtov.</li>
+  <li>mrtvých zvierat, mäsa.</li>
+  <li>automatických zbraní (útočné zbrane, samopaly, guľomety ...).</li>
+  <li>respirátorov, rúšok (netýka sa ručne šitých rúšok, ale profesionálnych potrieb pre zdravotníkov).</li>
+
+</ul>
+<br>
+Pri vložení ponuky zamestnania alebo brigády sa vyžadujú nasledujúce údaje:
+<ul>
+  <li>názov a predmet firmy</li>
+  <li>minimálne požiadavky na žiadateľa</li>
+  <li>predmet práce</li>
+</ul>
+Na serveri je zakázané inzerovať ničnehovoriace inzeráty typu Zarobte veľa peňazí, viac informácií emailom. Pokiaľ sa na serveri objaví "zakázaný" inzerát, bude zmazaný bez povinnosti nahradiť užívateľovi zaslanú čiastku na topovanie inzerátu. Poplatok v sekcii Práca a Služby je za schválenie administrátorom, toto schválenie je samozrejme u inzerátov porušujúcich podmienky záporné a užívateľ nemá v tomto prípade nárok na vrátenie poplatku. Pokiaľ vložíte dva rovnaké inzeráty, bude ten starší systémom označený ako duplicitný a vymaže sa. Inzeráty môžu byť napísané v slovenskom alebo českom jazyku.
+<br><br>
+<b>3. </b>Služby Bazos.sk sú užívateľom poskytované zadarmo. Výnimku tvorí spoplatnenie inzerátov v sekciách Práca a Služby a doplnkové funkcie jednotlivých služieb. Doplnkovou funkciou služby sa rozumie nadštandardná možnosť alebo funkcia, ktorých aktivácia nie je nevyhnutne nutnou podmienkou na používanie základnej funkcionality Služby Bazos.sk napríklad topovanie inzerátu pomocou sms.
+<br><br>
+<b>4. </b>Prevádzkovateľ si vyhradzuje právo vykonať nevyhnutné zmeny v inzeráte, prípadne inzerát vôbec nezverejniť, prípadne inzerát odstrániť, ak bude v rozpore s platnými zákonmi Slovenskej republiky, podmienkami Bazos.sk alebo dobrými mravmi, a to aj bez predchádzajúcej výzvy na nápravu a bez náhrady.
+<br><br>
+<b>5. </b>Prevádzkovateľ má právo zmazať inzerát, ktorý podľa jeho uváženia nespĺňa tieto podmienky alebo pokiaľ je inzerát vložený do nesprávnej sekcie s ohľadom na text inzerátu alebo inzerát budí dojem, že užívateľom je iná právnická alebo fyzická osoba, a to aj bez predchádzajúcej výzvy na nápravu a bez náhrady.
+<br><br>
+<b>6. </b>Vložený inzerát bude bezplatne zverejnený po dobu 2 mesiacov. Po tejto lehote bude automaticky vymazaný spoločne so všetkými údajmi, ktoré užívateľ pri zadávaní uviedol. Pri vymazaní bude užívateľovi zaslaný potvrdzujúci mail o odstránení inzerátu. Maximálny počet inzerátov pridaných jedným užívateľom je 50.
+<br><br>
+<b>7. </b>Užívateľ si je vedomý toho, že pokiaľ bude chcieť inzerát odstrániť pred uplynutím doby zverejnenia, musí tak učiniť sám pomocou kontrolného hesla pri príslušnom inzeráte.
+<br><br>
+<b>8. </b>Prevádzkovateľ iba sprostredkováva kontakt mezi predávajúcim a kupujúcim a nepreberá tak žiadne záruky za kvalitu, pôvod, dodanie, odobranie, zaplatenie alebo upotrebiteľnosť ponúkaných vecí.
+<br><br>
+<b>9. </b>Prevádzkovateľ nenesie zodpovednosť za zneužitie osobných dát užívateľa uvedených v inzeráte, alebo získaných nelegálnym preniknutím do systému stránok treťou osobou. Užívateľ súhlasí s anonymným využitím registračných a štatistických údajov.
+<br><br>
+<b>10. </b>Prevádzkovateľ nezodpovedá za činnosť užívateľov služieb Bazos.sk ani za spôsob akým služby Bazos.sk využívajú. Správca nenesie žiadnu zodpovednosť za prípadné zneužitie služieb serveru užívateľmi či tretími osobami.
+<br><br>
+<b>11. </b>Prevádzkovateľ nenesie žiadnu zodpovednosť za škody, ktoré by užívateľom alebo tretím osobám priamo, nepriamo či náhodne vznikli v dôsledku nebo v súvislosti s využívaním služieb Bazos.sk. Nezodpovedá za škody, ktoré by užívateľom alebo tretím osobám vznikli v dôsledku nemožnosti využívania služieb Bazos.sk alebo v priamej či nepriamej súvislosti s touto skutočnosťou.
+<br><br>
+<b>12. </b>Inzerent zodpovedá za to, že obsahom inzerátu a / alebo fotografiami či inými súbormi pripojenými k inzerátu nebudú dotknuté práva tretích osôb. Prevádzkovateľ za zásahy do práv tretích osôb zo strany inzerenta nezodpovedá.
+<br><br>
+<b>13. </b>Za obsah Inzerátu zodpovedá inzerent. Prevádzkovateľ nenesie žiadnu zodpovednosť za obsah Inzerátu. Inzerent je povinný pri zadávaní inzerátu dodržiavať tieto podmienky a príslušné právne predpisy.
+<br><br>
+<b>14. </b>V prípade, že Inzerent pripojí k Inzerátu fotografie, ktorých je autorom, udeľuje okamihom vloženie inzerátu na server či v rámci mobilnej aplikácie prevádzkovateľovi bezodplatnú nevýhradnú licenciu na použitie fotografií, a to na dobu zverejnenie Inzerátu na serveri či v rámci mobilnej aplikácie a ku spôsoby použitia v súlade s určením servera a mobilné aplikácie a v súlade s týmito podmienkami.
+<br><br>
+<b>15. </b>Inzerent nesmie k inzerátu pripojovať fotografie z inzerátov iných predajcov originálne urobených na predávanom tovare.
+<br><br>
+<b>16. </b>Prevádzkovateľ prehlasuje, že sa vedeniu služieb Bazos.sk venuje a bude venovať s vynaložením maximálneho úsilia a s odbornou starostlivosťou, tak aby minimalizoval všetky prípadné riziká, ktoré by pri riadnom využívaní služby Bazos.sk mohli vzniknúť užívateľom či tretím osobám.
+<br><br>
+<b>17. </b>Ak používateľ poruší naše podmienky, môže byť zablokovaný a inzeráty sú mu vymazané bez ohľadu na topovanie. Doba zablokovania závisí od závažnosti porušenia a vašej predchádzajúcej aktivity na Bazoši.
+<br><br>
+<b>18. </b>Prevádzkovateľ je oprávnený bez súhlasu užívateľov a aj bez ich predchádzajúceho oznámenia služby Serveru upravovať alebo inovovať.
+<br><br>
+<b>19. </b>Na zobrazovanie reklám návštevníkom našich webových stránok využívame služby reklamných spoločností tretej strany. Tieto spoločnosti môžu použiť informácie (neobsahujúce vaše meno, adresu, e-mailovú adresu alebo telefónne číslo) o vašich návštevách na týchto a iných webových stránkach s cieľom poskytnúť reklamy o tovaroch a službách, ktoré vás zaujímajú.
+<br><br>
+<b>20. </b>Tieto podmienky nadobúdajú platnosť a účinnosť v okamihu ich zverejnenia. Prevádzkovateľ si vyhradzuje právo tieto podmienky zmeniť.
+<br><br>
+
+<br>
+<b>Spracovanie osobných údajov</b><br><br>
+<b>1. </b>Prevádzkovateľ postupuje pri spracovaní osobných údajov v súlade s nariadením Európskeho parlamentu a Rady (EÚ) č. 2016/679 o ochrane fyzických osôb pri spracovaní osobných údajov a voľnom pohybe týchto údajov (všeobecné nariadenie o ochrane osobných údajov), zákonom č . 101/2000 Zb. o ochrane osobných údajov a zákonom, ktorý tento zákon v zmysle vykonaní vyššie uvedeného nariadenia nahradí, zákonom č. 480/2004 b., o niektorých službách informačnej spoločnosti, zákonom č. 127/2005 Zb. o elektronických komunikáciách a ďalšími právnymi predpismi na ochranu osobných údajov.
+<br><br>
+<b>2. </b>Na účely užívania služby Serveru a Mobilné aplikácie Inzerentom a Záujemcom, najmä vkladanie Inzerátov a sprostredkovanie kontaktu medzi Inzerentom a Záujemcom, je Prevádzkovateľ oprávnený spracovávať osobné údaje Inzerenta a Záujemca alebo osobné údaje poskytnuté či zadanej Inzerentom či Záujemcom pri užívaní Servera (najmä určením, popisné a fakturačné údaje).
+<br><br>
+<b>3. </b>Takéto spracovanie osobných údajov je zákonné, pretože je nevyhnutné pre výkon zmluvy, na základe ktorej Inzerent a Záujemca užívajú služby Servera a Mobilné aplikácie, a ktorej zmluvnou stranou je Inzerent alebo Záujemca, ako subjekt osobných údajov.
+<br><br>
+<b>4. </b>V konkrétnych prípadoch môže Prevádzkovateľ spracovávať osobné údaje nad rámec čl. 2. a 3. Podmienok, ak je takéto spracovanie nevyhnutné na účely oprávnených záujmov Prevádzkovateľa alebo tretích osôb, a to vždy v súlade so zákonnými požiadavkami na spracovanie osobných údajov.
+<br><br>
+<b>5. </b>Užívateľ súhlasí v zmysle zákona o niektorých službách informačnej spoločnosti s tým, že Prevádzkovateľ je oprávnený zasielať užívateľovi akékoľvek správy, obsahujúce informácie o novinkách, ktoré Bazos ponúka.
+<br><br>
+<b>6. </b>Všetky informácie o vkladaných inzerátoch, emailoch, telefónoch sú po pol roku od vloženia vymazané. Platobné údaje, faktúry sú archivované po dobu troch rokov.
+<br><br>
+
+<br>
+<b>Užívanie API</b><br><br>
+API pre priame napojenie Bazoš je možné užívať len so súhlasom Bazos.sk, v opačnom prípade je aplikácia alebo užívatelia užívajúcí takéto aplikácie blokovaní. Za používanie neoficiálne napojených aplikácií nenesie Bazoš žiadnu zodpovednosť (nenesie zodpovednosť za takto prenášané osobné údaje).<br>
+<br><br>
+Využívanie neoficiálnych aplikácií (app pre Android, IOS, Windows), ktoré majú za účel zobrazovať inzeráty obdobne ako webový prehliadač alebo majú za účel funkciu pridávanie inzerátov je v rozpore s používaním webu a nášho API.
+<br><br>
+
+</div>
+
+
+</div></div><br>
+
+©2024 Bazoš - <b>Inzercia, bazár</b><br>
+<a href="https://www.bazos.sk/pomoc.php">Pomoc</a>, <a href="https://www.bazos.sk/otazky.php">Otázky</a>, <a href="https://www.bazos.sk/hodnotenie.php">Hodnotenie</a>, <a href="https://www.bazos.sk/kontakt.php">Kontakt</a>, <a href="https://www.bazos.sk/reklama.php">Reklama</a>, <a href="https://www.bazos.sk/podmienky.php">Podmienky</a>, <a href="https://www.bazos.sk/ochrana-udajov.php">Ochrana údajov</a>, <a href="https://www.bazos.sk/rss.php">RSS</a>, <form name="formvkm" id="formvkm" method="post" style="display: inline;"><input type="hidden" name="vkm" value="m"><input type="submit" class="vkm" value="Mobilná verzia"></form><br>
+Inzeráty celkom:<b>
+1146301</b>, inzercia za 24 hodín: <b>50240</b><br><br>
+<a href="https://www.bazos.sk/mapa-kategorie.php">Mapa kategórií</a>, <a href="https://www.bazos.sk/mapa-search.php">Najvyhľadávanejšie výrazy</a>, Tmavý motív: <form name="formdark" action="https://www.bazos.sk" method="post" style="display: inline;"><input type="hidden" name="darkmode" value="1"><input type="submit" class="vkm" value="vypnutý"></form><br>
+Krajiny: <a href="https://www.bazos.sk">Slovensko</a>, <a href="https://www.bazos.cz">Česká republika</a>, <a href="https://www.bazos.pl">Poľsko</a>, <a href="https://www.bazos.at">Rakúsko</a>
+<br>
+
+<br>
+</div>
+
+<script type="text/javascript" src="https://www.bazos.sk/cookie-consent.js" charset="UTF-8"></script>
+<script type="text/javascript" charset="UTF-8">
+document.addEventListener('DOMContentLoaded', function () {
+cookieconsent.run({"notice_banner_type":"simple","consent_type":"express","palette":"light","language":"sk","page_load_consent_levels":["strictly-necessary"],"notice_banner_reject_button_hide":false,"preferences_center_close_button_hide":false,"page_refresh_confirmation_buttons":false,"cookie_domain": "bazos.sk"});
+});
+</script>
+<a href="#" id="open_preferences_center"> </a>
+
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-HLZSNE9Z0C"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HLZSNE9Z0C');
+</script>
+
+
+</body></html>

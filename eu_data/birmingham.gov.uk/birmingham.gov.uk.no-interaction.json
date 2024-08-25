@@ -1,0 +1,1 @@
+[{"domain": ".www.birmingham.gov.uk", "httpOnly": true, "name": "TestCookie", "path": "/", "sameSite": "None", "secure": true, "value": "Test"}, {"domain": "www.birmingham.gov.uk", "httpOnly": true, "name": "PHPSESSID", "path": "/", "sameSite": "None", "secure": true, "value": "cOHpkdDupV1iJDZkLXUGfv4mljoAbdye44lpXATS1HEdsRt5OwXP1hrS9wyg9h3d"}]

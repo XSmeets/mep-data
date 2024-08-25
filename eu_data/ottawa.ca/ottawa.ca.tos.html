@@ -1,0 +1,1456 @@
+<html lang="en" dir="ltr" class="h-100 js ott-desktop" style="scroll-padding-top: 141.344px;"><head>
+    <meta charset="utf-8"><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"fc5cb84a25",applicationID:"1252325944"};;/*! For license information please see nr-loader-rum-1.255.0.min.js.LICENSE.txt */
+(()=>{var e,t,r={234:(e,t,r)=>{"use strict";r.d(t,{P_:()=>v,Mt:()=>b,C5:()=>s,OP:()=>k,lF:()=>N,Yu:()=>_,Dg:()=>m,CX:()=>c,GE:()=>w,sU:()=>R});var n=r(8632),i=r(9567);const o={beacon:n.ce.beacon,errorBeacon:n.ce.errorBeacon,licenseKey:void 0,applicationID:void 0,sa:void 0,queueTime:void 0,applicationTime:void 0,ttGuid:void 0,user:void 0,account:void 0,product:void 0,extra:void 0,jsAttributes:{},userAttributes:void 0,atts:void 0,transactionName:void 0,tNamePlain:void 0},a={};function s(e){if(!e)throw new Error("All info objects require an agent identifier!");if(!a[e])throw new Error("Info for ".concat(e," was never set"));return a[e]}function c(e,t){if(!e)throw new Error("All info objects require an agent identifier!");a[e]=(0,i.D)(t,o);const r=(0,n.ek)(e);r&&(r.info=a[e])}const u=e=>{if(!e||"string"!=typeof e)return!1;try{document.createDocumentFragment().querySelector(e)}catch{return!1}return!0};var d=r(7056),l=r(50);const f="[data-nr-mask]",g=()=>{const e={mask_selector:"*",block_selector:"[data-nr-block]",mask_input_options:{color:!1,date:!1,"datetime-local":!1,email:!1,month:!1,number:!1,range:!1,search:!1,tel:!1,text:!1,time:!1,url:!1,week:!1,textarea:!1,select:!1,password:!0}};return{feature_flags:[],proxy:{assets:void 0,beacon:void 0},privacy:{cookies_enabled:!0},ajax:{deny_list:void 0,block_internal:!0,enabled:!0,harvestTimeSeconds:10,autoStart:!0},distributed_tracing:{enabled:void 0,exclude_newrelic_header:void 0,cors_use_newrelic_header:void 0,cors_use_tracecontext_headers:void 0,allowed_origins:void 0},session:{domain:void 0,expiresMs:d.oD,inactiveMs:d.Hb},ssl:void 0,obfuscate:void 0,jserrors:{enabled:!0,harvestTimeSeconds:10,autoStart:!0},metrics:{enabled:!0,autoStart:!0},page_action:{enabled:!0,harvestTimeSeconds:30,autoStart:!0},page_view_event:{enabled:!0,autoStart:!0},page_view_timing:{enabled:!0,harvestTimeSeconds:30,long_task:!1,autoStart:!0},session_trace:{enabled:!0,harvestTimeSeconds:10,autoStart:!0},harvest:{tooManyRequestsDelay:60},session_replay:{autoStart:!0,enabled:!1,harvestTimeSeconds:60,preload:!1,sampling_rate:10,error_sampling_rate:100,collect_fonts:!1,inline_images:!1,inline_stylesheet:!0,mask_all_inputs:!0,get mask_text_selector(){return e.mask_selector},set mask_text_selector(t){u(t)?e.mask_selector="".concat(t,",").concat(f):""===t||null===t?e.mask_selector=f:(0,l.Z)("An invalid session_replay.mask_selector was provided. '*' will be used.",t)},get block_class(){return"nr-block"},get ignore_class(){return"nr-ignore"},get mask_text_class(){return"nr-mask"},get block_selector(){return e.block_selector},set block_selector(t){u(t)?e.block_selector+=",".concat(t):""!==t&&(0,l.Z)("An invalid session_replay.block_selector was provided and will not be used",t)},get mask_input_options(){return e.mask_input_options},set mask_input_options(t){t&&"object"==typeof t?e.mask_input_options={...t,password:!0}:(0,l.Z)("An invalid session_replay.mask_input_option was provided and will not be used",t)}},spa:{enabled:!0,harvestTimeSeconds:10,autoStart:!0},soft_navigations:{enabled:!0,harvestTimeSeconds:10,autoStart:!0}}},p={},h="All configuration objects require an agent identifier!";function v(e){if(!e)throw new Error(h);if(!p[e])throw new Error("Configuration for ".concat(e," was never set"));return p[e]}function m(e,t){if(!e)throw new Error(h);p[e]=(0,i.D)(t,g());const r=(0,n.ek)(e);r&&(r.init=p[e])}function b(e,t){if(!e)throw new Error(h);var r=v(e);if(r){for(var n=t.split("."),i=0;i<n.length-1;i++)if("object"!=typeof(r=r[n[i]]))return;r=r[n[n.length-1]]}return r}const y={accountID:void 0,trustKey:void 0,agentID:void 0,licenseKey:void 0,applicationID:void 0,xpid:void 0},A={};function w(e,t){if(!e)throw new Error("All loader-config objects require an agent identifier!");A[e]=(0,i.D)(t,y);const r=(0,n.ek)(e);r&&(r.loader_config=A[e])}const _=(0,n.mF)().o;var x=r(385),E=r(6818);const D={buildEnv:E.Re,customTransaction:void 0,disabled:!1,distMethod:E.gF,isolatedBacklog:!1,loaderType:void 0,maxBytes:3e4,offset:Math.floor(x._A?.performance?.timeOrigin||x._A?.performance?.timing?.navigationStart||Date.now()),onerror:void 0,origin:""+x._A.location,ptid:void 0,releaseIds:{},appMetadata:{},session:void 0,xhrWrappable:"function"==typeof x._A.XMLHttpRequest?.prototype?.addEventListener,version:E.q4,denyList:void 0,harvestCount:0,timeKeeper:void 0},S={};function k(e){if(!e)throw new Error("All runtime objects require an agent identifier!");if(!S[e])throw new Error("Runtime for ".concat(e," was never set"));return S[e]}function R(e,t){if(!e)throw new Error("All runtime objects require an agent identifier!");S[e]=(0,i.D)(t,D);const r=(0,n.ek)(e);r&&(r.runtime=S[e])}function N(e){return function(e){try{const t=s(e);return!!t.licenseKey&&!!t.errorBeacon&&!!t.applicationID}catch(e){return!1}}(e)}},9567:(e,t,r)=>{"use strict";r.d(t,{D:()=>i});var n=r(50);function i(e,t){try{if(!e||"object"!=typeof e)return(0,n.Z)("Setting a Configurable requires an object as input");if(!t||"object"!=typeof t)return(0,n.Z)("Setting a Configurable requires a model to set its initial properties");const r=Object.create(Object.getPrototypeOf(t),Object.getOwnPropertyDescriptors(t)),o=0===Object.keys(r).length?e:r;for(let a in o)if(void 0!==e[a])try{Array.isArray(e[a])&&Array.isArray(t[a])?r[a]=Array.from(new Set([...e[a],...t[a]])):"object"==typeof e[a]&&"object"==typeof t[a]?r[a]=i(e[a],t[a]):r[a]=e[a]}catch(e){(0,n.Z)("An error occurred while setting a property of a Configurable",e)}return r}catch(e){(0,n.Z)("An error occured while setting a Configurable",e)}}},6818:(e,t,r)=>{"use strict";r.d(t,{Re:()=>i,gF:()=>o,q4:()=>n});const n="1.255.0",i="PROD",o="CDN"},385:(e,t,r)=>{"use strict";r.d(t,{Nk:()=>d,Tt:()=>s,_A:()=>o,cv:()=>l,iS:()=>a,il:()=>n,ux:()=>c,v6:()=>i,w1:()=>u});const n="undefined"!=typeof window&&!!window.document,i="undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self.navigator instanceof WorkerNavigator||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis.navigator instanceof WorkerNavigator),o=n?window:"undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis),a=Boolean("hidden"===o?.document?.visibilityState),s=/iPad|iPhone|iPod/.test(o.navigator?.userAgent),c=s&&"undefined"==typeof SharedWorker,u=((()=>{const e=o.navigator?.userAgent?.match(/Firefox[/\s](\d+\.\d+)/);Array.isArray(e)&&e.length>=2&&e[1]})(),Boolean(n&&window.document.documentMode)),d=!!o.navigator?.sendBeacon,l=Math.floor(o?.performance?.timeOrigin||o?.performance?.timing?.navigationStart||Date.now())},1117:(e,t,r)=>{"use strict";r.d(t,{w:()=>o});var n=r(50);const i={agentIdentifier:"",ee:void 0};class o{constructor(e){try{if("object"!=typeof e)return(0,n.Z)("shared context requires an object as input");this.sharedContext={},Object.assign(this.sharedContext,i),Object.entries(e).forEach((e=>{let[t,r]=e;Object.keys(i).includes(t)&&(this.sharedContext[t]=r)}))}catch(e){(0,n.Z)("An error occurred while setting SharedContext",e)}}}},8e3:(e,t,r)=>{"use strict";r.d(t,{LP:()=>l,RP:()=>c,o5:()=>u});var n=r(8325),i=r(1284),o=r(4322),a=r(3325);const s={};function c(e,t){const r={staged:!1,priority:a.p[t]||0};d(e),s[e].get(t)||s[e].set(t,r)}function u(e,t){d(e),s[e].get(t)&&s[e].delete(t),s[e].size&&f(e)}function d(e){if(!e)throw new Error("agentIdentifier required");s[e]||(s[e]=new Map)}function l(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:"",t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:"feature",r=arguments.length>2&&void 0!==arguments[2]&&arguments[2];if(d(e),!e||!s[e].get(t)||r)return g(e,t);s[e].get(t).staged=!0,f(e)}function f(e){const t=[...s[e]];t.every((e=>{let[t,r]=e;return r.staged}))&&(t.sort(((e,t)=>e[1].priority-t[1].priority)),t.forEach((t=>{let[r]=t;s[e].delete(r),g(e,r)})))}function g(e,t){const r=e?n.ee.get(e):n.ee,a=o.X.handlers;if(r.backlog&&a){var s=r.backlog[t],c=a[t];if(c){for(var u=0;s&&u<s.length;++u)p(s[u],c);(0,i.D)(c,(function(e,t){(0,i.D)(t,(function(t,r){r[0].on(e,r[1])}))}))}r.isolatedBacklog||delete a[t],r.backlog[t]=null,r.emit("drain-"+t,[])}}function p(e,t){var r=e[1];(0,i.D)(t[r],(function(t,r){var n=e[0];if(r[0]===n){var i=r[1],o=e[3],a=e[2];i.apply(o,a)}}))}},8325:(e,t,r)=>{"use strict";r.d(t,{A:()=>c,ee:()=>u});var n=r(8632),i=r(2210),o=r(234);class a{constructor(e){this.contextId=e}}var s=r(3117);const c="nr@context:".concat(s.a),u=function e(t,r){var n={},s={},d={},l=!1;try{l=16===r.length&&(0,o.OP)(r).isolatedBacklog}catch(e){}var f={on:p,addEventListener:p,removeEventListener:function(e,t){var r=n[e];if(!r)return;for(var i=0;i<r.length;i++)r[i]===t&&r.splice(i,1)},emit:function(e,r,n,i,o){!1!==o&&(o=!0);if(u.aborted&&!i)return;t&&o&&t.emit(e,r,n);for(var a=g(n),c=h(e),d=c.length,l=0;l<d;l++)c[l].apply(a,r);var p=m()[s[e]];p&&p.push([f,e,r,a]);return a},get:v,listeners:h,context:g,buffer:function(e,t){const r=m();if(t=t||"feature",f.aborted)return;Object.entries(e||{}).forEach((e=>{let[n,i]=e;s[i]=t,t in r||(r[t]=[])}))},abort:function(){f._aborted=!0,Object.keys(f.backlog).forEach((e=>{delete f.backlog[e]}))},isBuffering:function(e){return!!m()[s[e]]},debugId:r,backlog:l?{}:t&&"object"==typeof t.backlog?t.backlog:{},isolatedBacklog:l};return Object.defineProperty(f,"aborted",{get:()=>{let e=f._aborted||!1;return e||(t&&(e=t.aborted),e)}}),f;function g(e){return e&&e instanceof a?e:e?(0,i.X)(e,c,(()=>new a(c))):new a(c)}function p(e,t){n[e]=h(e).concat(t)}function h(e){return n[e]||[]}function v(t){return d[t]=d[t]||e(f,t)}function m(){return f.backlog}}(void 0,"globalEE"),d=(0,n.fP)();d.ee||(d.ee=u)},5546:(e,t,r)=>{"use strict";r.d(t,{E:()=>n,p:()=>i});var n=r(8325).ee.get("handle");function i(e,t,r,i,o){o?(o.buffer([e],i),o.emit(e,t,r)):(n.buffer([e],i),n.emit(e,t,r))}},4322:(e,t,r)=>{"use strict";r.d(t,{X:()=>o});var n=r(5546);o.on=a;var i=o.handlers={};function o(e,t,r,o){a(o||n.E,i,e,t,r)}function a(e,t,r,i,o){o||(o="feature"),e||(e=n.E);var a=t[o]=t[o]||{};(a[r]=a[r]||[]).push([e,i])}},3239:(e,t,r)=>{"use strict";r.d(t,{bP:()=>s,iz:()=>c,m$:()=>a});var n=r(385);let i=!1,o=!1;try{const e={get passive(){return i=!0,!1},get signal(){return o=!0,!1}};n._A.addEventListener("test",null,e),n._A.removeEventListener("test",null,e)}catch(e){}function a(e,t){return i||o?{capture:!!e,passive:i,signal:t}:!!e}function s(e,t){let r=arguments.length>2&&void 0!==arguments[2]&&arguments[2],n=arguments.length>3?arguments[3]:void 0;window.addEventListener(e,t,a(r,n))}function c(e,t){let r=arguments.length>2&&void 0!==arguments[2]&&arguments[2],n=arguments.length>3?arguments[3]:void 0;document.addEventListener(e,t,a(r,n))}},3117:(e,t,r)=>{"use strict";r.d(t,{a:()=>n});const n=(0,r(4402).Rl)()},4402:(e,t,r)=>{"use strict";r.d(t,{Rl:()=>a,ky:()=>s});var n=r(385);const i="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx";function o(e,t){return e?15&e[t]:16*Math.random()|0}function a(){const e=n._A?.crypto||n._A?.msCrypto;let t,r=0;return e&&e.getRandomValues&&(t=e.getRandomValues(new Uint8Array(30))),i.split("").map((e=>"x"===e?o(t,r++).toString(16):"y"===e?(3&o()|8).toString(16):e)).join("")}function s(e){const t=n._A?.crypto||n._A?.msCrypto;let r,i=0;t&&t.getRandomValues&&(r=t.getRandomValues(new Uint8Array(e)));const a=[];for(var s=0;s<e;s++)a.push(o(r,i++).toString(16));return a.join("")}},7056:(e,t,r)=>{"use strict";r.d(t,{Bq:()=>n,Hb:()=>a,IK:()=>u,K4:()=>i,oD:()=>o,uT:()=>c,wO:()=>s});const n="NRBA",i="SESSION",o=144e5,a=18e5,s={PAUSE:"session-pause",RESET:"session-reset",RESUME:"session-resume",UPDATE:"session-update"},c={SAME_TAB:"same-tab",CROSS_TAB:"cross-tab"},u={OFF:0,FULL:1,ERROR:2}},7894:(e,t,r)=>{"use strict";function n(){return Math.floor(performance.now())}r.d(t,{z:()=>n})},50:(e,t,r)=>{"use strict";function n(e,t){"function"==typeof console.warn&&(console.warn("New Relic: ".concat(e)),t&&console.warn(t))}r.d(t,{Z:()=>n})},2825:(e,t,r)=>{"use strict";r.d(t,{N:()=>c,T:()=>s});var n=r(8325),i=r(385);const o="newrelic";const a=new Set,s={};function c(e,t){const r=n.ee.get(t);s[t]??={},e&&"object"==typeof e&&(a.has(t)||(r.emit("rumresp",[e]),s[t]=e,a.add(t),function(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{};try{i._A.dispatchEvent(new CustomEvent(o,{detail:e}))}catch(e){}}({loaded:!0})))}},2210:(e,t,r)=>{"use strict";r.d(t,{X:()=>i});var n=Object.prototype.hasOwnProperty;function i(e,t,r){if(n.call(e,t))return e[t];var i=r();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:i,writable:!0,enumerable:!1}),i}catch(e){}return e[t]=i,i}},1284:(e,t,r)=>{"use strict";r.d(t,{D:()=>n});const n=(e,t)=>Object.entries(e||{}).map((e=>{let[r,n]=e;return t(r,n)}))},4351:(e,t,r)=>{"use strict";r.d(t,{P:()=>o});var n=r(8325);const i=()=>{const e=new WeakSet;return(t,r)=>{if("object"==typeof r&&null!==r){if(e.has(r))return;e.add(r)}return r}};function o(e){try{return JSON.stringify(e,i())}catch(e){try{n.ee.emit("internal-error",[e])}catch(e){}}}},3960:(e,t,r)=>{"use strict";r.d(t,{KB:()=>a,b2:()=>o});var n=r(3239);function i(){return"undefined"==typeof document||"complete"===document.readyState}function o(e,t){if(i())return e();(0,n.bP)("load",e,t)}function a(e){if(i())return e();(0,n.iz)("DOMContentLoaded",e)}},8632:(e,t,r)=>{"use strict";r.d(t,{EZ:()=>d,ce:()=>o,ek:()=>u,fP:()=>a,gG:()=>l,h5:()=>c,mF:()=>s});var n=r(385),i=r(7894);const o={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net"};function a(){return n._A.NREUM||(n._A.NREUM={}),void 0===n._A.newrelic&&(n._A.newrelic=n._A.NREUM),n._A.NREUM}function s(){let e=a();return e.o||(e.o={ST:n._A.setTimeout,SI:n._A.setImmediate,CT:n._A.clearTimeout,XHR:n._A.XMLHttpRequest,REQ:n._A.Request,EV:n._A.Event,PR:n._A.Promise,MO:n._A.MutationObserver,FETCH:n._A.fetch}),e}function c(e,t){let r=a();r.initializedAgents??={},t.initializedAt={ms:(0,i.z)(),date:new Date},r.initializedAgents[e]=t}function u(e){let t=a();return t.initializedAgents?.[e]}function d(e,t){a()[e]=t}function l(){return function(){let e=a();const t=e.info||{};e.info={beacon:o.beacon,errorBeacon:o.errorBeacon,...t}}(),function(){let e=a();const t=e.init||{};e.init={...t}}(),s(),function(){let e=a();const t=e.loader_config||{};e.loader_config={...t}}(),a()}},7956:(e,t,r)=>{"use strict";r.d(t,{N:()=>i});var n=r(3239);function i(e){let t=arguments.length>1&&void 0!==arguments[1]&&arguments[1],r=arguments.length>2?arguments[2]:void 0,i=arguments.length>3?arguments[3]:void 0;(0,n.iz)("visibilitychange",(function(){if(t)return void("hidden"===document.visibilityState&&e());e(document.visibilityState)}),r,i)}},3081:(e,t,r)=>{"use strict";r.d(t,{gF:()=>o,mY:()=>i,t9:()=>n,vz:()=>s,xS:()=>a});const n=r(3325).D.metrics,i="sm",o="cm",a="storeSupportabilityMetrics",s="storeEventMetrics"},7633:(e,t,r)=>{"use strict";r.d(t,{t:()=>n});const n=r(3325).D.pageViewEvent},9251:(e,t,r)=>{"use strict";r.d(t,{t:()=>n});const n=r(3325).D.pageViewTiming},7144:(e,t,r)=>{"use strict";r.d(t,{Ef:()=>i});var n=r(7056);r(3325).D.sessionReplay;const i={RECORD:"recordReplay",PAUSE:"pauseReplay"};n.IK.ERROR,n.IK.FULL,n.IK.OFF},5938:(e,t,r)=>{"use strict";r.d(t,{W:()=>i});var n=r(8325);class i{constructor(e,t,r){this.agentIdentifier=e,this.aggregator=t,this.ee=n.ee.get(e),this.featureName=r,this.blocked=!1}}},2758:(e,t,r)=>{"use strict";r.d(t,{j:()=>w});var n=r(3325),i=r(234),o=r(5546),a=r(8325),s=r(8e3),c=r(3960),u=r(385),d=r(50),l=r(3081),f=r(8632),g=r(7144);const p=["setErrorHandler","finished","addToTrace","addRelease","addPageAction","setCurrentRouteName","setPageViewName","setCustomAttribute","interaction","noticeError","setUserId","setApplicationVersion","start","recordReplay","pauseReplay",g.Ef.RECORD,g.Ef.PAUSE],h=["setErrorHandler","finished","addToTrace","addRelease"];var v=r(7894);function m(){const e=(0,f.gG)();p.forEach((t=>{e[t]=function(){for(var r=arguments.length,n=new Array(r),i=0;i<r;i++)n[i]=arguments[i];return function(t){for(var r=arguments.length,n=new Array(r>1?r-1:0),i=1;i<r;i++)n[i-1]=arguments[i];let o=[];return Object.values(e.initializedAgents).forEach((e=>{e.exposed&&e.api[t]&&o.push(e.api[t](...n))})),o.length>1?o:o[0]}(t,...n)}}))}var b=r(2825);const y=e=>{const t=e.startsWith("http");e+="/",r.p=t?e:"https://"+e};let A=!1;function w(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{},p=arguments.length>2?arguments[2]:void 0,w=arguments.length>3?arguments[3]:void 0,{init:_,info:x,loader_config:E,runtime:D={loaderType:p},exposed:S=!0}=t;const k=(0,f.gG)();x||(_=k.init,x=k.info,E=k.loader_config),(0,i.Dg)(e.agentIdentifier,_||{}),(0,i.GE)(e.agentIdentifier,E||{}),x.jsAttributes??={},u.v6&&(x.jsAttributes.isWorker=!0),(0,i.CX)(e.agentIdentifier,x);const R=(0,i.P_)(e.agentIdentifier),N=[x.beacon,x.errorBeacon];A||(R.proxy.assets&&(y(R.proxy.assets),N.push(R.proxy.assets)),R.proxy.beacon&&N.push(R.proxy.beacon),m(),(0,f.EZ)("activatedFeatures",b.T),e.runSoftNavOverSpa&&=!0===R.soft_navigations.enabled&&R.feature_flags.includes("soft_nav")),D.denyList=[...R.ajax.deny_list||[],...R.ajax.block_internal?N:[]],(0,i.sU)(e.agentIdentifier,D),void 0===e.api&&(e.api=function(e,t){let f=arguments.length>2&&void 0!==arguments[2]&&arguments[2];t||(0,s.RP)(e,"api");const p={};var m=a.ee.get(e),b=m.get("tracer"),y="api-",A=y+"ixn-";function w(t,r,n,o){const a=(0,i.C5)(e);return null===r?delete a.jsAttributes[t]:(0,i.CX)(e,{...a,jsAttributes:{...a.jsAttributes,[t]:r}}),E(y,n,!0,o||null===r?"session":void 0)(t,r)}function _(){}h.forEach((e=>{p[e]=E(y,e,!0,"api")})),p.addPageAction=E(y,"addPageAction",!0,n.D.pageAction),p.setPageViewName=function(t,r){if("string"==typeof t)return"/"!==t.charAt(0)&&(t="/"+t),(0,i.OP)(e).customTransaction=(r||"http://custom.transaction")+t,E(y,"setPageViewName",!0)()},p.setCustomAttribute=function(e,t){let r=arguments.length>2&&void 0!==arguments[2]&&arguments[2];if("string"==typeof e){if(["string","number","boolean"].includes(typeof t)||null===t)return w(e,t,"setCustomAttribute",r);(0,d.Z)("Failed to execute setCustomAttribute.\nNon-null value must be a string, number or boolean type, but a type of <".concat(typeof t,"> was provided."))}else(0,d.Z)("Failed to execute setCustomAttribute.\nName must be a string type, but a type of <".concat(typeof e,"> was provided."))},p.setUserId=function(e){if("string"==typeof e||null===e)return w("enduser.id",e,"setUserId",!0);(0,d.Z)("Failed to execute setUserId.\nNon-null value must be a string type, but a type of <".concat(typeof e,"> was provided."))},p.setApplicationVersion=function(e){if("string"==typeof e||null===e)return w("application.version",e,"setApplicationVersion",!1);(0,d.Z)("Failed to execute setApplicationVersion. Expected <String | null>, but got <".concat(typeof e,">."))},p.start=e=>{try{const t=e?"defined":"undefined";(0,o.p)(l.xS,["API/start/".concat(t,"/called")],void 0,n.D.metrics,m);const r=Object.values(n.D);if(void 0===e)e=r;else{if((e=Array.isArray(e)&&e.length?e:[e]).some((e=>!r.includes(e))))return(0,d.Z)("Invalid feature name supplied. Acceptable feature names are: ".concat(r));e.includes(n.D.pageViewEvent)||e.push(n.D.pageViewEvent)}e.forEach((e=>{m.emit("".concat(e,"-opt-in"))}))}catch(e){(0,d.Z)("An unexpected issue occurred",e)}},p[g.Ef.RECORD]=function(){(0,o.p)(l.xS,["API/recordReplay/called"],void 0,n.D.metrics,m),(0,o.p)(g.Ef.RECORD,[],void 0,n.D.sessionReplay,m)},p[g.Ef.PAUSE]=function(){(0,o.p)(l.xS,["API/pauseReplay/called"],void 0,n.D.metrics,m),(0,o.p)(g.Ef.PAUSE,[],void 0,n.D.sessionReplay,m)},p.interaction=function(e){return(new _).get("object"==typeof e?e:{})};const x=_.prototype={createTracer:function(e,t){var r={},i=this,a="function"==typeof t;return(0,o.p)(l.xS,["API/createTracer/called"],void 0,n.D.metrics,m),f||(0,o.p)(A+"tracer",[(0,v.z)(),e,r],i,n.D.spa,m),function(){if(b.emit((a?"":"no-")+"fn-start",[(0,v.z)(),i,a],r),a)try{return t.apply(this,arguments)}catch(e){throw b.emit("fn-err",[arguments,this,e],r),e}finally{b.emit("fn-end",[(0,v.z)()],r)}}}};function E(e,t,r,i){return function(){return(0,o.p)(l.xS,["API/"+t+"/called"],void 0,n.D.metrics,m),i&&(0,o.p)(e+t,[(0,v.z)(),...arguments],r?null:this,i,m),r?void 0:this}}function D(){r.e(75).then(r.bind(r,7438)).then((t=>{let{setAPI:r}=t;r(e),(0,s.LP)(e,"api")})).catch((()=>{(0,d.Z)("Downloading runtime APIs failed..."),m.abort()}))}return["actionText","setName","setAttribute","save","ignore","onEnd","getContext","end","get"].forEach((e=>{x[e]=E(A,e,void 0,f?n.D.softNav:n.D.spa)})),p.setCurrentRouteName=f?E(A,"routeName",void 0,n.D.softNav):E(y,"routeName",!0,n.D.spa),p.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),(0,o.p)(l.xS,["API/noticeError/called"],void 0,n.D.metrics,m),(0,o.p)("err",[e,(0,v.z)(),!1,t],void 0,n.D.jserrors,m)},u.il?(0,c.b2)((()=>D()),!0):D(),p}(e.agentIdentifier,w,e.runSoftNavOverSpa)),void 0===e.exposed&&(e.exposed=S),A=!0}},8993:(e,t,r)=>{r.nc=(()=>{try{return document?.currentScript?.nonce}catch(e){}return""})()},3325:(e,t,r)=>{"use strict";r.d(t,{D:()=>n,p:()=>i});const n={ajax:"ajax",jserrors:"jserrors",metrics:"metrics",pageAction:"page_action",pageViewEvent:"page_view_event",pageViewTiming:"page_view_timing",sessionReplay:"session_replay",sessionTrace:"session_trace",softNav:"soft_navigations",spa:"spa"},i={[n.pageViewEvent]:1,[n.pageViewTiming]:2,[n.metrics]:3,[n.jserrors]:4,[n.ajax]:5,[n.sessionTrace]:6,[n.pageAction]:7,[n.spa]:8,[n.softNav]:9,[n.sessionReplay]:10}}},n={};function i(e){var t=n[e];if(void 0!==t)return t.exports;var o=n[e]={exports:{}};return r[e](o,o.exports,i),o.exports}i.m=r,i.d=(e,t)=>{for(var r in t)i.o(t,r)&&!i.o(e,r)&&Object.defineProperty(e,r,{enumerable:!0,get:t[r]})},i.f={},i.e=e=>Promise.all(Object.keys(i.f).reduce(((t,r)=>(i.f[r](e,t),t)),[])),i.u=e=>"nr-rum-1.255.0.min.js",i.o=(e,t)=>Object.prototype.hasOwnProperty.call(e,t),e={},t="NRBA-1.255.0.PROD:",i.l=(r,n,o,a)=>{if(e[r])e[r].push(n);else{var s,c;if(void 0!==o)for(var u=document.getElementsByTagName("script"),d=0;d<u.length;d++){var l=u[d];if(l.getAttribute("src")==r||l.getAttribute("data-webpack")==t+o){s=l;break}}if(!s){c=!0;var f={75:"sha512-yvalRo3j7RmzZVRzIh42ebWt17oJ4T32AbVOUANV82MjHU2thajbTjqAynar4//H0nKgDvQg5tZT4ehVDsIZ4Q=="};(s=document.createElement("script")).charset="utf-8",s.timeout=120,i.nc&&s.setAttribute("nonce",i.nc),s.setAttribute("data-webpack",t+o),s.src=r,0!==s.src.indexOf(window.location.origin+"/")&&(s.crossOrigin="anonymous"),f[a]&&(s.integrity=f[a])}e[r]=[n];var g=(t,n)=>{s.onerror=s.onload=null,clearTimeout(p);var i=e[r];if(delete e[r],s.parentNode&&s.parentNode.removeChild(s),i&&i.forEach((e=>e(n))),t)return t(n)},p=setTimeout(g.bind(null,void 0,{type:"timeout",target:s}),12e4);s.onerror=g.bind(null,s.onerror),s.onload=g.bind(null,s.onload),c&&document.head.appendChild(s)}},i.r=e=>{"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},i.p="https://js-agent.newrelic.com/",(()=>{var e={50:0,832:0};i.f.j=(t,r)=>{var n=i.o(e,t)?e[t]:void 0;if(0!==n)if(n)r.push(n[2]);else{var o=new Promise(((r,i)=>n=e[t]=[r,i]));r.push(n[2]=o);var a=i.p+i.u(t),s=new Error;i.l(a,(r=>{if(i.o(e,t)&&(0!==(n=e[t])&&(e[t]=void 0),n)){var o=r&&("load"===r.type?"missing":r.type),a=r&&r.target&&r.target.src;s.message="Loading chunk "+t+" failed.\n("+o+": "+a+")",s.name="ChunkLoadError",s.type=o,s.request=a,n[1](s)}}),"chunk-"+t,t)}};var t=(t,r)=>{var n,o,[a,s,c]=r,u=0;if(a.some((t=>0!==e[t]))){for(n in s)i.o(s,n)&&(i.m[n]=s[n]);if(c)c(i)}for(t&&t(r);u<a.length;u++)o=a[u],i.o(e,o)&&e[o]&&e[o][0](),e[o]=0},r=self["webpackChunk:NRBA-1.255.0.PROD"]=self["webpackChunk:NRBA-1.255.0.PROD"]||[];r.forEach(t.bind(null,0)),r.push=t.bind(null,r.push.bind(r))})(),(()=>{"use strict";i(8993);var e=i(50),t=i(7144),r=i(4402);class n{agentIdentifier;constructor(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:(0,r.ky)(16);this.agentIdentifier=e}#e(t){for(var r=arguments.length,n=new Array(r>1?r-1:0),i=1;i<r;i++)n[i-1]=arguments[i];if("function"==typeof this.api?.[t])return this.api[t](...n);(0,e.Z)("Call to agent api ".concat(t," failed. The API is not currently initialized."))}addPageAction(e,t){return this.#e("addPageAction",e,t)}setPageViewName(e,t){return this.#e("setPageViewName",e,t)}setCustomAttribute(e,t,r){return this.#e("setCustomAttribute",e,t,r)}noticeError(e,t){return this.#e("noticeError",e,t)}setUserId(e){return this.#e("setUserId",e)}setApplicationVersion(e){return this.#e("setApplicationVersion",e)}setErrorHandler(e){return this.#e("setErrorHandler",e)}finished(e){return this.#e("finished",e)}addRelease(e,t){return this.#e("addRelease",e,t)}start(e){return this.#e("start",e)}recordReplay(){return this.#e(t.Ef.RECORD)}pauseReplay(){return this.#e(t.Ef.PAUSE)}addToTrace(e){return this.#e("addToTrace",e)}setCurrentRouteName(e){return this.#e("setCurrentRouteName",e)}interaction(){return this.#e("interaction")}}var o=i(3325),a=i(234);const s=Object.values(o.D);function c(e){const t={};return s.forEach((r=>{t[r]=function(e,t){return!0===(0,a.Mt)(t,"".concat(e,".enabled"))}(r,e)})),t}var u=i(2758);var d=i(8e3),l=i(5938),f=i(3960),g=i(385);const p=e=>g.il&&!0===(0,a.Mt)(e,"privacy.cookies_enabled");function h(e){return a.Yu.MO&&p&&!0===(0,a.Mt)(e,"session_trace.enabled")}class v extends l.W{constructor(e,t,r){let n=!(arguments.length>3&&void 0!==arguments[3])||arguments[3];super(e,t,r),this.auto=n,this.abortHandler=void 0,this.featAggregate=void 0,this.onAggregateImported=void 0,!1===(0,a.Mt)(this.agentIdentifier,"".concat(this.featureName,".autoStart"))&&(this.auto=!1),this.auto&&(0,d.RP)(e,r)}importAggregator(){let t,r=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{};if(this.featAggregate)return;if(!this.auto)return void this.ee.on("".concat(this.featureName,"-opt-in"),(()=>{(0,d.RP)(this.agentIdentifier,this.featureName),this.auto=!0,this.importAggregator()}));this.onAggregateImported=new Promise((e=>{t=e}));const n=async()=>{let n;try{if(p(this.agentIdentifier)){const{setupAgentSession:e}=await i.e(75).then(i.bind(i,3108));n=e(this.agentIdentifier)}}catch(t){(0,e.Z)("A problem occurred when starting up session manager. This page will not start or extend any session.",t),this.featureName===o.D.sessionReplay&&this.abortHandler?.()}try{if(!this.#t(this.featureName,n))return(0,d.LP)(this.agentIdentifier,this.featureName),void t(!1);const{lazyFeatureLoader:e}=await i.e(75).then(i.bind(i,8582)),{Aggregate:o}=await e(this.featureName,"aggregate");this.featAggregate=new o(this.agentIdentifier,this.aggregator,r),t(!0)}catch(r){(0,e.Z)("Downloading and initializing ".concat(this.featureName," failed..."),r),this.abortHandler?.(),(0,d.LP)(this.agentIdentifier,this.featureName,!0),t(!1),this.ee&&this.ee.abort()}};g.il?(0,f.b2)((()=>n()),!0):n()}#t(e,t){return e!==o.D.sessionReplay||(r=this.agentIdentifier,n=t,!(!h(r)||!n?.isNew&&!n?.state.sessionReplayMode));var r,n}}var m=i(7633);class b extends v{static featureName=m.t;constructor(e,t){let r=!(arguments.length>2&&void 0!==arguments[2])||arguments[2];super(e,t,m.t,r),this.importAggregator()}}var y=i(1117),A=i(1284);class w extends y.w{constructor(e){super(e),this.aggregatedData={}}store(e,t,r,n,i){var o=this.getBucket(e,t,r,i);return o.metrics=function(e,t){t||(t={count:0});return t.count+=1,(0,A.D)(e,(function(e,r){t[e]=_(r,t[e])})),t}(n,o.metrics),o}merge(e,t,r,n,i){var o=this.getBucket(e,t,n,i);if(o.metrics){var a=o.metrics;a.count+=r.count,(0,A.D)(r,(function(e,t){if("count"!==e){var n=a[e],i=r[e];i&&!i.c?a[e]=_(i.t,n):a[e]=function(e,t){if(!t)return e;t.c||(t=x(t.t));return t.min=Math.min(e.min,t.min),t.max=Math.max(e.max,t.max),t.t+=e.t,t.sos+=e.sos,t.c+=e.c,t}(i,a[e])}}))}else o.metrics=r}storeMetric(e,t,r,n){var i=this.getBucket(e,t,r);return i.stats=_(n,i.stats),i}getBucket(e,t,r,n){this.aggregatedData[e]||(this.aggregatedData[e]={});var i=this.aggregatedData[e][t];return i||(i=this.aggregatedData[e][t]={params:r||{}},n&&(i.custom=n)),i}get(e,t){return t?this.aggregatedData[e]&&this.aggregatedData[e][t]:this.aggregatedData[e]}take(e){for(var t={},r="",n=!1,i=0;i<e.length;i++)t[r=e[i]]=Object.values(this.aggregatedData[r]||{}),t[r].length&&(n=!0),delete this.aggregatedData[r];return n?t:null}}function _(e,t){return null==e?function(e){e?e.c++:e={c:1};return e}(t):t?(t.c||(t=x(t.t)),t.c+=1,t.t+=e,t.sos+=e*e,e>t.max&&(t.max=e),e<t.min&&(t.min=e),t):{t:e}}function x(e){return{t:e,min:e,max:e,sos:e*e,c:1}}var E=i(8632),D=i(4351);var S=i(5546),k=i(7956),R=i(3239),N=i(9251),P=i(7894);class j extends v{static featureName=N.t;constructor(e,t){let r=!(arguments.length>2&&void 0!==arguments[2])||arguments[2];super(e,t,N.t,r),g.il&&((0,k.N)((()=>(0,S.p)("docHidden",[(0,P.z)()],void 0,N.t,this.ee)),!0),(0,R.bP)("pagehide",(()=>(0,S.p)("winPagehide",[(0,P.z)()],void 0,N.t,this.ee))),this.importAggregator())}}var I=i(3081);class T extends v{static featureName=I.t9;constructor(e,t){let r=!(arguments.length>2&&void 0!==arguments[2])||arguments[2];super(e,t,I.t9,r),this.importAggregator()}}new class extends n{constructor(t,r){super(r),g._A?(this.sharedAggregator=new w({agentIdentifier:this.agentIdentifier}),this.features={},(0,E.h5)(this.agentIdentifier,this),this.desiredFeatures=new Set(t.features||[]),this.desiredFeatures.add(b),this.runSoftNavOverSpa=[...this.desiredFeatures].some((e=>e.featureName===o.D.softNav)),(0,u.j)(this,t,t.loaderType||"agent"),this.run()):(0,e.Z)("Failed to initialize the agent. Could not determine the runtime environment.")}get config(){return{info:this.info,init:this.init,loader_config:this.loader_config,runtime:this.runtime}}run(){try{const t=c(this.agentIdentifier),r=[...this.desiredFeatures];r.sort(((e,t)=>o.p[e.featureName]-o.p[t.featureName])),r.forEach((r=>{if(!t[r.featureName]&&r.featureName!==o.D.pageViewEvent)return;if(this.runSoftNavOverSpa&&r.featureName===o.D.spa)return;if(!this.runSoftNavOverSpa&&r.featureName===o.D.softNav)return;const n=function(e){switch(e){case o.D.ajax:return[o.D.jserrors];case o.D.sessionTrace:return[o.D.ajax,o.D.pageViewEvent];case o.D.sessionReplay:return[o.D.sessionTrace];case o.D.pageViewTiming:return[o.D.pageViewEvent];default:return[]}}(r.featureName);n.every((e=>e in this.features))||(0,e.Z)("".concat(r.featureName," is enabled but one or more dependent features has not been initialized (").concat((0,D.P)(n),"). This may cause unintended consequences or missing data...")),this.features[r.featureName]=new r(this.agentIdentifier,this.sharedAggregator)}))}catch(t){(0,e.Z)("Failed to initialize all enabled instrument classes (agent aborted) -",t);for(const e in this.features)this.features[e].abortHandler?.();const r=(0,E.fP)();delete r.initializedAgents[this.agentIdentifier]?.api,delete r.initializedAgents[this.agentIdentifier]?.features,delete this.sharedAggregator;return r.ee.get(this.agentIdentifier).abort(),!1}}}({features:[b,j,T],loaderType:"lite"})})()})();</script>
+<noscript><style>form.antibot * :not(.antibot-message) { display: none !important; }</style>
+</noscript><script async="" src="/sites/default/files/google_analytics/gtag.js?sbli21"></script>
+<script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments)};gtag("js", new Date());gtag("set", "developer_id.dMDhkMT", true);gtag("config", "G-GTBB95F8N6", {"groups":"default","page_location":location.pathname + location.search + location.hash});</script>
+<style type="text/css">:root, :host {
+  --fa-font-solid: normal 900 1em/1 "Font Awesome 6 Solid";
+  --fa-font-regular: normal 400 1em/1 "Font Awesome 6 Regular";
+  --fa-font-light: normal 300 1em/1 "Font Awesome 6 Light";
+  --fa-font-thin: normal 100 1em/1 "Font Awesome 6 Thin";
+  --fa-font-duotone: normal 900 1em/1 "Font Awesome 6 Duotone";
+  --fa-font-sharp-solid: normal 900 1em/1 "Font Awesome 6 Sharp";
+  --fa-font-sharp-regular: normal 400 1em/1 "Font Awesome 6 Sharp";
+  --fa-font-sharp-light: normal 300 1em/1 "Font Awesome 6 Sharp";
+  --fa-font-sharp-thin: normal 100 1em/1 "Font Awesome 6 Sharp";
+  --fa-font-brands: normal 400 1em/1 "Font Awesome 6 Brands";
+}
+
+svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
+  overflow: visible;
+  box-sizing: content-box;
+}
+
+.svg-inline--fa {
+  display: var(--fa-display, inline-block);
+  height: 1em;
+  overflow: visible;
+  vertical-align: -0.125em;
+}
+.svg-inline--fa.fa-2xs {
+  vertical-align: 0.1em;
+}
+.svg-inline--fa.fa-xs {
+  vertical-align: 0em;
+}
+.svg-inline--fa.fa-sm {
+  vertical-align: -0.0714285705em;
+}
+.svg-inline--fa.fa-lg {
+  vertical-align: -0.2em;
+}
+.svg-inline--fa.fa-xl {
+  vertical-align: -0.25em;
+}
+.svg-inline--fa.fa-2xl {
+  vertical-align: -0.3125em;
+}
+.svg-inline--fa.fa-pull-left {
+  margin-right: var(--fa-pull-margin, 0.3em);
+  width: auto;
+}
+.svg-inline--fa.fa-pull-right {
+  margin-left: var(--fa-pull-margin, 0.3em);
+  width: auto;
+}
+.svg-inline--fa.fa-li {
+  width: var(--fa-li-width, 2em);
+  top: 0.25em;
+}
+.svg-inline--fa.fa-fw {
+  width: var(--fa-fw-width, 1.25em);
+}
+
+.fa-layers svg.svg-inline--fa {
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.fa-layers-counter, .fa-layers-text {
+  display: inline-block;
+  position: absolute;
+  text-align: center;
+}
+
+.fa-layers {
+  display: inline-block;
+  height: 1em;
+  position: relative;
+  text-align: center;
+  vertical-align: -0.125em;
+  width: 1em;
+}
+.fa-layers svg.svg-inline--fa {
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+}
+
+.fa-layers-text {
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+}
+
+.fa-layers-counter {
+  background-color: var(--fa-counter-background-color, #ff253a);
+  border-radius: var(--fa-counter-border-radius, 1em);
+  box-sizing: border-box;
+  color: var(--fa-inverse, #fff);
+  line-height: var(--fa-counter-line-height, 1);
+  max-width: var(--fa-counter-max-width, 5em);
+  min-width: var(--fa-counter-min-width, 1.5em);
+  overflow: hidden;
+  padding: var(--fa-counter-padding, 0.25em 0.5em);
+  right: var(--fa-right, 0);
+  text-overflow: ellipsis;
+  top: var(--fa-top, 0);
+  -webkit-transform: scale(var(--fa-counter-scale, 0.25));
+          transform: scale(var(--fa-counter-scale, 0.25));
+  -webkit-transform-origin: top right;
+          transform-origin: top right;
+}
+
+.fa-layers-bottom-right {
+  bottom: var(--fa-bottom, 0);
+  right: var(--fa-right, 0);
+  top: auto;
+  -webkit-transform: scale(var(--fa-layers-scale, 0.25));
+          transform: scale(var(--fa-layers-scale, 0.25));
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+}
+
+.fa-layers-bottom-left {
+  bottom: var(--fa-bottom, 0);
+  left: var(--fa-left, 0);
+  right: auto;
+  top: auto;
+  -webkit-transform: scale(var(--fa-layers-scale, 0.25));
+          transform: scale(var(--fa-layers-scale, 0.25));
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+}
+
+.fa-layers-top-right {
+  top: var(--fa-top, 0);
+  right: var(--fa-right, 0);
+  -webkit-transform: scale(var(--fa-layers-scale, 0.25));
+          transform: scale(var(--fa-layers-scale, 0.25));
+  -webkit-transform-origin: top right;
+          transform-origin: top right;
+}
+
+.fa-layers-top-left {
+  left: var(--fa-left, 0);
+  right: auto;
+  top: var(--fa-top, 0);
+  -webkit-transform: scale(var(--fa-layers-scale, 0.25));
+          transform: scale(var(--fa-layers-scale, 0.25));
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+}
+
+.fa-1x {
+  font-size: 1em;
+}
+
+.fa-2x {
+  font-size: 2em;
+}
+
+.fa-3x {
+  font-size: 3em;
+}
+
+.fa-4x {
+  font-size: 4em;
+}
+
+.fa-5x {
+  font-size: 5em;
+}
+
+.fa-6x {
+  font-size: 6em;
+}
+
+.fa-7x {
+  font-size: 7em;
+}
+
+.fa-8x {
+  font-size: 8em;
+}
+
+.fa-9x {
+  font-size: 9em;
+}
+
+.fa-10x {
+  font-size: 10em;
+}
+
+.fa-2xs {
+  font-size: 0.625em;
+  line-height: 0.1em;
+  vertical-align: 0.225em;
+}
+
+.fa-xs {
+  font-size: 0.75em;
+  line-height: 0.0833333337em;
+  vertical-align: 0.125em;
+}
+
+.fa-sm {
+  font-size: 0.875em;
+  line-height: 0.0714285718em;
+  vertical-align: 0.0535714295em;
+}
+
+.fa-lg {
+  font-size: 1.25em;
+  line-height: 0.05em;
+  vertical-align: -0.075em;
+}
+
+.fa-xl {
+  font-size: 1.5em;
+  line-height: 0.0416666682em;
+  vertical-align: -0.125em;
+}
+
+.fa-2xl {
+  font-size: 2em;
+  line-height: 0.03125em;
+  vertical-align: -0.1875em;
+}
+
+.fa-fw {
+  text-align: center;
+  width: 1.25em;
+}
+
+.fa-ul {
+  list-style-type: none;
+  margin-left: var(--fa-li-margin, 2.5em);
+  padding-left: 0;
+}
+.fa-ul > li {
+  position: relative;
+}
+
+.fa-li {
+  left: calc(var(--fa-li-width, 2em) * -1);
+  position: absolute;
+  text-align: center;
+  width: var(--fa-li-width, 2em);
+  line-height: inherit;
+}
+
+.fa-border {
+  border-color: var(--fa-border-color, #eee);
+  border-radius: var(--fa-border-radius, 0.1em);
+  border-style: var(--fa-border-style, solid);
+  border-width: var(--fa-border-width, 0.08em);
+  padding: var(--fa-border-padding, 0.2em 0.25em 0.15em);
+}
+
+.fa-pull-left {
+  float: left;
+  margin-right: var(--fa-pull-margin, 0.3em);
+}
+
+.fa-pull-right {
+  float: right;
+  margin-left: var(--fa-pull-margin, 0.3em);
+}
+
+.fa-beat {
+  -webkit-animation-name: fa-beat;
+          animation-name: fa-beat;
+  -webkit-animation-delay: var(--fa-animation-delay, 0s);
+          animation-delay: var(--fa-animation-delay, 0s);
+  -webkit-animation-direction: var(--fa-animation-direction, normal);
+          animation-direction: var(--fa-animation-direction, normal);
+  -webkit-animation-duration: var(--fa-animation-duration, 1s);
+          animation-duration: var(--fa-animation-duration, 1s);
+  -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+          animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  -webkit-animation-timing-function: var(--fa-animation-timing, ease-in-out);
+          animation-timing-function: var(--fa-animation-timing, ease-in-out);
+}
+
+.fa-bounce {
+  -webkit-animation-name: fa-bounce;
+          animation-name: fa-bounce;
+  -webkit-animation-delay: var(--fa-animation-delay, 0s);
+          animation-delay: var(--fa-animation-delay, 0s);
+  -webkit-animation-direction: var(--fa-animation-direction, normal);
+          animation-direction: var(--fa-animation-direction, normal);
+  -webkit-animation-duration: var(--fa-animation-duration, 1s);
+          animation-duration: var(--fa-animation-duration, 1s);
+  -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+          animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  -webkit-animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.28, 0.84, 0.42, 1));
+          animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.28, 0.84, 0.42, 1));
+}
+
+.fa-fade {
+  -webkit-animation-name: fa-fade;
+          animation-name: fa-fade;
+  -webkit-animation-delay: var(--fa-animation-delay, 0s);
+          animation-delay: var(--fa-animation-delay, 0s);
+  -webkit-animation-direction: var(--fa-animation-direction, normal);
+          animation-direction: var(--fa-animation-direction, normal);
+  -webkit-animation-duration: var(--fa-animation-duration, 1s);
+          animation-duration: var(--fa-animation-duration, 1s);
+  -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+          animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  -webkit-animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));
+          animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));
+}
+
+.fa-beat-fade {
+  -webkit-animation-name: fa-beat-fade;
+          animation-name: fa-beat-fade;
+  -webkit-animation-delay: var(--fa-animation-delay, 0s);
+          animation-delay: var(--fa-animation-delay, 0s);
+  -webkit-animation-direction: var(--fa-animation-direction, normal);
+          animation-direction: var(--fa-animation-direction, normal);
+  -webkit-animation-duration: var(--fa-animation-duration, 1s);
+          animation-duration: var(--fa-animation-duration, 1s);
+  -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+          animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  -webkit-animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));
+          animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));
+}
+
+.fa-flip {
+  -webkit-animation-name: fa-flip;
+          animation-name: fa-flip;
+  -webkit-animation-delay: var(--fa-animation-delay, 0s);
+          animation-delay: var(--fa-animation-delay, 0s);
+  -webkit-animation-direction: var(--fa-animation-direction, normal);
+          animation-direction: var(--fa-animation-direction, normal);
+  -webkit-animation-duration: var(--fa-animation-duration, 1s);
+          animation-duration: var(--fa-animation-duration, 1s);
+  -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+          animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  -webkit-animation-timing-function: var(--fa-animation-timing, ease-in-out);
+          animation-timing-function: var(--fa-animation-timing, ease-in-out);
+}
+
+.fa-shake {
+  -webkit-animation-name: fa-shake;
+          animation-name: fa-shake;
+  -webkit-animation-delay: var(--fa-animation-delay, 0s);
+          animation-delay: var(--fa-animation-delay, 0s);
+  -webkit-animation-direction: var(--fa-animation-direction, normal);
+          animation-direction: var(--fa-animation-direction, normal);
+  -webkit-animation-duration: var(--fa-animation-duration, 1s);
+          animation-duration: var(--fa-animation-duration, 1s);
+  -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+          animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  -webkit-animation-timing-function: var(--fa-animation-timing, linear);
+          animation-timing-function: var(--fa-animation-timing, linear);
+}
+
+.fa-spin {
+  -webkit-animation-name: fa-spin;
+          animation-name: fa-spin;
+  -webkit-animation-delay: var(--fa-animation-delay, 0s);
+          animation-delay: var(--fa-animation-delay, 0s);
+  -webkit-animation-direction: var(--fa-animation-direction, normal);
+          animation-direction: var(--fa-animation-direction, normal);
+  -webkit-animation-duration: var(--fa-animation-duration, 2s);
+          animation-duration: var(--fa-animation-duration, 2s);
+  -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+          animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  -webkit-animation-timing-function: var(--fa-animation-timing, linear);
+          animation-timing-function: var(--fa-animation-timing, linear);
+}
+
+.fa-spin-reverse {
+  --fa-animation-direction: reverse;
+}
+
+.fa-pulse,
+.fa-spin-pulse {
+  -webkit-animation-name: fa-spin;
+          animation-name: fa-spin;
+  -webkit-animation-direction: var(--fa-animation-direction, normal);
+          animation-direction: var(--fa-animation-direction, normal);
+  -webkit-animation-duration: var(--fa-animation-duration, 1s);
+          animation-duration: var(--fa-animation-duration, 1s);
+  -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+          animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  -webkit-animation-timing-function: var(--fa-animation-timing, steps(8));
+          animation-timing-function: var(--fa-animation-timing, steps(8));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fa-beat,
+.fa-bounce,
+.fa-fade,
+.fa-beat-fade,
+.fa-flip,
+.fa-pulse,
+.fa-shake,
+.fa-spin,
+.fa-spin-pulse {
+    -webkit-animation-delay: -1ms;
+            animation-delay: -1ms;
+    -webkit-animation-duration: 1ms;
+            animation-duration: 1ms;
+    -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+    -webkit-transition-delay: 0s;
+            transition-delay: 0s;
+    -webkit-transition-duration: 0s;
+            transition-duration: 0s;
+  }
+}
+@-webkit-keyframes fa-beat {
+  0%, 90% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  45% {
+    -webkit-transform: scale(var(--fa-beat-scale, 1.25));
+            transform: scale(var(--fa-beat-scale, 1.25));
+  }
+}
+@keyframes fa-beat {
+  0%, 90% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  45% {
+    -webkit-transform: scale(var(--fa-beat-scale, 1.25));
+            transform: scale(var(--fa-beat-scale, 1.25));
+  }
+}
+@-webkit-keyframes fa-bounce {
+  0% {
+    -webkit-transform: scale(1, 1) translateY(0);
+            transform: scale(1, 1) translateY(0);
+  }
+  10% {
+    -webkit-transform: scale(var(--fa-bounce-start-scale-x, 1.1), var(--fa-bounce-start-scale-y, 0.9)) translateY(0);
+            transform: scale(var(--fa-bounce-start-scale-x, 1.1), var(--fa-bounce-start-scale-y, 0.9)) translateY(0);
+  }
+  30% {
+    -webkit-transform: scale(var(--fa-bounce-jump-scale-x, 0.9), var(--fa-bounce-jump-scale-y, 1.1)) translateY(var(--fa-bounce-height, -0.5em));
+            transform: scale(var(--fa-bounce-jump-scale-x, 0.9), var(--fa-bounce-jump-scale-y, 1.1)) translateY(var(--fa-bounce-height, -0.5em));
+  }
+  50% {
+    -webkit-transform: scale(var(--fa-bounce-land-scale-x, 1.05), var(--fa-bounce-land-scale-y, 0.95)) translateY(0);
+            transform: scale(var(--fa-bounce-land-scale-x, 1.05), var(--fa-bounce-land-scale-y, 0.95)) translateY(0);
+  }
+  57% {
+    -webkit-transform: scale(1, 1) translateY(var(--fa-bounce-rebound, -0.125em));
+            transform: scale(1, 1) translateY(var(--fa-bounce-rebound, -0.125em));
+  }
+  64% {
+    -webkit-transform: scale(1, 1) translateY(0);
+            transform: scale(1, 1) translateY(0);
+  }
+  100% {
+    -webkit-transform: scale(1, 1) translateY(0);
+            transform: scale(1, 1) translateY(0);
+  }
+}
+@keyframes fa-bounce {
+  0% {
+    -webkit-transform: scale(1, 1) translateY(0);
+            transform: scale(1, 1) translateY(0);
+  }
+  10% {
+    -webkit-transform: scale(var(--fa-bounce-start-scale-x, 1.1), var(--fa-bounce-start-scale-y, 0.9)) translateY(0);
+            transform: scale(var(--fa-bounce-start-scale-x, 1.1), var(--fa-bounce-start-scale-y, 0.9)) translateY(0);
+  }
+  30% {
+    -webkit-transform: scale(var(--fa-bounce-jump-scale-x, 0.9), var(--fa-bounce-jump-scale-y, 1.1)) translateY(var(--fa-bounce-height, -0.5em));
+            transform: scale(var(--fa-bounce-jump-scale-x, 0.9), var(--fa-bounce-jump-scale-y, 1.1)) translateY(var(--fa-bounce-height, -0.5em));
+  }
+  50% {
+    -webkit-transform: scale(var(--fa-bounce-land-scale-x, 1.05), var(--fa-bounce-land-scale-y, 0.95)) translateY(0);
+            transform: scale(var(--fa-bounce-land-scale-x, 1.05), var(--fa-bounce-land-scale-y, 0.95)) translateY(0);
+  }
+  57% {
+    -webkit-transform: scale(1, 1) translateY(var(--fa-bounce-rebound, -0.125em));
+            transform: scale(1, 1) translateY(var(--fa-bounce-rebound, -0.125em));
+  }
+  64% {
+    -webkit-transform: scale(1, 1) translateY(0);
+            transform: scale(1, 1) translateY(0);
+  }
+  100% {
+    -webkit-transform: scale(1, 1) translateY(0);
+            transform: scale(1, 1) translateY(0);
+  }
+}
+@-webkit-keyframes fa-fade {
+  50% {
+    opacity: var(--fa-fade-opacity, 0.4);
+  }
+}
+@keyframes fa-fade {
+  50% {
+    opacity: var(--fa-fade-opacity, 0.4);
+  }
+}
+@-webkit-keyframes fa-beat-fade {
+  0%, 100% {
+    opacity: var(--fa-beat-fade-opacity, 0.4);
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    -webkit-transform: scale(var(--fa-beat-fade-scale, 1.125));
+            transform: scale(var(--fa-beat-fade-scale, 1.125));
+  }
+}
+@keyframes fa-beat-fade {
+  0%, 100% {
+    opacity: var(--fa-beat-fade-opacity, 0.4);
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    -webkit-transform: scale(var(--fa-beat-fade-scale, 1.125));
+            transform: scale(var(--fa-beat-fade-scale, 1.125));
+  }
+}
+@-webkit-keyframes fa-flip {
+  50% {
+    -webkit-transform: rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), var(--fa-flip-angle, -180deg));
+            transform: rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), var(--fa-flip-angle, -180deg));
+  }
+}
+@keyframes fa-flip {
+  50% {
+    -webkit-transform: rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), var(--fa-flip-angle, -180deg));
+            transform: rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), var(--fa-flip-angle, -180deg));
+  }
+}
+@-webkit-keyframes fa-shake {
+  0% {
+    -webkit-transform: rotate(-15deg);
+            transform: rotate(-15deg);
+  }
+  4% {
+    -webkit-transform: rotate(15deg);
+            transform: rotate(15deg);
+  }
+  8%, 24% {
+    -webkit-transform: rotate(-18deg);
+            transform: rotate(-18deg);
+  }
+  12%, 28% {
+    -webkit-transform: rotate(18deg);
+            transform: rotate(18deg);
+  }
+  16% {
+    -webkit-transform: rotate(-22deg);
+            transform: rotate(-22deg);
+  }
+  20% {
+    -webkit-transform: rotate(22deg);
+            transform: rotate(22deg);
+  }
+  32% {
+    -webkit-transform: rotate(-12deg);
+            transform: rotate(-12deg);
+  }
+  36% {
+    -webkit-transform: rotate(12deg);
+            transform: rotate(12deg);
+  }
+  40%, 100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+@keyframes fa-shake {
+  0% {
+    -webkit-transform: rotate(-15deg);
+            transform: rotate(-15deg);
+  }
+  4% {
+    -webkit-transform: rotate(15deg);
+            transform: rotate(15deg);
+  }
+  8%, 24% {
+    -webkit-transform: rotate(-18deg);
+            transform: rotate(-18deg);
+  }
+  12%, 28% {
+    -webkit-transform: rotate(18deg);
+            transform: rotate(18deg);
+  }
+  16% {
+    -webkit-transform: rotate(-22deg);
+            transform: rotate(-22deg);
+  }
+  20% {
+    -webkit-transform: rotate(22deg);
+            transform: rotate(22deg);
+  }
+  32% {
+    -webkit-transform: rotate(-12deg);
+            transform: rotate(-12deg);
+  }
+  36% {
+    -webkit-transform: rotate(12deg);
+            transform: rotate(12deg);
+  }
+  40%, 100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+@-webkit-keyframes fa-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes fa-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+.fa-rotate-90 {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.fa-rotate-180 {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.fa-rotate-270 {
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
+}
+
+.fa-flip-horizontal {
+  -webkit-transform: scale(-1, 1);
+          transform: scale(-1, 1);
+}
+
+.fa-flip-vertical {
+  -webkit-transform: scale(1, -1);
+          transform: scale(1, -1);
+}
+
+.fa-flip-both,
+.fa-flip-horizontal.fa-flip-vertical {
+  -webkit-transform: scale(-1, -1);
+          transform: scale(-1, -1);
+}
+
+.fa-rotate-by {
+  -webkit-transform: rotate(var(--fa-rotate-angle, none));
+          transform: rotate(var(--fa-rotate-angle, none));
+}
+
+.fa-stack {
+  display: inline-block;
+  vertical-align: middle;
+  height: 2em;
+  position: relative;
+  width: 2.5em;
+}
+
+.fa-stack-1x,
+.fa-stack-2x {
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: var(--fa-stack-z-index, auto);
+}
+
+.svg-inline--fa.fa-stack-1x {
+  height: 1em;
+  width: 1.25em;
+}
+.svg-inline--fa.fa-stack-2x {
+  height: 2em;
+  width: 2.5em;
+}
+
+.fa-inverse {
+  color: var(--fa-inverse, #fff);
+}
+
+.sr-only,
+.fa-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.sr-only-focusable:not(:focus),
+.fa-sr-only-focusable:not(:focus) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.svg-inline--fa .fa-primary {
+  fill: var(--fa-primary-color, currentColor);
+  opacity: var(--fa-primary-opacity, 1);
+}
+
+.svg-inline--fa .fa-secondary {
+  fill: var(--fa-secondary-color, currentColor);
+  opacity: var(--fa-secondary-opacity, 0.4);
+}
+
+.svg-inline--fa.fa-swap-opacity .fa-primary {
+  opacity: var(--fa-secondary-opacity, 0.4);
+}
+
+.svg-inline--fa.fa-swap-opacity .fa-secondary {
+  opacity: var(--fa-primary-opacity, 1);
+}
+
+.svg-inline--fa mask .fa-primary,
+.svg-inline--fa mask .fa-secondary {
+  fill: black;
+}
+
+.fad.fa-inverse,
+.fa-duotone.fa-inverse {
+  color: var(--fa-inverse, #fff);
+}</style><style>/* @see https://github.com/aFarkas/lazysizes#broken-image-symbol */.js img.lazyload:not([src]) { visibility: hidden; }/* @see https://github.com/aFarkas/lazysizes#automatically-setting-the-sizes-attribute */.js img.lazyloaded[data-sizes=auto] { display: block; width: 100%; }/* Transition effect. */.js .lazyload, .js .lazyloading { opacity: 0; }.js .lazyloaded { opacity: 1; -webkit-transition: opacity 2000ms; transition: opacity 2000ms; }</style>
+<link rel="canonical" href="https://ottawa.ca/en/terms-use">
+<meta name="dcterms.title" content="Terms of use">
+<meta name="dcterms.creator" content="Digital Services">
+<meta name="dcterms.date" content="2023-10-11">
+<meta name="dcterms.language" content="en">
+<meta name="Generator" content="Drupal 10 (https://www.drupal.org)">
+<meta name="MobileOptimized" content="width">
+<meta name="HandheldFriendly" content="true">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="/themes/custom/ottca_theme/favicon.ico" type="image/vnd.microsoft.icon">
+<link rel="alternate" hreflang="en" href="https://ottawa.ca/en/terms-use">
+<link rel="alternate" hreflang="fr" href="https://ottawa.ca/fr/conditions-dutilisation">
+
+    <title>Terms of use | City of Ottawa</title>
+    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_tbdF7i06fTPY90avaB9B_8NHnbwDFCbRlf3di0ZGsV0.css?delta=0&amp;language=en&amp;theme=ottca_theme&amp;include=eJx9UVtuAyEMvBC7_PQ-iIdF3BiMsElCTl9atU22lfJjPB6PMUzjNpqT0S8wbXsCJp4hoXJ3WBNUDcTxbJ9yk5kzgfPV01SMYv8WDPn7tJ_ByBSFYoMXMIFZRbtvb_9wARGfQUzkDrZyL57wfpT8ptu7bOQVRJ_5TBw8baKTsGbDqtE7PUGBV9TKx22_YsqgB6J1rLoJR1zKMFS5yqFBUAFL63yB7fFyuOm642xTH83T_g3Xh0we6hJKXP19Wq4QmUzz3ee1_kl-FI_KPmobgVBOkMwF4Sr2K-6F0yA4LLNmkW8CTjkvK4xydO9i12EaX6EHdFACJHtAWyRcrr5uGaJclhf9AzsG3bo">
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_1ASjh0dp3irlQAy4y7c3whb6becMgYmnUbrPnUGsAk8.css?delta=1&amp;language=en&amp;theme=ottca_theme&amp;include=eJx9UVtuAyEMvBC7_PQ-iIdF3BiMsElCTl9atU22lfJjPB6PMUzjNpqT0S8wbXsCJp4hoXJ3WBNUDcTxbJ9yk5kzgfPV01SMYv8WDPn7tJ_ByBSFYoMXMIFZRbtvb_9wARGfQUzkDrZyL57wfpT8ptu7bOQVRJ_5TBw8baKTsGbDqtE7PUGBV9TKx22_YsqgB6J1rLoJR1zKMFS5yqFBUAFL63yB7fFyuOm642xTH83T_g3Xh0we6hJKXP19Wq4QmUzz3ee1_kl-FI_KPmobgVBOkMwF4Sr2K-6F0yA4LLNmkW8CTjkvK4xydO9i12EaX6EHdFACJHtAWyRcrr5uGaJclhf9AzsG3bo">
+<link rel="stylesheet" media="all" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_io-2i9c4MEH4f1_GcYunciSbVHqjTBZA5nY6NFY-7rs.css?delta=3&amp;language=en&amp;theme=ottca_theme&amp;include=eJx9UVtuAyEMvBC7_PQ-iIdF3BiMsElCTl9atU22lfJjPB6PMUzjNpqT0S8wbXsCJp4hoXJ3WBNUDcTxbJ9yk5kzgfPV01SMYv8WDPn7tJ_ByBSFYoMXMIFZRbtvb_9wARGfQUzkDrZyL57wfpT8ptu7bOQVRJ_5TBw8baKTsGbDqtE7PUGBV9TKx22_YsqgB6J1rLoJR1zKMFS5yqFBUAFL63yB7fFyuOm642xTH83T_g3Xh0we6hJKXP19Wq4QmUzz3ee1_kl-FI_KPmobgVBOkMwF4Sr2K-6F0yA4LLNmkW8CTjkvK4xydO9i12EaX6EHdFACJHtAWyRcrr5uGaJclhf9AzsG3bo">
+<link rel="stylesheet" media="all" href="//ottux.ottawa.ca/widgets/v1.4.5/css/app.css">
+
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"en\/","currentPath":"node\/2228066","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"popup_survey":{"frequency":"10","botlist":"alexa|bot|crawl|bing|facebookexternalhit|feedburner|google|preview|nagios|postrank|pingdom|slurp|spider|yahoo|yandex|sogou"},"google_analytics":{"account":"G-GTBB95F8N6","trackOutbound":true,"trackMailto":true,"trackTel":true,"trackDownload":true,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip","trackUrlFragments":true},"lazy":{"lazysizes":{"lazyClass":"lazyload","loadedClass":"lazyloaded","loadingClass":"lazyloading","preloadClass":"lazypreload","errorClass":"lazyerror","autosizesClass":"lazyautosizes","srcAttr":"data-src","srcsetAttr":"data-srcset","sizesAttr":"data-sizes","minSize":40,"customMedia":[],"init":true,"expFactor":1.5,"hFac":0.80000000000000004,"loadMode":2,"loadHidden":true,"ricTimeout":0,"throttleDelay":125,"plugins":{"native-loading":"native-loading\/ls.native-loading"}},"placeholderSrc":"","preferNative":true,"minified":true,"libraryPath":"\/libraries\/lazysizes"},"data":{"extlink":{"extTarget":true,"extTargetNoOverride":true,"extNofollow":false,"extNoreferrer":true,"extFollowNoOverride":false,"extClass":"ext","extLabel":"(link is external)","extImgClass":false,"extSubdomains":false,"extExclude":"","extInclude":"","extCssExclude":"#ott-header-container,#ottawa-footer,.fa,.fas,.far,.fal,.fab,.jssocials-share a,.jssocials-share-email,.toolbar-menu,.toolbar-tab","extCssExplicit":"","extAlert":false,"extAlertText":"This link will take you to an external web site. We are not responsible for their content.","mailtoClass":"mailto","mailtoLabel":"(link opens email application)","extUseFontAwesome":true,"extIconPlacement":"append","extFaLinkClasses":"fas fa-external-link-alt","extFaMailtoClasses":"far fa-envelope","whitelistedDomains":[]}},"user":{"uid":0,"permissionsHash":"ec430410325c88402d6ece5f3af37aa60489dcc53f9c0e5f7d30c80d65f458f3"}}</script>
+<script src="/sites/default/files/js/js_2C3FQaqUSYd0swDMX5ei2J4LYFFvREyh59IaE0FVISY.js?scope=header&amp;delta=0&amp;language=en&amp;theme=ottca_theme&amp;include=eJx9UVtuAyEMvBC7_PQ-iIdF3BiMsElCTl9atU22lfJjPB6PMUzjNpqT0S8wbXsCJp4hoXJ3WBNUDcTxbJ9yk5kzgfPV01SMYv8WDPn7tJ_ByBSFYoMXMIFZRbtvb_9wARGfQUzkDrZyL57wfpT8ptu7bOQVRJ_5TBw8baKTsGbDqtE7PUGBV9TKx22_YsqgB6J1rLoJR1zKMFS5yqFBUAFL63yB7fFyuOm642xTH83T_g3Xh0we6hJKXP19Wq4QmUzz3ee1_kl-FI_KPmobgVBOkMwF4Sr2K-6F0yA4LLNmkW8CTjkvK4xydO9i12EaX6EHdFACJHtAWyRcrr5uGaJclhf9AzsG3bo"></script>
+<script src="https://cdn.jsdelivr.net/npm/powerbi-client@2.22.1/dist/powerbi.min.js"></script>
+<script src="/modules/contrib/powerbi_embed/js/powerbi_embed-customizer.js?v=1.0.0"></script>
+
+  </head>
+  <body class="path-node page-node-type-long-page   d-flex flex-column h-100" data-once="ottawa_bootstrap_sass_print_social_buttons">
+        
+      <div class="dialog-off-canvas-main-canvas d-flex flex-column h-100" data-off-canvas-main-canvas="">
+    
+        <div data-v-ed311886="" class="ottux-widget"><div searchinputfocustrigger="search-input-focus-trigger" data-v-ed311886="" style="margin-bottom: 100px;"><header id="ott-header-container" class="header-nav-bar fixed-top"><div class="header-bar position-relative"><div class="container"><!----><a href="#main-content" class="skipLink position-absolute sr-only sr-only-focusable p-1">Skip to main content</a><div class="header-row row justify-content-between"><div class="col-auto logo-container pr-0 pr-md-3 d-flex"><ul class="items mobile-menu-button-list justify-content-end m-0 p-0 mt-2 mt-lg-4 d-flex"><li class="gateway-menu p-0 d-inline"><button aria-haspopup="true" aria-expanded="false" aria-label="Open menu" aria-controls="menuDropDown" class="header-menu-item btn-primary btn border-0 rounded-0"> Menu <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="caret-down" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" alt="" class="svg-inline--fa fa-caret-down"><path fill="currentColor" d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z" class=""></path></svg></button><div class="position-relative"><div class="menu-item-bridge" style="display: none;"></div></div><div id="menuDropDown" aria-label="Menu" class="dropdown-menu-container pl-0 pr-0" style="display: none;"><ul role="menu" class="pl-0 pr-0 m-0 ml-0"><li aria-hidden="true" class="scrollable text-right"><small>Scroll for more <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="caret-down" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svg-inline--fa fa-caret-down"><path fill="currentColor" d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z" class=""></path></svg></small></li><li class="gateway-link ml-0 mr-0"><a role="menuitem" href="https://ottawa.ca/en/parking-roads-and-travel" class="pt-2 pb-2 pr-3 pl-3 m-0 d-block">Parking, roads, and travel</a></li><li class="gateway-link ml-0 mr-0"><a role="menuitem" href="https://ottawa.ca/en/recreation-and-parks" class="pt-2 pb-2 pr-3 pl-3 m-0 d-block">Recreation and parks</a></li><li class="gateway-link ml-0 mr-0"><a role="menuitem" href="https://ottawa.ca/en/jobs-city" class="pt-2 pb-2 pr-3 pl-3 m-0 d-block">Jobs with the City</a></li><li class="gateway-link ml-0 mr-0"><a role="menuitem" href="https://ottawa.ca/en/garbage-and-recycling" class="pt-2 pb-2 pr-3 pl-3 m-0 d-block">Garbage and recycling</a></li><li class="gateway-link ml-0 mr-0"><a role="menuitem" href="https://ottawa.ca/en/planning-development-and-construction" class="pt-2 pb-2 pr-3 pl-3 m-0 d-block">Planning, development and construction</a></li><li class="gateway-link ml-0 mr-0"><a role="menuitem" href="https://ottawa.ca/en/city-hall" class="pt-2 pb-2 pr-3 pl-3 m-0 d-block">City Hall</a></li><li class="gateway-link ml-0 mr-0"><a role="menuitem" href="https://ottawa.ca/en/3-1-1" class="pt-2 pb-2 pr-3 pl-3 m-0 d-block">3-1-1</a></li><li class="gateway-link ml-0 mr-0"><a role="menuitem" href="https://ottawa.ca/en/living-ottawa" class="pt-2 pb-2 pr-3 pl-3 m-0 d-block">Living in Ottawa</a></li><li class="gateway-link ml-0 mr-0"><a role="menuitem" href="https://ottawa.ca/en/family-and-social-services" class="pt-2 pb-2 pr-3 pl-3 m-0 d-block">Family and social services</a></li><li class="gateway-link ml-0 mr-0"><a role="menuitem" href="https://ottawa.ca/en/health-and-public-safety" class="pt-2 pb-2 pr-3 pl-3 m-0 d-block">Health and public safety</a></li><li class="gateway-link ml-0 mr-0"><a role="menuitem" href="https://ottawa.ca/en/business" class="pt-2 pb-2 pr-3 pl-3 m-0 d-block">Business</a></li><li class="gateway-link ml-0 mr-0"><a role="menuitem" href="https://ottawa.ca/en/arts-heritage-and-events" class="pt-2 pb-2 pr-3 pl-3 m-0 d-block">Arts, heritage and events</a></li></ul></div></li></ul><a href="/en" title="City of Ottawa Home page" aria-label="City of Ottawa Home page" class="logo navbar-brand d-block pt-0 pb-0 m-0"></a></div><div class="col-auto d-none d-md-block mt-md-2 mt-lg-4 flex-md-grow-1"></div><div class="menu col-auto pl-0 pl-md-3 mt-2 mt-lg-4"><ul class="items justify-content-end mb-0 pl-0 d-flex"><li class="gateway-menu p-1 d-inline"><form accept-charset="UTF-8" action="https://search.ottawa.ca/en" aria-label="Search form" role="search" class="form-inline"><div class="input-group"><input name="keywords" id="lgSearchFld" type="search" aria-label="Search" class="form-control"><div class="input-group-append nudge-left-1"><button type="submit" title="Search" aria-label="Search" class="btn btn-search yellow"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="magnifying-glass" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-magnifying-glass"><path fill="currentColor" d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" class=""></path></svg></button></div></div></form><!----><div class="position-relative"><div class="menu-item-bridge" style="display: none;"></div></div><!----></li><li class="gateway-menu search-menu p-1 d-inline"><button aria-haspopup="true" aria-expanded="false" aria-label="Open Sign-in menu" aria-controls="signingMenuDropDown" class="header-menu-item btn-primary btn not-caret"><span class="pr-1 d-inline-block">Sign-in</span></button><div class="position-relative"><div class="menu-item-bridge" style="display: none;"></div></div><div class="menu-wrapper container position-relative pt-1"><div id="signingMenuDropDown" aria-label="Menu" class="dropdown-menu-container pt-2 pb-2 pl-0 pr-0" style="display: none;"><ul role="menu" class="pl-0 pr-0 m-0 ml-0"><li class="ml-0 mr-0 non-gateway"><a role="menuitem" target="_blank" rel="external" href="https://register.ottawa.ca" class="pt-2 pb-2 pr-3 pl-3 m-0 mb-1 d-block"> Register for courses and camps<span class="ext"><span aria-label="(link is external)" class="sr-only">(link is external)</span></span></a></li><li class="ml-0 mr-0 non-gateway"><a role="menuitem" target="_blank" rel="external" href="https://myservice.ottawa.ca/profile/account/login?lang=en" class="pt-2 pb-2 pr-3 pl-3 m-0 mb-1 d-block"> My ServiceOttawa<span class="ext"><span aria-label="(link is external)" class="sr-only">(link is external)</span></span></a></li><li class="ml-0 mr-0 non-gateway"><a role="menuitem" target="_blank" rel="external" href="https://ottawa.ca/en/jobs-city" class="pt-2 pb-2 pr-3 pl-3 m-0 mb-1 d-block"> Jobs with the City<span class="ext"><span aria-label="(link is external)" class="sr-only">(link is external)</span></span></a></li></ul></div></div></li><li class="p-1 d-inline lang-link"><a href="/fr/conditions-dutilisation" xml:lang="fr" lang="fr" aria-label="Français" class="header-menu-item nav-link btn text-uppercase yellow">fr</a></li></ul></div></div></div></div><div class="header-alerts-container"><!----></div></header></div></div>
+
+
+    <script language="JavaScript">
+      // inline to fix flicker issue
+    document.getElementById("block-ottca-theme-branding").style.visibility = 'hidden';
+    const langSwitcher = document.getElementById("block-languageswitcher");
+    if (langSwitcher) {
+      langSwitcher.style.visibility = 'hidden';
+    }
+    </script>
+
+  
+<main class="container" id="main-content" tabindex="-1">
+  
+      <div id="highlighted" class="row">
+      <div class="col">
+          <div class="region region-highlighted">
+    <div data-drupal-messages-fallback="" class="hidden"></div>
+
+  </div>
+
+      </div>
+    </div>
+  
+  
+      <div id="content" class="row">
+                      <div class="col">
+                        <div class="region region-content">
+    <div id="block-breadcrumbs-2">
+
+
+
+    <nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+                  <li class="breadcrumb-item">
+        <a href="/en">Home</a>
+                        </li><li class="breadcrumb-item active" aria-current="page">
+        Terms of use
+            </li></ol>
+</nav>
+
+
+
+</div>
+<div id="block-ottca-theme-page-title">
+
+
+
+  
+  <h1 class="page-title"><span class="field field--name-title field--type-string field--label-hidden">Terms of use</span>
+</h1>
+
+
+
+</div>
+<div id="block-mainpagecontent">
+
+
+
+  
+<article class="node node--type-long-page node--view-mode-full">
+  
+  <div class="node__content">
+      <div class="layout layout--onecol">
+    <div class="layout__region layout__region--content">
+      <div class="views-element-container">
+
+
+
+  <div><div class="view view-alert view-id-alert view-display-id-alert_related_block js-view-dom-id-7fbada07969594b0f536d6bf0cf1b06919707c1387dcc957b667d4fc71fae661">
+  
+    
+      
+  
+          </div>
+</div>
+
+
+</div>
+<div class="views-element-container">
+
+
+
+  <div><div class="view view-status view-id-status view-display-id-status_related_block js-view-dom-id-a931cd0913ea6dc444c3788034773603949aaaea783d43308eafde6b47f0e80c">
+  
+    
+      
+  
+          </div>
+</div>
+
+
+</div>
+
+
+
+  
+
+<div id="sticky-anchor"></div>
+<div class="toc-js" id="toc-js-block-toc-js-block" data-id="toc_js_block" data-label="Toc.js block" data-label-display="0" data-provider="toc_js" data-selectors="h2:not(.no-toc)" data-selectors-minimum="1" data-container=".paragraph--type--layout >.layout.toc-selectors" data-prefix="section" data-list-type="ul" data-back-to-top="0" data-back-to-top-label="Back to top" data-smooth-scrolling="0" data-scroll-to-offset="100" data-highlight-on-scroll="1" data-highlight-offset="100" data-sticky="0" data-sticky-offset="0" data-sticky-stop="" data-sticky-stop-padding="0">
+  <div class="toc-title h2">On this page</div>
+  <nav role="navigation" aria-label="On this page"><ul></ul></nav>
+</div>
+
+
+
+
+
+  
+      <div class="field field--name-field-paragraphs field--type-entity-reference-revisions field--label-hidden field__items">
+              <div class="field__item">  <div class="paragraph paragraph--type--layout paragraph--view-mode--default">
+                  
+                          
+                
+                  <div class="layout layout--bootstrap-grid-row-1 row">
+
+            
+                              <div class="col collapse-region"><div class="w-100 d-flex justify-content-end"><button id="toggleExpandButton" class="btn btn-outline-primary active" aria-controls="section-2b07b91e-ca1e-4b03-8d26-732d7ebdc9cb section-f074ebe1-63ea-45ca-b251-d08c4307c1ef section-ed0849d0-c259-4f92-a9ef-81c6952b8020 section-1d970455-3254-490e-98bd-309f0e4c1cf1">Expand all</button><button id="toggleCollapseButton" class="btn btn-outline-primary ml-1" aria-controls="section-2b07b91e-ca1e-4b03-8d26-732d7ebdc9cb section-f074ebe1-63ea-45ca-b251-d08c4307c1ef section-ed0849d0-c259-4f92-a9ef-81c6952b8020 section-1d970455-3254-490e-98bd-309f0e4c1cf1">Collapse all</button></div>
+                  <div class="heading-wrapper"><h2 class="no-toc">
+                              
+  <button aria-expanded="true" aria-controls="section-2b07b91e-ca1e-4b03-8d26-732d7ebdc9cb" data-target="#section-2b07b91e-ca1e-4b03-8d26-732d7ebdc9cb" data-toggle="collapse" role="button" class="border border-primary rounded collapse-section no-toc btn-link btn">Accessibility </button>
+
+                  </h2></div>
+                  <div class="collapse-wrapper border border-primary border-top-0 no-gutters p-4 w-100 collapse show" id="section-2b07b91e-ca1e-4b03-8d26-732d7ebdc9cb" style=""><div class="social-widget"><button class="print-article-button" role="button" aria-label="Print Accessibility article"><span class="fa fa-print" aria-hidden="true"></span></button><div class="share-container"><button class="share-button" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Share Accessibility article"><span class="fas fa-share-alt" aria-hidden="true"></span></button><div class="social-wrapper"><button class="close-share" role="button" aria-label="Close Share Accessibility article"><span class="fa fa-times" aria-hidden="true"></span></button><div class="social jssocials"><div class="jssocials-shares"><div class="jssocials-share jssocials-share-email"><a target="_self" href="mailto:?subject=Accessibility%20%7C%20City%20of%20Ottawa&amp;body=https%3A%2F%2Fottawa.ca%2Fen%2Fterms-use%23section-2b07b91e-ca1e-4b03-8d26-732d7ebdc9cb" class="jssocials-share-link" aria-label="Share Accessibility by email"><span class="fa fa-at jssocials-share-logo"></span></a></div><div class="jssocials-share jssocials-share-twitter"><a target="_blank" href="https://twitter.com/share?url=https%3A%2F%2Fottawa.ca%2Fen%2Fterms-use%23section-2b07b91e-ca1e-4b03-8d26-732d7ebdc9cb&amp;text=Accessibility%20%7C%20City%20of%20Ottawa" class="jssocials-share-link" aria-label="Share Accessibility on X (formerly Twitter)"><span class="fab fa-x-twitter jssocials-share-logo"></span></a></div><div class="jssocials-share jssocials-share-facebook"><a target="_blank" href="https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fottawa.ca%2Fen%2Fterms-use%23section-2b07b91e-ca1e-4b03-8d26-732d7ebdc9cb" class="jssocials-share-link" aria-label="Share Accessibility on Facebook"><span class="fa fa-facebook jssocials-share-logo"></span></a></div></div></div></div></div></div>
+                  
+                                                                                      <div class="layout__region layout__region--main col-12">
+                          
+                                                      <div class="paragraph paragraph--type--article-reference paragraph--view-mode--default">
+          
+            <div class="field field--name-field-content-ref field--type-entity-reference-label-override field--label-hidden field__item">
+<article class="node node--type-article node--view-mode-default">
+  
+  <div class="node__content">
+      <div class="layout layout--onecol">
+    <div class="layout__region layout__region--content">
+      
+
+
+  <span class="field field--name-title field--type-string field--label-hidden"><h2 class="h2">Accessibility </h2>
+</span>
+
+
+<div class="views-element-container">
+
+
+
+  <div><div class="view view-alert view-id-alert view-display-id-alert_related_block js-view-dom-id-a15d4e1f24f7a91ea5e866425b046693c67a49e897586d6eff6c93734d7b4c1a">
+  
+    
+      
+  
+          </div>
+</div>
+
+
+</div>
+<div class="views-element-container">
+
+
+
+  <div><div class="view view-status view-id-status view-display-id-status_related_block js-view-dom-id-729b7b8d1f1a360f83c8476e5834a40f26933aa4f9891d37fb6214fc3373fb3d">
+  
+    
+      
+  
+          </div>
+</div>
+
+
+</div>
+
+
+
+  
+      <div class="field field--name-field-paragraphs field--type-entity-reference-revisions field--label-hidden field__items">
+              <div class="field__item">  <div class="paragraph paragraph--type--fixed-layout paragraph--view-mode--default">
+                  
+                          
+                                  
+                  <div class="toc-selectors layout layout--bootstrap-fixed-grid-row-1 row">
+
+            
+              
+                                                                                      <div class="layout__region layout__region--main col-12">
+                          
+                                                      <div class="paragraph paragraph--type--text-block paragraph--view-mode--default">
+          
+            <div class="clearfix text-formatted field field--name-field-body field--type-text-long field--label-hidden field__item"><h3><strong>Website and documents</strong></h3>
+<p>We are constantly working to make the City of Ottawa’s website and web content accessible and usable for everyone.</p>
+<p>Our goal is to meet or exceed <a href="https://www.ontario.ca/page/about-accessibility-laws#section-1" class="ext" data-extlink="" target="_blank" rel="noopener noreferrer">Web Content Accessibility Guidelines (WCAG)<span class="fa-ext extlink"><span class="fas fa-external-link-alt"><span class="visually-hidden">(link is external)</span></span></span></a> conformance requirements as stipulated by the <a href="https://www.ontario.ca/page/about-accessibility-laws#section-1" class="ext" data-extlink="" target="_blank" rel="noopener noreferrer">Accessibility for Ontarians with Disabilities Act (AODA)<span class="fa-ext extlink"><span class="fas fa-external-link-alt"><span class="visually-hidden">(link is external)</span></span></span></a>, under the <a href="https://www.ontario.ca/laws/regulation/110191" class="ext" data-extlink="" target="_blank" rel="noopener noreferrer">Integrated Accessibility Standards (IASR)<span class="fa-ext extlink"><span class="fas fa-external-link-alt"><span class="visually-hidden">(link is external)</span></span></span></a>.</p>
+<h4><strong>Monitoring and maintaining accessibility</strong></h4>
+<ul><li>Sites are continuously monitored using third party software (Site Improve) to report on accessibility issues</li>
+<li>Staff are trained and have access to correct any issues identified</li>
+<li>New and updated features are put through a formal testing procedure which (usually) includes external industry expert analysis,</li>
+<li>Utilize both trained staff and external vendors for PDF accessibility</li>
+</ul><h4><strong>Measures to support accessibility</strong></h4>
+<p>City of Ottawa takes the following measures to ensure accessibility of its websites</p>
+<ul><li>Include accessibility throughout our internal policies</li>
+<li>Integrate accessibility into our procurement practices</li>
+<li>Provide continual accessibility training for our staff</li>
+<li>Assign clear accessibility goals and responsibilities</li>
+<li>Employ formal accessibility quality assurance methods</li>
+</ul><h3><strong>Accessibility at the City</strong></h3>
+<p>As outlined in its <a href="https://ottawa.ca/en/city-hall/city-manager-administration-and-policies/policies/administrative-policies/accessibility-policies-and-procedures/accessibility-policy">Accessibility Policy</a>, the City of Ottawa is committed to providing equal treatment to people with disabilities with respect to the use and benefit of City services, programs, goods, facilities and information.</p>
+<p>This commitment extends to residents, visitors and employees with visible or non-visible disabilities.</p>
+<p>Learn more about our commitment to accessibility at the City</p>
+<ul><li><a href="/en/node/1014390">Commitment, policies, plans and supports</a></li>
+<li><a href="/en/node/1014611">Accessibility design standards and features</a></li>
+<li><a href="/en/city-hall/creating-equal-inclusive-and-diverse-city/accessibility-city/accessibility-news-and">Accessibility news and events</a></li>
+<li><a href="/en/node/1029246">Transportation Services</a></li>
+<li><a href="/en/node/1029247">Housing</a></li>
+<li><a href="/en/node/1029250">Safety and emergency preparedness</a></li>
+<li><a href="/en/node/1029251">Community supports, healthcare and recreation</a></li>
+<li><a href="/en/node/2252706">Accessibility Advisory Committee</a></li>
+</ul></div>
+      
+      </div>
+
+                        </div>
+                                          
+                    
+                
+            </div>
+          
+      </div>
+</div>
+          </div>
+  
+
+
+    </div>
+  </div>
+
+  </div>
+
+</article>
+</div>
+      
+      </div>
+
+                        </div>
+                                          
+                                        </div>
+                  </div>
+                
+                
+            </div>
+          
+      </div>
+</div>
+              <div class="field__item">  <div class="paragraph paragraph--type--layout paragraph--view-mode--default">
+                  
+                          
+                
+                  <div class="layout layout--bootstrap-grid-row-1 row">
+
+            
+                              <div class="col collapse-region">
+                  <div class="heading-wrapper"><h2 class="no-toc">
+                              
+  <button aria-expanded="true" aria-controls="section-f074ebe1-63ea-45ca-b251-d08c4307c1ef" data-target="#section-f074ebe1-63ea-45ca-b251-d08c4307c1ef" data-toggle="collapse" role="button" class="border border-primary rounded collapse-section no-toc btn-link btn">Disclaimer</button>
+
+                  </h2></div>
+                  <div class="collapse-wrapper border border-primary border-top-0 no-gutters p-4 w-100 collapse show" id="section-f074ebe1-63ea-45ca-b251-d08c4307c1ef" style=""><div class="social-widget"><button class="print-article-button" role="button" aria-label="Print Disclaimer article"><span class="fa fa-print" aria-hidden="true"></span></button><div class="share-container"><button class="share-button" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Share Disclaimer article"><span class="fas fa-share-alt" aria-hidden="true"></span></button><div class="social-wrapper"><button class="close-share" role="button" aria-label="Close Share Disclaimer article"><span class="fa fa-times" aria-hidden="true"></span></button><div class="social jssocials"><div class="jssocials-shares"><div class="jssocials-share jssocials-share-email"><a target="_self" href="mailto:?subject=Disclaimer%20%7C%20City%20of%20Ottawa&amp;body=https%3A%2F%2Fottawa.ca%2Fen%2Fterms-use%23section-f074ebe1-63ea-45ca-b251-d08c4307c1ef" class="jssocials-share-link" aria-label="Share Disclaimer by email"><span class="fa fa-at jssocials-share-logo"></span></a></div><div class="jssocials-share jssocials-share-twitter"><a target="_blank" href="https://twitter.com/share?url=https%3A%2F%2Fottawa.ca%2Fen%2Fterms-use%23section-f074ebe1-63ea-45ca-b251-d08c4307c1ef&amp;text=Disclaimer%20%7C%20City%20of%20Ottawa" class="jssocials-share-link" aria-label="Share Disclaimer on X (formerly Twitter)"><span class="fab fa-x-twitter jssocials-share-logo"></span></a></div><div class="jssocials-share jssocials-share-facebook"><a target="_blank" href="https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fottawa.ca%2Fen%2Fterms-use%23section-f074ebe1-63ea-45ca-b251-d08c4307c1ef" class="jssocials-share-link" aria-label="Share Disclaimer on Facebook"><span class="fa fa-facebook jssocials-share-logo"></span></a></div></div></div></div></div></div>
+                  
+                                                                                      <div class="layout__region layout__region--main col-12">
+                          
+                                                      <div class="paragraph paragraph--type--article-reference paragraph--view-mode--default">
+          
+            <div class="field field--name-field-content-ref field--type-entity-reference-label-override field--label-hidden field__item">
+<article class="node node--type-article node--view-mode-default">
+  
+  <div class="node__content">
+      <div class="layout layout--onecol">
+    <div class="layout__region layout__region--content">
+      
+
+
+  <span class="field field--name-title field--type-string field--label-hidden"><h2 class="h2">Disclaimer</h2>
+</span>
+
+
+<div class="views-element-container">
+
+
+
+  <div><div class="view view-alert view-id-alert view-display-id-alert_related_block js-view-dom-id-9951b666006bfaaa4f4207c8ee903f0ba53478010b714ae0b023c7d5124a6ad5">
+  
+    
+      
+  
+          </div>
+</div>
+
+
+</div>
+<div class="views-element-container">
+
+
+
+  <div><div class="view view-status view-id-status view-display-id-status_related_block js-view-dom-id-2326d49f255b3c88a3edd2d8eb4d890d4ef2918e66a7fcd06f69769a9042021e">
+  
+    
+      
+  
+          </div>
+</div>
+
+
+</div>
+
+
+
+  
+      <div class="field field--name-field-paragraphs field--type-entity-reference-revisions field--label-hidden field__items">
+              <div class="field__item">  <div class="paragraph paragraph--type--fixed-layout paragraph--view-mode--default">
+                  
+                          
+                                  
+                  <div class="toc-selectors layout layout--bootstrap-fixed-grid-row-1 row">
+
+            
+              
+                                                                                      <div class="layout__region layout__region--main col-12">
+                          
+                                                      <div class="paragraph paragraph--type--text-block paragraph--view-mode--default">
+          
+            <div class="clearfix text-formatted field field--name-field-body field--type-text-long field--label-hidden field__item"><p>The material on this website is provided as general information only and is not intended to provide specific legal advice for any individual and should not be relied upon in that regard.</p>
+<p>While every effort has been made to ensure the accuracy and veracity of the information on this website, the City of Ottawa is not responsible in any way for damages arising out of the use of this website. And, although the City of Ottawa relies on reputable sources and believes the information posted on the website by the City&nbsp;is correct, and attempts to keep the information current, the City of Ottawa does not warrant the accuracy or completeness of the information.</p>
+<p>The City of Ottawa reserves the right to discontinue, change or modify this site at any time without notice. Links to other websites or references to other organizations, products, services or publications do not constitute endorsement or approval by the City of Ottawa, and the City of Ottawa makes no representations whatsoever about any other website that you may access through this one.</p>
+<p>The City of Ottawa assumes no responsibility for the accuracy of translations that are performed using third-party translation software.</p>
+<p>The City of Ottawa will not be liable for damages arising from, but in no way limited to, the transmission of confidential information over the Internet.</p>
+<p>The City of Ottawa reserves the right to edit, delete, modify, vet, and/or change any material sent or posted to its website in whole or in part at its sole discretion.</p>
+<p>All information at this site is protected by the Canadian laws of copyright. Unless permission is granted, no one may copy, redistribute, reproduce or republish in any form, any material located on this website.</p>
+</div>
+      
+      </div>
+
+                        </div>
+                                          
+                    
+                
+            </div>
+          
+      </div>
+</div>
+          </div>
+  
+
+
+    </div>
+  </div>
+
+  </div>
+
+</article>
+</div>
+      
+      </div>
+
+                        </div>
+                                          
+                                        </div>
+                  </div>
+                
+                
+            </div>
+          
+      </div>
+</div>
+              <div class="field__item">  <div class="paragraph paragraph--type--layout paragraph--view-mode--default">
+                  
+                          
+                
+                  <div class="layout layout--bootstrap-grid-row-1 row">
+
+            
+                              <div class="col collapse-region">
+                  <div class="heading-wrapper"><h2 class="no-toc">
+                              
+  <button aria-expanded="true" aria-controls="section-ed0849d0-c259-4f92-a9ef-81c6952b8020" data-target="#section-ed0849d0-c259-4f92-a9ef-81c6952b8020" data-toggle="collapse" role="button" class="border border-primary rounded collapse-section no-toc btn-link btn">Privacy </button>
+
+                  </h2></div>
+                  <div class="collapse-wrapper border border-primary border-top-0 no-gutters p-4 w-100 collapse show" id="section-ed0849d0-c259-4f92-a9ef-81c6952b8020" style=""><div class="social-widget"><button class="print-article-button" role="button" aria-label="Print Privacy article"><span class="fa fa-print" aria-hidden="true"></span></button><div class="share-container"><button class="share-button" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Share Privacy article"><span class="fas fa-share-alt" aria-hidden="true"></span></button><div class="social-wrapper"><button class="close-share" role="button" aria-label="Close Share Privacy article"><span class="fa fa-times" aria-hidden="true"></span></button><div class="social jssocials"><div class="jssocials-shares"><div class="jssocials-share jssocials-share-email"><a target="_self" href="mailto:?subject=Privacy%20%7C%20City%20of%20Ottawa&amp;body=https%3A%2F%2Fottawa.ca%2Fen%2Fterms-use%23section-ed0849d0-c259-4f92-a9ef-81c6952b8020" class="jssocials-share-link" aria-label="Share Privacy by email"><span class="fa fa-at jssocials-share-logo"></span></a></div><div class="jssocials-share jssocials-share-twitter"><a target="_blank" href="https://twitter.com/share?url=https%3A%2F%2Fottawa.ca%2Fen%2Fterms-use%23section-ed0849d0-c259-4f92-a9ef-81c6952b8020&amp;text=Privacy%20%7C%20City%20of%20Ottawa" class="jssocials-share-link" aria-label="Share Privacy on X (formerly Twitter)"><span class="fab fa-x-twitter jssocials-share-logo"></span></a></div><div class="jssocials-share jssocials-share-facebook"><a target="_blank" href="https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fottawa.ca%2Fen%2Fterms-use%23section-ed0849d0-c259-4f92-a9ef-81c6952b8020" class="jssocials-share-link" aria-label="Share Privacy on Facebook"><span class="fa fa-facebook jssocials-share-logo"></span></a></div></div></div></div></div></div>
+                  
+                                                                                      <div class="layout__region layout__region--main col-12">
+                          
+                                                      <div class="paragraph paragraph--type--article-reference paragraph--view-mode--default">
+          
+            <div class="field field--name-field-content-ref field--type-entity-reference-label-override field--label-hidden field__item">
+<article class="node node--type-article node--view-mode-default">
+  
+  <div class="node__content">
+      <div class="layout layout--onecol">
+    <div class="layout__region layout__region--content">
+      
+
+
+  <span class="field field--name-title field--type-string field--label-hidden"><h2 class="h2">Privacy </h2>
+</span>
+
+
+<div class="views-element-container">
+
+
+
+  <div><div class="view view-alert view-id-alert view-display-id-alert_related_block js-view-dom-id-4f1b15777486cf70a9f1b5b9a3a6a46089403fcecd1ef97de65f47a7437b35dd">
+  
+    
+      
+  
+          </div>
+</div>
+
+
+</div>
+<div class="views-element-container">
+
+
+
+  <div><div class="view view-status view-id-status view-display-id-status_related_block js-view-dom-id-e73960c41a1a812d4ef273798fcb38b11856a680ccd14e98a9452f8a8e594661">
+  
+    
+      
+  
+          </div>
+</div>
+
+
+</div>
+
+
+
+  
+      <div class="field field--name-field-paragraphs field--type-entity-reference-revisions field--label-hidden field__items">
+              <div class="field__item">  <div class="paragraph paragraph--type--fixed-layout paragraph--view-mode--default">
+                  
+                          
+                                  
+                  <div class="toc-selectors layout layout--bootstrap-fixed-grid-row-1 row">
+
+            
+              
+                                                                                      <div class="layout__region layout__region--main col-12">
+                          
+                                                      <div class="paragraph paragraph--type--text-block paragraph--view-mode--default">
+          
+            <div class="clearfix text-formatted field field--name-field-body field--type-text-long field--label-hidden field__item"><h3>Purpose</h3>
+<p>The purpose of the statement is to inform users of this site with regard to the collection and use of personally identifiable information. The following is not intended and should not be interpreted as a contract of any nature, either stated or implied.</p>
+<h3>Definition of personally identifiable information</h3>
+<p>For the purposes of this statement "personally identifiable information" means any information relating to an identified or identifiable individual who is the subject of the information.</p>
+<h3>Providing personally identifiable information</h3>
+<p>Citizens do not have to routinely provide personal information to visit the City of Ottawa portal or to download information. Government agencies may request personally identifiable information from you in order to provide requested specialized services, but such information is handled as it would be on an in-person visit to a government office.</p>
+<h3>Personally identifiable information available</h3>
+<p>The IP (Internet Protocol) numbers of computers (servers) used to visit sites are noted as part of our statistical analysis on use of our websites so we may better design services and improve access to them. However, the site does not attempt to gain personally identifiable information on individual users and associate them with IP addresses.</p>
+<h3>Restrictions on the disclosure of customer information</h3>
+<p>Our users are important to us. We do not sell or rent our users' information to any outside company or organization. We do not reveal specific information about users or other personally identifiable data to unaffiliated third parties for their independent use, except if required to do so by law. We endeavour to ensure that we collect only the minimum amount of information needed to meet the purpose for which the network was created.</p>
+<h3>Other websites</h3>
+<p>Various websites may be linked through the portal. Visitors to those sites are advised to check the privacy statements of these sites and be cautious about providing personally identifiable information without a clear understanding of how the information will be used. Visitors may also wish to consult privacy guidelines such as those recommended by the Online Privacy Alliance.</p>
+<h3>Use, collection, and retention of customer information at the City of Ottawa portal</h3>
+<p>For each visitor, we do collect information about the Internet Protocol (IP) address, type browser used, the date and time of the visit, and the IP addresses of the locations to which the visitor linked during his or her visit to our website. This information is strictly used for statistical reporting purposes.</p>
+<p>We only collect, retain and use personal information where we believe it is essential (and allowed by law) to administer our business and to provide products, services and other opportunities requested by our customers.</p>
+<p>We currently accept payment by Master Card, Visa and American Express on this site. We have taken many steps to ensure the security of your transaction and your credit card information including transmission, processing and storage of your credit card details.</p>
+<h3>Web analytics and cookies</h3>
+<p>In order to improve our website, we are presently using Google Analytics to collect data for statistical reporting purposes. Google Analytics analyzes the use of our website through using cookies to collect and generate information about your visits to our web site (including your IP address) that is transmitted to their servers in an anonymous form for processing. In order to better protect your privacy we are currently masking user IP addresses as described in the section labeled “Use of IP address” in the <a href="https://policies.google.com/privacy" class="ext" data-extlink="" target="_blank" rel="noopener noreferrer">Google Analytics Privacy Policy<span class="fa-ext extlink"><span class="fas fa-external-link-alt"><span class="visually-hidden">(link is external)</span></span></span></a>.</p>
+<p>You can opt-out of analytics activity by setting your browser to notify you when a cookie is sent and block analytics cookies if desired. Please consult your browser's Help Menu for instructions. Visiting our website with analytics cookies disabled will have no significant impact on your browsing experience. Google currently offers a free Google <a href="https://tools.google.com/dlpage/gaoptout" class="ext" data-extlink="" target="_blank" rel="noopener noreferrer">Analytics opt-out tool<span class="fa-ext extlink"><span class="fas fa-external-link-alt"><span class="visually-hidden">(link is external)</span></span></span></a> for Internet Explorer (versions 7 and 8), Google Chrome (4.x and higher), and Mozilla Firefox (3.5 and higher).</p>
+<p>We also use session-based cookies on the City website to process requested services (e.g., course registration). A session-based cookie is a small file that stores information, but is discarded when the user exits the browser. The City website uses this method in order to collect data that is not personally identifiable, ensuring&nbsp;it is used for statistical reporting purposes only.</p>
+<p>Your feedback is important in helping us decide whether to continue to use this technology. Should you have any questions or feedback, please <a href="https://ottawa.ca/en/form/feedback">contact us</a>.</p>
+<h3>Restrictions on the disclosure of customer information</h3>
+<p>We do not sell or rent our users' information to any outside company or organization. We do not reveal specific information about users or other personally identifiable data to unaffiliated third parties for their independent use, except if required to do so by law.</p>
+<h3>Protection of information via established security procedures</h3>
+<p>Improvements in Internet security occasionally cause older browsers to be unable to connect to ottawa.ca. This is for the protection of our users. If your browser is unable to make a secure connection, please consider upgrading your browser if you wish to access protected content.</p>
+<h3>Limiting employee access to information</h3>
+<p>Our director limits employee access to personally identifiable information to only those employees who need access in order to perform their assigned duties. The director is instructed to enforce with its staff their responsibilities in protecting subscriber's information.</p>
+<h3>Freedom of Information (FOI)</h3>
+<p>The City of Ottawa endeavors to make information available to the public, consistent with the <a href="https://ottawa.ca/en/city-hall/city-manager-administration-and-policies/policies/administrative-policies/routine-disclosure-and-active-dissemination-policy">Routine Disclosure and Active Dissemination Policy</a>. Some records, however, may be subject to the <em><a href="https://www.ontario.ca/laws/statute/90m56" class="ext" data-extlink="" target="_blank" rel="noopener noreferrer">Municipal Freedom of Information and Protection of Privacy Act<span class="fa-ext extlink"><span class="fas fa-external-link-alt"><span class="visually-hidden">(link is external)</span></span></span></a></em> and require a <a href="https://ottawa.ca/en/city-hall/open-transparent-and-accountable-government/access-information-and-protection-privacy/access-information">formal access to information request</a> prior to disclosure.&nbsp;</p>
+<p>In accordance with the City’s <a href="https://ottawa.ca/en/city-hall/city-manager-administration-and-policies/policies/administrative-policies/privacy-policy">Privacy Policy</a>, the City of Ottawa is committed to being open, accessible and transparent in its actions while safeguarding the privacy of individuals by protecting the personal information in the City’s custody or control. The City is required to handle information according to responsibilities and requirements set out under the <em><a href="https://www.ontario.ca/laws/statute/90m56" class="ext" data-extlink="" target="_blank" rel="noopener noreferrer">Municipal Freedom of Information and Protection of Privacy Act<span class="fa-ext extlink"><span class="fas fa-external-link-alt"><span class="visually-hidden">(link is external)</span></span></span></a></em> and other applicable access and privacy legislation.</p>
+</div>
+      
+      </div>
+
+                        </div>
+                                          
+                    
+                
+            </div>
+          
+      </div>
+</div>
+          </div>
+  
+
+
+    </div>
+  </div>
+
+  </div>
+
+</article>
+</div>
+      
+      </div>
+
+                        </div>
+                                          
+                                        </div>
+                  </div>
+                
+                
+            </div>
+          
+      </div>
+</div>
+              <div class="field__item">  <div class="paragraph paragraph--type--layout paragraph--view-mode--default">
+                  
+                          
+                
+                  <div class="layout layout--bootstrap-grid-row-1 row">
+
+            
+                              <div class="col collapse-region">
+                  <div class="heading-wrapper"><h2 class="no-toc">
+                              
+  <button aria-expanded="true" aria-controls="section-1d970455-3254-490e-98bd-309f0e4c1cf1" data-target="#section-1d970455-3254-490e-98bd-309f0e4c1cf1" data-toggle="collapse" role="button" class="border border-primary rounded collapse-section no-toc btn-link btn">Protocols</button>
+
+                  </h2></div>
+                  <div class="collapse-wrapper border border-primary border-top-0 no-gutters p-4 w-100 collapse show" id="section-1d970455-3254-490e-98bd-309f0e4c1cf1" style=""><div class="social-widget"><button class="print-article-button" role="button" aria-label="Print Protocols article"><span class="fa fa-print" aria-hidden="true"></span></button><div class="share-container"><button class="share-button" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Share Protocols article"><span class="fas fa-share-alt" aria-hidden="true"></span></button><div class="social-wrapper"><button class="close-share" role="button" aria-label="Close Share Protocols article"><span class="fa fa-times" aria-hidden="true"></span></button><div class="social jssocials"><div class="jssocials-shares"><div class="jssocials-share jssocials-share-email"><a target="_self" href="mailto:?subject=Protocols%20%7C%20City%20of%20Ottawa&amp;body=https%3A%2F%2Fottawa.ca%2Fen%2Fterms-use%23section-1d970455-3254-490e-98bd-309f0e4c1cf1" class="jssocials-share-link" aria-label="Share Protocols by email"><span class="fa fa-at jssocials-share-logo"></span></a></div><div class="jssocials-share jssocials-share-twitter"><a target="_blank" href="https://twitter.com/share?url=https%3A%2F%2Fottawa.ca%2Fen%2Fterms-use%23section-1d970455-3254-490e-98bd-309f0e4c1cf1&amp;text=Protocols%20%7C%20City%20of%20Ottawa" class="jssocials-share-link" aria-label="Share Protocols on X (formerly Twitter)"><span class="fab fa-x-twitter jssocials-share-logo"></span></a></div><div class="jssocials-share jssocials-share-facebook"><a target="_blank" href="https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fottawa.ca%2Fen%2Fterms-use%23section-1d970455-3254-490e-98bd-309f0e4c1cf1" class="jssocials-share-link" aria-label="Share Protocols on Facebook"><span class="fa fa-facebook jssocials-share-logo"></span></a></div></div></div></div></div></div>
+                  
+                                                                                      <div class="layout__region layout__region--main col-12">
+                          
+                                                      <div class="paragraph paragraph--type--page-reference paragraph--view-mode--default">
+          
+            <div class="field field--name-field-content-ref field--type-entity-reference-label-override field--label-hidden field__item">
+<article class="node node--type-long-page node--view-mode-teaser">
+  
+  <div class="node__content">
+      <div class="layout layout--onecol">
+    <div class="layout__region layout__region--content">
+      
+
+
+  <span class="field field--name-title field--type-string field--label-hidden"><h3 class="h2"><a href="https://ottawa.ca/en/city-hall/city-news/protocols">Protocols</a></h3>
+</span>
+
+
+<div class="views-element-container">
+
+
+
+  <div><div class="view view-page-toc view-id-page_toc view-display-id-page_toc_block js-view-dom-id-7095d2bab3bc0db631c2968501f88f1bceee3a91901e69a298fe653c0e66d2ac">
+  
+    
+      
+      <div class="view-content">
+      <div class="item-list">
+  
+  <ul>
+
+    
+      <li><a href="/en/city-hall/city-news/protocols#section-b260e050-732e-4434-bd97-ccf9cced6e29">Media Relations Protocol</a></li>
+        
+      <li><a href="/en/city-hall/city-news/protocols#section-c30203e9-c1f5-48d7-a9a1-b76e0142e043">Social Media Protocol</a></li>
+        
+      <li><a href="/en/city-hall/city-news/protocols#section-bec5725d-18a9-4f08-8fbe-d41819ade8b6">City of Ottawa Logos </a></li>
+        
+      <li><a href="/en/city-hall/city-news/protocols#section-cd24ecb5-2811-4c04-a790-82f2bf6dbefe">Access to City promotional resources for third party messaging</a></li>
+        
+  </ul>
+
+</div>
+
+    </div>
+  
+          </div>
+</div>
+
+
+</div>
+
+    </div>
+  </div>
+
+  </div>
+
+</article>
+</div>
+      
+      </div>
+
+                        </div>
+                                          
+                                        </div>
+                  </div>
+                
+                
+            </div>
+          
+      </div>
+</div>
+          </div>
+  
+
+
+    </div>
+  </div>
+
+  </div>
+
+</article>
+
+
+</div>
+
+  </div>
+
+                  </div>
+                </div>
+    <div data-v-ed311886="" class="ottux-widget"><div id="ottawa-backtotop" class="back-to-top container position-fixed right" data-v-ed311886="" style="z-index: 4;"><a href="#" aria-label="Back to top" class="my-3 btn btn-primary text-center text-uppercase pt-1" style=""><svg aria-labelledby="svg-inline--fa-title-YXqXBFZmdfMU" data-prefix="fas" data-icon="chevron-up" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="ott-back-to-top-btn-svg" class="d-block mx-auto svg-inline--fa fa-chevron-up fa-lg"><title id="svg-inline--fa-title-YXqXBFZmdfMU" class="">Back to top</title><path fill="currentColor" d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z" class=""></path></svg> Top </a></div></div>
+</main>
+
+    <div data-v-ed311886="" class="ottux-widget"><footer id="ottawa-footer" data-v-ed311886=""><div class="container"><div class="row no-gutters align-items-top justify-content-center"><section id="footer-section-contact-us" class="col-lg expanded"><h2 class="h3">Contact us</h2><div><p></p></div><div><a href="https://ottawa.ca/en/3-1-1" target="_self"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="angle-right" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="mr-1 svg-inline--fa fa-angle-right"><path fill="currentColor" d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z" class=""></path></svg>3-1-1 online<!----></a></div><div>110 Laurier Avenue West</div><div>Ottawa, ON K1P 1J1</div><div><a href="tel:3-1-1" aria-label="3. 1. 1." target="_self"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="square-phone" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="mr-1 svg-inline--fa fa-square-phone"><path fill="currentColor" d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm90.7 96.7c9.7-2.6 19.9 2.3 23.7 11.6l20 48c3.4 8.2 1 17.6-5.8 23.2L168 231.7c16.6 35.2 45.1 63.7 80.3 80.3l20.2-24.7c5.6-6.8 15-9.2 23.2-5.8l48 20c9.3 3.9 14.2 14 11.6 23.7l-12 44C336.9 378 329 384 320 384C196.3 384 96 283.7 96 160c0-9 6-16.9 14.7-19.3l44-12z" class=""></path></svg>3-1-1<!----></a></div><div><a href="tel:613-580-2400" aria-label="6 1 3. 5 8 0. 2 4 0 0" target="_self"><!---->613-580-2400<!----></a></div><div><a href="tel:1-866-261-9799" aria-label="1. 8 6 6. 2 6 1. 9 7 9 9" target="_self"><!---->1-866-261-9799<!----></a></div><div><a href="https://ottawa.ca/en/client-services" target="_self"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="angle-right" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="mr-1 svg-inline--fa fa-angle-right"><path fill="currentColor" d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z" class=""></path></svg>Client Service Centre<!----></a></div></section><section id="footer-section-terms-of-use" class="col-lg expanded"><h2 class="h3">Terms of use</h2><div><p></p></div><div><a href="https://ottawa.ca/en/terms-use/accessibility"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="angle-right" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="mr-1 svg-inline--fa fa-angle-right"><path fill="currentColor" d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z" class=""></path></svg>Accessibility <!----></a></div><div><a href="https://ottawa.ca/en/terms-use/disclaimer"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="angle-right" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="mr-1 svg-inline--fa fa-angle-right"><path fill="currentColor" d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z" class=""></path></svg>Disclaimer<!----></a></div><div><a href="https://ottawa.ca/en/terms-use/privacy"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="angle-right" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="mr-1 svg-inline--fa fa-angle-right"><path fill="currentColor" d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z" class=""></path></svg>Privacy<!----></a></div><div><a href="https://ottawa.ca/en/city-hall/city-news/protocols"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="angle-right" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="mr-1 svg-inline--fa fa-angle-right"><path fill="currentColor" d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z" class=""></path></svg>Protocols<!----></a></div></section><section id="footer-section-follow-us" class="col-lg expanded"><h2 class="h3">Follow us</h2><div><p></p></div><div><a href="https://www.facebook.com/cityofottawa" target="_blank" class="ext absolute-url"><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="square-facebook" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="mr-1 svg-inline--fa fa-square-facebook"><path fill="currentColor" d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64h98.2V334.2H109.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H255V480H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64z" class=""></path></svg>Facebook<span class="ext"><span class="sr-only">(link is external)</span></span></a></div><div><a href="https://www.instagram.com/cityofottawa/" target="_blank" class="ext absolute-url"><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="instagram" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="mr-1 svg-inline--fa fa-instagram"><path fill="currentColor" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" class=""></path></svg>Instagram<span class="ext"><span class="sr-only">(link is external)</span></span></a></div><div><a href="https://twitter.com/ottawacity" target="_blank" class="ext absolute-url"><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="square-x-twitter" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="mr-1 svg-inline--fa fa-square-x-twitter"><path fill="currentColor" d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm297.1 84L257.3 234.6 379.4 396H283.8L209 298.1 123.3 396H75.8l111-126.9L69.7 116h98l67.7 89.5L313.6 116h47.5zM323.3 367.6L153.4 142.9H125.1L296.9 367.6h26.3z" class=""></path></svg>X (formerly Twitter)<span class="ext"><span class="sr-only">(link is external)</span></span></a></div><div><a href="https://www.youtube.com/user/cityottawa" target="_blank" class="ext absolute-url"><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="square-youtube" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="mr-1 svg-inline--fa fa-square-youtube"><path fill="currentColor" d="M282 256.2l-95.2-54.1V310.3L282 256.2zM384 32H64C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64zm14.4 136.1c7.6 28.6 7.6 88.2 7.6 88.2s0 59.6-7.6 88.1c-4.2 15.8-16.5 27.7-32.2 31.9C337.9 384 224 384 224 384s-113.9 0-142.2-7.6c-15.7-4.2-28-16.1-32.2-31.9C42 315.9 42 256.3 42 256.3s0-59.7 7.6-88.2c4.2-15.8 16.5-28.2 32.2-32.4C110.1 128 224 128 224 128s113.9 0 142.2 7.7c15.7 4.2 28 16.6 32.2 32.4z" class=""></path></svg>YouTube<span class="ext"><span class="sr-only">(link is external)</span></span></a></div><div><a href="https://forms.ottawa.ca/en/form/esubscriptions/signup-form" target="_blank" class="ext absolute-url"><svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="envelope" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="mr-1 svg-inline--fa fa-envelope"><path fill="currentColor" d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z" class=""></path></svg>eSubscriptions<span class="ext"><span class="sr-only">(link is external)</span></span></a></div></section><section id="footer-section-report-or-request" class="col-lg expanded"><h2 class="h3">Report or request</h2><div><p></p></div><div><a href="https://ottawa.ca/en/3-1-1/report-or-request/parking" target="_self"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="angle-right" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="mr-1 svg-inline--fa fa-angle-right"><path fill="currentColor" d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z" class=""></path></svg>Parking<!----></a></div><div><a href="https://ottawa.ca/en/3-1-1/report-or-request/garbage-and-recycling" target="_self"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="angle-right" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="mr-1 svg-inline--fa fa-angle-right"><path fill="currentColor" d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z" class=""></path></svg>Garbage collection<!----></a></div><div><a href="https://ottawa.ca/en/3-1-1/report-or-request/road-maintenance" target="_self"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="angle-right" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="mr-1 svg-inline--fa fa-angle-right"><path fill="currentColor" d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z" class=""></path></svg>Road maintenance<!----></a></div><div><a href="https://ottawa.ca/en/3-1-1/report-or-request/property-damage-or-maintenance" target="_self"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="angle-right" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="mr-1 svg-inline--fa fa-angle-right"><path fill="currentColor" d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z" class=""></path></svg>Property damage<!----></a></div><div><a href="https://ottawa.ca/en/form/feedback" target="_self"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="angle-right" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="mr-1 svg-inline--fa fa-angle-right"><path fill="currentColor" d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z" class=""></path></svg>Problem with the website<!----></a></div></section></div><div class="row align-items-start copyright"><span>© 2001 - 2024 City of Ottawa</span></div></div></footer></div>
+
+
+  </div>
+
+      <div class="modal show" id="popupSurveyModal" tabindex="-1" role="dialog" aria-labelledby="popupSurveyModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <i class="fas fa-info-circle modal-icon" aria-hidden="true"></i>
+          <h5 class="modal-title" id="popupSurveyModalTitle">Web experience survey</h5>
+          <button type="btn btn-primary" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Would you like to participate in a 5-10 minute web experience study to help us improve ottawa.ca?
+
+If YES, a new window will open in the background so you can come back to it when you are finished on the website.
+
+Thank you for considering to help out.
+        </div>
+        <div class="modal-footer">
+          <a id="popupSurveyAccept" role="button" class="btn btn-primary ext" target="_blank" href="https://ottawacityux.optimalworkshop.com/treejack/94mnbhnc" data-extlink="" rel="noopener noreferrer">Yes<span class="fa-ext extlink"><span class="fas fa-external-link-alt"><span class="visually-hidden">(link is external)</span></span></span></a>
+          <button type="button" class="btn btn-outline-primary" data-dismiss="modal">No</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <script src="/sites/default/files/js/js_7br3UzQTBh0spdtv2c1RIU40X6cm3eUH3gYWQ8rWS2E.js?scope=footer&amp;delta=0&amp;language=en&amp;theme=ottca_theme&amp;include=eJx9UVtuAyEMvBC7_PQ-iIdF3BiMsElCTl9atU22lfJjPB6PMUzjNpqT0S8wbXsCJp4hoXJ3WBNUDcTxbJ9yk5kzgfPV01SMYv8WDPn7tJ_ByBSFYoMXMIFZRbtvb_9wARGfQUzkDrZyL57wfpT8ptu7bOQVRJ_5TBw8baKTsGbDqtE7PUGBV9TKx22_YsqgB6J1rLoJR1zKMFS5yqFBUAFL63yB7fFyuOm642xTH83T_g3Xh0we6hJKXP19Wq4QmUzz3ee1_kl-FI_KPmobgVBOkMwF4Sr2K-6F0yA4LLNmkW8CTjkvK4xydO9i12EaX6EHdFACJHtAWyRcrr5uGaJclhf9AzsG3bo"></script>
+<script src="//ottux.ottawa.ca/widgets/v1.4.5/js/chunk-vendors.js" async=""></script>
+<script src="//ottux.ottawa.ca/widgets/v1.4.5/js/app.js" async=""></script>
+<script src="/sites/default/files/js/js_xMYeLBTSoz32Ae3JTZYVTZVK17j1MKA98Nv_cGCCWew.js?scope=footer&amp;delta=3&amp;language=en&amp;theme=ottca_theme&amp;include=eJx9UVtuAyEMvBC7_PQ-iIdF3BiMsElCTl9atU22lfJjPB6PMUzjNpqT0S8wbXsCJp4hoXJ3WBNUDcTxbJ9yk5kzgfPV01SMYv8WDPn7tJ_ByBSFYoMXMIFZRbtvb_9wARGfQUzkDrZyL57wfpT8ptu7bOQVRJ_5TBw8baKTsGbDqtE7PUGBV9TKx22_YsqgB6J1rLoJR1zKMFS5yqFBUAFL63yB7fFyuOm642xTH83T_g3Xh0we6hJKXP19Wq4QmUzz3ee1_kl-FI_KPmobgVBOkMwF4Sr2K-6F0yA4LLNmkW8CTjkvK4xydO9i12EaX6EHdFACJHtAWyRcrr5uGaJclhf9AzsG3bo"></script>
+<script src="https://siteimproveanalytics.com/js/siteanalyze_876116.js"></script>
+<script src="/sites/default/files/js/js_OCYV2oj9YYGvrJmloEYfMN4EiPrVOpdkH9EMSgS0QH4.js?scope=footer&amp;delta=5&amp;language=en&amp;theme=ottca_theme&amp;include=eJx9UVtuAyEMvBC7_PQ-iIdF3BiMsElCTl9atU22lfJjPB6PMUzjNpqT0S8wbXsCJp4hoXJ3WBNUDcTxbJ9yk5kzgfPV01SMYv8WDPn7tJ_ByBSFYoMXMIFZRbtvb_9wARGfQUzkDrZyL57wfpT8ptu7bOQVRJ_5TBw8baKTsGbDqtE7PUGBV9TKx22_YsqgB6J1rLoJR1zKMFS5yqFBUAFL63yB7fFyuOm642xTH83T_g3Xh0we6hJKXP19Wq4QmUzz3ee1_kl-FI_KPmobgVBOkMwF4Sr2K-6F0yA4LLNmkW8CTjkvK4xydO9i12EaX6EHdFACJHtAWyRcrr5uGaJclhf9AzsG3bo"></script>
+
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"fc5cb84a25","applicationID":"1252325944","transactionName":"YVBVMkMFC0tQABdaV1gadgVFDQpWHhMCVF1pVlYFWQE=","queueTime":1,"applicationTime":23,"atts":"TRdWRAsfGEU=","errorBeacon":"bam.nr-data.net","agent":""}</script><script type="text/javascript" src="/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&amp;ns=2&amp;cb=1475151460" async=""></script>
+
+
+</body></html>

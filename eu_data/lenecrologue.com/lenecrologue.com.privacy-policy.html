@@ -1,0 +1,565 @@
+<html lang="fr"><head>
+<link rel="preload" href="/layout/adapt/view/img/logo_fr.svg" as="image" type="image/svg+xml"><link rel="dns-prefetch" href="//rdc.m32.media"><link rel="dns-prefetch" href="//cmp.quantcast.com/"><link rel="dns-prefetch" href="//code.jquery.com"><link rel="dns-prefetch" href="//securepubads.g.doubleclick.net"><link rel="dns-prefetch" href="//s.yimg.com"><link rel="dns-prefetch" href="//www.googletagmanager.com"><link rel="dns-prefetch" href="//cdn.ampproject.org">
+<script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script async="" src="//c.amazon-adsystem.com/aax2/apstag.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=UA-4816779-2&amp;l=dataLayer&amp;cx=c"></script><script async="" type="text/javascript" src="https://cmp.inmobi.com/tcfv2/cmp2.js?referer=www.lenecrologue.com"></script><script async="" type="text/javascript" src="https://cmp.quantcast.com/choice/XkNvvDTWTkpeN/www.lenecrologue.com/choice.js?tag_version=V2"></script><script async="" defer="">
+(function() {
+  var host = 'www.lenecrologue.com';//window.location.hostname;
+  var element = document.createElement('script');
+  var firstScript = document.getElementsByTagName('script')[0];
+  var url = 'https://cmp.quantcast.com'
+    .concat('/choice/', 'XkNvvDTWTkpeN', '/', host, '/choice.js?tag_version=V2')
+  var uspTries = 0;
+  var uspTriesLimit = 3;
+  element.async = true;
+  element.type = 'text/javascript';
+  element.src = url;
+
+  firstScript.parentNode.insertBefore(element, firstScript);
+
+  function makeStub() {
+    var TCF_LOCATOR_NAME = '__tcfapiLocator';
+    var queue = [];
+    var win = window;
+    var cmpFrame;
+
+    function addFrame() {
+      var doc = win.document;
+      var otherCMP = !!(win.frames[TCF_LOCATOR_NAME]);
+
+      if (!otherCMP) {
+        if (doc.body) {
+          var iframe = doc.createElement('iframe');
+
+          iframe.style.cssText = 'display:none';
+          iframe.name = TCF_LOCATOR_NAME;
+          doc.body.appendChild(iframe);
+        } else {
+          setTimeout(addFrame, 5);
+        }
+      }
+      return !otherCMP;
+    }
+
+    function tcfAPIHandler() {
+      var gdprApplies;
+      var args = arguments;
+
+      if (!args.length) {
+        return queue;
+      } else if (args[0] === 'setGdprApplies') {
+        if (
+          args.length > 3 &&
+          args[2] === 2 &&
+          typeof args[3] === 'boolean'
+        ) {
+          gdprApplies = args[3];
+          if (typeof args[2] === 'function') {
+            args[2]('set', true);
+          }
+        }
+      } else if (args[0] === 'ping') {
+        var retr = {
+          gdprApplies: gdprApplies,
+          cmpLoaded: false,
+          cmpStatus: 'stub'
+        };
+
+        if (typeof args[2] === 'function') {
+          args[2](retr);
+        }
+      } else {
+        queue.push(args);
+      }
+    }
+
+    function postMessageEventHandler(event) {
+      var msgIsString = typeof event.data === 'string';
+      var json = {};
+
+      try {
+        if (msgIsString) {
+          json = JSON.parse(event.data);
+        } else {
+          json = event.data;
+        }
+      } catch (ignore) {}
+
+      var payload = json.__tcfapiCall;
+
+      if (payload) {
+        window.__tcfapi(
+          payload.command,
+          payload.version,
+          function(retValue, success) {
+            var returnMsg = {
+              __tcfapiReturn: {
+                returnValue: retValue,
+                success: success,
+                callId: payload.callId
+              }
+            };
+            if (msgIsString) {
+              returnMsg = JSON.stringify(returnMsg);
+            }
+            event.source.postMessage(returnMsg, '*');
+          },
+          payload.parameter
+        );
+      }
+    }
+
+    while (win) {
+      try {
+        if (win.frames[TCF_LOCATOR_NAME]) {
+          cmpFrame = win;
+          break;
+        }
+      } catch (ignore) {}
+
+      if (win === window.top) {
+        break;
+      }
+      win = win.parent;
+    }
+    if (!cmpFrame) {
+      addFrame();
+      win.__tcfapi = tcfAPIHandler;
+      win.addEventListener('message', postMessageEventHandler, false);
+    }
+  };
+
+  makeStub();
+
+  var uspStubFunction = function() {
+    var arg = arguments;
+    if (typeof window.__uspapi !== uspStubFunction) {
+      setTimeout(function() {
+        if (typeof window.__uspapi !== 'undefined') {
+          window.__uspapi.apply(window.__uspapi, arg);
+        }
+      }, 500);
+    }
+  };
+
+  var checkIfUspIsReady = function() {
+    uspTries++;
+    if (window.__uspapi === uspStubFunction && uspTries < uspTriesLimit) {
+      console.warn('USP is not accessible');
+    } else {
+      clearInterval(uspInterval);
+    }
+  };
+
+  if (typeof window.__uspapi === 'undefined') {
+    window.__uspapi = uspStubFunction;
+    var uspInterval = setInterval(checkIfUspIsReady, 6000);
+  }
+})();
+</script>
+<!-- End Quantcast Choice. Consent Manager Tag v2.0 (for TCF 2.0) --><script async="" importance="high" src="//rdc.m32.media/m32hb.min.js"></script><title></title>
+<meta name="robots" content="all">
+<meta name="author" content="iXore">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta property="og:image" content="https://www.lenecrologue.com/layout/adapt/view/img/logo_fb.png">
+<meta property="og:description" content="">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noarchive">
+<meta name="robots" content="nocache">
+<link rel="alternate" hreflang="fr" href="https://www.lenecrologue.com/politique-de-confidentialite/">
+<link rel="alternate" hreflang="en" href="https://www.lenecrologue.com/privacy-policy/">
+<style>
+.btn-primary{border:2px solid #1C93C1 !important;border-radius:0 !important;color:#1C93C1 !important;padding:14px 54px 10px !important;font-size:16px !important;transition:all .5s ease-in-out !important;background-color:transparent !important;letter-spacing:.2em !important;text-transform:uppercase !important;font-weight:bold !important;}.add-button{position:absolute;top:1px;left:1px;}.grecaptcha-badge{visibility:hidden;}h1{font-size:36px}h2{font-size:28px}h3{font-size:22px}h4{font-size:18px}button{text-transform:uppercase;color:#fff;font-size:16px;}.breadcrumb{font-size:14px}.header-inner,.inner-section{max-width:1213px;padding-left:20px;padding-right:20px;margin:0 auto;position:relative;display:flex;flex-direction:column;}h1,h2,h3,h4{color:#474a4f;font-weight:700;margin:0 0 10px}a{color:#88aa00;text-decoration:none}.navheader>li>a{text-decoration:none}.navbar ul.main>li.subs nav.contact-nav,.navbar ul.main>li.subs nav.product-nav{display:none}.top_icon{font-size:90%}#header_content{width:100%}.buttons_logo{align-items:center;font-size:1.1em}.navbar-default{width:100%;text-align:right;background-color:#666;font-weight:700;font-size:17px}#logo{display:flex;align-items:flex-start;justify-content:space-between}#h_search_frame>button{background-color:transparent;border:2px solid #fff}.info img{align-self:center;max-height:155px}.img_frame{height:155px;display:flex;justify-content:center}.width100percent{width:100% !important;}.pub_zone{max-width:371px;width:100%;}.carousel-indicators{list-style-type:none;}.Leaderboard{min-height:300px;}.published_date{padding-bottom:0;color:#8d8f92;font-size:13px;line-height:21px;}@media screen and (min-width:641px){}.header-inner,.inner-section,.container{max-width:1213px;padding-left:20px;padding-right:20px;margin:0 auto;position:relative;font-family:Novecentowide-Bold,Helvetica,sans-serif !important;}#h_search_frame>button{margin-left:3px;}[type=search]{-webkit-appearance:initial !important;}.hiddenonstart{visibility:hidden}body{font-size:18px;font-family:Novecentowide-Bold,Helvetica,sans-serif !important;color:#8d8f92;height:100%}@font-face{font-display:swap;font-family:'Novecentowide-Bold';font-style:normal;font-weight:400;src:local('Mukta Regular'),local('Mukta-Regular'),url(https://fonts.gstatic.com/s/mukta/v3/StqRJc_davPZLSS48g3uCg.woff2) format('woff2');unicode-range:U+0100-024F,U+1E00-1EFF,U+20A0-20AB,U+20AD-20CF,U+2C60-2C7F,U+A720-A7FF;}@media only screen and (max-width:520px){.buttons_logo{padding-left:4px!important;font-size:1.2em!important;}.buttons_logo a,.buttons_logo button{padding:2px!important;margin:2px!important;}}@media only screen and (max-width:992px){.buttons_logo{align-items:center;padding-left:8px;font-size:1.7em;}.menu{margin-left:20px;margin-right:20px;}.header-inner,.inner-section,.container{padding-left:5px!important;padding-right:5px!important;}}@media only screen and (min-width:993px){#header_content{flex-wrap:nowrap;}#header_right_zone form{display:flex;}}div#h_search_frame input{max-width:250px}div#h_search_frame button{padding-left:12px;padding-right:12px}.alert-warning{color:#474a4f !important;background-color:#fbfbfb !important;border-color:#f1f1f1 !important}#header_content_global{margin-top:5px;max-height:125px;}@media only screen and (min-width:769px){.container{max-width:1213px !important;padding-left:20px !important;padding-right:20px !important;}p{margin:0 0 1em !important}.alert{padding:10px 15px !important;margin-bottom:20px !important}.navbar{padding:0px !important}.nav-link{padding-top:4.5px !important;padding-bottom:4.5px !important;}.top-navbar{background-color:#0a181e !important;}#dropdownMenuButton{font-size:16px !important;border:none !important;padding:13px .5rem 9px !important;line-height:1 !important;}#choosen_method_span{width:100px !important;}}h1{font-size:36px!important;line-height:1!important;margin:0 0 10px!important;}div{border:0;margin:0;padding:0;}.fa,.fas{font-weight:900;font-family:"Font Awesome 5 Free";-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;display:inline-block;font-style:normal;font-variant:normal;text-rendering:auto;line-height:1;}@media only screen and (max-width:768px){.stats_grid1{margin-bottom:0px!important;}p{margin:0 0 .5em;}.btn-primary{justify-content:center!important;align-items:center!important;margin-bottom:15px!important;min-height:57px!important;display:flex!important;text-align:center!important;}#Leaderboard{min-height:300px;}.breadcrumb{margin:5px 0 10px!important;padding-top:0px!important;padding-bottom:0px!important;}}.fa-search{min-width:27.53px;min-height:27px;}.fa-bars{min-width:24.09px;min-height:27px;}.fa-long-arrow-alt-right{min-width:15.75px;min-height:17.6px;}.add-button{display:none;}.top_icon{background-color:transparent;border:0;line-height:unset;}#header{background:#1f2329;z-index:10001}body{position:relative!important;margin:0!important;padding:0!important;border:0!important;}@media only screen and (min-width:471px){#breadcrumb{max-width:fit-content}}@media only screen and (min-width:471px) and (max-width:767px){#breadcrumb{max-width:50vw!important}}@media only screen and (max-width:470px){#buy_btn a{width:100%;margin-left:5px;margin-right:5px;margin-top:25px;}}h2{font-size:28px!important;margin:10px 0;}.card-hover:hover{box-shadow:15px 15px 15px -5px rgb(0 0 0 / 40%),0 4px 6px -0 rgb(0 0 0 / 5%)!important;}.card-hover2:hover{background-color:rgb(0 0 0 / 1.4%)!important;box-shadow:10px 10px 10px -5px rgb(0 0 0 / 10%),0 4px 6px -0 rgb(0 0 0 / 5%)!important;}#header{background-position:left;background-size:cover;}@media only screen and (min-width:769px){#header{background-image:url(/layout/adapt/view/img/fond2-min.jpg)!important;}}@media only screen and (max-width:768px){#header{background-image:url(/layout/adapt/view/img/fond2small-min.jpg)!important;}}
+</style>
+<style>
+.poppins-font{font-family:Poppins,sans-serif !important;}.droid-font{font-family:Droid,sans-serif !important;}.no-letter-spacing{letter-spacing:0!important;}.navbar-dark .navbar-nav .nav-link{color:rgba(255,255,255,.8) !important;font-size:.9rem !important;}.text-white{color:#fff!important;}.btn{text-transform:uppercase !important;}.btn-outline-secondary:hover{color:#fff !important;background-color:#868e96 !important;border-color:#868e96 !important;}.hover-scale{transition:all .2s ease-in-out !important;}.hover-scale:hover{-webkit-transform:scale(1.05);transform:scale(1.05);}.navbar-dark .navbar-nav .nav-link:hover{color:#fff !important;}.hover-animate{transition:all .2s ease-in-out !important;}.hover-animate:focus,.hover-animate:hover{-webkit-transform:translate3d(0,-2px,5px);transform:translate3d(0,-2px,5px);}.p-city-date{color:#212529!important;}ul.list-inline li{display:inline-block;}.img-circle{border-radius:50%;}.img-user{width:24px;height:24px;box-shadow:0 0 0 2px rgb(0 0 0 / 10%);}.username{float:right;white-space:nowrap;/* line-height:34px;*/ margin:12px 10px;}.header-tool .dropdown-menu a.dropdown-item{color:black!important;}.btn-outline-white{color:white;background-color:transparent;background-image:none;border-color:white;}
+</style>
+<link href="/favicon.ico" rel="shortcut icon" type="text/css">
+<link href="/manifest.webmanifest?v=1" rel="manifest">
+<link href="//fonts.gstatic.com" rel="preconnect">
+<link href="//prg.smartadserver.com" rel="preconnect">
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4LWK0WSCGP"></script>
+                <script>
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  gtag('js', new Date());
+
+                  gtag('config', 'G-4LWK0WSCGP');
+                </script>
+            <link href="/layout/adapt/view/css/style.default.min.css?1637354157" media="all" rel="stylesheet" importance="high" type="text/css">
+<link rel="preload" href="/layout/adapt/view/css/bt4_style_gen.css?1639686054" as="style" type="text/css">
+<link rel="preload" href="/layout/adapt/view/css/bt4_style_gen_max768px.css?1641324711" as="style" type="text/css">
+<link rel="preload" href="/layout/adapt/view/css/bt4_style_gen_min769px.css?1639163029" as="style" type="text/css">
+<link rel="preload" href="/layout/adapt/view/css/bt4_style_gen_print.css?1618324149" as="style" type="text/css">
+<link href="/layout/adapt/view/css/fonts.css?1615471872" media="all" rel="stylesheet" importance="auto" type="text/css">
+<style type="text/css"> .qc-cmp-button.qc-cmp-secondary-button:hover {    background-color: #368bd6 !important;    border-color: transparent !important;  }  .qc-cmp-button.qc-cmp-secondary-button:hover {    color: #ffffff !important;  }  .qc-cmp-button.qc-cmp-secondary-button {    color: #368bd6 !important;  }  .qc-cmp-button.qc-cmp-secondary-button {    background-color: #eee !important;    border-color: transparent !important;  } </style><script type="text/javascript" id="__tcfapiuiscript" src="https://cmp.inmobi.com/tcfv2/52/cmp2ui-fr.js"></script><style qc-data-emotion="css-global" data-s=""></style><style qc-data-emotion="css" data-s=""></style></head>
+<body><div class="qc-cmp2-container" id="qc-cmp2-container" data-nosnippet=""><div class="qc-cmp2-main" id="qc-cmp2-main" data-nosnippet=""><div height="906" class="qc-cmp-cleanslate css-1ltjfzb"><div id="qc-cmp2-ui" role="dialog" aria-label="qc-cmp2-ui" aria-modal="true" tabindex="0" class="css-1t8ry4d"><div class="qc-cmp2-summary-section"><div class="qc-cmp2-consent-info"><div class="qc-cmp2-publisher-logo-container"><figure><div class="logo-container css-10ov4x5"><img alt="Publisher Logo" src="https://www.lenecrologue.com/layout/bootstrap4/view/img/logo_fr_bl.svg"></div><h2>Le respect de votre vie privée est notre priorité</h2></figure><div class="qc-cmp2-summary-info qc-cmp2-logo-displayed"><div class=""> Nous et nos 1422 <button mode="link" class="qc-cmp2-link-inline css-1sjf9qp" size="large">partenaires</button> stockons et/ou accédons à des informations sur un appareil, telles que les cookies, et traitons des données personnelles telles que des identifiants uniques et des informations standards envoyées par un appareil pour des publicités et du contenu personnalisés, des mesures de publicité et de contenu, des études d'audience et le développement de services.  Avec votre permission, nos 1422 partenaires et nous-mêmes pouvons utiliser des données de géolocalisation précises et d’identification par analyse du terminal. En cliquant, vous pouvez consentir aux traitements décrits précédemment. Vous pouvez également accéder à des informations plus détaillées et modifier vos préférences avant de consentir ou pour refuser de donner votre consentement.  Veuillez noter que certains traitements de vos données personnelles peuvent ne pas nécessiter votre consentement, mais vous avez le droit de vous y opposer. Vous pouvez modifier vos préférences ou retirer votre consentement à tout moment en revenant sur ce site et en cliquant sur le bouton "Confidentialité" en bas de la page Web. </div></div></div></div></div><div class="qc-cmp2-footer qc-cmp2-footer-overlay qc-cmp2-footer-scrolled"><div class="qc-cmp2-summary-buttons"><button mode="secondary" size="large" class=" css-5a47r"><span>PLUS D'OPTIONS</span></button><button mode="primary" size="large" class=" css-k8o10q"><span>J'ACCEPTE</span></button></div></div></div></div></div></div>
+<button class="add-button" style="display: none;">Add to home screen</button><div id="header" role="banner" class="container-fluid p-0 fixed-top position-sticky autohide">
+<div class="header-inner container">
+<div class="d-flex flex-row-reverse" id="m_menuadmin_frame" style="position:absolute;right:0px">
+<a href="/privacy-policy/" lang="en" hreflang="en" class="lang ml-1 mr-1 d-none d-lg-flex h6 mt-1 mb-0">EN</a></div>
+<div class="header_content_global d-flex ml-0 mr-0">
+<div id="header_content" class="justify-content-between align-items-center w-100 d-flex flex-direction-column flex-direction-lg-row flex-lg-nowrap">
+<div id="logo">
+<a href="/" title="Le Nécrologue"><!--[if !(IE)]><!--><img src="/layout/adapt/view/img/logo_fr.svg" alt="Le Nécrologue" onerror="this.onerror=null; this.src='/layout/adapt/view/img/logo_fr.png'" class="my-1 my-lg-3 img-fluid" data-toggle="tooltip" data-placement="bottom" importance="high"><!--[endif]----> <!--[if lte IE 9]><img src="/layout/adapt/view/img/logo_fr.png" style=height:60px;width:392px;"><![endif]--></a><div class="buttons_logo d-flex d-lg-none my-auto">
+<button type="button" aria-label="language button" class="top_icon">
+<a href="/privacy-policy/" lang="en" hreflang="en" class="lang">EN</a></button>
+<button type="button" aria-label="search button" data-toggle="collapse" data-target="#search_form" class="navbar-toggler collapsed top_icon">
+<i class="fas fa-search"></i></button>
+<button type="button" aria-label="menu button" data-toggle="collapse" data-target="#necrolog_navbar" class="navbar-toggler collapsed top_icon" aria-expanded="false">
+<i class="fas fa-bars"></i></button>
+</div>
+</div>
+<div style="padding-right:100px" class="d-none d-xl-block mt-2">
+<a href="/fr/pages-commémoratives-aurora/" title="Le Nécrologue"><img src="/layout/adapt/view/img/aurora-logo.svg" alt="Aurora" class="my-1 my-lg-3 img-fluid"></a></div>
+<div id="header_right_zone" class="d-flex" style="visibility: visible;">
+<form method="get" action="/necrologie/recherche/" class="navbar-collapse collapse d-lg-flex" onsubmit="search_submit.disabled = true; return true;" id="search_form" style="visibility: visible;">
+<div id="h_search_frame" class="d-flex align-items-stretch" style="min-height:40px;max-height:40px;">
+<input name="s" title="Recherchez un défunt" maxlength="50" required="required" style="border: none;" class="px-2" placeholder="Que recherchez-vous?" type="search" id="s">
+
+            <div class="dropdown" style="border: none;">
+
+                      <button class="h-100 px-2 py-auto rounded-0" style="border-width: 1px !important;background-color:white;color:black" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <div class="d-flex"><div id="choosen_method_span">Tout</div><i id="search_caret" style="display:block;min-height:16px;min-width:10px;" class="fas fa-caret-down"></i></div>
+                        <input type="hidden" id="choosen_method" name="choosen_method" value="all">
+                      </button>
+                      <div class="dropdown-menu px-2" style="visibility: visible; max-height: 210px; overflow-y: auto; top: -10px; color: black;" aria-labelledby="dropdownMenuButton">
+                        <span>Rechercher dans:</span>
+                        <a class="dropdown-item dropdown-item-search search-selected" href="#"><label class="d-flex justify-content-between"><input name="type_search" id="type_search_all" class="mr-2 d-none" type="radio" data-type="all">     <i style="min-width:24px" class="pr-2 fab fa-lg fa-canadian-maple-leaf"></i> <div style="flex: 1;" class="px-2">Tout</div>              <i class="facheck-search fa fa-check" aria-hidden="true"></i></label></a>
+                        <a class="dropdown-item dropdown-item-search" href="#"><label class="d-flex justify-content-between"><input name="type_search" id="type_search_name" class="mr-2 d-none" type="radio" data-type="name">    <i style="min-width:24px" class="pr-2 fas fa-lg fa-user"></i>                <div style="flex: 1;" class="px-2">PRÉNOM ET/OU NOM</div>  <i class="facheck-search fa fa-check" aria-hidden="true"></i></label></a>
+                        <a class="dropdown-item dropdown-item-search" href="#"><label class="d-flex justify-content-between"><input name="type_search" id="type_search_funeral" class="mr-2 d-none" type="radio" data-type="funeral"> <i style="min-width:24px" class="pr-2 fas fa-lg fa-building"></i>            <div style="flex: 1;" class="px-2">MAISON FUNÉRAIRE</div>  <i class="facheck-search fa fa-check" aria-hidden="true"></i></label></a>
+                        <a class="dropdown-item dropdown-item-search" href="#"><label class="d-flex justify-content-between"><input name="type_search" id="type_search_city" class="mr-2 d-none" type="radio" data-type="city">    <i style="min-width:24px" class="pr-2 fas fa-lg fa-house-user"></i>          <div style="flex: 1;" class="px-2">VILLE</div>             <i class="facheck-search fa fa-check" aria-hidden="true"></i></label></a>
+                      </div>
+                    </div><button type="submit" class="py-0" name="search_submit" aria-label="Rechercher" id="search_submit">
+<i style="min-height: 16px;min-width: 16px;display: block;font-size:16px;" class="fas fa-search"></i></button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<nav class="main navbar top-navbar navbar-expand-lg container-fluid mb-0 mt-1 p-0">
+<div class="container">
+<div></div>
+<div id="necrolog_navbar" style="margin-top: 0px; visibility: visible;" class="collapse navbar-collapse">
+<ul class="menu main hidden-xs nav nav-tabs navheader row justify-content-end flex-fill w-100">
+<li class="nav-item"><a href="/" class="nav-link text-left text-sm-right ml-3 ml-sm-0 border-0 h6 my-0 py-2">ACCUEIL</a></li><li class="subs"><a href="#" id="header-products" class="nav-link text-left text-sm-right ml-3 ml-sm-0 border-0 h6 my-0 py-2">AVIS DE DÉCÈS</a><nav class="product-nav pt-0" style="visibility: visible;">
+<div class="header_sub_menu_inner_section container bg-light pb-4">
+<div class="header_sub_menu col-sm-4">
+<h4 class="text-dark font-weight-bold">Provinces canadiennes</h4>
+<ul id="states_list">
+<li><a href="/necrologie/province/alberta/" class="text-info">Alberta</a></li>
+                            <li><a href="/necrologie/province/colombie-britannique/" class="text-info">Colombie-Britannique</a></li>
+                            <li><a href="/necrologie/province/ile-du-prince-edouard/" class="text-info">Île du Prince Édouard</a></li>
+                            <li><a href="/necrologie/province/manitoba/" class="text-info">Manitoba</a></li>
+                            <li><a href="/necrologie/province/nouveau-brunswick/" class="text-info">Nouveau-Brunswick</a></li>
+                            <li><a href="/necrologie/province/nouvelle-ecosse/" class="text-info">Nouvelle-Écosse</a></li>
+                            <li><a href="/necrologie/province/ontario/" class="text-info">Ontario</a></li>
+                            <li><a href="/necrologie/province/quebec/" class="text-info">Québec</a></li>
+                            <li><a href="/necrologie/province/saskatchewan/" class="text-info">Saskatchewan</a></li>
+                            <li><a href="/necrologie/province/terre-neuve-et-labrador/" class="text-info">Terre-Neuve et Labrador</a></li></ul>
+</div>
+<div class="header_sub_menu col-sm-4">
+<h4 class="text-dark font-weight-bold">Consultation</h4>
+<ul>
+<li><a href="/necrologie/maisonfuneraire/" class="text-info">Maisons funéraires</a></li><li><a href="/necrologie/ville/" class="text-info">Villes</a></li><li><a href="/necrologie/cimetiere/" class="text-info">Cimetières</a></li><li><a href="/necrologie/souvenir/" class="text-info">Vétérans</a></li><li><a href="/necrologie/covid-19/" class="text-info">Hommage COVID-19</a></li></ul>
+</div>
+<div class="header_sub_menu col-sm-4">
+<h4 class="text-dark font-weight-bold">Alerte courriel</h4>
+<ul>
+<li><a href="/liste-d-envoi/inscription/" class="text-info">Inscrivez-vous à l'alerte quotidienne</a></li></ul>
+</div>
+</div>
+</nav>
+</li><li><a href="/fr/pages-commémoratives-aurora/" class="nav-link text-left text-sm-right ml-3 ml-sm-0 border-0 h6 my-0 py-2">PAGES COMMÉMORATIVES AURORA</a></li><li></li><li><a href="https://blogue.lenecrologue.com" class="nav-link text-left text-sm-right ml-3 ml-sm-0 border-0 h6 my-0 py-2" target="necroblog">BLOGUE</a></li><li><a href="/faq-fr/" class="nav-link text-left text-sm-right ml-3 ml-sm-0 border-0 h6 my-0 py-2">FAQ</a></li><li class="subs"><a href="#" id="header-contact" class="nav-link text-left text-sm-right ml-3 ml-sm-0 border-0 h6 my-0 py-2">CONTACTEZ-NOUS</a><nav class="contact-nav pt-0">
+<div class="header_sub_menu_inner_section container bg-light pb-4">
+<div class="header_sub_menu col-sm-4">
+<h4 class="text-dark font-weight-bold">Annonceurs</h4>
+<ul>
+<li><a href="/annoncez-avec-nous/" class="text-info">Annoncez avec nous</a></li></ul>
+</div>
+<div class="header_sub_menu col-sm-4">
+<h4 class="text-dark font-weight-bold">Contactez-nous</h4>
+<ul>
+<li><a href="/contactez-nous/" class="text-info">Contactez-nous</a></li></ul>
+</div>
+</div>
+</nav>
+</li></ul>
+</div>
+</div>
+</nav>
+</div>
+<div id="l_page_frame" class="mt-0 mb-0 mx-auto p-0">
+<div id="titleFrame">
+<h1> </h1>
+</div>
+<style>b{font-weight:bold;!important}</style>
+<section id="apropos" style="margin-top:80px;" class="section-block content-section" data-bg="" data-color="" data-link="">
+<div class="inner-section">
+<h1 style="text-align: center;"><b>Déclaration de confidentialité</b></h1>
+<h2 style="text-align: center;margin-bottom:50px;"><b>Dernière mise à jour&nbsp;:&nbsp; <a>Le 15 décembre 2017</a></b></h2>
+
+<p>Chez iXore, propriétaire du site Web Le Nécrologue, nous sommes fiers de notre engagement envers la protection de votre vie privée.  Nos principes de gérance de données s’inspirent 
+   des valeurs de notre entreprise et s’appuient sur notre volonté de préserver votre vie privée. La Déclaration de confidentialité décrit 
+   de façon plus détaillée les principes de la protection de la confidentialité auxquels nous adhérons.</p>
+
+<p>Si vous avez des questions ou des plaintes à formuler au sujet de la Déclaration de confidentialité ou de nos pratiques à cet égard, veuillez communiquer avec nous aux coordonnées indiquées à la rubrique <a href="#communiquer" target="_self">«&nbsp;Pour communiquer avec nous&nbsp;»</a>&nbsp; ci-dessous.</p>
+
+<p><b>1.&nbsp;&nbsp; </b><b>CHAMP D’APPLICATION DE LA DÉCLARATION DE CONFIDENTIALITÉ.</b> Si un service que vous utilisez comporte des liens menant à la présente Déclaration de confidentialité, celle-ci vous concerne.</p>
+
+<p>La Déclaration de confidentialité (la «&nbsp;Déclaration&nbsp;») s’applique à nos sites, à nos produits et à nos services (collectivement les «&nbsp;services&nbsp;») qui comportent des liens menant à la présente Déclaration. iXore Inc est responsable du maintien des renseignements personnels visés par la Déclaration et recueillis aux fins des services offerts à nos clients.</p>
+
+<p><b>2.&nbsp;&nbsp; </b><b>CE QUE NOUS FAISONS DE VOS RENSEIGNEMENTS PERSONNELS</b> Nous tenons à ce que vous sachiez quels renseignements nous recueillons et comment nous les utilisons pour vous fournir nos services, exercer nos activités et rendre nos services plus utiles, plus judicieux et mieux adaptés à vos besoins. Nous ne vendons ni ne communiquons vos renseignements personnels à des tiers pour leur usage commercial sans votre consentement.</p>
+
+<p><b>a)&nbsp;</b><b>Type de renseignements que nous recueillons<i>. </i></b>Pour vous donner accès à nos services, nous pourrions avoir besoin de collecter des renseignements permettant de vous identifier (les «&nbsp;renseignements personnels&nbsp;»), tels que votre nom, votre adresse d’expédition ou de facturation, votre adresse électronique, votre numéro de téléphone, votre nom d’utilisateur et votre mot de passe.</p>
+
+<p>Nous recueillons ces renseignements lorsque vous enregistrez ou ouvrez un compte ou une session, réglez une facture, achetez ou utilisez un service ou communiquez avec nous pour obtenir du soutien ou nous faire part de vos commentaires. Nous obtenons également des renseignements auprès d’autres sociétés ou de tiers, p. ex. lorsque nous faisons appel à des fournisseurs de services pour compléter les renseignements personnels que vous nous fournissez (par exemple, pour valider votre adresse postale), afin d’assurer l’exactitude de vos données et de vous offrir un meilleur service. Finalement, nous recueillons également le contenu et d'autres renseignements que vous fournissez ou que vous créez lors de vos interactions avec nos services.</p>
+
+<p>Nous effectuons aussi la collecte automatique de certaines données sur l’utilisation lorsque vous accédez à nos services («&nbsp;données sur l’utilisation&nbsp;»), telles que le protocole Internet («&nbsp;IP&nbsp;»), les adresses, les fichiers de journalisation, les identifiants uniques des appareils, les pages consultées, le type de navigateur, les liens sur lesquels vous cliquez pour quitter nos services ou interagir avec nos services et les autres données sur l’utilisation recueillies à l’aide de <a href="#temoins" target="_self">témoins et d’autres technologies de traçage</a>&nbsp;. Par exemple, nous conservons les adresses&nbsp;IP pour effectuer le suivi de renseignements à caractère non nominatif et les regrouper, tels que les adresses&nbsp;IP qui servent à déterminer les régions à partir desquelles les utilisateurs accèdent à nos services. Nos fonctions d’ouverture de session et de sécurité conservent également les adresses&nbsp;IP des utilisateurs lorsqu’ils ouvrent une session pour accéder à nos services.&nbsp; Nous pouvons également enregistrer votre positionnement et vos déplacements au moyen de la localisation GPS si vous activez cette fonction.</p>
+
+<p>Il est possible que nos services changent au fil du temps et que nous lancions de nouvelles fonctions qui recueilleront des renseignements nouveaux ou de types différents.</p>
+
+<p><b>b)&nbsp;</b><b>Utilisation de vos données. </b>Nous pouvons utiliser vos données, y compris vos renseignements personnels, pour les besoins suivants&nbsp;:</p>
+
+<p><i><u>Enregistrement du compte</u></i><i>.</i> Nous pouvons utiliser votre nom, votre adresse, votre numéro de téléphone et votre adresse électronique pour enregistrer un compte, vous fournir certains services et vous communiquer des renseignements importants.&nbsp; Nous pouvons recueillir d’autres renseignements personnels à votre sujet, comme un changement d’adresse, à partir de sources commerciales, pour tenir nos dossiers à jour.&nbsp;&nbsp;&nbsp; Si vous configurez un compte administrateur auquel d’autres personnes ont accès, veuillez noter que celles-ci pourront consulter, modifier et supprimer vos renseignements personnels.</p>
+
+<p><i><u>Prestation de nos services et exploitation de notre entreprise.</u></i><i>&nbsp;</i>Nous utilisons vos renseignements pour exercer nos activités, y compris vous fournir les services demandés et le soutien associé à nos services et protéger nos services, notamment en luttant contre la fraude et en protégeant vos données.</p>
+
+<p><i><u>Service à la clientèle et soutien technique.</u></i><i>&nbsp;&nbsp;&nbsp; </i>Nous utilisons votre nom, votre adresse, votre numéro de téléphone, votre adresse électronique, les données sur vos interactions avec nos services et l’information sur la configuration de votre ordinateur pour résoudre les problèmes touchant nos services et assurer le suivi de votre expérience avec vous.&nbsp;&nbsp;&nbsp; Nous offrons également divers services de clavardage, par exemple, pour communiquer avec un représentant du service de soutien d’IXore.&nbsp;&nbsp; La transmission des sessions de clavardage est chiffrée, mais vous devez éviter de fournir plus de renseignements personnels que nécessaire pour régler votre problème particulier.&nbsp;&nbsp; Une transcription du contenu des séances est conservée afin de résoudre les questions ou les problèmes liés à nos services.</p>
+
+<p><i><u>Communiquer avec vous et vous informer sur d'autres services.</u></i><i>.</i> <b>&nbsp;</b>Nous pouvons utiliser vos renseignements pour vous informer sur nos services et sur des offres de produits et de services de tiers qui pourraient vous être utiles.&nbsp; Veuillez consulter la rubrique <a href="#faire" target="_self">«&nbsp;Que faire pour assurer la protection de votre vie privée&nbsp; »</a> pour déterminer vos choix à l’égard de ces communications.</p>
+
+<p><i><u>Améliorer nos services et en développer de nouveaux</u></i><i>.&nbsp; </i>Nous utilisons vos renseignements pour personnaliser votre expérience et les services, élaborer de nouvelles fonctions ou de nouveaux services et améliorer la qualité générale des services d’IXore.&nbsp;</p>
+
+<p><i><u>Commentaires</u></i><i>.&nbsp;&nbsp; </i>Nous pouvons utiliser les renseignements fournis dans le cadre de sondages et les combiner aux réponses d’autres clients pour mieux comprendre et améliorer nos services.&nbsp; &nbsp;Il est facultatif de répondre à un sondage.</p>
+
+<p><i><u>Recherche, y compris la publication et la communication de renseignements combinés provenant de nombreux utilisateurs, mais ne permettant pas d’identifier ces utilisateurs</u></i><i>.</i>Nous pouvons préparer et communiquer des données sur nos clients à des tiers, comme des publicitaires ou des associés, à des fins de recherche, d’étude, de marketing ou de promotion, mais seulement de manière à ce que personne ne puisse être identifiée.&nbsp; Par exemple, nous pouvons communiquer des données démographiques qui indiquent le pourcentage de nos clients qui utilisent des services mobiles ou qui utilisent un système d’exploitation particulier. Nous ou nos associés tiers pouvons publier les résultats regroupés tirés de recherches ou d’analyses, mais seulement de manière à ce qu’il soit impossible de découvrir votre identité ou celle d’autres personnes.</p>
+
+<p><b>c)&nbsp;</b><b>Comment nous communiquons vos renseignements personnels<i>. </i></b>À l’occasion, il nous faudra communiquer vos renseignements personnels à des tiers.&nbsp;</p>
+
+<p><i><u>Tiers fournisseurs de services</u></i><i>. </i>Nous pouvons communiquer vos données, y compris vos renseignements personnels et votre utilisation, à des tiers fournisseurs de services qui exercent diverses fonctions nous permettant de vous fournir nos services et de nous aider à exploiter notre entreprise<b>,</b> comme la conception de sites Web, l’envoi de messages par courriel, la lutte contre la fraude, le service à la clientèle et la production d’analyses. <br>
+&nbsp;Ces ententes avec ces tiers prévoient de préserver la confidentialité des renseignements personnels que nous leur fournissons, qu’ils ne peuvent agir qu’en notre nom et conformément à nos instructions et qu’il leur est interdit d’utiliser les renseignements personnels à des fins autres que de nous fournir des produits et services ou de les fournir en notre nom.</p>
+
+<p><i><u>Réponse à des assignations et à d’autres requêtes</u></i><i>.&nbsp; </i>Nous pouvons être amenés à communiquer vos renseignements à des tribunaux, à des organismes d’application de la loi et à des organismes gouvernementaux lorsque, nous croyons, de bonne foi, que cette communication est exigée ou autorisée par la loi, y compris, pour remplir des obligations de sécurité nationale ou d’application de la loi, protéger notre entreprise ou répondre à une ordonnance du tribunal, à une assignation, à une demande de perquisition ou à une autre requête émanant d’un organisme d’application de la loi.</p>
+
+<p><i><u>Protection d’IXore et d’autrui</u></i>.&nbsp;Nous pouvons communiquer des données sur le compte, les renseignements personnels et sur l’utilisation lorsque nous le jugeons utile pour assurer l’exécution ou l’application des Conditions d’utilisation de nos produits ou d’autres conventions ou pour protéger les droits, la propriété ou la sécurité d’IXore, de nos services, de nos utilisateurs et de tiers.&nbsp; Cela comprend l’échange de renseignements avec d’autres sociétés et organisations pour se protéger contre la fraude et réduire les risques financiers.&nbsp; Cette mesure ne comprend pas la vente, la location ou toute autre forme de communication de renseignements personnels de nos clients à des fins commerciales qui contreviendraient aux engagements énoncés dans la Déclaration de confidentialité.</p>
+
+<p><i><u>Communication de renseignements à des agences d’évaluation du crédit</u></i><i>.&nbsp; </i>Nous pouvons communiquer vos données à des agences d’évaluation du crédit, à une agence de renseignements sur le consommateur et à des associations de cartes de crédit.&nbsp; Les paiements en retard, les paiements omis ou les autres manquements relatifs à votre compte peuvent être consignés dans le rapport sur votre solvabilité et dans votre dossier de consommateur.&nbsp;&nbsp;&nbsp; Nous pouvons également échanger des renseignements avec d’autres sociétés, des avocats, des agences d’évaluation du crédit, des mandataires, des organismes gouvernementaux et des associations de cartes en lien avec des questions de fraude, de crédit ou de recouvrement de dettes.</p>
+
+<p><i><u>Vente de notre entreprise</u></i><i>.&nbsp;&nbsp; </i>En cas de vente, de fusion ou de transfert d’une partie des avoirs de l’entreprise ou de sa participation à une opération commerciale de toute autre nature visant ses avoirs, notre entreprise pourrait communiquer vos données pour que l’autre partie puisse déterminer si elle poursuit cette opération jusqu’à sa conclusion.&nbsp; Le cas échéant, on vous demandera si vous souhaitez cesser de recevoir des infos promotionnelles en cas de changement de contrôle.</p>
+
+<p><i><u>Si vous donnez votre consentement</u></i><i>.</i> Sauf dans le cas susmentionné, nous vous aviserons et vous laisserons la possibilité de décider si vos renseignements personnels peuvent être communiqués à des tiers.</p>
+
+<p><b><a name="faire"></a>3.&nbsp;&nbsp; </b><b>QUE FAIRE POUR ASSURER LA PROTECTION DE VOTRE VIE PRIVÉE.</b> Vous pouvez consulter et modifier en ligne vos données nominatives par l’intermédiaire de votre service d’IXore. La façon dont vous accédez à ces données nominatives et gérez celles-ci varie en fonction des services que vous utilisez. Vous avez un pouvoir de décision sur&nbsp; l’utilisation de vos données nominatives, du contenu marketing que vous recevez de notre part et des témoins et des technologies de traçage. </p>
+
+<p><b>a)&nbsp;</b><b>Mise à jour de vos renseignements personnels.&nbsp; </b>En vertu de votre droit de gestion des renseignements personnels que vous avez fournis, vous pouvez les consulter, les mettre à jour, les corriger ou en demander la suppression par l’intermédiaire du service ou du service de soutien à la clientèle.&nbsp;&nbsp; Vous pouvez joindre le service de soutien en utilisant les coordonnées indiquées dans la rubrique <a href="#communiquer" target="_self">«&nbsp;Pour communiquer avec nous&nbsp;»</a>&nbsp;de la présente Déclaration.</p>
+
+<p><b>b)&nbsp;</b><b>Gestion du contenu marketing que nous vous faisons parvenir. </b>Nous respecterons vos choix quant au contenu marketing que nous faisons parvenir.&nbsp;</p>
+
+<p>Vous disposez des options suivantes si vous recevez du contenu marketing de notre part et que vous souhaitez y mettre fin&nbsp;:</p>
+<p>
+</p><ul>
+<li>Cliquez sur le lien de désabonnement ou de refus contenu dans le courriel ou le bulletin que vous avez reçu.</li>
+<li>Réglez vos préférences dans les paramètres de vos comptes IXore.</li>
+<li>Dans le cas des messages textes, retournez le message «&nbsp;STOP&nbsp;» ou suivez les instructions dans le message ou dans les paramètres pour faire cesser le service.</li>
+<li>Avec votre consentement, nos applications mobiles peuvent faire parvenir des notifications poussées à votre appareil mobile. Si vous recevez des notifications poussées et souhaitez y mettre fin, vous pouvez en bloquer la réception dans votre appareil.</li>
+<li>Vous avez également la possibilité de modifier vos préférences en matière de marketing en faisant parvenir votre demande à (veuillez indiquer les coordonnées auxquelles vous désirez ne plus recevoir de contenu marketing)&nbsp;:</li>
+</ul>
+<p></p>
+<p><b>PAR LA POSTE</b></p>
+<p>IXore Inc<br>
+À l’attention de&nbsp;: Se désabonner<br>
+908, Boulevard Ouellet<br>
+Thetford Mines (QC)<br>
+Canada, G6G&nbsp;7W3</p>
+
+<p><b>PAR COURRIEL</b></p>
+<p>Sujet&nbsp;: Se désabonner<br>
+<a href="mailto:info@ixore.com">info@ixore.com</a></p>
+
+<p>N’oubliez pas que même si vous renoncez à recevoir des messages de marketing de notre part, nous continuerons à vous faire parvenir des messages obligatoires concernant les services ou les opérations.</p>
+
+<p><b><a name="temoins"></a>c)&nbsp;</b><b>Témoins et autres technologies de traçage.&nbsp; </b>Vous trouverez ci-dessous un sommaire de nos procédures et de nos mesures de contrôle applicables aux témoins et aux technologies de traçage.</p>
+
+<p>Conformément à la loi applicable, IXore et ses fournisseurs de services peuvent utiliser des outils d’usage courant pour repérer vos visites et faire le suivi de vos interactions avec les services, tels que des témoins, des pixels invisibles, des pixels, des objets locaux partagés (ci-après désignés collectivement par le terme «&nbsp;témoins&nbsp;»).&nbsp; Ce pistage est quelquefois nécessaire afin de nous permettre de vous fournir le service demandé.&nbsp; À d’autres occasions, nous combinons vos données sur l’utilisation recueillies à partir des témoins avec celles d’autres clients afin d’améliorer votre expérience et celle des autres clients.&nbsp; Les données sur l’utilisation que nous recueillons à partir de témoins et l’utilisation que nous en faisons relèvent de notre responsabilité.&nbsp; Les renseignements concernant la façon de modifier les paramètres de votre navigateur afin de pouvoir refuser les témoins sont situés dans les paramètres de votre navigateur.</p>
+
+<p>Conformément aux <a href="http://www.aboutads.info/principles" target="_blank">principes de l'Alliance de la publicité numérique du Canada</a>, IXore utilise aussi des réseaux publicitaires et d’autres tierces parties pour afficher de la publicité sur notre site Web ou gérer nos publicités sur d’autres sites Web. Nos partenaires tiers peuvent placer des témoins sur nos services et sur nos sites Web indépendants afin de diffuser des publicités pouvant être pertinentes, compte tenu de vos activités de navigation et de vos champs d’intérêt, et de déterminer l’efficacité de telles publicités. Si vous voulez refuser les publicités basées sur vos champs d’intérêt, cliquez <a href="http://preferences-mgr.truste.com/" target="_blank">ici</a>, ou, si vous êtes situé dans l’Union européenne, cliquez <a href="http://www.youronlinechoices.eu/" target="_blank">ici</a>.</p>
+
+<p>Vous avez également le pouvoir de refuser le traçage réalisé à de telles fins au moyen de témoins&nbsp;:</p>
+<p>
+</p><ul>
+<li>Consultez les pages de refus de la <a href="http://www.networkadvertising.org/choices/" target="_blank">Network Advertising Initiative</a> ou de la <a href="http://www.aboutads.info/choices/" target="_blank">Digital Advertising Alliance</a>.</li>
+<li>Si vous êtes un utilisateur des services fournis au Canada, veuillez consulter la page <a href="http://youradchoices.ca/fr/" target="_blank">http://youradchoices.ca/fr/</a></li>
+<li><a href="https://www.facebook.com/ads/website_custom_audiences/" target="_blank">Cliquez ici</a>&nbsp;pour refuser les publicités ciblées sur Facebook.</li>
+<li><a href="http://www.google.com/settings/ads" target="_blank">Cliquez ici</a>&nbsp;pour refuser que Google Analytics fasse de l’affichage publicitaire ou personnalise les annonces du Réseau Display de Google.</li>
+</ul>
+<p></p>
+
+<p>Veuillez noter que même si vous refusez les témoins ou les publicités basées sur vos champs d’intérêt, vous recevrez néanmoins des publicités. Elles ne seront tout simplement pas adaptées à vos champs d’intérêt.&nbsp; De plus, si vous signifiez votre refus et que vous supprimez ensuite les témoins, utilisez un autre navigateur ou un ordinateur différent ou nouveau, vous devrez peut-être signifier de nouveau vos refus.</p>
+
+<p><b>d)&nbsp;</b><b>Refus de pistage.</b> Comme pour la plupart des autres entreprises, nos services ne sont actuellement pas configurés pour répondre aux signaux de refus de pistage des navigateurs, car aucune norme à cet égard n’a encore été adoptée.&nbsp; Cliquez <a href="https://allaboutdnt.com/" target="_blank">ici</a> pour en savoir plus sur le refus de pistage.</p>
+
+<p><b>e)&nbsp;</b><b>Fonctions des médias sociaux.</b> Nos services utilisent les fonctions des médias sociaux, comme la fonction de partage de Facebook («&nbsp;Fonctions des médiaux sociaux&nbsp;»).&nbsp; Ces fonctions retiennent votre adresse&nbsp;IP et les pages consultées lorsque vous utilisez nos services et il est possible qu’un témoin soit créé pour que les fonctions s’exécutent correctement. Les fonctions des médias sociaux sont hébergées par un fournisseur tiers ou directement dans nos services. Vos interactions avec ces fonctions sont régies par les déclarations de confidentialité des sociétés fournissant les fonctions des médias sociaux en question.</p>
+
+
+<p><b>4.&nbsp;&nbsp; </b><b>CONSERVATION DES DONNÉES ET VOS DROITS D’ACCÈS. </b></p>
+
+<p><b>a)&nbsp;</b><b>Conservation des données.&nbsp; </b>Dans la mesure permise par la loi et conformément aux lois et aux règlements applicables, nous conservons vos données aussi longtemps que nécessaire pour vous fournir des services, gérer votre compte tant qu'il reste actif ou s’il y a lieu, pour exercer nos activités.&nbsp; Lorsque vous fermez votre compte, nous pouvons continuer à vous faire parvenir de l’information sur nos services, vous communiquer des nouvelles importantes sur le monde des affaires qui risquent d’avoir un effet sur vous, vous informer au sujet de produits et de services qui pourraient susciter votre intérêt à moins que vous ayez refusé de recevoir du contenu marketing.&nbsp; Nous pouvons également continuer à utiliser certains de vos renseignements à des fins commerciales, pour améliorer nos offres et, dans certains cas, pour en développer de nouvelles. Nous conservons et utilisons vos renseignements conformément aux règlements applicables et aux politiques d’IXore en matière de gestion de documents et de l’information afin de respecter nos obligations juridiques et de reddition de comptes, de résoudre les litiges, de faire exécuter nos ententes, de finaliser les opérations non réglées et de déceler et de prévenir les fraudes.</p>
+
+<p><b>b)&nbsp;</b><b>Vos droits d’accès. </b>&nbsp;Dans la mesure exigée par la loi applicable, vous pouvez communiquer avec nous pour confirmer si nous devons conserver ou traiter pour le compte d’un tiers vos renseignements personnels et pour les passer en revue afin d’en vérifier l’exactitude et la légitimité de notre traitement de ces renseignements personnels.&nbsp;&nbsp;&nbsp; Si vous découvrez que les renseignements personnels que nous possédons à votre sujet sont inexacts ou utilisés en violation des lois applicables, vous pouvez exiger que vos renseignements personnels soient corrigés, modifiés ou supprimés.&nbsp; Pour demander à consulter, à corriger, à modifier ou à supprimer vos renseignements personnels, faites parvenir une demande par courriel à l’adresse&nbsp;<u><a href="mailto:info@ixore.com" target="_self">info@ixore.com</a></u> ou par la poste à l’adresse indiquée à la rubrique <a href="#communiquer" target="_self">«&nbsp;Pour communiquer avec nous&nbsp;»</a>.</p>
+
+
+<p><b>5.&nbsp;&nbsp; </b><b>LA SÉCURITÉ DE VOS RENSEIGNEMENTS.</b>&nbsp; La protection de vos renseignements personnels est primordiale pour nous.</p>
+
+<p>Nous appliquons des mesures de sécurité raisonnables et adéquates de protection des renseignements personnels dont nous faisons la collecte.</p>
+<p>Par exemple&nbsp;:<br>
+
+</p><ul>
+<li>Nous mettons constamment à jour nos procédures en matière de sécurité pour instaurer les meilleures méthodes reconnues de protection des renseignements personnels et nous les examinons avec soin.</li>
+<li>Nous respectons les lois et les normes de sécurité en vigueur.</li>
+<li>Nous transmettons vos renseignements personnels délicats de façon sécuritaire.&nbsp;</li>
+</ul>
+<p></p><p>
+</p><ul>
+<li>Nous formons notre personnel et exigeons qu’il protège vos données.</li>
+<li>Nous transmettons, stockons, protégeons et consultons tous les renseignements des détenteurs de carte conformément aux normes de sécurité des données de l’industrie des cartes de paiement.</li>
+</ul><p></p>
+
+<p><b><a name="communiquer"></a>6.&nbsp;&nbsp;</b><b>POUR COMMUNIQUER AVEC NOUS.</b>&nbsp; Les demandes de renseignements ou plaintes relatives à la confidentialité, y compris les questions ou commentaires à l’égard de la Déclaration de confidentialité, doivent être adressées au responsable de la protection de la vie privée par la poste, par télécopieur ou par courriel aux adresses indiquées ci-dessous. Nous donnerons suite aux demandes dans les délais légaux. Nous tenons à recevoir vos commentaires.</p>
+
+<p><b>a)&nbsp;</b><b>Par courriel</b>. Si vous avez des questions ou des plaintes à formuler au sujet de la Déclaration de confidentialité ou de nos procédures à cet égard, veuillez communiquer avec nous par courriel à l’adresse électronique&nbsp;: <a href="mailto:info@ixore.com">info@ixore.com</a>.</p>
+
+<p><b>b)&nbsp;</b><b>Par la poste</b>.</p>
+
+<p>IXore Inc<br>
+À l’attention de&nbsp;: Responsable de la protection de la vie privée<br>
+908, Boulevard Ouellet<br>
+Thetford Mines (QC)<br>
+Canada, G6G&nbsp;7W3</p>
+
+<p><b>c)&nbsp;</b><b>Par télécopieur</b><br>
+
+À l’attention de&nbsp;: Responsable de la protection de la vie privée<br>
+TÉLÉCOPIEUR&nbsp;: 1&nbsp;418&nbsp;755-1737</p>
+
+<p><b>7.&nbsp;&nbsp;</b><b>CHANGEMENTS TOUCHANT NOTRE DÉCLARATION DE CONFIDENTIALITÉ.</b> À l’occasion, nous modifions ou mettons à jour nos Déclarations de confidentialité. Nous nous réservons le droit d’apporter des changements ou de faire des mises à jour en tout temps. Vous trouverez ci-dessous des renseignements plus détaillés sur la façon dont vous en êtes avisé.</p>
+
+<p>Si nous apportons des changements importants à nos procédures de traitement des renseignements personnels, nous ferons parvenir un avis dans le cadre de nos services ou au moyen d’autres canaux de communication, tels que le courriel ou une publication affichée dans les communautés. Veuillez examiner attentivement les changements. Si vous vous opposez aux changements et ne désirez plus utiliser nos services, vous avez la possibilité de fermer vos comptes. Tous les changements entrent en vigueur à la date de publication et lorsque vous utilisez l’un de nos services après l’envoi d’une déclaration de changement important ou de la publication de la Déclaration de confidentialité mise à jour, vous consentez implicitement à ces changements.</p>
+
+<p><b>8.&nbsp;&nbsp;</b><b>COLLECTE ET UTILISATION DE RENSEIGNEMENTS PERSONNELS PROVENANT DE PERSONNES MINEURES.</b> Nous ne faisons pas sciemment la collecte de renseignements personnels sur des personnes mineures. &nbsp;</p>
+
+<p>Les services d’IXore sont conçus pour les adultes.&nbsp; Nos services ne s’adressent pas aux mineurs et nous ne faisons pas sciemment la collecte de renseignements personnels sur des personnes mineures.</p>
+
+</div></section></div><iframe name="__tcfapiLocator" style="display: none;"></iframe>
+<nav id="blog_section" class="noprint py-5 mt-0 bg-gray-100">
+<div class="container">
+<h3 class="display-4 mb-5">Blogue</h3>
+<div class="row w-100 mx-0">
+<div class="col-lg-4 col-sm-6 mb-4 px-4 px-sm-3">
+<div class="card shadow card-hover border-0 h-100 d-flex align-items-center overflow-hidden">
+<img class="card-img-top" style="height:250px;width:unset;" src="https://blogue.lenecrologue.com/wp-content/uploads/2021/11/pexels-anna-shvets-3683046-585x390.jpg" importance="low" alt="" loading="lazy"><div class="card-body d-flex flex-column col-12" style="max-width:370px;">
+<h4 class="my-2 text-dark text-lg font-weight-bold">Une pilule pour guérir le cancer?</h4>
+<p class="text-gray-500 text-sm my-2">
+<i class="far fa-calendar mr-2"></i>23 novembre</p>
+<p class="my-2 text-muted text-base">
+En 2012, le cancer a causé la mort de&nbsp;8,8 millions&nbsp;de personnes sur la planète. Le cancer est la première cause de mortalité chez l’homme et la deuxième chez la femme.  Depuis de nombreuses années, des milliers de dollars sont investis en recherche afin de trouver le moyen de venir à bout de cette maladie. Le chercheur Luc Berthiaume, biologiste cellulaire à l’Université de l’Alberta, semble être sur une piste prometteuse.
+</p>
+<a href="https://blogue.lenecrologue.com/blog/2021/11/23/une-pilule-pour-guerir-le-cancer/" target="necroblog" class="mt-auto btn btn-link pl-0 d-flex text-sm align-items-center stretched-link"><span class="text-info">Lire la suite</span> <i class="fas fa-long-arrow-alt-right ml-2 text-info"></i></a></div>
+</div>
+</div>
+<div class="col-lg-4 col-sm-6 mb-4 px-4 px-sm-3">
+<div class="card shadow card-hover border-0 h-100 d-flex align-items-center overflow-hidden">
+<img class="card-img-top" style="height:250px;width:unset;" src="https://blogue.lenecrologue.com/wp-content/uploads/2021/01/smart-4168483_1920-585x390.jpg" importance="low" alt="" loading="lazy"><div class="card-body d-flex flex-column col-12" style="max-width:370px;">
+<h4 class="my-2 text-dark text-lg font-weight-bold">Nos données personnelles : cette richesse à protéger</h4>
+<p class="text-gray-500 text-sm my-2">
+<i class="far fa-calendar mr-2"></i>28 janvier</p>
+<p class="my-2 text-muted text-base">
+Depuis 2006, tous les 28 janvier est célébrée La Journée de la protection des données. Cette initiative lancée par le Conseil Européen a pour but de sensibiliser les citoyens aux droits à la protection des données personnelles et de la vie privée. 
+</p>
+<a href="https://blogue.lenecrologue.com/blog/2021/01/28/nos-donnees-personnelles-cette-richesse-a-proteger/" target="necroblog" class="mt-auto btn btn-link pl-0 d-flex text-sm align-items-center stretched-link"><span class="text-info">Lire la suite</span> <i class="fas fa-long-arrow-alt-right ml-2 text-info"></i></a></div>
+</div>
+</div>
+<div class="col-lg-4 col-sm-6 mb-4 px-4 px-sm-3">
+<div class="card shadow card-hover border-0 h-100 d-flex align-items-center overflow-hidden">
+<img class="card-img-top" style="height:250px;width:unset;" src="https://blogue.lenecrologue.com/wp-content/uploads/2021/01/tombstone-1735443_1920-585x390.jpg" importance="low" alt="" loading="lazy"><div class="card-body d-flex flex-column col-12" style="max-width:370px;">
+<h4 class="my-2 text-dark text-lg font-weight-bold">HOLOCAUSTE, HIROSHIMA… COVID-19 : ces drames dont il faut se souvenir pour se soutenir</h4>
+<p class="text-gray-500 text-sm my-2">
+<i class="far fa-calendar mr-2"></i>25 janvier</p>
+<p class="my-2 text-muted text-base">
+Le 27 janvier prochain, certains d’entre nous penseront peut-être à dédier  une pensée à un évènement marquant de l’histoire du monde : l’Holocauste*, ses  plus de 6 millions de victimes juives, par l’État nazi et ses collaborateurs de 1933 à 1945, et la date de la libération du camp d’Auschwitz*. 
+</p>
+<a href="https://blogue.lenecrologue.com/blog/2021/01/25/holocauste-hiroshima-covid-19-ces-drames-dont-il-faut-se-souvenir-pour-se-soutenir/" target="necroblog" class="mt-auto btn btn-link pl-0 d-flex text-sm align-items-center stretched-link"><span class="text-info">Lire la suite</span> <i class="fas fa-long-arrow-alt-right ml-2 text-info"></i></a></div>
+</div>
+</div>
+</div>
+<div class="row w-100 mx-0">
+<div class="col-md-12 text-center my-3">
+<a href="https://blogue.lenecrologue.com/" target="blog" class="text-info">Lire plus d'articles</a></div>
+</div>
+</div>
+</nav>
+<div class="container my-5" style="overflow:hidden;">
+<div id="readmo-container" class="mt-5"><div id="readmo-c87bb6d66a9e4e36a9de454b1b1e643a"></div></div>
+              <style>
+              .readmo-item-image {
+                    background-size: contain!important;
+              }
+              </style>
+              <script type="text/javascript">
+            if (window.outerWidth > 767) {
+                v_id = 'c87bb6d66a9e4e36a9de454b1b1e643a';
+            } else {
+                v_id = 'eb5274349d4a45c3be41e23ef23b9c4f';
+            }
+            document.getElementById('readmo-container').innerHTML = '<div id="readmo-' + v_id + '"></div>';(window.readmo = window.readmo || []).push({
+                  section: v_id,
+                  container: '#readmo-' + v_id
+            });
+
+            !(function(d){
+                  var script = d.createElement("script");
+                  script.async = true;
+                  script.src = 'https://s.yimg.com/dy/ads/readmo.js';
+                  d.body.appendChild(script);
+            })(document);
+          </script>
+          </div><script async="" src="https://s.yimg.com/dy/ads/readmo.js"></script>
+<footer id="l_footer_frame" class="bg-black text-white py-4 noprint" style="overflow-x: hidden;">
+<div class="container">
+<nav class="row">
+<div class="col-md-3 p-4 align-self-start">
+<a href="https://www.facebook.com/lenecrologue" title="Le Nécrologue sur Facebook" class="pt-1 d-block" target="FB"><img class="d-block img-fluid" src="/layout/bootstrap4/view/img/logo_fr.svg" alt="Le Nécrologue sur Facebook" loading="lazy"></a><p class="text-white">
+Nécrologie et commémoration des êtres chers sur le web</p>
+<div class="col-12 my-4 justify-content-center">
+<a href="https://www.facebook.com/lenecrologue/" title="Le Nécrologue sur Facebook" target="FB"><i class="fab fa-facebook-f d-inline mr-3 text-white fa-lg rounded-circle"></i></a></div>
+</div>
+<div class="col-md-3 p-4 text-lg-center text-left"></div>
+<div class="col-md-3 p-4">
+<ul class="list-unstyled">
+<li><a class="text-white d-block py-1" href="/fr/">Avis de décès</a></li><li><a class="text-white d-block py-1" href="/liste-d-envoi/inscription/">Alerte courriel</a></li><li><a class="text-white d-block py-1" href="/faq-fr/">FAQ</a></li><li><a class="text-white d-block py-1" href="https://blogue.lenecrologue.com" target="necroblog">Blogue</a></li></ul>
+</div>
+<div class="col-md-3 p-4">
+<ul class="list-unstyled">
+<li><a class="text-white d-block py-1" href="/a-propos/">À propos</a></li><li><a class="text-white d-block py-1" href="/contactez-nous/">Contactez-nous</a></li><li><a class="text-white d-block py-1" href="/annoncez-avec-nous/">Annoncez avec nous</a></li><li><a class="text-white d-block py-1" href="/politique-de-confidentialite/">Confidentialité</a></li></ul>
+</div>
+</nav>
+<div class="row">
+<div class="col-md-12 mt-1">
+<p class="text-center text-white small">
+© 2024 <a href="https://www.ixore.com" class="text-white">iXore</a> - Tous droits réservés.</p>
+</div>
+</div>
+</div>
+</footer>
+<link href="/layout/adapt/view/css/bt4_style_gen.css?1639686054" media="all" rel="stylesheet" importance="auto" type="text/css">
+<link href="/layout/adapt/view/css/bt4_style_gen_max768px.css?1641324711" media="screen and (max-width: 768px)" rel="stylesheet" importance="auto" type="text/css">
+<link href="/layout/adapt/view/css/bt4_style_gen_min769px.css?1639163029" media="screen and (min-width: 769px)" rel="stylesheet" importance="auto" type="text/css">
+<link href="/layout/adapt/view/css/bt4_style_gen_print.css?1618324149" media="print" rel="stylesheet" importance="auto" type="text/css">
+<link href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" media="all" rel="stylesheet" type="text/css">
+<script src="/layout/main/view/js/main.js?1569330237" async=""></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="/layout/bootstrap4/view/js/bootstrap.bundle.min.js?1618856357" async=""></script>
+<script src="/layout/adapt/view/js/adapt.js?1636752265" async=""></script>
+
+<script async="" src="https://s.yimg.com/ss/rapid3.js"></script></body></html>

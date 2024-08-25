@@ -1,0 +1,1572 @@
+<html class="js backgroundsize borderimage csstransitions fontface svg details progressbar meter mathml cors xlargeview" lang="en" dir="ltr"><head>
+<script src="https://justice.gc.ca/themes-dist/wet-boew/js/i18n/en.min.js"></script><script src="//assets.adobedtm.com/be5dfd287373/bb72b7edd313/launch-e34f760eaec8.min.js"></script><script src="https://assets.adobedtm.com/extensions/EPbde2f7ca14e540399dcc1f8208860b7b/AppMeasurement.min.js" async=""></script><script src="https://assets.adobedtm.com/extensions/EPbde2f7ca14e540399dcc1f8208860b7b/AppMeasurement_Module_ActivityMap.min.js" async=""></script><script>
+/*
+* Find most common Personal Identifiable Information (PII) in a string and return either the cleaned string either true/false
+* @param {string} str
+* @param {boolean} toClean
+* @return {string | true | false}
+* @example
+* findPotentialPII( "email:test@test.com, phone:123 123 1234", true )
+* returns "email:, phone:",
+* findPotentialPII( "email:test@test.com, phone:123 123 1234", false )
+* returns true
+*/
+findPotentialPII = function( str, toClean, bMarker ) {
+
+	if ( typeof str  !== "string" ) {
+		return false;
+	}
+	var regEx = [
+			[ /\d(?:[\s\-\\.\\/]?\d){8,}(?!\d)/ig, "[REDACTED/CAVIARDÉ]" ], //9digits or more pattern
+			[ /\b[A-Za-z]{2}[\s\\.-]*?\d{6}\b/ig, "[REDACTED/CAVIARDÉ]" ], //canadian nr passport pattern
+			[ /\b(?:[a-zA-Z0-9_\-\\.]+)(?:@|%40)(?:[a-zA-Z0-9_\-\\.]+)\.(?:[a-zA-Z]{2,5})\b/ig, "[REDACTED/CAVIARDÉ]" ], //email pattern
+			[ /\b[A-Za-z]\d[A-Za-z][ -]?\d[A-Za-z]\d\b/ig, "[REDACTED/CAVIARDÉ]" ], //postal code pattern
+			[ /\b(?:(username|user)[:=][a-zA-Z0-9_\-\\.]+)\b/ig, "[REDACTED/CAVIARDÉ]" ],
+			[ /\b(?:(password|pass)[:=][^\s#&]+)\b/ig, "[REDACTED/CAVIARDÉ]" ]
+		],
+		isFound = false;
+
+	for ( var arr in regEx ) {
+		if ( str.match( regEx[ arr ][ 0 ] ) ) {
+			isFound = true;
+			if ( toClean ) {
+				str = str.replaceAll( regEx[ arr ] [ 0 ], ( bMarker === true ? regEx[ arr ][ 1 ] : "" ) );
+			}
+		}
+	}
+
+	return toClean && isFound ? str : isFound;
+};
+
+// scrub only email/user/pass 
+// slash repaced with hyphen due to folder count in url
+urlPotentialPII = function( str, toClean, bMarker ) {
+
+	if ( typeof str  !== "string" ) {
+		return false;
+	}
+	var regEx = [
+			[ /\b(?:[a-zA-Z0-9_\-\\.]+)(?:@|%40)(?:[a-zA-Z0-9_\-\\.]+)\.(?:[a-zA-Z]{2,5})\b/ig, "[REDACTED-CAVIARDÉ]" ], //email pattern
+           	[ /\b(?:(username|user)[:=][a-zA-Z0-9_\-\\.]+)\b/ig, "[REDACTED-CAVIARDÉ]" ],
+			[ /\b(?:(password|pass)[:=][^\s#&]+)\b/ig, "[REDACTED-CAVIARDÉ]" ],
+            [ /\b(?:case[\s-]?number[\s\-\\.]?(?:\d{5,10}))|(?:numéro[\s-]?de[\s-]?cas[\s\-\\.]?(?:\d{5,10}))/ig, "[REDACTED/CAVIARDÉ]" ]
+		],
+		isFound = false;
+
+	for ( var arr in regEx ) {
+		if ( str.match( regEx[ arr ][ 0 ] ) ) {
+			isFound = true;
+			if ( toClean ) {
+				str = str.replaceAll( regEx[ arr ] [ 0 ], ( bMarker === true ? regEx[ arr ][ 1 ] : "" ) );
+			}
+		}
+	}
+
+	return toClean && isFound ? str : isFound;
+};
+</script><script>
+/*jshint maxerr: 100000, laxcomma: true */
+// whitelist/blacklist 
+
+/*
+ * Domain Whitelist and domain specific settings
+*/
+
+//make sure to update thisDomain with nulls!!!
+_satellite.gcCustom = {
+    domain_blacklist: ['/analytique-analytics/',
+            'checkingvisa.com',
+            '/naics/2017/v3/',
+  			'/gol-ged/awsc/amss/browser/check',
+  			'/gol-ged/awsc/amss/enrol/loginCheck',
+  			'/gol-ged/awsc/amss/enrol/logincheck',
+  			'beta.buyandsell.gc.ca/standing-offers-and-supply-arrangements-application/my-workspace/user-management/',
+  			'beta.achatsetventes.gc.ca/application-d-offres-a-commandes-et-d-arrangements-en-matiere-d-approvisionnement/mon-espace-travail/gestion-des-utilisateurs/',
+  			'gol-ecas-dev.ca.gc.ca/ecas/viewcasehistory.do',
+  			'services3.cic.gc.ca/ecas/viewcasehistory.do',
+  			'buyandsell.gc.ca/standing-offers-and-supply-arrangements-application/my-workspace/user-management/',
+  			'achatsetventes.gc.ca/application-d-offres-a-commandes-et-d-arrangements-en-matiere-d-approvisionnement/mon-espace-travail/gestion-des-utilisateurs/',
+            'buyandsell.gc.ca/procurement-data/search/manage-subscriptions',
+            'achatsetventes.gc.ca/donnees-sur-l-approvisionnement/search/gerez-le-service-d-avis',
+            'buyandsell.gc.ca/procurement-data/search/edit-tender-subscription',
+            'achatsetventes.gc.ca/donnees-sur-l-approvisionnement/search/modifier-les-abonnements-aux-appels-d-offres'
+                       
+],
+    protocol_blacklist: ['javascript:', 'mailto:', 'tel:', 'blob:', 'data:'],
+
+    /*Follow this syntax for adding items to the whitelist
+    Double check and confirm you are adding to the STAGE or LIVE whitelist
+    Double check spelling and syntax for errors
+    */
+    thisDomain: { AppName: null, LoginStatus: null },
+    domain_whitelist: {
+        stage: {
+          // '...' : {AppName : null, LoginStatus : null} /// adding a comment
+          // --- all items MUST inlcude a comma in order to append the next line item, except the last item does not require a comma
+          //Testing
+            'noc.esdc.gc.ca': { AppName: null, LoginStatus: null }, //testing
+          //Canada
+            'www.canada.ca': { AppName: null, LoginStatus: null }, //testing
+          //Health Canada
+            'food-guide-stage.hpfb-dgpsa.ca': { AppName: null, LoginStatus: null },
+            'guide-alimentaire-stage.hpfb-dgpsa.ca': { AppName: null, LoginStatus: null },
+            'prci-dev.jack.hc-sc.gc.ca': { AppName: null, LoginStatus: null },
+          //Canadian Space Agency
+            'devcorpo': { AppName: null, LoginStatus: null },
+            'appsqa.asc-csa.gc.ca': { AppName: null, LoginStatus: null },
+            'datatest.asc-csa.gc.ca': { AppName: null, LoginStatus: null },
+          //Public Safety Canada
+            'beta.infomedia.gc.ca': { AppName: null, LoginStatus: null },
+            'infomediadev': { AppName: null, LoginStatus: null },
+          //Women and Gender Equality Canada 
+            'intranettest': { AppName: null, LoginStatus: null },
+            'canada': { AppName: null, LoginStatus: null },
+            'dev1': { AppName: null, LoginStatus: null },
+          //Treasury Board Secretariat	        
+            'staging.atip-aiprp.tbs-sct.gc.ca': { AppName: null, LoginStatus: null },
+            'uat1.atip-aiprp.tbs-sct.gc.ca': { AppName: null, LoginStatus: null },
+            'uat.tbs-sct.gc.ca': { AppName: null, LoginStatus: null },
+            'uat2.atip-aiprp.tbs-sct.gc.ca': { AppName: null, LoginStatus: null },
+          //Public Services procurement Canada
+            'test.publications.gc.ca': { AppName: null, LoginStatus: null },
+            'test.buyandsell.gc.ca': { AppName: null, LoginStatus: null },
+            'test.achatsetventes.gc.ca': { AppName: null, LoginStatus: null },
+            'beta.buyandsell.gc.ca': { AppName: null, LoginStatus: null },
+            'beta.achatsetventes.gc.ca': { AppName: null, LoginStatus: null },
+            'webdev01.tpsgc-pwgsc.gc.ca': { AppName: null, LoginStatus: null },
+            'webdev02.tpsgc-pwgsc.gc.ca': { AppName: null, LoginStatus: null },
+            'webdev08.tpsgc-pwgsc.gc.ca': { AppName: null, LoginStatus: null },
+            'test-psjobs-emploisfp.psc-cfp.gc.ca': { AppName: null, LoginStatus: null },
+            'masource-mysource.shp.dev.global.gc.ca': { AppName: null, LoginStatus: null },
+            'www.gamma.buyandsell.gc.ca': { AppName: null, LoginStatus: null },
+            'gamma.buyandsell.gc.ca': { AppName: null, LoginStatus: null },
+            'gamma.achatsetventes.gc.ca': { AppName: null, LoginStatus: null },
+            'www.gamma.achatsetventes.gc.ca': { AppName: null, LoginStatus: null },
+          // Library Archives Canada
+			'dev-www.bac-lac.gc.ca': { AppName: null, LoginStatus: null },
+			'cipbookentry-d.dev.bac-lac.gc.ca': { AppName: null, LoginStatus: null },
+			'financement-funding.bac-lac.gc.ca': { AppName: null, LoginStatus: null },
+			'v41extcapps01-d.dev.bac-lac.gc.ca': { AppName: null, LoginStatus: null },
+			'tdg-grt.bac-lac.gc.ca': { AppName: null, LoginStatus: null },
+			'tdg-grt-d.dev.bac-lac.gc.ca': { AppName: null, LoginStatus: null },
+			'event.bac-lac.gc.ca': { AppName: null, LoginStatus: null },
+			'event-d.dev.bac-lac.gc.ca': { AppName: null, LoginStatus: null },
+			'canadiana-d.dev.bac-lac.gc.ca': { AppName: null, LoginStatus: null },
+			'sigles-symbols.bac-lac.gc.ca': { AppName: null, LoginStatus: null },
+			'sigles-symbols-d.bac-lac.gc.ca': { AppName: null, LoginStatus: null },
+			'webdev-srv.dev.bac-lac.gc.ca': { AppName: null, LoginStatus: null },
+			'webqa-srv01.qa.bac-lac.gc.ca': { AppName: null, LoginStatus: null },
+          //Employment Social Development Canada
+			'esin-sandbox.powerappsportals.com': { AppName: null, LoginStatus: null },
+			'srv2140-i2.services.gc.qat': { AppName: null, LoginStatus: null },
+			'srv2140-s.services.gc.qat': { AppName: null, LoginStatus: null },
+			'eservice-uat.powerappsportals.com': { AppName: null, LoginStatus: null },
+			'iidus-stdei-dev.powerappsportals.com': { AppName: null, LoginStatus: null },
+		 	'srv241-s2.lab.hrdc-drhc.gc.ca': { AppName: null, LoginStatus: null },
+            'www.uat.youth-digital-gateway.dev': { AppName: null, LoginStatus: null },
+            'www.youth-digital-gateway.dev': { AppName: null, LoginStatus: null },
+            'uat12-ssl.services.gc.qat': { AppName: null, LoginStatus: null },
+            'virtualassistant-main.bdm-dev.dts-stn.com': { AppName: null, LoginStatus: null }, 
+            'intradev16-i.intra.dev': { AppName: null, LoginStatus: null }, 
+          //Elections Canada
+			'ispdevwww.elections.ca': { AppName: null, LoginStatus: null },
+			'ec9wbedtpfpked': { AppName: null, LoginStatus: null },
+			'www.test.elections.ca': { AppName: null, LoginStatus: null },
+			'ecdevmaint-pesc.ecade.elections.ca': { AppName: null, LoginStatus: null },
+            'ec9wbeddpfpisp.elections.ca': { AppName: null, LoginStatus: null },
+            'visdev.elections.ca': { AppName: null, LoginStatus: null },
+            'enr-uat.elections.ca': { AppName: null, LoginStatus: null },
+            'rspispweb01-ste-demo1.elections.ca': { AppName: null, LoginStatus: null },
+          //Superintendent of Financial Institutions Canada
+			'uatirppub.osfi-bsif.gc.ca': { AppName: null, LoginStatus: null },
+			'uatirppub.devosfi.ca': { AppName: null, LoginStatus: null },
+          //Agriculture and Agri-Food Canada 
+			//'canadabrandgocaccess.agr.gc.ca': { AppName: null, LoginStatus: null },
+			//'marquecanadabrand.agr.gc.ca': { AppName: null, LoginStatus: null },
+			//'brandcanada.agr.gc.ca': { AppName: null, LoginStatus: null },
+          //Canadian Food Inspection Agency
+			'inspection.gc.ca': { AppName: null, LoginStatus: null },
+			'merlin.cfia-acia.inspection.gc.ca': { AppName: null, LoginStatus: null },
+			'inspection.canada.ca': { AppName: null, LoginStatus: null },
+          //Canada Revenue Agency
+			'cp-ut.isvcs.net': { AppName: null, LoginStatus: null },
+			'apps-ut.isvcs.net': { AppName: null, LoginStatus: null },
+          //Immigration, Refugees and Citizenship Canada 
+			'eservices5.ci.gc.ca': { AppName: null, LoginStatus: null },
+            'eservices1.ci.gc.ca': { AppName: null, LoginStatus: null },
+            'njes1s6362.apps.ci.gc.ca': { AppName: null, LoginStatus: null },
+            'web.passport-online-staging.apps.cic.gc.ca': { AppName: null, LoginStatus: null }, //testing
+            'web.passeport-enligne-staging.apps.cic.gc.ca': { AppName: null, LoginStatus: null },
+            'web.passport-online-development.apps.cic.gc.ca': { AppName: null, LoginStatus: null },
+            'web.passeport-enligne-developmente.apps.cic.gc.ca': { AppName: null, LoginStatus: null },
+          //Global Affairs Canada
+			'www.educanada.ca': { AppName: null, LoginStatus: null },
+			'www.international.gc.ca': { AppName: null, LoginStatus: null },
+			'international.gc.ca': { AppName: null, LoginStatus: null },
+			'www.tradecommissioner.gc.ca': { AppName: null, LoginStatus: null },
+			'tradecommissioner.gc.ca': { AppName: null, LoginStatus: null },
+			'www.deleguescommerciaux.gc.ca': { AppName: null, LoginStatus: null },
+			'deleguescommerciaux.gc.ca': { AppName: null, LoginStatus: null },
+			'core-ombuds.canada.ca': { AppName: null, LoginStatus: null },
+			'www.travel.gc.ca': { AppName: null, LoginStatus: null },
+			'travel.gc.ca': { AppName: null, LoginStatus: null },
+			'www.voyage.gc.ca': { AppName: null, LoginStatus: null },
+			'voyage.gc.ca': { AppName: null, LoginStatus: null },
+          //Justice Canada
+            'www-uat.victimsweek.gc.ca': { AppName: null, LoginStatus: null },
+            'www-uat.semainedesvictimes.gc.ca': { AppName: null, LoginStatus: null },
+            'jusnet-uat.justice.gc.ca': { AppName: null, LoginStatus: null }, 
+            'www-uat.justice.gc.ca': { AppName: null, LoginStatus: null },
+            'dmteam-uat.justice.gc.ca': { AppName: null, LoginStatus: null },
+            'equipesm-uat.justice.gc.ca': { AppName: null, LoginStatus: null },
+            'limsdev.justice.gc.ca': { AppName: null, LoginStatus: null },
+            'www-uat.victimsfirst.gc.ca': { AppName: null, LoginStatus: null },
+            'www-uat.victimesdabord.gc.ca': { AppName: null, LoginStatus: null },
+          //Infrastructure Canada
+            'internet-dev.ad.infrastructure.gc.ca': { AppName: null, LoginStatus: null },
+            'infranet-dev.ad.infrastructure.gc.ca': { AppName: null, LoginStatus: null },
+          //Office of the Procurement Ombudsman 
+            'xterra3w2k16.dev.ad.itsso-ospti.gc.ca': { AppName: null, LoginStatus: null },
+            'dev.boa-opo.gc.ca': { AppName: null, LoginStatus: null },
+            'www.dev.boa-opo.gc.ca': { AppName: null, LoginStatus: null },
+          
+        },
+        live: {
+        //'...' : {AppName : null, LoginStatus : null}
+          //Employment Social Development Canada
+			//'sin-nas.canada.ca': { AppName: null, LoginStatus: null },
+            'srv136.services.gc.ca': { AppName: null, LoginStatus: null },
+            'www.noc.esdc.gc.ca': { AppName: null, LoginStatus: null },
+            'noc.esdc.gc.ca': { AppName: null, LoginStatus: null },
+            'youth-jeunesse.service.canada.ca': { AppName: null, LoginStatus: null },
+            'www.youth-jeunesse.service.canada.ca': { AppName: null, LoginStatus: null },
+            'jeunesse.service.canada.ca': { AppName: null, LoginStatus: null },
+            'www.jeunesse.service.canada.ca': { AppName: null, LoginStatus: null },
+          //Canadian Space Agency
+			'asc-csa.gc.ca': { AppName: null, LoginStatus: null },
+			'www.asc-csa.gc.ca': { AppName: null, LoginStatus: null },
+			'csa-asc.gc.ca': { AppName: null, LoginStatus: null },
+			'www.csa-asc.gc.ca': { AppName: null, LoginStatus: null },
+            'www4.asc-csa.gc.ca': { AppName: null, LoginStatus: null },
+            'donnees-data.asc-csa.gc.ca': { AppName: null, LoginStatus: null },
+          //Agriculture and Agri-Food Canada 
+			//'www.canadabrand.agr.gc.ca': { AppName: null, LoginStatus: null },
+			//'canadabrand.agr.gc.ca': { AppName: null, LoginStatus: null },
+			//'www.marquecanadabrand.agr.gc.ca': { AppName: null, LoginStatus: null },
+			//'marquecanadabrand.agr.gc.ca': { AppName: null, LoginStatus: null },
+			//'www.brandcanada.agr.gc.ca': { AppName: null, LoginStatus: null },
+			//'brandcanada.agr.gc.ca': { AppName: null, LoginStatus: null },
+          //Treasury Board Secretariat	        
+			'www.tbs-sct.gc.ca': { AppName: null, LoginStatus: null },
+			'atip-aiprp.tbs-sct.gc.ca': { AppName: null, LoginStatus: null },
+          //Global Affairs Canada
+            'www.educanada.ca': { AppName: null, LoginStatus: null },
+            'educanada.ca': { AppName: null, LoginStatus: null },
+            'www.tradecommissioner.gc.ca': { AppName: null, LoginStatus: null },
+            'tradecommissioner.gc.ca': { AppName: null, LoginStatus: null },
+            'www.deleguescommerciaux.gc.ca': { AppName: null, LoginStatus: null },
+            'deleguescommerciaux.gc.ca': { AppName: null, LoginStatus: null },
+            'www.international.gc.ca': { AppName: null, LoginStatus: null },
+            'international.gc.ca': { AppName: null, LoginStatus: null },
+            'www.travel.gc.ca': { AppName: null, LoginStatus: null },
+            'travel.gc.ca': { AppName: null, LoginStatus: null },
+            'www.voyage.gc.ca': { AppName: null, LoginStatus: null },
+            'voyage.gc.ca': { AppName: null, LoginStatus: null },
+            'www.core-ombuds.canada.ca': { AppName: null, LoginStatus: null },
+            'core-ombuds.canada.ca': { AppName: null, LoginStatus: null },
+          // Library Archives Canada
+            'www.bac-lac.gc.ca': { AppName: null, LoginStatus: null },
+            'bac-lac.gc.ca': { AppName: null, LoginStatus: null },
+            'www.lac-bac.gc.ca': { AppName: null, LoginStatus: null },
+            'lac-bac.gc.ca': { AppName: null, LoginStatus: null },
+            'www.cipbookentry.bac-lac.gc.ca': { AppName: null, LoginStatus: null },
+            'cipbookentry.bac-lac.gc.ca': { AppName: null, LoginStatus: null },
+            'www.sigles-symbols.bac-lac.gc.ca': { AppName: null, LoginStatus: null },
+            'sigles-symbols.bac-lac.gc.ca': { AppName: null, LoginStatus: null },
+            'www.event.bac-lac.gc.ca': { AppName: null, LoginStatus: null },
+            'event.bac-lac.gc.ca': { AppName: null, LoginStatus: null },
+            'www.marc21.ca': { AppName: null, LoginStatus: null },
+            'www.financement-funding.bac-lac.gc.ca': { AppName: null, LoginStatus: null },
+            'financement-funding.bac-lac.gc.ca': { AppName: null, LoginStatus: null },
+            'www.tdg-grt.bac-lac.gc.ca': { AppName: null, LoginStatus: null },
+            'tdg-grt.bac-lac.gc.ca': { AppName: null, LoginStatus: null },
+          //Elections Canada
+			'www.elections.ca': { AppName: null, LoginStatus: null },
+			'elections.ca': { AppName: null, LoginStatus: null },
+            'secure.elections.ca': { AppName: null, LoginStatus: null },
+            'enr.elections.ca': { AppName: null, LoginStatus: null },
+            'www.cef-cce.ca': { AppName: null, LoginStatus: null },
+            'cef-cce.ca': { AppName: null, LoginStatus: null },
+            'ereg.elections.ca': { AppName: null, LoginStatus: null },
+            'csep-pesc.elections.ca': { AppName: null, LoginStatus: null },
+            'www.redecoupage-redistribution-2022.ca': { AppName: null, LoginStatus: null },
+            'redecoupage-redistribution-2022.ca': { AppName: null, LoginStatus: null },
+          //Public Services procurement Canada                    
+			'www.tpsgc-pwgsc.gc.ca': { AppName: null, LoginStatus: null },
+			'www.publications.gc.ca': { AppName: null, LoginStatus: null },
+			'publications.gc.ca': { AppName: null, LoginStatus: null },
+			'buyandsell.gc.ca': { AppName: null, LoginStatus: null },
+			'achatsetventes.gc.ca': { AppName: null, LoginStatus: null },
+            'intranet.tpsgc-pwgsc.gc.ca': { AppName: null, LoginStatus: null },
+            'masource-mysource.spac-pspc.gc.ca': { AppName: null, LoginStatus: null },
+            'gcintranet.tpsgc-pwgsc.gc.ca': { AppName: null, LoginStatus: null },
+          //Public Service Commission of Canada
+			//'emploisfp-psjobs.cfp-psc.gc.ca': { AppName: null, LoginStatus: null },
+          //Superintendent of Financial Institutions Canada
+            'www.osfi-bsif.gc.ca': { AppName: null, LoginStatus: null },
+          //Health Canada
+            'food-guide.canada.ca': { AppName: null, LoginStatus: null },
+            'guide-alimentaire.canada.ca': { AppName: null, LoginStatus: null },
+            'clinical-information.canada.ca': { AppName: null, LoginStatus: null },
+            'renseignements-cliniques.canada.ca': { AppName: null, LoginStatus: null },
+          //Women and Gender Equality Canada 
+            'femmes-egalite-genres.canada.ca': { AppName: null, LoginStatus: null },
+            'women-gender-equality.canada.ca': { AppName: null, LoginStatus: null },
+            'intranet.fegc-wage.gc.ca': { AppName: null, LoginStatus: null },
+          //Justice Canada 
+            'justice.gc.ca': { AppName: null, LoginStatus: null },  
+            'www.justice.gc.ca': { AppName: null, LoginStatus: null },
+            'dmteam.justice.gc.ca': { AppName: null, LoginStatus: null },
+            'laws.justice.gc.ca': { AppName: null, LoginStatus: null },
+            'lois.justice.gc.ca': { AppName: null, LoginStatus: null },
+            'laws-lois.justice.gc.ca': { AppName: null, LoginStatus: null },
+            'lois-laws.justice.gc.ca': { AppName: null, LoginStatus: null },
+            'jusnet.justice.gc.ca': { AppName: null, LoginStatus: null },
+            'victimsweek.gc.ca': { AppName: null, LoginStatus: null },
+            'semainedesvictimes.gc.ca': { AppName: null, LoginStatus: null },
+            'www.victimsweek.gc.ca': { AppName: null, LoginStatus: null },
+            'www.semainedesvictimes.gc.ca': { AppName: null, LoginStatus: null },
+            'www.victimsfirst.gc.ca': { AppName: null, LoginStatus: null },
+            'www.victimesdabord.gc.ca': { AppName: null, LoginStatus: null },
+            'victimsfirst.gc.ca': { AppName: null, LoginStatus: null },
+            'victimesdabord.gc.ca': { AppName: null, LoginStatus: null },
+            'equipesm.justice.gc.ca': { AppName: null, LoginStatus: null },
+          //Immigration, Refugees and Citizenship Canada 
+            'atip-aiprp.apps.gc.ca': { AppName: null, LoginStatus: null },
+          //Canadian Food Inspection Canada
+            'inspection.canada.ca': { AppName: null, LoginStatus: null },
+            'inspection.gc.ca': { AppName: null, LoginStatus: null },
+            'merlin.cfia-acia.inspection.gc.ca': { AppName: null, LoginStatus: null },
+          //Infrastructure Canada
+            'www.infrastructure.gc.ca': { AppName: null, LoginStatus: null },
+            'infranet.ad.infrastructure.gc.ca': { AppName: null, LoginStatus: null },
+
+        },
+
+  },
+ internal_filters : [
+ //this is used for outbound link tracking
+    //CANADA.CA (AEM)	
+		,'iv.apps.canada.ca' // Booking Tool Prod
+		,'v.apps.canada.ca' // Booking Tool Prod
+		,'gcbooking.adobecqms.net' //Booking Tool
+		,'universallabs.org' 
+		,'dev1.canada.ca'
+		,'dev3.canada.ca'
+		,'www1.canada.ca' 
+		,'canada.ca' 
+		,'www.canada.ca' 
+		,'canada-aem-s3-stage.adobecqms.net'
+		,'staging-recherche.gc.ca' // Search
+		,'recherche.gc.ca' 
+		,'recherche-search.gc.ca' 
+		,'search.gc.ca' 
+		,'search-recherche.gc.ca'
+		,'www.recherche.gc.ca' 
+		,'www.recherche-search.gc.ca' 
+		,'www.search.gc.ca' 
+		,'www.search-recherche.gc.ca' 
+		,'canada-service-corps.canada.ca' // PM Service Corps
+		,'service-jeunesse.canada.ca' 
+	// Library and Archives
+		,'bac-lac.gc.ca'
+		,'lac-bac.gc.ca'
+		,'www.bac-lac.gc.ca'
+		,'www.lac-bac.gc.ca'
+		,'canadiana-qa.dev.bac-lac.gc.ca'
+		,'central.bac-lac.gc.ca'
+		,'central-d.dev.bac-lac.gc.ca'
+		,'webdev-srv.dev.bac-lac.gc.ca'
+		,'webqa-srv01.qa.bac-lac.gc.ca'
+		,'ucc-qa'
+		,'v41extweb01-d.services.bac-lac.gc.ca'
+		,'canadiana.bac-lac.gc.ca'
+		,'www.canadiana.bac-lac.gc.ca' 
+		,'cipbookentry.bac-lac.gc.ca' 
+		,'cipbookentry-qa.dev.bac-lac.gc.ca'
+		,'www.cipbookentry.bac-lac.gc.ca' 
+		,'co-lab.bac-lac.gc.ca' 
+		,'www.co-lab.bac-lac.gc.ca' 
+		,'sigles-symbols-qa.bac-lac.gc.ca'
+		,'sigles-symbols.bac-lac.gc.ca' 
+		,'www.sigles-symbols.bac-lac.gc.ca' 
+		,'event-qa'
+		,'event.bac-lac.gc.ca' 
+		,'www.event.bac-lac.gc.ca' 
+		,'nouvelle-france.org' 
+		,'www.collectionscanada.gc.ca'
+		,'cipbookentry-d.dev.bac-lac.gc.ca'
+		,'v41extcapps01-d.dev.bac-lac.gc.ca'
+		,'tdg-grt-d.dev.bac-lac.gc.ca'
+		,'event-d.dev.bac-lac.gc.ca'
+		,'canadiana-d.dev.bac-lac.gc.ca'
+		,'sigles-symbols-d.bac-lac.gc.ca'
+		,'dev-www.bac-lac.gc.ca'
+		,'financement-funding.bac-lac.gc.ca'
+		,'tdg-grt.bac-lac.gc.ca'
+		,'event.bac-lac.gc.ca'
+		,'sigles-symbols.bac-lac.gc.ca'
+		,'webdev-srv.dev.bac-lac.gc.ca'
+		,'webqa-srv01.qa.bac-lac.gc.ca'
+		,'cipbookentry.bac-lac.gc.ca'
+		,'www.marc21.ca'
+	// Impact Assessment Agency of Canada
+		,'acee.gc.ca' // Old domain (CEAA)	
+		,'acee-ceaa.gc.ca' 
+		,'www.acee.gc.ca' 
+		,'www.acee-ceaa.gc.ca' 
+		,'ceaa.dev.ec.gc.ca' 
+		,'ceaa.gc.ca' 
+		,'ceaa-acee.gc.ca' 
+		,'www.ceaa.gc.ca' 
+		,'www.ceaa-acee.gc.ca' 
+		,'ceaa.qa.ncr.ec.gc.ca'
+		,'www.iaac-acei.gc.ca' // New domain (IAAC)
+		,'iaac-acei.gc.ca'
+		,'www.acei-iaac.gc.ca'
+		,'acei-iaac.gc.ca'
+		,'www.iaac.gc.ca'
+		,'iaac.gc.ca'
+		,'www.acei.gc.ca'
+		,'acei.gc.ca'
+		,'www.iaac-aeic.gc.ca'
+		,'iaac-aeic.gc.ca'
+		,'www.aeic-iaac.gc.ca'
+		,'aeic-iaac.gc.ca'
+		,'www.aeic.gc.ca'
+		,'aeic.gc.ca'
+		,'elearning.iaac-aeic.gc.ca'
+		,'apprentissage-en-ligne.aeic-iaac.gc.ca'
+    // Agriculture and Agri-Food Canada
+		,'www.agr.gc.ca' 
+		,'agr.gc.ca' 
+		,'www-dev.agr.gc.ca' 
+		,'intranet.agr.gc.ca'
+		,'www-tst.agr.gc.ca'
+		//,'canadabrandgocaccess.agr.gc.ca'
+		//,'canadabrandgocaccess.agr.gc.ca'	
+		//,'www.canadabrand.agr.gc.ca'	
+		//,'canadabrand.agr.gc.ca'	
+		//,'brandcanada.agr.gc.ca'	
+		//,'www.brandcanada.agr.gc.ca'	
+		//,'marquecanadabrand.agr.gc.ca'	
+		//,'www.marquecanadabrand.agr.gc.ca'
+		,'agriculture.agr.gc.ca'
+		,'agriculture.canada.ca'
+		,'www.agriculture.canada.ca'
+    // Treasury Board Secretariat	
+		,'atip-aiprp.tbs-sct.gc.ca' 
+		,'uat.atip-aiprp.tbs-sct.gc.ca' 
+		,'pre-prod.atip-aiprp.tbs-sct.gc.ca' 
+		,'authoring.publiservice.tbs-sct.gc.ca' 
+		,'authoring.www.tbs-sct.gc.ca'
+		,'staging.open.canada.ca'
+		,'search-staging.open.canada.ca'
+		,'open.canada.ca'
+		,'search.open.canada.ca'
+		,'ouvert.canada.ca'
+		,'rechercher.ouvert.canada.ca'
+		,'staging.atip-aiprp.tbs-sct.gc.ca'
+		,'uat1.atip-aiprp.tbs-sct.gc.ca'
+		,'uat.tbs-sct.gc.ca'
+		,'www.tbs-sct.gc.ca'
+		,'dev.tbs-sct.gc.ca'
+        ,'uat2.atip-aiprp.tbs-sct.gc.ca'
+    // Statistics Canada
+		,'statistics.canada.ca'
+		,'statistique.canada.ca'	
+		,'www.statcan.gc.ca'
+		,'www5.statcan.gc.ca'
+		,'www12.statcan.gc.ca'
+		,'www23.statcan.gc.ca'
+		,'www35.statcan.gc.ca'
+		,'www65.statcan.gc.ca'
+		,'www66.statcan.gc.ca'
+		,'www76.statcan.gc.ca'
+		,'www120.statcan.gc.ca'
+		,'www144.statcan.gc.ca'
+		,'www150.statcan.gc.ca'
+		,'information-energie.canada.ca'
+		,'information-energie.statcan.gc.ca'
+		,'energy-information.canada.ca'
+		,'census.gc.ca'
+		,'recensement.gc.ca'
+		,'geosuite.statcan.gc.ca'
+		,'geoprod.statcan.gc.ca'
+		,'wpaz-ofm12c-ssl-i.services.gc.qat'
+		,'www5testb.statcan.gc.ca'
+		,'srv113-i.lab.hrdc-drhc.gc.ca'
+		,'src-dev13.wcms.statcan.ca'
+		,'codweb1.stcpaz.statcan.gc.ca'
+		,'codweb2.stcpaz.statcan.gc.ca'
+		,'stc-ndm-qa-pc2.statcan.gc.ca'
+		,'stc-ndm-qa-pc2.statcan.gc.ca'
+		,'prod-p-es-fusion01.stcpaz.statcan.gc.ca'
+		,'census-qa.statcan.gc.ca'
+		,'recensement-qa.statcan.gc.ca'
+		,'qa-p-es-ui01.stcpaz.statcan.gc.ca'
+		,'dv-vd-sprint1.test.cloud.statcan.ca'
+		,'www.dv-vd-sprint1.test.cloud.statcan.ca'
+		,'wwwqa.statcan.gc.ca'
+		,'www76qa.statcan.gc.ca'
+		,'geodepot.statcan.gc.ca'
+		,'geodepot.statcan.ca'
+		,'portal.covid.cloud.statcan.ca'          
+		,'analytics-platform.statcan.gc.ca'   
+		,'oc-dev.covid.cloud.statcan.ca'   
+		,'web2-test1.wcms.statcan.ca'
+ 		,'daaas-dev.covid.cloud.statcan.ca'
+		,'oc-dev.covid.cloud.statcan.ca'
+	// Employment Social Developmet Canada
+		,'disclosure.esdc.gc.ca' 
+		,'disclosure.servicecanada.gc.ca' 
+		,'www.canadabenefits.gc.ca' 
+		,'www.canadabenefits.gc.ca' 
+		,'wpaz-ofm12c-ssl-i.services.gc.qat' 
+		,'wpaz-ofm-i.sade-edap.prv' 
+		,'wpaz-ofm-i-e-esdc.services.gc.qat' 
+		,'prestationsducanada.gc.ca' 
+		,'www.prestationsducanada.gc.ca' 
+		,'negotech.labour.gc.ca'
+		,'negotheque.travail.gc.ca'
+		,'mlapesd3963v-s2tst-negotech.intra.dev'
+		,'cv19benefits-appservice-staging.azurewebsites.net'
+		,'cv19benefits-appservice-dev.azurewebsites.net'
+		,'covid-benefits.alpha.canada.ca'
+		,'covid-prestations.alpha.canada.ca'
+		,'woodpecker.eastus.cloudapp.azure.com'
+		,'multi-benefits.servicecanada.gc.ca' //CERB DFO
+		,'multi-benefices.servicecanada.gc.ca' //CERB DFO
+		,'pesdc.prv'
+		,'esin-sandbox.powerappsportals.com'	
+		,'srv2140-i2.services.gc.qat'	
+		,'srv2140-s.services.gc.qat'
+		,'sin-nas.canada.ca'
+		,'eservice-uat.powerappsportals.com'
+		,'iidus-stdei-dev.powerappsportals.com'
+		,'srv241-s2.lab.hrdc-drhc.gc.ca'
+		,'srv136.services.gc.ca'
+		,'alphasite.dts-stn.com'
+		,'vc-frontend-static-juane.netlify.app'
+		,'www.uat.youth-digital-gateway.dev'
+		,'www.youth-digital-gateway.dev'
+		,'www.youth.service.canada.ca'
+		,'uat12-ssl.services.gc.qat'
+        ,'virtualassistant-main.bdm-dev.dts-stn.com'
+        ,'www.noc.esdc.gc.ca'
+        ,'noc.esdc.gc.ca'
+        ,'youth-jeunesse.service.canada.ca'
+        ,'www.youth-jeunesse.service.canada.ca'
+        ,'jeunesse.service.canada.ca'
+        ,'www.jeunesse.service.canada.ca'
+        ,'intradev16-i.intra.dev'
+	// Elections
+		,'ec9wbstepfpkedu' 
+		,'elections.ca' 
+		,'www.elections.ca' 
+		,'enr.elections.ca' 
+		,'www.test.elections.ca'
+		,'enr.uat.elections.ca'		
+		,'enr.test.elections.ca'
+		,'ereg.elections.ca' 
+		,'www.ereg.elections.ca' 
+		,'ispdevwww.elections.ca' 
+		,'secure.elections.ca' 
+		,'secure.test.elections.ca' 
+		,'rspispweb01-ste-demo1.elections.ca'
+		,'ereg.test.elections.ca'
+		,'ereg.elections.ca'
+		,'www.ereg.elections.ca'
+		,'ecdev_maint-pesc.ecade.elections.ca'
+		,'www.ecdev_maint-pesc.ecade.elections.ca'
+		,'cef-cce.ca'
+		,'www.cef-cce.ca'
+		,'ispdevwww.elections.ca'
+		,'ec9wbedtpfpked'
+		,'ecdevmaint-pesc.ecade.elections.ca'
+		,'ec9wbeddpfpisp.elections.ca'
+		,'visdev.elections.ca'
+		,'enr-dev.elections.ca'
+		,'rspispweb01-ste-demo1.elections.ca'
+        ,'csep-pesc.elections.ca'
+        ,'redecoupage-redistribution-2022.ca'
+        ,'www.redecoupage-redistribution-2022.ca'
+	// Natural Resources Canada
+		,'equalby30.org' 
+		,'www.equalby30.org' 
+		,'nrcan.gc.ca' 
+		,'www.nrcan.gc.ca' 
+		,'rncan.gc.ca' 
+		,'www.rncan.gc.ca' 
+		,'rncanengagenrcan.ca' 
+		,'www.rncanengagenrcan.ca' 
+		,'www.rncanengagenrcan.ca' 
+		,'test.nrcan.gc.ca' 
+		,'test.rncan.gc.ca' 
+		,'www.test.nrcan.gc.ca' 
+		,'www.test.rncan.gc.ca' 
+		,'minescanada.ca'
+		,'www.minescanada.ca'
+		,'globe-cem-mi.yourballistic.com'
+		,'esrfunds.org'
+		,'www.esrfunds.org'
+		,'www.fondsee.org'
+		,'fondsee.org'	
+		,'www.npa.gc.ca'	
+		,'npa.gc.ca'	
+		,'www.apn.gc.ca'	
+		,'www.mpmo.gc.ca'	
+		,'www.bggp.gc.ca'	
+		,'www.apap.gc.ca'	
+		,'www.paap.gc.ca'
+		,'cem-mi-vancouver2019.ca'
+		,'www.cem-mi-vancouver2019.ca'
+		,'cmep-mi-vancouver2019.ca'
+		,'apap.gc.ca'
+		,'paap.gc.ca'
+		,'www.esrfunds.org'
+		,'www.fondsee.org'
+		,'mpmo.gc.ca'
+		,'bggp.gc.ca'
+		,'npa.gc.ca'
+		,'apn.gc.ca'
+		,'natural-resources.canada.ca' //new canada.ca subdomainsdomain
+		,'ressources-naturelles.canada.ca' //new canada.ca subdomain
+		,'nrcan.canada.ca' //new canada.ca subdomain
+		,'rncan.canada.ca' //new canada.ca subdomain
+		,'nrcan-rncan.canada.ca' //new canada.ca subdomain
+		,'rncan-nrcan.canada.ca' //new canada.ca subdomain
+		,'osdp-cumulative-effects-stage.canada.ca'
+		,'psdo-effets-cumulatifs-stage.canada.ca'
+		,'qa.dev.osdp.aws.nrcan-rncan.cloud'
+		,'osdp-cumulative-effects.canada.ca'
+		,'psdo-effets-cumulatifs.canada.ca'
+		,'www.dev.nrcan.gc.ca'
+		,'dev.nrcan.gc.ca'
+		,'www.dev.rncan.gc.ca'
+		,'dev.rncan.gc.ca' 
+		,'dev.npa.gc.ca'
+		,'dev.esrfunds.org'
+		,'dev.mpmo.gc.ca'
+		,'dev.apn.gc.ca'
+		,'dev.fondsee.org'
+		,'dev.bggp.gc.ca'
+		,'osdp-psdo.canada.ca'
+		,'stg-osdp-psdo.canada.ca'
+		,'uat-osdp-psdo.canada.ca'
+		,'qa.pst.osdp.aws.nrcan-rncan.cloud'
+	// Office of the procurement ombudsman
+		,'opo-boa.gc.ca' 
+		,'dev.boa-opo.gc.ca'
+        ,'www.dev.boa-opo.gc.ca'
+		,'xterra3w2k16.ncr.pwgsc.gc.ca'
+		,'secure.opo-boa.gc.ca'
+        ,'xterra3w2k16.dev.ad.itsso-ospti.gc.ca'
+	// MSCA-MEIIO
+		,'srv113-i.lab.hrdc-drhc.gc.ca' 
+		,'srv113-u.lab.hrdc-drhc.gc.ca' 
+		,'srv136.services.gc.ca' 
+		,'srv2140-u.services.gc.qat' 
+		,'srv241-s2.lab.hrdc-drhc.gc.ca' 
+	// Transport Canada
+		,'transport-dev' 
+	// Health Canada
+		,'a8047055' 
+		,'cfgtest.canadacentral.cloudapp.azure.com' //food guide
+		,'vmportaltest.canadacentral.cloudapp.azure.com'
+		,'prcitestfr.canadacentral.cloudapp.azure.com'
+		,'food-guide.canada.ca'
+		,'www.food-guide.canada.ca'
+		,'www.guide-alimentaire.canada.ca'
+		,'guide-alimentaire.canada.ca'
+		,'clinical-information.canada.ca'
+		,'renseignements-cliniques.canada.ca'
+		,'cfg-qa.hres.ca'
+		,'cfg-stage.hres.ca'
+		,'food-guide-stage.hpfb-dgpsa.ca'
+		,'guide-alimentaire-stage.hpfb-dgpsa.ca'
+		,'prci-dev.jack.hc-sc.gc.ca'
+	// Immigration Refugee Canada
+		,'www.cic.gc.ca'
+		,'cic.gc.ca'
+		,'eservices1.ci.gc.ca'
+		,'gol-ecas-dev.ci.gc.ca'
+		,'www-dev.ic.gc.ca'
+		,'eservices.cic.gc.ca'
+		,'services3.cic.gc.ca'
+		,'eservices5.ci.gc.ca'
+        ,'eservices1.ci.gc.ca'
+        ,'web.passport-online-staging.apps.cic.gc.ca'
+        ,'web.passeport-enligne-staging.apps.cic.gc.ca'
+        ,'web.passport-online-development.apps.cic.gc.ca'
+        ,'web.passeport-enligne-developmente.apps.cic.gc.ca'
+        ,'njes1s6362.apps.ci.gc.ca'
+        ,'atip-aiprp.apps.gc.ca'
+		,'ircc.canada.ca'
+	// Canada Revenue Agency
+		,'cra-arc.gc.ca'
+		,'arc-cra.gc.ca'
+		,'cra.gc.ca'
+		,'arc.gc.ca'
+		,'www.cra-arc.gc.ca'
+		,'www.arc-cra.gc.ca'
+		,'www.cra.gc.ca'
+		,'www.arc.gc.ca'
+		,'apps.cra-arc.gc.ca'
+		//CRA UT
+		,'cp-ut.isvcs.net'
+		,'rp-ut.isvcs.net'
+		,'cp-ut2.isvcs.net'
+		,'rp-ut2.isvcs.net'
+		//CRA SI
+		,'ams-sga-si.cra-arc.gc.ca'
+		,'cms-sgj-si.cra-arc.gc.ca'
+		,'ams-sga-si2.cra-arc.gc.ca'
+		,'cms-sgj-si2.cra-arc.gc.ca'
+		//CRA UA
+		,'ams-sga-ua.cra-arc.gc.ca'
+		,'cms-sgj-ua.cra-arc.gc.ca'
+		,'ams-sga-ua2.cra-arc.gc.ca'
+		,'cms-sgj-ua2.cra-arc.gc.ca'
+		//CRA OT	
+		,'apps1.ams-sga-ot.cra-arc.gc.ca'
+		,'apps2.ams-sga-ot.cra-arc.gc.ca'
+		,'apps3.ams-sga-ot.cra-arc.gc.ca'
+		,'apps4.ams-sga-ot.cra-arc.gc.ca'
+		,'apps5.ams-sga-ot.cra-arc.gc.ca'
+		,'apps6.ams-sga-ot.cra-arc.gc.ca'
+		,'apps7.ams-sga-ot.cra-arc.gc.ca'
+		,'apps8.ams-sga-ot.cra-arc.gc.ca'
+		,'cms-sgj-ot.cra-arc.gc.ca'
+		,'apps1.ams-sga-ot2.cra-arc.gc.ca'
+		,'apps2.ams-sga-ot2.cra-arc.gc.ca'
+		,'apps3.ams-sga-ot2.cra-arc.gc.ca'
+		,'apps4.ams-sga-ot2.cra-arc.gc.ca'
+		,'apps5.ams-sga-ot2.cra-arc.gc.ca'
+		,'apps6.ams-sga-ot2.cra-arc.gc.ca'
+		,'apps7.ams-sga-ot2.cra-arc.gc.ca'
+		,'apps8.ams-sga-ot2.cra-arc.gc.ca'
+		,'cms-sgj-ot2.cra-arc.gc.ca'
+		,'ams-sga.cra-arc.gc.ca'
+		,'cms-sgj.cra-arc.gc.ca'
+		,'apps1.ams-sga.cra-arc.gc.ca'
+		,'apps2.ams-sga.cra-arc.gc.ca'
+		,'apps3.ams-sga.cra-arc.gc.ca'
+		,'apps4.ams-sga.cra-arc.gc.ca'
+		,'apps5.ams-sga.cra-arc.gc.ca'
+		,'apps6.ams-sga.cra-arc.gc.ca'
+		,'apps7.ams-sga.cra-arc.gc.ca'
+		,'apps8.ams-sga.cra-arc.gc.ca'
+		,'www.ams-sga.cra-arc.gc.ca'
+		,'www.cms-sgj.cra-arc.gc.ca'
+		,'www.apps1.ams-sga.cra-arc.gc.ca'
+		,'www.apps2.ams-sga.cra-arc.gc.ca'
+		,'www.apps3.ams-sga.cra-arc.gc.ca'
+		,'www.apps4.ams-sga.cra-arc.gc.ca'
+		,'www.apps5.ams-sga.cra-arc.gc.ca'
+		,'www.apps6.ams-sga.cra-arc.gc.ca'
+		,'www.apps7.ams-sga.cra-arc.gc.ca'
+		,'www.apps8.ams-sga.cra-arc.gc.ca'
+		,'apps-ut.cra-arc.gc.ca'
+		,'apps-ua.cra-arc.gc.ca' 
+		,'apps-ut.isvcs.net'
+		,'apps-ua.isvcs.net'
+		,'apps-ut2.cra-arc.gc.ca'
+		,'apps-ua2.cra-arc.gc.ca'
+		,'apps-ut2.isvcs.net'
+		,'apps-ua2.isvcs.net'
+		,'performance.alpha.canada.ca'
+		,'cp-ut.isvcs.net'
+		,'apps-ut.isvcs.net'
+		,'xterra3w2k16.dev.ad.itsso-ospti.gc.ca'
+	// Public Services procurement Canada
+		,'test.publications.gc.ca'
+		,'publications.gc.ca'
+		,'www.publications.gc.ca'
+		,'content.buyandsell.gc.ca'
+		,'beta.buyandsell.gc.ca'
+		,'beta.achatsetventes.gc.ca'
+		,'test.buyandsell.gc.ca'	
+		,'test.achatsetventes.gc.ca'
+		,'webdev02.tpsgc-pwgsc.gc.ca'
+		,'www.tpsgc-pwgsc.gc.ca'
+		,'buyandsell.gc.ca'
+		,'achatsetventes.gc.ca'
+		,'staging.achatscanadabuys.ca'
+		,'m8-test.achatscanadabuys.ca'
+		,'m8-test.achatscanadabuys.ca'
+		,'m8-dev-collab.achatscanadabuys.ca'
+		,'webdev01.tpsgc-pwgsc.gc.ca'
+		,'webdev02.tpsgc-pwgsc.gc.ca'
+		,'webdev08.tpsgc-pwgsc.gc.ca'
+		,'m8-uat.achatscanadabuys.ca'
+		,'masource-mysource.shp.dev.global.gc.ca'
+		,'intranet.tpsgc-pwgsc.gc.ca'
+		,'masource-mysource.spac-pspc.gc.ca'
+		,'gcintranet.tpsgc-pwgsc.gc.ca'
+        ,'gamma.buyandsell.gc.ca'
+        ,'www.gamma.buyandsell.gc.ca'
+        ,'gamma.achatsetventes.gc.ca'
+        ,'www.gamma.achatsetventes.gc.ca'
+	// Global Affiars Canada
+		,'www.international.gc.ca'
+		,'international.gc.ca'
+		,'www.tradecommissioner.gc.ca'
+		,'tradecommissioner.gc.ca'
+		,'www.deleguescommerciaux.gc.ca'
+		,'deleguescommerciaux.gc.ca'
+		,'travel-ace-m2'
+		,'voyage-ace-m2' 
+		,'www.travel.gc.ca'
+		,'travel.gc.ca'
+		,'www.voyage.gc.ca' 
+		,'voyage.gc.ca' 
+		,'www.core-ombuds.canada.ca'
+		,'core-ombuds.canada.ca'
+		,'www.educanada.ca'
+		,'deleguescommerciaux.gc.ca'
+		,'educanada.ca'
+		,'www.educanada.ca'
+	// Justice Canada
+		,'www-uat.justice.gc.ca'
+		,'limsdev.justice.gc.ca'
+		,'dmteam-uat.justice.gc.ca'
+		,'equipesm-uat.justice.gc.ca'
+		,'www-uat.victimsfirst.gc.ca'
+		,'www-uat.victimesdabord.gc.ca'
+		,'jusnet-uat.justice.gc.ca'
+		,'www-uat.victimsweek.gc.ca'
+		,'www-uat.semainedesvictimes.gc.ca'
+		,'www.justice.gc.ca'
+		,'justice.gc.ca'
+		,'dmteam.justice.gc.ca'
+		,'equipesm.justice.gc.ca'
+		,'www.laws-lois.justice.gc.ca'
+		,'laws-lois.justice.gc.ca'
+		,'lois-laws.justice.gc.ca'
+		,'www.lois-laws.justice.gc.ca'
+		,'laws.justice.gc.ca'	
+		,'lois.justice.gc.ca'		
+		,'www.ppsc.gc.ca'
+		,'ppsc.gc.ca'
+		,'www.victimsweek.gc.ca'
+		,'www.semainedesvictimes.gc.ca'
+		,'victimsweek.gc.ca'
+		,'semainedesvictimes.gc.ca'
+		,'jusnet.justice.gc.ca'
+        ,'www.victimsfirst.gc.ca'
+        ,'www.victimesdabord.gc.ca'
+        ,'victimsfirst.gc.ca'
+        ,'victimesdabord.gc.ca'
+	// Canadian Food Inspection Agency
+		,'inspection.gc.ca'
+		,'www.inspection.gc.ca'
+		,'inspection.canada.ca'
+		,'www.inspection.canada.ca'
+		,'active.inspection.gc.ca'
+		,'www.active.inspection.gc.ca'
+		,'merlin.cfia-acia.inspection.gc.ca'
+		,'apps.merlin.cfia-acia.inspection.gc.ca'
+		,'www.apps.merlin.cfia-acia.inspection.gc.ca'
+		,'inspection.canada.ca'
+	// Public Safety Canada
+		,'infomediadev'
+		,'infomedia.gc.ca'
+		,'www.infomedia.gc.ca'
+		,'beta.infomedia.gc.ca'
+		,'api.infomedia.gc.ca'
+		,'icdev'
+		,'psdev'
+		,'gpdev'
+		,'psdev'
+		,'gpdev'
+		,'ecdev'
+		,'icdev'
+		,'publicsafety.gc.ca'
+		,'www.publicsafety.gc.ca'
+		,'securitepublique.gc.ca'
+		,'www.securitepublique.gc.ca'
+		,'getprepared.gc.ca'
+		,'www.getprepared.gc.ca'
+		,'preparez-vous.gc.ca'
+		,'www.preparez-vous.gc.ca'
+		,'erc-cee.gc.ca'
+		,'www.erc-cee.gc.ca'
+		,'infocentral'
+		,'infocentrale'
+		,'infocentral'
+	// RCMP External Review Committee
+		,'ercdev'
+	// Open Government
+		,'staging.open.canada.ca'
+		,'stadification.ouvert.canada.ca'
+		,'open.canada.ca'
+		,'ouvert.canada.ca'
+		,'search.open.canada.ca'
+		,'rechercher.ouvert.canada.ca'
+	// Correctional Investigator Canada
+		,'www.oci-bec.gc.ca'
+		,'oci-bec.gc.ca'
+	//Public Service Commission
+		,'intracom'
+		,'intradev'
+		,'intracom.psc-cfp.gc.ca'
+		,'extranet.psc-cfp.gc.ca'
+		,'devextranet.psc-cfp.gc.ca'
+		,'test-psjobs-emploisfp.psc-cfp.gc.ca'
+		,'emploisfp-psjobs.cfp-psc.gc.ca'
+	//Superintendent of Financial Institutions Canada (Office of the)
+		,'devirppub.devosfi.ca'
+		,'uatirppub.devosfi.ca'
+		,'uatirppub.osfi-bsif.gc.ca'	
+		,'uatirppub.devosfi.ca'	
+		,'www.osfi-bsif.gc.ca'
+	//Women and Gender Equality Canada	
+		,'canada'	
+		,'intranettest'	
+		,'intranet'	
+		,'femmes-egalite-genres.canada.ca'
+		,'women-gender-equality.canada.ca'
+		,'intranet.fegc-wage.gc.ca'
+	//Canadian Space Agency
+		,'devcorpo'
+		,'asc-csa.gc.ca'
+		,'www.asc-csa.gc.ca'
+		,'csa-asc.gc.ca'
+		,'www.csa-asc.gc.ca'
+		,'appsqa.asc-csa.gc.ca'
+		,'www4.asc-csa.gc.ca'
+		,'datatest.asc-csa.gc.ca'
+		,'donnees-data.asc-csa.gc.ca'
+   //Infrastructure Canada
+        ,'internet-dev.ad.infrastructure.gc.ca'
+        ,'infranet-dev.ad.infrastructure.gc.ca'
+        ,'www.infrastructure.gc.ca'
+        ,'infranet.ad.infrastructure.gc.ca'
+
+	
+
+ ]
+};
+
+
+
+
+
+
+
+/* ===== Set data elements that rely on whitelist ===== */
+
+/*jsAbort START*/
+var dirs;
+var list;
+var h = document.location.hostname.toLowerCase(); //host
+var j = document.location.pathname.toLowerCase(); //path
+
+if (_satellite.buildInfo.environment == "production") {
+    list = _satellite.gcCustom.domain_whitelist.live;
+}
+else {
+    list = _satellite.gcCustom.domain_whitelist.stage;
+    //list = _satellite.gcCustom.domain_whitelist.live; //FOR TESTING ON LIVE ONLY! REMOVE
+
+}
+
+//directories to exclude
+///Input list. Each item must be inputed with its own quotation marks and be separted using a comma
+/// excl list cannot be empty
+excl = ['/analytique-analytics/',
+            'checkingvisa.com',
+            '/naics/2017/v3/',
+  			'/gol-ged/awsc/amss/browser/check',
+  			'/gol-ged/awsc/amss/enrol/loginCheck',
+  			'/gol-ged/awsc/amss/enrol/logincheck',
+  			'beta.buyandsell.gc.ca/standing-offers-and-supply-arrangements-application/my-workspace/user-management/',
+  			'beta.achatsetventes.gc.ca/application-d-offres-a-commandes-et-d-arrangements-en-matiere-d-approvisionnement/mon-espace-travail/gestion-des-utilisateurs/',
+  			'gol-ecas-dev.ca.gc.ca/ecas/viewcasehistory.do',
+  			'services3.cic.gc.ca/ecas/viewcasehistory.do',
+  			'buyandsell.gc.ca/standing-offers-and-supply-arrangements-application/my-workspace/user-management/',
+  			'achatsetventes.gc.ca/application-d-offres-a-commandes-et-d-arrangements-en-matiere-d-approvisionnement/mon-espace-travail/gestion-des-utilisateurs/',
+            'buyandsell.gc.ca/procurement-data/search/manage-subscriptions',
+            'achatsetventes.gc.ca/donnees-sur-l-approvisionnement/search/gerez-le-service-d-avis',
+            'buyandsell.gc.ca/procurement-data/search/edit-tender-subscription',
+            'achatsetventes.gc.ca/donnees-sur-l-approvisionnement/search/modifier-les-abonnements-aux-appels-d-offres'
+
+]
+
+var j = document.location.host + document.location.pathname.toLowerCase(); //path
+var toExcl = false; //set to false by default
+for (var i in excl) {
+    if (j.indexOf(excl[i]) > -1) {
+        toExcl = true;
+    }
+}
+//end directory exclusions
+
+//sets the data element
+if (typeof list[h] === 'undefined' || toExcl === true) {
+    //_satellite.logger.warn("+++++SETTING JSABORT TRUE+++++");
+    //_satellite.logger.warn("+++++typeof list[h]+++++ --> " + typeof list[h]);
+    //_satellite.logger.warn("+++++toExcl+++++ --> " + toExcl);
+    _satellite.setVar('jsAbort', 'true'); //set to true
+    //_satellite.cookie.set('blackList', 'yes'); //set blackList cookie so previous values are not set on next page
+    window.blackList = 'yes';
+    //s.getPreviousValue(s.pageName, 'gpv_pt'); //prev page title
+    //_satellite.cookie.set('gpv_pt', 'blank page title');
+    //_satellite.cookie.set('gpv_pthl', 'blank theme');
+    //_satellite.cookie.set('gpv_pc', 'blank page creator');
+    //_satellite.cookie.set('gpv_pqs', 'blank query string');
+    _satellite.cookie.set('prev_page_blackList', 'yes')
+}
+else if (toExcl === false) {
+    _satellite.setVar('jsAbort', 'false');
+    window.blackList = 'no';
+}
+else {
+    _satellite.gcCustom.thisDomain = list[h];
+    //_satellite.logger.warn("+++++SETTING JSABORT FALSE+++++");
+    _satellite.setVar('jsAbort', 'false'); //set to false
+    //_satellite.cookie.set('blackList', 'no') //set blacklist cookie to no to allow previous values to be set on next page
+    window.blackList = 'no';
+
+}
+/*jsAbort END*/
+
+</script> 
+<meta charset="utf-8">
+<meta property="dcterms:accessRights" content="2">
+<meta property="dcterms:service" content="JUS-Internet">
+<meta content="width=device-width,initial-scale=1" name="viewport">
+<meta name="dcterms.creator" content="Government of Canada, Department of Justice, Electronic Communications">
+<meta name="dcterms.subject" content="justice, law, judicial system, legal system, legislation, statute, act, regulation, legislative process, amendment, canadian government" title="scheme">
+<meta name="dcterms.language" title="ISO639-2" content="eng">
+<link href="/GCWeb/assets/favicon.ico" rel="icon" type="image/x-icon">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<link rel="stylesheet" href="/themes-dist/GCWeb/css/theme.min.css">
+<link rel="stylesheet" type="text/css" href="/eng/css/site.css">	
+<link rel="stylesheet" type="text/css" href="/eng/css/laws-lois.css">
+<link rel="stylesheet" type="text/css" href="/css/bootstrap.css?v=8">
+<link rel="stylesheet" type="text/css" href="/css/custom.css?v=5">
+
+<title>Terms and conditions</title>
+<meta name="dcterms.title" content="Terms and conditions">
+<meta name="dcterms.issued" content="1999-12-22" title="W3CDTF">
+<meta name="dcterms.modified" content="2021-09-08" title="W3CDTF">
+<meta name="description" content="Department of Justice Canada's Internet site">
+<!-- ScrollMagic plugin --> 
+<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script> 
+<script>
+	// init controller
+	var controller = new ScrollMagic.Controller();
+</script> 
+	
+<!-- Lazyload plugin --> 
+<script src="/js/jquery.min.js"></script> 
+<!-- End Lazyload plugin -->	
+
+<!-- Fading plugin --> 
+<script src="/js/jquery.indymasonry.js"></script> 
+<script src="/js/jquery.indyfadebox.js"></script> 
+<!-- End Fading plugin -->	
+
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+</head>
+<body vocab="http://schema.org/" typeof="webPage">
+
+<nav>
+	<ul id="wb-tphp" class="wb-init wb-disable-inited">
+		<li class="wb-slc"><a class="wb-sl" href="#main-content">Skip to main content</a></li>
+		<li class="wb-slc"><a class="wb-sl" href="#wb-info">Skip to "About government"</a></li>
+		<li class="wb-slc"><a class="wb-sl" rel="alternate" href="?wbdisable=true">Switch to basic HTML version</a></li>
+	</ul>
+</nav>
+
+<header> 
+	<div id="wb-bnr" class="container">
+		<section id="wb-lng" class="text-right">
+			<h2 class="wb-inv">Language selection</h2>
+			<ul class="list-inline margin-bottom-none">
+				<li><a href="/eng/includes/changelanguage.aspx" lang="fr">Français</a></li>
+			</ul>
+		</section>
+		<div class="row">
+			<div class="brand col-xs-5 col-md-4">
+				<a href="https://www.canada.ca/en.html" rel="external"><img src="/themes-dist/GCWeb/assets/sig-blk-en.svg" alt="Government of Canada" property="logo"></a>
+			</div>
+			<section id="wb-srch" class="col-lg-8 text-right">
+				<h2>Search</h2>
+				<form action="https://www.canada.ca/en/sr/srb.html" method="get" name="cse-search-box" role="search" class="form-inline ng-pristine ng-valid">
+					<div class="form-group">
+						<label for="wb-srch-q" class="wb-inv">Search Canada.ca</label>
+						<input name="cdn" value="canada" type="hidden">
+						<input name="st" value="s" type="hidden">
+						<input name="num" value="10" type="hidden">
+						<input name="langs" value="en" type="hidden">
+						<input name="st1rt" value="1" type="hidden">
+						<input name="s5bm3ts21rch" value="x" type="hidden">
+						<input id="wb-srch-q" list="wb-srch-q-ac" class="wb-srch-q form-control" name="q" type="search" value="" size="34" maxlength="170" placeholder="Search Canada.ca">
+						<input type="hidden" name="_charset_" value="UTF-8">
+						<datalist id="wb-srch-q-ac"> </datalist>
+					</div>
+					<div class="form-group submit">
+						<button type="submit" id="wb-srch-sub" class="btn btn-primary btn-small" name="wb-srch-sub"><span class="glyphicon-search glyphicon"></span><span class="wb-inv">Search</span></button>
+					</div>
+				</form>
+			</section>
+		</div>
+	</div>
+<nav id="wb-cont-menu" class="gcweb-v2 gcweb-menu" typeof="SiteNavigationElement">
+	<div class="container">
+		<h2 class="wb-inv">Menu</h2>
+		<button type="button" aria-haspopup="true" aria-expanded="false"><span class="wb-inv">Main </span>Menu <span class="expicon glyphicon glyphicon-chevron-down"></span></button>
+		<ul role="menu" aria-orientation="vertical" data-ajax-replace="https://www.canada.ca/content/dam/canada/sitemenu/sitemenu-v2-en.html">
+			<li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.canada.ca/en/services/jobs.html">Jobs and the workplace</a></li>
+			<li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.canada.ca/en/services/immigration-citizenship.html">Immigration and citizenship</a></li>
+			<li role="presentation"><a role="menuitem" tabindex="-1" href="https://travel.gc.ca/">Travel and tourism</a></li>
+			<li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.canada.ca/en/services/business.html">Business and industry</a></li>
+			<li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.canada.ca/en/services/benefits.html">Benefits</a></li>
+			<li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.canada.ca/en/services/health.html">Health</a></li>
+			<li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.canada.ca/en/services/taxes.html">Taxes</a></li>
+			<li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.canada.ca/en/services/environment.html">Environment and natural resources</a></li>
+			<li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.canada.ca/en/services/defence.html">National security and defence</a></li>
+			<li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.canada.ca/en/services/culture.html">Culture, history and sport</a></li>
+			<li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.canada.ca/en/services/policing.html">Policing, justice and emergencies</a></li>
+			<li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.canada.ca/en/services/transport.html">Transport and infrastructure</a></li>
+			<li role="presentation"><a role="menuitem" tabindex="-1" href="http://international.gc.ca/world-monde/index.aspx?lang=eng">Canada and the world</a></li>
+			<li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.canada.ca/en/services/finance.html">Money and finances</a></li>
+			<li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.canada.ca/en/services/science.html">Science and innovation</a></li>
+		</ul>
+	</div>
+</nav>
+<br>
+<div class="well well-sm brdr-rds-0 hght-inhrt">
+<section class="alert alert-warning mrgn-bttm-0 mrgn-tp-sm mrgn-lft-xl mrgn-rght-sm">
+<h3>Notice to readers: </h3>
+	<p>There have been recent reports of fraudulent phone calls that appear to be from the Department of Justice. <a href="/eng/contact/fraud.html">Learn more</a>.</p>
+</section>
+</div>
+<nav id="wb-bc" property="breadcrumb">
+	<h2>Breadcrumb trail</h2>
+	<div class="container">
+		<div class="row">
+			<ol class="breadcrumb">
+				<li><a href="/eng/index.html">Home</a></li>
+				<li><a href="/eng/terms-avis/index.html">Terms and conditions</a></li>
+			</ol>
+		</div>
+	</div>
+</nav>
+</header>
+<main property="mainContentOfPage" typeof="WebPageElement" class="container" id="main-content">
+	<div class="main-content">
+
+<h1 id="wb-cont" property="name">Terms and conditions</h1>
+
+<div class="col-xs-6 col-md-4 pull-right">
+<div class="panel panel-info">
+<header class="panel-heading"><strong>Table of Contents</strong></header>
+<ul class="list-group">
+          <li class="list-group-item"><a href="#cp"> Copyright/Permission to Reproduce</a></li>
+          <li class="list-group-item"><a href="#legal">Legal Materials</a> </li>
+          <li class="list-group-item"><a href="#p">Privacy</a></li>
+          <li class="list-group-item"><a href="#ol">Official Languages</a></li>
+          <li class="list-group-item"><a href="#usa">Universal Software Accessibility</a></li>
+          <li class="list-group-item"><a href="#tp">Hyperlinking</a></li>
+         <li class="list-group-item"><a href="#lu">Last updated</a></li>
+         <li class="list-group-item"><a href="#social">Interacting With Us on Social Media</a></li>
+        </ul>
+
+</div>
+</div>
+    <!-- End of Optional Navigation Menu -->
+
+    <h2 id="cp">Copyright/Permission to Reproduce</h2>
+
+<p>Materials on this Web site were produced and/or compiled by the Department of Justice for the purpose of providing Canadians with direct access to information about the programs and services offered by the Government of Canada.</p>
+    <p>The material on this site is covered by the provisions of the <em><a href="http://laws-lois.justice.gc.ca/eng/acts/C-42/index.html">Copyright Act</a></em>, by Canadian laws, policies, regulations, and international agreements. Such provisions serve to identify the information source and, in specific instances, to prohibit reproduction of materials without written permission.</p>
+
+<h3 id="nonc">Non-commercial Reproduction</h3>
+
+<p>Information on this Web site has been posted with the intent that it be readily available for personal or public non-commercial use and may be reproduced, in part or in whole, and by any means, without charge or further permission, unless otherwise specified.</p>
+    <p>Users are required to:</p>
+
+<ul>
+      <li>Exercise due diligence in ensuring the accuracy of the materials reproduced;</li>
+      <li>Indicate both the complete title of the materials reproduced, as well as the author organization; and</li>
+      <li>Indicate that the reproduction is a copy of an official work that is published by the Government of Canada and that the reproduction has not been produced in affiliation with, or with the endorsement of the Government of Canada.</li>
+    </ul>
+
+<p><strong>Unless otherwise specified, this authorization is also applicable to all published information regardless of its format.</strong></p>
+    <h3 id="rep">Reproduction of Government Symbols</h3>
+
+<p>The official symbols of the Government of Canada, including the <q>"Canada"</q> wordmark, the Arms of Canada, and the flag symbol may not be reproduced, whether for commercial or non-commercial purposes, without written authorization. Request for authorization from the Treasury Board Secretariat may be addressed to:</p>
+    <p><a href="mailto:information@fip-pcim.gc.ca">information@fip-pcim.gc.ca</a><br>
+      Federal Identity Program<br>
+      Treasury Board of Canada Secretariat<br>
+      300 Laurier Avenue West<br>
+      Ottawa, Canada K1A 0R5</p>
+
+<h3 id="com">Commercial Reproduction </h3>
+
+<p>Reproduction of multiple copies of materials on this site, in whole or in part, for the purposes of commercial redistribution is prohibited except with written permission from the Department of Justice Canada. Through the permission-granting process, the Department of Justice Canada helps to ensure that individuals/organizations wishing to reproduce the Department of Justice Canada materials for commercial purposes have access to the most accurate, up-to-date versions. To obtain permission to reproduce materials on this site for commercial purposes, please complete the Reproduction Request Form  (<a href="copyright-droitdauteur.html">HTML</a>) (<a href="copyright-droitdauteur.pdf">PDF</a>) and submit to:</p>
+
+    <p>Department of Justice Canada<br>
+      Communications Branch<br>
+      Copyright administrator<br>
+      284 Wellington Street <br>
+      Ottawa, Ontario <br>
+      Canada  K1A 0H8 or<br>
+      <a href="mailto:webadmin@justice.gc.ca">webadmin@justice.gc.ca</a></p>
+
+<h4><a href="http://laws-lois.justice.gc.ca/eng/regulations/SI-97-5/" id="rep2"><strong>Reproduction of Federal Law Order</strong></a> </h4>
+
+<p>Anyone may, without charge or request for permission, reproduce enactments and consolidations of enactments of the Government of Canada, and decisions and reasons for decisions of federally constituted courts and administrative tribunals, provided due diligence is exercised in ensuring the accuracy of the materials reproduced and the reproduction is not represented as an official version.</p>
+
+    <h3 id="legal">Legal Materials</h3>
+
+<p> The legal material on this site may be <a href="http://laws-lois.justice.gc.ca/eng/regulations/SI-97-5/page-1.html" title="Reproduction of Federal Law Order">reproduced</a>, in whole or in part and by any means, without further permission from the Department of Justice. No such reproduction shall indicate that the Department of Justice is in any way responsible for the accuracy or reliability of the reproduction; nor shall any such reproduction indicate that it was made with the endorsement of, or in affiliation with, the Department of Justice. For all purposes of interpreting and applying the law, users should consult:</p>
+
+<ul>
+      <li>the <a href="https://www.parl.ca/LegisInfo/Home.aspx?Language=E&amp;ParliamentSession=42-1">Acts as passed by Parliament</a>, which are published in the <q>"Assented to"</q> Acts service, <a href="http://www.gazette.gc.ca/rp-pr/publications-eng.html#a3">Part III of the Canada Gazette</a> and the annual Statutes of Canada,
+        and</li>
+      <li>the regulations, as registered by the Clerk of the Privy Council and published in <a href="http://www.gazette.gc.ca/rp-pr/publications-eng.html#a2">Part II of the Canada Gazette</a>.</li>
+    </ul>
+
+    <p>The above-mentioned publications are available in most public libraries. </p>
+
+<h3 id="third">Third-party Materials </h3>
+
+<p>Some of the materials and graphical elements found on Government of Canada Web sites are subject to copyrights held by other organizations. This is particularly true of sites that are jointly operated by a Government of Canada institution and an external organization as part of a collaborative arrangement. In such cases, some restrictions on the reproduction of materials or graphical elements may apply and it may be necessary to seek permission from the rights holder prior to reproducing the material.</p>
+
+<p><strong>To obtain information concerning copyright ownership and restrictions on reproduction on this site, please contact:</strong> </p>
+<p>Department of Justice Canada<br>
+Communications Branch <br>
+284 Wellington Street <br>
+Ottawa, ON K1A 0H8 <br>
+Tel: 613-957-4222 <br>
+TDD/TTY: 613-992-4556<br>
+E-mail: <a href="mailto:webadmin@justice.gc.ca">webadmin@justice.gc.ca</a></p>
+<h2 id="p">Privacy</h2>
+
+<p>The Government of Canada and the Department of Justice&nbsp;are committed to respecting the personal privacy of individuals who visit our Web sites. The following summarizes the privacy policy and practices of the Department of Justice's Web sites.</p>
+<ul>
+      <li>The Department of Justice does not automatically gather any personal information from you, such as your name, phone number or e-mail address. On various sections of the Department of Justice's Web sites, you can choose to correspond via e-mail or by completing feedback forms.
+        These allow you to make comments and suggestions or to ask questions. If you choose to provide personal information through e-mail or by completing these forms, we will use it only to respond to your message.</li>
+      <li>Information on individual visitors is used by employees of the
+        Department of Justice who need the information in order to respond
+        to your request or to ensure the security of this system. We only
+        share the information you give us with another government department
+        if your inquiry relates to that department. We do not use the information
+        to create individual profiles, nor do we disclose this information
+        to anyone outside the federal government.</li>
+      <li>All personal information created, held or collected by the Department
+        of Justice is protected under the federal <em><a href="http://laws-lois.justice.gc.ca/eng/acts/P-21/index.html">Privacy
+        Act</a></em>. At any point of collection you will be asked for consent
+        to collect your information, and you will be informed of the purpose
+        for which it is being collected and how to exercise your right of
+        access to that information.</li>
+      <li>The Department of Justice occasionally uses temporary <q>"cookies"</q> to
+        facilitate your Web use. The cookies we use do not allow us to identify
+        individuals, and are used, for example, to determine your language
+        preferences. They exist in your browser's temporary memory and are
+        deleted when you close your browser. Some applications available
+        through the Internet site will not work properly if you choose to
+        disable all cookies. (A <q>"cookie"</q> is a file that
+        may be placed on your hard drive without your knowledge by a Web
+        site to allow it to monitor your use of the site.)</li>
+      <li>The Department of Justice employs software programs to monitor
+        network traffic to identify unauthorized attempts to upload or change
+        information or otherwise cause damage. This software receives and
+        records the Internet Protocol address of the computer that has contacted
+        our Web site, the date and time of the visit and the pages visited.
+        We make no attempt to link these addresses with the identity of individuals
+        visiting our site unless an attempt to damage the site has been detected.</li>
+      <li>The Internet is a public forum and electronic information can be
+        intercepted. This is not a secure Web site. Please do not disclose
+        unnecessary confidential information about yourself or your dealings
+        with The Department of Justice Canada. </li>
+</ul>
+<p>Questions or comments regarding this policy, or the administration of the <em>Privacy Act</em> at the Department of Justice may be directed
+</p>
+    <p>Telephone: 613-952-8361 Facsimile: 613-957-2303 Mail: Department of Justice, St. Andrews Tower, 275 Sparks Street, 9th Floor Ottawa, Ontario K1A 0H8</p>
+    <p>If you are not satisfied with our response to your privacy concern, you may wish to contact the <a href="https://www.priv.gc.ca/en/">Office of the Privacy Commissioner</a> by e-mail
+      at: <a href="mailto:info@privcom.gc.ca">info@privcom.gc.ca</a>, by telephone at 1-800-282-1376.</p>
+
+<h3>Third-Party Social  Media</h3>
+
+<p> The Department of Justice Canada’s use of social media serves as an extension  of its presence on the Web. Social media accounts are public and are not hosted  on Government of Canada servers. Users who choose to interact with us via  social media should read the terms of service and privacy policies of these  third-party service providers and those of any applications you use to access  them. The Department of  Justice Canada uses <a href="https://www.facebook.com/about/privacy">Facebook</a>,  <a href="https://twitter.com/privacy">Twitter</a>,  <a href="http://www.google.com/intl/en/policies/privacy/">YouTube</a>.</p>
+
+    <h2 id="ol">Official Languages</h2>
+
+<p>The Department of Justice respects the <a href="http://laws-lois.justice.gc.ca/eng/acts/O-3.01/index.html"><em>Official Languages Act</em></a> and the <a href="http://www.tbs-sct.gc.ca/pol/doc-eng.aspx?id=26160">relevant Treasury Board policies</a>, and is committed to ensuring all information and services on this site is available in both English and French. However, users should be aware that some information from external
+sources that are not subject to the <em><a href="http://laws-lois.justice.gc.ca/eng/acts/O-3.01/index.html">Official Languages Act</a></em> is only provided as a convenience and is available only in the language in which it was provided.</p>
+
+    <h2 id="usa">Universal Software Accessibility</h2>
+
+<p>The Department of Justice's Web sites have been modified&nbsp;to facilitate accessibility and to ensure that all users will benefit from its features. While these sites are designed to accommodate all types of Internet software and browsers, including earlier versions and hand-held devices, some viewing problems can occur when using older software. We are continually striving to correct such problems. Please <a href="/eng/contact/index.html">contact us</a> if you are experiencing technical difficulties.</p>
+
+    <h2 id="tp">Hyperlinking</h2>
+
+    <p>Links to Web sites not under the control of the Department of Justice
+      are provided solely for the convenience of users. The Department of
+      Justice is not responsible for the accuracy, currency or the reliability
+      of the content. The Department of Justice does not offer any guarantee
+      in that regard and is not responsible for the information found through
+      these links, nor does it endorse the sites and their content.</p>
+    <p>Visitors should also be aware that information offered by non-Government
+      of Canada sites to which the Department of Justice links is not subject
+      to the <em><a href="http://laws-lois.justice.gc.ca/eng/acts/P-21/index.html">Privacy
+      Act</a></em>, the <em><a href="http://laws-lois.justice.gc.ca/eng/acts/O-3.01/index.html">Official
+      Languages Act</a></em> and may not be accessible to persons with disabilities.
+      The information offered may be available only in the language(s) used
+      by the sites in question and visitors should research the privacy policies
+      of the sites before providing personal information.</p>
+
+    <h2 id="lu">Last updated</h2>
+
+<p><strong>Last updated</strong> refers to the date when the information on the Web page was either revised or when the page was modified for
+technical reasons. The date the document was originally posted to the site is located in the metadata section of the source code.</p>
+
+<h2 id="social">Interacting With Us on Social Media</h2>
+
+    <p>This notice has been written to explain how the Department of Justice Canada interacts with the public on social media platforms.</p>
+
+<h3>Content and Frequency</h3>
+
+<p>We use our social media accounts as an alternative method of sharing the content posted on our website and interacting with our stakeholders. By following our social media accounts (by "following," "liking" or "subscribing"), you can expect to see information about the programs and services we provide.</p>
+<p>We understand that the Web is a 24/7 medium, and your comments are welcome at any time. You should expect to see new content posted Monday to Friday from 8:00 a.m. to 4:00 p.m. EST/EDT. Comments submitted after hours or on weekends will be read and responded to as soon as possible.</p>
+<p>Because the servers of social media platforms are managed by a third party, our social media accounts are subject to downtime that may be out of our control. As such, we accept no responsibility for platforms becoming unresponsive or unavailable.</p>
+
+<h3>Links to Other Websites and Ads</h3>
+
+<p>Our social media accounts may post or display links or ads for websites that are not under our control. These links are provided solely for the convenience of users. The Government of Canada is not responsible for the information found through these links or ads, nor does it endorse the sites or their content.</p>
+
+<h3>Following, "Favouriting" and Subscribing</h3>
+
+<p>Our decision to "follow," "favourite" or "subscribe" to another social media account does not imply an endorsement of that account, channel, page or site, and neither does sharing (re-tweeting, reposting or linking to) content from another user.</p>
+
+<h3>Comments and Interaction</h3>
+
+<p>We will read comments and participate in discussions when appropriate. We ask that your comments be relevant and respectful. We reserve the right to delete comments that violate this notice, and the user may be blocked and reported to prevent further inappropriate comments.</p>
+<p>We cannot engage in issues of party politics or answer questions that break the rules of this notice.</p>
+<p>We reserve the right to edit or remove comments that:</p>
+
+<ul>
+	<li>Contain personal information;</li>
+	<li>Are contrary to the principles of the <em>Canadian Charter of Rights and Freedoms</em>;</li>
+	<li>Express racist, hateful, sexist, homophobic, slanderous, insulting or life-threatening messages;</li>
+	<li>Put forward serious, unproven or inaccurate accusations against individuals or organizations;</li>
+	<li>Are aggressive, coarse, violent, obscene or pornographic;</li>
+	<li>Are offensive, rude or abusive to an individual or an organization;</li>
+	<li>Are not sent by the author or are put forward for advertising purposes;</li>
+	<li>Encourage illegal activity;</li>
+	<li>Contain announcements from labour or political organizations;</li>
+	<li>Are written in a language other than English or French;</li>
+	<li>Are unintelligible or irrelevant;</li>
+	<li>Are repetitive or spam; and</li>
+	<li>Do not, in our opinion, add to the normal flow of the discussion.</li>
+</ul>
+<p>In short, please be respectful and make sure that your comments are relevant to where they are posted. The views of users commenting on our social media accounts do not necessarily represent the views of the Department of Justice Canada or the Government of Canada.</p>
+
+<h3>Accessibility of Social Media Platforms</h3>
+
+<p>Social media platforms are third-party service providers and are not bound by Government of Canada standards for Web accessibility.</p>
+<p>If you have difficulty accessing content on our social media accounts, please contact us and we will try to solve the problem or provide you with the information in a different format.</p>
+
+<h3>Copyright</h3>
+
+<p>Information that we post is subject to the <em><a href="http://laws-lois.justice.gc.ca/eng/acts/C-42/index.html">Copyright Act</a></em>.</p>
+
+<h3>Privacy</h3>
+
+<p>Our social media accounts are not Government of Canada websites and represent only our presence on third-party service providers.</p>
+<p>For more information, please refer to our Privacy Notice regarding third-party social media.</p>
+
+<h3>Official Languages</h3>
+
+<p>Many social media platforms have multiple language options and provide instructions on how to set your preferences. The Government of Canada respects the <em><a href="http://laws-lois.justice.gc.ca/eng/acts/O-3.01/index.html">Official Languages Act</a></em> and is committed to ensuring that our information of is available in both French and English and that both versions are equal quality.</p>
+<p>We reply to comments in the official language in which they are posted. If we think the response is a question of general public interest, we may respond in both official languages.</p>
+<p>We may share links that direct users to sites of organizations or other entities that are not subject to the <em><a href="http://laws-lois.justice.gc.ca/eng/acts/O-3.01/index.html">Official Languages Act</a></em> and available only in the language(s) in which they are written. When content is available in only one language, we make an effort to provide similar content in the other official language.</p>
+
+<h3>Questions and Media Requests</h3>
+
+<p>Reporters are asked to send questions to Media Relations by visiting <a href="/eng/news-nouv/media.html">Contacts for the Media</a>. </p>
+
+</div>
+<div class="clearfix"></div>
+<hr>
+<div class="pagedetails pt-2">
+	<div class="row">
+		<div class="col-sm-6 col-md-5 col-lg-4">
+			<details class="brdr-0">
+				<summary class="btn btn-default text-center">Report a problem on this page</summary>
+				<div class="well row">
+					<div class="gc-rprt-prblm">
+						<div id="thank-you-message1" class="gc-rprt-prblm-frm gc-rprt-prblm-tggl">
+							<form action="/eng/includes/reportproblem.aspx" method="post" name="formProblem">
+								<fieldset>
+									<legend><span class="field-name">Please select all that apply: </span></legend>
+									<div class="checkbox">
+										<label for="problem1">
+										<input type="checkbox" data-reveal="#broken" name="problem" value="&nbsp;Something is broken" id="problem1">
+										Something is broken</label>
+									</div>
+									<div class="checkbox">
+										<label for="problem2">
+										<input type="checkbox" data-reveal="#spelling" name="problem" value="&nbsp;It has spelling or grammar mistakes" id="problem2">
+										The page has spelling or grammar mistakes</label>
+									</div>
+									<div class="checkbox">
+										<label for="problem3">
+										<input type="checkbox" data-reveal="#wrong" name="problem" value="&nbsp;The information is wrong" id="problem3">
+										The information is wrong</label>
+									</div>
+									<div class="checkbox">
+										<label for="problem4">
+										<input type="checkbox" data-reveal="#outdated" name="problem" value="&nbsp;The information is outdated" id="problem4">
+										The information is outdated</label>
+									</div>
+									<div class="checkbox">
+										<label for="problem5">
+										<input type="checkbox" data-reveal="#find" name="problem" value="&nbsp;I can't find what I'm looking for" id="problem5">
+										I can't find what I'm looking for</label>
+									</div>
+									<div class="checkbox">
+										<label for="problem6">
+										<input type="checkbox" data-reveal="#confusing" name="problem" value="&nbsp;Other" id="problem6">
+										Other</label>
+									</div>
+									<div>
+										<label for="birthday" class="invisibleStuff"></label>
+										<input id="birthday" name="birthday" class="hpclass" autocomplete="off">
+									</div> 
+								</fieldset>
+								
+								<input type="submit" value="Send" class="btn btn-primary">
+							</form>
+						</div>
+						<div id="thank-you-message">
+							<div id="thank-you-message2" class="gc-rprt-prblm-thnk gc-rprt-prblm-tggl hide">
+								<h3>Thank you for your help!</h3>
+								<p>You will not receive a reply. For enquiries, please <a href="/eng/contact/index.html">contact us</a>.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</details>
+		</div>
+		<div class="wb-share col-sm-4 col-md-3 col-sm-offset-2 col-md-offset-4 col-lg-offset-5" data-wb-share="{&quot;lnkClass&quot;: &quot;btn btn-default btn-block&quot;}">
+		</div>
+	</div>
+</div>
+<dl id="wb-dtmd" class="no-print mb-5 mt-0">
+	<dt>Date modified: </dt>
+	<dd>
+		<time property="dateModified">
+2021-09-08
+		</time>
+	</dd>
+</dl>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.js"></script>
+<script src="/themes-dist/wet-boew/js/wet-boew.min.js"></script>
+<script src="/themes-dist/GCWeb/js/theme.min.js"></script>
+</main><span id="wb-rsz">&nbsp;</span>
+<footer id="wb-info">
+	<div class="gc-contextual">
+		<div class="container">
+			<nav class="wb-navcurr pb-4 pt-4">
+				<h3 class="mt-4">Department of Justice Canada</h3>
+				<ul class="list-unstyled colcount-sm-2 colcount-md-3">
+					<li><a href="/eng/fl-df/index.html">Family Law</a></li>
+					<li><a href="/eng/cj-jp/index.html">Criminal Justice</a></li>
+					<li><a href="/eng/fund-fina/index.html">Funding</a></li>
+					<li><a href="/eng/csj-sjc/index.html">Canada's System of Justice</a></li>
+					<li><a href="https://laws-lois.justice.gc.ca/eng/" rel="external">Laws</a></li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+
+	<div class="landscape">
+		<div class="container">
+			<nav class="wb-navcurr pb-3 pt-4">
+				<h3 class="mt-3">Government of Canada</h3>
+				<ul class="list-unstyled colcount-sm-2 colcount-md-3">
+					<li><a href="https://www.canada.ca/en/contact.html" rel="external">All contacts</a></li>
+					<li><a href="https://www.canada.ca/en/government/dept.html" rel="external">Departments and agencies</a></li>
+					<li><a href="https://www.canada.ca/en/government/system.html" rel="external">About government</a></li>
+				</ul>
+				
+				<h4><span class="wb-inv">Themes and topics</span></h4>
+				<ul class="list-unstyled colcount-sm-2 colcount-md-3">
+					<li><a href="https://www.canada.ca/en/services/jobs.html" rel="external">Jobs</a></li>
+					<li><a href="https://www.canada.ca/en/services/immigration-citizenship.html" rel="external">Immigration and citizenship</a></li>
+					<li><a href="https://travel.gc.ca/" rel="external">Travel and tourism</a></li>
+					<li><a href="https://www.canada.ca/en/services/business.html" rel="external">Business</a></li>
+					<li><a href="https://www.canada.ca/en/services/benefits.html" rel="external">Benefits</a></li>
+					<li><a href="https://www.canada.ca/en/services/health.html" rel="external">Health</a></li>
+					<li><a href="https://www.canada.ca/en/services/taxes.html" rel="external">Taxes</a></li>
+					<li><a href="https://www.canada.ca/en/services/environment.html" rel="external">Environment and natural resources</a></li>
+					<li><a href="https://www.canada.ca/en/services/defence.html" rel="external">National security and defence</a></li>
+					<li><a href="https://www.canada.ca/en/services/culture.html" rel="external">Culture, history and sport</a></li>
+					<li><a href="https://www.canada.ca/en/services/policing.html" rel="external">Policing, justice and emergencies</a></li>
+					<li><a href="https://www.canada.ca/en/services/transport.html" rel="external">Transport and infrastructure</a></li>
+					<li><a href="https://international.gc.ca/world-monde/index.aspx?lang=eng" rel="external">Canada and the world</a></li>
+					<li><a href="https://www.canada.ca/en/services/finance.html" rel="external">Money and finance</a></li>
+					<li><a href="https://www.canada.ca/en/services/science.html" rel="external">Science and innovation</a></li>
+					<li><a href="https://www.canada.ca/en/services/indigenous-peoples.html" rel="external">Indigenous peoples</a></li>
+					<li><a href="https://www.canada.ca/en/services/veterans.html" rel="external">Veterans and military</a></li>
+					<li><a href="https://www.canada.ca/en/services/youth.html" rel="external">Youth</a></li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+	<div class="brand">
+		<div class="container">
+			<div class="row">
+				<nav class="col-md-9 col-lg-10 ftr-urlt-lnk pb-0">
+					<ul>
+						<li><a href="https://www.canada.ca/en/social.html" rel="external">Social media</a></li>
+						<li><a href="https://www.canada.ca/en/mobile.html" rel="external">Mobile applications</a></li>
+						<li><a href="https://www.canada.ca/en/government/about.html" rel="external">About Canada.ca</a></li>
+						<li><a href="https://www.canada.ca/en/transparency/terms.html" rel="external">Terms and conditions</a></li>
+						<li><a href="https://www.canada.ca/en/transparency/privacy.html" rel="external">Privacy</a></li>
+					</ul>
+				</nav>
+				<div class="col-xs-6 visible-sm visible-xs tofpg">
+					<a href="#main-content">Top of Page <span class="glyphicon glyphicon-chevron-up"></span></a>
+				</div>
+				<div class="col-xs-6 col-md-3 col-lg-2 text-right">
+					<img src="https://wet-boew.github.io/themes-dist/GCWeb/GCWeb/assets/wmms-blk.svg" alt="Symbol of the Government of Canada">
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<!-- Do not remove - this Adobe Analytics tag - STARTS --> 	
+<script>_satellite.pageBottom();</script><script>
+_satellite.track('pageReset');
+</script>
+<!-- Do not remove - this Adobe Analytics tag - STARTS -->
+<script>
+	document.addEventListener("DOMContentLoaded", function(){
+		var hash = window.location.hash;
+		if(hash == "#thank-you-message") {
+			$( "#thank-you-message1" ).addClass( "hide" );
+			$( "#thank-you-message2" ).removeClass( "hide" );
+		}
+	});
+</script>
+
+</body></html>

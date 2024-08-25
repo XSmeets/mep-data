@@ -1,0 +1,1621 @@
+<html lang="en" dir="ltr" prefix="og: https://ogp.me/ns#" class=" js"><head><style>body {transition: opacity ease-in 0.2s; } 
+body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relative; } 
+</style>
+    <meta charset="utf-8"><script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script src="https://www.googletagmanager.com/gtm.js?id=GTM-5NV7GK" async=""></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-ZNNFJGFKZ4&amp;l=dataLayer&amp;cx=c"></script><script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"5246b5e79c",applicationID:"1063190878"};;/*! For license information please see nr-loader-rum-1.253.0.min.js.LICENSE.txt */
+(()=>{var e,t,n={234:(e,t,n)=>{"use strict";n.d(t,{P_:()=>v,Mt:()=>b,C5:()=>s,OP:()=>k,lF:()=>N,Yu:()=>w,Dg:()=>m,CX:()=>c,GE:()=>x,sU:()=>R});var r=n(8632),i=n(9567);const o={beacon:r.ce.beacon,errorBeacon:r.ce.errorBeacon,licenseKey:void 0,applicationID:void 0,sa:void 0,queueTime:void 0,applicationTime:void 0,ttGuid:void 0,user:void 0,account:void 0,product:void 0,extra:void 0,jsAttributes:{},userAttributes:void 0,atts:void 0,transactionName:void 0,tNamePlain:void 0},a={};function s(e){if(!e)throw new Error("All info objects require an agent identifier!");if(!a[e])throw new Error("Info for ".concat(e," was never set"));return a[e]}function c(e,t){if(!e)throw new Error("All info objects require an agent identifier!");a[e]=(0,i.D)(t,o);const n=(0,r.ek)(e);n&&(n.info=a[e])}const u=e=>{if(!e||"string"!=typeof e)return!1;try{document.createDocumentFragment().querySelector(e)}catch{return!1}return!0};var d=n(7056),l=n(50);const f="[data-nr-mask]",g=()=>{const e={mask_selector:"*",block_selector:"[data-nr-block]",mask_input_options:{color:!1,date:!1,"datetime-local":!1,email:!1,month:!1,number:!1,range:!1,search:!1,tel:!1,text:!1,time:!1,url:!1,week:!1,textarea:!1,select:!1,password:!0}};return{feature_flags:[],proxy:{assets:void 0,beacon:void 0},privacy:{cookies_enabled:!0},ajax:{deny_list:void 0,block_internal:!0,enabled:!0,harvestTimeSeconds:10,autoStart:!0},distributed_tracing:{enabled:void 0,exclude_newrelic_header:void 0,cors_use_newrelic_header:void 0,cors_use_tracecontext_headers:void 0,allowed_origins:void 0},session:{domain:void 0,expiresMs:d.oD,inactiveMs:d.Hb},ssl:void 0,obfuscate:void 0,jserrors:{enabled:!0,harvestTimeSeconds:10,autoStart:!0},metrics:{enabled:!0,autoStart:!0},page_action:{enabled:!0,harvestTimeSeconds:30,autoStart:!0},page_view_event:{enabled:!0,autoStart:!0},page_view_timing:{enabled:!0,harvestTimeSeconds:30,long_task:!1,autoStart:!0},session_trace:{enabled:!0,harvestTimeSeconds:10,autoStart:!0},harvest:{tooManyRequestsDelay:60},session_replay:{autoStart:!0,enabled:!1,harvestTimeSeconds:60,preload:!1,sampling_rate:10,error_sampling_rate:100,collect_fonts:!1,inline_images:!1,inline_stylesheet:!0,mask_all_inputs:!0,get mask_text_selector(){return e.mask_selector},set mask_text_selector(t){u(t)?e.mask_selector="".concat(t,",").concat(f):""===t||null===t?e.mask_selector=f:(0,l.Z)("An invalid session_replay.mask_selector was provided. '*' will be used.",t)},get block_class(){return"nr-block"},get ignore_class(){return"nr-ignore"},get mask_text_class(){return"nr-mask"},get block_selector(){return e.block_selector},set block_selector(t){u(t)?e.block_selector+=",".concat(t):""!==t&&(0,l.Z)("An invalid session_replay.block_selector was provided and will not be used",t)},get mask_input_options(){return e.mask_input_options},set mask_input_options(t){t&&"object"==typeof t?e.mask_input_options={...t,password:!0}:(0,l.Z)("An invalid session_replay.mask_input_option was provided and will not be used",t)}},spa:{enabled:!0,harvestTimeSeconds:10,autoStart:!0},soft_navigations:{enabled:!0,harvestTimeSeconds:10,autoStart:!0}}},p={},h="All configuration objects require an agent identifier!";function v(e){if(!e)throw new Error(h);if(!p[e])throw new Error("Configuration for ".concat(e," was never set"));return p[e]}function m(e,t){if(!e)throw new Error(h);p[e]=(0,i.D)(t,g());const n=(0,r.ek)(e);n&&(n.init=p[e])}function b(e,t){if(!e)throw new Error(h);var n=v(e);if(n){for(var r=t.split("."),i=0;i<r.length-1;i++)if("object"!=typeof(n=n[r[i]]))return;n=n[r[r.length-1]]}return n}const y={accountID:void 0,trustKey:void 0,agentID:void 0,licenseKey:void 0,applicationID:void 0,xpid:void 0},A={};function x(e,t){if(!e)throw new Error("All loader-config objects require an agent identifier!");A[e]=(0,i.D)(t,y);const n=(0,r.ek)(e);n&&(n.loader_config=A[e])}const w=(0,r.mF)().o;var _=n(385),E=n(6818);const D={buildEnv:E.Re,customTransaction:void 0,disabled:!1,distMethod:E.gF,isolatedBacklog:!1,loaderType:void 0,maxBytes:3e4,offset:Math.floor(_._A?.performance?.timeOrigin||_._A?.performance?.timing?.navigationStart||Date.now()),onerror:void 0,origin:""+_._A.location,ptid:void 0,releaseIds:{},session:void 0,xhrWrappable:"function"==typeof _._A.XMLHttpRequest?.prototype?.addEventListener,version:E.q4,denyList:void 0},S={};function k(e){if(!e)throw new Error("All runtime objects require an agent identifier!");if(!S[e])throw new Error("Runtime for ".concat(e," was never set"));return S[e]}function R(e,t){if(!e)throw new Error("All runtime objects require an agent identifier!");S[e]=(0,i.D)(t,D);const n=(0,r.ek)(e);n&&(n.runtime=S[e])}function N(e){return function(e){try{const t=s(e);return!!t.licenseKey&&!!t.errorBeacon&&!!t.applicationID}catch(e){return!1}}(e)}},9567:(e,t,n)=>{"use strict";n.d(t,{D:()=>i});var r=n(50);function i(e,t){try{if(!e||"object"!=typeof e)return(0,r.Z)("Setting a Configurable requires an object as input");if(!t||"object"!=typeof t)return(0,r.Z)("Setting a Configurable requires a model to set its initial properties");const n=Object.create(Object.getPrototypeOf(t),Object.getOwnPropertyDescriptors(t)),o=0===Object.keys(n).length?e:n;for(let a in o)if(void 0!==e[a])try{Array.isArray(e[a])&&Array.isArray(t[a])?n[a]=Array.from(new Set([...e[a],...t[a]])):"object"==typeof e[a]&&"object"==typeof t[a]?n[a]=i(e[a],t[a]):n[a]=e[a]}catch(e){(0,r.Z)("An error occurred while setting a property of a Configurable",e)}return n}catch(e){(0,r.Z)("An error occured while setting a Configurable",e)}}},6818:(e,t,n)=>{"use strict";n.d(t,{Re:()=>i,gF:()=>o,q4:()=>r});const r="1.253.0",i="PROD",o="CDN"},385:(e,t,n)=>{"use strict";n.d(t,{Nk:()=>d,Tt:()=>s,_A:()=>o,cv:()=>l,iS:()=>a,il:()=>r,ux:()=>c,v6:()=>i,w1:()=>u});const r="undefined"!=typeof window&&!!window.document,i="undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self.navigator instanceof WorkerNavigator||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis.navigator instanceof WorkerNavigator),o=r?window:"undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis),a=Boolean("hidden"===o?.document?.visibilityState),s=/iPad|iPhone|iPod/.test(o.navigator?.userAgent),c=s&&"undefined"==typeof SharedWorker,u=((()=>{const e=o.navigator?.userAgent?.match(/Firefox[/\s](\d+\.\d+)/);Array.isArray(e)&&e.length>=2&&e[1]})(),Boolean(r&&window.document.documentMode)),d=!!o.navigator?.sendBeacon,l=Math.floor(o?.performance?.timeOrigin||o?.performance?.timing?.navigationStart||Date.now())},9907:(e,t,n)=>{"use strict";n.d(t,{A:()=>r});class r{constructor(e){this.contextId=e}}},8929:(e,t,n)=>{"use strict";n.d(t,{v:()=>a});var r=n(8632);const i=(0,n(4402).Rl)();var o=n(9907);class a{static contextId="nr@context:".concat(i);static contextOriginalId="nr@original:".concat(i);static contextWrappedId="nr@wrapped:".concat(a.contextId);static getObservationContextByAgentIdentifier(e){const t=(0,r.fP)();return Object.keys(t?.initializedAgents||{}).indexOf(e)>-1?t.initializedAgents[e].observationContext:void 0}#e=new WeakMap;getCreateContext(e){return this.#e.has(e)||this.#e.set(e,new o.A),this.#e.get(e)}setContext(e,t){return this.#e.set(e,t),this.#e.get(e)}}},1117:(e,t,n)=>{"use strict";n.d(t,{w:()=>o});var r=n(50);const i={agentIdentifier:"",ee:void 0};class o{constructor(e){try{if("object"!=typeof e)return(0,r.Z)("shared context requires an object as input");this.sharedContext={},Object.assign(this.sharedContext,i),Object.entries(e).forEach((e=>{let[t,n]=e;Object.keys(i).includes(t)&&(this.sharedContext[t]=n)}))}catch(e){(0,r.Z)("An error occured while setting SharedContext",e)}}}},8e3:(e,t,n)=>{"use strict";n.d(t,{L:()=>d,R:()=>c});var r=n(2177),i=n(1284),o=n(4322),a=n(3325);const s={};function c(e,t){const n={staged:!1,priority:a.p[t]||0};u(e),s[e].get(t)||s[e].set(t,n)}function u(e){e&&(s[e]||(s[e]=new Map))}function d(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:"",t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:"feature",n=arguments.length>2&&void 0!==arguments[2]&&arguments[2];if(u(e),!e||!s[e].get(t)||n)return c(t);s[e].get(t).staged=!0;const a=[...s[e]];function c(t){const n=e?r.ee.get(e):r.ee,a=o.X.handlers;if(n.backlog&&a){var s=n.backlog[t],c=a[t];if(c){for(var u=0;s&&u<s.length;++u)l(s[u],c);(0,i.D)(c,(function(e,t){(0,i.D)(t,(function(t,n){n[0].on(e,n[1])}))}))}delete a[t],n.backlog[t]=null,n.emit("drain-"+t,[])}}a.every((e=>{let[t,n]=e;return n.staged}))&&(a.sort(((e,t)=>e[1].priority-t[1].priority)),a.forEach((t=>{let[n]=t;s[e].delete(n),c(n)})))}function l(e,t){var n=e[1];(0,i.D)(t[n],(function(t,n){var r=e[0];if(n[0]===r){var i=n[1],o=e[3],a=e[2];i.apply(o,a)}}))}},2177:(e,t,n)=>{"use strict";n.d(t,{ee:()=>c});var r=n(8632),i=n(2210),o=n(234),a=n(9907),s=n(8929);const c=function e(t,n){var r={},u={},l={},f=!1;try{f=16===n.length&&(0,o.OP)(n).isolatedBacklog}catch(e){}var g={on:h,addEventListener:h,removeEventListener:function(e,t){var n=r[e];if(!n)return;for(var i=0;i<n.length;i++)n[i]===t&&n.splice(i,1)},emit:function(e,n,r,i,o){!1!==o&&(o=!0);if(c.aborted&&!i)return;t&&o&&t.emit(e,n,r);for(var a=p(r),s=v(e),d=s.length,l=0;l<d;l++)s[l].apply(a,n);var f=b()[u[e]];f&&f.push([g,e,n,a]);return a},get:m,listeners:v,context:p,buffer:function(e,t){const n=b();if(t=t||"feature",g.aborted)return;Object.entries(e||{}).forEach((e=>{let[r,i]=e;u[i]=t,t in n||(n[t]=[])}))},abort:d,aborted:!1,isBuffering:function(e){return!!b()[u[e]]},debugId:n,backlog:f?{}:t&&"object"==typeof t.backlog?t.backlog:{},observationContextManager:null};return g;function p(e){return e&&e instanceof a.A?e:e?(0,i.X)(e,s.v.contextId,(()=>g.observationContextManager?g.observationContextManager.getCreateContext(e):new a.A(s.v.contextId))):g.observationContextManager?g.observationContextManager.getCreateContext({}):new a.A(s.v.contextId)}function h(e,t){r[e]=v(e).concat(t)}function v(e){return r[e]||[]}function m(t){const n=l[t]=l[t]||e(g,t);return!n.observationContextManager&&g.observationContextManager&&(n.observationContextManager=g.observationContextManager),n}function b(){return g.backlog}}(void 0,"globalEE"),u=(0,r.fP)();function d(){c.aborted=!0,Object.keys(c.backlog).forEach((e=>{delete c.backlog[e]}))}u.ee||(u.ee=c)},5546:(e,t,n)=>{"use strict";n.d(t,{E:()=>r,p:()=>i});var r=n(2177).ee.get("handle");function i(e,t,n,i,o){o?(o.buffer([e],i),o.emit(e,t,n)):(r.buffer([e],i),r.emit(e,t,n))}},4322:(e,t,n)=>{"use strict";n.d(t,{X:()=>o});var r=n(5546);o.on=a;var i=o.handlers={};function o(e,t,n,o){a(o||r.E,i,e,t,n)}function a(e,t,n,i,o){o||(o="feature"),e||(e=r.E);var a=t[o]=t[o]||{};(a[n]=a[n]||[]).push([e,i])}},3239:(e,t,n)=>{"use strict";n.d(t,{bP:()=>s,iz:()=>c,m$:()=>a});var r=n(385);let i=!1,o=!1;try{const e={get passive(){return i=!0,!1},get signal(){return o=!0,!1}};r._A.addEventListener("test",null,e),r._A.removeEventListener("test",null,e)}catch(e){}function a(e,t){return i||o?{capture:!!e,passive:i,signal:t}:!!e}function s(e,t){let n=arguments.length>2&&void 0!==arguments[2]&&arguments[2],r=arguments.length>3?arguments[3]:void 0;window.addEventListener(e,t,a(n,r))}function c(e,t){let n=arguments.length>2&&void 0!==arguments[2]&&arguments[2],r=arguments.length>3?arguments[3]:void 0;document.addEventListener(e,t,a(n,r))}},4402:(e,t,n)=>{"use strict";n.d(t,{Rl:()=>a,ky:()=>s});var r=n(385);const i="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx";function o(e,t){return e?15&e[t]:16*Math.random()|0}function a(){const e=r._A?.crypto||r._A?.msCrypto;let t,n=0;return e&&e.getRandomValues&&(t=e.getRandomValues(new Uint8Array(30))),i.split("").map((e=>"x"===e?o(t,n++).toString(16):"y"===e?(3&o()|8).toString(16):e)).join("")}function s(e){const t=r._A?.crypto||r._A?.msCrypto;let n,i=0;t&&t.getRandomValues&&(n=t.getRandomValues(new Uint8Array(e)));const a=[];for(var s=0;s<e;s++)a.push(o(n,i++).toString(16));return a.join("")}},7056:(e,t,n)=>{"use strict";n.d(t,{Bq:()=>r,Hb:()=>a,IK:()=>u,K4:()=>i,oD:()=>o,uT:()=>c,wO:()=>s});const r="NRBA",i="SESSION",o=144e5,a=18e5,s={PAUSE:"session-pause",RESET:"session-reset",RESUME:"session-resume",UPDATE:"session-update"},c={SAME_TAB:"same-tab",CROSS_TAB:"cross-tab"},u={OFF:0,FULL:1,ERROR:2}},7894:(e,t,n)=>{"use strict";function r(){return Math.floor(performance.now())}n.d(t,{z:()=>r})},50:(e,t,n)=>{"use strict";function r(e,t){"function"==typeof console.warn&&(console.warn("New Relic: ".concat(e)),t&&console.warn(t))}n.d(t,{Z:()=>r})},2825:(e,t,n)=>{"use strict";n.d(t,{N:()=>d,T:()=>l});var r=n(2177),i=n(5546),o=n(3325),a=n(385);const s="newrelic";const c={stn:[o.D.sessionTrace],err:[o.D.jserrors,o.D.metrics],ins:[o.D.pageAction],spa:[o.D.spa,o.D.softNav],sr:[o.D.sessionReplay,o.D.sessionTrace]},u=new Set;function d(e,t){const n=r.ee.get(t);e&&"object"==typeof e&&(u.has(t)||(Object.entries(e).forEach((e=>{let[t,r]=e;c[t]?c[t].forEach((e=>{r?(0,i.p)("feat-"+t,[],void 0,e,n):(0,i.p)("block-"+t,[],void 0,e,n),(0,i.p)("rumresp-"+t,[Boolean(r)],void 0,e,n)})):r&&(0,i.p)("feat-"+t,[],void 0,void 0,n),l[t]=Boolean(r)})),Object.keys(c).forEach((e=>{void 0===l[e]&&(c[e]?.forEach((t=>(0,i.p)("rumresp-"+e,[!1],void 0,t,n))),l[e]=!1)})),u.add(t),function(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{};try{a._A.dispatchEvent(new CustomEvent(s,{detail:e}))}catch(e){}}({loaded:!0})))}const l={}},2210:(e,t,n)=>{"use strict";n.d(t,{X:()=>i});var r=Object.prototype.hasOwnProperty;function i(e,t,n){if(r.call(e,t))return e[t];var i=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:i,writable:!0,enumerable:!1}),i}catch(e){}return e[t]=i,i}},1284:(e,t,n)=>{"use strict";n.d(t,{D:()=>r});const r=(e,t)=>Object.entries(e||{}).map((e=>{let[n,r]=e;return t(n,r)}))},4351:(e,t,n)=>{"use strict";n.d(t,{P:()=>o});var r=n(2177);const i=()=>{const e=new WeakSet;return(t,n)=>{if("object"==typeof n&&null!==n){if(e.has(n))return;e.add(n)}return n}};function o(e){try{return JSON.stringify(e,i())}catch(e){try{r.ee.emit("internal-error",[e])}catch(e){}}}},3960:(e,t,n)=>{"use strict";n.d(t,{KB:()=>a,b2:()=>o});var r=n(3239);function i(){return"undefined"==typeof document||"complete"===document.readyState}function o(e,t){if(i())return e();(0,r.bP)("load",e,t)}function a(e){if(i())return e();(0,r.iz)("DOMContentLoaded",e)}},8632:(e,t,n)=>{"use strict";n.d(t,{EZ:()=>d,ce:()=>o,ek:()=>u,fP:()=>a,gG:()=>l,h5:()=>c,mF:()=>s});var r=n(7894),i=n(385);const o={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net"};function a(){return i._A.NREUM||(i._A.NREUM={}),void 0===i._A.newrelic&&(i._A.newrelic=i._A.NREUM),i._A.NREUM}function s(){let e=a();return e.o||(e.o={ST:i._A.setTimeout,SI:i._A.setImmediate,CT:i._A.clearTimeout,XHR:i._A.XMLHttpRequest,REQ:i._A.Request,EV:i._A.Event,PR:i._A.Promise,MO:i._A.MutationObserver,FETCH:i._A.fetch}),e}function c(e,t){let n=a();n.initializedAgents??={},t.initializedAt={ms:(0,r.z)(),date:new Date},n.initializedAgents[e]=t}function u(e){let t=a();return t.initializedAgents?.[e]}function d(e,t){a()[e]=t}function l(){return function(){let e=a();const t=e.info||{};e.info={beacon:o.beacon,errorBeacon:o.errorBeacon,...t}}(),function(){let e=a();const t=e.init||{};e.init={...t}}(),s(),function(){let e=a();const t=e.loader_config||{};e.loader_config={...t}}(),a()}},7956:(e,t,n)=>{"use strict";n.d(t,{N:()=>i});var r=n(3239);function i(e){let t=arguments.length>1&&void 0!==arguments[1]&&arguments[1],n=arguments.length>2?arguments[2]:void 0,i=arguments.length>3?arguments[3]:void 0;(0,r.iz)("visibilitychange",(function(){if(t)return void("hidden"===document.visibilityState&&e());e(document.visibilityState)}),n,i)}},3081:(e,t,n)=>{"use strict";n.d(t,{gF:()=>o,mY:()=>i,t9:()=>r,vz:()=>s,xS:()=>a});const r=n(3325).D.metrics,i="sm",o="cm",a="storeSupportabilityMetrics",s="storeEventMetrics"},7633:(e,t,n)=>{"use strict";n.d(t,{t:()=>r});const r=n(3325).D.pageViewEvent},9251:(e,t,n)=>{"use strict";n.d(t,{t:()=>r});const r=n(3325).D.pageViewTiming},7144:(e,t,n)=>{"use strict";n.d(t,{Ef:()=>i});var r=n(7056);n(3325).D.sessionReplay;const i={RECORD:"recordReplay",PAUSE:"pauseReplay"};r.IK.ERROR,r.IK.FULL,r.IK.OFF},5938:(e,t,n)=>{"use strict";n.d(t,{W:()=>i});var r=n(2177);class i{constructor(e,t,n){this.agentIdentifier=e,this.aggregator=t,this.ee=r.ee.get(e),this.featureName=n,this.blocked=!1}}},8862:(e,t,n)=>{"use strict";n.d(t,{j:()=>x});var r=n(3325),i=n(234),o=n(5546),a=n(2177),s=n(7894),c=n(8e3),u=n(3960),d=n(385),l=n(50),f=n(3081),g=n(8632),p=n(7144);const h=["setErrorHandler","finished","addToTrace","addRelease","addPageAction","setCurrentRouteName","setPageViewName","setCustomAttribute","interaction","noticeError","setUserId","setApplicationVersion","start","recordReplay","pauseReplay",p.Ef.RECORD,p.Ef.PAUSE],v=["setErrorHandler","finished","addToTrace","addRelease"];function m(){const e=(0,g.gG)();h.forEach((t=>{e[t]=function(){for(var n=arguments.length,r=new Array(n),i=0;i<n;i++)r[i]=arguments[i];return function(t){for(var n=arguments.length,r=new Array(n>1?n-1:0),i=1;i<n;i++)r[i-1]=arguments[i];let o=[];return Object.values(e.initializedAgents).forEach((e=>{e.exposed&&e.api[t]&&o.push(e.api[t](...r))})),o.length>1?o:o[0]}(t,...r)}}))}var b=n(2825);const y=e=>{const t=e.startsWith("http");e+="/",n.p=t?e:"https://"+e};let A=!1;function x(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{},h=arguments.length>2?arguments[2]:void 0,x=arguments.length>3?arguments[3]:void 0,{init:w,info:_,loader_config:E,runtime:D={loaderType:h},exposed:S=!0}=t;const k=(0,g.gG)();_||(w=k.init,_=k.info,E=k.loader_config),(0,i.Dg)(e.agentIdentifier,w||{}),(0,i.GE)(e.agentIdentifier,E||{}),_.jsAttributes??={},d.v6&&(_.jsAttributes.isWorker=!0),(0,i.CX)(e.agentIdentifier,_);const R=(0,i.P_)(e.agentIdentifier),N=[_.beacon,_.errorBeacon];A||(R.proxy.assets&&(y(R.proxy.assets),N.push(R.proxy.assets)),R.proxy.beacon&&N.push(R.proxy.beacon),m(),(0,g.EZ)("activatedFeatures",b.T),e.runSoftNavOverSpa&&=!0===R.soft_navigations.enabled&&R.feature_flags.includes("soft_nav")),D.denyList=[...R.ajax.deny_list||[],...R.ajax.block_internal?N:[]],(0,i.sU)(e.agentIdentifier,D),void 0===e.api&&(e.api=function(e,t){let g=arguments.length>2&&void 0!==arguments[2]&&arguments[2];t||(0,c.R)(e,"api");const h={};var m=a.ee.get(e),b=m.get("tracer"),y="api-",A=y+"ixn-";function x(t,n,r,o){const a=(0,i.C5)(e);return null===n?delete a.jsAttributes[t]:(0,i.CX)(e,{...a,jsAttributes:{...a.jsAttributes,[t]:n}}),E(y,r,!0,o||null===n?"session":void 0)(t,n)}function w(){}v.forEach((e=>{h[e]=E(y,e,!0,"api")})),h.addPageAction=E(y,"addPageAction",!0,r.D.pageAction),h.setPageViewName=function(t,n){if("string"==typeof t)return"/"!==t.charAt(0)&&(t="/"+t),(0,i.OP)(e).customTransaction=(n||"http://custom.transaction")+t,E(y,"setPageViewName",!0)()},h.setCustomAttribute=function(e,t){let n=arguments.length>2&&void 0!==arguments[2]&&arguments[2];if("string"==typeof e){if(["string","number","boolean"].includes(typeof t)||null===t)return x(e,t,"setCustomAttribute",n);(0,l.Z)("Failed to execute setCustomAttribute.\nNon-null value must be a string, number or boolean type, but a type of <".concat(typeof t,"> was provided."))}else(0,l.Z)("Failed to execute setCustomAttribute.\nName must be a string type, but a type of <".concat(typeof e,"> was provided."))},h.setUserId=function(e){if("string"==typeof e||null===e)return x("enduser.id",e,"setUserId",!0);(0,l.Z)("Failed to execute setUserId.\nNon-null value must be a string type, but a type of <".concat(typeof e,"> was provided."))},h.setApplicationVersion=function(e){if("string"==typeof e||null===e)return x("application.version",e,"setApplicationVersion",!1);(0,l.Z)("Failed to execute setApplicationVersion. Expected <String | null>, but got <".concat(typeof e,">."))},h.start=e=>{try{const t=e?"defined":"undefined";(0,o.p)(f.xS,["API/start/".concat(t,"/called")],void 0,r.D.metrics,m);const n=Object.values(r.D);if(void 0===e)e=n;else{if((e=Array.isArray(e)&&e.length?e:[e]).some((e=>!n.includes(e))))return(0,l.Z)("Invalid feature name supplied. Acceptable feature names are: ".concat(n));e.includes(r.D.pageViewEvent)||e.push(r.D.pageViewEvent)}e.forEach((e=>{m.emit("".concat(e,"-opt-in"))}))}catch(e){(0,l.Z)("An unexpected issue occurred",e)}},h[p.Ef.RECORD]=function(){(0,o.p)(f.xS,["API/recordReplay/called"],void 0,r.D.metrics,m),(0,o.p)(p.Ef.RECORD,[],void 0,r.D.sessionReplay,m)},h[p.Ef.PAUSE]=function(){(0,o.p)(f.xS,["API/pauseReplay/called"],void 0,r.D.metrics,m),(0,o.p)(p.Ef.PAUSE,[],void 0,r.D.sessionReplay,m)},h.interaction=function(e){return(new w).get("object"==typeof e?e:{})};const _=w.prototype={createTracer:function(e,t){var n={},i=this,a="function"==typeof t;return(0,o.p)(f.xS,["API/createTracer/called"],void 0,r.D.metrics,m),g||(0,o.p)(A+"tracer",[(0,s.z)(),e,n],i,r.D.spa,m),function(){if(b.emit((a?"":"no-")+"fn-start",[(0,s.z)(),i,a],n),a)try{return t.apply(this,arguments)}catch(e){throw b.emit("fn-err",[arguments,this,e],n),e}finally{b.emit("fn-end",[(0,s.z)()],n)}}}};function E(e,t,n,i){return function(){return(0,o.p)(f.xS,["API/"+t+"/called"],void 0,r.D.metrics,m),i&&(0,o.p)(e+t,[(0,s.z)(),...arguments],n?null:this,i,m),n?void 0:this}}function D(){n.e(75).then(n.bind(n,7438)).then((t=>{let{setAPI:n}=t;n(e),(0,c.L)(e,"api")})).catch((()=>{(0,l.Z)("Downloading runtime APIs failed..."),(0,c.L)(e,"api",!0)}))}return["actionText","setName","setAttribute","save","ignore","onEnd","getContext","end","get"].forEach((e=>{_[e]=E(A,e,void 0,g?r.D.softNav:r.D.spa)})),h.setCurrentRouteName=g?E(A,"routeName",void 0,r.D.softNav):E(y,"routeName",!0,r.D.spa),h.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),(0,o.p)(f.xS,["API/noticeError/called"],void 0,r.D.metrics,m),(0,o.p)("err",[e,(0,s.z)(),!1,t],void 0,r.D.jserrors,m)},d.il?(0,u.b2)((()=>D()),!0):D(),h}(e.agentIdentifier,x,e.runSoftNavOverSpa)),void 0===e.exposed&&(e.exposed=S),A=!0}},1926:(e,t,n)=>{n.nc=(()=>{try{return document?.currentScript?.nonce}catch(e){}return""})()},3325:(e,t,n)=>{"use strict";n.d(t,{D:()=>r,p:()=>i});const r={ajax:"ajax",jserrors:"jserrors",metrics:"metrics",pageAction:"page_action",pageViewEvent:"page_view_event",pageViewTiming:"page_view_timing",sessionReplay:"session_replay",sessionTrace:"session_trace",softNav:"soft_navigations",spa:"spa"},i={[r.pageViewEvent]:1,[r.pageViewTiming]:2,[r.metrics]:3,[r.jserrors]:4,[r.ajax]:5,[r.sessionTrace]:6,[r.pageAction]:7,[r.spa]:8,[r.softNav]:9,[r.sessionReplay]:10}}},r={};function i(e){var t=r[e];if(void 0!==t)return t.exports;var o=r[e]={exports:{}};return n[e](o,o.exports,i),o.exports}i.m=n,i.d=(e,t)=>{for(var n in t)i.o(t,n)&&!i.o(e,n)&&Object.defineProperty(e,n,{enumerable:!0,get:t[n]})},i.f={},i.e=e=>Promise.all(Object.keys(i.f).reduce(((t,n)=>(i.f[n](e,t),t)),[])),i.u=e=>"nr-rum-1.253.0.min.js",i.o=(e,t)=>Object.prototype.hasOwnProperty.call(e,t),e={},t="NRBA-1.253.0.PROD:",i.l=(n,r,o,a)=>{if(e[n])e[n].push(r);else{var s,c;if(void 0!==o)for(var u=document.getElementsByTagName("script"),d=0;d<u.length;d++){var l=u[d];if(l.getAttribute("src")==n||l.getAttribute("data-webpack")==t+o){s=l;break}}if(!s){c=!0;var f={75:"sha512-9bAiHIPyDQsfH3twE5thQ79NZloqHEfmncprWhfUn+VZFlQhRa05+ziJ9iJfmPRs6DoQA5H7S/VrlzQnvif2nQ=="};(s=document.createElement("script")).charset="utf-8",s.timeout=120,i.nc&&s.setAttribute("nonce",i.nc),s.setAttribute("data-webpack",t+o),s.src=n,0!==s.src.indexOf(window.location.origin+"/")&&(s.crossOrigin="anonymous"),f[a]&&(s.integrity=f[a])}e[n]=[r];var g=(t,r)=>{s.onerror=s.onload=null,clearTimeout(p);var i=e[n];if(delete e[n],s.parentNode&&s.parentNode.removeChild(s),i&&i.forEach((e=>e(r))),t)return t(r)},p=setTimeout(g.bind(null,void 0,{type:"timeout",target:s}),12e4);s.onerror=g.bind(null,s.onerror),s.onload=g.bind(null,s.onload),c&&document.head.appendChild(s)}},i.r=e=>{"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},i.p="https://js-agent.newrelic.com/",(()=>{var e={50:0,832:0};i.f.j=(t,n)=>{var r=i.o(e,t)?e[t]:void 0;if(0!==r)if(r)n.push(r[2]);else{var o=new Promise(((n,i)=>r=e[t]=[n,i]));n.push(r[2]=o);var a=i.p+i.u(t),s=new Error;i.l(a,(n=>{if(i.o(e,t)&&(0!==(r=e[t])&&(e[t]=void 0),r)){var o=n&&("load"===n.type?"missing":n.type),a=n&&n.target&&n.target.src;s.message="Loading chunk "+t+" failed.\n("+o+": "+a+")",s.name="ChunkLoadError",s.type=o,s.request=a,r[1](s)}}),"chunk-"+t,t)}};var t=(t,n)=>{var r,o,[a,s,c]=n,u=0;if(a.some((t=>0!==e[t]))){for(r in s)i.o(s,r)&&(i.m[r]=s[r]);if(c)c(i)}for(t&&t(n);u<a.length;u++)o=a[u],i.o(e,o)&&e[o]&&e[o][0](),e[o]=0},n=self["webpackChunk:NRBA-1.253.0.PROD"]=self["webpackChunk:NRBA-1.253.0.PROD"]||[];n.forEach(t.bind(null,0)),n.push=t.bind(null,n.push.bind(n))})(),(()=>{"use strict";i(1926);var e=i(50),t=i(7144),n=i(8929),r=i(4402),o=i(2177);class a{agentIdentifier;observationContext=new n.v;constructor(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:(0,r.ky)(16);this.agentIdentifier=e;o.ee.get(e).observationContext=this.observationContext}#t(t){for(var n=arguments.length,r=new Array(n>1?n-1:0),i=1;i<n;i++)r[i-1]=arguments[i];if("function"==typeof this.api?.[t])return this.api[t](...r);(0,e.Z)("Call to agent api ".concat(t," failed. The API is not currently initialized."))}addPageAction(e,t){return this.#t("addPageAction",e,t)}setPageViewName(e,t){return this.#t("setPageViewName",e,t)}setCustomAttribute(e,t,n){return this.#t("setCustomAttribute",e,t,n)}noticeError(e,t){return this.#t("noticeError",e,t)}setUserId(e){return this.#t("setUserId",e)}setApplicationVersion(e){return this.#t("setApplicationVersion",e)}setErrorHandler(e){return this.#t("setErrorHandler",e)}finished(e){return this.#t("finished",e)}addRelease(e,t){return this.#t("addRelease",e,t)}start(e){return this.#t("start",e)}recordReplay(){return this.#t(t.Ef.RECORD)}pauseReplay(){return this.#t(t.Ef.PAUSE)}addToTrace(e){return this.#t("addToTrace",e)}setCurrentRouteName(e){return this.#t("setCurrentRouteName",e)}interaction(){return this.#t("interaction")}}var s=i(3325),c=i(234);const u=Object.values(s.D);function d(e){const t={};return u.forEach((n=>{t[n]=function(e,t){return!0===(0,c.Mt)(t,"".concat(e,".enabled"))}(n,e)})),t}var l=i(8862);var f=i(8e3),g=i(5938),p=i(3960),h=i(385);const v=e=>h.il&&!0===(0,c.Mt)(e,"privacy.cookies_enabled");function m(e){return c.Yu.MO&&v&&!0===(0,c.Mt)(e,"session_trace.enabled")}class b extends g.W{constructor(e,t,n){let r=!(arguments.length>3&&void 0!==arguments[3])||arguments[3];super(e,t,n),this.auto=r,this.abortHandler=void 0,this.featAggregate=void 0,this.onAggregateImported=void 0,!1===(0,c.Mt)(this.agentIdentifier,"".concat(this.featureName,".autoStart"))&&(this.auto=!1),this.auto&&(0,f.R)(e,n)}importAggregator(){let t,n=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{};if(this.featAggregate)return;if(!this.auto)return void this.ee.on("".concat(this.featureName,"-opt-in"),(()=>{(0,f.R)(this.agentIdentifier,this.featureName),this.auto=!0,this.importAggregator()}));this.onAggregateImported=new Promise((e=>{t=e}));const r=async()=>{let r;try{if(v(this.agentIdentifier)){const{setupAgentSession:e}=await i.e(75).then(i.bind(i,3108));r=e(this.agentIdentifier)}}catch(t){(0,e.Z)("A problem occurred when starting up session manager. This page will not start or extend any session.",t),this.featureName===s.D.sessionReplay&&this.abortHandler?.()}try{if(!this.#n(this.featureName,r))return(0,f.L)(this.agentIdentifier,this.featureName),void t(!1);const{lazyFeatureLoader:e}=await i.e(75).then(i.bind(i,8582)),{Aggregate:o}=await e(this.featureName,"aggregate");this.featAggregate=new o(this.agentIdentifier,this.aggregator,n),t(!0)}catch(n){(0,e.Z)("Downloading and initializing ".concat(this.featureName," failed..."),n),this.abortHandler?.(),(0,f.L)(this.agentIdentifier,this.featureName,!0),t(!1)}};h.il?(0,p.b2)((()=>r()),!0):r()}#n(e,t){return e!==s.D.sessionReplay||(n=this.agentIdentifier,r=t,!(!m(n)||!r?.isNew&&!r?.state.sessionReplayMode));var n,r}}var y=i(7633);class A extends b{static featureName=y.t;constructor(e,t){let n=!(arguments.length>2&&void 0!==arguments[2])||arguments[2];super(e,t,y.t,n),this.importAggregator()}}var x=i(1117),w=i(1284);class _ extends x.w{constructor(e){super(e),this.aggregatedData={}}store(e,t,n,r,i){var o=this.getBucket(e,t,n,i);return o.metrics=function(e,t){t||(t={count:0});return t.count+=1,(0,w.D)(e,(function(e,n){t[e]=E(n,t[e])})),t}(r,o.metrics),o}merge(e,t,n,r,i){var o=this.getBucket(e,t,r,i);if(o.metrics){var a=o.metrics;a.count+=n.count,(0,w.D)(n,(function(e,t){if("count"!==e){var r=a[e],i=n[e];i&&!i.c?a[e]=E(i.t,r):a[e]=function(e,t){if(!t)return e;t.c||(t=D(t.t));return t.min=Math.min(e.min,t.min),t.max=Math.max(e.max,t.max),t.t+=e.t,t.sos+=e.sos,t.c+=e.c,t}(i,a[e])}}))}else o.metrics=n}storeMetric(e,t,n,r){var i=this.getBucket(e,t,n);return i.stats=E(r,i.stats),i}getBucket(e,t,n,r){this.aggregatedData[e]||(this.aggregatedData[e]={});var i=this.aggregatedData[e][t];return i||(i=this.aggregatedData[e][t]={params:n||{}},r&&(i.custom=r)),i}get(e,t){return t?this.aggregatedData[e]&&this.aggregatedData[e][t]:this.aggregatedData[e]}take(e){for(var t={},n="",r=!1,i=0;i<e.length;i++)t[n=e[i]]=Object.values(this.aggregatedData[n]||{}),t[n].length&&(r=!0),delete this.aggregatedData[n];return r?t:null}}function E(e,t){return null==e?function(e){e?e.c++:e={c:1};return e}(t):t?(t.c||(t=D(t.t)),t.c+=1,t.t+=e,t.sos+=e*e,e>t.max&&(t.max=e),e<t.min&&(t.min=e),t):{t:e}}function D(e){return{t:e,min:e,max:e,sos:e*e,c:1}}var S=i(8632),k=i(4351);var R=i(5546),N=i(7956),C=i(3239),j=i(7894),I=i(9251);class O extends b{static featureName=I.t;constructor(e,t){let n=!(arguments.length>2&&void 0!==arguments[2])||arguments[2];super(e,t,I.t,n),h.il&&((0,N.N)((()=>(0,R.p)("docHidden",[(0,j.z)()],void 0,I.t,this.ee)),!0),(0,C.bP)("pagehide",(()=>(0,R.p)("winPagehide",[(0,j.z)()],void 0,I.t,this.ee))),this.importAggregator())}}var T=i(3081);class P extends b{static featureName=T.t9;constructor(e,t){let n=!(arguments.length>2&&void 0!==arguments[2])||arguments[2];super(e,t,T.t9,n),this.importAggregator()}}new class extends a{constructor(t,n){super(n),h._A?(this.sharedAggregator=new _({agentIdentifier:this.agentIdentifier}),this.features={},(0,S.h5)(this.agentIdentifier,this),this.desiredFeatures=new Set(t.features||[]),this.desiredFeatures.add(A),this.runSoftNavOverSpa=[...this.desiredFeatures].some((e=>e.featureName===s.D.softNav)),(0,l.j)(this,t,t.loaderType||"agent"),this.run()):(0,e.Z)("Failed to initial the agent. Could not determine the runtime environment.")}get config(){return{info:this.info,init:this.init,loader_config:this.loader_config,runtime:this.runtime}}run(){try{const t=d(this.agentIdentifier),n=[...this.desiredFeatures];n.sort(((e,t)=>s.p[e.featureName]-s.p[t.featureName])),n.forEach((n=>{if(!t[n.featureName]&&n.featureName!==s.D.pageViewEvent)return;if(this.runSoftNavOverSpa&&n.featureName===s.D.spa)return;if(!this.runSoftNavOverSpa&&n.featureName===s.D.softNav)return;const r=function(e){switch(e){case s.D.ajax:return[s.D.jserrors];case s.D.sessionTrace:return[s.D.ajax,s.D.pageViewEvent];case s.D.sessionReplay:return[s.D.sessionTrace];case s.D.pageViewTiming:return[s.D.pageViewEvent];default:return[]}}(n.featureName);r.every((e=>e in this.features))||(0,e.Z)("".concat(n.featureName," is enabled but one or more dependent features has not been initialized (").concat((0,k.P)(r),"). This may cause unintended consequences or missing data...")),this.features[n.featureName]=new n(this.agentIdentifier,this.sharedAggregator)}))}catch(t){(0,e.Z)("Failed to initialize all enabled instrument classes (agent aborted) -",t);for(const e in this.features)this.features[e].abortHandler?.();const n=(0,S.fP)();return delete n.initializedAgents[this.agentIdentifier]?.api,delete n.initializedAgents[this.agentIdentifier]?.features,delete this.sharedAggregator,n.ee?.abort(),delete n.ee?.get(this.agentIdentifier),!1}}}({features:[A,O,P],loaderType:"lite"})})()})();</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-1481478-55"></script>
+<script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments)};gtag("js", new Date());gtag("set", "developer_id.dMDhkMT", true);gtag("config", "UA-1481478-55", {"groups":"default","anonymize_ip":true,"page_placeholder":"PLACEHOLDER_page_path","allow_ad_personalization_signals":false});gtag("config", "G-ZNNFJGFKZ4", {"groups":"default","page_placeholder":"PLACEHOLDER_page_location","allow_ad_personalization_signals":false});</script>
+<meta name="description" content="The official website of the State of New York. Find information about state government agencies and learn more about our programs and services.">
+<link rel="shortlink" href="https://www.ny.gov/">
+<link rel="canonical" href="https://www.ny.gov/">
+<link rel="image_src" href="/profiles/contrib/nygov/themes/custom/nygov-theme/storybook/assets/nygov-logo-share.png">
+<meta property="og:site_name" content="The Official Website of New York State">
+<meta property="og:url" content="https://www.ny.gov/">
+<meta property="og:title" content="The Official Website of New York State">
+<meta property="og:description" content="The official website of the State of New York. Find information about state government agencies and learn more about our programs and services.">
+<meta property="og:image" content="https://www.ny.gov/sites/default/files/thumbnails/image/NYGovFacebookMeta01LightGray.png">
+<meta property="og:image:url" content="https://www.ny.gov/sites/default/files/thumbnails/image/NYGovFacebookMeta01LightGray.png">
+<meta property="og:image:secure_url" content="https://www.ny.gov/sites/default/files/thumbnails/image/NYGovFacebookMeta01LightGray.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:alt" content="An image of the outline of New York state with the text New York State">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="The official website of the State of New York. Find information about state government agencies and learn more about our programs and services.">
+<meta name="twitter:title" content="The Official Website of New York State">
+<meta name="twitter:url" content="https://www.ny.gov/">
+<meta name="twitter:image:alt" content="An image of the outline of New York state with the text New York State">
+<meta name="twitter:image" content="https://www.ny.gov/sites/default/files/thumbnails/image/NYGovFacebookMeta01LightGray.png">
+<meta name="Generator" content="Drupal 10 (https://www.drupal.org)">
+<meta name="MobileOptimized" content="width">
+<meta name="HandheldFriendly" content="true">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="/profiles/contrib/nygov/themes/custom/nygov-theme/nygov_theme/favicon.ico" type="image/vnd.microsoft.icon">
+<script src="/sites/default/files/google_tag/nygov/google_tag.script.js?sbenpv" defer=""></script>
+
+    <title>The Official Website of New York State</title>
+    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_UtIt-_hMSIR1Vqwj9ncIhpbnIwau2hqfB_VLV68kvWE.css?delta=0&amp;language=en&amp;theme=nygov_theme&amp;include=eJxdykEKgDAMRNELVXokiWWIhbSBThHi6UV0o7vHn1F3NazSxWLWwqy_kBicaHkTIhUTMj5uIEXBVHwgdx9NrJ5IPdSPde5oyGq-iS2cYbXrOz3_m8vNC5b5NfY">
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_cSjgOx0boOMY6xds5N1AsHJSdWUtJuedKgB4_oE8muw.css?delta=1&amp;language=en&amp;theme=nygov_theme&amp;include=eJxdykEKgDAMRNELVXokiWWIhbSBThHi6UV0o7vHn1F3NazSxWLWwqy_kBicaHkTIhUTMj5uIEXBVHwgdx9NrJ5IPdSPde5oyGq-iS2cYbXrOz3_m8vNC5b5NfY">
+<link rel="stylesheet" media="all" href="/profiles/contrib/nygov/themes/custom/nygov-theme/nygov_theme/../storybook/dist/styles.css?sbenpv">
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_VnRy599hY6Nx0L5fYFgD3BNgnoA6Cnr4lsZvmsMLa_Y.css?delta=3&amp;language=en&amp;theme=nygov_theme&amp;include=eJxdykEKgDAMRNELVXokiWWIhbSBThHi6UV0o7vHn1F3NazSxWLWwqy_kBicaHkTIhUTMj5uIEXBVHwgdx9NrJ5IPdSPde5oyGq-iS2cYbXrOz3_m8vNC5b5NfY">
+
+    
+  <script type="text/javascript" async="" src="//static-assets.ny.gov/sites/all/widgets/universal-navigation/js/dist/global-nav-bundle.js"></script><link type="text/css" rel="stylesheet" href="//static-assets.ny.gov/sites/all/themes/ny_gov/css/layouts/global-menu/global-menu.normalize.css"><link type="text/css" rel="stylesheet" href="//static-assets.ny.gov/sites/all/modules/contrib/jquery_update/replace/ui/themes/base/minified/jquery.ui.core.min.css"><link type="text/css" rel="stylesheet" href="//static-assets.ny.gov/sites/all/modules/contrib/jquery_update/replace/ui/themes/base/minified/jquery.ui.theme.min.css"><link type="text/css" rel="stylesheet" href="//static-assets.ny.gov/sites/all/modules/contrib/jquery_update/replace/ui/themes/base/minified/jquery.ui.autocomplete.min.css"><link type="text/css" rel="stylesheet" href="//static-assets.ny.gov/sites/all/themes/ny_gov/css/layouts/global-menu/global-menu.layout.css"><link type="text/css" rel="stylesheet" href="//static-assets.ny.gov/sites/all/themes/ny_gov/css/layouts/global-menu/global-footer.layout.css"></head>
+  <body class="path-frontpage page-node-type-landing-page">
+        <a href="#main-content" class="visually-hidden focusable skip-link">
+      Skip to main content
+    </a>
+      <div id="nygov-universal-navigation" class="nygov-universal-container" data-iframe="true" data-updated="2014-11-07 08:30">
+        <noscript>
+            <iframe width="100%" height="86px" src="//static-assets.ny.gov/load_global_menu/ajax?iframe=true" frameborder="0" style="border:none; overflow:hidden; width:100%; height:86px;" scrolling="no">
+                Your browser does not support iFrames
+            </iframe>
+        </noscript>
+        <script type="text/javascript">
+            var _NY = {
+                HOST: "static-assets.ny.gov",
+                BASE_HOST: "www.ny.gov",
+                hideSettings: false,
+                hideSearch: false
+            };
+            (function (document, bundle, head) {
+                head = document.getElementsByTagName('head')[0];
+                bundle = document.createElement('script');
+                bundle.type = 'text/javascript';
+                bundle.async = true;
+                bundle.src = "//static-assets.ny.gov/sites/all/widgets/universal-navigation/js/dist/global-nav-bundle.js";
+                head.appendChild(bundle);
+            }(document));
+        </script>
+      
+<div id="nygov-universal-notification" class="nygov-universal-notification"></div>
+<div id="nygov-global-notification" class="nygov-universal-notification"></div>
+
+<div class="nygov-universal-navigation" id="ny-universal-navigation">
+
+    <header class="l-header nygov-header" role="banner" id="nygov-header">
+          <div class="l-region l-region--header">
+    
+
+<div class="panel-pane pane-page-logo">
+    
+            
+    
+    <div class="pane-content">
+        <a href="https://www.ny.gov" rel="home" title="New York State Home"><img src="//static-assets.ny.gov/sites/all/themes/ny_gov/images/nygov-logo.png" alt="New York State Home"></a>
+
+    </div>
+
+    
+    </div>
+
+<div class="panel-pane pane-views pane-ny-gov-global-menu">
+  
+      
+  
+  <div class="pane-content">
+    <div class="view view-ny-gov-global-menu view-id-ny_gov_global_menu view-display-id-block nygov-header view-dom-id-8a7ba17fb4ba884e0902b6f0af210c99">
+        
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first views-row-last">
+      
+  <div class="views-field views-field-title">        <span class="field-content"><ul class="links"><li class="menu-3571 first"><a href="https://www.ny.gov/services">Services</a></li>
+<li class="menu-19986"><a href="https://www.governor.ny.gov/news">News</a></li>
+<li class="menu-3566 last"><a href="https://www.ny.gov/agencies">Government</a></li>
+</ul>
+<!-- <ul class="settings-sub-menu" id="settings-sub-menu">
+    <li class="ny-setting-location">
+        <a data-menu="ny-drop-menu-locations" href="#"> Location</a></li>
+    <li class="ny-setting-translate">
+        <a id="ny-gov-translate" href="#"> Translate</a>
+
+        <div id="google_translate_element"></div>
+        <script type="text/javascript">
+            function googleTranslateElementInit () {
+                new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+            }
+        </script>
+        <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+   <a class="translate-disclaimer" href="http://www.ny.gov/google-translate-disclaimer">(Disclaimer)</a>
+    </li>
+</ul> -->
+
+</span>  </div>  
+  <div class="views-field views-field-nothing">        <span class="field-content"><div id="nav-meta" class="nygov-universal_searcher">
+  <form style="right: 0px;">
+    <input id="ny-global-search" aria-label="search" class="nav-link nav-link-search nygov-universal_searcher-input ui-autocomplete-input" data-type="search" placeholder="Search" autocomplete="off"><span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span>
+    <span class="icon-search"></span>
+    <button type="submit" class="submit-search">Submit</button>
+  </form>
+
+<!--   <button class="nav-link nav-link-settings" id="nav-button-settings">
+    settings
+  </button> -->
+
+</div>
+
+
+</span>  </div>  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>  </div>
+
+  
+  </div>
+  </div>
+        <div id="expand-menu-mobile"></div>
+    </header>
+
+    
+
+    
+
+<div id="ny-drop-menu-current" class="ny-drop-menu-current" style="height: 0px;">
+
+        <div id="ny-drop-menu-services" class="ny-drop-menu ny-drop-menu-services">
+          <h2 class="mobile-title">Services</h2>
+
+	  
+            <div class="l-region l-region--my-services">
+                <h2 class="pane-title">
+                    My Services
+                    <a href="http://www.ny.gov/my-services" class="see-all-btn">See all</a>
+                </h2>
+                <div class="view-global-nav-drop-downs my-services-list" id="my-services-list">
+
+                </div>
+            </div>
+            <div class="ny-drop-menu-close"></div>
+        </div>
+
+        <div id="ny-drop-menu-news" class="ny-drop-menu ny-drop-menu-news">
+    <h2 class="mobile-title">News</h2>
+
+                <div class="ny-drop-menu-close"></div>
+        </div>
+        <div id="ny-drop-menu-government" class="ny-drop-menu ny-drop-menu-government">
+          <h2 class="mobile-title">Government</h2>
+
+	  
+            <div class="ny-drop-menu-close"></div>
+        </div>
+        <div id="ny-drop-menu-recommended-results" class="ny-drop-menu ny-drop-menu-recommended-results">
+            <h2 class="mobile-title">Recommended Search Results</h2>
+            <h2 class="pane-title">Recommended Search Results</h2>
+            <div id="nygov-universal_searcher-results" class="nygov-universal_searcher-results clearfix"></div>
+            <div id="nygov-universal_searcher-more" class="nygov-universal_searcher-more"></div>
+            <div class="ny-drop-menu-close"></div>
+        </div>
+        <!-- <div id="ny-drop-menu-locations" class="ny-drop-menu ny-drop-menu-locations">
+            <h2 class="mobile-title">Enter Location</h2>
+            <div class="l-region l-region--locations">
+                <h2 class="pane-title">Enter Location</h2>
+                <div class="location-autocomplete">
+                   <label for="google-places">Enter a street address, city or town</label>
+                    <input type="text" id="places-input" class="form-text" aria-label="Enter a street address, city or town" placeholder="Enter a street address, city or town">
+                    <input type="submit" class="form-submit" value="update" id="location-update-btn" disabled>
+                    <div id="places-updated" class="places-updated">Your location has been updated</div>
+                </div>
+            </div>
+            <div class="ny-drop-menu-close"></div>
+        </div> -->
+    </div><div id="nygov-autocomplete-results"><ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content ui-corner-all" id="ui-id-1" tabindex="0" style="display: none;"></ul></div></div>
+
+<script type="text/template" id="saved-service-tpl">
+    <% _.each(myServices, function(service) { %>
+        <div class="views-row">
+            <div class="views-field views-field-title">
+                <div class="field-content"><a href="<%= service.link %>"><%= service.title %></a></div>
+            </div>
+            <div class="views-field views-field-nothing">
+                <div class="field-content"><a data-nid="<%= service.nid %>" title="Remove Saved Item"
+                                              href="javascript:void(0);">saved</a></div>
+            </div>
+        </div>
+    <% }); %>
+    <a href="http://www.ny.gov/my-services" class="drop-menu-btn">See My Services</a>
+</script>
+
+<script type="text/template" id="no-services-tpl">
+    <div class="no-saved-services">
+        <div class="big-star"></div>
+        <div class="no-saved-services-text">
+            While browsing through<br/>
+            services click on the <span>Star</span><br/>
+            to save for later.
+        </div>
+    </div>
+</script>
+
+<script type="text/template" id="emergency-notification-tpl">
+    <a href="<%=emergency.link%>">
+        <p class="nygov-emergency-date-title">
+            <span class="icon-alert"></span>
+            <span class="nygov-emergency-date">
+                <%=moment(emergency.update_date).format('[<strong>]MMMM D, YYYY[</strong>] | h:mm a z')%>
+            </span>
+            <span class="nygov-emergency-title">
+                <%=emergency.title%>
+            </span>
+        </p>
+        <p class="nygov-emergency-description">
+            <%=emergency.description%>
+            <span class="nygov-emergency-see-all">
+                <%=emergency.link_label%>
+            </span>
+        </p>
+    </a>
+</script>
+</div>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5NV7GK" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas="">
+    
+<div class="layout-container">
+
+  <header role="banner">
+    
+  </header>
+
+  
+  
+  
+  
+  
+
+  
+  <main role="main">
+    <a id="main-content" tabindex="-1" data-once="nygovExitModal"></a>
+    <div class="layout-content">
+        <div class="region region-content">
+    <div data-drupal-messages-fallback="" class="hidden"></div>
+
+  
+
+<article class="node node--type-landing-page node--promoted node--view-mode-full">
+      
+<article class="p-landing-page -full-page ">
+      <div class="t-section -container">
+													
+			
+
+
+	<style>
+		.o-hero .o-hero__wrapper {
+			background-image: url('https://www.ny.gov/sites/default/files/styles/hero_mobile/public/2024-04/earthquake_hero2.jpg?h=b5f6a62e&itok=Toxx1P3b');
+		}
+		@media(min-width: 768px) {
+			.o-hero .o-hero__wrapper {
+				background-image: url('https://www.ny.gov/sites/default/files/styles/hero_narrow/public/2024-04/earthquake_hero2.jpg?h=b5f6a62e&itok=MibvoRkZ');
+			}
+		}
+		@media(min-width: 1280px) {
+			.o-hero .o-hero__wrapper {
+				background-image: url('https://www.ny.gov/sites/default/files/styles/hero_wide/public/2024-04/earthquake_hero2.jpg?h=b5f6a62e&itok=uwtsrSt6');
+			}
+			.o-hero .o-hero__wrapper.-right {
+				background-image: url('https://www.ny.gov/sites/default/files/styles/hero_wide/public/2024-04/earthquake_hero2.jpg?h=b5f6a62e&itok=uwtsrSt6');
+			}
+			.o-hero .o-hero__wrapper.-bottom {
+				background-image: url('https://www.ny.gov/sites/default/files/styles/hero_wide/public/2024-04/earthquake_hero2.jpg?h=b5f6a62e&itok=uwtsrSt6');
+			}
+		}
+	</style>
+
+	<div class="o-hero -landingPage -right">
+		<div class="o-hero__wrapper -right"></div>
+		
+
+	
+				
+	
+	<div class="bg-primary-blue text-white m-hero__meta -landingHero -right">
+							<div class="m-nygov__hero -viewHeader">
+					<h1 class="a-title a-nygov__hero -slogan">
+    The Official Website of New York State
+  </h1>
+
+
+			</div>
+		
+		<div class="m-landingHero__contentWrapper -right">
+			<div class="m-landingHero__content">
+								<div class="m-landingHero__date">
+					  <span class="a-date a-hero__dateLanding">April 05, 2024</span>
+				</div>
+				<div class="m-landingHero__title">
+					
+	<h2 class="a-title a-hero__titleLanding">
+    Earthquake Response Underway Across NYS
+  </h2>
+
+				</div>
+				<div class="m-landingHero__description">
+					
+
+  <div class="a-text__string a-hero__description -text">Governor Hochul updated New Yorkers about the State's response following a 4.8 magnitude earthquake on Friday morning that was centered in New Jersey and felt throughout the state.</div>
+
+
+				</div>
+			</div>
+
+							<div class="m-landingHero__buttons">
+					
+											<div class="m-landingHero__buttonsRow">
+								<a class="a-hero__btn -linkLanding" href="https://www.governor.ny.gov/news/video-audio-photos-rush-transcript-governor-hochul-updates-new-yorkers-earthquake-response" data-once="nygovExitModal">Press release</a>
+
+
+
+
+
+
+
+
+
+
+
+							<span class="text-primary-gold" aria-hidden="true"></span>
+						</div>
+															
+				</div>
+					</div>
+	</div>
+
+
+
+
+
+
+
+
+
+
+	</div>
+
+
+
+
+
+
+
+
+
+
+			
+								
+		
+		
+		
+		
+		
+		
+		
+		
+				
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+    
+    
+    
+			
+		
+		
+		
+		
+		
+		
+		
+		
+							
+										<div class="t-section__content -no-margin-top"> 
+<div class="bg-card-cta o-popularServices">
+		<div class="m-popularService__title -container">
+		<div class="bg-primary-blue text-white m-popularService__title">
+			
+	<h2 class="a-title ">
+    Popular Services
+  </h2>
+
+					</div>
+		<canvas id="popularServicesCanvasSection" height="220" aria-label="half circle for decoration only" role="img" width="50">
+		<p> Canvas half circle for decoration only </p>
+		</canvas>
+	</div>
+
+	<div class="o-popularService__cardsWrapper">
+		<div class="o-popularService__cardsContainer">
+							
+				
+	<div class="m-popularService__card">
+		<div class="m-popularService__button">
+			<a href="https://www.ny.gov/services/register-vote" class="a-hero__btn -link" data-once="nygovExitModal">
+				<div class="m-popularService__icon" style="background-image: url('https://www.ny.gov/sites/default/files/2024-02/votetallybox.svg');"></div>
+				<span class="text">Register to Vote</span>
+			</a>
+		</div>
+	</div>
+							
+				
+	<div class="m-popularService__card">
+		<div class="m-popularService__button">
+			<a href="/services/apply-snap" class="a-hero__btn -link" data-once="nygovExitModal">
+				<div class="m-popularService__icon" style="background-image: url('https://www.ny.gov/sites/default/files/2021-06/SocialPrograms.svg');"></div>
+				<span class="text">Apply for SNAP</span>
+			</a>
+		</div>
+	</div>
+							
+				
+	<div class="m-popularService__card">
+		<div class="m-popularService__button">
+			<a href="https://www.hesc.ny.gov/fafsaready" class="a-hero__btn -link" data-once="nygovExitModal">
+				<div class="m-popularService__icon" style="background-image: url('https://www.ny.gov/sites/default/files/2024-02/education_icon_graduation_cap.svg');"></div>
+				<span class="text">Apply for College Financial Aid</span>
+			</a>
+		</div>
+	</div>
+							
+				
+	<div class="m-popularService__card">
+		<div class="m-popularService__button">
+			<a href="https://www.tax.ny.gov/pit/efile/" class="a-hero__btn -link" data-once="nygovExitModal">
+				<div class="m-popularService__icon" style="background-image: url('https://www.ny.gov/sites/default/files/2022-02/Taxes.svg');"></div>
+				<span class="text">File Your Taxes for Free</span>
+			</a>
+		</div>
+	</div>
+					</div>
+	</div>
+</div>
+			</div>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+    
+    
+    
+			
+		
+		
+		
+		
+		
+		
+		
+		
+				
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+					      
+			<div class="t-section__content -t_wrap">
+
+				                                
+          <div class="t-headline -showTitleSubheadline">
+            					    <div>
+	<h2 class="a-title a-card__title">
+    Featured
+  </h2>
+
+</div>
+                        						  <div>
+
+	<h3 class="a-headline a-card__subHeadline">
+		Programs
+  </h3>
+</div>
+            					</div>
+				
+									<div class="t_cardsOuter">
+						<div class="t_cardsWrap">
+															<div class="t_cardContainer">
+									
+
+				
+
+<style>
+	.o-cardLogo.-index1.-paragraph3{
+		background-image: url("https://www.ny.gov/sites/default/files/styles/card_vertical/public/2024-01/hochul_sots_2024_1280.jpg?h=6fe8bd2d&itok=LGqcLl2L");
+	}
+	.o-quickCardLogo.-index1.-paragraph3{
+		background-image: url("https://www.ny.gov/sites/default/files/styles/card_vertical/public/2024-01/hochul_sots_2024_1280.jpg?h=6fe8bd2d&itok=LGqcLl2L");
+	}
+	@media(min-width: 768px) {
+		.o-cardLogo.-index1.-paragraph3{
+			background-image: url("https://www.ny.gov/sites/default/files/styles/card_horizontal/public/2024-01/hochul_sots_2024_1280.jpg?itok=dRcPQq63");
+		}
+	}
+</style>
+
+	<style>
+		@media(min-width: 1024px) {
+			.o-cardLogo.-index1.-paragraph3{
+				background-image: url("https://www.ny.gov/sites/default/files/styles/card_vertical/public/2024-01/hochul_sots_2024_1280.jpg?h=6fe8bd2d&itok=LGqcLl2L");
+			}
+		}
+	</style>
+
+				
+	<article class="o-cardGlobalTablet">
+			
+			<div><a href="https://www.governor.ny.gov/programs/2024-state-state" class="o-cardLogo -index1 -paragraph3" aria-hidden="true" tabindex="-1" data-once="nygovExitModal"><span class="sr-only">2024 State of the State Address</span></a></div>
+			
+		<div class="o-cardContent">
+							  <div class="m-card__data">
+  	    <h3>
+      
+          <a class="a-card__label" href="https://www.governor.ny.gov/programs/2024-state-state" data-once="nygovExitModal">2024 State of the State Address</a>
+      </h3>
+	            
+  <div class="a-text__html a-card__description"><p>Governor Hochul unveiled a broad policy agenda to make New York safer, more affordable, and more livable.</p></div>
+
+
+
+		  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+								</div>
+	</article>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+								</div>
+															<div class="t_cardContainer">
+									
+
+				
+
+<style>
+	.o-cardLogo.-index2.-paragraph3{
+		background-image: url("https://www.ny.gov/sites/default/files/styles/card_vertical/public/2023-05/GettyImages-523087816.jpg?h=454c9b3c&itok=SvFwlRYy");
+	}
+	.o-quickCardLogo.-index2.-paragraph3{
+		background-image: url("https://www.ny.gov/sites/default/files/styles/card_vertical/public/2023-05/GettyImages-523087816.jpg?h=454c9b3c&itok=SvFwlRYy");
+	}
+	@media(min-width: 768px) {
+		.o-cardLogo.-index2.-paragraph3{
+			background-image: url("https://www.ny.gov/sites/default/files/styles/card_horizontal/public/2023-05/GettyImages-523087816.jpg?itok=7WiaTCwa");
+		}
+	}
+</style>
+
+	<style>
+		@media(min-width: 1024px) {
+			.o-cardLogo.-index2.-paragraph3{
+				background-image: url("https://www.ny.gov/sites/default/files/styles/card_vertical/public/2023-05/GettyImages-523087816.jpg?h=454c9b3c&itok=SvFwlRYy");
+			}
+		}
+	</style>
+
+				
+	<article class="o-cardGlobalTablet">
+			
+			<div><a href="https://oasas.ny.gov/hopeline" class="o-cardLogo -index2 -paragraph3" aria-hidden="true" tabindex="-1" data-once="nygovExitModal"><span class="sr-only">Help for Addiction &amp; Problem Gambling</span></a></div>
+			
+		<div class="o-cardContent">
+							  <div class="m-card__data">
+  	    <h3>
+      
+          <a class="a-card__label" href="https://oasas.ny.gov/hopeline" data-once="nygovExitModal">Help for Addiction &amp; Problem Gambling</a>
+      </h3>
+	            
+  <div class="a-text__html a-card__description"><p><span><span><span><span><span><span>Call or text </span></span></span></span><a href="tel:18778467369" data-once="nygovExitModal"><span><span><span><span><span>1-877-846-7369</span></span></span></span></span></a> for<span><span><span><span> free confidential information about addiction and problem gambling from trained professionals and peers.</span></span></span></span></span></span></p></div>
+
+
+
+		  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+								</div>
+	</article>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+								</div>
+															<div class="t_cardContainer">
+									
+
+				
+
+<style>
+	.o-cardLogo.-index3.-paragraph3{
+		background-image: url("https://www.ny.gov/sites/default/files/styles/card_vertical/public/2023-08/AsylumSeekerHero.jpg?h=b5f6a62e&itok=6L-k9PZz");
+	}
+	.o-quickCardLogo.-index3.-paragraph3{
+		background-image: url("https://www.ny.gov/sites/default/files/styles/card_vertical/public/2023-08/AsylumSeekerHero.jpg?h=b5f6a62e&itok=6L-k9PZz");
+	}
+	@media(min-width: 768px) {
+		.o-cardLogo.-index3.-paragraph3{
+			background-image: url("https://www.ny.gov/sites/default/files/styles/card_horizontal/public/2023-08/AsylumSeekerHero.jpg?itok=JkDNVyg7");
+		}
+	}
+</style>
+
+	<style>
+		@media(min-width: 1024px) {
+			.o-cardLogo.-index3.-paragraph3{
+				background-image: url("https://www.ny.gov/sites/default/files/styles/card_vertical/public/2023-08/AsylumSeekerHero.jpg?h=b5f6a62e&itok=6L-k9PZz");
+			}
+		}
+	</style>
+
+				
+	<article class="o-cardGlobalTablet">
+			
+			<div><a href="https://www.governor.ny.gov/programs/taking-action-address-asylum-seeker-crisis-new-york" class="o-cardLogo -index3 -paragraph3" aria-hidden="true" tabindex="-1" data-once="nygovExitModal"><span class="sr-only">Taking Action to Address the Asylum Seeker Crisis</span></a></div>
+			
+		<div class="o-cardContent">
+							  <div class="m-card__data">
+  	    <h3>
+      
+          <a class="a-card__label" href="https://www.governor.ny.gov/programs/taking-action-address-asylum-seeker-crisis-new-york" data-once="nygovExitModal">Taking Action to Address the Asylum Seeker Crisis</a>
+      </h3>
+	            
+  <div class="a-text__html a-card__description"><p>Governor Hochul has taken several actions to address the recent influx of asylum seekers and migrants in New York.</p></div>
+
+
+
+		  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+								</div>
+	</article>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+								</div>
+													</div>
+					</div>
+				
+				
+				      </div>
+      
+			<div class="t-section__content -t_wrap ">
+							</div>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+    
+    
+    
+			
+		
+		
+		
+		
+		
+		
+		
+		
+				
+		
+		
+					<div class="t-section__content ">
+				
+<div class="o-plan-ahead bg-primary-blue">
+  <div class="o-plan-ahead__content-wrapper">
+    <div class="o-plan-ahead__titles">
+              
+	<h2 class="a-title o-plan-ahead__title">
+    Plan
+  </h2>
+
+      
+              
+
+	<h3 class="a-headline o-plan-ahead__headline">
+		Ahead
+  </h3>
+          </div>
+
+    <div class="o-plan-ahead__dates">
+              <div class="m-plan-date">
+  <div class="m-plan-date__dates">
+    <div class="m-plan-date__start-date">
+      2024.03.19
+    </div>
+          <div class="m-plan-date__date-separator">
+        _
+      </div>
+      <div class="m-plan-date__end-date">
+        2024.06.19
+      </div>
+      </div>
+  <div class="m-plan-date__full-month">
+    March
+  </div>
+  <div class="m-plan-date__title">
+    Spring Things to Do
+  </div>
+  <div class="m-plan-date__link-wrap">
+      
+                    <a class="a-plan-date__link" href="https://www.iloveny.com/blog/post/things-to-do-this-spring-in-new-york-state/" data-once="nygovExitModal">Plan your adventure</a>
+          </div>
+</div>
+              <div class="m-plan-date">
+  <div class="m-plan-date__dates">
+    <div class="m-plan-date__start-date">
+      2024.04.08
+    </div>
+      </div>
+  <div class="m-plan-date__full-month">
+    April
+  </div>
+  <div class="m-plan-date__title">
+    Total Solar Eclipse in New York
+  </div>
+  <div class="m-plan-date__link-wrap">
+      
+                    <a class="a-plan-date__link" href="https://www.iloveny.com/events/eclipse-2024/" data-once="nygovExitModal">View Eclipse Map and Times</a>
+          </div>
+</div>
+              <div class="m-plan-date">
+  <div class="m-plan-date__dates">
+    <div class="m-plan-date__start-date">
+      2024.04.15
+    </div>
+      </div>
+  <div class="m-plan-date__full-month">
+    April
+  </div>
+  <div class="m-plan-date__title">
+    Income Tax Filing Deadline
+  </div>
+  <div class="m-plan-date__link-wrap">
+      
+                    <a class="a-plan-date__link" href="https://www.tax.ny.gov/pit/efile/" data-once="nygovExitModal">File Your Taxes for Free</a>
+          </div>
+</div>
+          </div>
+  </div>
+</div>
+			</div>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+    
+    
+    
+			
+		
+		
+		
+		
+		
+		
+		
+		
+				
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+					            <div class="t-section__content ">
+                                  <div class="t_bioAndLinks-wrap -showTitle -showHeadline -showCards">
+					<div class="t_headline">
+                      <div>
+	<h2 class="a-title a-card__title">
+    New York State
+  </h2>
+
+</div>
+                                <div>
+
+	<h3 class="a-headline a-card__subHeadline">
+		Government
+  </h3>
+</div>
+          					</div>
+					<div class="t_bio-content">
+																					<div class="t_bioCard-wrap">
+									
+		
+
+<style>
+.o-bioCardLogo.-index1.-paragraph5{
+  background-image: url("https://www.ny.gov/sites/default/files/styles/card_overlay/public/2021-08/Hochul%20nygov.png?h=e99342c5&itok=fhxWeooO");
+}
+.o-linkCardLogo.-index1.-paragraph5{
+  background-image: url("https://www.ny.gov/sites/default/files/styles/card_overlay/public/2021-08/Hochul%20nygov.png?h=e99342c5&itok=fhxWeooO");
+}
+</style>
+
+
+<a class="o-bioCardLogo -index1 -paragraph5" href="https://www.governor.ny.gov/" aria-hidden="true" tabindex="-1" data-once="nygovExitModal">
+<span class="sr-only">Redundant image link for visual enhancement only</span>
+</a>
+
+
+
+
+
+
+
+
+
+
+	<div class="m-card__bioData">
+		<div class="m-card__bioTitle">
+			
+
+	<h3 class="a-headline a-government__title">
+		Governor
+  </h3>
+		</div>
+		<div class="m-card__bioName">
+			  
+                    <a class="a-government__name" href="https://www.governor.ny.gov/" data-once="nygovExitModal">Kathy Hochul</a>
+        		</div>
+				<div class="m-card__bioSocial">
+																																																																																		<a href="https://twitter.com/govkathyhochul" data-once="nygovExitModal"><span class="icon-twitter"></span><span class="visually-hidden"> twitter</span></a>
+																																																																																																																																																																																																												<a href="https://www.facebook.com/govkathyhochul" data-once="nygovExitModal"><span class="icon-facebook"></span><span class="visually-hidden"> facebook</span></a>
+																																																																																																																																																																																																																																																																																										<a href="https://www.flickr.com/photos/govkathyhochul" data-once="nygovExitModal"><span class="icon-flickr"></span><span class="visually-hidden"> flickr</span></a>
+																																																																																																																																																																																															<a href="https://www.instagram.com/govkathyhochul/" data-once="nygovExitModal"><span class="icon-instagram"></span><span class="visually-hidden"> instagram</span></a>
+																																																																																																																																																																																																																																																																<a href="https://www.youtube.com/channel/UCQJp4eSJgbFroNySGthEiqA" data-once="nygovExitModal"><span class="icon-youtube"></span><span class="visually-hidden"> youtube</span></a>
+																																																																																																																																																						</div>
+			</div>
+
+
+
+
+
+
+								</div>
+																												<div class="t_bioCard-wrap">
+									
+		
+
+<style>
+.o-bioCardLogo.-index2.-paragraph5{
+  background-image: url("https://www.ny.gov/sites/default/files/styles/card_overlay/public/2021-08/DiNapoliGovSectionPhoto2.jpg?h=31c0c765&itok=HISBWmQe");
+}
+.o-linkCardLogo.-index2.-paragraph5{
+  background-image: url("https://www.ny.gov/sites/default/files/styles/card_overlay/public/2021-08/DiNapoliGovSectionPhoto2.jpg?h=31c0c765&itok=HISBWmQe");
+}
+</style>
+
+
+<a class="o-bioCardLogo -index2 -paragraph5" href="https://www.osc.state.ny.us/" aria-hidden="true" tabindex="-1" data-once="nygovExitModal">
+<span class="sr-only">Redundant image link for visual enhancement only</span>
+</a>
+
+
+
+
+
+
+
+
+
+
+	<div class="m-card__bioData">
+		<div class="m-card__bioTitle">
+			
+
+	<h3 class="a-headline a-government__title">
+		Comptroller
+  </h3>
+		</div>
+		<div class="m-card__bioName">
+			  
+                    <a class="a-government__name" href="https://www.osc.state.ny.us/" data-once="nygovExitModal">Thomas P. DiNapoli</a>
+        		</div>
+				<div class="m-card__bioSocial">
+																																																																																		<a href="https://twitter.com/nyscomptroller" data-once="nygovExitModal"><span class="icon-twitter"></span><span class="visually-hidden"> twitter</span></a>
+																																																																																																																																																																																																												<a href="https://www.facebook.com/nyscomptroller" data-once="nygovExitModal"><span class="icon-facebook"></span><span class="visually-hidden"> facebook</span></a>
+																																																																																																																																																																																																																																																			<a href="https://www.instagram.com/nys.comptroller/" data-once="nygovExitModal"><span class="icon-instagram"></span><span class="visually-hidden"> instagram</span></a>
+																																																																																																																																																																																																																																																																																																																																														<a href="https://www.linkedin.com/company/nys-office-of-the-state-comptroller" data-once="nygovExitModal"><span class="icon-linkedin"></span><span class="visually-hidden"> linkedin</span></a>
+																																																																																																																																																								<a href="https://www.youtube.com/user/ComptrollersofficeNY" data-once="nygovExitModal"><span class="icon-youtube"></span><span class="visually-hidden"> youtube</span></a>
+																																																																																																																																													</div>
+			</div>
+
+
+
+
+
+
+								</div>
+																												<div class="t_bioCard-wrap">
+									
+		
+
+<style>
+.o-bioCardLogo.-index3.-paragraph5{
+  background-image: url("https://www.ny.gov/sites/default/files/styles/card_overlay/public/thumbnails/image/AG-headshot-blur.jpg?h=31c0c765&itok=YN7rxI-V");
+}
+.o-linkCardLogo.-index3.-paragraph5{
+  background-image: url("https://www.ny.gov/sites/default/files/styles/card_overlay/public/thumbnails/image/AG-headshot-blur.jpg?h=31c0c765&itok=YN7rxI-V");
+}
+</style>
+
+
+<a class="o-bioCardLogo -index3 -paragraph5" href="https://ag.ny.gov/" aria-hidden="true" tabindex="-1" data-once="nygovExitModal">
+<span class="sr-only">Redundant image link for visual enhancement only</span>
+</a>
+
+
+
+
+
+
+
+
+
+
+	<div class="m-card__bioData">
+		<div class="m-card__bioTitle">
+			
+
+	<h3 class="a-headline a-government__title">
+		Attorney General
+  </h3>
+		</div>
+		<div class="m-card__bioName">
+			  
+                    <a class="a-government__name" href="https://ag.ny.gov/" data-once="nygovExitModal">Letitia James</a>
+        		</div>
+				<div class="m-card__bioSocial">
+																																																																																		<a href="https://twitter.com/newyorkstateag" data-once="nygovExitModal"><span class="icon-twitter"></span><span class="visually-hidden"> twitter</span></a>
+																																																																																																																																																																																																												<a href="https://www.facebook.com/newyorkstateag" data-once="nygovExitModal"><span class="icon-facebook"></span><span class="visually-hidden"> facebook</span></a>
+																																																																																																																																																																																																																																																			<a href="http://instagram.com/newyorkstateag" data-once="nygovExitModal"><span class="icon-instagram"></span><span class="visually-hidden"> instagram</span></a>
+																																																																																																																																																																																																																																																																<a href="https://www.youtube.com/newyorkstateag" data-once="nygovExitModal"><span class="icon-youtube"></span><span class="visually-hidden"> youtube</span></a>
+																																																																																																																																																																																																																																																																																																																				<a href="https://www.linkedin.com/company/office-of-the-attorney-general-of-the-state-of-new-york" data-once="nygovExitModal"><span class="icon-linkedin"></span><span class="visually-hidden"> linkedin</span></a>
+																																																															</div>
+			</div>
+
+
+
+
+
+
+								</div>
+																																												</div>
+					<div class="t_link-content">
+																																																												<div class="t_linkCard-wrap">
+								
+		
+
+<style>
+.o-bioCardLogo.-index4.-paragraph5{
+  background-image: url("https://www.ny.gov/sites/default/files/styles/card_link/public/thumbnails/image/CourtOfAppeals.jpg?h=31c0c765&itok=oiymGa4e");
+}
+.o-linkCardLogo.-index4.-paragraph5{
+  background-image: url("https://www.ny.gov/sites/default/files/styles/card_link/public/thumbnails/image/CourtOfAppeals.jpg?h=31c0c765&itok=oiymGa4e");
+}
+</style>
+
+
+
+<div class="o-linkCardLogo -index4 -paragraph5">
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<div class="m-card__linkData">
+		<div class="m-card__linkTitle">
+			<div>
+
+	<h3 class="a-headline a-government__title">
+		Judicial
+  </h3>
+</div>
+		</div>
+		<div class="m-card__linkLinks">
+											<div class="m-card__links">
+					<a href="https://www.nycourts.gov/ctapps/" target="_blank" data-once="nygovExitModal">
+						Court of Appeals
+					</a>
+					<span class="icon-external-link"></span>
+				</div>
+											<div class="m-card__links">
+					<a href="http://www.nycourts.gov/" target="_blank" data-once="nygovExitModal">
+						NY State Unified Court System
+					</a>
+					<span class="icon-external-link"></span>
+				</div>
+					</div>
+	</div>
+
+								</div>
+																												<div class="t_linkCard-wrap">
+								
+		
+
+<style>
+.o-bioCardLogo.-index5.-paragraph5{
+  background-image: url("https://www.ny.gov/sites/default/files/styles/card_link/public/thumbnails/image/AlbanyCapitol.jpg?h=31c0c765&itok=FUkBO_ll");
+}
+.o-linkCardLogo.-index5.-paragraph5{
+  background-image: url("https://www.ny.gov/sites/default/files/styles/card_link/public/thumbnails/image/AlbanyCapitol.jpg?h=31c0c765&itok=FUkBO_ll");
+}
+</style>
+
+
+
+<div class="o-linkCardLogo -index5 -paragraph5">
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<div class="m-card__linkData">
+		<div class="m-card__linkTitle">
+			<div>
+
+	<h3 class="a-headline a-government__title">
+		Legislature
+  </h3>
+</div>
+		</div>
+		<div class="m-card__linkLinks">
+											<div class="m-card__links">
+					<a href="https://www.nysenate.gov/" target="_blank" data-once="nygovExitModal">
+						NY State Senate
+					</a>
+					<span class="icon-external-link"></span>
+				</div>
+											<div class="m-card__links">
+					<a href="https://nyassembly.gov/" target="_blank" data-once="nygovExitModal">
+						NY State Assembly
+					</a>
+					<span class="icon-external-link"></span>
+				</div>
+											<div class="m-card__links">
+					<a href="/new-york-state-congressional-delegation" target="_blank" data-once="nygovExitModal">
+						NY State Congressional Delegation
+					</a>
+					<span class="icon-external-link"></span>
+				</div>
+					</div>
+	</div>
+
+								</div>
+																		</div>
+				</div>
+			</div>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+    
+    
+    
+			
+		
+		
+		
+		
+		
+		
+		
+					<div class="t-section__content ">
+				
+<div class="o-buttons__wrapper no-webform bg-primary-gold">
+          <div class="o-buttons -content -showTitle -showHeadline">
+		<div class="o-buttons__titles">
+							
+	<h2 class="a-title o-buttons__title">
+    Stay
+  </h2>
+
+			
+							
+
+	<h3 class="a-headline o-buttons__headline">
+		Informed
+  </h3>
+			
+			
+			
+				<div class="o-buttons__group -buttonGroup">
+																			<a class="a-btn__link -large" href="/mobileapps" data-once="nygovExitModal">Download NY State Apps</a>
+
+
+
+
+
+
+
+
+
+
+
+																															<a class="a-btn__link -large" href="/agencies" data-once="nygovExitModal">Follow State Agencies</a>
+
+
+
+
+
+
+
+
+
+
+
+																					</div>
+
+																											</div>
+	</div>
+</div>
+			</div>
+		
+				
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+    
+    
+    
+			
+		
+		
+		
+		
+		
+		
+		
+		
+				
+		
+		
+		
+		
+		
+		
+					<div class="t-section__content ">
+				
+<div class="o-connect__wrapper">
+
+      <div class="o-connect__header">
+                    <h2 class="text-primary-blue text-oswald text-bold text-2-space">Connect With Us</h2>
+      
+                </div>
+  
+        <div class="o-connect__socials">
+
+                    
+          
+                     
+                       
+                          <div class="o-connect__socialLink -first">
+                <a class="m-socialLink__link text-bold" href="https://twitter.com/nygov" data-once="nygovExitModal">
+  <span class="m-socialLink__icon icon-twitter text-primary-blue"></span>
+  <span class="m-socialLink__linkText text-extra-bold">twitter</span>
+</a>
+              </div>
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                                                      
+          
+                     
+                       
+                       
+                       
+                          <div class="o-connect__socialLink -last">
+                <a class="m-socialLink__link text-bold" href="https://www.instagram.com/nygov/" data-once="nygovExitModal">
+  <span class="m-socialLink__icon icon-instagram text-primary-blue"></span>
+  <span class="m-socialLink__linkText text-extra-bold">instagram</span>
+</a>
+              </div>
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                                                    
+      
+      
+    </div>
+  </div>			</div>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+    
+    
+    
+	</div>
+  </article>
+                  </article>
+
+  </div>
+
+    </div>
+    <div class="nygov-back-to-top-wrapper">
+      <a href="#main-content" class="nygov-back-to-top nygov-back-to-top-hidden" data-once="backToTopButton nygovExitModal">
+        <span class="fa fa-chevron-up" aria-hidden="true"></span>
+        <span class="sr-only">Scroll back to the top of the page</span>
+      </a>
+    </div>
+
+  </main>
+
+  
+  
+
+  <div class="footer-navigations">
+    
+<style>
+.o-nygovFooterMenu__image{
+  background-image: url("https://www.ny.gov/profiles/contrib/nygov/themes/custom/nygov-theme/nygov_theme/../storybook/assets/placeholders/NYS_IDENTIFIER_WHITE.svg");
+}
+</style>
+<div class="o-nygovFooterMenu__wrapper">
+  <div class="o-nygovFooterMenu__content">
+  <div class="o-nygovFooterMenu__image"></div>
+  <ul class="o-nygovFooterMenu__links">
+          <li class="o-nygovFooterMenu__link">
+          
+  <a href="/accessibility" data-once="nygovExitModal">Accessibility</a>
+      </li>
+          <li class="o-nygovFooterMenu__link">
+          
+  <a href="/agencies" data-once="nygovExitModal">Agencies</a>
+      </li>
+          <li class="o-nygovFooterMenu__link">
+          
+  <a href="/mobileapps" data-once="nygovExitModal">App Directory</a>
+      </li>
+          <li class="o-nygovFooterMenu__link">
+          
+  <a href="/counties" data-once="nygovExitModal">Counties</a>
+      </li>
+          <li class="o-nygovFooterMenu__link">
+          
+  <a href="/website-disclaimer" data-once="nygovExitModal">Disclaimer</a>
+      </li>
+          <li class="o-nygovFooterMenu__link">
+          
+  <a href="/events" data-once="nygovExitModal">Events</a>
+      </li>
+          <li class="o-nygovFooterMenu__link">
+          
+  <a href="https://ogs.ny.gov/office-language-access" data-once="nygovExitModal">Language Access</a>
+      </li>
+          <li class="o-nygovFooterMenu__link">
+          
+  <a href="/privacy-policy" data-once="nygovExitModal">Privacy Policy</a>
+      </li>
+          <li class="o-nygovFooterMenu__link">
+          
+  <a href="/programs" data-once="nygovExitModal">Programs</a>
+      </li>
+          <li class="o-nygovFooterMenu__link">
+          
+  <a href="/services" data-once="nygovExitModal">Services</a>
+      </li>
+      </ul>
+
+</div>
+</div>
+        </div>
+
+  
+
+</div>
+  </div>
+
+    
+    <div id="o-exitModal">
+  <a href="#" class="o-exitModal__close icon-times-circle" title="Close this modal"></a>
+  <header id="o-exitModal__label">You are leaving the official State of New York website.</header>
+  <div class="o-exitModal__content">
+   The State of New York does not imply approval of the listed destinations, warrant the accuracy of any information set out in those destinations, or endorse any opinions expressed therein. External web sites operate at the direction of their respective owners who should be contacted directly with questions regarding the content of these sites.
+  </div>
+  <a href="#" class="o-exitModal__button">Visit Site</a>
+</div>
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/161217981","currentPathIsAdmin":false,"isFront":true,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"google_analytics":{"account":"UA-1481478-55","trackOutbound":true,"trackMailto":true,"trackTel":true,"trackDownload":true,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"site_hostname":"www.ny.gov","user":{"uid":0,"permissionsHash":"ae2a308cf8f2d8e4179f7a0f4bb49a04b3149f78325cdd404dcad6b37a9a9f06"}}</script>
+<script src="/sites/default/files/js/js_IXH7yJkn8vMfARa53yVgkHDPJr-NzVvbKZl-lSTJbpU.js?scope=footer&amp;delta=0&amp;language=en&amp;theme=nygov_theme&amp;include=eJxdykEKgDAMRNELVXokiWWIhbSBThHi6UV0o7vHn1F3NazSxWLWwqy_kBicaHkTIhUTMj5uIEXBVHwgdx9NrJ5IPdSPde5oyGq-iS2cYbXrOz3_m8vNC5b5NfY"></script>
+<script src="/libraries/waypoints/lib/jquery.waypoints.min.js?sbenpv"></script>
+<script src="/libraries/waypoints/lib/noframework.waypoints.js?sbenpv"></script>
+<script src="/sites/default/files/js/js_wxpxOXUSvlEHDEvT-kUEuTfUPI4YzcQzD5JrjTEwLvI.js?scope=footer&amp;delta=3&amp;language=en&amp;theme=nygov_theme&amp;include=eJxdykEKgDAMRNELVXokiWWIhbSBThHi6UV0o7vHn1F3NazSxWLWwqy_kBicaHkTIhUTMj5uIEXBVHwgdx9NrJ5IPdSPde5oyGq-iS2cYbXrOz3_m8vNC5b5NfY"></script>
+<script src="/profiles/contrib/nygov/modules/custom/nygov_core/js/exitModal.js?v=1.x"></script>
+
+
+   <div id="footer-translate" class="footer-translate">
+    <div class="inside-wrap">
+      <h3><a href="https://www.ny.gov/web-translation-services">Translation Services</a></h3>
+      <p>This page is available in other languages</p>
+      <div class="translation-menu">
+        
+
+                                                                                 
+<div class="translate-bar">
+  <!--<div id="smt-lang-selector" class="smt-selector"></div>-->
+    <div class="smt-selector">
+      <nav aria-labelledby="langnav">
+          <ul class="smt-menu" data-once="footer-translate">
+              <li class="smt-trigger">
+                  <a class="smt-trigger-link" tabindex="0">
+                      <span class="smt-lang" id="langnav">Translate</span>
+                  </a>
+                  <ul class="language-links" style="display: none;">
+                      <li class="smt-item">
+                          <a translate="no" lang="en" class="smt-link" href="https://ny.gov/homepage">English</a>
+                      </li>
+                      <li class="smt-item">
+                          <a translate="no" lang="es" class="smt-link" href="https://es.ny.gov/homepage">Español</a>
+                      </li>
+                      <li class="smt-item">
+                          <a translate="no" lang="zh" class="smt-link" href="https://zh.ny.gov/homepage">中文</a>
+                      </li>
+                      <li class="smt-item">
+                            <a translate="no" lang="zh-Hant" class="smt-link sl_norewrite" href="https://zh-traditional.ny.gov/homepage">繁體中文</a>
+                      </li>
+                      <li class="smt-item">
+                          <a translate="no" lang="ru" class="smt-link" href="https://ru.ny.gov/homepage">Русский</a>
+                      </li>
+                      <li class="smt-item">
+                          <a translate="no" lang="yi" class="smt-link" href="https://yi.ny.gov/homepage">יידיש</a>
+                      </li>
+                      <li class="smt-item">
+                          <a translate="no" lang="bn" class="smt-link" href="https://bn.ny.gov/homepage">বাংলা</a>
+                      </li>
+                      <li class="smt-item">
+                          <a translate="no" lang="ko" class="smt-link" href="https://ko.ny.gov/homepage">한국어</a>
+                      </li>
+                      <li class="smt-item">
+                          <a translate="no" lang="ht" class="smt-link" href="https://ht.ny.gov/homepage">Kreyòl Ayisyen</a>
+                      </li>
+                      <li class="smt-item">
+                          <a translate="no" lang="it" class="smt-link" href="https://it.ny.gov/homepage">Italiano</a>
+                      </li>
+                      <li class="smt-item">
+                          <a translate="no" lang="ar" class="smt-link" href="https://ar.ny.gov/homepage">العربية</a>
+                      </li>
+                      <li class="smt-item">
+                          <a translate="no" lang="pl" class="smt-link" href="https://pl.ny.gov/homepage">Polski</a>
+                      </li>
+                      <li class="smt-item">
+                          <a translate="no" lang="fr" class="smt-link" href="https://fr.ny.gov/homepage">Français</a>
+                      </li>
+                      <li class="smt-item">
+                          <a translate="no" lang="ur" class="smt-link" href="https://ur.ny.gov/homepage">اردو</a>
+                      </li>
+                  </ul>
+              </li>
+          <label for="footertranslate">Translate</label><select id="footertranslate" name="footertranslate"><option value="" disabled="" hidden="">Translate</option><option value="https://ny.gov/homepage">English</option><option value="https://es.ny.gov/homepage">Español</option><option value="https://zh.ny.gov/homepage">中文</option><option value="https://zh-traditional.ny.gov/homepage">繁體中文</option><option value="https://ru.ny.gov/homepage">Русский</option><option value="https://yi.ny.gov/homepage">יידיש</option><option value="https://bn.ny.gov/homepage">বাংলা</option><option value="https://ko.ny.gov/homepage">한국어</option><option value="https://ht.ny.gov/homepage">Kreyòl Ayisyen</option><option value="https://it.ny.gov/homepage">Italiano</option><option value="https://ar.ny.gov/homepage">العربية</option><option value="https://pl.ny.gov/homepage">Polski</option><option value="https://fr.ny.gov/homepage">Français</option><option value="https://ur.ny.gov/homepage">اردو</option></select></ul>
+      </nav>
+  </div>
+</div><!--/translate-bar-->
+      </div><!--translation-menu-->
+    </div><!--/inside-wrap-->
+  </div><!--/footer-translate-->
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"5246b5e79c","applicationID":"1063190878","transactionName":"ZlVXNkcACxFVUEcNXF8fdAFBCAoMG3dBEUNQXGkMWgUAPndcXRBBXlxZB0c9Kw1QVmUNVkZzWgxBEwoOWFZBSQ1HWVAV","queueTime":15,"applicationTime":790,"atts":"ShJAQA8aGE4WUhFeSExN","errorBeacon":"bam.nr-data.net","agent":""}</script>
+<div><iframe id="cross-domain-iframe" src="//static-assets.ny.gov/sites/all/widgets/universal-navigation/xdomain.html" title="Cross Domain Iframe" style="display: none;"></iframe></div></body></html>
