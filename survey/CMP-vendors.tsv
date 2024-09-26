@@ -1,0 +1,371 @@
+domain	CMP_vendor
+casetext.com	OneTrust
+justia.com	Custom (accept-only)
+texas.gov	Custom (accept-only)
+state.gov	Enzuzo
+townhall.com	Google Funding Choices
+bedbathandbeyond.com	Custom (accept-only)
+cricketwireless.com	Custom
+victoriassecret.com	Tealium
+harborfreight.com	OneTrust
+bathandbodyworks.com	Tealium
+sephora.com	Commanders Act
+ulta.com	OneTrust
+nike.com	OneTrust
+temu.com	Custom
+etsy.com	Custom
+ebay.com	Custom
+yahoo.com	Custom
+theepochtimes.com	Custom
+newsmax.com	Usercentrics/Cookiebot
+newsbreak.com	Custom
+thedailybeast.com	OneTrust
+today.com	OneTrust
+bloomberg.com	Sourcepoint
+sfgate.com	Custom
+patch.com	OneTrust
+drudgereport.com	GG Software (CMP 242)
+huffpost.com	OneTrust
+buzzfeed.com	OneTrust
+cbsnews.com	OneTrust
+nbcnews.com	OneTrust
+apnews.com	OneTrust
+wsj.com	Trustarc
+newsweek.com	Ketch
+cnbc.com	OneTrust
+news.yahoo.com	Custom
+washingtonpost.com	OneTrust
+nypost.com	OneTrust
+news.google.com	Custom
+usatoday.com	OneTrust
+msn.com	OneTrust
+cnn.com	OneTrust
+nytimes.com	Sourcepoint
+politico.com	OneTrust
+montreal.ca	CookieYes
+laval.ca	Custom
+educaloi.qc.ca	CookieYes
+vfsglobal.ca	OneTrust
+loblaws.ca	OneTrust
+nofrills.ca	OneTrust
+brownsshoes.com	OneTrust
+ssense.com	OneTrust
+adidas.ca	Custom
+toysrus.ca	CookiePro
+aritzia.com	OneTrust
+smartcanucks.ca	consentmanager
+simons.ca	Didomi
+shop.app	Custom
+canadacomputers.com	Custom (accept-only)
+redflagdeals.com	InMobi CMP
+walmart.ca	Custom
+lavoixdelest.ca	Google Funding Choices
+ledroit.com	Google Funding Choices
+latribune.ca	Google Funding Choices
+lesoleil.com	Google Funding Choices
+castanet.net	Google Funding Choices
+tvasports.ca	Google Funding Choices
+ledevoir.com	Didomi
+hockey30.com	FastCMP
+thestar.com	Google Funding Choices
+journaldequebec.com	Google Funding Choices
+dailyhive.com	Google Funding Choices
+citynews.ca	Custom
+tvanouvelles.ca	Google Funding Choices
+globalnews.ca	Evidon
+radio-canada.ca	Custom
+journaldemontreal.com	Google Funding Choices
+cbc.ca	Custom (accept-only)
+dailystar.co.uk	InMobi CMP
+service.gov.uk	Custom
+durham.gov.uk	Cassie by Syrenis
+blog.gov.uk	Cookie Control by CIVIC
+www.met.police.uk	Custom
+london.gov.uk	Cookie Control by CIVIC
+labour.org.uk	CookieYes
+www.gov.scot	Custom
+manchester.gov.uk	Usercentrics/Cookiebot
+hmrc.gov.uk	Custom
+shelter.org.uk	Cookie Control by CIVIC
+leeds.gov.uk	OneTrust
+edinburgh.gov.uk	Cookie Control by CIVIC
+www.england.nhs.uk	Cookie Control by CIVIC
+food.gov.uk	Custom
+bristol.gov.uk	Cookie Control by CIVIC
+pepipoo.com	Custom (accept-only)
+nationalarchives.gov.uk	Custom
+birmingham.gov.uk	Cookie Control by CIVIC
+southend.gov.uk	Cookie Control by CIVIC
+parkrun.org.uk	Custom (accept-only)
+38degrees.org.uk	Cookie Control by CIVIC
+ons.gov.uk	Custom
+nidirect.gov.uk	Custom
+legislation.gov.uk	Custom
+mod.uk	Custom
+dwp.gov.uk	Custom
+dvla.gov.uk	Custom
+dvsa.gov.uk	Custom
+postoffice.co.uk	Custom
+national-lottery.co.uk	Custom
+www.gov.uk	Custom
+gov.uk	Custom
+diy.com	Trustarc
+hotukdeals.com	Custom
+johnlewis.com	Custom
+asda.com	OneTrust
+waitrose.com	Custom
+tesco.com	Custom
+bmstores.co.uk	OneTrust
+ocado.com	OneTrust
+lookfantastic.com	OneTrust
+matalan.co.uk	OneTrust
+aldi.co.uk	OneTrust
+riverisland.com	Custom
+toolstation.com	OneTrust
+boohoo.com	OneTrust
+wayfair.co.uk	Custom
+halfords.com	OneTrust
+therange.co.uk	OneTrust
+wickes.co.uk	OneTrust
+sportsdirect.com	OneTrust
+jdsports.co.uk	Custom
+currys.co.uk	OneTrust
+sainsburys.co.uk	OneTrust
+dunelm.com	Custom
+boots.com	OneTrust
+screwfix.com	Trustarc
+marksandspencer.com	OneTrust
+next.co.uk	OneTrust
+argos.co.uk	Custom
+ebay.co.uk	Custom
+amazon.co.uk	Custom
+express.co.uk	InMobi CMP
+bbc.com	Sourcepoint
+mylondon.news	InMobi CMP
+bristolpost.co.uk	InMobi CMP
+nottinghampost.com	InMobi CMP
+examinerlive.co.uk	InMobi CMP
+chroniclelive.co.uk	InMobi CMP
+inyourarea.co.uk	InMobi CMP
+ladbible.com	Sourcepoint
+birminghammail.co.uk	InMobi CMP
+liverpoolecho.co.uk	InMobi CMP
+ft.com	Sourcepoint
+walesonline.co.uk	InMobi CMP
+dailyrecord.co.uk	InMobi CMP
+gbnews.uk	Sourcepoint
+standard.co.uk	Sourcepoint
+inews.co.uk	Custom
+manchestereveningnews.co.uk	InMobi CMP
+dailyexpress.co.uk	InMobi CMP
+metro.co.uk	Custom
+independent.co.uk	Sourcepoint
+mirror.co.uk	InMobi CMP
+thesun.co.uk	Sourcepoint
+skynews.com	Sourcepoint
+thetimes.co.uk	Sourcepoint
+telegraph.co.uk	Sourcepoint
+theguardian.com	Sourcepoint
+dailymail.co.uk	Custom
+bbc.co.uk	Sourcepoint
+politie.nl	Custom
+jumbo.com	OneTrust
+tweakers.net	Custom
+amazon.nl	Custom
+marktplaats.nl	Sourcepoint
+bol.com	Custom
+volkskrant.nl	Custom
+rtlnieuws.nl	OneTrust
+telegraaf.nl	Didomi
+nu.nl	Custom
+socialsecurity.be	Custom (accept-only)
+vlaanderen.be	Custom
+fgov.be	Orejime
+belgium.be	Orejime
+2ememain.be	Sourcepoint
+2dehands.be	Sourcepoint
+gva.be	Didomi
+nieuwsblad.be	Didomi
+hln.be	Custom
+mywelfare.ie	Custom
+gov.ie	Custom
+donedeal.ie	Didomi
+irishtimes.com	OneTrust
+rte.ie	OneTrust
+independent.ie	Didomi
+citizensinformation.ie	Custom
+europa.eu	Custom
+preisjaeger.at	Custom
+geizhals.at	OneTrust
+ebay.at	Custom
+willhaben.at	Didomi
+gmx.at	Custom
+meinbezirk.at	OneTrust
+oe24.at	OneTrust
+heute.at	Sourcepoint
+krone.at	Didomi
+bund.de	Piwik Pro
+bayern.de	Matomo
+idealo.de	Usercentrics/Cookiebot
+otto.de	OneTrust
+kleinanzeigen.de	Custom
+ebay.de	Custom
+focus.de	Sourcepoint
+n-tv.de	Sourcepoint
+t-online.de	Sourcepoint
+bild.de	Sourcepoint
+migrationsverket.se	Piwik Pro
+prisjakt.nu	Sourcepoint
+tradera.com	InMobi CMP
+amazon.se	Custom
+blocket.se	Sourcepoint
+svd.se	Sourcepoint
+dn.se	Didomi
+expressen.se	Didomi
+aftonbladet.se	Sourcepoint
+coop.dk	Cookie Information
+amazon.de	Custom
+pricerunner.dk	OneTrust
+dba.dk	Sourcepoint
+berlingske.dk	Usercentrics/Cookiebot
+politiken.dk	Usercentrics/Cookiebot
+bt.dk	Usercentrics/Cookiebot
+ekstrabladet.dk	Usercentrics/Cookiebot
+mef.gov.it	Matomo
+inps.it	Matomo
+ebay.it	Custom
+subito.it	Didomi
+amazon.it	Custom
+libero.it	Iubenda
+ilfattoquotidiano.it	Iubenda
+ansa.it	Iubenda
+corriere.it	RCS Media Group
+repubblica.it	Iubenda
+gencat.cat	Piwik Pro
+juntadeandalucia.es	Custom
+elcorteingles.es	OneTrust
+elespanol.com	Didomi
+elconfidencial.com	Didomi
+lavanguardia.com	Didomi
+abc.es	Didomi
+elmundo.es	Didomi
+seg-social.pt	OpenGlobal
+amazon.es	Custom
+olx.pt	OneTrust
+worten.pt	Cookiebot
+expresso.pt	Didomi
+publico.pt	Google Funding Choices
+iol.pt	Google Funding Choices
+interieur.gouv.fr	tarteaucitron
+service-public.fr	Orejime
+cdiscount.com	Commanders Act
+fnac.com	OneTrust
+leboncoin.fr	Didomi
+amazon.fr	Custom
+rtbf.be	Didomi
+sudinfo.be	Didomi
+actu.fr	Didomi
+lemonde.fr	Iubenda
+lefigaro.fr	SFBX AppConsent
+ouest-france.fr	Didomi
+avocatnet.ro	CookiePro
+lege5.ro	Custom (accept-only)
+just.ro	Custom
+compari.ro	Custom (accept-only)
+olx.ro	OneTrust
+emag.ro	Custom
+stiripesurse.ro	CookiePro
+libertatea.ro	CookiePro
+adevarul.ro	CookiePro
+digi24.ro	CookiePro
+tori.fi	Sourcepoint
+ampparit.com	Sourcepoint
+mtvuutiset.fi	OneTrust
+hs.fi	Sourcepoint
+yle.fi	Custom
+iltalehti.fi	Sourcepoint
+kormany.hu	Custom
+magyarorszag.hu	Custom (accept-only)
+jofogas.hu	Didomi
+emag.hu	Custom
+arukereso.hu	Custom (accept-only)
+blikk.hu	InMobi CMP
+24.hu	InMobi CMP
+startlap.hu	InMobi CMP
+origo.hu	InMobi CMP
+index.hu	InMobi CMP
+lidl.sk	OneTrust
+heureka.sk	Didomi
+bazos.sk	TermsFeed
+dennikn.sk	Google Funding Choices
+cas.sk	Didomi
+sme.sk	Google Funding Choices
+topky.sk	Didomi
+aktuality.sk	Sourcepoint
+mpsv.cz	Custom
+mfcr.cz	Cookiebot
+justice.cz	Custom
+kupi.cz	Seznam
+bazos.cz	TermsFeed
+heureka.cz	Didomi
+alza.cz	Custom
+centrum.cz	Didomi
+denik.cz	Didomi
+aktualne.cz	Didomi
+idnes.cz	Didomi
+lodz.pl	Google Funding Choices
+gov.pl	Custom (accept-only)
+pepper.pl	Custom
+ceneo.pl	Custom
+olx.pl	OneTrust
+allegro.pl	Custom
+gazeta.pl	OneTrust
+o2.pl	Custom
+interia.pl	Custom
+onet.pl	Custom
+wp.pl	Custom
+socskrb.hr	TermsFeed
+gov.hr	Custom
+pevex.hr	Cookiebot
+njuskalo.hr	Didomi
+slobodnadalmacija.hr	Didomi
+24sata.hr	Didomi
+vecernji.hr	Didomi
+jutarnji.hr	Didomi
+index.hr	Didomi
+aade.gr	Custom
+lidl-hellas.gr	OneTrust
+public.gr	Cookiebot
+bestprice.gr	Custom
+skroutz.gr	Custom
+in.gr	InMobi CMP
+newsbomb.gr	InMobi CMP
+iefimerida.gr	InMobi CMP
+protothema.gr	InMobi CMP
+lex.bg	Custom
+government.bg	cookie-bar
+ozone.bg	Custom
+alo.bg	Google Funding Choices
+bazar.bg	CookieScript
+emag.bg	Custom
+olx.bg	OneTrust
+marica.bg	Google Funding Choices
+novini.bg	OneTrust
+blitz.bg	Google Funding Choices
+24chasa.bg	Google Funding Choices
+cdc.gov	Custom
+rei.com	OneTrust
+costco.com	OneTrust
+macys.com	OneTrust
+mec.ca	OneTrust
+lululemon.com	OneTrust
+rona.ca	OneTrust
+gapcanada.ca	OneTrust
+thebay.com	OneTrust
+bestbuy.ca	OneTrust
+lenecrologue.com	InMobi CMP
+revenue.ie	Custom
+zbozi.cz	Seznam
+novinky.cz	Seznam
+clasohlson.com	Custom
+interno.gov.it	Matomo
